@@ -1,3 +1,4 @@
+# todo: starship
 {
   lib,
   pkgs,

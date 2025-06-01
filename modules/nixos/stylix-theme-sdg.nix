@@ -1,3 +1,4 @@
+# todo: adjust some colors for readability
 {config, ...}: {
   config.stylix.base16Scheme = {
     base00 = "000000"; # default bg #000000

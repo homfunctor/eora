@@ -8,7 +8,7 @@
   inherit (lib) getExe;
   portalPkg = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
 
-  # let's me autologin to adminuser, logout then login to workuser
+  # lets me autologin to adminuser, logout, then login to workuser
   # should find another way
   args = "--asterisks --remember --remember-user-session --cmd";
   tuigreet = getExe pkgs.greetd.tuigreet;

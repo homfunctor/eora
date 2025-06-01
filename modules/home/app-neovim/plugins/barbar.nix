@@ -1,3 +1,3 @@
 {
-  programs.nixvim.plugins.barbar.enable = true;
+  programs.nixvim.plugins.barbar.enable = false;
 }

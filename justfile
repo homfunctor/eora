@@ -4,7 +4,7 @@ update:
 
 # current flake config applied on next boot
 upboot:
-    sudo nixos-rebuild boot --flake .  --log-format internal-json -v |& nom --json
+    sudo nixos-rebuild boot --flake . --log-format internal-json -v |& nom --json
 
 # collect garbage
 clean:
@@ -20,11 +20,11 @@ chflake:
 
 # --dry-activate
 upcheck:
-    sudo nixos-rebuild dry-activate --flake .   --log-format internal-json -v |& nom --json 
+    sudo nixos-rebuild dry-activate --flake . --log-format internal-json -v |& nom --json 
 
 # --dry-activate  --show-trace
 uptrace:
-    sudo nixos-rebuild dry-activate --flake .  --log-format internal-json -v --show-trace |& nom --json 
+    sudo nixos-rebuild dry-activate --flake . --log-format internal-json -v --show-trace |& nom --json 
 
 # update to current flake config without going online
 offlate:
@@ -32,11 +32,11 @@ offlate:
 
 # install vytmadh configuration
 install-vytmadh:
-    sudo nixos-rebuild boot --flake .#vytmadh   --log-format internal-json -v |& nom --json
+    sudo nixos-rebuild boot --flake .#vytmadh --log-format internal-json -v |& nom --json
 
 # install revelations configuration
 install-revelations:
-    sudo nixos-rebuild boot --flake .#revelations   --log-format internal-json -v |& nom --json
+    sudo nixos-rebuild boot --flake .#revelations --log-format internal-json -v |& nom --json
 
 # violently destroy all remains of nixos channels
 purge-channels:

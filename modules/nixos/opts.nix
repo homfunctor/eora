@@ -12,7 +12,6 @@ in {
 
     # secrets handled by sops
     sops = {
-      syncthing.enable = mkBoolOpt false "should sops handle syncthing?";
       user.enable = mkBoolOpt false "should sops handle user password?";
     };
 

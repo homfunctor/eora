@@ -1,4 +1,5 @@
 # ugly hack to force vlc to use wayland
+# todo: still needed?
 {pkgs, ...}: let
   vlcLand = pkgs.symlinkJoin {
     name = "vlc";

@@ -1,3 +1,4 @@
+# https://github.com/nix-community/stylix/blob/master/modules/qt/hm.nix
 {
   config,
   inputs,
@@ -17,12 +18,12 @@
   '';
 
   svg = colors {
-    template = "${inputs.sapadal}/kvantum-svg.mustache";
+    template = "${inputs.sapadal}/assets/kvantum-svg.mustache";
     extension = "svg";
   };
 
   kvconfig = colors {
-    template = "${inputs.sapadal}/kvconfig.mustache";
+    template = "${inputs.sapadal}/assets/kvconfig.mustache";
     extension = ".kvconfig";
   };
 
@@ -38,7 +39,7 @@ in {
 
     qt = {
       enable = true;
-      platformTheme.name = mkForce "qt5ct";
+      platformTheme.name = mkForce "kvantum";
     };
 
     home.packages = [kvantumPackage];

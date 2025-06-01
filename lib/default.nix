@@ -23,7 +23,13 @@ in rec {
   mkStrOpt' = mkOpt' types.str;
 
   # sops utilities
-  mkSecretName = path: concatStringsSep "/" (map (v: removeSuffix "/" v) path);
+  mkSecretName = path:
+    concatStringsSep "/" (
+      map (
+        v: removeSuffix "/" v
+      )
+      path
+    );
   mkSecretPath = config: path: config.sops.secrets."${mkSecretName path}".path;
   mkSecretPH = config: path: config.sops.placeholder."${mkSecretName path}";
 }

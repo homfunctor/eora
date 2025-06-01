@@ -111,6 +111,7 @@
   outputs = inputs:
     inputs.blueprint {
       inherit inputs;
+      nixpkgs.config.allowUnfree = true;
       systems = ["x86_64-linux"];
     };
 }
