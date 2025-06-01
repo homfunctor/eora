@@ -2,6 +2,7 @@
   inherit
     (pkgs)
     fetchFromGitHub
+    lib
     rustPlatform
     ;
   inherit (pkgs.lib.licenses) mit;
@@ -20,24 +21,36 @@ in
     # todo: automate the lock generation
     cargoLock.lockFile = ./Cargo.lock;
 
-    nativeBuildInputs = with pkgs; [
-      pkg-config
-    ];
-
-    buildInputs = with pkgs; [
-      alsa-lib.dev
-      udev
-    ];
-
-    runtimeDeps = buildInputs;
-
     postPatch = ''
       ln -s ${./Cargo.lock} Cargo.lock
     '';
 
+    nativeBuildInputs = with pkgs; [
+      makeWrapper
+      pkg-config
+    ];
+
+    buildInputs = with pkgs; [
+      alsa-lib-with-plugins
+      udev
+      vulkan-loader
+      libxkbcommon
+      wayland
+      xorg.libX11
+      xorg.libXcursor
+      xorg.libXi
+      xorg.libXrandr
+    ];
+
+    postFixup = ''
+      patchelf $out/bin/anny-dock \
+        --add-rpath ${lib.makeLibraryPath [pkgs.vulkan-loader]}
+    '';
+
     meta = {
-      description = "A modern, animated dock for Hyprland built with Rust and Bevy Engine. Currently exclusive to Hyprland, with plans to support other window managers in the future.";
+      description = "A modern, animated dock for Hyprland built with Rust and Bevy Engine.";
       homepage = "https://github.com/horberlan/anny-dock";
       license = mit;
+      maintainers = [];
     };
   }

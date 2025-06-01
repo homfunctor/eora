@@ -6,6 +6,7 @@
     app-floorp
     app-gaming
     app-gimp
+    app-glance
     app-inkscape
     app-kitty
     app-latex
