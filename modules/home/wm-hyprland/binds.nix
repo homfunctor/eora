@@ -20,7 +20,7 @@ in {
 
       # launcher
       "${mod}, R, exec, rofi -show drun -run-command 'uwsm app -- {cmd}'"
-
+      "${mod} SHIFT, R, exec, ${toggle "anny-dock"}"
       # window management
       "${mod}, T, togglefloating"
       "${mod}, D, togglesplit"

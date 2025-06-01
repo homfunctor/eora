@@ -1,4 +1,3 @@
-# todo: vaguely recall kdeconnect wants something else
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     blueman

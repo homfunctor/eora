@@ -96,6 +96,15 @@ in {
 
     # permission = [];
 
+    windowrule = [
+      # anny-dock
+      "noborder,class:^(anny-dock)"
+      "noshadow,class:^(anny-dock)"
+      "float,class:^(anny-dock)"
+      "pin,class:^(anny-dock)"
+      "noblur, class:^(anny-dock)"
+    ];
+
     windowrulev2 = [
       # smart gaps
       "bordersize 0, floating:0, onworkspace:w[t1]"
@@ -150,9 +159,6 @@ in {
       "stayfocused, class:^(pinentry-)"
       "stayfocused, class:^(polkit-), title:(Authenticate)"
       "stayfocused, class:(gcr-prompter)"
-
-      # syncthing
-      "float, title:^(Syncthing Tray)"
     ];
 
     xwayland = {

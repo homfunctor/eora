@@ -6,8 +6,9 @@
   pkgs,
   ...
 }: let
-  inherit (lib) mkForce;
+  inherit (builtins) unsafeDiscardStringContext;
   inherit (config.lib.stylix) colors;
+  inherit (lib) mkForce;
 
   iconThemeName = "ePapirus-Dark";
 
@@ -17,13 +18,14 @@
     icon_theme=${iconThemeName}
   '';
 
+  # i just don't want github to say my flake is mostly Mustache
   svg = colors {
-    template = "${inputs.sapadal}/assets/kvantum-svg.mustache";
+    template = /. + unsafeDiscardStringContext "${inputs.sapadal}/assets/kvantum-svg.mustache";
     extension = "svg";
   };
 
   kvconfig = colors {
-    template = "${inputs.sapadal}/assets/kvconfig.mustache";
+    template = /. + unsafeDiscardStringContext "${inputs.sapadal}/assets/kvconfig.mustache";
     extension = ".kvconfig";
   };
 

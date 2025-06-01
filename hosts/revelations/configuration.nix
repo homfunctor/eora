@@ -53,7 +53,6 @@
       hostname = "revelations";
 
       sops = {
-        syncthing.enable = true;
         user.enable = true;
       };
 

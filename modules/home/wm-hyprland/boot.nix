@@ -7,7 +7,6 @@ in {
       "systemctl --user start hyprpolkitagent"
       "hyprctl setcursor"
       "${uwsmapp "nm-applet"}"
-      "${uwsmapp "kdeconnect-indicator"}"
     ];
   };
 }

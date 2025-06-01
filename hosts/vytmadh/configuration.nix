@@ -51,7 +51,6 @@
       hostname = "vytmadh";
 
       sops = {
-        syncthing.enable = true;
         user.enable = true;
       };
 
