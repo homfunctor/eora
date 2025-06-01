@@ -1,0 +1,22 @@
+{
+  imports = [
+    ./alpha.nix
+    ./barbar.nix
+    ./blink.nix
+    ./colorizer.nix
+    ./conform.nix
+    ./lastplace.nix
+    ./lint.nix
+    ./lsp.nix
+    ./lualine.nix
+    ./mini.nix
+    ./noice.nix
+    ./nvim-surround.nix
+    ./precognition.nix
+    ./rustaceanvim.nix
+    ./snacks.nix
+    ./treesitter.nix
+    ./vimtex.nix
+    ./which-key.nix
+  ];
+}

@@ -1,0 +1,29 @@
+{
+  config,
+  flake,
+  osConfig,
+  pkgs,
+  ...
+}: let
+  inherit (flake.lib) mkSecretPath;
+  inherit (config.home.opts) username;
+in {
+  imports = [
+    ./devices.nix
+    ./options.nix
+    # folders to sync
+    ./sync-folders
+  ];
+
+  services.syncthing = {
+    enable = true;
+    package = pkgs.syncthing;
+
+    cert = mkSecretPath osConfig ["syncthing" "${username}" "cert"];
+    key = mkSecretPath osConfig ["syncthing" "${username}" "key"];
+
+    # strictly declarative
+    overrideDevices = true;
+    overrideFolders = true;
+  };
+}
