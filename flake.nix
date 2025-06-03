@@ -49,14 +49,20 @@
       inputs.treefmt-nix.follows = "treefmt-nix";
     };
 
-    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix = {
+      url = "github:Mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     treefmt-nix.url = "github:numtide/treefmt-nix";
 
     # gaming
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
-    nix-gaming.url = "github:fufexan/nix-gaming";
+    nix-gaming = {
+      url = "github:fufexan/nix-gaming";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # hyprland
     hyprland.url = "github:hyprwm/Hyprland";
@@ -111,6 +117,7 @@
   outputs = inputs:
     inputs.blueprint {
       inherit inputs;
+      # for local packages
       nixpkgs.config.allowUnfree = true;
       systems = ["x86_64-linux"];
     };

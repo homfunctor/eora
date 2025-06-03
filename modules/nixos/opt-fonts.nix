@@ -5,6 +5,7 @@
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
+      corefonts
       nerd-font-patcher
       noto-fonts
       noto-fonts-cjk-sans

@@ -31,7 +31,16 @@ in {
       } "default versioning settings";
 
       folder = let
-        folderNames = ["Books" "Life" "Math" "Nix" "Rust" "Work"];
+        folderNames = [
+          "Books"
+          "Fish"
+          "Life"
+          "Math"
+          "Misc"
+          "Nix"
+          "Rust"
+          "Work"
+        ];
       in
         listToAttrs (
           map (

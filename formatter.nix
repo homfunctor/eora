@@ -14,6 +14,5 @@ inputs.treefmt-nix.lib.mkWrapper pkgs {
     just.enable = true;
     rustfmt.enable = true;
     statix.enable = true;
-    yamlfmt.enable = true;
   };
 }

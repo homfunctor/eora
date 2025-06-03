@@ -43,6 +43,16 @@
       }
 
       {
+        mode = "n";
+        key = "<C-q>";
+        action = "<cmd>q<cr><esc>";
+        options = {
+          silent = true;
+          desc = "Exit file";
+        };
+      }
+
+      {
         mode = "v";
         key = "J";
         action = ":m '>+1<CR>gv=gv";

@@ -40,7 +40,7 @@
               "select_next"
               "fallback"
             ];
-            "<C-p>" = [
+            "<C-k>" = [
               "select_prev"
               "fallback"
             ];
@@ -49,7 +49,7 @@
               "show_documentation"
               "hide_documentation"
             ];
-            "<Down>" = [
+            "<C-j>" = [
               "select_next"
               "fallback"
             ];
