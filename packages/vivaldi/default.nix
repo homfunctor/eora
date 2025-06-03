@@ -173,7 +173,7 @@ in
 
     libPath =
       lib.makeLibraryPath buildInputs
-      + lib.optionalString (stdenv.hostPlatform.is64bit) (
+      + lib.optionalString stdenv.hostPlatform.is64bit (
         ":" + lib.makeSearchPathOutput "lib" "lib64" buildInputs
       )
       + ":$out/opt/vivaldi/lib";

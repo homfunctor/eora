@@ -1,6 +1,5 @@
 # so cutting edge it bleeds
 {
-  lib,
   pkgs,
   ...
 }: {

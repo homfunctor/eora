@@ -1,12 +1,11 @@
 {
   config,
-  inputs,
   lib,
+  perSystem,
   pkgs,
   ...
 }: let
   inherit (lib) getExe;
-  portalPkg = inputs.hyprland.packages.${pkgs.system}.xdg-desktop-portal-hyprland;
 
   # lets me autologin to adminuser, logout, then login to workuser
   # should find another way
@@ -31,12 +30,14 @@ in {
     hyprland = {
       enable = true;
       withUWSM = true;
-      portalPackage = portalPkg;
     };
     uwsm.enable = true;
   };
 
-  security.pam.services.hyprlock.text = "auth include login";
+  security.pam.services = {
+    greetd.enableGnomeKeyring = true;
+    hyprlock.text = "auth include login";
+  };
 
   # auto-logins to Hyprland on boot (passwd used to decrypt at boot)
   # if logged out, then run tuigreet (for switching to work account)

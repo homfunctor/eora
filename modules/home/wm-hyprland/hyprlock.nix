@@ -1,4 +1,6 @@
 # hyprlock settings
+# todo: make per-monitor setup for revelations:
+#   [blank screen] [lock screen] [blank screen]
 {
   config,
   inputs,

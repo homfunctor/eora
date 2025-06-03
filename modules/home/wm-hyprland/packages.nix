@@ -3,9 +3,7 @@
   pkgs,
   perSystem,
   ...
-}: let
-  grimblastPkg = perSystem.hyprland-contrib.grimblast;
-in {
+}: {
   home.packages = with pkgs; [
     brightnessctl
     ffmpeg-full
@@ -16,7 +14,7 @@ in {
     gnome-disk-utility
     gsettings-desktop-schemas
     grim
-    grimblastPkg
+    grimblast
     hyprcursor
     hyprland-qtutils
     inotify-tools
