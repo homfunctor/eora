@@ -11,7 +11,6 @@ in {
   imports = [
     ./devices.nix
     ./options.nix
-    # folders to sync
     ./sync-folders
   ];
 

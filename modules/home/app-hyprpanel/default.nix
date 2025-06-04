@@ -6,16 +6,17 @@
   perSystem,
   ...
 }: let
-  inherit (lib) mkDefault;
-  inherit (config.stylix) fonts;
   inherit (config.home.opts) hyprpanelLayout;
+  inherit (config.stylix) fonts;
+  inherit (lib) mkDefault;
 
   colors = config.lib.stylix.colors.withHashtag;
+
+  accent = colors.base0C;
+  accent-alt = colors.base03;
   background = colors.base00;
   background-alt = colors.base01;
-  accent-alt = colors.base03;
   foreground = colors.base05;
-  accent = colors.base0C;
 
   font = "${fonts.serif.name}";
   fontSize = "${toString fonts.sizes.desktop}";

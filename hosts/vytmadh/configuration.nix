@@ -17,6 +17,7 @@
     opt-home
     opt-networking
     opt-nix
+    opt-security
     opt-services
     opt-sops
 
@@ -27,7 +28,6 @@
     opt-fonts
     opt-locale
     opt-stylix
-
     wm-hyprland
 
     # stage 2.5: nice things

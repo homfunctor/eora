@@ -9,7 +9,6 @@
   inherit (config.home.opts) hyprpaperOpts;
   hyprpaperPkg = perSystem.hyprpaper.default;
 in {
-  # wallpaper settings
   services.hyprpaper = {
     enable = true;
     package = hyprpaperPkg;

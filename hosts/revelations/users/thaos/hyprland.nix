@@ -5,9 +5,10 @@
   lib,
   ...
 }: let
-  inherit (lib) mkForce;
   inherit (config.home.opts) hyprlandOpts hyprpaperOpts;
   inherit (config.lib.stylix) colors;
+  inherit (lib) mkForce;
+
   wallDir = "${inputs.sapadal}/assets";
   wall1 = "base2.png";
   wall2 = "base.png";

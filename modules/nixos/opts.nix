@@ -10,7 +10,6 @@ in {
 
     hostname = mkStrOpt "" "host name for configuration";
 
-    # secrets handled by sops
     sops = {
       user.enable = mkBoolOpt false "should sops handle user password?";
     };

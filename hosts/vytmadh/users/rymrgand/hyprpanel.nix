@@ -10,8 +10,8 @@
     };
 
     wayland.windowManager.hyprland.settings.exec-once = [
-      "uwsm app -- hyprpanel"
       "uwsm app -- blueman-applet"
+      "uwsm app -- hyprpanel"
     ];
   };
 }

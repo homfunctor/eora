@@ -1,5 +1,5 @@
 # minimal services
-{pkgs, ...}: {
+{
   services = {
     avahi = {
       enable = true;
@@ -11,19 +11,8 @@
       };
     };
 
-    dbus = {
-      enable = true;
-      implementation = "broker";
-      packages = with pkgs; [
-        gcr
-        gnome-settings-daemon
-      ];
-    };
-
     fstrim.enable = true;
     fwupd.enable = true;
-    # todo: isn't unlocking on login
-    gnome.gnome-keyring.enable = true;
     gvfs.enable = true;
     libinput.enable = true;
     udisks2.enable = true;

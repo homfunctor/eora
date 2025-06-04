@@ -12,7 +12,6 @@ in {
     map (
       user:
         nameValuePair user {
-          isNormalUser = true;
           description = "${user}";
           extraGroups = [
             "audio"
@@ -24,6 +23,7 @@ in {
             "video"
             "wheel"
           ];
+          isNormalUser = true;
         }
     )
     usernames

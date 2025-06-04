@@ -8,13 +8,13 @@
       copy_on_select = "clipboard";
       enable_audio_bell = false;
       scrollback_lines = 10000;
-      selection_foreground = "none";
       selection_background = "none";
+      selection_foreground = "none";
       shell = "fish";
       show_hyperlink_targets = "no";
-      window_padding_width = 10;
-      url_style = "none";
       underline_hyperlinks = "never";
+      url_style = "none";
+      window_padding_width = 10;
     };
   };
 }

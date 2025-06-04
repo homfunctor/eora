@@ -1,16 +1,9 @@
 # pseudo desktop environment
-{
-  pkgs,
-  perSystem,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
     brightnessctl
     ffmpeg-full
     ffmpegthumbnailer
-    file-roller
-    gnome-calculator
-    gnome-control-center
     gnome-disk-utility
     gsettings-desktop-schemas
     grim

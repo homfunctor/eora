@@ -17,8 +17,8 @@
     base0D = "35A0EB"; # functions #35A0EB
     base0E = "A0DEFB"; # keywords #A0DEFB
     base0F = "43A2D5"; # deprecated, open/closing tags #43A2D5
-    scheme = "Sorcier des Glaces";
     author = "homfunctor";
+    scheme = "Sorcier des Glaces";
     slug = "sorcier-des-glaces";
   };
 }

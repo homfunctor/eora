@@ -1,10 +1,12 @@
 # todo: make it fit monitor size better
 {
   config,
+  flake,
   lib,
   pkgs,
   ...
 }: let
+  inherit (flake.lib) mkDeskGone;
   inherit (lib) mkForce;
   inherit (config.lib.formats.rasi) mkLiteral;
   colors = config.lib.stylix.colors.withHashtag;

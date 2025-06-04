@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  perSystem,
   pkgs,
   ...
 }: let
@@ -35,8 +34,9 @@ in {
   };
 
   security.pam.services = {
+    greetd-password.enableGnomeKeyring = true;
     greetd.enableGnomeKeyring = true;
-    hyprlock.text = "auth include login";
+    login.enableGnomeKeyring = true;
   };
 
   # auto-logins to Hyprland on boot (passwd used to decrypt at boot)

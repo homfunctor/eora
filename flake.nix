@@ -65,11 +65,9 @@
     };
 
     # hyprland
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
+    hyprland = {
+      url = "github:hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     hypridle = {
@@ -77,7 +75,7 @@
       inputs = {
         hyprlang.follows = "hyprland/hyprlang";
         hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
+        nixpkgs.follows = "nixpkgs";
       };
     };
 
@@ -87,7 +85,7 @@
         hyprgraphics.follows = "hyprland/hyprgraphics";
         hyprlang.follows = "hyprland/hyprlang";
         hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
+        nixpkgs.follows = "nixpkgs";
       };
     };
 
@@ -99,11 +97,12 @@
         hyprgraphics.follows = "hyprland/hyprgraphics";
         hyprlang.follows = "hyprland/hyprlang";
         hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
+        nixpkgs.follows = "nixpkgs";
       };
     };
 
-    hyprpolkitagent.url = "github:hyprwm/hyprpolkitagent";
+    # the hip new thing
+    nixpkgs-gcr.url = "github:nezia1/nixpkgs/replace-gnome-keyring-with-gcr";
 
     # theming
     stylix.url = "github:nix-community/stylix";

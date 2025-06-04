@@ -5,18 +5,18 @@
 }: {
   config.stylix.fonts = {
     monospace = {
-      package = pkgs.nerd-fonts.iosevka;
       name = "Iosevka Nerd Font Mono";
+      package = pkgs.nerd-fonts.iosevka;
     };
 
     sansSerif = {
-      package = pkgs.nerd-fonts.iosevka;
       name = "Iosevka Nerd Font";
+      package = pkgs.nerd-fonts.iosevka;
     };
 
     serif = {
-      package = pkgs.nerd-fonts.iosevka;
       name = "Iosevka Nerd Font";
+      package = pkgs.nerd-fonts.iosevka;
     };
   };
 }

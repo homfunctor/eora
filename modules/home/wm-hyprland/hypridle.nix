@@ -7,8 +7,6 @@
   ...
 }: let
   inherit (lib) getExe mkForce;
-
-  brillo = getExe pkgs.brillo;
   hypridlePkg = perSystem.hypridle.hypridle;
   lock = "${pkgs.systemd}/bin/loginctl lock-session";
   timeout = 1200;
@@ -27,15 +25,6 @@ in {
       };
 
       listener = [
-        {
-          timeout = timeout - 10;
-          # save the current brightness and dim the screen over a period of
-          # 500 ms
-          on-timeout = "${brillo} -O; ${brillo} -u 500000 -S 10";
-          # brighten the screen over a period of 250ms to the saved value
-          on-resume = "${brillo} -I -u 250000";
-        }
-
         {
           inherit timeout;
           on-timeout = "hyprctl dispatch dpms off";

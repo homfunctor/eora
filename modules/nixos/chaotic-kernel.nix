@@ -1,9 +1,5 @@
 # so cutting edge it bleeds
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
-
   services.scx.enable = true;
 }

@@ -1,9 +1,9 @@
 # default applications for wael
 {lib, ...}: let
+  inherit (builtins) listToAttrs;
   inherit (lib) attrsets;
   inherit (lib.attrsets) mapAttrsToList nameValuePair;
   inherit (lib.lists) flatten;
-  inherit (builtins) listToAttrs;
 
   defaultApps = {
     archive = ["engrampa.desktop"];

@@ -3,8 +3,8 @@
     ludusavi
     protonplus
     umu-launcher
-    winetricks
     wineWowPackages.fonts
     wineWowPackages.stagingFull
+    winetricks
   ];
 }

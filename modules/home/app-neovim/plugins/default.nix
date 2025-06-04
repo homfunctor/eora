@@ -1,7 +1,6 @@
 {
   imports = [
     ./alpha.nix
-    ./barbar.nix
     ./blink.nix
     ./colorizer.nix
     ./conform.nix

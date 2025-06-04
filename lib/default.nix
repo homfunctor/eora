@@ -1,5 +1,11 @@
 {inputs, ...}: let
-  inherit (inputs.nixpkgs.lib) concatStringsSep removeSuffix mkOption types;
+  inherit
+    (inputs.nixpkgs.lib)
+    concatStringsSep
+    mkOption
+    removeSuffix
+    types
+    ;
 in rec {
   # mkOption utilities
   mkOpt = type: default: description:

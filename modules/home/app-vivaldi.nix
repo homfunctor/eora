@@ -1,7 +1,12 @@
 # todo: configure declaratively
 # temporarily built locally until unstable has it again
-{perSystem, ...}: {
+{
+  perSystem,
+  # pkgs,
+  ...
+}: {
   home.packages = with perSystem.self; [
+    # home.packages = with pkgs; [
     vivaldi
   ];
 
