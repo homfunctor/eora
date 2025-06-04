@@ -16,7 +16,7 @@
     # stage 3: wm and apps
     ./hyprland.nix
     ./xdg.nix
-    # app-syncthing
+    app-syncthing
     opt-stylix
     wm-hyprland
 
@@ -31,9 +31,11 @@
 
       rofi.columns = 10;
 
-      # sync = {
-      #   Books.enable = true;
-      # };
+      sync.folder = {
+        Books.enable = true;
+        Math.enable = true;
+        Work.enable = true;
+      };
 
       username = "thaos";
     };

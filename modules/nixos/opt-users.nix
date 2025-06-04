@@ -19,6 +19,8 @@ in {
             "gamemode"
             "input"
             "networkmanager"
+            "scanners"
+            "sys"
             "video"
             "wheel"
           ];
