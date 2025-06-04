@@ -1,6 +1,7 @@
 {
   inputs,
   perSystem,
+  pkgs,
   ...
 }: {
   imports = [
@@ -8,9 +9,20 @@
   ];
 
   config = {
-    services.gnome.gcr-ssh-agent = {
-      enable = true;
-      package = perSystem.nixpkgs-gcr.gcr_4;
+    services = {
+      dbus = {
+        enable = true;
+        implementation = "broker";
+        packages = [
+          perSystem.nixpkgs-gcr.gcr_4
+          pkgs.libsecret
+        ];
+      };
+
+      gnome.gcr-ssh-agent = {
+        enable = true;
+        package = perSystem.nixpkgs-gcr.gcr_4;
+      };
     };
 
     programs = {
