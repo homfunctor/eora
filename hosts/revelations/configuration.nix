@@ -17,7 +17,7 @@
     opt-home
     opt-networking
     opt-nix
-    opt-security
+    # opt-security
     opt-services
     opt-sops
 

@@ -10,8 +10,8 @@ in {
     ./hyprpaper.nix # common hyprpaper settings
     ./hyprlock.nix # hyprlock settings
     ./packages.nix # packages
-    ./polkit.nix # polkit settings (mate polkit)
-    ./portal.nix # portal settings (hyprland-portal)
+    ./polkit.nix # polkit settings
+    ./portal.nix # portal settings
     ./settings.nix # settings common to all types
   ];
 
