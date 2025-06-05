@@ -47,13 +47,6 @@ in {
           "w[t1], gapsout:0, gapsin:0"
           "w[tg1], gapsout:0, gapsin:0"
           "f[1], gapsout:0, gapsin:0"
-          # 3 monitors, DP-2 is main/middle
-          # "1, monitor:DP-1"
-          # "2, monitor:DP-2"
-          # "3, monitor:DP-3"
-          # "4, monitor:DP-1"
-          # "5, monitor:DP-2"
-          # "6, monitor:DP-3"
         ];
       };
     };

@@ -36,7 +36,7 @@
 
     # stage 3: final security settings
     opt-hardening
-    opt-lanzaboote
+    # opt-lanzaboote
   ];
 
   config = {
