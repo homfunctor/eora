@@ -20,6 +20,7 @@
 
         formatters_by_ft = {
           bash = ["shfmt"];
+          fish = ["fish_indent"];
           json = ["jq"];
           lua = ["stylua"];
           # markdown = ["deno_fmt"];

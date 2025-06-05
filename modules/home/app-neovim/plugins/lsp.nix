@@ -20,10 +20,10 @@
             diagnostic.settings.suppress = ["sema-escaping-with"];
             formatting.command = ["${pkgs.alejandra}/bin/alejandra"];
             nixpkgs.expr = "import <nixpkgs> {}";
-            # options = {
-            #   home_manager.expr = "(builtins.getFlake (\"git+file://\" + toString ./.)).homeConfigurations.options";
-            #   nixos.expr = "(builtins.getFlake (\"git+file://\" + toString ./.)).nixosConfigurations.options";
-            # };
+            options = {
+              home_manager.expr = "(builtins.getFlake (\"git+file://\" + toString ./.)).homeConfigurations.options";
+              nixos.expr = "(builtins.getFlake (\"git+file://\" + toString ./.)).nixosConfigurations.options";
+            };
           };
         };
         statix.enable = true;
