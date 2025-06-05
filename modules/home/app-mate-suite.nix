@@ -4,7 +4,7 @@
   home = {
     packages = with pkgs.mate; [
       atril
-      caja-with-extensions
+      caja
       engrampa
       eom
       mate-calc
