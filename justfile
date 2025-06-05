@@ -32,11 +32,11 @@ offlate:
 
 # install vytmadh configuration
 install-vytmadh:
-    sudo nixos-rebuild boot --flake .#vytmadh --log-format internal-json -v |& nom --json
+    sudo nixos-rebuild boot --flake .#vytmadh --use-remote-sudo --log-format internal-json -v |& nom --json
 
 # install revelations configuration
 install-revelations:
-    sudo nixos-rebuild boot --flake .#revelations --log-format internal-json -v |& nom --json
+    sudo nixos-rebuild boot --flake .#revelations --use-remote-sudo --log-format internal-json -v |& nom --json
 
 # violently destroy all remains of nixos channels
 purge-channels:
