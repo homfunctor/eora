@@ -8,6 +8,8 @@
   inherit (lib) nameValuePair;
 in {
   options.home.opts = {
+    defaultApps = mkAttrOpt {} "default applications";
+
     hostname = mkStrOpt "" "hostname";
 
     hyprlandOpts = mkAttrOpt {} "user options for hyprland";

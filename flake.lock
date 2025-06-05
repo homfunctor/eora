@@ -640,11 +640,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1749062139,
-        "narHash": "sha256-gGGLujmeWU+ZjFzfMvFMI0hp9xONsSbm88187wJr82Q=",
+        "lastModified": 1749160002,
+        "narHash": "sha256-IM3xKjsKxhu7Y1WdgTltrLKiOJS8nW7D4SUDEMNr7CI=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "86b95fc1ed2b9b04a451a08ccf13d78fb421859c",
+        "rev": "68cc9eeb3875ae9682c04629f20738e1e79d72aa",
         "type": "github"
       },
       "original": {
@@ -781,11 +781,11 @@
         "xdph": "xdph"
       },
       "locked": {
-        "lastModified": 1749049255,
-        "narHash": "sha256-QXg2B/bF/f9IeSiZwJuhdnz2xcnpu/hDfz4eIHWVhz8=",
+        "lastModified": 1749155341,
+        "narHash": "sha256-KE7qwOLzIsPFnXKh4Z72NwAzP8ZdRxxQKthLGJ30YHM=",
         "owner": "hyprwm",
         "repo": "Hyprland",
-        "rev": "d7a87ce6e2535f1029fc93b062d2828e8549c525",
+        "rev": "fb7548cb41d82f12db2d51b50af29abe4704a1a4",
         "type": "github"
       },
       "original": {
@@ -1016,11 +1016,11 @@
         "systems": "systems_4"
       },
       "locked": {
-        "lastModified": 1749017651,
-        "narHash": "sha256-+WLY8tYw2+i3mf/pUI4ecrQjmyhSUIb5cGCCa9ZQDP4=",
+        "lastModified": 1749154934,
+        "narHash": "sha256-TVzaHSOk9yt3yCEdjQWGFjZ+ObILt9kAC6J9sLFyrds=",
         "owner": "hyprwm",
         "repo": "hyprlock",
-        "rev": "8455fc8ca6432a72313cd285488333ba5977fbe5",
+        "rev": "1303bb4b7edde4632130dff4acde5e3b6f92f347",
         "type": "github"
       },
       "original": {
@@ -1488,11 +1488,11 @@
     },
     "nixpkgs-gcr": {
       "locked": {
-        "lastModified": 1748986932,
-        "narHash": "sha256-0z/xYwFCpKhiATO1CRxJ8Pr3PTpD3vToYCN0IFbz3hk=",
+        "lastModified": 1749144327,
+        "narHash": "sha256-/2U24DIla2UwwZrp2FxbOyuZBiucpm3VpTzIvi5XMl8=",
         "owner": "nezia1",
         "repo": "nixpkgs",
-        "rev": "015f76e0c4eb4ab508a925f2621efa19cde445b0",
+        "rev": "a3120949d293b52614dd45a20fd49dfbf4442b97",
         "type": "github"
       },
       "original": {
@@ -1850,11 +1850,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1749107463,
-        "narHash": "sha256-kg35buxkv7Olb2hDgypb4nFC1Rr42oRGmPe+88gKl8M=",
+        "lastModified": 1749116053,
+        "narHash": "sha256-V7krIW5Exggx5bEye+yluh7XaFXhTt/6qVHXHP/CsAA=",
         "ref": "refs/heads/main",
-        "rev": "b2d77486a250c1bc3c85f37e95b8ce109ef27641",
-        "revCount": 29,
+        "rev": "3616d787774b83a0f3f7cc01457b15926b17f845",
+        "revCount": 30,
         "shallow": false,
         "type": "git",
         "url": "ssh://git@github.com/homfunctor/sapadal"
@@ -1907,11 +1907,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1749053445,
-        "narHash": "sha256-tf4MNRwJ5ikyg4+UfGuC1+GwMBQYh4dK4sdow1MEGVk=",
+        "lastModified": 1749147539,
+        "narHash": "sha256-RkcNfKytYh1tq81Myax39sgOWJ6TOYf2wkUbhdW0p9o=",
         "owner": "nix-community",
         "repo": "stylix",
-        "rev": "a057acc112856352e77d42ac4685134b2213a810",
+        "rev": "937a154dc30ebcf6d2b74fe74c930dd892a127d9",
         "type": "github"
       },
       "original": {

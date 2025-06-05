@@ -15,8 +15,8 @@ in {
     };
 
     loader = {
-      systemd-boot.enable = mkDefault true;
       efi.canTouchEfiVariables = true;
+      systemd-boot.enable = mkDefault true;
     };
 
     plymouth = {

@@ -5,8 +5,8 @@
     app-fish
     app-git
     app-minimal
-    opts
     opt-minimal
+    opts
 
     # stage 2: almost ready for wm
     ./apps.nix
@@ -15,8 +15,9 @@
 
     # stage 3: wm and apps
     ./hyprland.nix
-    ./xdg.nix
+    ./mime.nix
     app-syncthing
+    opt-mime
     opt-stylix
     wm-hyprland
 

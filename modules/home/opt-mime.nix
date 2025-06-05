@@ -1,22 +1,13 @@
-# default applications for rymrgand
-{lib, ...}: let
+{
+  config,
+  lib,
+  ...
+}: let
   inherit (builtins) listToAttrs;
+  inherit (config.home.opts) defaultApps;
   inherit (lib) attrsets;
   inherit (lib.attrsets) mapAttrsToList nameValuePair;
   inherit (lib.lists) flatten;
-
-  defaultApps = {
-    archive = ["engrampa.desktop"];
-    audio = ["vlc.desktop"];
-    browser = ["vivaldi-stable.desktop"];
-    directory = ["caja.desktop"];
-    image = ["eom.desktop"];
-    office = ["onlyoffice-desktopeditors.desktop"];
-    pdf = ["atril.desktop"];
-    terminal = ["kitty.desktop"];
-    text = ["pluma.desktop"];
-    video = ["vlc.desktop"];
-  };
 
   mimeMap = {
     archive = [

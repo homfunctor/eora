@@ -4,7 +4,7 @@
     home.opts.hyprpanelLayout = {
       "*" = {
         "left" = ["workspaces" "windowtitle"];
-        "middle" = ["ram" "clock" "battery"];
+        "middle" = ["cpu" "clock" "battery"];
         "right" = ["volume" "microphone" "systray" "notifications"];
       };
     };

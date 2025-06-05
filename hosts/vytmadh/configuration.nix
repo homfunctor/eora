@@ -12,14 +12,14 @@
     ./sops.nix
 
     chaotic-cachix
-    opts
     opt-boot
     opt-home
+    opt-keyring
     opt-networking
     opt-nix
-    opt-security
     opt-services
     opt-sops
+    opts
 
     # stage 2: visuals
     ./stylix.nix
@@ -31,7 +31,7 @@
     wm-hyprland
 
     # stage 2.5: nice things
-#    chaotic-kernel
+    #    chaotic-kernel
     opt-rust
 
     # stage 3: final security settings

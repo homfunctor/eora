@@ -20,12 +20,14 @@
     channel.enable = false;
     daemonCPUSchedPolicy = "idle";
     daemonIOSchedClass = "idle";
+
     gc = {
       automatic = true;
-      persistent = true;
       dates = "weekly";
       options = "--delete-older-than 7d";
+      persistent = true;
     };
+
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     optimise.automatic = true;
 
@@ -34,8 +36,8 @@
       auto-optimise-store = true;
       builders-use-substitutes = true;
       experimental-features = [
-        "nix-command"
         "flakes"
+        "nix-command"
       ];
       http-connections = 50;
       keep-derivations = true;
