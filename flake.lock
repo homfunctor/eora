@@ -1364,7 +1364,7 @@
         "narHash": "sha256-11R4K3iAx4tLXjUs+hQ5K90JwDABD/XHhsM9nkeS5N8=",
         "rev": "cd2a9c028df820a83ca2807dc6c6e7abc3dfa7fc",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/nixos-module/archive/cd2a9c028df820a83ca2807dc6c6e7abc3dfa7fc.tar.gz"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/nixos-module/archive/cd2a9c028df820a83ca2807dc6c6e7abc3dfa7fc.tar.gz?rev=cd2a9c028df820a83ca2807dc6c6e7abc3dfa7fc"
       },
       "original": {
         "type": "tarball",
@@ -1638,11 +1638,11 @@
         "systems": "systems_9"
       },
       "locked": {
-        "lastModified": 1749089973,
-        "narHash": "sha256-v0bDyUPOJl9ZiZwCu+u03n+XF3OxOOlKib69dzOBOTg=",
+        "lastModified": 1749107808,
+        "narHash": "sha256-ohLHvWmAuH4aHOCAGP1UlwRRxX21/eW+N2e7eB0kQeo=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "60f1c852377e617668bb2669056969bf896e8300",
+        "rev": "635a9e770f77a7c586c60f84b1debf054318034a",
         "type": "github"
       },
       "original": {
@@ -1850,11 +1850,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1749101425,
-        "narHash": "sha256-YEfSueGDvgplEgD5EmHwoXYdViUKxTS5lnVtDTp61ug=",
+        "lastModified": 1749107463,
+        "narHash": "sha256-kg35buxkv7Olb2hDgypb4nFC1Rr42oRGmPe+88gKl8M=",
         "ref": "refs/heads/main",
-        "rev": "4afd31fd35e19a4dd0d31ea448d37e46b3df77e3",
-        "revCount": 23,
+        "rev": "b2d77486a250c1bc3c85f37e95b8ce109ef27641",
+        "revCount": 29,
         "shallow": false,
         "type": "git",
         "url": "ssh://git@github.com/homfunctor/sapadal"

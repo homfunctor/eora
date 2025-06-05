@@ -30,7 +30,6 @@
     tldr
     unrar
     unzip
-    uutils-coreutils
     wayland-utils
     wayland-protocols
     wev
