@@ -3,7 +3,7 @@
   config = {
     home.opts.hyprpanelLayout = {
       "*" = {
-        "left" = ["workspaces" "windowtitle"];
+        "left" = ["power" "workspaces" "windowtitle"];
         "middle" = ["cpu" "clock" "battery"];
         "right" = ["volume" "microphone" "systray" "notifications"];
       };
