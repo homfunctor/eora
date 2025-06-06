@@ -17,7 +17,6 @@
 
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      # perSystem.hyprland.xdg-desktop-portal-hyprland
     ];
 
     xdgOpenUsePortal = true;
