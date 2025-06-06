@@ -1,4 +1,4 @@
-# home-manager user settings for rymrgand
+# home-manager user settings
 {flake, ...}: {
   imports = with flake.modules.home; [
     # stage 1: bare minimum tty

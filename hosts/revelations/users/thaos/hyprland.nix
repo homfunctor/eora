@@ -1,4 +1,4 @@
-# hyprland settings for thaos
+# hyprland settings for user
 {
   config,
   inputs,

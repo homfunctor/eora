@@ -1,4 +1,4 @@
-# home-manager apps for rymrgand
+# home-manager apps for user
 {flake, ...}: {
   imports = with flake.modules.home; [
     app-floorp

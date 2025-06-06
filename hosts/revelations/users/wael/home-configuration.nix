@@ -1,4 +1,4 @@
-# home-manager user settings for wael
+# home-manager user settings
 {flake, ...}: {
   imports = with flake.modules.home; [
     # stage 1: bare minimum tty
@@ -17,6 +17,7 @@
     ./hyprland.nix
     ./mime.nix
     app-syncthing
+    opt-keyring
     opt-mime
     opt-stylix
     wm-hyprland

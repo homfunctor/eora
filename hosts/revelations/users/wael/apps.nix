@@ -1,4 +1,4 @@
-# home-manager apps for wael
+# home-manager apps for user
 {flake, ...}: {
   imports = with flake.modules.home; [
     app-apotheosis

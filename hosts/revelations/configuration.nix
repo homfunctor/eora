@@ -26,6 +26,7 @@
 
     opt-fish
     opt-fonts
+    opt-greeter
     opt-locale
     opt-stylix
     wm-hyprland

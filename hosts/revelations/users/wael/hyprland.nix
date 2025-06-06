@@ -1,4 +1,4 @@
-# hyprland settings for wael
+# hyprland settings for user
 {
   config,
   inputs,

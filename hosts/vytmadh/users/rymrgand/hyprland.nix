@@ -1,4 +1,4 @@
-# hyprland settings for rymrgand
+# hyprland settings for user
 {
   config,
   inputs,
