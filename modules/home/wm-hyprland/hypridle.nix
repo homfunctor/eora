@@ -40,6 +40,6 @@ in {
   };
 
   systemd.user.services = {
-    hypridle.Unit.After = mkForce "config.wayland.systemd.target";
+    hypridle.Unit.After = mkForce config.wayland.systemd.target;
   };
 }
