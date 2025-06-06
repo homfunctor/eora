@@ -33,12 +33,6 @@ in {
     uwsm.enable = true;
   };
 
-  # security.pam.services = {
-  #   greetd-password.enableGnomeKeyring = true;
-  #   greetd.enableGnomeKeyring = true;
-  #   login.enableGnomeKeyring = true;
-  # };
-
   # auto-logins to Hyprland on boot (passwd used to decrypt at boot)
   # if logged out, then run tuigreet (for switching to work account)
   services.greetd = {
