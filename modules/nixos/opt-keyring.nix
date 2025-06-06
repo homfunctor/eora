@@ -9,11 +9,11 @@
   ];
 
   config = {
-    security.pam.services = {
-      greetd.enableGnomeKeyring = true;
-      greetd-password.enableGnomeKeyring = true;
-      login.enableGnomeKeyring = true;
-    };
+    # security.pam.services = {
+    #   greetd.enableGnomeKeyring = true;
+    #   greetd-password.enableGnomeKeyring = true;
+    #   login.enableGnomeKeyring = true;
+    # };
 
     services = {
       # dbus = {
