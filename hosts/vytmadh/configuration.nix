@@ -57,8 +57,5 @@
       adminuser = "rymrgand";
       usernames = ["rymrgand"];
     };
-
-    # fingerprint
-    services.fprintd.enable = true;
   };
 }

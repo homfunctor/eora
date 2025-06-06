@@ -109,9 +109,6 @@
       };
     };
 
-    # the hip new thing
-    nixpkgs-gcr.url = "github:nezia1/nixpkgs/replace-gnome-keyring-with-gcr";
-
     # theming
     stylix.url = "github:nix-community/stylix";
   };

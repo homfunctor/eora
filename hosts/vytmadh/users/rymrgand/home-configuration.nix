@@ -17,6 +17,7 @@
     ./hyprland.nix
     ./mime.nix
     app-syncthing
+    opt-keyring
     opt-mime
     opt-stylix
     wm-hyprland
@@ -43,8 +44,5 @@
 
       username = "rymrgand";
     };
-
-    # fingerprint
-    programs.hyprlock.settings.auth.fingerprint.enabled = true;
   };
 }
