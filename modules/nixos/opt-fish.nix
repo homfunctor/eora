@@ -55,6 +55,7 @@
       gitc = "git commit -m";
       gitpl = "git pull";
       gitps = "git push";
+      gitlol = "gita && gitc \".\" && gitps";
       ls = "eza -G -x --color=always --icons=always";
       n = "nvim";
     };

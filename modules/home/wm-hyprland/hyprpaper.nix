@@ -16,6 +16,6 @@ in {
   };
 
   systemd.user.services.hyprpaper = {
-    Unit.After = mkForce config.wayland.systemd.target;
+    Unit.After = mkForce "graphical-session.target";
   };
 }
