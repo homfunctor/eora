@@ -5,15 +5,8 @@
       withUWSM = true;
     };
 
-    uwsm = {
-      enable = true;
-      waylandCompositors = {
-        hyprland = {
-          prettyName = "Hyprland";
-          comment = "Hyprland compositor managed by UWSM";
-          binPath = "/run/current-system/sw/bin/Hyprland";
-        };
-      };
-    };
+    uwsm.enable = true;
   };
+
+  security.pam.services.hyprlock.text = "auth include login";
 }

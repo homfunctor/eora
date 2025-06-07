@@ -1,5 +1,9 @@
-{perSystem, ...}: let
+{
+  perSystem,
+  ...
+}: let
   hyprlandPkg = perSystem.hyprland.hyprland;
+  # hyprlandPkg = pkgs.hyprland;
 in {
   imports = [
     ./binds.nix # keybinds common to all types
@@ -15,9 +19,13 @@ in {
     ./settings.nix # settings common to all types
   ];
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    package = hyprlandPkg;
-    xwayland.enable = true;
+  wayland = {
+    windowManager.hyprland = {
+      enable = true;
+      package = hyprlandPkg;
+      xwayland.enable = true;
+    };
+
+    systemd.target = "graphical-session.target";
   };
 }

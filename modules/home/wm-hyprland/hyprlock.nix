@@ -5,16 +5,19 @@
   config,
   inputs,
   lib,
+  perSystem,
   ...
 }: let
   inherit (lib) mkForce;
   inherit (config.lib.stylix) colors;
+  hyprlockPkg = perSystem.hyprlock.hyprlock;
   bg = "${inputs.sapadal}/assets/base.png";
 in {
   stylix.targets.hyprlock.enable = mkForce false;
 
   programs.hyprlock = {
     enable = true;
+    package = hyprlockPkg;
 
     sourceFirst = true;
     settings = {

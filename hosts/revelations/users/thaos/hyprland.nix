@@ -5,7 +5,6 @@
   lib,
   ...
 }: let
-  inherit (config.home.opts) hyprlandOpts hyprpaperOpts;
   inherit (config.lib.stylix) colors;
   inherit (lib) mkForce;
 

@@ -43,10 +43,12 @@
 
     sapadal = {
       url = "git+ssh://git@github.com/homfunctor/sapadal?shallow=1?ref=main";
-      inputs.blueprint.follows = "blueprint";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.sops-nix.follows = "sops-nix";
-      inputs.treefmt-nix.follows = "treefmt-nix";
+      inputs = {
+        blueprint.follows = "blueprint";
+        nixpkgs.follows = "nixpkgs";
+        sops-nix.follows = "sops-nix";
+        treefmt-nix.follows = "treefmt-nix";
+      };
     };
 
     sops-nix = {
@@ -65,17 +67,14 @@
     };
 
     # hyprland
-    hyprland = {
-      url = "github:hyprwm/Hyprland";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    hyprland.url = "github:hyprwm/Hyprland";
 
     hypridle = {
       url = "github:hyprwm/hypridle";
       inputs = {
         hyprlang.follows = "hyprland/hyprlang";
         hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "nixpkgs";
+        nixpkgs.follows = "hyprland/nixpkgs";
       };
     };
 
@@ -85,7 +84,7 @@
         hyprgraphics.follows = "hyprland/hyprgraphics";
         hyprlang.follows = "hyprland/hyprlang";
         hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "nixpkgs";
+        nixpkgs.follows = "hyprland/nixpkgs";
       };
     };
 
@@ -97,7 +96,7 @@
         hyprgraphics.follows = "hyprland/hyprgraphics";
         hyprlang.follows = "hyprland/hyprlang";
         hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "nixpkgs";
+        nixpkgs.follows = "hyprland/nixpkgs";
       };
     };
 
@@ -105,7 +104,7 @@
       url = "github:hyprwm/hyprpolkitagent";
       inputs = {
         hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "nixpkgs";
+        nixpkgs.follows = "hyprland/nixpkgs";
       };
     };
 
@@ -116,8 +115,6 @@
   outputs = inputs:
     inputs.blueprint {
       inherit inputs;
-      # for local packages
-      nixpkgs.config.allowUnfree = true;
       systems = ["x86_64-linux"];
     };
 }

@@ -6,7 +6,7 @@
   pkgs,
   ...
 }: let
-  inherit (lib) getExe mkForce;
+  inherit (lib) getExe;
   hypridlePkg = perSystem.hypridle.hypridle;
   lock = "${pkgs.systemd}/bin/loginctl lock-session";
   timeout = 1200;
@@ -39,7 +39,7 @@ in {
     };
   };
 
-  systemd.user.services = {
-    hypridle.Unit.After = mkForce "graphical-session.target";
-  };
+  # wayland.windowManager.hyprland.settings.exec-once = [
+  #   "systemctl --user enable --now hypridle.service"
+  # ];
 }
