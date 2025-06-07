@@ -108,6 +108,14 @@
       };
     };
 
+    hyprsysteminfo = {
+      url = "github:hyprwm/hyprsysteminfo";
+      inputs = {
+        hyprutils.follows = "hyprland/hyprutils";
+        nixpkgs.follows = "hyprland/nixpkgs";
+      };
+    };
+
     # theming
     stylix.url = "github:nix-community/stylix";
   };

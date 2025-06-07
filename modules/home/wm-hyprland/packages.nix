@@ -1,5 +1,11 @@
 # pseudo desktop environment
-{pkgs, ...}: {
+{
+  perSystem,
+  pkgs,
+  ...
+}: let
+  hyprsysteminfoPkg = perSystem.hyprsysteminfo.hyprsysteminfo;
+in {
   home.packages = with pkgs; [
     brightnessctl
     ffmpeg-full
@@ -10,6 +16,7 @@
     grimblast
     hyprcursor
     hyprland-qtutils
+    hyprsysteminfoPkg
     inotify-tools
     libsForQt5.qt5.qtwayland
     libsForQt5.qtstyleplugin-kvantum
