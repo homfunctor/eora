@@ -1,30 +1,32 @@
 # home-manager user settings
 {flake, ...}: {
   imports = with flake.modules.home; [
-    # stage 1: bare minimum tty
+    # core
     app-fish
     app-git
     app-minimal
     opt-minimal
     opts
 
-    # stage 2: almost ready for wm
-    ./apps.nix
+    # neovim
     ./neovim.nix
     app-neovim
 
-    # stage 3: wm and apps
-    ./hyprland.nix
+    # visuals
+    opt-stylix
+
+    # apps
+    ./apps.nix
     ./mime.nix
     app-syncthing
     opt-keyring
     opt-mime
-    opt-stylix
-    wm-hyprland
 
-    # stage 4: panel
+    # hyprland
+    ./hyprland.nix
     ./hyprpanel.nix
     app-hyprpanel
+    wm-hyprland
   ];
 
   config = {

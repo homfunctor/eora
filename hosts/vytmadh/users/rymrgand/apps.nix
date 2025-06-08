@@ -1,7 +1,6 @@
 # home-manager apps for user
 {flake, ...}: {
   imports = with flake.modules.home; [
-    app-floorp
     app-gimp
     app-inkscape
     app-kitty
@@ -16,6 +15,7 @@
     app-simple-scan
     app-vivaldi
     app-vlc
+    app-zen-browser
     app-zoxide
   ];
 }

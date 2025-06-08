@@ -1,30 +1,33 @@
 # home-manager user settings
 {flake, ...}: {
   imports = with flake.modules.home; [
-    # stage 1: bare minimum tty
+    # core
     app-fish
     app-git
     app-minimal
     opt-minimal
     opts
 
-    # stage 2: almost ready for wm
-    ./apps.nix
+    # neovim
     ./neovim.nix
     app-neovim
 
-    # stage 3: wm and apps
-    ./hyprland.nix
-    ./mime.nix
-    app-syncthing
-    opt-keyring
-    opt-mime
+    # visuals
     opt-stylix
-    wm-hyprland
 
-    # stage 4: panel
+    # apps
+    ./apps.nix
+    ./mime.nix
+    opt-mime
+    app-syncthing
+
+    # hyprland
+    ./hyprland.nix
     ./hyprpanel.nix
+
     app-hyprpanel
+    opt-keyring
+    wm-hyprland
   ];
 
   config = {
@@ -34,9 +37,7 @@
       sync.folder = {
         Books.enable = true;
         Fish.enable = true;
-        Life.enable = true;
         Math.enable = true;
-        Misc.enable = true;
         Nix.enable = true;
         Rust.enable = true;
         Work.enable = true;

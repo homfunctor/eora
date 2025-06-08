@@ -1,11 +1,10 @@
-# generates nixos configuration for vytmadh
+# nixos configuration
 {flake, ...}: {
   imports = with flake.modules.nixos; [
-    # stage 0: imperatively modify filesystems.nix
+    # imperative
     ./filesystems.nix
-    opt-users
 
-    # stage 1: bare minimum tty
+    # core
     ./apps.nix
     ./boot.nix
     ./hardware.nix
@@ -13,31 +12,34 @@
 
     chaotic-cachix
     opt-boot
+    opt-hardening
     opt-home
     opt-keyring
     opt-networking
     opt-nix
     opt-services
     opt-sops
+    opt-users
     opts
 
-    # stage 2: visuals
+    #  visuals
     ./stylix.nix
 
     opt-fish
     opt-fonts
-    opt-greeter
     opt-locale
     opt-stylix
+
+    # hyprland
+    opt-greeter
     wm-hyprland
 
-    # stage 2.5: nice things
-    #    chaotic-kernel
+    # extra
+    chaotic-kernel
     opt-rust
 
-    # stage 3: final security settings
-    opt-hardening
-    # opt-lanzaboote
+    # secure boot
+    opt-lanzaboote
   ];
 
   config = {
