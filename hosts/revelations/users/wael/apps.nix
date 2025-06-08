@@ -3,7 +3,6 @@
   imports = with flake.modules.home; [
     app-apotheosis
     app-baobab
-    app-floorp
     app-gaming
     app-gimp
     app-glance
@@ -24,6 +23,7 @@
     app-strawberry
     app-vivaldi
     app-vlc
+    app-zen-browser
     app-zipunicode
     app-zoxide
   ];
