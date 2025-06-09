@@ -20,6 +20,7 @@
     app-rnote
     app-rofi
     app-simple-scan
+    # app-stellar-maps
     app-strawberry
     app-vivaldi
     app-vlc
