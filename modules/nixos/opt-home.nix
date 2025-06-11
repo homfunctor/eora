@@ -10,4 +10,6 @@
     useGlobalPkgs = true;
     useUserPackages = true;
   };
+
+  programs.dconf.enable = true;
 }

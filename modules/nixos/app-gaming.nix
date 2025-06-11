@@ -15,15 +15,14 @@
         };
         general.renice = 10;
         gpu = {
-          apply_gpu_optimisations = "accept-responsibility";
           amd_performance_level = "high";
+          apply_gpu_optimisations = "accept-responsibility";
         };
       };
     };
 
     steam = {
       enable = true;
-      dedicatedServer.openFirewall = true;
       platformOptimizations.enable = true;
       protontricks.enable = true;
       remotePlay.openFirewall = false;
@@ -34,6 +33,4 @@
     irqbalance.enable = true;
     pipewire.lowLatency.enable = true;
   };
-
-  systemd.extraConfig = "DefaultLimitNOFILE=1048576";
 }

@@ -12,7 +12,7 @@ in {
     map (
       user:
         nameValuePair user {
-          description = "${user}";
+          description = user;
           extraGroups = [
             "audio"
             "gamemode"

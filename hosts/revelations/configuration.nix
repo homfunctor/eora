@@ -1,4 +1,4 @@
-# generates nixos configuration for revelations
+# nixos configuration
 {flake, ...}: {
   imports = with flake.modules.nixos; [
     # imperative
@@ -14,7 +14,6 @@
     opt-boot
     opt-hardening
     opt-home
-    opt-keyring
     opt-networking
     opt-nix
     opt-services
@@ -32,10 +31,11 @@
 
     # hyprland
     opt-greeter
+    opt-keyring
     wm-hyprland
 
     # extra
-
+    app-proton-ge
     chaotic-ananicy
     chaotic-kernel
     chaotic-mesa

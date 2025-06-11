@@ -1,4 +1,3 @@
-# so cutting edge it bleeds
 {pkgs, ...}: {
   services.ananicy = {
     enable = true;

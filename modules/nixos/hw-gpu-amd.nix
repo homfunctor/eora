@@ -3,21 +3,20 @@
     "amdgpu"
   ];
 
-  environment.systemPackages = with pkgs; [
-    lact
-  ];
-  hardware.amdgpu.amdvlk = {
-    enable = true;
-    package = pkgs.amdvlk;
-    support32Bit.enable = true;
-  };
+  environment.systemPackages = [pkgs.lact];
 
-  systemd.services.lact = {
-    enable = true;
+  # todo: check performance
+  # hardware.amdgpu.amdvlk = {
+  #   enable = true;
+  #   package = pkgs.amdvlk;
+  #   support32Bit.enable = true;
+  # };
 
-    description = "AMDGPU Control Daemon";
-    after = ["multi-user.target"];
-    wantedBy = ["multi-user.target"];
-    serviceConfig.ExecStart = "${pkgs.lact}/bin/lact daemon";
+  systemd = {
+    packages = [pkgs.lact];
+    services.lact = {
+      enable = true;
+      wantedBy = ["multi-user.target"];
+    };
   };
 }

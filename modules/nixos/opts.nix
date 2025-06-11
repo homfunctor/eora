@@ -11,6 +11,7 @@ in {
     hostname = mkStrOpt "" "host name for configuration";
 
     sops = {
+      # todo: other stuff
       user.enable = mkBoolOpt false "should sops handle user password?";
     };
 

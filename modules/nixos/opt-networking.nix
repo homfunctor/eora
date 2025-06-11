@@ -7,14 +7,16 @@
   inherit (lib) mkDefault;
 in {
   networking = {
+    firewall.enable = true;
+
     hostName = config.nixos.opts.hostname;
+
     networkmanager = {
       enable = true;
       dns = "systemd-resolved";
       wifi.powersave = true;
     };
 
-    firewall.enable = true;
     useDHCP = mkDefault true;
   };
 

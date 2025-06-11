@@ -10,7 +10,6 @@
     app-kitty
     app-latex
     app-lutris
-    app-mate-suite
     app-mathtools
     app-nix-index
     app-nixcord

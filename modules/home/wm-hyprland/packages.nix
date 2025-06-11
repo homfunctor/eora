@@ -1,4 +1,3 @@
-# pseudo desktop environment
 {
   perSystem,
   pkgs,
@@ -9,25 +8,29 @@ in {
   home.packages = with pkgs; [
     brightnessctl
     ffmpeg-full
-    ffmpegthumbnailer
+    file-roller
+    gnome-calculator
     gnome-disk-utility
-    gsettings-desktop-schemas
     grim
     grimblast
+    gsettings-desktop-schemas
     hyprcursor
     hyprland-qtutils
     hyprsysteminfoPkg
     inotify-tools
-    libsForQt5.qt5.qtwayland
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
     libnotify
+    libsForQt5.qt5.qtwayland
+    libsForQt5.qt5ct
+    libsForQt5.qtstyleplugin-kvantum
     libwebp
     mission-center
+    nemo-with-extensions
     networkmanagerapplet
     nix-search
     nurl
     p7zip
+    papers
+    pix
     pulseaudioFull
     pwvucontrol
     qt6Packages.qt6ct
@@ -37,8 +40,8 @@ in {
     tldr
     unrar
     unzip
-    wayland-utils
     wayland-protocols
+    wayland-utils
     wev
     wl-clipboard
     wlr-randr

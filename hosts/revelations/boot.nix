@@ -1,4 +1,4 @@
-# system-side host boot settings for revelations
+# system-side host boot settings
 {
   boot = {
     initrd = {

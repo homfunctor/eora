@@ -27,12 +27,7 @@
       LC_TIME = "en_US.UTF-8";
     };
 
-    supportedLocales = [
-      "en_US.UTF-8/UTF-8"
-      "ja_JP.UTF-8/UTF-8"
-      "ko_KR.UTF-8/UTF-8"
-      "zh_CN.UTF-8/UTF-8"
-    ];
+    supportedLocales = ["all"];
   };
 
   time.timeZone = "America/Chicago";

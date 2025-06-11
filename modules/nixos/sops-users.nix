@@ -8,6 +8,7 @@
   inherit (config.nixos.opts) usernames;
   inherit (flake.lib) mkSecretPath;
   inherit (lib) mkIf nameValuePair;
+
   cfg = config.nixos.opts.sops.user;
 in {
   config = mkIf cfg.enable {

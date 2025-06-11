@@ -8,7 +8,7 @@ in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       # applications
-      "${mod}, E, exec, ${uwsmapp "caja"}"
+      "${mod}, E, exec, ${uwsmapp "nemo"}"
       "${mod}, W, exec, ${uwsmapp "kitty"}"
       "${mod} SHIFT, W, exec, ${uwsmapp "kitty ~/eora"}"
 

@@ -48,14 +48,15 @@
       "...." = " z ../../../";
       "....." = "z ../../../../";
 
+      cl = "clear";
       cd = "z";
       eza = "eza -G -x --color=always --icons=always";
       erd = "erd -I --suppress-size";
       gita = "git add .";
       gitc = "git commit -m";
+      gitlol = "gita && gitc \".\" && gitps";
       gitpl = "git pull";
       gitps = "git push";
-      gitlol = "gita && gitc \".\" && gitps";
       ls = "eza -G -x --color=always --icons=always";
       n = "nvim";
     };

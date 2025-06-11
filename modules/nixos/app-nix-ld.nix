@@ -25,10 +25,10 @@
       glib
       gtk3
       icu
+      libGL
       libappindicator-gtk3
       libdrm
       libgbm
-      libGL
       libglvnd
       libnotify
       libpulseaudio
@@ -49,19 +49,19 @@
       util-linux
       vulkan-loader
       xorg.libX11
-      xorg.libxcb
+      xorg.libXScrnSaver
       xorg.libXcomposite
       xorg.libXcursor
       xorg.libXdamage
       xorg.libXext
       xorg.libXfixes
       xorg.libXi
-      xorg.libxkbfile
       xorg.libXrandr
       xorg.libXrender
-      xorg.libXScrnSaver
-      xorg.libxshmfence
       xorg.libXtst
+      xorg.libxcb
+      xorg.libxkbfile
+      xorg.libxshmfence
       zlib
       zstd
     ];

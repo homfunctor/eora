@@ -1,3 +1,4 @@
+# apps for minimal tty system
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     just
@@ -7,6 +8,4 @@
     vim
     wget
   ];
-
-  programs.dconf.enable = true;
 }

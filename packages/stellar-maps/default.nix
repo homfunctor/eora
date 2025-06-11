@@ -9,8 +9,9 @@
     lib
     makeWrapper
     ;
-  version = "0.12.4";
+
   pname = "stellar-maps";
+  version = "0.12.4";
 
   src = fetchurl {
     url = "https://github.com/oatmealproblem/stellarmaps/releases/download/stellarmaps-v${version}/StellarMaps_${version}_Linux.AppImage";
@@ -32,11 +33,10 @@ in
       source "${dieHook}/nix-support/setup-hook"
       source "${makeWrapper}/nix-support/setup-hook"
 
-      chmod +x $out/bin/${pname}
       mv $out/bin/${pname} $out/bin/.${pname}-wrapped
-      makeWrapper  $out/bin/.${pname}-wrapped $out/bin/${pname}\
-      --set GDK_BACKEND=x11 \
-      --set SDL_VIDEODRIVER=x11
+      makeWrapper  $out/bin/.${pname}-wrapped $out/bin/${pname} \
+      --set GDK_BACKEND:x11 \
+      --set SDL_VIDEODRIVER:x11
     '';
 
     meta = {

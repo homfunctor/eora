@@ -5,7 +5,6 @@
     app-inkscape
     app-kitty
     app-latex
-    app-mate-suite
     app-mathtools
     app-nix-index
     app-onlyoffice

@@ -3,7 +3,6 @@
   imports = with flake.modules.home; [
     app-kitty
     app-latex
-    app-mate-suite
     app-mathtools
     app-nix-index
     app-onlyoffice

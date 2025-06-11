@@ -14,7 +14,6 @@
     opt-boot
     opt-hardening
     opt-home
-    opt-keyring
     opt-networking
     opt-nix
     opt-services
@@ -30,9 +29,8 @@
     opt-locale
     opt-stylix
 
-    # hyprland
-    opt-greeter
-    wm-hyprland
+    # cosmic
+    de-cosmic
 
     # extra
     chaotic-kernel
