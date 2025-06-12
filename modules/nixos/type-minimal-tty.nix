@@ -6,6 +6,7 @@
     app-minimal
     chaotic-cachix
     opt-boot
+    opt-disko
     opt-fonts
     opt-hardening
     opt-home
