@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   lib,
   ...
 }: let
@@ -7,7 +8,13 @@
 
   cfg = config.home.opts.dewm.de-cosmic;
 in {
+  imports = [
+    inputs.cosmic-manager.homeManagerModules.cosmic-manager
+  ];
+
   config = mkIf cfg.enable {
-    # cosmic settings
+    programs = {
+      cosmic-applibrary.enable = true;
+    };
   };
 }
