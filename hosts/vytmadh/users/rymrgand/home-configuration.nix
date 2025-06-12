@@ -1,8 +1,8 @@
 {flake, ...}: {
   imports = with flake.modules.home; [
     # minimal tty
-    ./mime.nix
-    ./neovim.nix
+    # ./mime.nix
+    # ./neovim.nix
     type-minimal-tty
 
     # work
@@ -19,14 +19,14 @@
 
       hostname = "vytmadh";
 
-      sync.folder = {
-        Books.enable = true;
-        Fish.enable = true;
-        Math.enable = true;
-        Nix.enable = true;
-        Rust.enable = true;
-        Work.enable = true;
-      };
+      # sync.folder = {
+      #   Books.enable = true;
+      #   Fish.enable = true;
+      #   Math.enable = true;
+      #   Nix.enable = true;
+      #   Rust.enable = true;
+      #   Work.enable = true;
+      # };
 
       username = "rymrgand";
     };

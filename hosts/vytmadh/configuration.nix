@@ -2,9 +2,9 @@
   imports = with flake.modules.nixos; [
     # minimal tty
     ./boot.nix
-    ./hardware.nix
-    ./sops.nix
-    ./stylix.nix
+    # ./hardware.nix
+    # ./sops.nix
+    # ./stylix.nix
     fsys-vytmadh
     type-minimal-tty
 
@@ -15,8 +15,8 @@
     # type-personal
 
     # extras
-    app-nix-ld
-    opt-rust
+    # app-nix-ld
+    # opt-rust
   ];
 
   config = {
@@ -34,7 +34,7 @@
 
       lanzaboote.enable = false;
 
-      sops.user.enable = true;
+      sops.user.enable = false;
 
       adminuser = "rymrgand";
       usernames = ["rymrgand"];
