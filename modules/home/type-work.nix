@@ -17,5 +17,6 @@
     app-zathura
     app-zen-browser
     dewm
+    opt-stylix
   ];
 }

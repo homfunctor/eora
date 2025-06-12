@@ -11,7 +11,6 @@
     opt-keyring
     opt-mime
     opt-minimal
-    opt-stylix
     opts
   ];
 }
