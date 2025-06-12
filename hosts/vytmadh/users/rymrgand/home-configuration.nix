@@ -1,9 +1,12 @@
 {flake, ...}: {
   imports = with flake.modules.home; [
     # minimal tty
+    type-minimal-tty
+
+    # nicer tty
     # ./mime.nix
     # ./neovim.nix
-    type-minimal-tty
+    # type-nicer-tty
 
     # work
     # ./dewm
