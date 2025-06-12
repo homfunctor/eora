@@ -49,9 +49,10 @@
       "....." = "z ../../../../";
 
       cat = "bat";
-      c = "clear";
+      cl = "clear";
       cd = "z";
       eza = "eza -G -x --color=always --icons=always";
+      erd = "erd -I --suppress-size";
       gita = "git add .";
       gitc = "git commit -m";
       gitlol = "gita && gitc \".\" && gitps";
