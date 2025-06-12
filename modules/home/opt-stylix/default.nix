@@ -18,8 +18,6 @@
           signColumn = true;
         };
       };
-
-      floorp.profileNames = ["eora"];
     };
   };
 }
