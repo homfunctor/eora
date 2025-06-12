@@ -2031,6 +2031,9 @@
         "blueprint": [
           "blueprint"
         ],
+        "disko": [
+          "disko"
+        ],
         "nixpkgs": [
           "nixpkgs"
         ],
@@ -2042,11 +2045,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1749116053,
-        "narHash": "sha256-V7krIW5Exggx5bEye+yluh7XaFXhTt/6qVHXHP/CsAA=",
+        "lastModified": 1749709314,
+        "narHash": "sha256-CpXXn8qHkyun/9iR6gVjYTRu8886dORR8xxqv0rXo/c=",
         "ref": "refs/heads/main",
-        "rev": "3616d787774b83a0f3f7cc01457b15926b17f845",
-        "revCount": 30,
+        "rev": "e9aaef9ec0d92a7783b9d8f6c0aad8410aea72f8",
+        "revCount": 33,
         "shallow": false,
         "type": "git",
         "url": "ssh://git@github.com/homfunctor/sapadal"
