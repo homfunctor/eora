@@ -2,11 +2,11 @@
   imports = with flake.modules.nixos; [
     # minimal tty
     ./boot.nix
+    ./hardware.nix
     fsys-vytmadh
     type-minimal-tty
 
     # nicer tty
-    # ./hardware.nix
     # ./sops.nix
     # ./stylix.nix
     # type-nicer-tty
