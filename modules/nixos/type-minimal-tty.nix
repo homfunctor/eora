@@ -4,7 +4,6 @@
     app-minimal
     opt-boot
     opt-disko
-    opt-hardening
     opt-home
     opt-locale
     opt-networking

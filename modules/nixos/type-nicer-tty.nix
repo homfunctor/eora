@@ -5,6 +5,7 @@
     app-fish
     chaotic-cachix
     opt-fonts
+    opt-hardening
     opt-keyring
     opt-lanzaboote
     opt-sops

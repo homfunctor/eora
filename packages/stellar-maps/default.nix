@@ -4,10 +4,8 @@
   inherit
     (pkgs)
     appimageTools
-    dieHook
     fetchurl
     lib
-    makeWrapper
     ;
 
   pname = "stellar-maps";
