@@ -1,10 +1,19 @@
 # it's secure and it boots
-{inputs, ...}: {
+{
+  config,
+  inputs,
+  lib,
+  ...
+}: let
+  inherit (lib) mkIf;
+
+  cfg = config.nixos.opts.lanzaboote;
+in {
   imports = [
     inputs.lanzaboote.nixosModules.lanzaboote
   ];
 
-  boot = {
+  config.boot = mkIf cfg.enable {
     lanzaboote = {
       enable = true;
       pkiBundle = "/var/lib/sbctl";
