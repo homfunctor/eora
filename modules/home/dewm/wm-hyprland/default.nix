@@ -1,13 +1,18 @@
 {
+  config,
+  flake,
+  lib,
   perSystem,
   ...
 }: let
+  inherit (lib) mkIf;
+
   hyprlandPkg = perSystem.hyprland.hyprland;
-  # hyprlandPkg = pkgs.hyprland;
+
+  cfg = config.home.opts.dewm.wm-hyprland;
 in {
   imports = [
     ./binds.nix # keybinds common to all types
-    ./boot.nix # startup settings
     ./dconf.nix # some dconf settings
     ./env.nix # environment settings
     ./hypridle.nix # hypridle settings
@@ -17,15 +22,21 @@ in {
     ./polkit.nix # polkit settings
     ./portal.nix # portal settings
     ./settings.nix # settings common to all types
+    flake.modules.home.app-hyprpanel
   ];
 
-  wayland = {
+  config.wayland = mkIf cfg.enable {
     windowManager.hyprland = {
       enable = true;
       package = hyprlandPkg;
       xwayland.enable = true;
-    };
 
+      settings.exec-once = [
+        "uwsm finalize"
+        "hyprctl setcursor"
+        "uwsm app -- nm-applet"
+      ];
+    };
     systemd.target = "graphical-session.target";
   };
 }

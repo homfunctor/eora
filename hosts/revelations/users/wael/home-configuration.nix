@@ -1,36 +1,25 @@
-# home-manager user settings
 {flake, ...}: {
   imports = with flake.modules.home; [
-    # core
-    app-fish
-    app-git
-    app-minimal
-    opt-minimal
-    opts
-
-    # neovim
-    ./neovim.nix
-    app-neovim
-
-    # visuals
-    opt-stylix
-
-    # apps
-    ./apps.nix
+    # minimal tty
     ./mime.nix
-    app-syncthing
-    opt-mime
+    ./neovim.nix
+    type-minimal-tty
 
-    # hyprland
-    ./hyprland.nix
-    ./hyprpanel.nix
-    app-hyprpanel
-    opt-keyring
-    wm-hyprland
+    # work
+    ./dewm
+    type-work
+
+    # personal
+    type-personal
+
+    # extras
+    app-rofi # not needed on cosmic?
   ];
 
   config = {
     home.opts = {
+      dewm.wm-hyprland.enable = true;
+
       hostname = "revelations";
 
       rofi.columns = 10;

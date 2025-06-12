@@ -1,4 +1,3 @@
-# system-side hardware settings for revelations
 {
   flake,
   inputs,

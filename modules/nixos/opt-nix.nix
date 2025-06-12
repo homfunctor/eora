@@ -74,7 +74,10 @@
     hostPlatform = "x86_64-linux";
   };
 
-  security.sudo.wheelNeedsPassword = false;
+  security.sudo-rs = {
+    enable = true;
+    wheelNeedsPassword = false;
+  };
 
   system.stateVersion = "25.05";
 }

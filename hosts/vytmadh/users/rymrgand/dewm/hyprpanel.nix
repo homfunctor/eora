@@ -1,6 +1,13 @@
-# host-specific hyprpanel settings
 {
-  config = {
+  config,
+  lib,
+  ...
+}: let
+  inherit (lib) mkIf;
+
+  cfg = config.home.opts.dewm.wm-hyprland;
+in {
+  config = mkIf cfg.enable {
     home.opts.hyprpanelLayout = {
       "*" = {
         "left" = ["power" "workspaces" "windowtitle"];

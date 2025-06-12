@@ -1,13 +1,14 @@
-# environment settings
 {
   config,
   lib,
   pkgs,
   ...
 }: let
-  inherit (lib) getExe;
+  inherit (lib) getExe mkIf;
+
+  cfg = config.home.opts.dewm.wm-hyprland;
 in {
-  xdg.configFile = {
+  config.xdg.configFile = mkIf cfg.enable {
     "electron-flags.conf".text = ''
       --enable-features=UseOzonePlatform
       --ozone-platform=wayland
@@ -37,7 +38,7 @@ in {
       export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
       export SDL_VIDEODRIVER=wayland,x11
       export SHELL=${getExe pkgs.fish}
-      export TERMINAL=${getExe pkgs.kitty}
+      export TERMINAL=${getExe pkgs.alacritty}
       export WLR_BACKEND=wayland
       export WLR_DRM_NO_ATOMIC=1
       export WLR_NO_HARDWARE_CURSORS=1

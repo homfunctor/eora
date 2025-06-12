@@ -8,7 +8,7 @@
 }: let
   inherit (config.home.opts) hyprpanelLayout;
   inherit (config.stylix) fonts;
-  inherit (lib) mkDefault;
+  inherit (lib) mkDefault mkIf;
 
   colors = config.lib.stylix.colors.withHashtag;
 
@@ -20,12 +20,14 @@
 
   font = "${fonts.serif.name}";
   fontSize = "${toString fonts.sizes.desktop}";
+
+  cfg = config.home.opts.dewm.wm-hyprland;
 in {
   imports = [
     inputs.hyprpanel.homeManagerModules.hyprpanel
   ];
 
-  programs.hyprpanel = {
+  config.programs.hyprpanel = mkIf cfg.enable {
     enable = true;
     overwrite.enable = true;
 

@@ -26,17 +26,17 @@ in
   {
     inherit pname version src;
 
+    # todo: wrap
+    # source "${dieHook}/nix-support/setup-hook"
+    # source "${makeWrapper}/nix-support/setup-hook"
+    #
+    # wrapProgram $out/bin/${pname} \
+    # --set SDL_VIDEODRIVER wayland
+    #
+
     extraInstallCommands = ''
       install -m 444 -D ${appimageContents}/${pname}.desktop -t $out/share/applications
       cp -r ${appimageContents}/usr/share/icons $out/share
-
-      source "${dieHook}/nix-support/setup-hook"
-      source "${makeWrapper}/nix-support/setup-hook"
-
-      mv $out/bin/${pname} $out/bin/.${pname}-wrapped
-      makeWrapper  $out/bin/.${pname}-wrapped $out/bin/${pname} \
-      --set GDK_BACKEND:x11 \
-      --set SDL_VIDEODRIVER:x11
     '';
 
     meta = {

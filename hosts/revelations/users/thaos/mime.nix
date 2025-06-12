@@ -1,13 +1,13 @@
 {
   config.home.opts.defaultApps = {
-    archive = ["engrampa.desktop"];
+    archive = ["org.gnome.FileRoller.desktop"];
     audio = ["vlc.desktop"];
-    browser = ["floorp.desktop"];
-    directory = ["caja.desktop"];
-    image = ["eom.desktop"];
+    browser = ["zen-beta.desktop"];
+    directory = ["nemo.desktop"];
+    image = ["pix.desktop"];
     office = ["onlyoffice-desktopeditors.desktop"];
-    pdf = ["atril.desktop"];
-    terminal = ["kitty.desktop"];
+    pdf = ["org.gnome.Papers.desktop"];
+    terminal = ["alacritty.desktop"];
     text = ["pluma.desktop"];
     video = ["vlc.desktop"];
   };

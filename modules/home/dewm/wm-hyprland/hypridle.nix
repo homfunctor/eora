@@ -1,4 +1,3 @@
-# hypridle settings
 {
   config,
   lib,
@@ -6,12 +5,16 @@
   pkgs,
   ...
 }: let
-  inherit (lib) getExe;
+  inherit (lib) mkIf;
+
   hypridlePkg = perSystem.hypridle.hypridle;
   lock = "${pkgs.systemd}/bin/loginctl lock-session";
+  lockPkg = lib.getExe config.programs.hyprlock.package;
   timeout = 1200;
+
+  cfg = config.home.opts.dewm.wm-hyprland;
 in {
-  services.hypridle = {
+  config.services.hypridle = mkIf cfg.enable {
     enable = true;
 
     package = hypridlePkg;
@@ -21,7 +24,7 @@ in {
         before_sleep_cmd = "loginctl lock-session";
         after_sleep_cmd = "hyprctl dispatch dpms on";
 
-        lock_cmd = "pgrep hyprlock || ${getExe config.programs.hyprlock.package}";
+        lock_cmd = "pgrep hyprlock || ${lockPkg}";
       };
 
       listener = [
@@ -38,8 +41,4 @@ in {
       ];
     };
   };
-
-  # wayland.windowManager.hyprland.settings.exec-once = [
-  #   "systemctl --user enable --now hypridle.service"
-  # ];
 }

@@ -1,7 +1,13 @@
-# some nice dconf things
-# todo: add more
 {
-  dconf = {
+  config,
+  lib,
+  ...
+}: let
+  inherit (lib) mkIf;
+
+  cfg = config.home.opts.dewm.wm-hyprland;
+in {
+  config.dconf = mkIf cfg.enable {
     enable = true;
 
     settings = {

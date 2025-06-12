@@ -1,32 +1,16 @@
-# home-manager user settings
 {flake, ...}: {
   imports = with flake.modules.home; [
-    # core
-    app-fish
-    app-git
-    app-minimal
-    opt-minimal
-    opts
-
-    # neovim
-    ./neovim.nix
-    app-neovim
-
-    # visuals
-    opt-stylix
-
-    # apps
-    ./apps.nix
+    # minimal tty
     ./mime.nix
-    app-syncthing
-    opt-keyring
-    opt-mime
+    ./neovim.nix
+    type-minimal-tty
 
-    # hyprland
-    ./hyprland.nix
-    ./hyprpanel.nix
-    app-hyprpanel
-    wm-hyprland
+    # work
+    ./dewm
+    type-work
+
+    # extras
+    app-rofi # not needed on cosmic?
   ];
 
   config = {

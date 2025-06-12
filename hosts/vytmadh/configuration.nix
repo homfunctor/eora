@@ -1,47 +1,28 @@
-# nixos configuration
 {flake, ...}: {
   imports = with flake.modules.nixos; [
-    # imperative
-    ./filesystems.nix
-
-    # core
-    ./apps.nix
+    # minimal tty
     ./boot.nix
+    ./filesystems.nix # imperative for now
     ./hardware.nix
     ./sops.nix
-
-    chaotic-cachix
-    opt-boot
-    opt-hardening
-    opt-home
-    opt-networking
-    opt-nix
-    opt-services
-    opt-sops
-    opt-users
-    opts
-
-    #  visuals
     ./stylix.nix
+    type-minimal-tty
 
-    opt-fish
-    opt-fonts
-    opt-locale
-    opt-stylix
+    # work
+    # type-work
 
-    # cosmic
-    de-cosmic
+    # testing purposes only
+    # type-personal
 
-    # extra
-    chaotic-kernel
+    # extras
+    app-nix-ld
     opt-rust
-
-    # secure boot
-    opt-lanzaboote
   ];
 
   config = {
     nixos.opts = {
+      dewm.de-cosmic.enable = true;
+
       fontSizes = {
         applications = 14;
         terminal = 14;
@@ -51,9 +32,9 @@
 
       hostname = "vytmadh";
 
-      sops = {
-        user.enable = true;
-      };
+      lanzaboote.enable = true;
+
+      sops.user.enable = true;
 
       adminuser = "rymrgand";
       usernames = ["rymrgand"];

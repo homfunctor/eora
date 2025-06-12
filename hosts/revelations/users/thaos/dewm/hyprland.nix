@@ -1,28 +1,22 @@
-# hyprland settings for user
 {
   config,
   inputs,
   lib,
-  pkgs,
   ...
 }: let
   inherit (config.lib.stylix) colors;
   inherit (lib) mkForce;
 
   wallDir = "${inputs.sapadal}/assets";
-  wall1 = "pillars_desert.png";
-  wall2 = "rivendell.png";
-  wall3 = "allgods.png";
+  wall1 = "base2.png";
+  wall2 = "base.png";
+  wall3 = "base3.png";
 in {
   config = {
-    # to deal with primary monitor being DP-2, not DP-1
-    home.packages = with pkgs; [
-      xorg.xrandr
-    ];
-    wayland.windowManager.hyprland.settings.exec-once = [
-      # set primary monitor for games using xwayland
-      "uwsm app -- xrandr --output DP-2 --primary"
-    ];
+    # workwork no time for fancyfancy
+    wayland.windowManager.hyprland.settings = {
+      animations.enabled = false; # :(
+    };
 
     # wallpaper settings
     home.opts = {
@@ -49,8 +43,8 @@ in {
           "col.inactive_border" = mkForce "rgb(${base02})";
 
           border_size = 5;
-          gaps_in = 5;
-          gaps_out = 10;
+          gaps_in = 0;
+          gaps_out = 5;
           layout = "dwindle";
           resize_on_border = true;
         };

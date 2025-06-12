@@ -1,37 +1,22 @@
-# home-manager user settings
 {flake, ...}: {
   imports = with flake.modules.home; [
-    # core
-    app-fish
-    app-git
-    app-minimal
-    opt-minimal
-    opts
-
-    # neovim
-    ./neovim.nix
-    app-neovim
-
-    # visuals
-    opt-stylix
-
-    # apps
-    ./apps.nix
+    # minimal tty
     ./mime.nix
-    opt-mime
-    app-syncthing
+    ./neovim.nix
+    type-minimal-tty
 
-    # hyprland
-    ./hyprland.nix
-    ./hyprpanel.nix
+    # work
+    ./dewm
+    type-work
 
-    app-hyprpanel
-    opt-keyring
-    wm-hyprland
+    # for testing purposes only
+    # type-personal
   ];
 
   config = {
     home.opts = {
+      dewm.de-cosmic.enable = true;
+
       hostname = "vytmadh";
 
       sync.folder = {

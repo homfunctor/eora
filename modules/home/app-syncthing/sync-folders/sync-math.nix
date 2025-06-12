@@ -3,10 +3,12 @@
   lib,
   ...
 }: let
-  inherit (lib) mkIf;
   inherit (config.home.opts) username;
-  homeDirectory = "/home/${username}";
+  inherit (lib) mkIf;
+
   dirName = "Math";
+  homeDirectory = "/home/${username}";
+
   cfg = config.home.opts.sync;
 in {
   config = mkIf cfg.folder."${dirName}".enable {

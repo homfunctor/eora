@@ -1,17 +1,22 @@
-# todo: update to use mate apps
-# default settings
 {
   config,
   lib,
   ...
 }: let
-  inherit (lib) mkDefault;
   inherit (config.home.opts) hyprlandOpts;
+  inherit (lib) mkDefault mkIf;
+
+  cfg = config.home.opts.dewm.wm-hyprland;
 in {
-  wayland.windowManager.hyprland.settings = {
+  config.wayland.windowManager.hyprland.settings = mkIf cfg.enable {
     "$floatingSize" = "600 400";
     "$pwvucontrol" = "com.saivert.pwvucontrol";
-    inherit (hyprlandOpts) general monitor workspace;
+    inherit
+      (hyprlandOpts)
+      general
+      monitor
+      workspace
+      ;
 
     animations = mkDefault {
       enabled = "yes, please :)";
@@ -80,6 +85,10 @@ in {
       accel_profile = "flat";
       float_switch_override_focus = 2;
     };
+
+    master =
+      mkDefault {
+      };
 
     misc = {
       animate_manual_resizes = true;

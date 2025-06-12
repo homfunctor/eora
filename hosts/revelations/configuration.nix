@@ -1,52 +1,29 @@
 # nixos configuration
 {flake, ...}: {
   imports = with flake.modules.nixos; [
-    # imperative
-    ./filesystems.nix
-
-    # core
-    ./apps.nix
+    # minimal tty
     ./boot.nix
+    ./filesystems.nix # imperative for now
     ./hardware.nix
     ./sops.nix
-
-    chaotic-cachix
-    opt-boot
-    opt-hardening
-    opt-home
-    opt-networking
-    opt-nix
-    opt-services
-    opt-sops
-    opt-users
-    opts
-
-    #  visuals
     ./stylix.nix
+    type-minimal-tty
 
-    opt-fish
-    opt-fonts
-    opt-locale
-    opt-stylix
+    # work
+    type-work
 
-    # hyprland
-    opt-greeter
-    opt-keyring
-    wm-hyprland
+    # personal
+    type-personal
 
-    # extra
-    app-proton-ge
-    chaotic-ananicy
-    chaotic-kernel
-    chaotic-mesa
+    # extras
+    app-nix-ld
     opt-rust
-
-    # secure boot
-    opt-lanzaboote
   ];
 
   config = {
     nixos.opts = {
+      dewm.wm-hyprland.enable = true;
+
       fontSizes = {
         applications = 12;
         terminal = 14;
@@ -56,9 +33,9 @@
 
       hostname = "revelations";
 
-      sops = {
-        user.enable = true;
-      };
+      lanzaboote.enable = true;
+
+      sops.user.enable = true;
 
       adminuser = "wael";
       usernames = ["wael" "thaos"];

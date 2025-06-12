@@ -1,4 +1,3 @@
-# system-side host boot settings
 {
   boot = {
     initrd = {
@@ -17,8 +16,6 @@
     ];
 
     kernelParams = [
-      "mitigations=off"
-      "nowatchdog"
       "preempt=full"
     ];
   };

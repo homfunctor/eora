@@ -1,10 +1,9 @@
-# host-specific hyprpanel settings
 {
   config = {
     home.opts.hyprpanelLayout = {
       "0" = {
         "left" = ["power" "workspaces" "windowtitle"];
-        "middle" = ["ram" "storage" "clock" "cpu" "cputemp"];
+        "middle" = ["clock"];
         "right" = ["volume" "microphone" "systray" "notifications"];
       };
 
@@ -16,7 +15,7 @@
 
       "2" = {
         "left" = ["workspaces" "windowtitle"];
-        "middle" = ["cava"];
+        "middle" = ["clock"];
         "right" = ["volume" "microphone" "systray"];
       };
     };

@@ -1,4 +1,3 @@
-# boot settings
 {
   boot = {
     initrd = {
