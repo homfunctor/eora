@@ -25,10 +25,7 @@
 
             content = {
               name = "crypted";
-              settings = {
-                allowDiscards = true;
-                keyFile = "/tmp/secret.key";
-              };
+              settings.allowDiscards = true;
               type = "luks";
 
               content = {
