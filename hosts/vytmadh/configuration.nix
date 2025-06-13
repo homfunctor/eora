@@ -15,9 +15,6 @@
     ./hw-more.nix
     type-work
 
-    # testing purposes only
-    # type-personal
-
     # extras
     app-nix-ld
     opt-rust
