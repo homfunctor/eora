@@ -5,11 +5,14 @@
     app-fish
     chaotic-cachix
     opt-fonts
-    opt-hardening
-    opt-keyring
     opt-lanzaboote
     opt-lix
     opt-stylix
     sops-users
   ];
+
+  programs = {
+    dconf.enable = true;
+    seahorse.enable = true;
+  };
 }

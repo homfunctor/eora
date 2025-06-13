@@ -7,13 +7,13 @@
     type-minimal-tty
 
     # nicer tty
-    ./sops.nix
-    ./stylix.nix
-    type-nicer-tty
+    # ./sops.nix
+    # ./stylix.nix
+    # type-nicer-tty
 
     # work
-    ./hw-more.nix
-    type-work
+    # ./hw-more.nix
+    # type-work
 
     # testing purposes only
     # type-personal
@@ -25,8 +25,6 @@
 
   config = {
     nixos.opts = {
-      dewm.de-cosmic.enable = true;
-
       fontSizes = {
         applications = 14;
         terminal = 14;

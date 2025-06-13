@@ -11,12 +11,15 @@
     app-onlyoffice
     app-pika
     app-rnote
+    app-rofi
     app-simple-scan
     app-syncthing
     app-vlc
     app-zathura
     app-zen-browser
-    dewm
+    opt-keyring
+    opt-mime
     opt-stylix
+    wm-hyprland
   ];
 }

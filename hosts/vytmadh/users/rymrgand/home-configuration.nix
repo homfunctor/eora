@@ -4,29 +4,28 @@
     type-minimal-tty
 
     # nicer tty
-    ./mime.nix
-    ./neovim.nix
-    type-nicer-tty
+    # ./mime.nix
+    # ./neovim.nix
+    # type-nicer-tty
 
     # work
-    ./dewm
-    type-work
+    # ./hyprland.nix
+    # ./hyprpanel.nix
+    # type-work
   ];
 
   config = {
     home.opts = {
-      dewm.de-cosmic.enable = true;
-
       hostname = "vytmadh";
 
-      # sync.folder = {
-      #   Books.enable = true;
-      #   Fish.enable = true;
-      #   Math.enable = true;
-      #   Nix.enable = true;
-      #   Rust.enable = true;
-      #   Work.enable = true;
-      # };
+      sync.folder = {
+        Books.enable = true;
+        Fish.enable = true;
+        Math.enable = true;
+        Nix.enable = true;
+        Rust.enable = true;
+        Work.enable = true;
+      };
 
       username = "rymrgand";
     };

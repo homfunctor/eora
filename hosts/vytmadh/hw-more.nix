@@ -14,7 +14,6 @@ in {
       hw-cpu-intel
       hw-gpu-intel
       hw-audio
-      hw-bluetooth
       hw-graphics
       hw-printing
       hw-tablet

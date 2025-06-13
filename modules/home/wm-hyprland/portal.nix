@@ -3,12 +3,8 @@
   lib,
   pkgs,
   ...
-}: let
-  inherit (lib) mkIf;
-
-  cfg = config.home.opts.dewm.wm-hyprland;
-in {
-  config.xdg.portal = mkIf cfg.enable {
+}: {
+  xdg.portal = {
     enable = true;
 
     config = {

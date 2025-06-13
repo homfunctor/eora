@@ -5,16 +5,12 @@
   pkgs,
   ...
 }: let
-  inherit (lib) mkIf;
-
   hypridlePkg = perSystem.hypridle.hypridle;
   lock = "${pkgs.systemd}/bin/loginctl lock-session";
   lockPkg = lib.getExe config.programs.hyprlock.package;
   timeout = 1200;
-
-  cfg = config.home.opts.dewm.wm-hyprland;
 in {
-  config.services.hypridle = mkIf cfg.enable {
+  services.hypridle = {
     enable = true;
 
     package = hypridlePkg;

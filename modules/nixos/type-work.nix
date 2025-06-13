@@ -1,9 +1,9 @@
-# work environment layered on top of minimal tty
+# work environment layered on top of minimal/nicer tty
 {flake, ...}: {
   imports = with flake.modules.nixos; [
     app-nix-ld
     chaotic-kernel
-    dewm
-    opt-greeter
+    opt-keyring
+    wm-hyprland
   ];
 }

@@ -10,11 +10,6 @@ in {
   options.home.opts = {
     defaultApps = mkAttrOpt {} "default applications";
 
-    dewm = {
-      de-cosmic.enable = mkBoolOpt false "enable cosmic desktop environment";
-      wm-hyprland.enable = mkBoolOpt false "enable hyprland window manager";
-    };
-
     hostname = mkStrOpt "" "hostname";
 
     hyprlandOpts = mkAttrOpt {} "user options for hyprland";

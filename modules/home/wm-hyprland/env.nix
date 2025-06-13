@@ -4,11 +4,9 @@
   pkgs,
   ...
 }: let
-  inherit (lib) getExe mkIf;
-
-  cfg = config.home.opts.dewm.wm-hyprland;
+  inherit (lib) getExe;
 in {
-  config.xdg.configFile = mkIf cfg.enable {
+  xdg.configFile = {
     "electron-flags.conf".text = ''
       --enable-features=UseOzonePlatform
       --ozone-platform=wayland

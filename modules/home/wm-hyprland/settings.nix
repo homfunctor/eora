@@ -4,11 +4,9 @@
   ...
 }: let
   inherit (config.home.opts) hyprlandOpts;
-  inherit (lib) mkDefault mkIf;
-
-  cfg = config.home.opts.dewm.wm-hyprland;
+  inherit (lib) mkDefault;
 in {
-  config.wayland.windowManager.hyprland.settings = mkIf cfg.enable {
+  wayland.windowManager.hyprland.settings = {
     "$floatingSize" = "600 400";
     "$pwvucontrol" = "com.saivert.pwvucontrol";
     inherit

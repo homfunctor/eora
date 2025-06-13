@@ -3,9 +3,9 @@
   imports = with flake.modules.home; [
     # minimal tty
     app-git
-    app-minimal
-    app-zoxide
     opt-minimal
     opts
   ];
+
+  programs.home-manager.enable = true;
 }

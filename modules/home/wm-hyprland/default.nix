@@ -1,15 +1,9 @@
 {
-  config,
   flake,
-  lib,
   perSystem,
   ...
 }: let
-  inherit (lib) mkIf;
-
   hyprlandPkg = perSystem.hyprland.hyprland;
-
-  cfg = config.home.opts.dewm.wm-hyprland;
 in {
   imports = [
     ./binds.nix # keybinds common to all types
@@ -25,7 +19,7 @@ in {
     flake.modules.home.app-hyprpanel
   ];
 
-  config.wayland = mkIf cfg.enable {
+  wayland = {
     windowManager.hyprland = {
       enable = true;
       package = hyprlandPkg;

@@ -1,7 +1,10 @@
-{inputs, ...}: {
-  imports = with inputs.nixos-hardware.nixosModules; [
-    lenovo-thinkpad-t490
+{
+  flake,
+  inputs,
+  ...
+}: {
+  imports = [
+    flake.modules.nixos.hw-bluetooth
+    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t490
   ];
-
-  hardware.enableRedistributableFirmware = true;
 }

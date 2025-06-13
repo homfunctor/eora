@@ -3,7 +3,6 @@
   imports = with flake.modules.nixos; [
     # minimal tty
     ./boot.nix
-    ./hw-minimal.nix
     fsys-revelations
     type-minimal-tty
 
@@ -13,7 +12,7 @@
     type-nicer-tty
 
     # work
-    ./hw-more.nix
+    ./hardware.nix
     type-work
 
     # personal
@@ -26,8 +25,6 @@
 
   config = {
     nixos.opts = {
-      dewm.wm-hyprland.enable = true;
-
       fontSizes = {
         applications = 12;
         terminal = 14;
@@ -37,8 +34,7 @@
 
       hostname = "revelations";
 
-      # false until after installation is done
-      lanzaboote.enable = false;
+      lanzaboote.enable = true;
 
       sops.user.enable = true;
 

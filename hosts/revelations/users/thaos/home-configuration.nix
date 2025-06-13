@@ -9,11 +9,9 @@
     type-nicer-tty
 
     # work
-    ./dewm
+    ./hyprland.nix
+    ./hyprpanel.nix
     type-work
-
-    # extras
-    app-rofi # not needed on cosmic?
   ];
 
   config = {

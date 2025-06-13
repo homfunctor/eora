@@ -12,6 +12,8 @@
     nixos.enable = false;
   };
 
+  hardware.enableRedistributableFirmware = true;
+
   nix = {
     channel.enable = false;
     daemonCPUSchedPolicy = "idle";

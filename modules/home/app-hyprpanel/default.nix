@@ -20,14 +20,12 @@
 
   font = "${fonts.serif.name}";
   fontSize = "${toString fonts.sizes.desktop}";
-
-  cfg = config.home.opts.dewm.wm-hyprland;
 in {
   imports = [
     inputs.hyprpanel.homeManagerModules.hyprpanel
   ];
 
-  config.programs.hyprpanel = mkIf cfg.enable {
+  programs.hyprpanel = {
     enable = true;
     overwrite.enable = true;
 

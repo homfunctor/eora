@@ -9,20 +9,16 @@
     type-nicer-tty
 
     # work
-    ./dewm
+    ./hyprland.nix
+    ./hyprpanel.nix
     type-work
 
     # personal
     type-personal
-
-    # extras
-    app-rofi # not needed on cosmic?
   ];
 
   config = {
     home.opts = {
-      dewm.wm-hyprland.enable = true;
-
       hostname = "revelations";
 
       rofi.columns = 10;
