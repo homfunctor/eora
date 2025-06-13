@@ -5,7 +5,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opt.nixos.dewm.wm-hyprland;
+  cfg = config.nixos.opts.dewm.wm-hyprland;
 in {
   config = mkIf cfg.enable {
     programs = {
