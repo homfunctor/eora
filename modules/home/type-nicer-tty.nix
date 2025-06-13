@@ -3,8 +3,7 @@
   imports = with flake.modules.home; [
     # nicer tty
     app-fish
-    # temporarily disabled while i make plugins modular
-    # app-neovim
+    app-neovim
     opt-keyring
     opt-mime
   ];

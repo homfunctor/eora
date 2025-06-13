@@ -12,8 +12,8 @@
     type-nicer-tty
 
     # work
-    # ./hw-more.nix
-    # type-work
+    ./hw-more.nix
+    type-work
 
     # testing purposes only
     # type-personal

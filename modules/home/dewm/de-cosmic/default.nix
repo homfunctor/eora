@@ -15,6 +15,12 @@ in {
   config = mkIf cfg.enable {
     programs = {
       cosmic-applibrary.enable = true;
+      cosmic-manager.enable = true;
+      tasks.enable = true;
+    };
+
+    wayland.desktopManager.cosmic = {
+      enable = true;
     };
   };
 }
