@@ -31,7 +31,7 @@ in {
       me-select-entry = "";
       modi = "drun";
       show-icons = true;
-      terminal = "${pkgs.kitty}/bin/kitty";
+      terminal = "${pkgs.alacritty}/bin/alacritty";
     };
 
     theme = mkForce {

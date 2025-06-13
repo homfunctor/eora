@@ -10,8 +10,8 @@
   wallDir = "${inputs.sapadal}/assets";
   wall = "whitemarch.png";
 in {
-  # wallpaper settings
-  home.opts = {
+  config.home.opts = {
+    # wallpaper settings
     hyprpaperOpts.settings = {
       ipc = "off";
       splash = false;

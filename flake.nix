@@ -8,14 +8,6 @@
       url = "github:numtide/blueprint";
     };
 
-    cosmic-manager = {
-      inputs = {
-        home-manager.follows = "home-manager";
-        nixpkgs.follows = "nixpkgs";
-      };
-      url = "github:heitoraugustoln/cosmic-manager";
-    };
-
     disko = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/disko";
