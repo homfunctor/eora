@@ -13,6 +13,5 @@
 
   programs = {
     dconf.enable = true;
-    seahorse.enable = true;
   };
 }

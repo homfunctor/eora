@@ -7,9 +7,9 @@
     type-minimal-tty
 
     # nicer tty
-    # ./sops.nix
-    # ./stylix.nix
-    # type-nicer-tty
+    ./sops.nix
+    ./stylix.nix
+    type-nicer-tty
 
     # work
     # ./hw-more.nix
