@@ -76,7 +76,6 @@
     sapadal = {
       inputs = {
         blueprint.follows = "blueprint";
-        disko.follows = "disko";
         nixpkgs.follows = "nixpkgs";
         sops-nix.follows = "sops-nix";
         treefmt-nix.follows = "treefmt-nix";
