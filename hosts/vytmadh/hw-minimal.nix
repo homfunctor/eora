@@ -12,13 +12,8 @@
 in {
   imports = with flake.modules.nixos;
     [
-      hw-audio
-      hw-bluetooth
       hw-cpu-intel
       hw-gpu-intel
-      hw-graphics
-      hw-printing
-      hw-tablet
     ]
     ++ nixosHW;
 }
