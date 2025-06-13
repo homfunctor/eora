@@ -8,7 +8,7 @@
 }: let
   inherit (config.home.opts) hyprpanelLayout;
   inherit (config.stylix) fonts;
-  inherit (lib) mkDefault mkIf;
+  inherit (lib) mkDefault;
 
   colors = config.lib.stylix.colors.withHashtag;
 

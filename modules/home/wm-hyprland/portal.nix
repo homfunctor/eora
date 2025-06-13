@@ -1,6 +1,5 @@
 {
   config,
-  perSystem,
   pkgs,
   ...
 }: {
@@ -24,7 +23,6 @@
     };
 
     extraPortals = [
-      perSystem.hyprland.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
     ];
 

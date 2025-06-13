@@ -5,7 +5,7 @@
   ...
 }: let
   inherit (config.lib.stylix) colors;
-  inherit (lib) mkForce mkIf;
+  inherit (lib) mkForce;
 
   wallDir = "${inputs.sapadal}/assets";
   wall = "whitemarch.png";
