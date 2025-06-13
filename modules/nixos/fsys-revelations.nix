@@ -1,5 +1,7 @@
 {inputs, ...}: {
   imports = [
+    # Media and Backup drives
+    # todo: encrypt Media drive
     inputs.sapadal.modules.nixos.fsys-revelations
   ];
 
