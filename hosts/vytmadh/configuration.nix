@@ -36,7 +36,7 @@
 
       hostname = "vytmadh";
 
-      lanzaboote.enable = false;
+      lanzaboote.enable = true;
 
       sops.user.enable = true;
 

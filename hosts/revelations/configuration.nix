@@ -40,7 +40,6 @@
       # false until after installation is done
       lanzaboote.enable = false;
 
-      # todo: does this work out of the box?
       sops.user.enable = true;
 
       adminuser = "wael";

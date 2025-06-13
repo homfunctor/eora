@@ -1,9 +1,5 @@
 # nix settings for nix to nix with
 {inputs, ...}: {
-  imports = [
-    inputs.lix-module.nixosModules.default
-  ];
-
   documentation = {
     enable = true;
     dev.enable = false;

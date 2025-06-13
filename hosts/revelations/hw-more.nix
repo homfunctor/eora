@@ -2,11 +2,22 @@
   flake,
   inputs,
   ...
-}: {
-  imports = with flake.modules.nixos; [
-    hw-audio
-    hw-graphics
-    hw-printing
-    hw-tablet
+}: let
+  nixosHW = with inputs.nixos-hardware.nixosModules; [
+    common-cpu-amd
+    common-cpu-amd-pstate
+    common-gpu-amd
+    common-pc-ssd
   ];
+in {
+  imports = with flake.modules.nixos;
+    [
+      hw-cpu-amd
+      hw-gpu-amd
+      hw-audio
+      hw-graphics
+      hw-printing
+      hw-tablet
+    ]
+    ++ nixosHW;
 }

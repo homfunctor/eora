@@ -8,6 +8,7 @@
     opt-hardening
     opt-keyring
     opt-lanzaboote
+    opt-lix
     opt-sops
     opt-stylix
     sops-users
