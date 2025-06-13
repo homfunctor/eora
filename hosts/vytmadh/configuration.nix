@@ -37,7 +37,7 @@
 
       lanzaboote.enable = false;
 
-      sops.user.enable = false;
+      sops.user.enable = true;
 
       adminuser = "rymrgand";
       usernames = ["rymrgand"];
