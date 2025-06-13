@@ -11,9 +11,6 @@
     # work
     ./dewm
     type-work
-
-    # for testing purposes only
-    # type-personal
   ];
 
   config = {
