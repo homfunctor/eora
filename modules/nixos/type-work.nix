@@ -5,5 +5,6 @@
     chaotic-kernel
     dewm
     opt-greeter
+    sops-users
   ];
 }

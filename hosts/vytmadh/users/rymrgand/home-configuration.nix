@@ -4,9 +4,9 @@
     type-minimal-tty
 
     # nicer tty
-    # ./mime.nix
-    # ./neovim.nix
-    # type-nicer-tty
+    ./mime.nix
+    ./neovim.nix
+    type-nicer-tty
 
     # work
     # ./dewm

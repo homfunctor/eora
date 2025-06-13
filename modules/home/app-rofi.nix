@@ -1,7 +1,6 @@
 # todo: make it fit monitor size better
 {
   config,
-  flake,
   lib,
   pkgs,
   ...

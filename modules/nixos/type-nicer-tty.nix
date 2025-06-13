@@ -11,6 +11,5 @@
     opt-lix
     opt-sops
     opt-stylix
-    sops-users
   ];
 }
