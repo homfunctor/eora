@@ -3,7 +3,7 @@
   imports = with flake.modules.nixos; [
     # minimal tty
     ./boot.nix
-    ./hardware.nix
+    ./hw-minimal.nix
     fsys-revelations
     type-minimal-tty
 
@@ -13,6 +13,7 @@
     type-nicer-tty
 
     # work
+    ./hw-more.nix
     type-work
 
     # personal
@@ -36,8 +37,10 @@
 
       hostname = "revelations";
 
-      lanzaboote.enable = true;
+      # false until after installation is done
+      lanzaboote.enable = false;
 
+      # todo: does this work out of the box?
       sops.user.enable = true;
 
       adminuser = "wael";
