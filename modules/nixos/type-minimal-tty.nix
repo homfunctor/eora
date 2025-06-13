@@ -9,6 +9,7 @@
     opt-networking
     opt-nix
     opt-services
+    opt-sops
     opt-users
     opts
   ];

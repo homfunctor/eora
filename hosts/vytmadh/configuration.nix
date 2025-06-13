@@ -7,12 +7,12 @@
     type-minimal-tty
 
     # nicer tty
+    ./sops.nix
     ./stylix.nix
     type-nicer-tty
 
     # work
     # ./hw-more.nix
-    # ./sops.nix
     # type-work
 
     # testing purposes only
