@@ -1,3 +1,10 @@
+default:
+  @just --list
+
+# collect garbage
+clean:
+    nix-collect-garbage -d  --log-format internal-json -v |& nom --json
+
 # update to current flake config
 update:
     sudo nixos-rebuild switch --flake . --log-format internal-json -v |& nom --json
@@ -5,10 +12,6 @@ update:
 # current flake config applied on next boot
 upboot:
     sudo nixos-rebuild boot --flake . --log-format internal-json -v |& nom --json
-
-# collect garbage
-clean:
-    nix-collect-garbage -d  --log-format internal-json -v |& nom --json
 
 # update flake inputs
 upflake:

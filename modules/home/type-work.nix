@@ -20,6 +20,7 @@
     opt-keyring
     opt-mime
     opt-stylix
+    opt-xdg
     wm-hyprland
   ];
 }

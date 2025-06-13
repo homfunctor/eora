@@ -2,9 +2,10 @@
 {flake, ...}: {
   imports = with flake.modules.home; [
     # nicer tty
-    app-fish
     app-minimal
     app-neovim
+    app-starship
+    app-yazi
     app-zoxide
   ];
 }

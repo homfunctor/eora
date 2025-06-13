@@ -7,6 +7,8 @@ in {
     bind = [
       # applications
       "${mod}, E, exec, ${uwsmapp "nemo"}"
+      # todo: i recall this needing a terminal too
+      "${mod}, E, exec, ${uwsmapp "yazi"}"
       "${mod}, W, exec, ${uwsmapp "alacritty"}"
       "${mod} SHIFT, W, exec, ${uwsmapp "alacritty ~/eora"}"
 
