@@ -1,7 +1,7 @@
 {
   disko.devices = {
     disk = {
-      disk0 = {
+      main = {
         device = "/dev/nvme0n1";
         type = "disk";
 
@@ -31,7 +31,7 @@
 
                 content = {
                   type = "lvm_pv";
-                  vg = "pool";
+                  vg = "mainpool";
                 };
               };
             };
@@ -39,7 +39,7 @@
         };
       };
 
-      disk1 = {
+      media = {
         device = "/dev/sda";
         type = "disk";
 
@@ -57,7 +57,7 @@
 
                 content = {
                   type = "lvm_pv";
-                  vg = "pool";
+                  vg = "mediapool";
                 };
               };
             };
@@ -66,39 +66,47 @@
       };
     };
 
-    lvm_vg.pool = {
-      type = "lvm_vg";
+    lvm_vg = {
+      mainpool = {
+        type = "lvm_vg";
 
-      lvs = {
-        encryptedSwap = {
-          size = "36G";
+        lvs = {
+          encryptedSwap = {
+            size = "36G";
 
-          content = {
-            priority = 100;
-            randomEncryption = true;
-            type = "swap";
+            content = {
+              priority = 100;
+              randomEncryption = true;
+              type = "swap";
+            };
+          };
+
+          root = {
+            size = "100%FREE";
+
+            content = {
+              format = "ext4";
+              mountOptions = ["defaults"];
+              mountpoint = "/";
+              type = "filesystem";
+            };
           };
         };
+      };
 
-        root = {
-          size = "100%FREE";
+      mediapool = {
+        type = "lvm_vg";
 
-          content = {
-            format = "ext4";
-            mountOptions = ["defaults"];
-            mountpoint = "/";
-            type = "filesystem";
-          };
-        };
+        lvs = {
+          media = {
+            size = "100%FREE";
 
-        media = {
-          size = "100%FREE";
-
-          content = {
-            format = "ext4";
-            mountOptions = ["defaults"];
-            mountpoint = "/vault";
-            type = "filesystem";
+            content = {
+              format = "ext4";
+              mountOptions = ["defaults"];
+              mountpoint = "/vault";
+              type = "filesystem";
+            };
           };
         };
       };
