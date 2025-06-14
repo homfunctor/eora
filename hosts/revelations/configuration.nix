@@ -7,9 +7,9 @@
     type-minimal-tty
 
     # nicer tty
-    # ./sops.nix
-    # ./stylix.nix
-    # type-nicer-tty
+    ./sops.nix
+    ./stylix.nix
+    type-nicer-tty
 
     # work
     # ./hardware.nix
@@ -34,9 +34,9 @@
 
       hostname = "revelations";
 
-      lanzaboote.enable = false;
+      lanzaboote.enable = true;
 
-      sops.user.enable = false;
+      sops.user.enable = true;
 
       adminuser = "wael";
       usernames = ["wael" "thaos"];
