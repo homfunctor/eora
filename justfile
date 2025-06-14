@@ -33,14 +33,6 @@ uptrace:
 offlate:
     sudo nixos-rebuild switch --flake . --offline  --log-format internal-json -v |& nom --json
 
-# install vytmadh configuration
-install-vytmadh:
-    sudo nixos-rebuild boot --flake .#vytmadh --use-remote-sudo --log-format internal-json -v |& nom --json
-
-# install revelations configuration
-install-revelations:
-    sudo nixos-rebuild boot --flake .#revelations --use-remote-sudo --log-format internal-json -v |& nom --json
-
 # violently destroy all remains of nixos channels
-purge-channels:
+purgech:
     sudo rm -rf /root/.nix-defexpr/channels && sudo rm -rf /nix/var/nix/profiles/per-user/root/channels
