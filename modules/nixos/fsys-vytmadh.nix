@@ -24,7 +24,7 @@
             size = "100%";
 
             content = {
-              name = "crypted";
+              name = "void";
               settings.allowDiscards = true;
               type = "luks";
 
