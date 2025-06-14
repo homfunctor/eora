@@ -34,9 +34,9 @@
 
       hostname = "revelations";
 
-      lanzaboote.enable = true;
+      lanzaboote.enable = false;
 
-      sops.user.enable = true;
+      sops.user.enable = false;
 
       adminuser = "wael";
       usernames = ["wael" "thaos"];
