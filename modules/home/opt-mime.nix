@@ -11,10 +11,10 @@
 
   mimeMap = {
     archive = [
-      "application/zip"
-      "application/rar"
-      "application/7z"
       "application/*tar"
+      "application/7z"
+      "application/rar"
+      "application/zip"
     ];
     audio = [
       "audio/aac"
@@ -45,16 +45,16 @@
       "image/webp"
     ];
     office = [
-      "application/vnd.oasis.opendocument.text"
-      "application/vnd.oasis.opendocument.spreadsheet"
-      "application/vnd.oasis.opendocument.presentation"
-      "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-      "application/vnd.openxmlformats-officedocument.presentationml.presentation"
       "application/msword"
+      "application/rtf"
       "application/vnd.ms-excel"
       "application/vnd.ms-powerpoint"
-      "application/rtf"
+      "application/vnd.oasis.opendocument.presentation"
+      "application/vnd.oasis.opendocument.spreadsheet"
+      "application/vnd.oasis.opendocument.text"
+      "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     ];
     pdf = ["application/pdf"];
     terminal = ["terminal"];

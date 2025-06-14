@@ -6,16 +6,16 @@
   hyprlandPkg = perSystem.hyprland.hyprland;
 in {
   imports = [
-    ./binds.nix # keybinds common to all types
-    ./dconf.nix # some dconf settings
-    ./env.nix # environment settings
-    ./hypridle.nix # hypridle settings
-    ./hyprpaper.nix # common hyprpaper settings
-    ./hyprlock.nix # hyprlock settings
-    ./packages.nix # packages
-    ./polkit.nix # polkit settings
-    ./portal.nix # portal settings
-    ./settings.nix # settings common to all types
+    ./binds.nix
+    ./dconf.nix
+    ./env.nix
+    ./hypridle.nix
+    ./hyprpaper.nix
+    ./hyprlock.nix
+    ./packages.nix
+    ./polkit.nix
+    ./portal.nix
+    ./settings.nix
     flake.modules.home.app-hyprpanel
   ];
 

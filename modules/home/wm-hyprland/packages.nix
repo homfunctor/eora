@@ -1,3 +1,4 @@
+# todo: modularize for example place archivers in home.app-archivers
 {
   perSystem,
   pkgs,

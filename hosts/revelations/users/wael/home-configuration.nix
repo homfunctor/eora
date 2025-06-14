@@ -23,6 +23,12 @@
 
   config = {
     home.opts = {
+      customUserDirs = {
+        music = "/vault/Music";
+        pictures = "/vault/Pictures";
+        videos = "/vault/Videos";
+      };
+
       hostname = "revelations";
 
       rofi.columns = 10;
@@ -39,12 +45,6 @@
       };
 
       username = "wael";
-    };
-
-    xdg.userDirs = lib.mkForce {
-      music = "/vault/Music";
-      pictures = "/vault/Pictures";
-      videos = "/vault/Video";
     };
   };
 }

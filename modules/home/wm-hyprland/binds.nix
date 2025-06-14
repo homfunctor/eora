@@ -1,4 +1,4 @@
-let
+{config, ...}: let
   mod = "SUPER";
   toggle = cmd: "pkill ${cmd} || uwsm app -- ${cmd}";
   uwsmapp = cmd: "uwsm app -- ${cmd}";
@@ -19,7 +19,7 @@ in {
 
       # launcher
       "${mod}, R, exec, rofi -show drun -run-command 'uwsm app -- {cmd}'"
-      "${mod} SHIFT, R, exec, ${toggle "anny-dock"}"
+
       # window management
       "${mod}, T, togglefloating"
       "${mod}, D, togglesplit"
@@ -67,7 +67,7 @@ in {
       "${mod}, mouse:276, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
       "${mod}, mouse:275, exec,  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       "${mod}, mouse:274, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      ", PRINT, exec, ${uwsmapp "grimblast"} --freeze --notify copysave area ~/Pictures/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
+      ", PRINT, exec, ${uwsmapp "grimblast"} --freeze --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
 
       # workspaces
       "${mod}, 1, workspace, 1"

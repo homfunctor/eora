@@ -1,3 +1,4 @@
+# todo: why does adding xdhp to extraPortals cause a severe collision?
 {
   config,
   pkgs,
@@ -5,7 +6,7 @@
 }: {
   home.packages = with pkgs; [
     xdg-utils
-    xdg-user-dirs
+    # xdg-user-dirs
   ];
 
   xdg.portal = {

@@ -1,3 +1,4 @@
+# todo: revise, customize animations more
 {
   config,
   lib,

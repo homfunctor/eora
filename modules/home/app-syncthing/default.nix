@@ -5,8 +5,8 @@
   pkgs,
   ...
 }: let
-  inherit (flake.lib) mkSecretPath;
   inherit (config.home.opts) username;
+  inherit (flake.lib) mkSecretPath;
 in {
   imports = [
     ./devices.nix

@@ -36,6 +36,9 @@
       "nfhs" = "z /run/current-system/";
       "hfhs" = "z /etc/profiles/per-user/";
 
+      # nix
+      "ni" = "nix-instantiate";
+
       # sometimes you wanna game on the side
       "m1" = "xrandr --output DP-1 --primary";
       "m2" = "xrandr --output DP-2 --primary";

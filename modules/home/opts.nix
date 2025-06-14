@@ -8,6 +8,7 @@
   inherit (lib) nameValuePair;
 in {
   options.home.opts = {
+    customUserDirs = mkAttrOpt {} "custom settings for user directories";
     defaultApps = mkAttrOpt {} "default applications";
 
     hostname = mkStrOpt "" "hostname";

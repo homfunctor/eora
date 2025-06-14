@@ -59,11 +59,6 @@
       url = "github:numtide/treefmt-nix";
     };
 
-    zen-browser = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:0xc000022070/zen-browser-flake";
-    };
-
     # secrets and privacy for the paranoid
     sapadal = {
       inputs = {

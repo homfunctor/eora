@@ -6,6 +6,7 @@
     app-glance
     app-inkscape
     app-latex
+    app-librewolf
     app-mathtools
     app-nix-index
     app-onlyoffice
@@ -14,9 +15,9 @@
     app-rofi
     app-simple-scan
     app-syncthing
+    app-udiskie
     app-vlc
     app-zathura
-    app-zen-browser
     opt-keyring
     opt-mime
     opt-stylix
