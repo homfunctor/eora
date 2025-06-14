@@ -47,9 +47,9 @@ in {
           "col.active_border" = mkForce "rgb(${base0D})";
           "col.inactive_border" = mkForce "rgb(${base02})";
 
-          border_size = 5;
+          border_size = 7;
           gaps_in = 5;
-          gaps_out = 10;
+          gaps_out = 11;
           layout = "dwindle";
           resize_on_border = true;
         };

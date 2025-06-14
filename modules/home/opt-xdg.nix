@@ -10,12 +10,5 @@ in {
     xdg-user-dirs
   ];
 
-  xdg = {
-    enable = true;
-
-    cacheHome = "${homeDirectory}/.cache";
-    configHome = "${homeDirectory}/.config";
-    dataHome = "${homeDirectory}/.local/share";
-    stateHome = "${homeDirectory}/.local/state";
-  };
+  xdg.enable = true;
 }

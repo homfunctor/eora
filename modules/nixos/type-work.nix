@@ -6,5 +6,6 @@
     opt-keyring
     wm-hyprland
   ];
+
   programs.seahorse.enable = true;
 }

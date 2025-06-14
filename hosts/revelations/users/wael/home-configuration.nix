@@ -1,4 +1,8 @@
-{flake, ...}: {
+{
+  flake,
+  lib,
+  ...
+}: {
   imports = with flake.modules.home; [
     # minimal tty
     type-minimal-tty
@@ -9,12 +13,12 @@
     type-nicer-tty
 
     # work
-    # ./hyprland.nix
-    # ./hyprpanel.nix
-    # type-work
+    ./hyprland.nix
+    ./hyprpanel.nix
+    type-work
 
     # personal
-    # type-personal
+    type-personal
   ];
 
   config = {
@@ -35,6 +39,12 @@
       };
 
       username = "wael";
+    };
+
+    xdg.userDirs = lib.mkForce {
+      music = "/vault/Music";
+      pictures = "/vault/Pictures";
+      videos = "/vault/Video";
     };
   };
 }

@@ -19,7 +19,6 @@
     '';
 
     shellInit = ''
-      trap clear WINCH
       zoxide init fish | source
     '';
 

@@ -1,7 +1,7 @@
 # personal fun stuff layered on the tippy top
 {flake, ...}: {
   imports = with flake.modules.home; [
-    app-apotheosis
+    # app-apotheosis
     app-baobab
     app-gaming
     app-lutris

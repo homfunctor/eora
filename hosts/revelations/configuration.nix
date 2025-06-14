@@ -12,15 +12,15 @@
     type-nicer-tty
 
     # work
-    # ./hardware.nix
-    # type-work
+    ./hardware.nix
+    type-work
 
     # personal
-    # type-personal
+    type-personal
 
     # extras
-    # app-nix-ld
-    # opt-rust
+    app-nix-ld
+    opt-rust
   ];
 
   config = {
