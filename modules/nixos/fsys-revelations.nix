@@ -1,7 +1,7 @@
 {
   disko.devices = {
     disk = {
-      main = {
+      disk0 = {
         device = "/dev/nvme0n1";
         type = "disk";
 
@@ -39,7 +39,7 @@
         };
       };
 
-      media = {
+      disk1 = {
         device = "/dev/sda";
         type = "disk";
 
@@ -70,9 +70,6 @@
       type = "lvm_vg";
 
       lvs = {
-        aaa.size = "1M";
-        zzz.size = "1M";
-
         encryptedSwap = {
           size = "36G";
 
@@ -100,7 +97,7 @@
           content = {
             format = "ext4";
             mountOptions = ["defaults"];
-            mountpoint = "/media";
+            mountpoint = "/vault";
             type = "filesystem";
           };
         };
