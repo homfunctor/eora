@@ -5,7 +5,6 @@
       colored-man-pages
       fzf
       grc
-      tide
     ]
     ++ (with pkgs; [
       fzf

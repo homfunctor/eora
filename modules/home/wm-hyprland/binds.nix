@@ -7,9 +7,9 @@ in {
     bind = [
       # applications
       "${mod}, E, exec, ${uwsmapp "nemo"}"
-      "${mod}, E, exec, ${uwsmapp "alacritty -e yazi"}"
+      "${mod} SHIFT, E, exec, ${uwsmapp "alacritty -e yazi"}"
       "${mod}, W, exec, ${uwsmapp "alacritty"}"
-      "${mod} SHIFT, W, exec, ${uwsmapp "alacritty ~/eora"}"
+      "${mod} SHIFT, W, exec, ${uwsmapp "alacritty --working-directory ~/eora"}"
 
       # hyprpanel
       "${mod}, X, exec, ${toggle "hyprpanel t powerdropdownmenu"}"
