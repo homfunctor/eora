@@ -20,7 +20,7 @@ in {
       ];
 
       wallpaper = [
-        ", ${wallDir}/${wall}"
+        "eDP-1, ${wallDir}/${wall}"
       ];
     };
 

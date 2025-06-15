@@ -5,7 +5,6 @@
     app-gimp
     app-glance
     app-inkscape
-    app-latex
     app-librewolf
     app-mathtools
     app-nix-index

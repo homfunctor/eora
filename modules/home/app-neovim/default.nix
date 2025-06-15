@@ -1,10 +1,12 @@
 # todo: refactor once again
 {
+  flake,
   inputs,
   pkgs,
   ...
 }: {
   imports = [
+    flake.modules.home.stylix-neovim
     inputs.nixvim.homeManagerModules.nixvim
     ./autocmd.nix
     ./keymaps.nix

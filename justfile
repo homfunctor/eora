@@ -7,7 +7,7 @@ clean:
 
 # update to current flake config
 update:
-    sudo nixos-rebuild switch --flake . --log-format internal-json -v |& nom --json
+    sudo nixos-rebuild switch --flake . --log-format internal-json |& nom --json
 
 # current flake config applied on next boot
 upboot:

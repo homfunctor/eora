@@ -8,6 +8,7 @@
 in {
   home.packages = with pkgs; [
     brightnessctl
+    brillo
     ffmpeg-full
     file-roller
     gnome-calculator
