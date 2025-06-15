@@ -1,3 +1,7 @@
+# notes on launch options
+#
+# stellaris
+# env --unset=SDL_VIDEODRIVER gamemoderun %command%
 {
   inputs,
   pkgs,

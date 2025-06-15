@@ -7,126 +7,124 @@
     };
 
     keymaps = [
+      # sort
+      {
+        action = ":sort<ESC>";
+        key = "<A-s>";
+        mode = "v";
+      }
       # replace the word under the cursor and enter insert mode
       {
-        mode = "n";
-        key = "<leader>D";
         action = "ciw";
+        key = "<leader>D";
+        mode = "n";
       }
 
       {
-        mode = "n";
-        key = "<leader>R";
         action = ":%s/\<C-r><C-w>//g<Left><Left>";
-        options = {
-          desc = "Search and replace word under cursor";
-        };
+        key = "<leader>R";
+        mode = "n";
+        options.desc = "Search and replace word under cursor";
       }
 
       {
-        mode = "n";
-        key = "<esc>";
         action = "<cmd>nohl<CR>";
-        options = {
-          desc = "Clear search";
-        };
+        key = "<esc>";
+        mode = "n";
+        options.desc = "Clear search";
       }
 
       {
-        mode = "n";
-        key = "<C-s>";
         action = "<cmd>w<cr><esc>";
+        key = "<C-s>";
+        mode = "n";
         options = {
-          silent = true;
           desc = "Save file";
+          silent = true;
         };
       }
 
       {
-        mode = "n";
-        key = "<C-q>";
         action = "<cmd>q<cr><esc>";
+        key = "<C-q>";
+        mode = "n";
         options = {
-          silent = true;
           desc = "Exit file";
+          silent = true;
         };
       }
 
       {
-        mode = "v";
-        key = "J";
         action = ":m '>+1<CR>gv=gv";
+        key = "J";
+        mode = "v";
         options = {
-          silent = true;
           desc = "Move down when line is highlighted";
+          silent = true;
         };
       }
 
       {
-        mode = "v";
-        key = "K";
         action = ":m '<-2<CR>gv=gv";
+        key = "K";
+        mode = "v";
         options = {
-          silent = true;
           desc = "Move up when line is highlighted";
+          silent = true;
         };
       }
 
       {
-        mode = "v";
-        key = "<";
         action = "<gv";
-        options = {
-          silent = true;
-          desc = "Indent while remaining in visual mode.";
-        };
-      }
-
-      {
+        key = "<";
         mode = "v";
-        key = ">";
-        action = ">gv";
         options = {
-          silent = true;
           desc = "Indent while remaining in visual mode.";
+          silent = true;
         };
       }
 
       {
-        mode = "n";
-        key = "n";
+        action = ">gv";
+        key = ">";
+        mode = "v";
+        options = {
+          desc = "Indent while remaining in visual mode.";
+          silent = true;
+        };
+      }
+
+      {
         action = "nzzzv";
-        options = {
-          desc = "Allow search terms to stay in the middle";
-        };
+        key = "n";
+        mode = "n";
+        options.desc = "Allow search terms to stay in the middle";
       }
 
       {
-        mode = "n";
-        key = "N";
         action = "Nzzzv";
-        options = {
-          desc = "Allow search terms to stay in the middle";
-        };
+        key = "N";
+        mode = "n";
+        options.desc = "Allow search terms to stay in the middle";
       }
 
       {
-        mode = "n";
-        key = "<leader>wj";
         action = "<C-W>s";
+        key = "<leader>wj";
+        mode = "n";
         options = {
-          silent = true;
           desc = "Split window below";
+          silent = true;
         };
       }
 
       {
-        mode = "n";
-        key = "<leader>wl";
         action = "<C-W>v";
+        key = "<leader>wl";
+        mode = "n";
         options = {
-          silent = true;
           desc = "Split window right";
+          silent = true;
         };
       }
     ];

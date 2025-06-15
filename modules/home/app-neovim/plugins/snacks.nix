@@ -1,7 +1,15 @@
-{config, ...}: let
+{
+  config,
+  lib,
+  ...
+}: let
+  inherit (lib) mkIf;
+
   colors = config.lib.stylix.colors.withHashtag;
+
+  cfg = config.opts.home.nvim.snacks;
 in {
-  programs.nixvim = {
+  programs.nixvim = mkIf cfg.enable {
     plugins.snacks = {
       enable = true;
 

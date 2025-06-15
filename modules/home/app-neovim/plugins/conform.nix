@@ -1,49 +1,65 @@
-{pkgs, ...}: {
-  # already installed: alejandra
-  home.packages = with pkgs; [
-    black
-    jq
-    shfmt
-    stylua
-  ];
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  inherit (lib) mkIf;
 
-  programs = {
-    nixvim.plugins.conform-nvim = {
-      enable = true;
-      settings = {
-        format_on_save = {
-          lspFallback = true;
-          timeoutMs = 500;
-        };
+  cfg = config.opts.home.nvim.conform;
+in {
+  config = mkIf cfg.enable {
+    # already installed: alejandra
+    home.packages = with pkgs; [
+      black
+      jq
+      shfmt
+      stylua
+    ];
 
-        notify_on_error = true;
+    programs = {
+      nixvim.plugins.conform-nvim = {
+        enable = true;
 
-        formatters_by_ft = {
-          bash = ["shfmt"];
-          fish = ["fish_indent"];
-          json = ["jq"];
-          lua = ["stylua"];
-          # markdown = ["deno_fmt"];
-          nix = ["alejandra"];
-          python = ["black"];
-          rust = ["rustaceanvim"];
-          tex = ["tex-fmt"];
+        settings = {
+          format_on_save = {
+            lspFallback = true;
+            timeoutMs = 500;
+          };
+
+          formatters_by_ft = {
+            "_" = [
+              "squeeze_blanks"
+              "trim_whitespace"
+              "trim_newlines"
+            ];
+            bash = ["shfmt"];
+            fish = ["fish_indent"];
+            json = ["jq"];
+            lua = ["stylua"];
+            nix = ["alejandra"];
+            python = ["black"];
+            rust = ["rustaceanvim"];
+            tex = ["tex-fmt"];
+          };
+
+          notify_on_error = true;
         };
       };
-    };
 
-    tex-fmt = {
-      enable = true;
-      settings = {
-        check = false;
-        lists = [];
-        print = false;
-        stdin = false;
-        tabchar = "space";
-        tabsize = 2;
-        verbosity = "warn";
-        wrap = true;
-        wraplen = 80;
+      tex-fmt = {
+        enable = true;
+        settings = {
+          check = false;
+          lists = [];
+          print = false;
+          stdin = false;
+          tabchar = "space";
+          tabsize = 2;
+          verbosity = "warn";
+          wrap = true;
+          wraplen = 80;
+        };
       };
     };
   };

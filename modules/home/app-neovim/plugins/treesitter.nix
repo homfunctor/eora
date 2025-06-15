@@ -1,5 +1,14 @@
-{pkgs, ...}: {
-  programs.nixvim = {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  inherit (lib) mkIf;
+
+  cfg = config.opts.home.nvim.treesitter;
+in {
+  programs.nixvim = mkIf cfg.enable {
     plugins = {
       treesitter = {
         enable = true;

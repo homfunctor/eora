@@ -1,5 +1,4 @@
 {
-  config,
   flake,
   lib,
   ...
@@ -9,8 +8,9 @@
   inherit (lib) attrsets;
   inherit (lib.attrsets) nameValuePair;
 
-  enabledPlugins = [
+  pluginList = [
     "alpha"
+    "blink"
     "colorizer"
     "conform"
     "lastplace"
@@ -18,6 +18,7 @@
     "lsp"
     "lualine"
     "mini"
+    "noice"
     "nvim-surround"
     "precognition"
     "rustaceanvim"
@@ -27,13 +28,13 @@
     "which-key"
   ];
 in {
-  config.opts.home.nvim = listToAttrs (
+  options.opts.home.nvim = listToAttrs (
     map (
       pluginName:
         nameValuePair pluginName {
-          enable = true;
+          enable = mkBoolOpt false "enable ${pluginName}";
         }
     )
-    enabledPlugins
+    pluginList
   );
 }

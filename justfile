@@ -3,7 +3,7 @@ default:
 
 # collect garbage
 clean:
-    nix-collect-garbage -d  --log-format internal-json -v |& nom --json
+    nix-collect-garbage -d  --log-format internal-json  |& nom --json
 
 # update to current flake config
 update:
@@ -11,7 +11,7 @@ update:
 
 # current flake config applied on next boot
 upboot:
-    sudo nixos-rebuild boot --flake . --log-format internal-json -v |& nom --json
+    sudo nixos-rebuild boot --flake . --log-format internal-json  |& nom --json
 
 # update flake inputs
 upflake:
@@ -23,15 +23,15 @@ chflake:
 
 # --dry-activate
 upcheck:
-    sudo nixos-rebuild dry-activate --flake . --log-format internal-json -v |& nom --json 
+    sudo nixos-rebuild dry-activate --flake . --log-format internal-json  |& nom --json 
 
 # --dry-activate  --show-trace
 uptrace:
-    sudo nixos-rebuild dry-activate --flake . --log-format internal-json -v --show-trace |& nom --json 
+    sudo nixos-rebuild dry-activate --flake . --log-format internal-json  --show-trace |& nom --json 
 
 # update to current flake config without going online
 offlate:
-    sudo nixos-rebuild switch --flake . --offline  --log-format internal-json -v |& nom --json
+    sudo nixos-rebuild switch --flake . --offline  --log-format internal-json  |& nom --json
 
 # violently destroy all remains of nixos channels
 purgech:

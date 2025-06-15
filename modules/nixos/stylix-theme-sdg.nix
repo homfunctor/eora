@@ -22,16 +22,16 @@
     base09 = "35A0EB";
     # classes, markup bold, search text bg #76B4F0
     base0A = "76B4F0";
-    # strings #86BBF1
-    base0B = "86BBF1";
-    # support #8DBEF2
-    base0C = "8DBEF2";
+    # strings #49A7F9
+    base0B = "49A7F9";
+    # support #0A9EF2
+    base0C = "0A9EF2";
     # functions #0FABDF
     base0D = "0FABDF";
-    # keywords #4DA5D8
-    base0E = "4DA5D8";
-    # deprecated, open/closing tags #03A2D5
-    base0F = "03A2D5";
+    # keywords #4592FF
+    base0E = "4592FF";
+    # deprecated, open/closing tags #2F63AC
+    base0F = "2F63AC";
     author = "homfunctor";
     scheme = "Sorcier des Glaces";
     slug = "sorcier-des-glaces";

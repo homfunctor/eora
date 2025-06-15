@@ -1,8 +1,4 @@
-{
-  lib,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   programs.nixvim = {
     clipboard = {
       register = "unnamedplus";
@@ -16,9 +12,9 @@
     };
 
     diagnostic.settings.config = {
-      update_in_insert = true;
-      severity_sort = true;
       jump.severity.__raw = "vim.diagnostic.severity.WARN";
+      severity_sort = true;
+      update_in_insert = true;
     };
 
     highlightOverride = {
@@ -35,15 +31,14 @@
       relativenumber = true;
 
       # 2 space tabs
-      tabstop = 2;
-      softtabstop = 2;
-      # 0 or 2? I had 2.
-      showtabline = 0;
       expandtab = true;
+      showtabline = 0;
+      softtabstop = 2;
+      tabstop = 2;
 
       # auto-indent with spaces
-      smartindent = true;
       shiftwidth = 2;
+      smartindent = true;
 
       # smart indenting
       breakindent = true;
@@ -63,10 +58,10 @@
       mouse = "a";
 
       # ignorecase and smartcase for searching
+      grepformat = "%f:%l:%c:%m";
+      grepprg = "rg --vimgrep";
       ignorecase = true;
       smartcase = true;
-      grepprg = "rg --vimgrep";
-      grepformat = "%f:%l:%c:%m";
 
       # faster completion
       updatetime = 50;
@@ -74,33 +69,33 @@
       # completion settings
       completeopt = [
         "menuone"
-        "noselect"
         "noinsert"
+        "noselect"
       ];
 
       # persistent undo
-      swapfile = false;
       autoread = true;
       backup = false;
+      swapfile = false;
       undofile = true;
 
       # colors
       termguicolors = true;
 
       # aesthetics
-      signcolumn = "yes";
+      cmdheight = 0;
       cursorline = true;
       foldcolumn = "0";
+      foldenable = true;
       foldlevel = 99;
       foldlevelstart = 99;
-      foldenable = true;
       foldmethod = "indent";
-      scrolloff = 2;
-      cmdheight = 0;
-      showmode = false;
       pumblend = 0;
       pumheight = 10;
       ruler = false;
+      scrolloff = 2;
+      showmode = false;
+      signcolumn = "yes";
 
       # which-key timeout
       timeoutlen = 10;
@@ -110,13 +105,11 @@
       fileencoding = "utf-8";
     };
 
-    performance = {
-      byteCompileLua = {
-        enable = true;
-        nvimRuntime = true;
-        configs = true;
-        plugins = true;
-      };
+    performance.byteCompileLua = {
+      configs = true;
+      enable = true;
+      nvimRuntime = true;
+      plugins = true;
     };
   };
 }

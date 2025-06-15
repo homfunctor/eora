@@ -1,5 +1,13 @@
 {
-  programs.nixvim.plugins.alpha = {
+  config,
+  lib,
+  ...
+}: let
+  inherit (lib) mkIf;
+
+  cfg = config.opts.home.nvim.alpha;
+in {
+  programs.nixvim.plugins.alpha = mkIf cfg.enable {
     enable = true;
 
     layout = [

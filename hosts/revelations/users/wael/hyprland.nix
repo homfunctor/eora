@@ -28,6 +28,7 @@ in {
       hyprpaperOpts.settings = {
         ipc = "off";
         splash = false;
+
         preload = [
           "${wallDir}/${wall1}"
           "${wallDir}/${wall2}"
@@ -47,9 +48,9 @@ in {
           "col.active_border" = mkForce "rgb(${base0D})";
           "col.inactive_border" = mkForce "rgb(${base02})";
 
-          border_size = 4;
-          gaps_in = 4;
-          gaps_out = 8;
+          border_size = 5;
+          gaps_in = 7;
+          gaps_out = 11;
           layout = "dwindle";
           resize_on_border = true;
         };
@@ -62,9 +63,9 @@ in {
 
         workspace = [
           # smart gaps
+          "f[1], gapsout:0, gapsin:0"
           "w[t1], gapsout:0, gapsin:0"
           "w[tg1], gapsout:0, gapsin:0"
-          "f[1], gapsout:0, gapsin:0"
           # 3 monitors, DP-2 is main/middle
           "1, monitor:DP-1"
           "2, monitor:DP-2"

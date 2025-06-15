@@ -1,5 +1,13 @@
 {
-  programs.nixvim.plugins.lint = {
+  config,
+  lib,
+  ...
+}: let
+  inherit (lib) mkIf;
+
+  cfg = config.opts.home.nvim.lint;
+in {
+  config.programs.nixvim.plugins.lint = mkIf cfg.enable {
     enable = true;
 
     lintersByFt = {

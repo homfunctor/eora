@@ -10,8 +10,9 @@
     inputs.nixvim.homeManagerModules.nixvim
     ./autocmd.nix
     ./keymaps.nix
-    ./options.nix
+    ./opts.nix
     ./plugins
+    ./settings.nix
   ];
 
   home.packages = with pkgs; [

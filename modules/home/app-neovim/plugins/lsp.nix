@@ -1,5 +1,14 @@
-{pkgs, ...}: {
-  programs.nixvim.plugins = {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: let
+  inherit (lib) mkIf;
+
+  cfg = config.opts.home.nvim.lsp;
+in {
+  config.programs.nixvim.plugins = mkIf cfg.enable {
     lsp-format.enable = true;
 
     lsp = {
