@@ -1,0 +1,2 @@
+stellaris steam launch options
+ env --unset=SDL_VIDEODRIVER gamemoderun %command%

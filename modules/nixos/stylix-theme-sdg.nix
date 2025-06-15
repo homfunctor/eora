@@ -1,22 +1,37 @@
-# todo: adjust some colors for readability
 {config, ...}: {
   config.stylix.base16Scheme = {
-    base00 = "000000"; # default bg #000000
-    base01 = "151A1F"; # lighter bg #151A1F
-    base02 = "2E2D3D"; # selection bg #2E2D3D
-    base03 = "46B4E5"; # comments #46B4E5
-    base04 = "88BCDD"; # dark fg (status bars) #88BCDD
-    base05 = "1E8DCF"; # default fg #1E8DCF
-    base06 = "76B4E9"; # light fg #76B4E9
-    base07 = "154371"; # light bg #154371
-    base08 = "37C7EE"; # vars #37C7EE
-    base09 = "7799BB"; # integers, boolean, etc. #7799BB
-    base0A = "BCDAF4"; # classes, markup bold, search text bg #BCDAF4
-    base0B = "7AA8DA"; # strings #7AA8DA
-    base0C = "55B4E5"; # support #55B4E5
-    base0D = "35A0EB"; # functions #35A0EB
-    base0E = "A0DEFB"; # keywords #A0DEFB
-    base0F = "43A2D5"; # deprecated, open/closing tags #43A2D5
+    # default bg #000000
+    base00 = "000000";
+    # lighter bg #212E3B
+    base01 = "212E3B";
+    # selection bg #2F3B49
+    base02 = "2F3B49";
+    # comments, invisibles, line highlighting;  discord titles; hyprpanel workspace icons  #3BC1F2
+    base03 = "3BC1F2";
+    # dark fg (status bars) #759DC6
+    base04 = "759DC6";
+    # default fg #45A0EB
+    base05 = "45A0EB";
+    # light fg #5E9ED9
+    base06 = "5E9ED9";
+    # light bg #759DC6
+    base07 = "759DC6";
+    # vars #86BBF1
+    base08 = "86BBF1";
+    # integers, boolean, etc. #35A0EB
+    base09 = "35A0EB";
+    # classes, markup bold, search text bg #76B4F0
+    base0A = "76B4F0";
+    # strings #86BBF1
+    base0B = "86BBF1";
+    # support #8DBEF2
+    base0C = "8DBEF2";
+    # functions #0FABDF
+    base0D = "0FABDF";
+    # keywords #4DA5D8
+    base0E = "4DA5D8";
+    # deprecated, open/closing tags #03A2D5
+    base0F = "03A2D5";
     author = "homfunctor";
     scheme = "Sorcier des Glaces";
     slug = "sorcier-des-glaces";

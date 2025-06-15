@@ -1,5 +1,5 @@
-{perSystem, ...}: {
-  programs.steam.extraCompatPackages = [
-    perSystem.chaotic.proton-ge-custom
+{pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    protonplus
   ];
 }

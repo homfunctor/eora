@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   programs.nixvim = {
     clipboard = {
       register = "unnamedplus";
@@ -18,18 +22,11 @@
     };
 
     highlightOverride = {
+      Comment.italic = true;
       LineNr.bg = "none";
+      Normal.bg = "none";
       NormalFloat.bg = "none";
-      NotifyBackground.bg = "#000000";
-    };
-
-    performance = {
-      byteCompileLua = {
-        enable = true;
-        nvimRuntime = true;
-        configs = true;
-        plugins = true;
-      };
+      NotifyBackground.bg = "none";
     };
 
     opts = {
@@ -111,6 +108,15 @@
       # encoding
       encoding = "utf-8";
       fileencoding = "utf-8";
+    };
+
+    performance = {
+      byteCompileLua = {
+        enable = true;
+        nvimRuntime = true;
+        configs = true;
+        plugins = true;
+      };
     };
   };
 }

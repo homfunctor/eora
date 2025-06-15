@@ -13,6 +13,7 @@ in {
         };
         cursorword = {};
         icons = {};
+        snippets = {};
         surround = {};
 
         diff.view = {

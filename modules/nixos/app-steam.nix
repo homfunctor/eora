@@ -1,4 +1,8 @@
-{inputs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = with inputs.nix-gaming.nixosModules; [
     pipewireLowLatency
     platformOptimizations
@@ -23,6 +27,10 @@
 
     steam = {
       enable = true;
+      extraPackages = with pkgs; [
+        # might help with crashes caused by stellaris mods
+        rust-jemalloc-sys-unprefixed
+      ];
       platformOptimizations.enable = true;
       protontricks.enable = true;
       remotePlay.openFirewall = false;

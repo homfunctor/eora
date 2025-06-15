@@ -85,19 +85,17 @@ in {
       float_switch_override_focus = 2;
     };
 
-    master =
-      mkDefault {
-      };
-
     misc = {
       animate_manual_resizes = true;
       animate_mouse_windowdragging = true;
+      anr_missed_pings = 30;
       disable_hyprland_logo = true;
       disable_splash_rendering = true;
-      mouse_move_enables_dpms = true;
-      key_press_enables_dpms = true;
-      new_window_takes_over_fullscreen = 2;
+      enable_anr_dialog = true;
       initial_workspace_tracking = 0;
+      key_press_enables_dpms = true;
+      mouse_move_enables_dpms = true;
+      new_window_takes_over_fullscreen = 2;
       vfr = 1;
       vrr = 1;
     };
@@ -105,12 +103,6 @@ in {
     # permission = [];
 
     windowrule = [
-      # anny-dock
-      "noborder,class:^(anny-dock)"
-      "noshadow,class:^(anny-dock)"
-      "float,class:^(anny-dock)"
-      "pin,class:^(anny-dock)"
-      "noblur, class:^(anny-dock)"
     ];
 
     windowrulev2 = [

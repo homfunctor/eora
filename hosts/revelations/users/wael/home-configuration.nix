@@ -1,7 +1,4 @@
-{
-  flake,
-  ...
-}: {
+{flake, ...}: {
   imports = with flake.modules.home; [
     # minimal tty
     type-minimal-tty
@@ -14,6 +11,7 @@
     # work
     ./hyprland.nix
     ./hyprpanel.nix
+    ./settings.nix
     type-work
 
     # personal

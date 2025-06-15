@@ -33,6 +33,7 @@ in {
     p7zip
     papers
     pix
+    mate.pluma
     pulseaudioFull
     pwvucontrol
     qt6Packages.qt6ct
