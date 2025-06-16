@@ -5,9 +5,13 @@
   pkgs,
   ...
 }: let
-  inherit (lib) mkForce;
+  inherit (config.home.opts.rofi) columns;
   inherit (config.lib.formats.rasi) mkLiteral;
+  inherit (config.stylix.fonts) monospace;
+  inherit (lib) mkForce;
+
   colors = config.lib.stylix.colors.withHashtag;
+  terminalPkg = "${pkgs.alacritty}/bin/alacritty";
 in {
   programs.rofi = {
     enable = true;
@@ -24,20 +28,20 @@ in {
       display-window = "";
       drun-display-format = "{name}";
       drun-match-fields = "name";
-      font = config.stylix.fonts.monospace.name;
+      font = monospace.name;
       hover-select = true;
       kb-cancel = "Escape,MouseMiddle";
       me-accept-entry = "MousePrimary";
       me-select-entry = "";
       modi = "drun";
       show-icons = true;
-      terminal = "${pkgs.alacritty}/bin/alacritty";
+      terminal = terminalPkg;
     };
 
     theme = mkForce {
       "*" = {
         background-color = mkLiteral "transparent";
-        font = config.stylix.fonts.monospace.name;
+        font = monospace.name;
         foreground = mkLiteral "${colors.base06}";
         margin = mkLiteral "0px";
         padding = mkLiteral "0px";
@@ -83,7 +87,7 @@ in {
       };
 
       listview = {
-        inherit (config.home.opts.rofi) columns;
+        inherit columns;
         fixed-columns = true;
         margin = mkLiteral "24px calc( 50% - 720px )";
         margin-bottom = mkLiteral "0px";

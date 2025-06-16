@@ -10,6 +10,7 @@
 
   enabledPlugins = [
     "alpha"
+    "blink"
     "colorizer"
     "conform"
     "lastplace"

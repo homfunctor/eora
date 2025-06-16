@@ -1,9 +1,10 @@
-# most of the theming settings
 {
   config,
   inputs,
   ...
-}: {
+}: let
+  inherit (config.nixos.opts) fontSizes;
+in {
   imports = [
     inputs.stylix.nixosModules.stylix
   ];
@@ -12,11 +13,11 @@
     enable = true;
 
     autoEnable = true;
-    fonts.sizes = config.nixos.opts.fontSizes;
+    fonts.sizes = fontSizes;
     image = "${inputs.sapadal}/assets/base.png";
     opacity = {
       desktop = 1.0;
-      popups = 0.90;
+      popups = 0.9;
       terminal = 0.8;
     };
     polarity = "dark";

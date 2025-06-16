@@ -12,9 +12,9 @@
 in {
   imports = with flake.modules.nixos;
     [
+      hw-audio
       hw-cpu-amd
       hw-gpu-amd
-      hw-audio
       hw-graphics
       hw-printing
       hw-tablet

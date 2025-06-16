@@ -12,12 +12,12 @@ in {
     settings.server = {
       default_settings.rust-analyzer = {
         check = {
-          command = "clippy";
           allTargets = true;
+          command = "clippy";
         };
         inlayHints = {
-          maxLength = 99;
           lifetimeElisionHints.enable = "always";
+          maxLength = 99;
         };
       };
     };

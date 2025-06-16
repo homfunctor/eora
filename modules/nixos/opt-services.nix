@@ -17,10 +17,5 @@
     libinput.enable = true;
     udisks2.enable = true;
     upower.enable = true;
-
-    xserver.xkb = {
-      layout = "us";
-      variant = "";
-    };
   };
 }

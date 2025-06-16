@@ -14,6 +14,16 @@ in {
       systemd.enable = true;
     };
 
+    # overridden when cachyos kernel is enabled
+    kernelPackages = mkDefault pkgs.linuxPackages_latest;
+
+    kernelParams = [
+      "quiet"
+      "rd.udev.log_level=3"
+      "splash"
+      "systemd.show_status=false"
+    ];
+
     loader = {
       efi.canTouchEfiVariables = true;
       # overridden when lanzaboote is enabled
@@ -26,15 +36,5 @@ in {
         nixos-bgrt-plymouth
       ];
     };
-
-    # overridden when cachyos kernel is enabled
-    kernelPackages = mkDefault pkgs.linuxPackages_latest;
-
-    kernelParams = [
-      "quiet"
-      "rd.udev.log_level=3"
-      "splash"
-      "systemd.show_status=false"
-    ];
   };
 }

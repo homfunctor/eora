@@ -7,6 +7,7 @@
     opt-fonts
     opt-lanzaboote
     opt-lix
+    opt-services
     opt-stylix
     sops-users
   ];

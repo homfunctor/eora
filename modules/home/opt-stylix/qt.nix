@@ -20,13 +20,13 @@
 
   # i just don't want github to say my flake is mostly Mustache
   svg = colors {
-    template = /. + unsafeDiscardStringContext "${inputs.sapadal}/assets/kvantum-svg.mustache";
     extension = "svg";
+    template = /. + unsafeDiscardStringContext "${inputs.sapadal}/assets/kvantum-svg.mustache";
   };
 
   kvconfig = colors {
-    template = /. + unsafeDiscardStringContext "${inputs.sapadal}/assets/kvconfig.mustache";
     extension = ".kvconfig";
+    template = /. + unsafeDiscardStringContext "${inputs.sapadal}/assets/kvconfig.mustache";
   };
 
   kvantumPackage = pkgs.runCommandLocal "base16-kvantum" {} ''

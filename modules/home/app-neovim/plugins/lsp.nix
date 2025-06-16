@@ -17,8 +17,8 @@ in {
       inlayHints = true;
 
       servers = {
-        bashls.enable = true;
         basedpyright.enable = true;
+        bashls.enable = true;
         fish_lsp.enable = true;
         jsonls.enable = true;
         lua_ls.enable = true;

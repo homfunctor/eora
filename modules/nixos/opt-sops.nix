@@ -20,7 +20,6 @@ in {
 
   sops = {
     age = {
-      generateKey = true;
       keyFile = "/home/${adminuser}/.config/sops/age/keys.txt";
       sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
     };

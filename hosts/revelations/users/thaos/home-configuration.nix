@@ -9,9 +9,9 @@
     type-nicer-tty
 
     # work
-    # ./hyprland.nix
-    # ./hyprpanel.nix
-    # type-work
+    ./hyprland.nix
+    ./hyprpanel.nix
+    type-work
   ];
 
   config = {

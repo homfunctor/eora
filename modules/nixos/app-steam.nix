@@ -37,7 +37,6 @@
       ];
       platformOptimizations.enable = true;
       protontricks.enable = true;
-      remotePlay.openFirewall = false;
     };
   };
 

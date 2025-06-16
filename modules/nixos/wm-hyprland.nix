@@ -1,9 +1,11 @@
+# todo: fix keyring not unlocking
 {
   config,
   lib,
   pkgs,
   ...
 }: let
+  inherit (config.nixos.opts) adminuser;
   inherit (lib) getExe;
 
   # autologin to adminuser
@@ -18,7 +20,7 @@
 
   initial_session = {
     command = "${getExe pkgs.uwsm} start hyprland-uwsm.desktop";
-    user = config.nixos.opts.adminuser;
+    user = adminuser;
   };
 in {
   programs = {

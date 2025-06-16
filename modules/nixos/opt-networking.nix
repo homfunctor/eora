@@ -4,12 +4,13 @@
   lib,
   ...
 }: let
+  inherit (config.nixos.opts) hostname;
   inherit (lib) mkDefault;
 in {
   networking = {
     firewall.enable = true;
 
-    hostName = config.nixos.opts.hostname;
+    hostName = hostname;
 
     networkmanager = {
       enable = true;

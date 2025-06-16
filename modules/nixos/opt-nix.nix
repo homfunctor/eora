@@ -77,5 +77,10 @@
     wheelNeedsPassword = false;
   };
 
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "";
+  };
+
   system.stateVersion = "25.05";
 }

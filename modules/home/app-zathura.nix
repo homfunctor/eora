@@ -22,7 +22,7 @@ in {
       statusbar-basename = true;
       zoom-min = "10";
 
-      recolor-darkcolor = mkForce base08;
+      recolor-darkcolor = mkForce base05;
       recolor-lightcolor = mkForce base00;
     };
   };

@@ -14,13 +14,9 @@ in {
     hostname = mkStrOpt "" "hostname";
 
     hyprlandOpts = mkAttrOpt {} "user options for hyprland";
-    hyprpaperOpts = mkAttrOpt {} "user options for hyprpaper";
     hyprpanelLayout = mkAttrOpt {} "user options for hyprpanel layout";
     hyprpanelScale = mkIntOpt 75 "scaling factor for hyprpanel";
-
-    nixvim.plugins = {
-      foo.enable = mkBoolOpt false "enable foo";
-    };
+    hyprpaperOpts = mkAttrOpt {} "user options for hyprpaper";
 
     rofi.columns = mkIntOpt 4 "number of columns to use in rofi";
 
@@ -41,6 +37,7 @@ in {
           "Math"
           "Misc"
           "Nix"
+          "Python"
           "Rust"
           "Work"
         ];

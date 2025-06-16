@@ -14,10 +14,10 @@
               type = "EF00";
 
               content = {
-                type = "filesystem";
                 format = "vfat";
-                mountpoint = "/boot";
                 mountOptions = ["fmask=0007" "umask=0077"];
+                mountpoint = "/boot";
+                type = "filesystem";
               };
             };
 
