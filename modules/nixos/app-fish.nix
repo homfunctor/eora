@@ -25,16 +25,16 @@
     shellAliases = {
       # don't want to rely on zoxide for these
       "eora" = "z ~/eora";
-      "sapadal" = "z ~/sapadal";
       "revelations" = "z ~/eora/hosts/revelations";
-      "wael" = "z ~/eora/hosts/revelations/users/wael";
+      "rymrgand" = "z ~/eora/hosts/vytmadh/users/rymrgand";
+      "sapadal" = "z ~/sapadal";
       "thaos" = "z ~/eora/hosts/revelations/users/thaos";
       "vytmadh" = "z ~/eora/hosts/vytmadh";
-      "rymrgand" = "z ~/eora/hosts/vytmadh/users/rymrgand";
+      "wael" = "z ~/eora/hosts/revelations/users/wael";
 
       # i'm lazy
-      "nfhs" = "z /run/current-system/";
       "hfhs" = "z /etc/profiles/per-user/";
+      "nfhs" = "z /run/current-system/";
 
       # nix
       "ni" = "nix-instantiate";
@@ -50,10 +50,10 @@
       "....." = "z ../../../../";
 
       cat = "bat";
-      cl = "clear";
       cd = "z";
-      eza = "eza -G -x --color=always --icons=always";
+      cl = "clear";
       erd = "erd -I --suppress-size";
+      eza = "eza -G -x --color=always --icons=always";
       gita = "git add .";
       gitc = "git commit -m";
       gitlol = "gita && gitc \".\" && gitps";

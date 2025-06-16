@@ -60,7 +60,6 @@ in
 
     desktopItems = [
       (makeDesktopItem {
-        categories = ["Game"];
         comment = "GUI Mod Editor for Pillars of Eternity II: Deadfire";
         desktopName = "Apotheosis";
         exec = "Apotheosis";

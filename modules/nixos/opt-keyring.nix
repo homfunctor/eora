@@ -9,7 +9,10 @@
     dbus = {
       enable = true;
       implementation = "broker";
-      packages = [pkgs.gcr_4];
+      packages = with pkgs; [
+        gcr_4
+        gnome-keyring
+      ];
     };
     gnome.gnome-keyring.enable = true;
   };

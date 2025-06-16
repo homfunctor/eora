@@ -12,8 +12,8 @@
   version = "0.12.4";
 
   src = fetchurl {
-    url = "https://github.com/oatmealproblem/stellarmaps/releases/download/stellarmaps-v${version}/StellarMaps_${version}_Linux.AppImage";
     hash = "sha256-5PdxPPxC5PMFsuEiwrV0fSzhFCR4O2TTfqdrcrkQT+U=";
+    url = "https://github.com/oatmealproblem/stellarmaps/releases/download/stellarmaps-v${version}/StellarMaps_${version}_Linux.AppImage";
   };
 
   appimageContents = appimageTools.extractType1 {
@@ -39,8 +39,8 @@ in
 
     meta = {
       description = "Stylized maps from Stellaris saves";
-      homepage = "https://github.com/oatmealproblem/stellarmaps";
       downloadPage = "https://github.com/oatmealproblem/stellarmaps/releases";
+      homepage = "https://github.com/oatmealproblem/stellarmaps";
       license = lib.licenses.mit;
     };
   }

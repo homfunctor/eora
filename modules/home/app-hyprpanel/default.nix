@@ -12,8 +12,8 @@
 
   colors = config.lib.stylix.colors.withHashtag;
 
-  accent = colors.base0C;
-  accent-alt = colors.base03;
+  accent = colors.base03;
+  accent-alt = colors.base0E;
   background = colors.base00;
   background-alt = colors.base01;
   foreground = colors.base05;

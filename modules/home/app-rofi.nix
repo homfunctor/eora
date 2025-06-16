@@ -45,7 +45,7 @@ in {
       };
 
       window = {
-        background-color = mkLiteral "${colors.base02}dd";
+        background-color = mkLiteral "${colors.base00}dd";
         fullscreen = true;
         padding = mkLiteral "1em";
       };
@@ -53,7 +53,7 @@ in {
       mainbox.padding = mkLiteral "8px";
 
       inputbar = {
-        background-color = mkLiteral "${colors.base04}20";
+        background-color = mkLiteral "${colors.base00}20";
 
         border = mkLiteral "1px";
         border-radius = mkLiteral "2px";
