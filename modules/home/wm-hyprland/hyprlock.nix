@@ -1,4 +1,3 @@
-# todo: revise and
 # todo: make per-monitor setup for revelations:
 #   [blank screen] [lock screen] [blank screen]
 {

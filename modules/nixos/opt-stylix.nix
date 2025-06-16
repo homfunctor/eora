@@ -16,8 +16,8 @@
     image = "${inputs.sapadal}/assets/base.png";
     opacity = {
       desktop = 1.0;
-      popups = 0.8;
-      terminal = 0.7;
+      popups = 0.95;
+      terminal = 0.9;
     };
     polarity = "dark";
   };

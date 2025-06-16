@@ -45,8 +45,8 @@ in {
       # hyprland settings specific to personal computer
       hyprlandOpts = {
         general = with colors; {
-          "col.active_border" = mkForce "rgb(${base0D})";
-          "col.inactive_border" = mkForce "rgb(${base02})";
+          "col.active_border" = mkForce "rgb(${base07})";
+          "col.inactive_border" = mkForce "rgb(${base00})";
 
           border_size = 5;
           gaps_in = 7;

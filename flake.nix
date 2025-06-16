@@ -78,11 +78,6 @@
       url = "github:fufexan/nix-gaming";
     };
 
-    nixos-generators = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/nixos-generators";
-    };
-
     # hyprland
     hypridle = {
       inputs = {

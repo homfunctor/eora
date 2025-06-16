@@ -2,36 +2,52 @@
   config.stylix.base16Scheme = {
     # default bg #000000
     base00 = "000000";
-    # lighter bg #212E3B
-    base01 = "212E3B";
-    # selection bg #2F3B49
-    base02 = "2F3B49";
-    # comments, invisibles, line highlighting;  discord titles; hyprpanel workspace icons  #3BC1F2
-    base03 = "3BC1F2";
-    # dark fg (status bars) #759DC6
-    base04 = "759DC6";
-    # default fg #45A0EB
-    base05 = "45A0EB";
-    # light fg #5E9ED9
-    base06 = "5E9ED9";
-    # light bg #759DC6
-    base07 = "759DC6";
-    # vars #86BBF1
-    base08 = "86BBF1";
-    # integers, boolean, etc. #35A0EB
-    base09 = "35A0EB";
-    # classes, markup bold, search text bg #76B4F0
-    base0A = "76B4F0";
-    # strings #49A7F9
-    base0B = "49A7F9";
-    # support #0A9EF2
-    base0C = "0A9EF2";
-    # functions #0FABDF
-    base0D = "0FABDF";
-    # keywords #4592FF
-    base0E = "4592FF";
-    # deprecated, open/closing tags #2F63AC
-    base0F = "2F63AC";
+
+    # lighter bg #141A23
+    base01 = "141A23";
+
+    # selection bg #1E2A3B
+    base02 = "1E2A3B";
+
+    # comments, invisibles, line highlighting  #5487AA
+    base03 = "5487AA";
+
+    # dark fg (status bars) #4B5C6A
+    base04 = "4B5C6A";
+
+    # default fg #5F96C3
+    base05 = "5F96C3";
+
+    # light fg #8A9Dc1
+    base06 = "8A9Dc1";
+
+    # light bg #A1B3D0
+    base07 = "A1B3D0";
+
+    # vars #46708B
+    base08 = "46708B";
+
+    # integers, boolean, etc. #3C4F5B
+    base09 = "3C4F5B";
+
+    # classes, markup bold, search text bg #4D6272
+    base0A = "4D6272";
+
+    # strings #4E6F80
+    base0B = "4E6F80";
+
+    # support #5A6C76
+    base0C = "5A6C76";
+
+    # functions #4C5A6B
+    base0D = "4C5A6B";
+
+    # keywords #6A7B89
+    base0E = "6A7B89";
+
+    # deprecated, open/closing tags #3B4B60
+    base0F = "3B4B60";
+
     author = "homfunctor";
     scheme = "Sorcier des Glaces";
     slug = "sorcier-des-glaces";

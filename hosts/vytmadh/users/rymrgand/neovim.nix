@@ -5,7 +5,6 @@
   ...
 }: let
   inherit (builtins) listToAttrs;
-  inherit (flake.lib) mkBoolOpt;
   inherit (lib) attrsets;
   inherit (lib.attrsets) nameValuePair;
 
