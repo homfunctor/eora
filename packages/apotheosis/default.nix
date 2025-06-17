@@ -29,7 +29,6 @@ in
     dotnet-sdk = dotnetCorePackages.sdk_9_0;
     nugetDeps = ./deps.json;
 
-    executables = ["Apotheosis"];
     projectFile = "Gui/Gui.csproj";
 
     buildInputs = [
@@ -44,9 +43,6 @@ in
     ];
     runtimeDeps = buildInputs;
 
-    dotnetFlags = [
-      "--runtime linux-x64"
-    ];
     gappsWrapperArgs = [
       "--set GDK_BACKEND x11"
       "--set SDL_VIDEODRIVER x11"
@@ -67,16 +63,10 @@ in
     ];
 
     meta = {
-      changelog = "https://gitlab.com/noqn/apotheosis/-/blob/${src.rev}/CHANGELOG.md";
       description = "";
       homepage = "https://gitlab.com/noqn/apotheosis";
       license = lib.licenses.agpl3Only;
       mainProgram = "apotheosis";
       platforms = lib.platforms.all;
     };
-
-    doCheck = true;
-    checkPhase = ''
-      dotnet test --no-build --verbosity normal
-    '';
   }

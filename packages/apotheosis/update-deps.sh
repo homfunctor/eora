@@ -14,7 +14,9 @@ cd "$CLONE_DIR"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 dotnet restore --packages out
 
-nuget-to-json out > "../$OUTPUT_FILE"
+nuget-to-json out >"../$OUTPUT_FILE"
+
+# todo: use jq to remove offending entries
 
 cd ..
 rm -rf "$CLONE_DIR"
