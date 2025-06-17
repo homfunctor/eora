@@ -1,11 +1,15 @@
 # apps for minimal tty system
-{pkgs, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   environment.systemPackages = with pkgs; [
     just
     killall
     nix-output-monitor
     sbctl # for lanzaboote
-    uutils-coreutils-noprefix
+    (lib.hiPrio uutils-coreutils-noprefix)
     wget
   ];
 }

@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+{pkgs}: let
   inherit
     (pkgs)
     adwaita-icon-theme
@@ -9,63 +9,74 @@
     gtk3
     gtk4
     gtksourceview4
+    lib
     makeDesktopItem
     wrapGAppsHook
     ;
-
-  pname = "apotheosis";
-  version = "2025-4-10";
 in
   buildDotnetModule rec {
-    inherit pname version;
+    pname = "apotheosis";
+    version = "2025-04-10";
 
     src = fetchFromGitLab {
-      hash = "sha256-jaaUDdeKryuhO8UvwCEiSFXS9vaEYXEn22Td0ztkZRg=";
+      hash = "sha256-/d3/zraFLQkNlFAV6gNduPEz2/LAsDKQsjnP58oEaII=";
       owner = "noqn";
-      repo = pname;
-      rev = "742207393816ff8a9eacd768e1de8cb5df3589f1";
+      repo = "apotheosis";
+      rev = "b878e90d558d702afefb8be3bd9fa933ee950fb4";
     };
 
     dotnet-runtime = dotnetCorePackages.runtime_9_0;
     dotnet-sdk = dotnetCorePackages.sdk_9_0;
-
     nugetDeps = ./deps.json;
 
-    projectfile = "Gui/Gui.csproj";
+    executables = ["Apotheosis"];
+    projectFile = "Gui/Gui.csproj";
 
-    buildInputs = runtimeDeps;
-
-    nativeBuildInputs = [
-      copyDesktopItems
-      wrapGAppsHook
-    ];
-
-    runtimeDeps = [
+    buildInputs = [
       adwaita-icon-theme
       gtk3
       gtk4
       gtksourceview4
     ];
+    nativeBuildInputs = [
+      copyDesktopItems
+      wrapGAppsHook
+    ];
+    runtimeDeps = buildInputs;
 
-    makeWrapperArgs = [
+    dotnetFlags = [
+      "--runtime linux-x64"
+    ];
+    gappsWrapperArgs = [
       "--set GDK_BACKEND x11"
       "--set SDL_VIDEODRIVER x11"
     ];
 
-    preConfigure = ''
-      dotnetFlags+=(
-        --runtime linux-x64
-      )
-    '';
-
     desktopItems = [
-      (makeDesktopItem {
-        comment = "GUI Mod Editor for Pillars of Eternity II: Deadfire";
-        desktopName = "Apotheosis";
-        exec = "Apotheosis";
-        icon = "pillars-of-eternity";
-        name = "Apotheosis";
-        type = "Application";
-      })
+      (
+        makeDesktopItem {
+          categories = ["Game" "Utility"];
+          comment = "GUI Mod Editor for Pillars of Eternity II: Deadfire";
+          desktopName = "Apotheosis";
+          exec = "Apotheosis";
+          icon = "pillars-of-eternity";
+          name = "Apotheosis";
+          type = "Application";
+        }
+      )
     ];
+
+    meta = {
+      changelog = "https://gitlab.com/noqn/apotheosis/-/blob/${src.rev}/CHANGELOG.md";
+      description = "";
+      homepage = "https://gitlab.com/noqn/apotheosis";
+      license = lib.licenses.agpl3Only;
+      mainProgram = "apotheosis";
+      platforms = lib.platforms.all;
+    };
+
+    doCheck = true;
+    checkPhase = ''
+      dotnet test --no-build --verbosity normal
+    '';
   }

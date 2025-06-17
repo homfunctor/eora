@@ -37,11 +37,12 @@
       "nfhs" = "z /run/current-system/";
 
       # nix
-      "ni" = "nix-instantiate";
+      ni = "nix-instantiate";
+      nl = "nix-locate --minimal --top-level";
 
       # sometimes you wanna game on the side
-      "m1" = "xrandr --output DP-1 --primary";
-      "m2" = "xrandr --output DP-2 --primary";
+      m1 = "xrandr --output DP-1 --primary";
+      m2 = "xrandr --output DP-2 --primary";
 
       # ...
       ".." = "z ../";
