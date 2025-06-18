@@ -15,7 +15,7 @@
     ;
 in
   buildDotnetModule rec {
-    pname = "apotheosis";
+    pname = "Apotheosis";
     version = "2025-04-10";
 
     src = fetchFromGitLab {
@@ -66,7 +66,7 @@ in
       description = "";
       homepage = "https://gitlab.com/noqn/apotheosis";
       license = lib.licenses.agpl3Only;
-      mainProgram = "apotheosis";
+      mainProgram = "Apotheosis";
       platforms = lib.platforms.all;
     };
   }

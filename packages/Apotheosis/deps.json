@@ -65,6 +65,21 @@
     "hash": "sha256-Enknv2RsFF68lEPdrf5M+BpV1kHoLTVRApKUwuk/pj0="
   },
   {
+    "pname": "Microsoft.NETCore.App.Host.osx-arm64",
+    "version": "9.0.5",
+    "hash": "sha256-X3ibP2lvXDxOd/QxicocL8Qb1VlzzJMbKeLbmF4OTIY="
+  },
+  {
+    "pname": "Microsoft.NETCore.App.Host.osx-x64",
+    "version": "9.0.5",
+    "hash": "sha256-77d16sv3n7/wDP19XLf4y/c18tpbvwiK/LNjOqtD6Ow="
+  },
+  {
+    "pname": "Microsoft.NETCore.App.Host.win-x64",
+    "version": "9.0.5",
+    "hash": "sha256-L5s4fuWoJ4Hhxcmz0Hjx79VErJp6mfKAHHhWcJvNymo="
+  },
+  {
     "pname": "Microsoft.NETCore.Platforms",
     "version": "5.0.0",
     "hash": "sha256-LIcg1StDcQLPOABp4JRXIs837d7z0ia6+++3SF3jl1c="

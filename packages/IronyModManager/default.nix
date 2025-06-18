@@ -10,6 +10,7 @@
     };
 
     installPhase = ''
+      # it's flat
       mkdir -p $out/opt/IronyModManager
       cp -r $src/* $out/opt/IronyModManager
       chmod +x $out/opt/IronyModManager/IronyModManager
@@ -19,17 +20,41 @@
     '';
   };
 in
+  # it's delicate
   pkgs.buildFHSEnv {
     name = "IronyModManager";
 
     targetPkgs = pkgs:
       with pkgs; [
-        # .net
+        # audio
+        alsa-lib
+
+        # dotnet
         dotnetCorePackages.runtime_9_0
         icu
         libunwind
         openssl
         zlib
+
+        # fonts
+        fontconfig
+        freetype
+
+        # gui
+        atk
+        cairo
+        gdk-pixbuf
+        glib
+        gtk3
+        pango
+
+        # libs
+        glibc
+        libnotify
+        lttng-ust_2_12
+        nspr
+        nss
+        udev
 
         # x11
         xorg.libICE
@@ -46,31 +71,9 @@ in
         xorg.libXrender
         xorg.libXtst
         xorg.libxcb
-
-        # gui
-        atk
-        cairo
-        gdk-pixbuf
-        glib
-        gtk3
-        pango
-
-        # audio
-        alsa-lib
-
-        # fonts
-        fontconfig
-        freetype
-
-        # libs
-        glibc
-        libnotify
-        lttng-ust_2_12
-        nspr
-        nss
-        udev
       ];
 
+    # it lives in its own fantasy world
     runScript = "${immApp}/bin/IronyModManager";
 
     extraInstallCommands = ''
@@ -89,6 +92,6 @@ in
       description = "Mod Manager for Paradox Games";
       homepage = "https://github.com/bcssov/IronyModManager";
       license = licenses.mit;
-      platforms = platforms.linux;
+      platforms = platforms.all;
     };
   }

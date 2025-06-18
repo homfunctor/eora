@@ -8,15 +8,16 @@ PROJECT_FILE="Gui/Gui.csproj"
 OUTPUT_FILE="deps.json"
 CLONE_DIR="apotheosis-src"
 
+rm -rf ../$OUTPUT_FILE
+
 git clone "$REPO_URL" "$CLONE_DIR"
 cd "$CLONE_DIR"
 
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 dotnet restore --packages out
 
-nuget-to-json out >"../$OUTPUT_FILE"
-
-# todo: use jq to remove offending entries
+nuget-to-json out >"temp.json"
+jq 'map(select(.pname | test("Microsoft\\.(AspNetCore|NETCore)\\.App\\.Runtime") | not))' temp.json >../$OUTPUT_FILE
 
 cd ..
 rm -rf "$CLONE_DIR"
