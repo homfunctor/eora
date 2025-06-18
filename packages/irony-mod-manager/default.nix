@@ -84,7 +84,7 @@ in
         desktopName = "Irony Mod Manager";
         exec = "IronyModManager";
         icon = "stellaris";
-        name = "IronyModManager";
+        name = "irony-mod-manager";
       }}/share/applications/* $out/share/applications
     '';
 

@@ -5,7 +5,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.lualine;
+  cfg = config.opts.home.nvim.plugins.lualine;
 in {
   config = mkIf cfg.enable {
     programs.nixvim.plugins.lualine.enable = true;

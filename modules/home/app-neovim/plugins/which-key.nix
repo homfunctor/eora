@@ -5,7 +5,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.which-key;
+  cfg = config.opts.home.nvim.plugins.which-key;
 in {
   config = mkIf cfg.enable {
     programs.nixvim.plugins.which-key.enable = true;

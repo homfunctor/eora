@@ -3,36 +3,18 @@
   lib,
   ...
 }: let
-  inherit (builtins) listToAttrs;
-  inherit (lib) attrsets;
-  inherit (lib.attrsets) nameValuePair;
+  inherit (lib) genAttrs subtractLists;
 
-  enabledPlugins = [
-    "alpha"
-    "blink"
-    "colorizer"
-    "conform"
-    "lastplace"
-    "lint"
-    "lsp"
-    "lualine"
-    "mini"
-    "nvim-surround"
-    "precognition"
-    "rustaceanvim"
-    "snacks"
-    "treesitter"
-    "vimtex"
-    "which-key"
-  ];
+  # remove plugins to disable
+  enabledPlugins =
+    subtractLists [
+      "noice"
+    ]
+    config.opts.home.nvim.defaultPluginList;
 in {
-  config.opts.home.nvim = listToAttrs (
-    map (
-      pluginName:
-        nameValuePair pluginName {
-          enable = true;
-        }
-    )
-    enabledPlugins
+  config.opts.home.nvim.plugins = genAttrs enabledPlugins (
+    pluginName: {
+      enable = true;
+    }
   );
 }

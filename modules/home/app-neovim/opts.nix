@@ -3,10 +3,8 @@
   lib,
   ...
 }: let
-  inherit (builtins) listToAttrs;
-  inherit (flake.lib) mkBoolOpt;
-  inherit (lib) attrsets;
-  inherit (lib.attrsets) nameValuePair;
+  inherit (flake.lib) mkBoolOpt mkListOpt;
+  inherit (lib) genAttrs types;
 
   pluginList = [
     "alpha"
@@ -28,13 +26,13 @@
     "which-key"
   ];
 in {
-  options.opts.home.nvim = listToAttrs (
-    map (
-      pluginName:
-        nameValuePair pluginName {
-          enable = mkBoolOpt false "enable ${pluginName}";
-        }
-    )
-    pluginList
-  );
+  options.opts.home.nvim = {
+    plugins = genAttrs pluginList (
+      pluginName: {
+        enable = mkBoolOpt false "enable ${pluginName}";
+      }
+    );
+
+    defaultPluginList = mkListOpt types.str pluginList "default list of plugins to enable";
+  };
 }

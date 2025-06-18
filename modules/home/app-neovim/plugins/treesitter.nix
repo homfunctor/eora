@@ -6,7 +6,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.treesitter;
+  cfg = config.opts.home.nvim.plugins.treesitter;
 in {
   programs.nixvim = mkIf cfg.enable {
     plugins = {

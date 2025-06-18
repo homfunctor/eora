@@ -5,9 +5,7 @@
 }: let
   inherit (builtins) listToAttrs;
   inherit (config.home.opts) defaultApps;
-  inherit (lib) attrsets;
-  inherit (lib.attrsets) mapAttrsToList nameValuePair;
-  inherit (lib.lists) flatten;
+  inherit (lib) flatten mapAttrsToList nameValuePair;
 
   mimeMap = {
     archive = [

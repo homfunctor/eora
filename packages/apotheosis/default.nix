@@ -15,7 +15,7 @@
     ;
 in
   buildDotnetModule rec {
-    pname = "Apotheosis";
+    pname = "apotheosis";
     version = "2025-04-10";
 
     src = fetchFromGitLab {
@@ -56,7 +56,7 @@ in
           desktopName = "Apotheosis";
           exec = "Apotheosis";
           icon = "pillars-of-eternity";
-          name = "Apotheosis";
+          name = "apotheosis";
           type = "Application";
         }
       )

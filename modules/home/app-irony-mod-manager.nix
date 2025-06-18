@@ -1,5 +1,5 @@
 {perSystem, ...}: {
   home.packages = with perSystem.self; [
-    IronyModManager
+    irony-mod-manager
   ];
 }

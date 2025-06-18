@@ -5,7 +5,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.rustaceanvim;
+  cfg = config.opts.home.nvim.plugins.rustaceanvim;
 in {
   programs.nixvim.plugins.rustaceanvim = mkIf cfg.enable {
     enable = true;

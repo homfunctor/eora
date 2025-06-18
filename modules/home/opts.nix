@@ -3,9 +3,8 @@
   lib,
   ...
 }: let
-  inherit (builtins) listToAttrs;
   inherit (flake.lib) mkAttrOpt mkBoolOpt mkIntOpt mkStrOpt;
-  inherit (lib) nameValuePair;
+  inherit (lib) genAttrs;
 in {
   options.home.opts = {
     customUserDirs = mkAttrOpt {} "custom settings for user directories";
@@ -42,14 +41,10 @@ in {
           "Work"
         ];
       in
-        listToAttrs (
-          map (
-            folderName:
-              nameValuePair folderName {
-                enable = mkBoolOpt false "sync ${folderName}";
-              }
-          )
-          folderNames
+        genAttrs folderNames (
+          folderName: {
+            enable = mkBoolOpt false "sync ${folderName}";
+          }
         );
     };
 

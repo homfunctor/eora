@@ -6,7 +6,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.conform;
+  cfg = config.opts.home.nvim.plugins.conform;
 in {
   config = mkIf cfg.enable {
     # already installed: alejandra

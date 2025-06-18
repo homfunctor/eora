@@ -5,7 +5,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.nvim-surround;
+  cfg = config.opts.home.nvim.plugins.nvim-surround;
 in {
   config = mkIf cfg.enable {
     programs.nixvim.plugins.nvim-surround.enable = true;

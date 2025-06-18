@@ -5,7 +5,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.vimtex;
+  cfg = config.opts.home.nvim.plugins.vimtex;
 in {
   programs.nixvim = mkIf cfg.enable {
     plugins.vimtex = {

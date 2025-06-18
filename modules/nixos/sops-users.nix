@@ -4,10 +4,9 @@
   lib,
   ...
 }: let
-  inherit (builtins) listToAttrs;
   inherit (config.nixos.opts) usernames;
   inherit (flake.lib) mkSecretPath;
-  inherit (lib) mkIf nameValuePair;
+  inherit (lib) genAttrs mkIf;
 
   cfg = config.nixos.opts.sops.user;
 in {
@@ -15,14 +14,10 @@ in {
     sops.secrets.hashedPassword.neededForUsers = true;
     users = {
       mutableUsers = false;
-      users = listToAttrs (
-        map (
-          user:
-            nameValuePair user {
-              hashedPasswordFile = mkSecretPath config ["hashedPassword"];
-            }
-        )
-        usernames
+      users = genAttrs usernames (
+        _user: {
+          hashedPasswordFile = mkSecretPath config ["hashedPassword"];
+        }
       );
     };
   };

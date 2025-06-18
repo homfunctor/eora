@@ -7,7 +7,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.blink;
+  cfg = config.opts.home.nvim.plugins.blink;
 in {
   config = mkIf cfg.enable {
     home.packages = with pkgs; [

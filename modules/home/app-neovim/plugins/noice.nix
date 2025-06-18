@@ -5,7 +5,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.noice;
+  cfg = config.opts.home.nvim.plugins.noice;
 in {
   programs.nixvim.plugins = mkIf cfg.enable {
     notify.enable = true;

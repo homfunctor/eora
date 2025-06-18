@@ -7,7 +7,7 @@
 
   colors = config.lib.stylix.colors.withHashtag;
 
-  cfg = config.opts.home.nvim.mini;
+  cfg = config.opts.home.nvim.plugins.mini;
 in {
   programs.nixvim = mkIf cfg.enable {
     plugins.mini = {

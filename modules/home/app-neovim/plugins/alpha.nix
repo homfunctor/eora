@@ -5,7 +5,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.alpha;
+  cfg = config.opts.home.nvim.plugins.alpha;
 in {
   programs.nixvim.plugins.alpha = mkIf cfg.enable {
     enable = true;

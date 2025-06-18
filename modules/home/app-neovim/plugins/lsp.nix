@@ -6,7 +6,7 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.opts.home.nvim.lsp;
+  cfg = config.opts.home.nvim.plugins.lsp;
 in {
   config.programs.nixvim.plugins = mkIf cfg.enable {
     lsp-format.enable = true;
