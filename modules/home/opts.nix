@@ -7,6 +7,14 @@
   inherit (lib) genAttrs;
 in {
   options.home.opts = {
+    # finer control over which are enabled as some are very bulky
+    app-math = {
+      geogebra.enable = mkBoolOpt false "enable geogebra";
+      latex.enable = mkBoolOpt false "enable latex and tex-fmt";
+      octave.enable = mkBoolOpt false "enable octave";
+      rstudio.enable = mkBoolOpt false "enable rstudio";
+    };
+
     customUserDirs = mkAttrOpt {} "custom settings for user directories";
     defaultApps = mkAttrOpt {} "default applications";
 

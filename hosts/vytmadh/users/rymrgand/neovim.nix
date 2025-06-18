@@ -3,17 +3,33 @@
   lib,
   ...
 }: let
-  inherit (lib) genAttrs subtractLists;
+  inherit (lib) genAttrs;
 
-  # remove plugins to disable
-  enabledPlugins =
-    subtractLists [
-      "noice"
-    ]
-    config.opts.home.nvim.defaultPluginList;
+  enabledPlugins = [
+    "blink"
+    "colorizer"
+    "conform"
+    "grug-far"
+    "illuminate"
+    "lint"
+    "lsp"
+    "lualine"
+    "mini"
+    "mini-indent"
+    "mini-notify"
+    "navic"
+    "nvim-surround"
+    "precognition"
+    "rustaceanvim"
+    "smartcolumn"
+    "treesitter"
+    "vimtex"
+    "which-key"
+    "yazi"
+  ];
 in {
   config.opts.home.nvim.plugins = genAttrs enabledPlugins (
-    pluginName: {
+    _: {
       enable = true;
     }
   );

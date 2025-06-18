@@ -18,15 +18,14 @@ in {
         nixvimInjections = true;
 
         settings = {
-          indent.enable = true;
           highlight = {
             enable = true;
             additional_vim_regex_highlighting = true;
             disable = [
-              "latex"
-              "markdown"
+              "latex" # vimtex takes over here
             ];
           };
+          indent.enable = true;
         };
       };
 
@@ -41,16 +40,5 @@ in {
         };
       };
     };
-
-    keymaps = [
-      {
-        mode = "n";
-        key = "<leader>ut";
-        action = "<cmd>TSContextToggle<cr>";
-        options = {
-          desc = "Treesitter Context toggle";
-        };
-      }
-    ];
   };
 }

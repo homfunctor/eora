@@ -28,8 +28,6 @@ in {
     mission-center
     nemo-with-extensions
     networkmanagerapplet
-    nix-search
-    nurl
     p7zip
     papers
     pix

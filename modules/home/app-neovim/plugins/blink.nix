@@ -64,66 +64,46 @@ in {
             };
           };
 
-          cmdline.keymap = {
-            "<C-CR>" = [
-              "select_and_accept"
-              "fallback"
-            ];
-            "<C-u>" = [
-              "scroll_documentation_up"
-              "fallback"
-            ];
-            "<C-d>" = [
-              "scroll_documentation_down"
-              "fallback"
-            ];
-            "<C-n>" = [
-              "select_next"
-              "fallback"
-            ];
-            "<C-p>" = [
-              "select_prev"
-              "fallback"
-            ];
-            "<A-q>" = [
-              "hide"
-              "fallback"
-            ];
-            "<C-j>" = [
-              "snippet_forward"
-              "fallback"
-            ];
-            "<C-k>" = [
-              "snippet_backward"
-              "fallback"
-            ];
-          };
+          cmdline = {
+            completion = {
+              list.selection.preselect = false;
+              menu.auto_show = true;
+            };
 
-          keymap = {
-            "<C-CR>" = [
-              "select_and_accept"
-              "fallback"
-            ];
-            "<C-b>" = [
-              "scroll_documentation_up"
-              "fallback"
-            ];
-            "<C-f>" = [
-              "scroll_documentation_down"
-              "fallback"
-            ];
-            "<C-n>" = [
-              "select_next"
-              "fallback"
-            ];
-            "<C-p>" = [
-              "select_prev"
-              "fallback"
-            ];
-            "<A-q>" = [
-              "hide"
-              "fallback"
-            ];
+            keymap = {
+              "<C-CR>" = [
+                "select_and_accept"
+                "fallback"
+              ];
+              "<C-u>" = [
+                "scroll_documentation_up"
+                "fallback"
+              ];
+              "<C-d>" = [
+                "scroll_documentation_down"
+                "fallback"
+              ];
+              "<C-n>" = [
+                "select_next"
+                "fallback"
+              ];
+              "<C-p>" = [
+                "select_prev"
+                "fallback"
+              ];
+              "<A-q>" = [
+                "hide"
+                "fallback"
+              ];
+              "<C-j>" = [
+                "snippet_forward"
+                "fallback"
+              ];
+              "<C-k>" = [
+                "snippet_backward"
+                "fallback"
+              ];
+            };
           };
 
           completion = {
@@ -169,6 +149,33 @@ in {
             prebuilt_binaries.download = false;
           };
 
+          keymap = {
+            "<C-CR>" = [
+              "select_and_accept"
+              "fallback"
+            ];
+            "<C-b>" = [
+              "scroll_documentation_up"
+              "fallback"
+            ];
+            "<C-f>" = [
+              "scroll_documentation_down"
+              "fallback"
+            ];
+            "<C-n>" = [
+              "select_next"
+              "fallback"
+            ];
+            "<C-p>" = [
+              "select_prev"
+              "fallback"
+            ];
+            "<A-q>" = [
+              "hide"
+              "fallback"
+            ];
+          };
+
           signature = {
             enabled = true;
             window.border = "single";
@@ -179,35 +186,16 @@ in {
           sources = {
             default = [
               "buffer"
-              "lsp"
-              "path"
-              "snippets"
               "dictionary"
               "emoji"
-              "spell"
+              "lsp"
+              "path"
               "ripgrep"
+              "snippets"
+              "spell"
             ];
 
             providers = {
-              ripgrep = {
-                name = "Ripgrep";
-                module = "blink-ripgrep";
-                score_offset = 100;
-                opts = {
-                  prefix_min_len = 3;
-                  context_size = 5;
-                  max_filesize = "1M";
-                  project_root_marker = ".git";
-                  project_root_fallback = true;
-                  search_casing = "--ignore-case";
-                  additional_rg_options = {};
-                  fallback_to_regex_highlighting = true;
-                  ignore_paths = {};
-                  additional_paths = {};
-                  debug = false;
-                };
-              };
-
               dictionary = {
                 name = "Dict";
                 module = "blink-cmp-dictionary";
@@ -221,6 +209,25 @@ in {
               };
 
               lsp.score_offset = 4;
+
+              ripgrep = {
+                name = "Ripgrep";
+                module = "blink-ripgrep";
+                score_offset = 100;
+                opts = {
+                  additional_paths = {};
+                  additional_rg_options = {};
+                  context_size = 5;
+                  debug = false;
+                  fallback_to_regex_highlighting = true;
+                  ignore_paths = {};
+                  max_filesize = "1M";
+                  prefix_min_len = 3;
+                  project_root_fallback = true;
+                  project_root_marker = ".git";
+                  search_casing = "--ignore-case";
+                };
+              };
 
               spell = {
                 name = "Spell";

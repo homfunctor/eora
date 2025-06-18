@@ -6,7 +6,7 @@
     app-glance
     app-inkscape
     app-librewolf
-    app-mathtools
+    app-math
     app-nix-index
     app-onlyoffice
     app-pika

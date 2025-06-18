@@ -25,7 +25,8 @@
 
     lix-module = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz";
+      url = ''
+        https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz'';
     };
 
     nixcord.url = "github:kaylorben/nixcord";

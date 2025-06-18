@@ -2,7 +2,7 @@
   config.home.opts.defaultApps = {
     archive = ["org.gnome.FileRoller.desktop"];
     audio = ["vlc.desktop"];
-    browser = ["zen-beta.desktop"];
+    browser = ["librewolf.desktop"];
     directory = ["nemo.desktop"];
     image = ["pix.desktop"];
     office = ["onlyoffice-desktopeditors.desktop"];

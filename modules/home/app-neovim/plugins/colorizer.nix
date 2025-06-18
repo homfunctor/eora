@@ -1,13 +1,10 @@
 {
   config,
-  lib,
+  # lib,
   ...
 }: let
-  inherit (lib) mkIf;
-
+  # inherit (lib) mkIf;
   cfg = config.opts.home.nvim.plugins.colorizer;
 in {
-  config = mkIf cfg.enable {
-    programs.nixvim.plugins.colorizer.enable = true;
-  };
+  programs.nixvim.plugins.colorizer.enable = cfg.enable;
 }

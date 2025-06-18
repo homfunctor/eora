@@ -17,18 +17,22 @@ in {
         animate.enabled = true;
 
         indent = {
-          indent.enabled = true;
+          enabled = true;
           chunk = {
             enabled = true;
-            only_current = true;
             char = {
               arrow = "─";
               corner_top = "┌";
               corner_bottom = "└";
             };
             hl = "SnacksIndentScope";
+            only_current = true;
           };
         };
+
+        input.enabled = true;
+
+        scroll.enabled = true;
       };
     };
 

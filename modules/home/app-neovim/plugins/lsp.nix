@@ -8,8 +8,8 @@
 
   cfg = config.opts.home.nvim.plugins.lsp;
 in {
-  config.programs.nixvim.plugins = mkIf cfg.enable {
-    lsp-format.enable = true;
+  programs.nixvim.plugins = mkIf cfg.enable {
+    # lsp-format.enable = true;
 
     lsp = {
       enable = true;
@@ -36,7 +36,6 @@ in {
           };
         };
         statix.enable = true;
-        texlab.enable = true;
         typos_lsp = {
           enable = true;
           extraOptions.init_options.diagnosticSeverity = "Hint";

@@ -20,6 +20,10 @@
 
   config = {
     home.opts = {
+      app-math = {
+        latex.enable = true;
+      };
+
       customUserDirs = {
         music = "/vault/Music";
         pictures = "/vault/Pictures";

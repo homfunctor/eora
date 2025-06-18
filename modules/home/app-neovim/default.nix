@@ -1,4 +1,11 @@
-# todo: refactor once again
+# todo: check plugins work correctly
+#   transparency in alacritty?
+#   thinner smartcolumn?
+#   vimtex settings
+#   check rymrgand setup for performance
+#   keybinds, again
+#   snacks settings
+#   check how blink+conform works without lsp-format
 {
   flake,
   inputs,

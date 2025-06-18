@@ -12,9 +12,15 @@
         };
       };
 
-      gtk3.extraConfig.gtk-recent-files-enabled = false;
+      gtk3.extraConfig = {
+        gtk-application-prefer-dark-theme = true;
+        gtk-recent-files-enabled = false;
+      };
 
-      gtk4.extraConfig.gtk-recent-files-enabled = false;
+      gtk4.extraConfig = {
+        gtk-application-prefer-dark-theme = true;
+        gtk-recent-files-enabled = false;
+      };
     };
 
     stylix.targets.gtk = {

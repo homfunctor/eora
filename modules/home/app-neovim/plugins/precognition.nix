@@ -1,18 +1,10 @@
 {
   config,
-  lib,
-  pkgs,
+  # lib,
   ...
 }: let
-  inherit (lib) mkIf;
-
+  # inherit (lib) mkIf;
   cfg = config.opts.home.nvim.plugins.precognition;
 in {
-  programs.nixvim = mkIf cfg.enable {
-    extraPlugins = with pkgs.vimPlugins; [precognition-nvim];
-
-    extraConfigLua = ''
-      require('precognition').setup({})
-    '';
-  };
+  programs.nixvim.plugins.precognition.enable = cfg.enable;
 }

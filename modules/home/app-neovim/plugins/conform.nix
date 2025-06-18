@@ -17,49 +17,35 @@ in {
       stylua
     ];
 
-    programs = {
-      nixvim.plugins.conform-nvim = {
-        enable = true;
+    programs.nixvim.plugins.conform-nvim = {
+      enable = true;
 
-        settings = {
-          format_on_save = {
-            lspFallback = true;
-            timeoutMs = 500;
-          };
+      settings = {
+        default_format_opts.lsp_format = "fallback";
 
-          formatters_by_ft = {
-            "_" = [
-              "squeeze_blanks"
-              "trim_whitespace"
-              "trim_newlines"
-            ];
-            bash = ["shfmt"];
-            fish = ["fish_indent"];
-            json = ["jq"];
-            lua = ["stylua"];
-            nix = ["alejandra"];
-            python = ["black"];
-            rust = ["rustaceanvim"];
-            tex = ["tex-fmt"];
-          };
-
-          notify_on_error = true;
+        format_on_save = {
+          lspFallback = true;
+          timeoutMs = 500;
         };
-      };
 
-      tex-fmt = {
-        enable = true;
-        settings = {
-          check = false;
-          lists = [];
-          print = false;
-          stdin = false;
-          tabchar = "space";
-          tabsize = 2;
-          verbosity = "warn";
-          wrap = true;
-          wraplen = 80;
+        formatters_by_ft = {
+          "_" = [
+            "squeeze_blanks"
+            "trim_whitespace"
+            "trim_newlines"
+          ];
+          bash = ["shfmt"];
+          fish = ["fish_indent"];
+          json = ["jq"];
+          lua = ["stylua"];
+          nix = ["alejandra"];
+          python = ["black"];
+          rust = ["rustaceanvim"];
+          xml = ["xmlformat"];
+          yaml = ["yamlfmt"];
         };
+
+        notify_on_error = true;
       };
     };
   };

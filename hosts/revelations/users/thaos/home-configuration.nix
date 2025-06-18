@@ -16,6 +16,10 @@
 
   config = {
     home.opts = {
+      app-math = {
+        latex.enable = true;
+      };
+
       hostname = "revelations";
 
       rofi.columns = 10;

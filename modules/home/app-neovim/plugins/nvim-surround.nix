@@ -1,13 +1,10 @@
 {
   config,
-  lib,
+  # lib,
   ...
 }: let
-  inherit (lib) mkIf;
-
+  # inherit (lib) mkIf;
   cfg = config.opts.home.nvim.plugins.nvim-surround;
 in {
-  config = mkIf cfg.enable {
-    programs.nixvim.plugins.nvim-surround.enable = true;
-  };
+  programs.nixvim.plugins.nvim-surround.enable = cfg.enable;
 }

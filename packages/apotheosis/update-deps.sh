@@ -1,5 +1,5 @@
 #!/usr/bin/env nix-shell
-#!nix-shell -i bash -p git dotnet-sdk_9 nuget-to-json jq
+#!nix-shell -i bash -p dotnet-sdk_9 git jq nuget-to-json
 
 set -euo pipefail
 
@@ -17,6 +17,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 dotnet restore --packages out
 
 nuget-to-json out >"temp.json"
+# tacky but anything better is beyond my skill
 jq 'map(select(.pname | test("Microsoft\\.(AspNetCore|NETCore)\\.App\\.Runtime") | not))' temp.json >../$OUTPUT_FILE
 
 cd ..
