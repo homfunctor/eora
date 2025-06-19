@@ -9,9 +9,9 @@
   inherit (lib) mkForce;
 
   wallDir = "${inputs.sapadal}/assets";
-  wall1 = "pillars_desert.png";
-  wall2 = "rivendell.png";
-  wall3 = "allgods.png";
+  wall1 = "winter1.png";
+  wall2 = "winter2.png";
+  wall3 = "winter3.png";
 in {
   config = {
     # to deal with primary monitor being DP-2, not DP-1

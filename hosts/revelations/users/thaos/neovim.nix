@@ -18,7 +18,6 @@
     "mini"
     "navic"
     "nvim-surround"
-    "persistence"
     "precognition"
     "rustaceanvim"
     "smartcolumn"

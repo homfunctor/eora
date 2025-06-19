@@ -43,6 +43,7 @@ in
     ];
     runtimeDeps = buildInputs;
 
+    # i have x11 setup as backup, but it still panics without setting this
     gappsWrapperArgs = [
       "--set GDK_BACKEND x11"
       "--set SDL_VIDEODRIVER x11"

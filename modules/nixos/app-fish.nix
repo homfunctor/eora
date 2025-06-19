@@ -58,7 +58,7 @@
       eza = "eza -G -x --color=always --icons=always";
       gita = "git add .";
       gitc = "git commit -m";
-      gitlol = "gita && gitc \"mathematicians don't know how to program\" && gitps";
+      gitlol = "gita && gitc \"ok\" && gitps";
       gitpl = "git pull";
       gitps = "git push";
       grep = "rg";

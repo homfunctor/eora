@@ -21,7 +21,6 @@
     "mini-notify"
     "navic"
     "nvim-surround"
-    "persistence"
     "precognition"
     "rustaceanvim"
     "smartcolumn"

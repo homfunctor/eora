@@ -14,7 +14,6 @@
     ./mini.nix
     ./navic.nix
     ./nvim-surround.nix
-    ./persistence.nix
     ./precognition.nix
     ./rustaceanvim.nix
     ./smartcolumn.nix

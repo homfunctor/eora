@@ -16,9 +16,9 @@ cd "$CLONE_DIR"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 dotnet restore --packages out
 
-nuget-to-json out >"temp.json"
+nuget-to-json out > "temp.json"
 # tacky but anything better is beyond my skill
-jq 'map(select(.pname | test("Microsoft\\.(AspNetCore|NETCore)\\.App\\.Runtime") | not))' temp.json >../$OUTPUT_FILE
+jq 'map(select(.pname | test("Microsoft\\.(AspNetCore|NETCore)\\.App\\.Runtime") | not))' temp.json > ../$OUTPUT_FILE
 
 cd ..
 rm -rf "$CLONE_DIR"

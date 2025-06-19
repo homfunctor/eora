@@ -5,7 +5,7 @@
 
     src = pkgs.fetchzip {
       url = "https://github.com/bcssov/IronyModManager/releases/download/v${version}/linux-x64.zip";
-      hash = "sha256-KkEPlOyEt3QV6dAVj71X8oKl4UB4qduyOpOIiJe8tAM=";
+      hash = "sha256-cpdudJ7LYk+T9CVTWeZDg30hm8BvGBmdDKBbHJa4XIo=";
       stripRoot = false;
     };
 

@@ -159,6 +159,10 @@ in {
       "stayfocused, class:^(pinentry-)"
       "stayfocused, class:^(polkit-), title:(Authenticate)"
       "stayfocused, class:(gcr-prompter)"
+
+      # file picker
+      "float, class:^(xdg-desktop-portal-gtk), title:(All Files)"
+      "stayfocused, class:^(xdg-desktop-portal-gtk), title:(All Files)"
     ];
 
     xwayland = {
