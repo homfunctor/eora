@@ -1,7 +1,7 @@
 {pkgs}: let
   immApp = pkgs.stdenv.mkDerivation rec {
     pname = "irony-mod-manager";
-    version = "1.26.246";
+    version = "1.26.247";
 
     src = pkgs.fetchzip {
       url = "https://github.com/bcssov/IronyModManager/releases/download/v${version}/linux-x64.zip";
@@ -30,7 +30,7 @@ in
         alsa-lib
 
         # dotnet
-        dotnetCorePackages.runtime_9_0
+        dotnetCorePackages.runtime_8_0
         icu
         libunwind
         openssl
