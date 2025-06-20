@@ -1,12 +1,13 @@
-# todo: not working on vytmadh???
 {
   config,
-  perSystem,
+  # perSystem,
+  pkgs,
   ...
 }: let
   inherit (config.home.opts) hyprpaperOpts;
 
-  hyprpaperPkg = perSystem.hyprpaper.default;
+  # hyprpaperPkg = perSystem.hyprpaper.default;
+  hyprpaperPkg = pkgs.hyprpaper;
 in {
   services.hyprpaper = {
     enable = true;
