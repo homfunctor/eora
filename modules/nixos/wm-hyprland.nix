@@ -1,4 +1,3 @@
-# todo: fix keyring not unlocking
 {
   config,
   lib,
