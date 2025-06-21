@@ -13,6 +13,7 @@
 
     # work
     ./hardware.nix
+    ./hyprlock.nix
     type-work
 
     # personal

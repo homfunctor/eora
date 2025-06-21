@@ -2,10 +2,11 @@
   config,
   inputs,
   lib,
+  pkgs,
   ...
 }: let
   inherit (config.lib.stylix) colors;
-  inherit (lib) mkForce;
+  inherit (lib) getExe mkForce;
 
   wallDir = "${inputs.sapadal}/assets";
   wall1 = "base2.png";
@@ -20,6 +21,12 @@ in {
 
     # wallpaper settings
     home.opts = {
+      hyprlandEnv = {
+        browser = "${getExe pkgs.librewolf}";
+        shell = "${getExe pkgs.fish}";
+        terminal = "${getExe pkgs.alacritty}";
+      };
+
       hyprpaperOpts.settings = {
         ipc = "off";
         splash = false;

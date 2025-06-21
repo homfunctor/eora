@@ -8,35 +8,41 @@
 
   cfg = config.opts.home.nvim.plugins.treesitter;
 in {
-  programs.nixvim = mkIf cfg.enable {
-    plugins = {
-      treesitter = {
-        enable = true;
+  config = mkIf cfg.enable {
+    home.packages = with pkgs; [
+      tree-sitter
+    ];
 
-        folding = true;
-        grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
-        nixvimInjections = true;
+    programs.nixvim = {
+      plugins = {
+        treesitter = {
+          enable = true;
 
-        settings = {
-          highlight = {
-            enable = true;
-            additional_vim_regex_highlighting = true;
-            disable = [
-              "latex" # vimtex takes over here
-            ];
+          folding = true;
+          grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
+          nixvimInjections = true;
+
+          settings = {
+            highlight = {
+              enable = true;
+              additional_vim_regex_highlighting = true;
+              disable = [
+                "latex" # vimtex takes over here
+              ];
+            };
+            indent.enable = true;
           };
-          indent.enable = true;
         };
-      };
 
-      treesitter-context = {
-        enable = true;
+        treesitter-context = {
+          enable = true;
 
-        settings = {
-          max_lines = 4;
-          min_window_height = 40;
-          multiwindow = true;
-          separator = "-";
+          settings = {
+            max_lines = 4;
+            min_window_height = 40;
+            multiwindow = true;
+            separator = "-";
+          };
         };
       };
     };

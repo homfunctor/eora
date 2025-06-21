@@ -15,6 +15,8 @@ in {
       jq
       shfmt
       stylua
+      xmlformat
+      yamlfmt
     ];
 
     programs.nixvim.plugins.conform-nvim = {
@@ -40,7 +42,7 @@ in {
           lua = ["stylua"];
           nix = ["alejandra"];
           python = ["black"];
-          rust = ["rustaceanvim"];
+          rust = ["rustfmt"];
           xml = ["xmlformat"];
           yaml = ["yamlfmt"];
         };

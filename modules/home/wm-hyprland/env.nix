@@ -1,10 +1,5 @@
-{
-  config,
-  lib,
-  pkgs,
-  ...
-}: let
-  inherit (lib) getExe;
+{config, ...}: let
+  inherit (config.home.opts.hyprlandEnv) browser shell terminal;
 in {
   xdg.configFile = {
     "electron-flags.conf".text = ''
@@ -13,7 +8,7 @@ in {
     '';
 
     "uwsm/env".text = ''
-      export BROWSER=vivaldi
+      export BROWSER=${browser}
       export _JAVA_AWT_WM_NONREPARENTING=1
       export CLUTTER_BACKEND=wayland
       export DIRENV_LOG_FORMAT=1
@@ -33,10 +28,11 @@ in {
       export QT_IM_MODULE=wayland
       export QT_QPA_PLATFORM=wayland;xcb
       export QT_QPA_PLATFORMTHEME=qt5ct
+      export QT_SCALE_FACTOR=1
       export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
       export SDL_VIDEODRIVER=wayland,x11
-      export SHELL=${getExe pkgs.fish}
-      export TERMINAL=${getExe pkgs.alacritty}
+      export SHELL=${shell}
+      export TERMINAL=${terminal}
       export WLR_BACKEND=wayland
       export WLR_DRM_NO_ATOMIC=1
       export WLR_NO_HARDWARE_CURSORS=1

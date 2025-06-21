@@ -9,8 +9,6 @@
   cfg = config.opts.home.nvim.plugins.lsp;
 in {
   programs.nixvim.plugins = mkIf cfg.enable {
-    # lsp-format.enable = true;
-
     lsp = {
       enable = true;
 

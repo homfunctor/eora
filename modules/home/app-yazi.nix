@@ -1,11 +1,14 @@
-# todo: configure (make third column bigger)
 {
   programs.yazi = {
     enable = true;
     enableFishIntegration = true;
     settings.manager = {
+      ratio = [1 3 4];
       show_hidden = true;
+      show_symlink = true;
+      sort_by = "alphabetical";
       sort_dir_first = true;
+      sort_sensitive = false;
     };
   };
 }

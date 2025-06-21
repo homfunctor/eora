@@ -1,17 +1,21 @@
-# todo: make per-monitor setup for revelations:
-#   [blank screen] [lock screen] [blank screen]
 {
   config,
   inputs,
   lib,
+  osConfig,
   ...
 }: let
   inherit (config.lib.stylix) colors;
+  inherit
+    (osConfig.nixos.opts.hyprlockOpts)
+    clockLabel
+    dateLabel
+    inputLabel
+    ;
   inherit (lib) mkForce;
 
   bg = "${inputs.sapadal}/assets/base.png";
 in {
-  # todo: after changing sdg, try with auto-theme
   # force manual theming
   stylix.targets.hyprlock.enable = mkForce false;
 
@@ -35,6 +39,7 @@ in {
 
       input-field = with colors; [
         {
+          inherit (inputLabel) monitor;
           capslock_color = -1;
           dots_spacing = 0.2;
           dots_center = true;
@@ -42,15 +47,15 @@ in {
           fade_on_empty = true;
           fade_timeout = 1000;
           fail_transition = 300;
-          font_color = "rgb(${base0D})";
+          font_color = "rgb(${base05})";
           halign = "center";
           hide_input = false;
-          inner_color = "rgb(${base00})";
+          inner_color = "rgb(${base01})";
           invert_numlock = false;
-          outer_color = "rgb(${base09})";
+          outer_color = "rgb(${base07})";
           outline_thickness = 5;
           placeholder_text = "<i>🔐input password</i>";
-          position = "0, -400";
+          position = "0, -300";
           rounding = 0;
           size = "300, 60";
           swap_font_color = false;
@@ -60,25 +65,25 @@ in {
 
       label = with colors; [
         {
-          monitor = "";
+          inherit (clockLabel) monitor;
           text = ''
             cmd[update:1000] echo -e "$(date +"%A, %B %d")"
           '';
-          color = "rgb(${base0D})";
+          color = "rgb(${base04})";
           font_size = 28;
-          position = "90, 490";
+          position = "90, 450";
           halign = "center";
           valign = "center";
         }
 
         {
-          monitor = "";
+          inherit (dateLabel) monitor;
           text = ''
             cmd[update:1000] echo "<span>$(date +"%I:%M %P")</span>"
           '';
-          color = "rgb(${base0D})";
+          color = "rgb(${base04})";
           font_size = 160;
-          position = "90, 370";
+          position = "90, 320";
           halign = "center";
           valign = "center";
         }

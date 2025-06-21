@@ -6,7 +6,7 @@
   ...
 }: let
   inherit (config.lib.stylix) colors;
-  inherit (lib) mkForce;
+  inherit (lib) getExe mkForce;
 
   wallDir = "${inputs.sapadal}/assets";
   wall1 = "winter1.png";
@@ -25,6 +25,12 @@ in {
 
     # wallpaper settings
     home.opts = {
+      hyprlandEnv = {
+        browser = "${getExe pkgs.vivaldi}";
+        shell = "${getExe pkgs.fish}";
+        terminal = "${getExe pkgs.alacritty}";
+      };
+
       hyprpaperOpts.settings = {
         ipc = "off";
         splash = false;
@@ -45,12 +51,12 @@ in {
       # hyprland settings specific to personal computer
       hyprlandOpts = {
         general = with colors; {
-          "col.active_border" = mkForce "rgb(${base07})";
-          "col.inactive_border" = mkForce "rgb(${base00})";
+          "col.active_border" = mkForce "rgb(${base0F})";
+          "col.inactive_border" = mkForce "rgb(${base03})";
 
           border_size = 5;
-          gaps_in = 7;
-          gaps_out = 11;
+          gaps_in = 5;
+          gaps_out = 15;
           layout = "dwindle";
           resize_on_border = true;
         };

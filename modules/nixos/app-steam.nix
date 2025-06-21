@@ -3,10 +3,7 @@
 # stellaris
 # setting x11 as backup seems to have fixed crash on startup
 #   gamemoderun %command%
-{
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   imports = with inputs.nix-gaming.nixosModules; [
     pipewireLowLatency
     platformOptimizations

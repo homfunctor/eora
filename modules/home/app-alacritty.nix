@@ -13,6 +13,11 @@
       env.TERM = "xterm-256color";
 
       terminal.shell = "${pkgs.fish}/bin/fish";
+
+      window.padding = {
+        x = 16;
+        y = 16;
+      };
     };
   };
 }

@@ -1,7 +1,4 @@
-{
-  flake,
-  ...
-}: {
+{flake, ...}: {
   imports = [
     ./binds.nix
     ./dconf.nix

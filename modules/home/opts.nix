@@ -20,6 +20,7 @@ in {
 
     hostname = mkStrOpt "" "hostname";
 
+    hyprlandEnv = mkAttrOpt {} "various hyprland environment settings";
     hyprlandOpts = mkAttrOpt {} "user options for hyprland";
     hyprpanelLayout = mkAttrOpt {} "user options for hyprpanel layout";
     hyprpanelScale = mkIntOpt 75 "scaling factor for hyprpanel";

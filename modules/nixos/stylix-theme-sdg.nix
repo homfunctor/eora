@@ -1,4 +1,3 @@
-# todo: mess around with this again
 {config, ...}: {
   config.stylix.base16Scheme = {
     base00 = "#000000";

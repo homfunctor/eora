@@ -4,8 +4,8 @@
   ...
 }: {
   config.stylix.cursor = {
-    name = "Nordzy-cursors";
+    name = "Nordzy-cursors-white";
     package = pkgs.nordzy-cursor-theme;
-    size = 24;
+    size = 32;
   };
 }

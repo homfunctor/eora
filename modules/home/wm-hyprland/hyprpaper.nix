@@ -1,7 +1,4 @@
-{
-  config,
-  ...
-}: let
+{config, ...}: let
   inherit (config.home.opts) hyprpaperOpts;
 in {
   services.hyprpaper = {

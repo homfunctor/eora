@@ -10,6 +10,8 @@ in {
 
     hostname = mkStrOpt "" "host name for configuration";
 
+    hyprlockOpts = mkAttrOpt {} "hyprlock settings";
+
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote?";
 
     sops.user.enable = mkBoolOpt false "should sops handle user password?";

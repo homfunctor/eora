@@ -22,31 +22,21 @@ in {
       first_launch_animation = true;
 
       animation = [
-        "windowsIn, 1, 3, easeInOutSine, popin"
-        "windowsOut, 1, 3, easeInOutSine, popin"
-        "border, 1, 3, easeInOutSine"
-        "borderangle, 1, 30, easeInOutSine, loop"
-        "workspacesIn, 1, 3, easeInOutSine, slidefade"
-        "workspacesOut, 1, 3, easeInOutSine, slidefade"
-        "specialWorkspaceIn, 1, 3, easeInOutSine, slidevert"
-        "specialWorkspaceOut, 1, 3, easeInOutSine, slidevert"
-        "layersIn, 1, 3, easeInOutSine, fade"
-        "layersOut, 1, 3, easeInOutSine, fade"
+        "windows, 1, 6, wind, slide"
+        "windowsIn, 1, 6, winIn, slide"
+        "windowsOut, 1, 5, winOut, slide"
+        "windowsMove, 1, 5, wind, slide"
+        "border, 1, 1, liner"
+        "borderangle, 1, 30, liner, loop"
+        "fade, 1, 10, default"
+        "workspaces, 1, 5, wind"
       ];
 
       bezier = [
         "wind, 0.05, 0.9, 0.1, 1.05"
         "winIn, 0.1, 1.1, 0.1, 1.1"
         "winOut, 0.3, -0.3, 0, 1"
-        "linear, 1, 1, 1, 1"
-        "Cubic, 0.1, 0.1, 0.1, 1"
-        "overshot, 0.05, 0.9, 0.1, 1.1"
-        "ease-in-out, 0.17, 0.67, 0.83, 0.67"
-        "ease-in, 0.17, 0.67, 0.83, 0.67"
-        "ease-out, 0.42, 0, 1, 1"
-        "easeInOutSine, 0.37, 0, 0.63, 1"
-        "easeInSine, 0.12, 0, 0.39, 0"
-        "easeOutSine, 0.61, 1, 0.88, 1"
+        "liner, 1, 1, 1, 1"
       ];
     };
 
@@ -99,8 +89,6 @@ in {
       vfr = 1;
       vrr = 1;
     };
-
-    # permission = [];
 
     windowrule = [
     ];
@@ -163,6 +151,9 @@ in {
       # file picker
       "float, class:^(xdg-desktop-portal-gtk), title:(All Files)"
       "stayfocused, class:^(xdg-desktop-portal-gtk), title:(All Files)"
+
+      # protonplus
+      "float,class:^(com.vysp3r.ProtonPlus), title:(ProtonPlus)"
     ];
 
     xwayland = {
