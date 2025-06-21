@@ -60,15 +60,17 @@
       url = "github:numtide/treefmt-nix";
     };
 
-    # secrets and privacy for the paranoid
-    sapadal = {
-      inputs = {
-        blueprint.follows = "blueprint";
-        nixpkgs.follows = "nixpkgs";
-        sops-nix.follows = "sops-nix";
-        treefmt-nix.follows = "treefmt-nix";
-      };
-      url = "git+ssh://git@github.com/homfunctor/sapadal?shallow=1?ref=main";
+    # desktop environment
+    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
+
+    hyprsysteminfo = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:hyprwm/hyprsysteminfo";
+    };
+
+    quickshell = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
     };
 
     # extras
@@ -79,59 +81,15 @@
       url = "github:fufexan/nix-gaming";
     };
 
-    # hyprland
-    hypridle = {
+    # secrets and privacy for the paranoid
+    sapadal = {
       inputs = {
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
+        blueprint.follows = "blueprint";
+        nixpkgs.follows = "nixpkgs";
+        sops-nix.follows = "sops-nix";
+        treefmt-nix.follows = "treefmt-nix";
       };
-      url = "github:hyprwm/hypridle";
-    };
-
-    hyprland.url = "github:hyprwm/Hyprland";
-
-    hyprlock = {
-      inputs = {
-        hyprgraphics.follows = "hyprland/hyprgraphics";
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-      };
-      url = "github:hyprwm/hyprlock";
-    };
-
-    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
-
-    hyprpaper = {
-      inputs = {
-        hyprgraphics.follows = "hyprland/hyprgraphics";
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-      };
-      url = "github:hyprwm/hyprpaper";
-    };
-
-    hyprpolkitagent = {
-      inputs = {
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-      };
-      url = "github:hyprwm/hyprpolkitagent";
-    };
-
-    hyprsysteminfo = {
-      inputs = {
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-      };
-      url = "github:hyprwm/hyprsysteminfo";
-    };
-
-    quickshell = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+      url = "git+ssh://git@github.com/homfunctor/sapadal?shallow=1?ref=main";
     };
 
     # theming

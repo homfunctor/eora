@@ -1,10 +1,7 @@
 {
   flake,
-  perSystem,
   ...
-}: let
-  hyprlandPkg = perSystem.hyprland.hyprland;
-in {
+}: {
   imports = [
     ./binds.nix
     ./dconf.nix
@@ -22,7 +19,6 @@ in {
   wayland = {
     windowManager.hyprland = {
       enable = true;
-      package = hyprlandPkg;
       xwayland.enable = true;
 
       settings.exec-once = [

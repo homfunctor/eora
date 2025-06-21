@@ -4,6 +4,6 @@
     app-proton-ge
     app-steam
     chaotic-ananicy
-    # chaotic-mesa
+    chaotic-mesa
   ];
 }

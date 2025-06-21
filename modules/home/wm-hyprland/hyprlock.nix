@@ -4,14 +4,12 @@
   config,
   inputs,
   lib,
-  perSystem,
   ...
 }: let
   inherit (config.lib.stylix) colors;
   inherit (lib) mkForce;
 
   bg = "${inputs.sapadal}/assets/base.png";
-  hyprlockPkg = perSystem.hyprlock.hyprlock;
 in {
   # todo: after changing sdg, try with auto-theme
   # force manual theming
@@ -19,7 +17,6 @@ in {
 
   programs.hyprlock = {
     enable = true;
-    package = hyprlockPkg;
 
     sourceFirst = true;
     settings = {

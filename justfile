@@ -19,15 +19,16 @@ upflake:
 
 # flake check
 chflake:
-    nix flake check 
+    nix flake check
 
 # --dry-activate
 upcheck:
-    sudo nixos-rebuild dry-activate --flake . --log-format internal-json  |& nom --json 
+    sudo nixos-rebuild dry-activate --flake .  --log-format internal-json  |& nom --json
+    yes | rip result
 
 # --dry-activate  --show-trace
 uptrace:
-    sudo nixos-rebuild dry-activate --flake . --log-format internal-json  --show-trace |& nom --json 
+    sudo nixos-rebuild dry-activate --flake . --log-format internal-json  --show-trace |& nom --json
 
 # update to current flake config without going online
 offlate:

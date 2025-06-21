@@ -2,7 +2,7 @@
 {flake, ...}: {
   imports = with flake.modules.nixos; [
     app-nix-ld
-    # chaotic-kernel
+    chaotic-kernel
     opt-keyring
     wm-hyprland
   ];

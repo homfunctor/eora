@@ -2,19 +2,15 @@
 {
   config,
   lib,
-  perSystem,
   pkgs,
   ...
 }: let
-  hypridlePkg = perSystem.hypridle.hypridle;
   lock = "${pkgs.systemd}/bin/loginctl lock-session";
   lockPkg = lib.getExe config.programs.hyprlock.package;
   timeout = 1200;
 in {
   services.hypridle = {
     enable = true;
-
-    package = hypridlePkg;
 
     settings = {
       general = {

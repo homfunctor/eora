@@ -1,10 +1,10 @@
 # notes on launch options
 #
 # stellaris
-# env --unset=SDL_VIDEODRIVER gamemoderun %command%
+# setting x11 as backup seems to have fixed crash on startup
+#   gamemoderun %command%
 {
   inputs,
-  pkgs,
   ...
 }: {
   imports = with inputs.nix-gaming.nixosModules; [
@@ -31,10 +31,6 @@
 
     steam = {
       enable = true;
-      extraPackages = with pkgs; [
-        # might help with crashes caused by stellaris mods
-        rust-jemalloc-sys-unprefixed
-      ];
       platformOptimizations.enable = true;
       protontricks.enable = true;
     };

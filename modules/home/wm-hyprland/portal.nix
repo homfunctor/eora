@@ -1,4 +1,3 @@
-# todo: why does adding xdhp to extraPortals cause a severe collision?
 {
   config,
   pkgs,
@@ -6,7 +5,6 @@
 }: {
   home.packages = with pkgs; [
     xdg-utils
-    # xdg-user-dirs
   ];
 
   xdg.portal = {
@@ -23,8 +21,9 @@
       };
     };
 
-    extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
     ];
 
     xdgOpenUsePortal = true;

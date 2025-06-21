@@ -30,7 +30,6 @@ in {
     networkmanagerapplet
     p7zip
     papers
-    pix
     mate.pluma
     pulseaudioFull
     pwvucontrol
