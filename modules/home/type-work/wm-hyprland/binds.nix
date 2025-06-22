@@ -6,7 +6,7 @@ in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       # applications
-      "${mod}, E, exec, ${uwsmapp "nemo"}"
+      "${mod}, E, exec, ${uwsmapp "nautilus -w"}"
       "${mod} SHIFT, E, exec, ${uwsmapp "alacritty --working-directory ~/eora -e yazi"}"
       "${mod}, W, exec, ${uwsmapp "alacritty"}"
       "${mod} SHIFT, W, exec, ${uwsmapp "alacritty --working-directory ~/eora"}"

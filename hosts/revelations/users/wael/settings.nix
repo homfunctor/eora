@@ -1,3 +1,3 @@
-# todo: nemo settings
+# todo: dconf stuff
 {
 }
