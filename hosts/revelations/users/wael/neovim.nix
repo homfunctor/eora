@@ -23,12 +23,13 @@
     "smartcolumn"
     "snacks"
     "treesitter"
+    "undotree"
     "vimtex"
     "which-key"
     "yazi"
   ];
 in {
-  config.opts.home.nvim.plugins = genAttrs enabledPlugins (
+  config.home.opts.nvim.plugins = genAttrs enabledPlugins (
     _: {
       enable = true;
     }

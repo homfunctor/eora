@@ -1,6 +1,7 @@
 {flake, ...}: {
   imports = with flake.modules.home; [
     # minimal tty
+    opts
     type-minimal-tty
 
     # nicer tty

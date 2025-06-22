@@ -19,7 +19,6 @@ in {
       animations.enabled = false; # :(
     };
 
-    # wallpaper settings
     home.opts = {
       hyprlandEnv = {
         browser = "${getExe pkgs.librewolf}";

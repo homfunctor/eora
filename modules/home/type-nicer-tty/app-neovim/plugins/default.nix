@@ -1,0 +1,27 @@
+{
+  imports = [
+    ./blink.nix
+    ./colorizer.nix
+    ./conform.nix
+    ./fidget.nix
+    ./grug-far.nix
+    ./illuminate.nix
+    ./lint.nix
+    ./lsp.nix
+    ./lualine.nix
+    ./mini-indent.nix
+    ./mini-notify.nix
+    ./mini.nix
+    ./navic.nix
+    ./nvim-surround.nix
+    ./precognition.nix
+    ./rustaceanvim.nix
+    ./smartcolumn.nix
+    ./snacks.nix
+    ./treesitter.nix
+    ./undotree.nix
+    ./vimtex.nix
+    ./which-key.nix
+    ./yazi.nix
+  ];
+}

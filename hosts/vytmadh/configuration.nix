@@ -12,6 +12,7 @@
     type-nicer-tty
 
     # work
+    ./hyprlock.nix
     type-work
 
     # extras

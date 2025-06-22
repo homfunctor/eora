@@ -18,7 +18,6 @@ in {
       terminal = "${getExe pkgs.alacritty}";
     };
 
-    # wallpaper settings
     hyprpaperOpts.settings = {
       ipc = "off";
       splash = false;

@@ -23,7 +23,6 @@ in {
       "uwsm app -- xrandr --output DP-2 --primary"
     ];
 
-    # wallpaper settings
     home.opts = {
       hyprlandEnv = {
         browser = "${getExe pkgs.vivaldi}";

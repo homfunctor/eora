@@ -29,14 +29,14 @@
         https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz'';
     };
 
-    nixcord.url = "github:kaylorben/nixcord";
-
-    nixos-hardware.url = "github:nixos/nixos-hardware";
-
     nix-index-database = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:mic92/nix-index-database";
     };
+
+    nixcord.url = "github:kaylorben/nixcord";
+
+    nixos-hardware.url = "github:nixos/nixos-hardware";
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 

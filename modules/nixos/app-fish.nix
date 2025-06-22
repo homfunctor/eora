@@ -55,6 +55,7 @@
 
       cat = "bat";
       cd = "z";
+      chwine = "LANG=zh_CN.UTF-8 wine";
       cl = "clear";
       erd = "erd -I --suppress-size";
       eza = "eza -G -x --color=always --icons=always";
@@ -64,9 +65,9 @@
       gitpl = "git pull";
       gitps = "git push";
       grep = "rg";
+      jpwine = "LANG=ja_JP.utf8 wine";
       ls = "eza -G -x --color=always --icons=always";
       n = "nvim";
-      rm = "rip";
     };
   };
 }

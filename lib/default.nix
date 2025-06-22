@@ -1,13 +1,43 @@
-# todo: mkAttrFromList
 {inputs, ...}: let
   inherit
     (inputs.nixpkgs.lib)
+    attrNames
     concatStringsSep
+    genAttrs
+    mapAttrsToList
+    filterAttrs
+    hasSuffix
     mkOption
+    pipe
     removeSuffix
     types
     ;
 in rec {
+  # get names of all nix files in directory
+  # for automating option generation
+  importAllFileNames = dir:
+    pipe (builtins.readDir dir) [
+      (
+        filterAttrs (
+          name: type: type == "regular" && hasSuffix ".nix" name
+        )
+      )
+      attrNames
+      (
+        map (
+          name: removeSuffix ".nix" name
+        )
+      )
+    ];
+
+  # generate options from list of option names and
+  # corresponding set of options
+  listToOpts = listOfOptNames: optAttrSet:
+    genAttrs listOfOptNames
+    (
+      optName: optAttrSet
+    );
+
   # mkOption utilities
   mkOpt = type: default: description:
     mkOption {

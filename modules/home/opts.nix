@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  inherit (flake.lib) mkAttrOpt mkBoolOpt mkIntOpt mkStrOpt;
+  inherit (flake.lib) importAllFileNames listToOpts mkAttrOpt mkBoolOpt mkIntOpt mkStrOpt;
   inherit (lib) genAttrs;
 in {
   options.home.opts = {
@@ -17,6 +17,8 @@ in {
 
     customUserDirs = mkAttrOpt {} "custom settings for user directories";
     defaultApps = mkAttrOpt {} "default applications";
+
+    fixWinetricks.enable = mkBoolOpt false "fix winetricks";
 
     hostname = mkStrOpt "" "hostname";
 
@@ -37,24 +39,12 @@ in {
         };
       } "default versioning settings";
 
-      folder = let
-        folderNames = [
-          "Books"
-          "Fish"
-          "Life"
-          "Math"
-          "Misc"
-          "Nix"
-          "Python"
-          "Rust"
-          "Work"
-        ];
-      in
-        genAttrs folderNames (
-          folderName: {
-            enable = mkBoolOpt false "sync ${folderName}";
-          }
-        );
+      folder =
+        listToOpts (
+          importAllFileNames ./type-work/app-syncthing/sync-folders
+        ) {
+          enable = mkBoolOpt false "enable sync";
+        };
     };
 
     username = mkStrOpt "" "username";
