@@ -12,7 +12,6 @@
     mkIntOpt
     mkStrOpt
     ;
-  inherit (lib) genAttrs;
 in {
   options.home.opts = {
     # finer control over which are enabled as some are very bulky

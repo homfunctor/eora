@@ -4,7 +4,6 @@
     attrNames
     concatStringsSep
     genAttrs
-    mapAttrsToList
     filterAttrs
     hasSuffix
     mkOption
@@ -35,7 +34,7 @@ in rec {
   listToOpts = listOfOptNames: optAttrSet:
     genAttrs listOfOptNames
     (
-      optName: optAttrSet
+      _optName: optAttrSet
     );
 
   # mkOption utilities

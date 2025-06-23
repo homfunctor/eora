@@ -5,7 +5,7 @@
   pkgs,
   ...
 }: let
-  inherit (lib) getExe mkForce;
+  inherit (lib) getExe;
 
   wallDir = "${inputs.sapadal}/assets";
   wall = "whitemarch.png";

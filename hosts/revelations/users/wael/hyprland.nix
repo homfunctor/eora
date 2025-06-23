@@ -5,8 +5,7 @@
   pkgs,
   ...
 }: let
-  inherit (config.lib.stylix) colors;
-  inherit (lib) getExe mkForce;
+  inherit (lib) getExe;
 
   wallDir = "${inputs.sapadal}/assets";
   wall1 = "winter1.png";
