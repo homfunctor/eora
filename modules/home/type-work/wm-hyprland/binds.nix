@@ -1,21 +1,25 @@
-{config, ...}: let
+{
+  config,
+  flake,
+  ...
+}: let
+  inherit (flake.lib) uApp uTog;
+
   mod = "SUPER";
-  toggle = cmd: "pkill ${cmd} || uwsm app -- ${cmd}";
-  uwsmapp = cmd: "uwsm app -- ${cmd}";
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       # applications
-      "${mod}, E, exec, ${uwsmapp "nautilus -w"}"
-      "${mod} SHIFT, E, exec, ${uwsmapp "alacritty --working-directory ~/eora -e yazi"}"
-      "${mod}, W, exec, ${uwsmapp "alacritty"}"
-      "${mod} SHIFT, W, exec, ${uwsmapp "alacritty --working-directory ~/eora"}"
+      "${mod}, E, exec, ${uApp "nautilus -w"}"
+      "${mod} SHIFT, E, exec, ${uApp "alacritty --working-directory ~/eora -e yazi"}"
+      "${mod}, W, exec, ${uApp "alacritty"}"
+      "${mod} SHIFT, W, exec, ${uApp "alacritty --working-directory ~/eora"}"
 
       # hyprpanel
-      "${mod}, X, exec, ${toggle "hyprpanel t powerdropdownmenu"}"
-      "${mod}, grave, exec, ${toggle "hyprpanel t notificationsmenu"}"
-      "${mod}, A, exec, ${toggle "hyprpanel t audiomenu"}"
-      "${mod}, C, exec, ${toggle "hyprpanel t calendarmenu"}"
+      "${mod}, X, exec, ${uTog "hyprpanel t powerdropdownmenu"}"
+      "${mod}, grave, exec, ${uTog "hyprpanel t notificationsmenu"}"
+      "${mod}, A, exec, ${uTog "hyprpanel t audiomenu"}"
+      "${mod}, C, exec, ${uTog "hyprpanel t calendarmenu"}"
 
       # launcher
       "${mod}, R, exec, rofi -show drun -run-command 'uwsm app -- {cmd}'"
@@ -63,11 +67,11 @@ in {
 
       # misc controls
       "${mod}, Q, killactive"
-      "${mod} ALT, L, exec, ${uwsmapp "hyprlock"}"
+      "${mod} ALT, L, exec, ${uApp "hyprlock"}"
       "${mod}, mouse:276, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
       "${mod}, mouse:275, exec,  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       "${mod}, mouse:274, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      ", PRINT, exec, ${uwsmapp "grimblast"} --freeze --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
+      ", PRINT, exec, ${uApp "grimblast"} --freeze --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
 
       # workspaces
       "${mod}, 1, workspace, 1"

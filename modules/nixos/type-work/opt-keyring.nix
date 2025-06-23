@@ -1,8 +1,14 @@
 {pkgs, ...}: {
   security.pam.services = {
-    greetd-password.enableGnomeKeyring = true;
-    greetd.enableGnomeKeyring = true;
-    login.enableGnomeKeyring = true;
+    greetd-password = {
+      enableGnomeKeyring = true;
+      startSession = true;
+    };
+
+    greetd = {
+      enableGnomeKeyring = true;
+      startSession = true;
+    };
   };
 
   services = {

@@ -30,7 +30,7 @@
         terminal = 14;
       };
 
-      hostname = "vytmadh";
+      hostName = "vytmadh";
 
       lanzaboote.enable = true;
 

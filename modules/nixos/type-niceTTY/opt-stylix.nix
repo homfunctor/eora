@@ -2,9 +2,7 @@
   config,
   inputs,
   ...
-}: let
-  inherit (config.nixos.opts) fontSizes;
-in {
+}: {
   imports = [
     inputs.stylix.nixosModules.stylix
   ];
@@ -13,7 +11,7 @@ in {
     enable = true;
 
     autoEnable = true;
-    fonts.sizes = fontSizes;
+    fonts.sizes = config.nixos.opts.fontSizes;
     image = "${inputs.sapadal}/assets/base.png";
     opacity = {
       desktop = 1.0;

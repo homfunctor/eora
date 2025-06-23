@@ -11,23 +11,29 @@ in {
       time.disabled = false;
 
       format =
-        "[](${colors.base02} bg:none)"
-        + "[](${colors.base03} bg:${colors.base02})"
-        + "[](${colors.base04} bg:${colors.base03})"
-        + "(bg:${colors.base04} fg:${colors.base00})$directory$read_only"
-        + "[](fg:${colors.base04} bg:${colors.base05})$git_branch$git_status"
-        + "[](fg:${colors.base05} bg:${colors.base0D})$nix_shell"
-        + "[](fg:${colors.base0D} bg:none)$character";
+        ''
+          [](bg:${colors.base03} ''
+        + ''
+          fg:${colors.base00})$directory$read_only[]''
+        + ''(bg:${colors.base05} fg:${colors.base00})''
+        + ''
+          $git_branch$git_status[](bg:${colors.base05} ''
+        + ''
+          fg:${colors.base08})$nix_shell[](bg:${colors.base04} ''
+        + ''
+          fg:${colors.base00})$character
+        '';
 
       character = {
-        error_symbol = "[❯](bold ${colors.base08})";
-        success_symbol = "[❯](bold ${colors.base07})";
+        error_symbol = "[❯](bold ${colors.base03})";
+        success_symbol = "[❯](bold ${colors.base05})";
       };
 
       directory = {
         format = "[ $path ]($style)";
-        read_only = " [󰌾](${colors.base08})";
-        style = "fg:${colors.base00} bg:${colors.base04}";
+        read_only = " [󰌾](${colors.base04})";
+        style = "fg:${colors.base00} bg:${colors.base05}";
+
         substitutions = {
           "Config" = " ";
           "Documents" = "󰈙 ";
@@ -40,12 +46,13 @@ in {
           "dotfiles" = "󰟐 ";
           "github" = " ";
         };
+
         home_symbol = "🏠 ";
       };
 
       git_branch = {
         format = "[ $symbol$branch ]($style)";
-        style = "fg:${colors.base00} bg:${colors.base05}";
+        style = "fg:${colors.base00} bg:${colors.base03}";
         symbol = " ";
       };
 
@@ -56,12 +63,12 @@ in {
         diverged = "↕";
         format = "([$all_status$ahead_behind]($style))";
         renamed = "→";
-        style = "fg:${colors.base00} bg:${colors.base05}";
+        style = "fg:${colors.base05}";
       };
 
       nix_shell = {
         format = "[ $symbol$state ]($style)";
-        style = "fg:${colors.base00} bg:${colors.base0D}";
+        style = "fg:${colors.base07} bg:${colors.base04}";
         symbol = " ";
       };
 

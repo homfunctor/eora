@@ -12,12 +12,11 @@
     dateLabel
     inputLabel
     ;
-  inherit (lib) mkForce;
 
   bg = "${inputs.sapadal}/assets/base.png";
 in {
   # force manual theming
-  stylix.targets.hyprlock.enable = mkForce false;
+  stylix.targets.hyprlock.enable = lib.mkForce false;
 
   programs.hyprlock = {
     enable = true;

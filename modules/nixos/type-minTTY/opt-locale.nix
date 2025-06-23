@@ -1,4 +1,3 @@
-# why not
 {pkgs, ...}: {
   i18n = {
     inputMethod = {

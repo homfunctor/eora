@@ -1,8 +1,6 @@
-{lib, ...}: let
-  inherit (lib) mkForce;
-in {
+{lib, ...}: {
   services = {
-    pulseaudio.enable = mkForce false;
+    pulseaudio.enable = lib.mkForce false;
     pipewire = {
       enable = true;
 

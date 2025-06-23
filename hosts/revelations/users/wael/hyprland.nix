@@ -1,5 +1,6 @@
 {
   config,
+  flake,
   inputs,
   lib,
   pkgs,
@@ -19,7 +20,7 @@ in {
     ];
     wayland.windowManager.hyprland.settings.exec-once = [
       # set primary monitor for games using xwayland
-      "uwsm app -- xrandr --output DP-2 --primary"
+      (flake.lib.uApp "xrandr --output DP-2 --primary")
     ];
 
     home.opts = {

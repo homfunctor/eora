@@ -4,10 +4,8 @@
   ...
 }: let
   inherit (config.nixos.opts) usernames;
-  inherit (lib) genAttrs;
 in {
-  # lesson learned: read the manual
-  users.users = genAttrs usernames (
+  users.users = lib.genAttrs usernames (
     user: {
       description = user;
       extraGroups = [

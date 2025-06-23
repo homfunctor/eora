@@ -9,8 +9,7 @@
   inherit (lib) mkDefault mkForce;
 in {
   wayland.windowManager.hyprland.settings = {
-    "$floatingSize" = "600 400";
-    "$pwvucontrol" = "com.saivert.pwvucontrol";
+    "$floatingSize" = "500 500";
     inherit
       (hyprlandOpts)
       monitor
@@ -126,9 +125,9 @@ in {
       "center, class:^(.blueman-manager-wrapped)$"
 
       # audio control
-      "float, class:^($pwvucontrol)$"
-      "size $floatingSize, class:^($pwvucontrol)$"
-      "center, class:^($pwvucontrol)$"
+      "float, class:^($com.saivert.pwvucontrol)$"
+      "size $floatingSize, class:^($com.saivert.pwvucontrol)$"
+      "center, class:^($com.saivert.pwvucontrol)$"
 
       # udiskie
       "float, class:^(udiskie)$"
@@ -169,8 +168,8 @@ in {
     ];
 
     xwayland = {
-      use_nearest_neighbor = true;
       force_zero_scaling = true;
+      use_nearest_neighbor = true;
     };
   };
 }

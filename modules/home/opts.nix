@@ -25,7 +25,9 @@ in {
     customUserDirs = mkAttrOpt {} "custom settings for user directories";
     defaultApps = mkAttrOpt {} "default applications";
 
-    hostname = mkStrOpt "" "hostname";
+    hostName =
+      mkStrOpt ""
+      "host name. name of host. that by which the host is named";
 
     hyprlandEnv = mkAttrOpt {} "various hyprland environment settings";
     hyprlandOpts = mkAttrOpt {} "user options for hyprland";

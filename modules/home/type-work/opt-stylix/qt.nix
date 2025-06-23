@@ -8,7 +8,6 @@
 }: let
   inherit (builtins) unsafeDiscardStringContext;
   inherit (config.lib.stylix) colors;
-  inherit (lib) mkForce;
 
   iconThemeName = "Nordzy-dark";
 
@@ -41,7 +40,7 @@ in {
 
     qt = {
       enable = true;
-      platformTheme.name = mkForce "kvantum";
+      platformTheme.name = lib.mkForce "kvantum";
     };
 
     home.packages = [kvantumPackage];

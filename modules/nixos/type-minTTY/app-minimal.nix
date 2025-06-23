@@ -9,6 +9,7 @@
     killall
     nix-output-monitor
     sbctl # for lanzaboote
+    # make sure these actually get used
     (lib.hiPrio uutils-coreutils-noprefix)
     wget
   ];

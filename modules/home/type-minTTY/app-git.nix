@@ -1,7 +1,7 @@
-# not really secret but rather a prototype for how sapadal is used
 {inputs, ...}: {
   imports = [
-    # userEmail, userName
+    # not really secret but rather a prototype for how sapadal is used
+    # provides: userEmail, userName
     inputs.sapadal.modules.home.app-git
   ];
 

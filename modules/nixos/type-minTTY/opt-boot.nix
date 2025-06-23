@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}: let
-  inherit (lib) mkDefault;
-in {
+}: {
   boot = {
     consoleLogLevel = 3;
 
@@ -15,7 +13,7 @@ in {
     };
 
     # overridden when cachyos kernel is enabled
-    kernelPackages = mkDefault pkgs.linuxPackages_latest;
+    kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
 
     kernelParams = [
       "quiet"
@@ -27,7 +25,7 @@ in {
     loader = {
       efi.canTouchEfiVariables = true;
       # overridden when lanzaboote is enabled
-      systemd-boot.enable = mkDefault true;
+      systemd-boot.enable = lib.mkDefault true;
     };
 
     plymouth = {

@@ -1,16 +1,12 @@
-# networking settings
 {
   config,
   lib,
   ...
-}: let
-  inherit (config.nixos.opts) hostname;
-  inherit (lib) mkDefault;
-in {
+}: {
   networking = {
-    firewall.enable = true;
+    inherit (config.nixos.opts) hostName;
 
-    hostName = hostname;
+    firewall.enable = true;
 
     networkmanager = {
       enable = true;
@@ -18,7 +14,7 @@ in {
       wifi.powersave = true;
     };
 
-    useDHCP = mkDefault true;
+    useDHCP = lib.mkDefault true;
   };
 
   services = {

@@ -8,7 +8,7 @@ in {
   options.nixos.opts = {
     fontSizes = mkAttrOpt {} "host font size settings";
 
-    hostname = mkStrOpt "" "host name for configuration";
+    hostName = mkStrOpt "" "host name for configuration";
 
     hyprlockOpts = mkAttrOpt {} "hyprlock settings";
 

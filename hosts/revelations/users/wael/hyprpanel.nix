@@ -1,4 +1,4 @@
-{
+{flake, ...}: {
   home.opts.hyprpanelLayout = {
     "0" = {
       "left" = ["power" "workspaces" "windowtitle"];
@@ -20,6 +20,6 @@
   };
 
   wayland.windowManager.hyprland.settings.exec-once = [
-    "uwsm app -- hyprpanel"
+    (flake.lib.uApp "hyprpanel")
   ];
 }

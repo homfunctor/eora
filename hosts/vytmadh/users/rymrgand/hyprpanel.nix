@@ -1,4 +1,6 @@
-{
+{flake, ...}: let
+  inherit (flake.lib) uApp;
+in {
   home.opts.hyprpanelLayout = {
     "*" = {
       "left" = ["power" "workspaces" "windowtitle"];
@@ -8,7 +10,7 @@
   };
 
   wayland.windowManager.hyprland.settings.exec-once = [
-    "uwsm app -- blueman-applet"
-    "uwsm app -- hyprpanel"
+    (uApp "blueman-applet")
+    (uApp "hyprpanel")
   ];
 }

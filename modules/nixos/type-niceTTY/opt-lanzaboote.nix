@@ -5,15 +5,13 @@
   lib,
   ...
 }: let
-  inherit (lib) mkIf;
-
   cfg = config.nixos.opts.lanzaboote;
 in {
   imports = [
     inputs.lanzaboote.nixosModules.lanzaboote
   ];
 
-  config.boot = mkIf cfg.enable {
+  config.boot = lib.mkIf cfg.enable {
     lanzaboote = {
       enable = true;
       pkiBundle = "/var/lib/sbctl";

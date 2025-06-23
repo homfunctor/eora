@@ -4,14 +4,13 @@
   ...
 }: let
   inherit (config.home.opts) username;
-  inherit (lib) mkIf;
 
   dirName = "Python";
   homeDirectory = "/home/${username}";
 
   cfg = config.home.opts.sync;
 in {
-  config = mkIf cfg.folder."${dirName}".enable {
+  config = lib.mkIf cfg.folder."${dirName}".enable {
     services.syncthing.settings = {
       folders."${homeDirectory}/${dirName}" = {
         enable = true;

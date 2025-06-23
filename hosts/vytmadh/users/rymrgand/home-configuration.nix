@@ -17,7 +17,7 @@
 
   config = {
     home.opts = {
-      hostname = "vytmadh";
+      hostName = "vytmadh";
 
       sync.folder = {
         Books.enable = true;

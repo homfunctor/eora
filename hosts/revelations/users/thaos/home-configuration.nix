@@ -21,7 +21,7 @@
         latex.enable = true;
       };
 
-      hostname = "revelations";
+      hostName = "revelations";
 
       rofi.columns = 10;
 

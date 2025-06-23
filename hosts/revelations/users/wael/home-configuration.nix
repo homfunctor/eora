@@ -22,7 +22,10 @@
   config = {
     home.opts = {
       app-math = {
+        geogebra.enable = true;
         latex.enable = true;
+        octave.enable = true;
+        rstudio.enable = true;
       };
 
       customUserDirs = {
@@ -31,7 +34,7 @@
         videos = "/vault/Videos";
       };
 
-      hostname = "revelations";
+      hostName = "revelations";
 
       rofi.columns = 10;
 

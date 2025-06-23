@@ -1,4 +1,10 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: let
+  colors = config.lib.stylix.colors.withHashtag;
+in {
   programs.nixvim = {
     clipboard = {
       register = "unnamedplus";
@@ -17,12 +23,24 @@
       update_in_insert = true;
     };
 
-    highlightOverride = {
-      Comment.italic = true;
+    highlightOverride = with colors; {
+      Boolean.fg = "#B37A4A";
+      Comment = {
+        fg = "#8B7AA3";
+        italic = true;
+      };
+      Keyword.fg = "#7ABF9E";
       LineNr.bg = "none";
       Normal.bg = "none";
       NormalFloat.bg = "none";
       NotifyBackground.bg = "none";
+      Number.fg = "#D98B74";
+      StatusLine.bg = base00;
+      String.italic = true;
+      TSBoolean.link = "Boolean";
+      TSComment.link = "Comment";
+      TSKeyword.link = "Keyword";
+      TSNumber.link = "Number";
     };
 
     opts = {

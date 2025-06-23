@@ -20,7 +20,7 @@
       settings.exec-once = [
         "uwsm finalize"
         "hyprctl setcursor"
-        "uwsm app -- nm-applet"
+        (flake.lib.uApp "nm-applet")
       ];
     };
     systemd.target = "graphical-session.target";

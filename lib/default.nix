@@ -68,4 +68,8 @@ in rec {
     );
   mkSecretPath = config: path: config.sops.secrets."${mkSecretName path}".path;
   mkSecretPH = config: path: config.sops.placeholder."${mkSecretName path}";
+
+  # uwsm utilities
+  uApp = cmd: "uwsm app -- ${cmd}";
+  uTog = cmd: "pkill ${cmd} || " + (uApp cmd);
 }

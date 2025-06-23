@@ -34,7 +34,7 @@
         terminal = 14;
       };
 
-      hostname = "revelations";
+      hostName = "revelations";
 
       lanzaboote.enable = true;
 
