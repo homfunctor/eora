@@ -9,7 +9,6 @@
 in {
   imports = [
     inputs.sops-nix.nixosModules.default
-    ./sops-users.nix
   ];
 
   environment.systemPackages = with pkgs; [

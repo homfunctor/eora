@@ -1,10 +1,9 @@
 # work environment layered on top of minimal/nicer tty
-{flake, ...}: {
-  imports = with flake.modules.nixos; [
-    app-nix-ld
-    chaotic-kernel
-    opt-keyring
-    wm-hyprland
+{
+  imports = [
+    ./chaotic-kernel.nix
+    ./opt-keyring.nix
+    ./wm-hyprland.nix
   ];
 
   programs.seahorse.enable = true;

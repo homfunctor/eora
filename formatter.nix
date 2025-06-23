@@ -1,7 +1,6 @@
-# formatter settings
 {
-  pkgs,
   inputs,
+  pkgs,
   ...
 }:
 inputs.treefmt-nix.lib.mkWrapper pkgs {

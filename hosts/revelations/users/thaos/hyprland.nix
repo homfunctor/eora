@@ -5,7 +5,6 @@
   pkgs,
   ...
 }: let
-  inherit (config.lib.stylix) colors;
   inherit (lib) getExe mkForce;
 
   wallDir = "${inputs.sapadal}/assets";
@@ -44,10 +43,7 @@ in {
 
       # hyprland settings specific to personal computer
       hyprlandOpts = {
-        general = with colors; {
-          "col.active_border" = mkForce "rgb(${base0D})";
-          "col.inactive_border" = mkForce "rgb(${base02})";
-
+        general = {
           border_size = 5;
           gaps_in = 0;
           gaps_out = 5;

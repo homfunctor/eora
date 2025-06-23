@@ -3,7 +3,15 @@
   lib,
   ...
 }: let
-  inherit (flake.lib) importAllFileNames listToOpts mkAttrOpt mkBoolOpt mkIntOpt mkStrOpt;
+  inherit
+    (flake.lib)
+    importAllFileNames
+    listToOpts
+    mkAttrOpt
+    mkBoolOpt
+    mkIntOpt
+    mkStrOpt
+    ;
   inherit (lib) genAttrs;
 in {
   options.home.opts = {
@@ -17,8 +25,6 @@ in {
 
     customUserDirs = mkAttrOpt {} "custom settings for user directories";
     defaultApps = mkAttrOpt {} "default applications";
-
-    fixWinetricks.enable = mkBoolOpt false "fix winetricks";
 
     hostname = mkStrOpt "" "hostname";
 
@@ -43,7 +49,7 @@ in {
         listToOpts (
           importAllFileNames ./type-work/app-syncthing/sync-folders
         ) {
-          enable = mkBoolOpt false "enable sync";
+          enable = mkBoolOpt false "enable syncthing for this directory";
         };
     };
 

@@ -4,12 +4,13 @@
     ./boot.nix
     ./hardware.nix
     fsys-vytmadh
-    type-minimal-tty
+    opts
+    type-minTTY
 
     # nicer tty
     ./sops.nix
     ./stylix.nix
-    type-nicer-tty
+    type-niceTTY
 
     # work
     ./hyprlock.nix

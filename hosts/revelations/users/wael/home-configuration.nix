@@ -2,12 +2,12 @@
   imports = with flake.modules.home; [
     # minimal tty
     opts
-    type-minimal-tty
+    type-minTTY
 
     # nicer tty
     ./mime.nix
     ./neovim.nix
-    type-nicer-tty
+    type-niceTTY
 
     # work
     ./hyprland.nix
@@ -30,8 +30,6 @@
         pictures = "/vault/Pictures";
         videos = "/vault/Videos";
       };
-
-      fixWinetricks.enable = true;
 
       hostname = "revelations";
 

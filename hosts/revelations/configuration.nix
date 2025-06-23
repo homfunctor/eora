@@ -4,12 +4,13 @@
     # minimal tty
     ./boot.nix
     fsys-revelations
-    type-minimal-tty
+    opts
+    type-minTTY
 
     # nicer tty
     ./sops.nix
     ./stylix.nix
-    type-nicer-tty
+    type-niceTTY
 
     # work
     ./hardware.nix

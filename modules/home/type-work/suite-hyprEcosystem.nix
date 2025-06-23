@@ -10,6 +10,7 @@ in {
     grimblast
     hyprcursor
     hyprland-qtutils
+    hyprpicker
     hyprsysteminfoPkg
     slurp
     wayland-protocols

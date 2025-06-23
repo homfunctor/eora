@@ -5,14 +5,14 @@
   ...
 }: let
   inherit (config.home.opts) hyprlandOpts;
-  inherit (lib) mkDefault;
+  inherit (config.lib.stylix) colors;
+  inherit (lib) mkDefault mkForce;
 in {
   wayland.windowManager.hyprland.settings = {
     "$floatingSize" = "600 400";
     "$pwvucontrol" = "com.saivert.pwvucontrol";
     inherit
       (hyprlandOpts)
-      general
       monitor
       workspace
       ;
@@ -89,6 +89,13 @@ in {
       vfr = 1;
       vrr = 1;
     };
+
+    general =
+      hyprlandOpts.general
+      // (with colors; {
+        "col.active_border" = mkForce "rgb(${base08})";
+        "col.inactive_border" = mkForce "rgb(${base02})";
+      });
 
     windowrule = [
     ];

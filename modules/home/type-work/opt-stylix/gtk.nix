@@ -6,10 +6,8 @@
   config = {
     gtk = {
       iconTheme = {
-        name = "Papirus-Dark";
-        package = pkgs.papirus-nord.override {
-          accent = "frostblue4";
-        };
+        name = "Nordzy";
+        package = pkgs.nordzy-icon-theme;
       };
 
       gtk3.extraConfig = {
