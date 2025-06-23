@@ -12,10 +12,10 @@
 
   colors = config.lib.stylix.colors.withHashtag;
 
-  accent = colors.base04;
-  accent-alt = colors.base08;
+  accent = colors.base08;
+  accent-alt = colors.base0B;
   background = colors.base00;
-  background-alt = colors.base02;
+  background-alt = colors.base01;
   foreground = colors.base05;
 
   font = "${fonts.serif.name}";

@@ -10,7 +10,7 @@
   inherit (config.lib.stylix) colors;
   inherit (lib) mkForce;
 
-  iconThemeName = "Nordzy";
+  iconThemeName = "Nordzy-dark";
 
   qtctConfig = ''
     [Appearance]

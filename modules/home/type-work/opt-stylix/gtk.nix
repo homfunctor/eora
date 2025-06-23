@@ -6,7 +6,7 @@
   config = {
     gtk = {
       iconTheme = {
-        name = "Nordzy";
+        name = "Nordzy-dark";
         package = pkgs.nordzy-icon-theme;
       };
 
