@@ -24,7 +24,7 @@ in {
     };
 
     highlightOverride = with colors; {
-      Boolean.fg = "#B37A4A";
+      Boolean.fg = "#5A6B9C";
       Comment = {
         fg = "#8B7AA3";
         italic = true;
@@ -34,7 +34,7 @@ in {
       Normal.bg = "none";
       NormalFloat.bg = "none";
       NotifyBackground.bg = "none";
-      Number.fg = "#D98B74";
+      Number.fg = "#4A6B8A";
       StatusLine.bg = base00;
       String.italic = true;
       TSBoolean.link = "Boolean";

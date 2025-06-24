@@ -9,7 +9,7 @@
   inherit (builtins) unsafeDiscardStringContext;
   inherit (config.lib.stylix) colors;
 
-  iconThemeName = "Nordzy-dark";
+  iconThemeName = "Flat-Remix-Black-Dark";
 
   qtctConfig = ''
     [Appearance]

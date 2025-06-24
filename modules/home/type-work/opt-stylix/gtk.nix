@@ -6,8 +6,8 @@
   config = {
     gtk = {
       iconTheme = {
-        name = "Nordzy-dark";
-        package = pkgs.nordzy-icon-theme;
+        name = "Flat-Remix-Black-Dark";
+        package = pkgs.flat-remix-icon-theme;
       };
 
       gtk3.extraConfig = {
