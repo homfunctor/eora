@@ -68,11 +68,6 @@
       url = "github:hyprwm/hyprsysteminfo";
     };
 
-    quickshell = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-    };
-
     # extras
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 

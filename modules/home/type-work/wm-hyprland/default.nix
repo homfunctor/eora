@@ -1,7 +1,6 @@
 {flake, ...}: {
   imports = [
     ./binds.nix
-    ./dconf.nix
     ./env.nix
     ./hypridle.nix
     ./hyprpaper.nix

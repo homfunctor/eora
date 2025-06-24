@@ -31,8 +31,11 @@ in {
 
     hyprlandEnv = mkAttrOpt {} "various hyprland environment settings";
     hyprlandOpts = mkAttrOpt {} "user options for hyprland";
+    hyprpanelFont = {
+      size = mkStrOpt "14px" "font size";
+      weight = mkIntOpt 600 "font weight";
+    };
     hyprpanelLayout = mkAttrOpt {} "user options for hyprpanel layout";
-    hyprpanelScale = mkIntOpt 75 "scaling factor for hyprpanel";
     hyprpaperOpts = mkAttrOpt {} "user options for hyprpaper";
 
     rofi.columns = mkIntOpt 4 "number of columns to use in rofi";

@@ -1,3 +1,11 @@
 {
-  # todo: home-manager keyring settings
+  services.gnome-keyring = {
+    enable = true;
+
+    components = [
+      "pkcs11"
+      "secrets"
+      "ssh"
+    ];
+  };
 }

@@ -1,14 +1,8 @@
 {pkgs, ...}: {
   security.pam.services = {
-    greetd-password = {
-      enableGnomeKeyring = true;
-      startSession = true;
-    };
-
-    greetd = {
-      enableGnomeKeyring = true;
-      startSession = true;
-    };
+    greetd-password.enableGnomeKeyring = true;
+    greetd.enableGnomeKeyring = true;
+    login.enableGnomeKeyring = true;
   };
 
   services = {
@@ -16,10 +10,12 @@
       enable = true;
       implementation = "broker";
       packages = with pkgs; [
-        gcr_4
+        gcr
         gnome-keyring
       ];
     };
     gnome.gnome-keyring.enable = true;
   };
+
+  systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 }

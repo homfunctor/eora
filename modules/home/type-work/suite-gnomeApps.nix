@@ -7,6 +7,7 @@
     gnome-disk-utility
     gnome-text-editor
     gsettings-desktop-schemas
+    loupe
     nautilus
     nautilus-open-any-terminal
     nautilus-python

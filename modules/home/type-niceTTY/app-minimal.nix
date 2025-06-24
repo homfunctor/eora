@@ -3,6 +3,7 @@
     choose
     erdtree
     fclones
+    mission-center
     pastel
     procs
     rm-improved
@@ -14,6 +15,7 @@
     bat.enable = true;
     bottom.enable = true;
     broot.enable = true;
+    btop.enable = true;
     eza = {
       enable = true;
       enableFishIntegration = true;

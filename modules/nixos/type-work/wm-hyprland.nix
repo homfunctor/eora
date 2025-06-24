@@ -33,6 +33,7 @@ in {
 
   security.pam.services.hyprlock.text = "auth include login";
 
+  boot.initrd.systemd.enable = true;
   services = {
     greetd = {
       enable = true;

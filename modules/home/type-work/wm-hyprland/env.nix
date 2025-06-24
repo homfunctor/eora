@@ -17,6 +17,7 @@ in {
       export EDITOR=nvim
       export GDK_BACKEND=wayland,x11,*
       export GDK_SCALE=1
+      export GNOME_KEYRING_CONTROL="$XDG_RUNTIME_DIR/keyring"
       export HYPRCURSOR_SIZE=${toString config.stylix.cursor.size}
       export HYPRCURSOR_THEME=${config.stylix.cursor.name}
       export HYPRLAND_NO_RT=1
@@ -32,7 +33,9 @@ in {
       export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
       export SDL_VIDEODRIVER=wayland,x11
       export SHELL=${shell}
+      export SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/keyring/ssh"
       export TERMINAL=${terminal}
+      export WLR_BACKEND=wayland
       export WLR_DRM_NO_ATOMIC=1
       export WLR_NO_HARDWARE_CURSORS=1
       export WLR_RENDERER=wayland
@@ -40,7 +43,6 @@ in {
       export XDG_SESSION_DESKTOP=Hyprland
       export XDG_SESSION_TYPE=wayland
       export _JAVA_AWT_WM_NONREPARENTING=1
-      export WLR_BACKEND=wayland
     '';
 
     "uwsm/env-hyprland".text = ''

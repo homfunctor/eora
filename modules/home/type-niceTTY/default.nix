@@ -6,5 +6,6 @@
     ./app-starship.nix
     ./app-yazi.nix
     ./app-zoxide.nix
+    ./opt-dconf.nix
   ];
 }
