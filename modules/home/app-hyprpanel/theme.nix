@@ -14,7 +14,7 @@
 in {
   programs.hyprpanel.settings.theme = {
     bar = {
-      background = background;
+      inherit background;
 
       border = {
         location = "none";
@@ -209,7 +209,7 @@ in {
       margin_top = "0.5em";
 
       menus = {
-        background = background;
+        inherit background;
 
         border = {
           color = accent;
@@ -323,13 +323,13 @@ in {
       scaling = 100;
       shadow = "0px 1px 2px 1px ${background-alt}";
       shadowMargins = "0px 0px 4px 0px";
-      transparent = "false";
+      transparent = false;
     };
 
     font = {
       name = font;
-      size = hyprpanelFont.size;
-      weight = hyprpanelFont.weight;
+      inherit (hyprpanelFont) size;
+      inherit (hyprpanelFont) weight;
     };
 
     notifications = {
