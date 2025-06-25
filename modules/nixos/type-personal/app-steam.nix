@@ -1,8 +1,9 @@
 # notes on launch options
 #
 # stellaris
-# setting x11 as backup seems to have fixed crash on startup
-#   gamemoderun %command%
+#   no crashes without env option, but without it the game only
+#   uses DP-1
+# env --unset=SDL_VIDEODRIVER gamemoderun %command%
 {inputs, ...}: {
   imports = with inputs.nix-gaming.nixosModules; [
     pipewireLowLatency

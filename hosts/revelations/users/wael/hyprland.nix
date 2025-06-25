@@ -17,7 +17,7 @@ in {
     home.packages = with pkgs; [
       xorg.xrandr
     ];
-    wayland.windowManager.hyprland.settings.exec = [
+    wayland.windowManager.hyprland.settings.exec-once = [
       # set primary monitor for games using xwayland
       "xrandr --output DP-2 --primary"
     ];
