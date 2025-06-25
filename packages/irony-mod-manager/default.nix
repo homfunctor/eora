@@ -83,7 +83,7 @@ in
         comment = "A mod manager for Paradox games";
         desktopName = "Irony Mod Manager";
         exec = "IronyModManager";
-        icon = "stellaris";
+        icon = "applications-games";
         name = "irony-mod-manager";
       }}/share/applications/* $out/share/applications
     '';
