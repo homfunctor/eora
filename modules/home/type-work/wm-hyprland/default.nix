@@ -5,7 +5,6 @@
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
-    ./hyprshell.nix
     ./polkit.nix
     ./portal.nix
     ./settings.nix
