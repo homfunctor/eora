@@ -5,9 +5,9 @@
 }: let
   inherit (lib) mkIf;
 
-  cfg = config.home.opts.nvim.plugins.mini-indent;
+  cfg = config.home.opts.nvim.plugins.mini-indentscope;
 in {
   programs.nixvim = mkIf cfg.enable {
-    plugins.mini.indent = {};
+    plugins.mini.modules.indentscope = {};
   };
 }

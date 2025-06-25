@@ -10,6 +10,7 @@
 in {
   config = mkIf cfg.enable {
     home.packages = with pkgs; [
+      jsonfmt
       shellcheck
       yamllint
     ];
@@ -20,7 +21,7 @@ in {
       lintersByFt = {
         bash = ["shellcheck"];
         fish = ["fish"];
-        json = ["jsonlint"];
+        json = ["jsonfmt"];
         lua = ["luacheck"];
         markdown = ["markdownlint"];
         nix = [

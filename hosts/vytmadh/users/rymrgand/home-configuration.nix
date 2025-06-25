@@ -6,17 +6,22 @@
 
     # nicer tty
     ./mime.nix
-    # ./neovim.nix
+    ./neovim.nix
     type-niceTTY
 
     # work
     ./hyprland.nix
     ./hyprpanel.nix
+    ./settings.nix
     type-work
   ];
 
   config = {
     home.opts = {
+      app-math = {
+        latex.enable = true;
+      };
+
       hostName = "vytmadh";
 
       sync.folder = {

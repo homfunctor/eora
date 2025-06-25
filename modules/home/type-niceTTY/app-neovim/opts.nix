@@ -4,10 +4,7 @@
   ...
 }: let
   inherit (flake.lib) importAllFileNames mkBoolOpt;
-  inherit
-    (lib)
-    genAttrs
-    ;
+  inherit (lib) genAttrs;
 
   pluginList = importAllFileNames ./plugins;
 in {

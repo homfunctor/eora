@@ -9,7 +9,7 @@
     ./lint.nix
     ./lsp.nix
     ./lualine.nix
-    ./mini-indent.nix
+    ./mini-indentscope.nix
     ./mini-notify.nix
     ./mini.nix
     ./navic.nix
