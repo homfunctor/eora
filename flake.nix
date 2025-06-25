@@ -63,6 +63,11 @@
     # desktop environment
     hyprpanel.url = "github:jas-singhfsu/hyprpanel";
 
+    hyprshell = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:H3rmt/hyprshell?ref=hyprshell-release";
+    };
+
     hyprsysteminfo = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:hyprwm/hyprsysteminfo";

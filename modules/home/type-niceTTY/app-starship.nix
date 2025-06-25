@@ -12,14 +12,14 @@ in {
 
       format =
         ''
-          [](bg:${colors.base03} ''
+          [](bg:${colors.base05} ''
         + ''
           fg:${colors.base00})$directory$read_only[]''
-        + ''(bg:${colors.base05} fg:${colors.base00})''
+        + ''(bg:${colors.base06} fg:${colors.base00})''
         + ''
-          $git_branch$git_status[](bg:${colors.base05} ''
+          $git_branch$git_status[](bg:${colors.base07} ''
         + ''
-          fg:${colors.base08})$nix_shell[](bg:${colors.base04} ''
+          fg:${colors.base08})$nix_shell[](bg:${colors.base08} ''
         + ''
           fg:${colors.base00})$character
         '';

@@ -1,5 +1,7 @@
-# todo: check for home-manager uwsm options
-{config, ...}: let
+{
+  config,
+  ...
+}: let
   inherit (config.home.opts.hyprlandEnv) browser shell terminal;
 in {
   xdg.configFile = {

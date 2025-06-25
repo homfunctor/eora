@@ -3,8 +3,9 @@
     ./binds.nix
     ./env.nix
     ./hypridle.nix
-    ./hyprpaper.nix
     ./hyprlock.nix
+    ./hyprpaper.nix
+    ./hyprshell.nix
     ./polkit.nix
     ./portal.nix
     ./settings.nix

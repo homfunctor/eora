@@ -6,21 +6,6 @@
 }: let
   inherit (config.nixos.opts) adminuser;
   inherit (lib) getExe;
-
-  # autologin to adminuser
-  # can logout and login as workuser
-  args = "--asterisks --remember --remember-user-session --cmd";
-  tuigreet = getExe pkgs.greetd.tuigreet;
-
-  default_session = {
-    command = "${tuigreet}  ${args} ${initial_session.command}";
-    user = "greeter";
-  };
-
-  initial_session = {
-    command = "${getExe pkgs.uwsm} start hyprland-uwsm.desktop";
-    user = adminuser;
-  };
 in {
   programs = {
     hyprland = {
@@ -33,15 +18,19 @@ in {
 
   security.pam.services.hyprlock.text = "auth include login";
 
+  # autologin
   boot.initrd.systemd.enable = true;
   services = {
-    greetd = {
-      enable = true;
-      settings = {
-        inherit default_session initial_session;
-        terminal.vt = 1;
-      };
-    };
+    getty.autologinUser = adminuser;
     xserver.enable = false;
+  };
+  systemd.user.services."uwsm-autostart" = {
+    enable = true;
+    description = "Start uwsm on login";
+    wantedBy = ["graphical-session.target"];
+    serviceConfig = {
+      ExecStart = "${getExe pkgs.uwsm} start hyprland-uwsm.desktop";
+      Restart = "no";
+    };
   };
 }

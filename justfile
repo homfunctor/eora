@@ -9,10 +9,6 @@ chflake:
 clean:
     nix-collect-garbage -d  --log-format internal-json  |& nom --json
 
-# format
-nfmt:
-    nix fmt
-
 # update to current flake config without going online
 offlate:
     sudo nixos-rebuild switch --flake . --offline  --log-format internal-json  |& nom --json
