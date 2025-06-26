@@ -193,6 +193,7 @@ in {
           notifications = {
             height = "58em";
             pager.show = true;
+            radius = "0em";
             scaling = 100;
             scrollradius = "0em";
             scrollwidth = "0.35em";
@@ -243,7 +244,7 @@ in {
       weight = "600";
     };
 
-    notifications = {
+    notification = {
       border_radius = "0em";
       opacity = 100;
       scaling = 100;
