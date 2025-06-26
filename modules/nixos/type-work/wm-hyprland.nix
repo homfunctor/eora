@@ -1,3 +1,4 @@
+# todo: autologin isn't working
 {
   config,
   lib,

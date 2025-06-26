@@ -31,10 +31,6 @@ in {
 
     hyprlandEnv = mkAttrOpt {} "various hyprland environment settings";
     hyprlandOpts = mkAttrOpt {} "user options for hyprland";
-    hyprpanelFont = {
-      size = mkStrOpt "14px" "font size";
-      weight = mkIntOpt 600 "font weight";
-    };
     hyprpanelLayout = mkAttrOpt {} "user options for hyprpanel layout";
     hyprpaperOpts = mkAttrOpt {} "user options for hyprpaper";
 

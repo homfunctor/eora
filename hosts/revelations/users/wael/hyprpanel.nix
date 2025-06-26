@@ -15,7 +15,7 @@
     "2" = {
       "left" = ["workspaces" "windowtitle"];
       "middle" = ["cava"];
-      "right" = ["volume" "microphone" "systray"];
+      "right" = ["volume" "microphone" "clock"];
     };
   };
 

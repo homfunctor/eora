@@ -1,14 +1,15 @@
+# todo: symbols seem too small
 {
   config,
   flake,
-  perSystem,
   pkgs,
   ...
 }: let
   inherit (config.home.opts) hyprpanelLayout;
 in {
   imports = [
-    ./theme.nix
+    ./themeColors.nix
+    ./themeUI.nix
   ];
 
   programs.hyprpanel = {
@@ -16,7 +17,6 @@ in {
     package = pkgs.hyprpanel;
 
     settings = {
-      theme.name = "stylix";
       bar = {
         autoHide = "never";
         layouts = hyprpanelLayout;
@@ -270,10 +270,10 @@ in {
 
         volume = {
           label = true;
-          middleClick = "";
-          rightClick = "";
-          scrollDown = "${perSystem.hyprpanel.wrapper}/bin/hyprpanel 'vol -5'";
-          scrollUp = "${perSystem.hyprpanel.wrapper}/bin/hyprpanel 'vol +5'";
+          middleClick = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+          rightClick = flake.lib.uApp "pwvucontrol";
+          scrollDown = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
+          scrollUp = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
         };
 
         windowtitle = {
@@ -321,8 +321,8 @@ in {
       hyprpanel = {
         restartAgs = true;
         restartCommand =
-          ''${perSystem.hyprpanel.default}/bin/hyprpanel q; ''
-          + ''${perSystem.hyprpanel.default}/bin/hyprpanel'';
+          ''${pkgs.hyprpanel}/bin/hyprpanel q; ''
+          + ''${pkgs.hyprpanel}/bin/hyprpanel'';
       };
 
       menus = {

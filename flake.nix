@@ -2,7 +2,6 @@
   description = "Eora NixOS Flake";
 
   inputs = {
-    # core inputs
     blueprint = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/blueprint";
@@ -18,6 +17,11 @@
       url = "github:nix-community/home-manager";
     };
 
+    hyprsysteminfo = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:hyprwm/hyprsysteminfo";
+    };
+
     lanzaboote = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/lanzaboote";
@@ -25,8 +29,7 @@
 
     lix-module = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = ''
-        https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz'';
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz";
     };
 
     nix-index-database = {
@@ -55,17 +58,17 @@
       url = "github:mic92/sops-nix";
     };
 
+    stylix = {
+      inputs = {
+        home-manager.follows = "home-manager";
+        nixpkgs.follows = "nixpkgs";
+      };
+      url = "github:nix-community/stylix";
+    };
+
     treefmt-nix = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/treefmt-nix";
-    };
-
-    # desktop environment
-    hyprpanel.url = "github:jas-singhfsu/hyprpanel";
-
-    hyprsysteminfo = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:hyprwm/hyprsysteminfo";
     };
 
     # extras
@@ -85,15 +88,6 @@
         treefmt-nix.follows = "treefmt-nix";
       };
       url = "git+ssh://git@github.com/homfunctor/sapadal?shallow=1?ref=main";
-    };
-
-    # theming
-    stylix = {
-      inputs = {
-        home-manager.follows = "home-manager";
-        nixpkgs.follows = "nixpkgs";
-      };
-      url = "github:nix-community/stylix";
     };
   };
 
