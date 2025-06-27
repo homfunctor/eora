@@ -58,9 +58,9 @@ in {
           cava = {
             background = "${base02}";
             border = "${base0C}";
-            icon = "${base07}";
+            icon = "${base08}";
             icon_background = "${base02}";
-            text = "${base08}";
+            text = "${base07}";
           };
 
           cpu = {
@@ -213,7 +213,7 @@ in {
           active = "${base06}";
           available = "${base0D}";
           background = "${base02}";
-          border = "${base02}";
+          border = "${base08}";
           hover = "${base03}";
           numbered_active_highlighted_text_color = "${base01}";
           numbered_active_underline_color = "${base0A}";

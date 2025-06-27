@@ -1,4 +1,18 @@
-# todo: symbols seem too small
+# symbols:
+# 🎜 🎞 🎼 💀 💻 💽 💾 📁 📂 🕱
+# 🖸 🖮 🖳 🗁 🗂 🗖 🗔
+# 🗡 🛠 🞎 🞕 󰁟 󰃖 󰃬 󰃭 󰃮 󰃯 󰅩
+# 󰆍 󰆛 󰆟 󰇅
+# 󰇄 󰇃 󰆾 󰈈 󰈉 󰈀
+# 󰊴 󰊗 󰋋 󰋌
+# 󰋊 󰋞 󰌌 󰌠 󰍬 󰍭 󰍮 󰏜
+# 󰏘 󰐥 󰑫 󰒓 󰓓
+# 󰕷 󰘔 󰙯 󰚌 󰚽 󰛄
+# 󰛤 󰟔 󰣒 󰥻 󰦘
+# 󰦣 󰨇 󰨊 󰭿
+# 󰮂 󰯈 󰽴 🍓
+# 󰿤 󱃸 󱄅
+# 󱆀 󱅿 ⬚ ⬜ ⬛
 {
   config,
   flake,
@@ -40,7 +54,7 @@ in {
 
         clock = {
           format = "%a %b %d  %I:%M %p";
-          icon = "󰸗";
+          icon = "󰃭";
           middleClick = "";
           rightClick = "";
           scrollDown = "";
@@ -55,9 +69,9 @@ in {
             barCharacters = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
             bars = 10;
             channels = 2;
-            framerate = 60;
+            framerate = 30;
             highCutoff = 10000;
-            icon = "";
+            icon = "🎜";
             leftClick = "";
             lowCutoff = 50;
             middleClick = "";
@@ -101,33 +115,6 @@ in {
             unit = "metric";
           };
 
-          hypridle = {
-            label = true;
-            middleClick = "";
-            offIcon = "";
-            offLabel = "Off";
-            onIcon = "";
-            onLabel = "On";
-            pollingInterval = 2000;
-            rightClick = "";
-            scrollDown = "";
-            scrollUp = "";
-          };
-
-          hyprsunset = {
-            label = true;
-            middleClick = "";
-            offIcon = "󰛨";
-            offLabel = "Off";
-            onIcon = "󱩌";
-            onLabel = "On";
-            pollingInterval = 2000;
-            rightClick = "";
-            scrollDown = "";
-            scrollUp = "";
-            temperature = "6000k";
-          };
-
           kbLayout = {
             icon = "󰌌";
             label = true;
@@ -150,24 +137,8 @@ in {
             unmutedIcon = "󰍬";
           };
 
-          netstat = {
-            dynamicIcon = false;
-            icon = "󰖟";
-            label = true;
-            labelType = "full";
-            leftClick = "";
-            middleClick = "";
-            networkInLabel = "↓";
-            networkInterface = "";
-            networkOutLabel = "↑";
-            pollingInterval = 2000;
-            rateUnit = "auto";
-            rightClick = "";
-            round = true;
-          };
-
           power = {
-            icon = "";
+            icon = "󱄅";
             leftClick = "menu:powerdropdown";
             middleClick = "";
             rightClick = "";
@@ -199,60 +170,6 @@ in {
             rightClick = "";
             round = false;
           };
-
-          submap = {
-            disabledIcon = "󰌌";
-            disabledText = "Submap off";
-            enabledIcon = "󰌐";
-            enabledText = "Submap On";
-            label = true;
-            leftClick = "";
-            middleClick = "";
-            rightClick = "";
-            scrollDown = "";
-            scrollUp = "";
-            showSubmapName = true;
-          };
-
-          label = true;
-          leftClick = "";
-          middleClick = "";
-          rightClick = "";
-          scrollDown = "";
-          scrollUp = "";
-          unit = "imperial";
-        };
-
-        launcher = {
-          autoDetectIcon = false;
-          icon = "";
-          middleClick = "";
-          rightClick = "";
-          scrollDown = "";
-          scrollUp = "";
-        };
-
-        media = {
-          format = "{artist: - }{title}";
-          middleClick = "";
-          rightClick = "";
-          scrollDown = "";
-          scrollUp = "";
-          show_active_only = false;
-          show_label = false;
-          truncation = true;
-          truncation_size = 30;
-        };
-
-        network = {
-          label = false;
-          middleClick = "";
-          rightClick = "";
-          scrollDown = "";
-          scrollUp = "";
-          showWifiInfo = false;
-          truncation = true;
-          truncation_size = 7;
         };
 
         notifications = {
@@ -265,8 +182,6 @@ in {
         };
 
         scrollSpeed = 5;
-
-        systray.ignore = [];
 
         volume = {
           label = true;
@@ -293,12 +208,15 @@ in {
         workspaces = {
           applicationIconEmptyWorkspace = "";
           applicationIconFallback = "󰣆";
-          applicationIconMap = {};
+          applicationIconMap = {
+            "Alacritty" = "󰞷";
+            "org.gnome.Nautilus" = "";
+            "org.pwmt.zathura" = "󰐣";
+            "title:Settings" = "";
+            "vivaldi" = "";
+          };
           applicationIconOncePerWorkspace = true;
           hideUnoccupied = false;
-          icons.active = "";
-          icons.available = "";
-          icons.occupied = "";
           ignored = "";
           monitorSpecific = true;
           numbered_active_indicator = "underline";
@@ -331,129 +249,7 @@ in {
             hideSeconds = true;
             military = false;
           };
-
-          weather = {
-            enabled = false;
-            interval = 60000;
-            key = "";
-            location = "Los Angeles";
-            unit = "imperial";
-          };
-        };
-
-        dashboard = {
-          controls.enabled = true;
-
-          directories = {
-            enabled = true;
-
-            left = {
-              directory1 = {
-                command = "bash -c \"xdg-open $HOME/Downloads/\"";
-                label = "󰉍 Downloads";
-              };
-
-              directory2 = {
-                command = "bash -c \"xdg-open $HOME/Videos/\"";
-                label = "󰉏 Videos";
-              };
-
-              directory3 = {
-                command = "bash -c \"xdg-open $HOME/Projects/\"";
-                label = "󰚝 Projects";
-              };
-            };
-
-            right = {
-              directory1 = {
-                command = "bash -c \"xdg-open $HOME/Documents/\"";
-                label = "󱧶 Documents";
-              };
-
-              directory2 = {
-                command = "bash -c \"xdg-open $HOME/Pictures/\"";
-                label = "󰉏 Pictures";
-              };
-
-              directory3 = {
-                command = "bash -c \"xdg-open $HOME/\"";
-                label = "󱂵 Home";
-              };
-            };
-
-            powermenu = {
-              avatar = {
-                image = "$HOME/.face.icon";
-                name = "system";
-              };
-
-              confirmation = true;
-              logout = "hyprctl dispatch exit";
-              reboot = "systemctl reboot";
-              shutdown = "systemctl poweroff";
-              sleep = "systemctl suspend";
-            };
-
-            recording.path = "$HOME/Videos/Screencasts";
-
-            shortcuts = {
-              enabled = true;
-
-              left = {
-                shortcut1 = {
-                  command = "microsoft-edge-stable";
-                  icon = "󰇩";
-                  tooltip = "Microsoft Edge";
-                };
-
-                shortcut2 = {
-                  command = "spotify-launcher";
-                  icon = "";
-                  tooltip = "Spotify";
-                };
-
-                shortcut3 = {
-                  command = "discord";
-                  icon = "";
-                  tooltip = "Discord";
-                };
-
-                shortcut4 = {
-                  command = "rofi -show drun";
-                  icon = "";
-                  tooltip = "Search Apps";
-                };
-              };
-
-              right = {
-                shortcut1 = {
-                  command = "sleep 0.5 && hyprpicker -a";
-                  icon = "";
-                  tooltip = "Color Picker";
-                };
-
-                shortcut3 = {
-                  # command = "bash -c \"${../scripts/snapshot.sh}\"";
-                  icon = "󰄀";
-                  tooltip = "Screenshot";
-                };
-              };
-            };
-
-            stats = {
-              enable_gpu = false;
-              enabled = true;
-              interval = 2000;
-            };
-          };
-        };
-
-        media = {
-          displayTime = false;
-          displayTimeTooltip = false;
-          hideAlbum = false;
-          hideAuthor = false;
-          noMediaText = "";
+          weather.enabled = false;
         };
 
         power = {
@@ -479,9 +275,10 @@ in {
         position = "top right";
         showActionsOnHover = false;
         timeout = 7000;
-        scalingPriority = "both";
-        tear = false;
       };
+
+      scalingPriority = "gdk";
+      tear = false;
 
       wallpaper = {
         enable = false;

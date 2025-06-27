@@ -7,7 +7,7 @@
     };
 
     "1" = {
-      "left" = ["workspaces" "windowtitle"];
+      "left" = ["power" "workspaces" "windowtitle"];
       "middle" = ["clock"];
       "right" = ["volume" "microphone" "systray" "notifications"];
     };

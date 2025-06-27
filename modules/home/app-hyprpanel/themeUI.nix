@@ -1,23 +1,19 @@
 {config, ...}: let
   colors = config.lib.stylix.colors.withHashtag;
-  fontName = config.stylix.fonts.monospace.name;
-  fontSize = config.stylix.fonts.sizes.terminal;
+  fontName = config.stylix.fonts.serif.name;
 in {
   programs.hyprpanel.settings.theme = {
     bar = {
       border.location = "none";
       border_radius = "0em";
-      dropdownGap = "2.9em";
+      dropdownGap = "4.5em";
       enableShadow = false;
       floating = false;
-      label_spacing = "0.5em";
+      label_spacing = "0.0em";
       layer = "top";
       location = "top";
-      margin_bottom = "0em";
-      margin_sides = "0.5em";
-      margin_top = "0.5em";
       opacity = 100;
-      outer_spacing = "1.6em";
+      outer_spacing = "0.2em";
       scaling = 100;
       shadow = "0px 1px 2px 1px ${colors.base02}";
       shadowMargins = "0px 0px 4px 0px";
@@ -26,8 +22,8 @@ in {
       buttons = {
         background_hover_opacity = 100;
         background_opacity = 100;
-        padding_x = "0.8rem";
-        padding_y = "0.4rem";
+        padding_x = "0.7rem";
+        padding_y = "0.2rem";
         radius = "0.0em";
         spacing = "0.25em";
         style = "default";
@@ -75,41 +71,39 @@ in {
 
           hypridle = {
             enableBorder = true;
-            spacing = "0.45em";
+            spacing = "0.5em";
           };
 
           kbLayout = {
             enableBorder = true;
-            spacing = "0.45em";
+            spacing = "0.5em";
           };
 
           microphone = {
             enableBorder = true;
-            spacing = "0.45em";
+            spacing = "0.5em";
           };
 
           power = {
             enableBorder = true;
-            spacing = "0.45em";
+            spacing = "0.5em";
           };
 
           ram = {
             enableBorder = true;
-            spacing = "0.45em";
+            spacing = "0.5em";
           };
 
           storage = {
             enableBorder = true;
-            spacing = "0.45em";
+            spacing = "0.5em";
           };
 
           submap = {
             enableBorder = true;
-            spacing = "0.45em";
+            spacing = "0.5em";
           };
         };
-
-        monochrome = true;
 
         network = {
           enableBorder = true;
@@ -138,16 +132,16 @@ in {
 
         workspaces = {
           enableBorder = true;
-          fontSize = toString fontSize + "px";
+          fontSize = "1.0rem";
           numbered_active_highlight_border = "0.2em";
           numbered_active_highlight_padding = "0.2em";
           numbered_inactive_padding = "0.2em";
 
           pill = {
             active_width = "12em";
-            height = "12em";
+            height = "4em";
             radius = "0em";
-            width = "12em";
+            width = "4em";
           };
 
           smartHighlight = true;
@@ -166,6 +160,7 @@ in {
         buttons.radius = "0.0em";
         card_radius = "0em";
         enableShadow = false;
+        opacity = 100;
 
         menu = {
           battery.scaling = 100;
@@ -207,9 +202,6 @@ in {
           volume.scaling = 100;
         };
 
-        monochrome = true;
-        opacity = 100;
-
         popover = {
           radius = "0em";
           scaling = 100;
@@ -240,8 +232,8 @@ in {
 
     font = {
       name = fontName;
-      size = toString fontSize + "px";
-      weight = "600";
+      size = "1.0rem";
+      weight = "400";
     };
 
     notification = {

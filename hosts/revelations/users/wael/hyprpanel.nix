@@ -7,15 +7,15 @@
     };
 
     "1" = {
-      "left" = ["workspaces" "windowtitle"];
+      "left" = ["power" "workspaces" "windowtitle"];
       "middle" = ["clock"];
       "right" = ["volume" "microphone" "systray" "notifications"];
     };
 
     "2" = {
       "left" = ["workspaces" "windowtitle"];
-      "middle" = ["cava"];
-      "right" = ["volume" "microphone" "clock"];
+      "middle" = ["cava" "clock"];
+      "right" = ["volume" "microphone" "systray"];
     };
   };
 
