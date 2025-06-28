@@ -1,3 +1,6 @@
+# already set:
+#   XDG_RUNTIME_DIR = "/run/user/$UID";
+#   DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$UID/bus";
 {config, ...}: let
   inherit (config.home.opts.hyprlandEnv) browser shell terminal;
 in {

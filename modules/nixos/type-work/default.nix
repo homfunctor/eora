@@ -2,9 +2,6 @@
 {
   imports = [
     ./chaotic-kernel.nix
-    ./opt-keyring.nix
     ./wm-hyprland.nix
   ];
-
-  programs.seahorse.enable = true;
 }
