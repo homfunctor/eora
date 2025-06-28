@@ -8,6 +8,7 @@
     type-minTTY
 
     # nicer tty
+    ./fish.nix
     ./sops.nix
     ./stylix.nix
     type-niceTTY

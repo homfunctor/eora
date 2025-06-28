@@ -9,130 +9,124 @@ in {
       dropdownGap = "4.5em";
       enableShadow = false;
       floating = false;
-      label_spacing = "0.0em";
+      label_spacing = "0.2em";
       layer = "top";
       location = "top";
       opacity = 100;
       outer_spacing = "0.2em";
       scaling = 100;
-      shadow = "0px 1px 2px 1px ${colors.base02}";
       shadowMargins = "0px 0px 4px 0px";
       transparent = false;
 
       buttons = {
         background_hover_opacity = 100;
         background_opacity = 100;
-        padding_x = "0.7rem";
-        padding_y = "0.2rem";
+        padding_x = "0.1rem";
+        padding_y = "0.1rem";
         radius = "0.0em";
-        spacing = "0.25em";
+        spacing = "0.3em";
         style = "default";
 
-        battery = {
-          enableBorder = true;
-          spacing = "0.5em";
-        };
+        # battery = {
+        #   enableBorder = true;
+        #   spacing = "0.5em";
+        # };
 
-        bluetooth = {
-          enableBorder = true;
-          spacing = "0.5em";
-        };
+        # bluetooth = {
+        #   enableBorder = true;
+        #   spacing = "0.5em";
+        # };
 
         borderSize = "0.08em";
 
-        clock = {
-          enableBorder = true;
-          spacing = "0.5em";
-        };
+        # clock = {
+        #   enableBorder = true;
+        #   spacing = "0.5em";
+        # };
 
-        dashboard = {
-          enableBorder = true;
-          spacing = "0.5em";
-        };
+        # dashboard = {
+        #   enableBorder = true;
+        #   spacing = "0.5em";
+        # };
 
         enableBorders = true;
         innerRadiusMultiplier = "0.0";
 
-        media = {
-          enableBorder = true;
-          spacing = "0.5em";
-        };
-
         modules = {
-          cpu = {
-            enableBorder = true;
-            spacing = "0.5em";
-          };
-
-          cpuTemp = {
-            enableBorder = true;
-            spacing = "0.5em";
-          };
-
-          hypridle = {
-            enableBorder = true;
-            spacing = "0.5em";
-          };
-
-          kbLayout = {
-            enableBorder = true;
-            spacing = "0.5em";
-          };
-
-          microphone = {
-            enableBorder = true;
-            spacing = "0.5em";
-          };
-
-          power = {
-            enableBorder = true;
-            spacing = "0.5em";
-          };
-
-          ram = {
-            enableBorder = true;
-            spacing = "0.5em";
-          };
-
-          storage = {
-            enableBorder = true;
-            spacing = "0.5em";
-          };
-
-          submap = {
-            enableBorder = true;
-            spacing = "0.5em";
-          };
+          #   cpu = {
+          #     enableBorder = true;
+          #     spacing = "0.5em";
+          #   };
+          #
+          #   cpuTemp = {
+          #     enableBorder = true;
+          #     spacing = "0.5em";
+          #   };
+          #
+          #   hypridle = {
+          #     enableBorder = true;
+          #     spacing = "0.5em";
+          #   };
+          #
+          #   kbLayout = {
+          #     enableBorder = true;
+          #     spacing = "0.5em";
+          #   };
+          #
+          #   microphone = {
+          #     enableBorder = true;
+          #     spacing = "0.5em";
+          #   };
+          #
+          #   power = {
+          #     enableBorder = true;
+          #     spacing = "0.5em";
+          #   };
+          #
+          #   ram = {
+          #     enableBorder = true;
+          #     spacing = "0.5em";
+          #   };
+          #
+          #   storage = {
+          #     enableBorder = true;
+          #     spacing = "0.5em";
+          #   };
+          #
+          #   submap = {
+          #     enableBorder = true;
+          #     spacing = "0.5em";
+          #   };
         };
 
-        network = {
-          enableBorder = true;
-          spacing = "0.5em";
-        };
-
-        notifications = {
-          enableBorder = true;
-          spacing = "0.5em";
-        };
-
-        systray = {
-          enableBorder = true;
-          spacing = "0.5em";
-        };
-
-        volume = {
-          enableBorder = true;
-          spacing = "0.5em";
-        };
-
-        windowtitle = {
-          enableBorder = true;
-          spacing = "0.5em";
-        };
-
+        # network = {
+        #   enableBorder = true;
+        #   spacing = "0.5em";
+        # };
+        #
+        # notifications = {
+        #   enableBorder = true;
+        #   spacing = "0.5em";
+        # };
+        #
+        # systray = {
+        #   enableBorder = true;
+        #   spacing = "0.5em";
+        # };
+        #
+        # volume = {
+        #   enableBorder = true;
+        #   spacing = "0.5em";
+        # };
+        #
+        # windowtitle = {
+        #   enableBorder = true;
+        #   spacing = "0.5em";
+        # };
+        #
         workspaces = {
           enableBorder = true;
-          fontSize = "1.0rem";
+          fontSize = "1.2rem";
           numbered_active_highlight_border = "0.2em";
           numbered_active_highlight_padding = "0.2em";
           numbered_inactive_padding = "0.2em";
@@ -148,7 +142,8 @@ in {
           spacing = "0.5em";
         };
 
-        y_margins = "0.4em";
+        x_margins = "0.2em";
+        y_margins = "0.1em";
       };
 
       menus = {
@@ -232,7 +227,7 @@ in {
 
     font = {
       name = fontName;
-      size = "1.0rem";
+      size = "1.2rem";
       weight = "400";
     };
 

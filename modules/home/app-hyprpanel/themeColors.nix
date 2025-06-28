@@ -160,7 +160,7 @@ in {
 
           worldclock = {
             background = "${base02}";
-            border = "${base06}";
+            border = "${base07}";
             icon = "${base06}";
             icon_background = "${base06}";
             text = "${base08}";
@@ -210,13 +210,13 @@ in {
         };
 
         workspaces = {
-          active = "${base06}";
-          available = "${base0D}";
-          background = "${base02}";
-          border = "${base08}";
+          active = "${base08}";
+          available = "${base04}";
+          background = "${base01}";
+          border = "${base09}";
           hover = "${base03}";
-          numbered_active_highlighted_text_color = "${base01}";
-          numbered_active_underline_color = "${base0A}";
+          numbered_active_highlighted_text_color = "${base04}";
+          numbered_active_underline_color = "${base0F}";
           occupied = "${base0F}";
         };
       };
@@ -329,23 +329,23 @@ in {
           };
 
           clock = {
-            background.color = "${base02}";
-            border.color = "${base02}";
+            background.color = "${base01}";
+            border.color = "${base07}";
 
             calendar = {
               contextdays = "${base04}";
               currentday = "${base06}";
               days = "${base05}";
               paginator = "${base06}";
-              weekdays = "${base06}";
+              weekdays = "${base04}";
               yearmonth = "${base0C}";
             };
 
-            card.color = "${base01}";
+            card.color = "${base03}";
             text = "${base08}";
 
             time = {
-              time = "${base08}";
+              time = "${base05}";
               timeperiod = "${base0C}";
             };
 

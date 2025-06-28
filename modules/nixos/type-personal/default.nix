@@ -5,5 +5,6 @@
     ./app-steam.nix
     ./chaotic-ananicy.nix
     ./chaotic-mesa.nix
+    ./opt-torrenting.nix
   ];
 }

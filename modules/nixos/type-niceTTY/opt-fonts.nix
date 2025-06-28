@@ -6,17 +6,25 @@
   environment.variables.LOG_ICONS = "true";
 
   fonts = {
-    enableDefaultPackages = true;
+    enableDefaultPackages = false;
 
     fontconfig.defaultFonts = with config.stylix.fonts; {
-      sansSerif = [sansSerif.name];
-      monospace = [monospace.name];
       emoji = [emoji.name];
+      monospace = [monospace.name];
+      sansSerif = [sansSerif.name];
+      serif = [serif.name];
     };
     fontDir.enable = true;
 
     packages = with pkgs; [
-      fontconfig
+      dejavu_fonts
+      font-awesome
+      material-design-icons
+      material-icons
+      nerd-fonts.iosevka
+      nerd-fonts.noto
+      nerd-fonts."m+"
+      nerd-fonts.symbols-only
       nerd-font-patcher
       noto-fonts
       noto-fonts-cjk-sans

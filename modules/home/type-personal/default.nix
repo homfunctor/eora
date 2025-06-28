@@ -8,7 +8,6 @@
     ./app-lutris.nix
     ./app-nix-tools.nix
     ./app-nixcord.nix
-    ./app-qbittorrent.nix
     ./app-strawberry.nix
     ./app-vivaldi.nix
     ./app-zipunicode.nix

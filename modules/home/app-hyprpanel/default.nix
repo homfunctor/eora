@@ -1,18 +1,3 @@
-# symbols:
-# 🎜 🎞 🎼 💀 💻 💽 💾 📁 📂 🕱
-# 🖸 🖮 🖳 🗁 🗂 🗖 🗔
-# 🗡 🛠 🞎 🞕 󰁟 󰃖 󰃬 󰃭 󰃮 󰃯 󰅩
-# 󰆍 󰆛 󰆟 󰇅
-# 󰇄 󰇃 󰆾 󰈈 󰈉 󰈀
-# 󰊴 󰊗 󰋋 󰋌
-# 󰋊 󰋞 󰌌 󰌠 󰍬 󰍭 󰍮 󰏜
-# 󰏘 󰐥 󰑫 󰒓 󰓓
-# 󰕷 󰘔 󰙯 󰚌 󰚽 󰛄
-# 󰛤 󰟔 󰣒 󰥻 󰦘
-# 󰦣 󰨇 󰨊 󰭿
-# 󰮂 󰯈 󰽴 🍓
-# 󰿤 󱃸 󱄅
-# 󱆀 󱅿 ⬚ ⬜ ⬛
 {
   config,
   flake,
@@ -54,7 +39,7 @@ in {
 
         clock = {
           format = "%a %b %d  %I:%M %p";
-          icon = "󰃭";
+          icon = "";
           middleClick = "";
           rightClick = "";
           scrollDown = "";
@@ -64,68 +49,6 @@ in {
         };
 
         customModules = {
-          cava = {
-            autoSensitivity = true;
-            barCharacters = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
-            bars = 10;
-            channels = 2;
-            framerate = 30;
-            highCutoff = 10000;
-            icon = "🎜";
-            leftClick = "";
-            lowCutoff = 50;
-            middleClick = "";
-            noiseReduction = 0.77;
-            rightClick = "";
-            samplerate = 44100;
-            scrollDown = "";
-            scrollUp = "";
-            showActiveOnly = false;
-            showIcon = true;
-            spaceCharacter = " ";
-            stereo = false;
-          };
-
-          cpu = {
-            icon = "";
-            label = true;
-            leftClick = "";
-            middleClick = "";
-            pollingInterval = 2000;
-            rightClick = "";
-            round = true;
-            scrollDown = "";
-            scrollUp = "";
-          };
-
-          cpuTemp = {
-            icon = "";
-            label = true;
-            leftClick = "";
-            middleClick = "";
-            pollingInterval = 2000;
-            rightClick = "";
-            round = true;
-            scrollDown = "";
-            scrollUp = "";
-            sensor =
-              ''/sys/devices/pci0000:00/0000:00:18.3/''
-              + ''hwmon/hwmon3/temp1_input'';
-            showUnit = true;
-            unit = "metric";
-          };
-
-          kbLayout = {
-            icon = "󰌌";
-            label = true;
-            labelType = "code";
-            leftClick = "";
-            middleClick = "";
-            rightClick = "";
-            scrollDown = "";
-            scrollUp = "";
-          };
-
           microphone = {
             label = true;
             leftClick = "menu:audio";
@@ -138,37 +61,13 @@ in {
           };
 
           power = {
-            icon = "󱄅";
+            icon = "⏻";
             leftClick = "menu:powerdropdown";
             middleClick = "";
             rightClick = "";
             scrollDown = "";
             scrollUp = "";
             showLabel = true;
-          };
-
-          ram = {
-            icon = "";
-            label = true;
-            labelType = "percentage";
-            leftClick = "";
-            middleClick = "";
-            pollingInterval = 2000;
-            rightClick = "";
-            round = true;
-          };
-
-          scrollSpeed = 5;
-
-          storage = {
-            icon = "󰋊";
-            label = true;
-            labelType = "percentage";
-            leftClick = "";
-            middleClick = "";
-            pollingInterval = 2000;
-            rightClick = "";
-            round = false;
           };
         };
 
@@ -209,13 +108,13 @@ in {
           applicationIconEmptyWorkspace = "";
           applicationIconFallback = "󰣆";
           applicationIconMap = {
-            "Alacritty" = "󰞷";
-            "org.gnome.Nautilus" = "";
-            "org.pwmt.zathura" = "󰐣";
+            "Alacritty" = "";
+            "org.gnome.Nautilus" = "";
+            "org.pwmt.zathura" = "";
             "title:Settings" = "";
-            "vivaldi" = "";
+            "vivaldi" = "v";
           };
-          applicationIconOncePerWorkspace = true;
+          applicationIconOncePerWorkspace = false;
           hideUnoccupied = false;
           ignored = "";
           monitorSpecific = true;

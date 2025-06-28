@@ -6,6 +6,8 @@
   inherit (flake.lib) mkAttrOpt mkBoolOpt mkListOpt mkStrOpt;
 in {
   options.nixos.opts = {
+    fishAliases = mkAttrOpt {} "fish shell aliases";
+
     fontSizes = mkAttrOpt {} "host font size settings";
 
     hostName = mkStrOpt "" "host name for configuration";
