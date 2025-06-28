@@ -16,17 +16,26 @@ in {
       buttons = {
         enableBorders = true;
         innerRadiusMultiplier = "0.0";
-        padding_x = "0.5rem";
-        padding_y = "0.1rem";
+        padding_x = "0.4rem";
+        padding_y = "0.2rem";
         radius = "0.0em";
 
         workspaces = {
           fontSize = hplFontSize;
+
+          pill = {
+            active_width = "12em";
+            height = "4em";
+            radius = "0em";
+            width = "4em";
+          };
+
           smartHighlight = true;
-          spacing = "0.0em";
+          spacing = "0.5em";
         };
 
-        y_margins = "0.0em";
+        x_margins = "0.4em";
+        y_margins = "0.1em";
       };
 
       menus = {
@@ -37,34 +46,55 @@ in {
 
         buttons.radius = "0.0em";
         card_radius = "0em";
+        enableShadow = false;
+        opacity = 100;
 
         menu = {
-          battery.scaling = hplScale.battery;
-          clock.scaling = hplScale.clock;
+          battery.scaling = hplScale.bar;
+          bluetooth.scaling = hplScale.bar;
+          clock.scaling = hplScale.bar;
+
+          dashboard = {
+            confirmation_scaling = hplScale.bar;
+
+            profile = {
+              radius = "0em";
+              size = "8.5em";
+            };
+
+            scaling = hplScale.bar;
+          };
+
+          media = {
+            card.tint = 85;
+            scaling = hplScale.bar;
+          };
+
+          network.scaling = hplScale.bar;
 
           notifications = {
             height = "40em";
             pager.show = true;
             radius = "0em";
-            scaling = hplScale.notifications;
+            scaling = hplScale.bar;
             scrollradius = "0em";
             scrollwidth = "0.2em";
           };
 
           power = {
             radius = "0em";
-            scaling = hplScale.power;
+            scaling = hplScale.bar;
           };
 
-          volume.scaling = hplScale.volume;
+          volume.scaling = hplScale.bar;
         };
 
         popover = {
           radius = "0em";
-          scaling = hplScale.popover;
+          scaling = hplScale.bar;
         };
 
-        progress.radius = "0rem";
+        progressradius = "0rem";
 
         scroller = {
           radius = "0em";
@@ -94,14 +124,26 @@ in {
     notification = {
       border_radius = "0em";
       opacity = 100;
-      scaling = hplScale.notification;
+      scaling = hplScale.bar;
+      shadow = "0px 1px 2px 1px ${colors.base02}";
+      shadowMargins = "4px 4px";
     };
 
     osd = {
+      active_monitor = true;
       border.size = "0em";
-      margins = "0px 0px 0px 0px";
+      duration = 2500;
+      enable = true;
+      enableShadow = false;
+      location = "right";
+      margins = "0px 5px 0px 0px";
+      monitor = 0;
+      muted_zero = true;
+      opacity = 100;
+      orientation = "vertical";
       radius = "0em";
-      scaling = hplScale.osd;
+      scaling = hplScale.bar;
+      shadow = "0px 0px 3px 2px ${colors.base02}";
     };
   };
 }

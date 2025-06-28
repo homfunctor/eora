@@ -3,10 +3,10 @@
   lib,
   ...
 }: let
+  inherit (lib) genAttrs listToAttrs;
   inherit
     (flake.lib)
     importAllFileNames
-    listToOpts
     mkAttrOpt
     mkBoolOpt
     mkIntOpt
@@ -31,7 +31,26 @@ in {
 
     hyprlandEnv = mkAttrOpt {} "various hyprland environment settings";
     hyprlandOpts = mkAttrOpt {} "user options for hyprland";
-    hyprpanelLayout = mkAttrOpt {} "user options for hyprpanel layout";
+
+    # hpl: hyprpanel
+    hplFontSize = mkStrOpt "1.2rem" "hyprpanel button and bar font size";
+    hplLayout = mkAttrOpt {} "user options for hyprpanel layout";
+    hplScale =
+      genAttrs [
+        "bar"
+        "battery"
+        "clock"
+        "notification"
+        "notifications"
+        "osd"
+        "popover"
+        "power"
+        "volume"
+      ] (
+        name:
+          mkIntOpt 100 "scale for ${name}"
+      );
+
     hyprpaperOpts = mkAttrOpt {} "user options for hyprpaper";
 
     rofi.columns = mkIntOpt 4 "number of columns to use in rofi";
@@ -46,11 +65,12 @@ in {
       } "default versioning settings";
 
       folder =
-        listToOpts (
-          importAllFileNames ./type-work/app-syncthing/sync-folders
-        ) {
-          enable = mkBoolOpt false "enable syncthing for this directory";
-        };
+        genAttrs (importAllFileNames ./type-work/app-syncthing/sync-folders)
+        (
+          name: {
+            enable = mkBoolOpt false "sync ${name}";
+          }
+        );
     };
 
     username = mkStrOpt "" "username";

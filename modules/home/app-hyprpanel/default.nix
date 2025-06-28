@@ -4,7 +4,7 @@
   pkgs,
   ...
 }: let
-  inherit (config.home.opts) hyprpanelLayout;
+  inherit (config.home.opts) hplLayout;
 in {
   imports = [
     ./themeColors.nix
@@ -18,7 +18,7 @@ in {
     settings = {
       bar = {
         autoHide = "never";
-        layouts = hyprpanelLayout;
+        layouts = hplLayout;
 
         battery = {
           hideLabelWhenFull = false;

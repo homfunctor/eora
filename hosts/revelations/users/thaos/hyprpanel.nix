@@ -1,5 +1,5 @@
 {flake, ...}: {
-  home.opts.hyprpanelLayout = {
+  home.opts.hplLayout = {
     "0" = {
       "left" = ["power" "workspaces" "windowtitle"];
       "middle" = ["clock"];

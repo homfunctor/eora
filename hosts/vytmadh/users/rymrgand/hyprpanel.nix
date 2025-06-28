@@ -1,7 +1,7 @@
 {flake, ...}: let
   inherit (flake.lib) uApp;
 in {
-  home.opts.hyprpanelLayout = {
+  home.opts.hplLayout = {
     "*" = {
       "left" = ["power" "workspaces" "windowtitle"];
       "middle" = ["cpu" "clock" "battery"];

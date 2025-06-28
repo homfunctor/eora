@@ -29,14 +29,6 @@ in rec {
       )
     ];
 
-  # generate options from list of option names and
-  # corresponding set of options
-  listToOpts = listOfOptNames: optAttrSet:
-    genAttrs listOfOptNames
-    (
-      _optName: optAttrSet
-    );
-
   # mkOption utilities
   mkOpt = type: default: description:
     mkOption {
