@@ -16,7 +16,7 @@
 
   # autologin with uwsm. also hyprlock pam access
   security.pam = {
-    sshAgentAuth = false;
+    # todo: sshAgentAuth
 
     services = {
       hyprlock.text = "auth include login";
