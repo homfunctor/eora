@@ -112,7 +112,7 @@ in {
             "org.gnome.Nautilus" = "";
             "org.pwmt.zathura" = "";
             "title:Settings" = "";
-            "vivaldi" = "v";
+            "vivaldi-stable" = "";
           };
           applicationIconOncePerWorkspace = false;
           hideUnoccupied = false;
