@@ -3,7 +3,6 @@
     (inputs.nixpkgs.lib)
     attrNames
     concatStringsSep
-    genAttrs
     filterAttrs
     hasSuffix
     mkOption

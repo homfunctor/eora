@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  inherit (lib) genAttrs listToAttrs;
+  inherit (lib) genAttrs;
   inherit
     (flake.lib)
     importAllFileNames

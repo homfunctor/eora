@@ -1,7 +1,5 @@
 {config, ...}: let
   inherit (config.home.opts) hplFontSize hplScale;
-
-  colors = config.lib.stylix.colors.withHashtag;
   fontName = config.stylix.fonts.serif.name;
 in {
   programs.hyprpanel.settings.theme = {

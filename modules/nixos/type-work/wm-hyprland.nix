@@ -16,7 +16,7 @@
 
   # autologin with uwsm. also hyprlock pam access
   security.pam = {
-    enableSSHAgentAuth = false;
+    sshAgentAuth = false;
 
     services = {
       hyprlock.text = "auth include login";
@@ -36,7 +36,7 @@
           session   required    pam_limits.so
           session   optional    pam_keyinit.so revoke
           session   required    pam_systemd.so
-          session   optional    ${pkgs.gnome.gnome-keyring}/lib/security/pam_gnome_keyring.so auto_start
+          session   optional    ${pkgs.gnome-keyring}/lib/security/pam_gnome_keyring.so auto_start
         '';
       };
     };
