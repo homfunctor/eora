@@ -21,10 +21,5 @@ in {
         };
       };
     };
-
-    uwsm = {
-      enable = true;
-      session = "${getExe pkgs.hyprland}";
-    };
   };
 }
