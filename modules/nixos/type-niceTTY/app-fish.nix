@@ -18,12 +18,13 @@
   programs.fish = {
     enable = true;
 
-    interactiveShellInit = "starship init fish | source";
+    interactiveShellInit = ''
+      starship init fish | source
+      zoxide init fish | source
+    '';
 
     promptInit = "set fish_greeting";
 
     shellAliases = config.nixos.opts.fishAliases;
-
-    shellInit = "zoxide init fish | source";
   };
 }
