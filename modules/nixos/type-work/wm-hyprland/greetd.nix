@@ -23,4 +23,17 @@ in {
       };
     };
   };
+
+  # for autologin to work properly
+  users = {
+    groups.greeter = {};
+    users.greeter = {
+      createHome = true;
+      group = "greeter";
+      home = "/var/lib/greeter";
+      isNormalUser = false;
+      isSystemUser = true;
+      shell = "${pkgs.bash}/bin/bash";
+    };
+  };
 }
