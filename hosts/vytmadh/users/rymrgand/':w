@@ -3,9 +3,8 @@
 in {
   home.opts = {
     hplLayout = {
-      "0" = {
+      "*" = {
         "left" = [
-          "power"
           "workspaces"
           "windowtitle"
         ];
@@ -20,19 +19,20 @@ in {
           "microphone"
           "systray"
           "notifications"
+          "power"
         ];
       };
     };
 
     hplScale = {
       bar = 75;
-      clock = 60;
-      notification = 75;
-      notifications = 50;
-      osd = 75;
-      popover = 60;
-      power = 75;
-      volume = 75;
+      clock = 75;
+      notification = 70;
+      notifications = 70;
+      osd = 70;
+      popover = 70;
+      power = 70;
+      volume = 70;
     };
   };
 

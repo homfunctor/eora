@@ -3,6 +3,7 @@
     hplLayout = {
       "0" = {
         "left" = [
+          "power"
           "workspaces"
           "windowtitle"
         ];
@@ -19,12 +20,12 @@
           "microphone"
           "systray"
           "notifications"
-          "power"
         ];
       };
 
       "1" = {
         "left" = [
+          "power"
           "workspaces"
           "windowtitle"
         ];
@@ -41,12 +42,12 @@
           "microphone"
           "systray"
           "notifications"
-          "power"
         ];
       };
 
       "2" = {
         "left" = [
+          "power"
           "workspaces"
           "windowtitle"
         ];
@@ -63,7 +64,6 @@
           "microphone"
           "systray"
           "notifications"
-          "power"
         ];
       };
     };
