@@ -41,7 +41,7 @@ in {
           clock.scaling = hplScale.clock;
 
           notifications = {
-            height = "40em";
+            height = "80em";
             pager.show = true;
             radius = "0em";
             scaling = hplScale.notifications;

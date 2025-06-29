@@ -6,7 +6,7 @@
   environment.variables.LOG_ICONS = "true";
 
   fonts = {
-    enableDefaultPackages = false;
+    # enableDefaultPackages = true;
 
     fontconfig.defaultFonts = with config.stylix.fonts; {
       emoji = [emoji.name];
@@ -17,13 +17,10 @@
     fontDir.enable = true;
 
     packages = with pkgs; [
-      dejavu_fonts
       font-awesome
       material-design-icons
       material-icons
       nerd-fonts.iosevka
-      nerd-fonts.noto
-      nerd-fonts."m+"
       nerd-fonts.symbols-only
       nerd-font-patcher
       noto-fonts
@@ -31,6 +28,7 @@
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
       noto-fonts-extra
+      unifont
     ];
   };
 }

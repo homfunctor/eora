@@ -2,21 +2,69 @@
   home.opts = {
     hplLayout = {
       "0" = {
-        "left" = ["power" "workspaces" "windowtitle"];
-        "middle" = ["clock"];
-        "right" = ["volume" "microphone" "systray" "notifications"];
+        "left" = [
+          "workspaces"
+          "windowtitle"
+        ];
+        "middle" = [
+          "cpu"
+          "ram"
+          "storage"
+          "clock"
+          "media"
+          "cava"
+        ];
+        "right" = [
+          "volume"
+          "microphone"
+          "systray"
+          "notifications"
+          "power"
+        ];
       };
 
       "1" = {
-        "left" = ["power" "workspaces" "windowtitle"];
-        "middle" = ["clock"];
-        "right" = ["volume" "microphone" "systray" "notifications"];
+        "left" = [
+          "workspaces"
+          "windowtitle"
+        ];
+        "middle" = [
+          "cpu"
+          "ram"
+          "storage"
+          "clock"
+          "media"
+          "cava"
+        ];
+        "right" = [
+          "volume"
+          "microphone"
+          "systray"
+          "notifications"
+          "power"
+        ];
       };
 
       "2" = {
-        "left" = ["workspaces"];
-        "middle" = ["clock"];
-        "right" = ["volume" "microphone" "systray"];
+        "left" = [
+          "workspaces"
+          "windowtitle"
+        ];
+        "middle" = [
+          "cpu"
+          "ram"
+          "storage"
+          "clock"
+          "media"
+          "cava"
+        ];
+        "right" = [
+          "volume"
+          "microphone"
+          "systray"
+          "notifications"
+          "power"
+        ];
       };
     };
 

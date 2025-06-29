@@ -2,6 +2,6 @@
 {
   imports = [
     ./chaotic-kernel.nix
-    ./wm-hyprland.nix
+    ./wm-hyprland
   ];
 }
