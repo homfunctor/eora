@@ -23,6 +23,7 @@
       material-symbols
       nerd-font-patcher
       nerd-fonts.iosevka
+      nerd-fonts.jetbrains-mono
       nerd-fonts.symbols-only
       noto-fonts
       noto-fonts-cjk-sans

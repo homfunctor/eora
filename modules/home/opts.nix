@@ -40,6 +40,8 @@ in {
         "bar"
         "battery"
         "clock"
+        "dashboard"
+        "media"
         "notification"
         "notifications"
         "osd"
@@ -49,6 +51,48 @@ in {
       ] (
         name:
           mkIntOpt 100 "scale for ${name}"
+      );
+
+    # shortcuts for hyprpanel dashboard menu
+    hplLeftcuts =
+      genAttrs [
+        "shortcut1"
+        "shortcut2"
+        "shortcut3"
+        "shortcut4"
+      ] (
+        name:
+          mkAttrOpt {} "${name} settings"
+      );
+
+    hplRightcuts =
+      genAttrs [
+        "shortcut1"
+        "shortcut3"
+      ] (
+        name:
+          mkAttrOpt {} "${name} settings"
+      );
+
+    # directories for hyprpanel dashboard menu
+    hplDirleft =
+      genAttrs [
+        "directory1"
+        "directory2"
+        "directory3"
+      ] (
+        name:
+          mkAttrOpt {} "${name} settings"
+      );
+
+    hplDirright =
+      genAttrs [
+        "directory1"
+        "directory2"
+        "directory3"
+      ] (
+        name:
+          mkAttrOpt {} "${name} settings"
       );
 
     hyprpaperOpts = mkAttrOpt {} "user options for hyprpaper";

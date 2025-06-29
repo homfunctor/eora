@@ -1,3 +1,4 @@
+# todo: can this be made to display only on one specific monitor?
 {
   config,
   lib,
@@ -9,7 +10,7 @@
   args =
     ''--asterisks  --remember-session --time --time-format "${timeFmt}"''
     + ''
-      theme "${tgTheme}" --user-menu --cmd'';
+      --theme "${tgTheme}" --user-menu --cmd'';
   tgPkg = getExe pkgs.greetd.tuigreet;
   tgTheme =
     ''border=gray;text=cyan;prompt=white;time=cyan;action=blue;''

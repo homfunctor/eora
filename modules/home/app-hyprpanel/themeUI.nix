@@ -40,6 +40,20 @@ in {
           battery.scaling = hplScale.battery;
           clock.scaling = hplScale.clock;
 
+          dashboard = {
+            profile = {
+              radius = "0em";
+              size = "8.5em";
+            };
+
+            scaling = hplScale.dashboard;
+          };
+
+          media = {
+            card.tint = 85;
+            scaling = hplScale.media;
+          };
+
           notifications = {
             height = "80em";
             pager.show = true;

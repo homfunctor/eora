@@ -25,8 +25,8 @@ in {
         '';
 
       character = {
-        error_symbol = "[❄️](bold ${colors.base03})";
-        success_symbol = "[❄️](bold ${colors.base05})";
+        error_symbol = "[󰥭](bold ${colors.base03})";
+        success_symbol = "[󰥭](bold ${colors.base05})";
       };
 
       directory = {
