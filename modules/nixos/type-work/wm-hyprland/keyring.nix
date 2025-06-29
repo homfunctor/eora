@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: let
-  keyringPkg = pkgs.gnome.gnome-keyring;
+  keyringPkg = pkgs.gnome-keyring;
 in {
   boot.initrd.systemd.enable = true;
   programs.seahorse.enable = true;
@@ -12,6 +12,7 @@ in {
   security.pam.services = {
     login = {
       enableGnomeKeyring = true;
+      pamMount = true;
       text = ''
         auth       include login
         account    include login
@@ -23,6 +24,7 @@ in {
 
     greetd = {
       enableGnomeKeyring = true;
+      pamMount = true;
       text = ''
         auth       include greetd
         account    include greetd
@@ -34,6 +36,7 @@ in {
 
     uwsm = {
       enableGnomeKeyring = true;
+      pamMount = true;
       text = ''
         auth       include login
         account    include login
@@ -45,6 +48,7 @@ in {
     };
   };
 
+  # todo: remove from uwsm env as it is set here
   environment.sessionVariables = {
     GNOME_KEYRING_CONTROL = "$XDG_RUNTIME_DIR/keyring";
     SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/keyring/ssh";

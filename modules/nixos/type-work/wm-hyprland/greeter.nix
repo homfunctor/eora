@@ -6,7 +6,7 @@
 }: let
   inherit (config.nixos.opts) adminuser;
 
-  keyringPkg = "${pkgs.gnome.gnome-keyring}";
+  keyringPkg = "${pkgs.gnome-keyring}";
   sessionCmd = "${lib.getExe pkgs.uwsm} start hyprland-uwsm.desktop";
 in {
   services.greetd = {
