@@ -5,6 +5,7 @@ in {
     hplLayout = {
       "0" = {
         "left" = [
+          "dashboard"
           "workspaces"
           "windowtitle"
         ];
