@@ -7,8 +7,7 @@
   inherit (lib) getExe;
 
   # let's me autologin to adminUser, logout then login to workuser
-  # args = "--asterisks --remember --remember-user-session --time --user-menu --cmd";
-  args = "--asterisks  --time --user-menu --cmd";
+  args = "--asterisks  --remember-session --time --user-menu --cmd";
   tgPkg = getExe pkgs.greetd.tuigreet;
 
   default_session = {
