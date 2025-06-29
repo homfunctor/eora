@@ -19,7 +19,6 @@ in {
           "volume"
           "microphone"
           "systray"
-          "power"
         ];
       };
 
@@ -40,7 +39,6 @@ in {
           "microphone"
           "systray"
           "notifications"
-          "power"
         ];
       };
 
