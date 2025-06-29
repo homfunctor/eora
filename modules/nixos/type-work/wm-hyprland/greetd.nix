@@ -5,14 +5,18 @@
   ...
 }: let
   inherit (lib) getExe;
-  args = "--remember --time --cmd";
+  args = "--asterisks --remember --remember-user-session --time --cmd";
   initial_session = {
-    command = "${getExe pkgs.uwsm} start hyprland-uwsm.desktop";
+    command = ''
+      ${getExe pkgs.uwsm} start hyprland-uwsm.desktop
+    '';
     user = config.nixos.opts.adminuser;
   };
 in {
   services.greetd = {
     enable = true;
+    restart = false;
+
     settings = {
       inherit initial_session;
       default_session = {
@@ -24,16 +28,13 @@ in {
     };
   };
 
-  # for autologin to work properly
-  users = {
-    groups.greeter = {};
-    users.greeter = {
-      createHome = true;
-      group = "greeter";
-      home = "/var/lib/greeter";
-      isNormalUser = false;
-      isSystemUser = true;
-      shell = "${pkgs.bash}/bin/bash";
-    };
+  systemd.services.greetd.serviceConfig = {
+    StandardError = "journal";
+    StandardInput = "tty";
+    StandardOutput = "tty";
+    TTYReset = true;
+    TTYVHangup = true;
+    TTYVTDisallocate = true;
+    Type = "idle";
   };
 }
