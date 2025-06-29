@@ -1,7 +1,7 @@
 {
   imports = [
-    ./greeter.nix
     ./hyprland.nix
     ./keyring.nix
+    ./login.nix
   ];
 }
