@@ -1,27 +1,20 @@
-# todo: autologin
-# {
-#   config,
-#   lib,
-#   pkgs,
-#   ...
-# }:
-# let
-#   inherit (config.nixos.opts) adminuser;
-#   inherit (lib) getExe;
-# in
-{
+{pkgs, ...}: {
+  environment = {
+    pathsToLink = ["/shares/icon"];
+    systemPackages = [pkgs.libnotify];
+  };
+
+  hardware.brillo.enable = true;
+
   programs = {
     hyprland = {
       enable = true;
       withUWSM = true;
     };
-
     uwsm.enable = true;
   };
 
   security.pam.services.hyprlock.text = "auth include login";
-
-  boot.initrd.systemd.enable = true;
 
   services.xserver.enable = false;
 }

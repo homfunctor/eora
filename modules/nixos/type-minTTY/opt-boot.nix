@@ -16,10 +16,10 @@
     kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
 
     kernelParams = [
+      "plymouth.use-simpledrm"
       "quiet"
       "rd.udev.log_level=3"
-      "splash"
-      "systemd.show_status=false"
+      "systemd.show_status=auto"
     ];
 
     loader = {

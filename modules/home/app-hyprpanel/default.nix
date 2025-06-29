@@ -153,7 +153,7 @@ in {
 
         power = {
           confirmation = false;
-          logout = "uwsm stop";
+          logout = ''systemctl --user stop "wayland-wm@*.service"'';
           lowBatteryNotification = true;
           reboot = "systemctl reboot";
           showLabel = true;

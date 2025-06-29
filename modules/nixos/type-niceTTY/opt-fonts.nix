@@ -20,13 +20,14 @@
       font-awesome
       material-design-icons
       material-icons
+      material-symbols
+      nerd-font-patcher
       nerd-fonts.iosevka
       nerd-fonts.symbols-only
-      nerd-font-patcher
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
-      noto-fonts-color-emoji
+      noto-fonts-emoji
       noto-fonts-extra
       unifont
     ];
