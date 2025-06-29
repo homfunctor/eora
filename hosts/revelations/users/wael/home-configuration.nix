@@ -49,7 +49,7 @@
         Work.enable = true;
       };
 
-      username = "wael";
+      userName = "wael";
     };
   };
 }

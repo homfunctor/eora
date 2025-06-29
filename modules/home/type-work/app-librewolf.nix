@@ -3,7 +3,7 @@
   flake,
   ...
 }: let
-  inherit (config.home.opts) username;
+  inherit (config.home.opts) userName;
 in {
   imports = [
     flake.modules.home.stylix-librewolf
@@ -12,7 +12,7 @@ in {
   programs.librewolf = {
     enable = true;
 
-    profiles."${username}" = {};
+    profiles."${userName}" = {};
 
     settings = {
       "browser.policies.applied" = true;

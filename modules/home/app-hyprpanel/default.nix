@@ -5,6 +5,11 @@
   ...
 }: let
   inherit (config.home.opts) hplLayout;
+
+  logoutCmd = ''systemctl --user stop "wayland-wm@*.service"'';
+  rebootCmd = "systemctl reboot";
+  shutdownCmd = "systemctl poweroff";
+  sleepCmd = "systemctl suspend";
 in {
   imports = [
     ./themeColors.nix
@@ -153,12 +158,12 @@ in {
 
         power = {
           confirmation = false;
-          logout = ''systemctl --user stop "wayland-wm@*.service"'';
+          logout = logoutCmd;
           lowBatteryNotification = true;
-          reboot = "systemctl reboot";
+          reboot = rebootCmd;
           showLabel = true;
-          shutdown = "systemctl poweroff";
-          sleep = "systemctl suspend";
+          shutdown = shutdownCmd;
+          sleep = sleepCmd;
         };
 
         transition = "crossfade";

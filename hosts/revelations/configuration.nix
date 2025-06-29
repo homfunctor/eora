@@ -41,8 +41,8 @@
 
       sops.user.enable = true;
 
-      adminuser = "wael";
-      usernames = ["wael" "thaos"];
+      adminUser = "wael";
+      userNames = ["wael" "thaos"];
     };
   };
 }

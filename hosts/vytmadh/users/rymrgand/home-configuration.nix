@@ -33,7 +33,7 @@
         Work.enable = true;
       };
 
-      username = "rymrgand";
+      userName = "rymrgand";
     };
   };
 }

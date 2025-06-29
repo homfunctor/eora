@@ -6,8 +6,9 @@
 }: let
   inherit (lib) getExe;
 
-  # let's me autologin to adminuser, logout then login to workuser
-  args = "--asterisks --remember --remember-user-session --time --user-menu --cmd";
+  # let's me autologin to adminUser, logout then login to workuser
+  # args = "--asterisks --remember --remember-user-session --time --user-menu --cmd";
+  args = "--asterisks  --time --user-menu --cmd";
   tgPkg = getExe pkgs.greetd.tuigreet;
 
   default_session = {
@@ -17,7 +18,7 @@
 
   initial_session = {
     command = "${getExe pkgs.uwsm} start hyprland-uwsm.desktop";
-    user = config.nixos.opts.adminuser;
+    user = config.nixos.opts.adminUser;
   };
 in {
   # auto-logins to Hyprland on boot (passwd used to decrypt at boot)

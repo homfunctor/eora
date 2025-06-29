@@ -3,10 +3,10 @@
   lib,
   ...
 }: let
-  inherit (config.home.opts) username;
+  inherit (config.home.opts) userName;
 
   dirName = "Fish";
-  homeDirectory = "/home/${username}";
+  homeDirectory = "/home/${userName}";
 
   cfg = config.home.opts.sync;
 in {

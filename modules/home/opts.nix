@@ -73,6 +73,6 @@ in {
         );
     };
 
-    username = mkStrOpt "" "username";
+    userName = mkStrOpt "" "user name. that by which the user is named.";
   };
 }

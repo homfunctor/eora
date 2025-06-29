@@ -31,7 +31,7 @@
         Work.enable = true;
       };
 
-      username = "thaos";
+      userName = "thaos";
     };
   };
 }
