@@ -13,7 +13,6 @@ in {
           "cpu"
           "ram"
           "clock"
-          "media"
           "cava"
         ];
         "right" = [
@@ -34,7 +33,6 @@ in {
           "cpu"
           "ram"
           "clock"
-          "media"
           "cava"
         ];
         "right" = [
