@@ -6,22 +6,28 @@
 }: let
   inherit (lib) getExe;
 
-  # let's me autologin to adminUser, logout then login to workuser
-  args = "--asterisks  --remember-session --time --user-menu --cmd";
+  args =
+    ''--asterisks  --remember-session --time --time-format "${timeFmt}"''
+    + ''
+      theme "${tgTheme}" --user-menu --cmd'';
   tgPkg = getExe pkgs.greetd.tuigreet;
+  tgTheme =
+    ''border=gray;text=cyan;prompt=white;time=cyan;action=blue;''
+    + ''button=white;container=black;input=cyan'';
+  timeFmt = "%a %b %d  %I:%M %p";
 
+  # log back in after logging out
   default_session = {
     command = "${tgPkg}  ${args} ${initial_session.command}";
     user = "greeter";
   };
 
+  # autologin to Hyprland with uwsm
   initial_session = {
     command = "${getExe pkgs.uwsm} start hyprland-uwsm.desktop";
     user = config.nixos.opts.adminUser;
   };
 in {
-  # auto-logins to Hyprland on boot (passwd used to decrypt at boot)
-  # if logged out, then run tuigreet (for switching to work account)
   services.greetd = {
     enable = true;
     settings = {
