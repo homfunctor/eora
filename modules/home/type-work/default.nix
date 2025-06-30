@@ -17,7 +17,6 @@
     ./app-udiskie.nix
     ./app-vlc.nix
     ./app-zathura.nix
-    ./opt-keyring.nix
     ./opt-mime.nix
     ./opt-stylix
     ./opt-xdg.nix

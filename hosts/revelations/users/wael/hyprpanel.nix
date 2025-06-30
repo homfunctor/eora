@@ -93,7 +93,7 @@ in {
 
       shortcut4 = {
         command = uApp "alacritty --working-directory eora -e yazi";
-        icon = "󰼪";
+        icon = "";
         tooltip = "Browse Flake";
       };
     };
@@ -112,7 +112,7 @@ in {
       };
     };
 
-    hplDirleft = {
+    hplLeftdir = {
       directory1 = {
         command = uApp "nautilus -w";
         label = "󰋜 Home";
@@ -129,7 +129,7 @@ in {
       };
     };
 
-    hplDirright = {
+    hplRightdir = {
       directory1 = {
         command = uApp "nautilus -w Books";
         label = "󱉟 Books";

@@ -1,6 +1,5 @@
 {lib, ...}: {
   services = {
-    pulseaudio.enable = lib.mkForce false;
     pipewire = {
       enable = true;
 
@@ -20,6 +19,8 @@
         };
       };
     };
+
+    pulseaudio.enable = lib.mkForce false;
   };
 
   security.rtkit.enable = true;

@@ -6,11 +6,11 @@
   ];
 
   networking = {
-    nameservers = ["1.1.1.1" "8.8.8.8"];
     firewall = {
       allowedTCPPorts = [11639];
       allowedUDPPorts = [11639];
       checkReversePath = false;
     };
+    nameservers = ["1.1.1.1" "8.8.8.8"];
   };
 }

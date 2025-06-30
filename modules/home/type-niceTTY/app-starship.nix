@@ -25,29 +25,14 @@ in {
         '';
 
       character = {
-        error_symbol = "[󰥭](bold ${colors.base03})";
-        success_symbol = "[󰥭](bold ${colors.base05})";
+        error_symbol = "[󰿈](bold ${colors.base03})";
+        success_symbol = "[󰿈](bold ${colors.base05})";
       };
 
       directory = {
         format = "[ $path ]($style)";
         read_only = " [󰌾](${colors.base04})";
         style = "fg:${colors.base00} bg:${colors.base05}";
-
-        substitutions = {
-          "Config" = " ";
-          "Documents" = "󰈙 ";
-          "Downloads" = " ";
-          "Git" = "󰊢 ";
-          "Music" = "󰝚 ";
-          "Pictures" = "󰉏 ";
-          "Projects" = "󰚯 ";
-          "Videos" = "󰕧 ";
-          "dotfiles" = "󰟐 ";
-          "github" = " ";
-        };
-
-        home_symbol = "🏠 ";
       };
 
       git_branch = {
@@ -71,14 +56,6 @@ in {
         style = "fg:${colors.base07} bg:${colors.base04}";
         symbol = " ";
       };
-
-      lua.symbol = " ";
-      memory_usage.symbol = "󰍛 ";
-      nodejs.symbol = " ";
-      package.symbol = "󰏗 ";
-      python.symbol = " ";
-      rlang.symbol = "󰟔 ";
-      rust.symbol = " ";
     };
   };
 }

@@ -6,7 +6,6 @@
 }: {
   environment.systemPackages = with pkgs; [
     just
-    killall
     nix-output-monitor
     sbctl # for lanzaboote
     # make sure these actually get used

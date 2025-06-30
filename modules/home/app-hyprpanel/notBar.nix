@@ -7,8 +7,8 @@
   inherit
     (config.home.opts)
     hostName
-    hplDirleft
-    hplDirright
+    hplLeftdir
+    hplRightdir
     hplLeftcuts
     hplRightcuts
     userName
@@ -30,6 +30,7 @@ in {
 
     hyprpanel = {
       restartAgs = true;
+      # todo: what is the uwsm way to do this?
       restartCommand =
         ''${pkgs.hyprpanel}/bin/hyprpanel q; ''
         + ''${pkgs.hyprpanel}/bin/hyprpanel'';
@@ -49,14 +50,8 @@ in {
 
         directories = {
           enabled = true;
-
-          left = {
-            inherit (hplDirleft) directory1 directory2 directory3;
-          };
-
-          right = {
-            inherit (hplDirright) directory1 directory2 directory3;
-          };
+          left = {inherit (hplLeftdir) directory1 directory2 directory3;};
+          right = {inherit (hplRightdir) directory1 directory2 directory3;};
         };
 
         powermenu = {
@@ -75,13 +70,8 @@ in {
 
         shortcuts = {
           enabled = true;
-          left = {
-            inherit (hplLeftcuts) shortcut1 shortcut2 shortcut3 shortcut4;
-          };
-
-          right = {
-            inherit (hplRightcuts) shortcut1 shortcut3;
-          };
+          left = {inherit (hplLeftcuts) shortcut1 shortcut2 shortcut3 shortcut4;};
+          right = {inherit (hplRightcuts) shortcut1 shortcut3;};
         };
 
         stats.enabled = false;

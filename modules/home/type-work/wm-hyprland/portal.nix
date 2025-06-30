@@ -3,17 +3,12 @@
     enable = true;
 
     config = {
-      common = {
-        default = [
-          "gtk"
-          "hyprland"
-        ];
-        # "org.freedesktop.impl.portal.Secret" = ["gnome-keyring"];
-      };
+      common.default = [
+        "gtk"
+        "hyprland"
+      ];
 
-      hyprland = {
-        "org.freedesktop.impl.portal.FileChooser" = "gtk";
-      };
+      hyprland."org.freedesktop.impl.portal.FileChooser" = "gtk";
     };
 
     extraPortals = with pkgs; [

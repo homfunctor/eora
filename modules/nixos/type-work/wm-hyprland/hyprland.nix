@@ -1,9 +1,5 @@
-{pkgs, ...}: {
-  environment = {
-    pathsToLink = ["/shares/icon"];
-    systemPackages = [pkgs.libnotify];
-  };
-
+# todo: do some reading https://github.com/Vladimir-csp/uwsm?tab=readme-ov-file
+{
   hardware.brillo.enable = true;
 
   programs = {

@@ -17,16 +17,16 @@
     + ''button=white;container=black;input=cyan'';
   timeFmt = "%a %b %d  %I:%M %p";
 
-  # log back in after logging out
-  default_session = {
-    command = "${tgPkg}  ${args} ${initial_session.command}";
-    user = "greeter";
-  };
-
   # autologin to Hyprland with uwsm
   initial_session = {
     command = "${getExe pkgs.uwsm} start hyprland-uwsm.desktop";
     user = config.nixos.opts.adminUser;
+  };
+
+  # enter tuigreet after logging out
+  default_session = {
+    command = "${tgPkg} ${args} ${initial_session.command}";
+    user = "greeter";
   };
 in {
   services.greetd = {
@@ -38,12 +38,12 @@ in {
   };
 
   systemd.services.greetd.serviceConfig = {
-    Type = "idle";
+    StandardError = "journal";
     StandardInput = "tty";
     StandardOutput = "tty";
-    StandardError = "journal";
     TTYReset = true;
     TTYVHangup = true;
     TTYVTDisallocate = true;
+    Type = "idle";
   };
 }

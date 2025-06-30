@@ -10,25 +10,25 @@ in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       # applications
-      "${mod}, E, exec, ${uApp "nautilus -w"}"
       "${mod} SHIFT, E, exec, ${uApp "alacritty --working-directory ~/eora -e yazi"}"
-      "${mod}, W, exec, ${uApp "alacritty"}"
       "${mod} SHIFT, W, exec, ${uApp "alacritty --working-directory ~/eora"}"
+      "${mod}, E, exec, ${uApp "nautilus -w"}"
+      "${mod}, W, exec, ${uApp "alacritty"}"
 
       # hyprpanel
-      "${mod}, X, exec, ${uTog "hyprpanel t powerdropdownmenu"}"
-      "${mod}, N, exec, ${uTog "hyprpanel t notificationsmenu"}"
-      "${mod}, grave, exec, ${uTog "hyprpanel t dashboardmenu"}"
       "${mod}, A, exec, ${uTog "hyprpanel t audiomenu"}"
       "${mod}, C, exec, ${uTog "hyprpanel t calendarmenu"}"
+      "${mod}, N, exec, ${uTog "hyprpanel t notificationsmenu"}"
+      "${mod}, X, exec, ${uTog "hyprpanel t powerdropdownmenu"}"
+      "${mod}, grave, exec, ${uTog "hyprpanel t dashboardmenu"}"
 
       # launcher
       "${mod}, R, exec, rofi -show drun -run-command 'uwsm app -- {cmd}'"
 
       # window management
-      "${mod}, T, togglefloating"
       "${mod}, D, togglesplit"
       "${mod}, F, fullscreen"
+      "${mod}, T, togglefloating"
 
       # resize window (vim-like)
       "${mod} CTRL, H, resizeactive, -20 0"
@@ -63,15 +63,15 @@ in {
       "${mod} SHIFT, right, movewindow, r"
 
       # simulated alt tab behavior
-      "ALT, Tab, cyclenext"
       "ALT, Tab, bringactivetotop"
+      "ALT, Tab, cyclenext"
 
       # misc controls
-      "${mod}, Q, killactive"
       "${mod} ALT, L, exec, ${uApp "hyprlock"}"
-      "${mod}, mouse:276, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-      "${mod}, mouse:275, exec,  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      "${mod}, Q, killactive"
       "${mod}, mouse:274, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      "${mod}, mouse:275, exec,  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      "${mod}, mouse:276, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
       ", PRINT, exec, ${uApp "grimblast"} --freeze --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
 
       # workspaces
@@ -92,18 +92,18 @@ in {
     ];
 
     bindl = [
+      ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      ", XF86AudioNext, exec, wpctl next"
       ", XF86AudioPlay, exec, wpctl play-pause"
       ", XF86AudioPrev, exec, wpctl previous"
-      ", XF86AudioNext, exec, wpctl next"
-      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
     ];
 
     bindle = [
-      ", XF86AudioRaiseVolume, exec, wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%+"
       ", XF86AudioLowerVolume, exec, wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%-"
-      ", XF86MonBrightnessUp, exec, brillo -q -u 300000 -A 5"
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%+"
       ", XF86MonBrightnessDown, exec, brillo -q -u 300000 -U 5"
+      ", XF86MonBrightnessUp, exec, brillo -q -u 300000 -A 5"
     ];
 
     bindm = [

@@ -8,7 +8,6 @@
   inherit (config.home.opts.rofi) columns;
   inherit (config.lib.formats.rasi) mkLiteral;
   inherit (config.stylix.fonts) monospace;
-  inherit (lib) mkForce;
 
   colors = config.lib.stylix.colors.withHashtag;
   terminalPkg = "${pkgs.alacritty}/bin/alacritty";
@@ -38,7 +37,7 @@ in {
       terminal = terminalPkg;
     };
 
-    theme = mkForce {
+    theme = lib.mkForce {
       "*" = {
         background-color = mkLiteral "transparent";
         font = monospace.name;

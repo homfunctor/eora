@@ -46,6 +46,7 @@ in {
       customModules = {
         cava = {
           icon = "";
+          leftClick = "";
           middleClick = "";
           rightClick = "";
           scrollDown = "";
@@ -56,6 +57,7 @@ in {
 
         cpu = {
           icon = "󰍛";
+          leftClick = "";
           middleClick = "";
           rightClick = "";
           scrollDown = "";
@@ -86,6 +88,7 @@ in {
 
         ram = {
           icon = "";
+          leftClick = "";
           middleClick = "";
           rightClick = "";
           scrollDown = "";
@@ -97,16 +100,6 @@ in {
       launcher = {
         icon = "";
         rightClick = "rofi -show drun -run-command 'uwsm app -- {cmd}'";
-      };
-
-      media = {
-        leftClick = "";
-        middleClick = "";
-        rightClick = "";
-        scrollDown = "";
-        scrollUp = "";
-        show_active_only = true;
-        truncation_size = 15;
       };
 
       notifications = {
@@ -143,8 +136,6 @@ in {
       };
 
       workspaces = {
-        applicationIconEmptyWorkspace = "";
-        applicationIconFallback = "󰣆";
         applicationIconMap = {
           "Alacritty" = "";
           "org.gnome.Nautilus" = "";
@@ -153,20 +144,11 @@ in {
           "vivaldi-stable" = "";
         };
         applicationIconOncePerWorkspace = false;
-        hideUnoccupied = false;
-        ignored = "";
-        monitorSpecific = true;
-        numbered_active_indicator = "underline";
-        reverse_scroll = false;
-        scroll_speed = 5;
-        showAllActive = true;
         showApplicationIcons = true;
         showWsIcons = true;
         show_icons = true;
         show_numbered = true;
-        spacing = 1;
         workspaceIconMap = {};
-        workspaceMask = false;
         workspaces = 6;
       };
     };

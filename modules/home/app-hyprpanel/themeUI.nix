@@ -68,7 +68,10 @@ in {
             scaling = hplScale.power;
           };
 
-          volume.scaling = hplScale.volume;
+          volume = {
+            radius = "0em";
+            scaling = hplScale.volume;
+          };
         };
 
         popover = {

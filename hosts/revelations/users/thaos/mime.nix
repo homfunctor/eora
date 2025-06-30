@@ -4,7 +4,7 @@
     audio = ["vlc.desktop"];
     browser = ["librewolf.desktop"];
     directory = ["org.gnome.Nautilus.desktop"];
-    image = ["pix.desktop"];
+    image = ["org.gnome.Loupe.desktop"];
     office = ["onlyoffice-desktopeditors.desktop"];
     pdf = ["org.gnome.Papers.desktop"];
     terminal = ["alacritty.desktop"];

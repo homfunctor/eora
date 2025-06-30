@@ -4,6 +4,7 @@
     brillo
     ffmpeg-full
     inotify-tools
+    libnotify
     libwebp
     networkmanagerapplet
     p7zip

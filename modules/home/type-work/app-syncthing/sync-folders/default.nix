@@ -6,6 +6,7 @@
     ./Math.nix
     ./Misc.nix
     ./Nix.nix
+    ./Python.nix
     ./Rust.nix
     ./Work.nix
   ];

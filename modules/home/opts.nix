@@ -3,7 +3,6 @@
   lib,
   ...
 }: let
-  inherit (lib) genAttrs;
   inherit
     (flake.lib)
     importAllFileNames
@@ -12,6 +11,7 @@
     mkIntOpt
     mkStrOpt
     ;
+  inherit (lib) genAttrs;
 in {
   options.home.opts = {
     # finer control over which are enabled as some are very bulky
@@ -25,9 +25,7 @@ in {
     customUserDirs = mkAttrOpt {} "custom settings for user directories";
     defaultApps = mkAttrOpt {} "default applications";
 
-    hostName =
-      mkStrOpt ""
-      "host name. name of host. that by which the host is named";
+    hostName = mkStrOpt "" "host name. name of host. that by which the host is named";
 
     hyprlandEnv = mkAttrOpt {} "various hyprland environment settings";
     hyprlandOpts = mkAttrOpt {} "user options for hyprland";
@@ -35,65 +33,45 @@ in {
     # hpl: hyprpanel
     hplFontSize = mkStrOpt "1.2rem" "hyprpanel button and bar font size";
     hplLayout = mkAttrOpt {} "user options for hyprpanel layout";
-    hplScale =
-      genAttrs [
-        "bar"
-        "battery"
-        "clock"
-        "dashboard"
-        "media"
-        "notification"
-        "notifications"
-        "osd"
-        "popover"
-        "power"
-        "volume"
-      ] (
-        name:
-          mkIntOpt 100 "scale for ${name}"
-      );
+    hplScale = genAttrs [
+      "bar"
+      "battery"
+      "clock"
+      "dashboard"
+      "media"
+      "notification"
+      "notifications"
+      "osd"
+      "popover"
+      "power"
+      "volume"
+    ] (name: mkIntOpt 100 "scale for ${name}");
 
     # shortcuts for hyprpanel dashboard menu
-    hplLeftcuts =
-      genAttrs [
-        "shortcut1"
-        "shortcut2"
-        "shortcut3"
-        "shortcut4"
-      ] (
-        name:
-          mkAttrOpt {} "${name} settings"
-      );
+    hplLeftcuts = genAttrs [
+      "shortcut1"
+      "shortcut2"
+      "shortcut3"
+      "shortcut4"
+    ] (name: mkAttrOpt {} "${name} settings");
 
-    hplRightcuts =
-      genAttrs [
-        "shortcut1"
-        "shortcut3"
-      ] (
-        name:
-          mkAttrOpt {} "${name} settings"
-      );
+    hplRightcuts = genAttrs [
+      "shortcut1"
+      "shortcut3"
+    ] (name: mkAttrOpt {} "${name} settings");
 
     # directories for hyprpanel dashboard menu
-    hplDirleft =
-      genAttrs [
-        "directory1"
-        "directory2"
-        "directory3"
-      ] (
-        name:
-          mkAttrOpt {} "${name} settings"
-      );
+    hplLeftdir = genAttrs [
+      "directory1"
+      "directory2"
+      "directory3"
+    ] (name: mkAttrOpt {} "${name} settings");
 
-    hplDirright =
-      genAttrs [
-        "directory1"
-        "directory2"
-        "directory3"
-      ] (
-        name:
-          mkAttrOpt {} "${name} settings"
-      );
+    hplRightdir = genAttrs [
+      "directory1"
+      "directory2"
+      "directory3"
+    ] (name: mkAttrOpt {} "${name} settings");
 
     hyprpaperOpts = mkAttrOpt {} "user options for hyprpaper";
 
@@ -110,11 +88,7 @@ in {
 
       folder =
         genAttrs (importAllFileNames ./type-work/app-syncthing/sync-folders)
-        (
-          name: {
-            enable = mkBoolOpt false "sync ${name}";
-          }
-        );
+        (name: {enable = mkBoolOpt false "sync ${name}";});
     };
 
     userName = mkStrOpt "" "user name. that by which the user is named.";

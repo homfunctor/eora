@@ -1,4 +1,3 @@
-# boot settings
 {
   lib,
   pkgs,

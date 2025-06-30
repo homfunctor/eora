@@ -1,5 +1,11 @@
 # nix settings for nix to nix with
-{inputs, ...}: {
+{
+  inputs,
+  lib,
+  ...
+}: let
+  flakeInputs = lib.filterAttrs (_: v: lib.isType "flake" v) inputs;
+in {
   documentation = {
     enable = true;
     dev.enable = false;
@@ -25,11 +31,14 @@
       options = "--delete-older-than 7d";
       persistent = true;
     };
-
-    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     optimise.automatic = true;
 
+    # all the cool kids do it
+    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
+    nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+
     settings = {
+      accept-flake-config = false;
       allowed-users = ["@wheel"];
       auto-optimise-store = true;
       builders-use-substitutes = true;
@@ -37,6 +46,7 @@
         "flakes"
         "nix-command"
       ];
+      flake-registry = "";
       http-connections = 50;
       keep-derivations = true;
       keep-going = true;
@@ -85,7 +95,7 @@
   system.stateVersion = "25.05";
 
   systemd.extraConfig = ''
-    DefaultTimeoutStopSec=10s
     DefaultTimeoutStartSec=5s
+    DefaultTimeoutStopSec=10s
   '';
 }

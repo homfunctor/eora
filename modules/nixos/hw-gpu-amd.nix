@@ -18,6 +18,7 @@
     };
   };
 
+  # todo: get around to this todo
   # todo: check performance with and without
   # hardware.amdgpu.amdvlk = {
   #   enable = true;
