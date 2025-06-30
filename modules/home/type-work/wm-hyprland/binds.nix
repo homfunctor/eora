@@ -17,8 +17,8 @@ in {
 
       # hyprpanel
       "${mod}, X, exec, ${uTog "hyprpanel t powerdropdownmenu"}"
-      "${mod}, grave, exec, ${uTog "hyprpanel t notificationsmenu"}"
-      "${mod} SHIFT, grave, exec, ${uTog "hyprpanel t dashboardmenu"}"
+      "${mod}, N, exec, ${uTog "hyprpanel t notificationsmenu"}"
+      "${mod}, grave, exec, ${uTog "hyprpanel t dashboardmenu"}"
       "${mod}, A, exec, ${uTog "hyprpanel t audiomenu"}"
       "${mod}, C, exec, ${uTog "hyprpanel t calendarmenu"}"
 

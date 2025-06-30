@@ -27,7 +27,9 @@ in {
 
     hplScale = {
       bar = 75;
+      battery = 50;
       clock = 60;
+      dashboard = 50;
       notification = 75;
       notifications = 50;
       osd = 75;

@@ -24,7 +24,7 @@ in {
 
       hyprpaperOpts.settings = {
         ipc = "off";
-        splash = false;
+        splash = true;
         preload = [
           "${wallDir}/${wall}"
         ];
