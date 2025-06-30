@@ -27,11 +27,11 @@ in {
 
     hplScale = {
       bar = 75;
-      battery = 50;
+      battery = 70;
       clock = 60;
-      dashboard = 50;
+      dashboard = 60;
       notification = 75;
-      notifications = 50;
+      notifications = 60;
       osd = 75;
       popover = 60;
       power = 75;

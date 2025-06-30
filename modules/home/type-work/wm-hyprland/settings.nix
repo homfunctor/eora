@@ -79,7 +79,7 @@ in {
       animate_mouse_windowdragging = true;
       anr_missed_pings = 30;
       disable_hyprland_logo = true;
-      disable_splash_rendering = true;
+      disable_splash_rendering = false;
       enable_anr_dialog = true;
       initial_workspace_tracking = 0;
       key_press_enables_dpms = true;
