@@ -7,6 +7,8 @@
       url = "github:numtide/blueprint";
     };
 
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
     disko = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/disko";
@@ -30,6 +32,11 @@
     lix-module = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.0.tar.gz";
+    };
+
+    nix-gaming = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:fufexan/nix-gaming";
     };
 
     nix-index-database = {
@@ -69,14 +76,6 @@
     treefmt-nix = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/treefmt-nix";
-    };
-
-    # extras
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-
-    nix-gaming = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:fufexan/nix-gaming";
     };
 
     # secrets and privacy for the paranoid

@@ -7,6 +7,14 @@
     enable = true;
     package = pkgs.nix-ld;
     libraries = with pkgs; [
+      SDL
+      SDL2
+      SDL2_image
+      SDL2_mixer
+      SDL2_ttf
+      SDL_image
+      SDL_mixer
+      SDL_ttf
       acl
       alsa-lib
       at-spi2-atk
@@ -16,38 +24,103 @@
       bzip2
       cairo
       cups
+      curl
+      curlWithGnuTls
       dbus
+      dbus-glib
+      desktop-file-utils
+      e2fsprogs
       expat
+      ffmpeg
+      flac
       fontconfig
+      freeglut
       freetype
+      fribidi
+      fuse
       fuse3
       gdk-pixbuf
+      glew110
+      glfw
       glib
+      gmp
+      gst_all_1.gst-plugins-base
+      gst_all_1.gst-plugins-ugly
+      gst_all_1.gstreamer
+      gtk2
       gtk3
+      harfbuzz
       icu
+      keyutils.lib
       libGL
+      libGLU
+      libappindicator-gtk2
       libappindicator-gtk3
+      libcaca
+      libcanberra
+      libcap
+      libclang.lib
+      libdbusmenu
+      libdbusmenu-gtk2
       libdrm
+      libelf
       libgbm
+      libgcrypt
       libglvnd
+      libgpg-error
+      libidn
+      libindicator-gtk2
+      libjack2
+      libjpeg
+      libmikmod
       libnotify
+      libogg
+      libpng
+      libpng12
       libpulseaudio
+      librsvg
+      libsamplerate
       libsodium
       libssh
+      libthai
+      libtheora
+      libtiff
+      libtool.lib
+      libudev0-shim
       libunwind
       libusb1
       libuuid
+      libva
+      libvdpau
+      libvorbis
+      libvpx
+      libxcrypt-legacy
       libxkbcommon
+      libxml2
       mesa
       mesa_i686
       nspr
       nss
       nwjs-sdk
+      openal
+      openssl
+      p11-kit
       pango
+      pciutils
       pipewire
+      pipewire
+      pixman
+      python3
+      speex
       stdenv.cc.cc
+      systemd
+      tbb
+      udev
       util-linux
       vulkan-loader
+      wayland
+      xorg.libICE
+      xorg.libSM
       xorg.libX11
       xorg.libXScrnSaver
       xorg.libXcomposite
@@ -55,13 +128,27 @@
       xorg.libXdamage
       xorg.libXext
       xorg.libXfixes
+      xorg.libXft
       xorg.libXi
+      xorg.libXinerama
+      xorg.libXmu
       xorg.libXrandr
       xorg.libXrender
+      xorg.libXt
       xorg.libXtst
+      xorg.libXxf86vm
+      xorg.libpciaccess
       xorg.libxcb
       xorg.libxkbfile
       xorg.libxshmfence
+      xorg.libxshmfence
+      xorg.xcbutil
+      xorg.xcbutilimage
+      xorg.xcbutilkeysyms
+      xorg.xcbutilrenderutil
+      xorg.xcbutilwm
+      xorg.xkeyboardconfig
+      xz
       zlib
       zstd
     ];
