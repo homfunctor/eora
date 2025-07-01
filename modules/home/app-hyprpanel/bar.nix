@@ -5,11 +5,6 @@
 }: let
   inherit (config.home.opts) hplLayout;
 in {
-  imports = [
-    ./themeColors.nix
-    ./themeUI.nix
-  ];
-
   programs.hyprpanel.settings = {
     bar = {
       autoHide = "never";

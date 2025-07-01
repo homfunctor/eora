@@ -14,7 +14,7 @@
   tgPkg = getExe pkgs.greetd.tuigreet;
   tgTheme =
     ''border=gray;text=cyan;prompt=white;time=cyan;action=blue;''
-    + ''button=white;container=black;input=cyan'';
+    + ''button=white;container=black;input=cyan;'';
   timeFmt = "%a %b %d  %I:%M %p";
 
   # autologin to Hyprland with uwsm
