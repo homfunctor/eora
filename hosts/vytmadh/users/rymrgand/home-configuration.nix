@@ -20,29 +20,27 @@
     type-work
   ];
 
-  config = {
-    home.opts = {
-      app-math = {
-        latex.enable = true;
-      };
-
-      cosmic-greeter = {
-        bg = "${inputs.sapadal}/assets/base.png";
-        monitor = "DP-2";
-      };
-
-      hostName = "vytmadh";
-
-      sync.folder = {
-        Books.enable = true;
-        Fish.enable = true;
-        Math.enable = true;
-        Nix.enable = true;
-        Rust.enable = true;
-        Work.enable = true;
-      };
-
-      userName = "rymrgand";
+  home.opts = {
+    app-math = {
+      latex.enable = true;
     };
+
+    cosmic-greeter = {
+      bg = "${inputs.sapadal}/assets/base.png";
+      monitor = "DP-2";
+    };
+
+    hostName = "vytmadh";
+
+    sync.folder = {
+      Books.enable = true;
+      Fish.enable = true;
+      Math.enable = true;
+      Nix.enable = true;
+      Rust.enable = true;
+      Work.enable = true;
+    };
+
+    userName = "rymrgand";
   };
 }

@@ -26,23 +26,21 @@
     opt-rust
   ];
 
-  config = {
-    nixos.opts = {
-      fontSizes = {
-        applications = 12;
-        desktop = 12;
-        popups = 12;
-        terminal = 14;
-      };
-
-      hostName = "revelations";
-
-      lanzaboote.enable = true;
-
-      sops.user.enable = true;
-
-      adminUser = "wael";
-      userNames = ["wael" "thaos"];
+  nixos.opts = {
+    fontSizes = {
+      applications = 12;
+      desktop = 12;
+      popups = 12;
+      terminal = 14;
     };
+
+    hostName = "revelations";
+
+    lanzaboote.enable = true;
+
+    sops.user.enable = true;
+
+    adminUser = "wael";
+    userNames = ["wael" "thaos"];
   };
 }

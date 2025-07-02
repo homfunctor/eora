@@ -1,5 +1,4 @@
 {
-  config,
   lib,
   ...
 }: let
@@ -30,7 +29,7 @@
     "yazi"
   ];
 in {
-  config.home.opts.nvim.plugins = genAttrs enabledPlugins (
+  home.opts.nvim.plugins = genAttrs enabledPlugins (
     _: {
       enable = true;
     }

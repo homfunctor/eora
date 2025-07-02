@@ -35,26 +35,24 @@
     cat ${svg} >>"$directory/Base16Kvantum.svg"
   '';
 in {
-  config = {
-    stylix.targets.qt.enable = true;
+  stylix.targets.qt.enable = true;
 
-    qt = {
-      enable = true;
-      platformTheme.name = lib.mkForce "kvantum";
+  qt = {
+    enable = true;
+    platformTheme.name = lib.mkForce "kvantum";
+  };
+
+  home.packages = [kvantumPackage];
+
+  xdg.configFile = {
+    "Kvantum/Base16Kvantum".source = "${kvantumPackage}/share/Kvantum/Base16Kvantum";
+
+    "Kvantum/kvantum.kvconfig".source = (pkgs.formats.ini {}).generate "kvantum.kvconfig" {
+      General.theme = "Base16Kvantum";
     };
 
-    home.packages = [kvantumPackage];
+    "qt5ct/qt5ct.conf".text = qtctConfig;
 
-    xdg.configFile = {
-      "Kvantum/Base16Kvantum".source = "${kvantumPackage}/share/Kvantum/Base16Kvantum";
-
-      "Kvantum/kvantum.kvconfig".source = (pkgs.formats.ini {}).generate "kvantum.kvconfig" {
-        General.theme = "Base16Kvantum";
-      };
-
-      "qt5ct/qt5ct.conf".text = qtctConfig;
-
-      "qt6ct/qt6ct.conf".text = qtctConfig;
-    };
+    "qt6ct/qt6ct.conf".text = qtctConfig;
   };
 }

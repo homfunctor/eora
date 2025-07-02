@@ -19,28 +19,26 @@
     type-work
   ];
 
-  config = {
-    home.opts = {
-      app-math = {
-        latex.enable = true;
-      };
-
-      cosmic-greeter = {
-        bg = "${inputs.sapadal}/assets/base.png";
-        monitor = "DP-2";
-      };
-
-      hostName = "revelations";
-
-      rofi.columns = 10;
-
-      sync.folder = {
-        Books.enable = true;
-        Math.enable = true;
-        Work.enable = true;
-      };
-
-      userName = "thaos";
+  home.opts = {
+    app-math = {
+      latex.enable = true;
     };
+
+    cosmic-greeter = {
+      bg = "${inputs.sapadal}/assets/base.png";
+      monitor = "DP-2";
+    };
+
+    hostName = "revelations";
+
+    rofi.columns = 10;
+
+    sync.folder = {
+      Books.enable = true;
+      Math.enable = true;
+      Work.enable = true;
+    };
+
+    userName = "thaos";
   };
 }

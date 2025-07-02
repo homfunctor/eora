@@ -1,5 +1,4 @@
 {
-  config,
   inputs,
   lib,
   pkgs,
@@ -10,7 +9,7 @@
   wallDir = "${inputs.sapadal}/assets";
   wall = "whitemarch.png";
 in {
-  config.home = {
+  home = {
     packages = with pkgs; [
       hyprland-monitor-attached
     ];

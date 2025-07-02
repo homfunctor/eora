@@ -1,5 +1,5 @@
 {config, ...}: {
-  config.stylix.targets.librewolf = {
+  stylix.targets.librewolf = {
     profileNames = [config.home.opts.userName];
   };
 }

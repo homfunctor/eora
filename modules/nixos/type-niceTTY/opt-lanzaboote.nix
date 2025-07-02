@@ -11,7 +11,7 @@ in {
     inputs.lanzaboote.nixosModules.lanzaboote
   ];
 
-  config.boot = lib.mkIf cfg.enable {
+  boot = lib.mkIf cfg.enable {
     lanzaboote = {
       enable = true;
       pkiBundle = "/var/lib/sbctl";

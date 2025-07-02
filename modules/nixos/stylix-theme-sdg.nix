@@ -1,5 +1,5 @@
-{config, ...}: {
-  config.stylix.base16Scheme = {
+{
+  stylix.base16Scheme = {
     base00 = "#000000";
     base01 = "#1A242D";
     base02 = "#2D3A47";

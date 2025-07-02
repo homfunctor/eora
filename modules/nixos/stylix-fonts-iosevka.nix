@@ -1,9 +1,8 @@
 {
-  config,
   pkgs,
   ...
 }: {
-  config.stylix.fonts = {
+  stylix.fonts = {
     monospace = {
       name = "Iosevka Nerd Font Mono";
       package = pkgs.nerd-fonts.iosevka;

@@ -1,5 +1,5 @@
 {
-  config.home.opts.defaultApps = {
+  home.opts.defaultApps = {
     archive = ["org.gnome.FileRoller.desktop"];
     audio = ["vlc.desktop"];
     browser = ["vivaldi-stable.desktop"];

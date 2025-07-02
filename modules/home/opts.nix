@@ -1,3 +1,5 @@
+# keeping all declared options here. results in an ever expanding file
+# but it's better than declaring them all over the place
 {
   flake,
   lib,
@@ -24,10 +26,9 @@ in {
 
     cosmic-greeter = mkAttrOpt {} "cosmic-greeter settings";
 
-    customUserDirs = mkAttrOpt {} "custom settings for user directories";
-    defaultApps = mkAttrOpt {} "default applications";
+    customUserDirs = mkAttrOpt {} "custom settings for user directories (XDG)";
 
-    hostName = mkStrOpt "" "host name. name of host. that by which the host is named";
+    defaultApps = mkAttrOpt {} "default applications (mime)";
 
     hyprlandEnv = mkAttrOpt {} "various hyprland environment settings";
     hyprlandOpts = mkAttrOpt {} "user options for hyprland";
@@ -79,6 +80,7 @@ in {
 
     rofi.columns = mkIntOpt 4 "number of columns to use in rofi";
 
+    # syncthing
     sync = {
       versioning = mkAttrOpt {
         type = "simple";
@@ -93,6 +95,7 @@ in {
         (name: {enable = mkBoolOpt false "sync ${name}";});
     };
 
-    userName = mkStrOpt "" "user name. that by which the user is named.";
+    hostName = mkStrOpt "" "host name. name of host. that by which the host is named";
+    userName = mkStrOpt "" "user name. name of user. that by which the user is named.";
   };
 }
