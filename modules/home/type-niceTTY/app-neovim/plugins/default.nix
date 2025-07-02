@@ -1,6 +1,7 @@
 {
   imports = [
     ./blink.nix
+    ./bufferline.nix
     ./colorizer.nix
     ./conform.nix
     ./fidget.nix
@@ -21,6 +22,7 @@
     ./treesitter.nix
     ./undotree.nix
     ./vimtex.nix
+    ./web-devicons.nix
     ./which-key.nix
     ./yazi.nix
   ];

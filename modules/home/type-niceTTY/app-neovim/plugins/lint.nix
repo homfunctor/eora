@@ -27,6 +27,7 @@ in {
         nix = [
           "deadnix"
           "nix"
+          "statix"
         ];
         python = ["basedpyright"];
         rust = ["clippy"];

@@ -7,6 +7,7 @@
 
   enabledPlugins = [
     "blink"
+    "bufferline"
     "colorizer"
     "conform"
     "fidget"
@@ -25,6 +26,7 @@
     "treesitter"
     "undotree"
     "vimtex"
+    "web-devicons"
     "which-key"
     "yazi"
   ];

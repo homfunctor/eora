@@ -1,4 +1,3 @@
-# todo: evaluate how convenient the keymaps are
 {
   config,
   lib,
@@ -109,7 +108,7 @@ in {
           completion = {
             documentation = {
               auto_show = true;
-              window.border = "single";
+              window.border = "none";
             };
 
             ghost_text.enabled = true;
@@ -120,7 +119,7 @@ in {
             };
 
             menu = {
-              border = "single";
+              border = "none";
               draw = {
                 columns = [
                   {
@@ -178,7 +177,7 @@ in {
 
           signature = {
             enabled = true;
-            window.border = "single";
+            window.border = "none";
           };
 
           snippets.preset = "mini_snippets";

@@ -9,7 +9,6 @@
   cfg = config.home.opts.nvim.plugins.conform;
 in {
   config = mkIf cfg.enable {
-    # already installed: alejandra
     home.packages = with pkgs; [
       black
       jq
@@ -43,6 +42,7 @@ in {
           nix = ["alejandra"];
           python = ["black"];
           rust = ["rustfmt"];
+          sh = ["shfmt"];
           xml = ["xmlformat"];
           yaml = ["yamlfmt"];
         };
