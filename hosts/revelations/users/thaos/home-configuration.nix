@@ -1,4 +1,8 @@
-{flake, ...}: {
+{
+  flake,
+  inputs,
+  ...
+}: {
   imports = with flake.modules.home; [
     # minimal tty
     opts
@@ -19,6 +23,11 @@
     home.opts = {
       app-math = {
         latex.enable = true;
+      };
+
+      cosmic-greeter = {
+        bg = "${inputs.sapadal}/assets/base.png";
+        monitor = "DP-2";
       };
 
       hostName = "revelations";

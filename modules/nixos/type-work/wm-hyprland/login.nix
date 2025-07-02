@@ -17,6 +17,4 @@
       user = config.nixos.opts.adminUser;
     };
   };
-
-  # todo: configure greeter background
 }

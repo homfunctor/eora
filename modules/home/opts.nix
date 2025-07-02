@@ -22,6 +22,8 @@ in {
       rstudio.enable = mkBoolOpt false "enable rstudio";
     };
 
+    cosmic-greeter = mkAttrOpt {} "cosmic-greeter settings";
+
     customUserDirs = mkAttrOpt {} "custom settings for user directories";
     defaultApps = mkAttrOpt {} "default applications";
 
