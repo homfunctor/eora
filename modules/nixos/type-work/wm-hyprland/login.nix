@@ -1,26 +1,20 @@
+# uses cosmic-greeter to automatically login to uwsm-managed hyprland
+# on logout, enters cosmic-greeter
+# thanks to the magick of nixos, already picks up the hyprland-uwsm.desktop
+# and makes it default_session
+# todo: check user switching
+# todo: configure greeter background
 {
   config,
   lib,
   pkgs,
   ...
-}: let
-  inherit (lib) getExe;
-
-  # autologin to Hyprland with uwsm
-  initial_session = {
-    command = "${getExe pkgs.uwsm} start hyprland-uwsm.desktop";
-    user = config.nixos.opts.adminUser;
-  };
-
-  # enter greeter after logging out
-  default_session = {
-    command = "${initial_session.command}";
-    user = "cosmic-greeter";
-  };
-in {
+}: {
   services = {
     displayManager.cosmic-greeter.enable = true;
-
-    greetd.settings = {inherit default_session initial_session;};
+    greetd.settings.initial_session = {
+      command = "${lib.getExe pkgs.uwsm} start hyprland-uwsm.desktop";
+      user = config.nixos.opts.adminUser;
+    };
   };
 }

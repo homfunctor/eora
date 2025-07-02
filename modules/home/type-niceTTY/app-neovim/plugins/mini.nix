@@ -12,7 +12,6 @@ in {
   programs.nixvim = mkIf cfg.enable {
     plugins.mini = {
       enable = true;
-      mockDevIcons = true;
 
       modules = {
         cursorword = {};
