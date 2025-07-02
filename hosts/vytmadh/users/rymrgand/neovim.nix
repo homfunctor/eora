@@ -10,7 +10,6 @@
     "bufferline"
     "colorizer"
     "conform"
-    "grug-far"
     "illuminate"
     "lint"
     "lsp"

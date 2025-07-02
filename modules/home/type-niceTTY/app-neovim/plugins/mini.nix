@@ -3,13 +3,11 @@
   lib,
   ...
 }: let
-  inherit (lib) mkIf;
-
   colors = config.lib.stylix.colors.withHashtag;
 
   cfg = config.home.opts.nvim.plugins.mini;
 in {
-  programs.nixvim = mkIf cfg.enable {
+  programs.nixvim = lib.mkIf cfg.enable {
     plugins.mini = {
       enable = true;
 

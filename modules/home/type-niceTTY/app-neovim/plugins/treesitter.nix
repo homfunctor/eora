@@ -4,45 +4,45 @@
   pkgs,
   ...
 }: let
-  inherit (lib) mkIf;
-
   cfg = config.home.opts.nvim.plugins.treesitter;
 in {
-  config = mkIf cfg.enable {
+  config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       tree-sitter
     ];
 
-    programs.nixvim = {
-      plugins = {
-        treesitter = {
-          enable = true;
+    programs.nixvim.plugins = {
+      treesitter = {
+        enable = true;
 
-          folding = true;
-          grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
-          nixvimInjections = true;
+        grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
+        nixvimInjections = true;
 
-          settings = {
-            highlight = {
-              enable = true;
-              additional_vim_regex_highlighting = true;
-              disable = [
-                "latex" # vimtex takes over here
-              ];
-            };
-            indent.enable = true;
+        settings = {
+          highlight = {
+            enable = true;
+            additional_vim_regex_highlighting = true;
+            disable = ["latex"];
           };
+          indent.enable = true;
         };
+      };
 
-        treesitter-context = {
+      treesitter-context = {
+        enable = true;
+        settings = {
+          max_lines = 4;
+          min_window_height = 40;
+          multiwindow = true;
+          separator = "-";
+        };
+      };
+
+      treesitter-textobjects = {
+        enable = true;
+        select = {
           enable = true;
-
-          settings = {
-            max_lines = 4;
-            min_window_height = 40;
-            multiwindow = true;
-            separator = "-";
-          };
+          lookahead = true;
         };
       };
     };

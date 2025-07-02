@@ -3,11 +3,9 @@
   lib,
   ...
 }: let
-  inherit (lib) mkIf;
-
   cfg = config.home.opts.nvim.plugins.smartcolumn;
 in {
-  programs.nixvim.plugins.smartcolumn = mkIf cfg.enable {
+  programs.nixvim.plugins.smartcolumn = lib.mkIf cfg.enable {
     enable = true;
     settings.colorcolumn = "80";
   };

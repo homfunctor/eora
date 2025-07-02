@@ -11,7 +11,6 @@
     "colorizer"
     "conform"
     "fidget"
-    "grug-far"
     "illuminate"
     "lint"
     "lsp"

@@ -10,6 +10,8 @@
   pkgs,
   ...
 }: {
+  # quick test if cosmic-settings works
+  environment.systemPackages = [pkgs.cosmic-settings];
   services = {
     displayManager.cosmic-greeter.enable = true;
     greetd.settings.initial_session = {

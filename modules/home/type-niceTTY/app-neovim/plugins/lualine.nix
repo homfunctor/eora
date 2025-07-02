@@ -5,17 +5,15 @@
   ...
 }: let
   inherit (lib) mkIf;
-  inherit (pkgs) fetchFromGitHub;
-  inherit (pkgs.vimUtils) buildVimPlugin;
 
   cfg = config.home.opts.nvim.plugins.lualine;
 in {
   config.programs.nixvim = mkIf cfg.enable {
     extraPlugins = [
       (
-        buildVimPlugin {
+        pkgs.vimUtils.buildVimPlugin {
           name = "lualine-so-fancy";
-          src = fetchFromGitHub {
+          src = pkgs.fetchFromGitHub {
             owner = "meuter";
             repo = "lualine-so-fancy.nvim";
             rev = "6ba7b138f2ca435673eb04c2cf85f0757df69b07";

@@ -4,11 +4,9 @@
   pkgs,
   ...
 }: let
-  inherit (lib) mkIf;
-
   cfg = config.home.opts.nvim.plugins.lsp;
 in {
-  programs.nixvim.plugins = mkIf cfg.enable {
+  programs.nixvim.plugins = lib.mkIf cfg.enable {
     lsp = {
       enable = true;
 

@@ -3,11 +3,9 @@
   lib,
   ...
 }: let
-  inherit (lib) mkIf;
-
   cfg = config.home.opts.nvim.plugins.mini-notify;
 in {
-  programs.nixvim = mkIf cfg.enable {
+  programs.nixvim = lib.mkIf cfg.enable {
     plugins.mini.modules.notify = {};
   };
 }

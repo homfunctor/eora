@@ -3,11 +3,9 @@
   lib,
   ...
 }: let
-  inherit (lib) mkIf;
-
   cfg = config.home.opts.nvim.plugins.vimtex;
 in {
-  programs.nixvim = mkIf cfg.enable {
+  programs.nixvim = lib.mkIf cfg.enable {
     plugins.vimtex = {
       enable = true;
 
@@ -26,12 +24,14 @@ in {
         quickfix_mode = false;
         syntax_enabled = true;
       };
+
       texlivePackage = null;
     };
 
+    # todo: configure further
     extraConfigLuaPre = ''
       vim.g.vimtex_quickfix_ignore_filters = {'warning'}
-        vim.g.vimtex_quickfix_open_on_warning = 0
+      vim.g.vimtex_quickfix_open_on_warning = 0
     '';
   };
 }

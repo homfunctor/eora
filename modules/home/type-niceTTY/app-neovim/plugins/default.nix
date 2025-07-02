@@ -5,7 +5,6 @@
     ./colorizer.nix
     ./conform.nix
     ./fidget.nix
-    ./grug-far.nix
     ./illuminate.nix
     ./lint.nix
     ./lsp.nix
