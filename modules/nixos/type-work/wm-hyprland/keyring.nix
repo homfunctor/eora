@@ -1,4 +1,3 @@
-# todo: just write something to unlock an empty password keyring
 {pkgs, ...}: {
   programs.seahorse.enable = true;
 

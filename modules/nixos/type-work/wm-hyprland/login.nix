@@ -2,16 +2,14 @@
 # on logout, enters cosmic-greeter
 # thanks to the magick of nixos, already picks up the hyprland-uwsm.desktop
 # and makes it default_session
-# todo: check user switching
-# todo: configure greeter background
+# default_session should be left alone as cosmic-greeter handles it along with
+# user selection
 {
   config,
   lib,
   pkgs,
   ...
 }: {
-  # quick test if cosmic-settings works
-  environment.systemPackages = [pkgs.cosmic-settings];
   services = {
     displayManager.cosmic-greeter.enable = true;
     greetd.settings.initial_session = {
@@ -19,4 +17,6 @@
       user = config.nixos.opts.adminUser;
     };
   };
+
+  # todo: configure greeter background
 }

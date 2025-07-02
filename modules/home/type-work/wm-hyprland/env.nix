@@ -35,7 +35,6 @@ in {
       export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
       export SDL_VIDEODRIVER=wayland,x11
       export SHELL=${shell}
-      export SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/keyring/ssh"
       export TERMINAL=${terminal}
       export WLR_BACKEND=wayland
       export WLR_DRM_NO_ATOMIC=1
