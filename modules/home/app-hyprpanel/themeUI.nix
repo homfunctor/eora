@@ -5,10 +5,10 @@ in {
   programs.hyprpanel.settings.theme = {
     bar = {
       border_radius = "0em";
-      dropdownGap = "2.9em";
-      label_spacing = "0.25em";
+      dropdownGap = "2.0em";
+      label_spacing = "0.50em";
       opacity = 100;
-      outer_spacing = "1.0em";
+      outer_spacing = "0.0em";
       scaling = hplScale.bar;
 
       buttons = {
