@@ -83,7 +83,7 @@
 
     launcher = {
       icon = "";
-      rightClick = flake.lib.uTog "nwg-drawer -wm 'uwsm'";
+      rightClick = flake.lib.uTog "nwg-drawer -nofs -wm 'uwsm'";
     };
 
     notifications = {

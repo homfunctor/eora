@@ -1,4 +1,4 @@
-# todo: revise, customize animations more
+# todo: revise, look for more settings, customize animations more
 {
   config,
   lib,
@@ -51,9 +51,11 @@ in {
 
       rounding = 0;
 
-      shadow = {
+      shadow = with colors; {
+        color = mkForce "rgb(${base08})";
+        color_inactive = mkForce "rgb(${base02})";
         enabled = true;
-        range = 30;
+        range = 10;
         render_power = 3;
       };
     };
@@ -98,8 +100,6 @@ in {
       // (with colors; {
         "col.active_border" = mkForce "rgb(${base08})";
         "col.inactive_border" = mkForce "rgb(${base02})";
-        "col.shadow" = mkForce "rgb(${base08})";
-        "col.shadow_inactive" = mkForce "rgb(${base02})";
       });
 
     windowrule = [
