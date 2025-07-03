@@ -78,7 +78,7 @@ in {
 
     hyprpaperOpts = mkAttrOpt {} "user options for hyprpaper";
 
-    rofi.columns = mkIntOpt 4 "number of columns to use in rofi";
+    launcherColumns = mkIntOpt 4 "number of columns in nwg-drawer";
 
     # syncthing
     sync = {

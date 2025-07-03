@@ -26,8 +26,8 @@
     };
 
     cosmic-greeter = {
-      bg = "${inputs.sapadal}/assets/base.png";
-      monitor = "DP-2";
+      bgs = ["${inputs.sapadal}/assets/whitemarch.png"];
+      monitors = ["eDP-1"];
     };
 
     hostName = "vytmadh";

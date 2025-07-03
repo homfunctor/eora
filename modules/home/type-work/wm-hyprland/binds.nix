@@ -23,7 +23,7 @@ in {
       "${mod}, grave, exec, ${uTog "hyprpanel t dashboardmenu"}"
 
       # launcher
-      "${mod}, R, exec, rofi -show drun -run-command 'uwsm app -- {cmd}'"
+      "${mod}, R, exec, ${uTog "nwg-drawer -wm 'uwsm'"}"
 
       # window management
       "${mod}, D, togglesplit"

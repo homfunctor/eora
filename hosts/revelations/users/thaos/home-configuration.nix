@@ -25,13 +25,16 @@
     };
 
     cosmic-greeter = {
-      bg = "${inputs.sapadal}/assets/base.png";
-      monitor = "DP-2";
+      bgs = [
+        "${inputs.sapadal}/assets/base2.png"
+        "${inputs.sapadal}/assets/base.png"
+        "${inputs.sapadal}/assets/base3.png"
+      ];
+      monitors = ["DP-1" "DP-2" "DP-3"];
     };
 
+    launcherColumns = 10;
     hostName = "revelations";
-
-    rofi.columns = 10;
 
     sync.folder = {
       Books.enable = true;

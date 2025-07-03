@@ -32,8 +32,12 @@
     };
 
     cosmic-greeter = {
-      bg = "${inputs.sapadal}/assets/base.png";
-      monitor = "DP-2";
+      bgs = [
+        "${inputs.sapadal}/assets/winter1.png"
+        "${inputs.sapadal}/assets/winter2.png"
+        "${inputs.sapadal}/assets/winter3.png"
+      ];
+      monitors = ["DP-1" "DP-2" "DP-3"];
     };
 
     customUserDirs = {
@@ -44,7 +48,7 @@
 
     hostName = "revelations";
 
-    rofi.columns = 10;
+    launcherColumns = 10;
 
     sync.folder = {
       Books.enable = true;

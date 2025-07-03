@@ -94,7 +94,7 @@ in {
 
       launcher = {
         icon = "";
-        rightClick = "rofi -show drun -run-command 'uwsm app -- {cmd}'";
+        rightClick = flake.lib.uTog "nwg-drawer -wm 'uwsm'";
       };
 
       notifications = {

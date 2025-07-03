@@ -8,10 +8,10 @@
     ./app-librewolf.nix
     ./app-math
     ./app-nix-index.nix
+    ./app-nwg-drawer.nix
     ./app-onlyoffice.nix
     ./app-pika.nix
     ./app-rnote.nix
-    ./app-rofi.nix
     ./app-simple-scan.nix
     ./app-syncthing
     ./app-udiskie.nix
