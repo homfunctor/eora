@@ -78,8 +78,6 @@ in {
 
     hyprpaperOpts = mkAttrOpt {} "user options for hyprpaper";
 
-    launcherColumns = mkIntOpt 4 "number of columns in nwg-drawer";
-
     # syncthing
     sync = {
       versioning = mkAttrOpt {

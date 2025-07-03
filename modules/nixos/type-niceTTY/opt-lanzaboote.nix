@@ -7,9 +7,7 @@
 }: let
   cfg = config.nixos.opts.lanzaboote;
 in {
-  imports = [
-    inputs.lanzaboote.nixosModules.lanzaboote
-  ];
+  imports = [inputs.lanzaboote.nixosModules.lanzaboote];
 
   boot = lib.mkIf cfg.enable {
     lanzaboote = {

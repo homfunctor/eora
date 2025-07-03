@@ -17,7 +17,7 @@ in {
       export DISABLE_QT5_COMPAT=0
       export DISABLE_QT_COMPAT=0
       export EDITOR=nvim
-      export GDK_BACKEND=wayland,x11,*
+      export GDK_BACKEND=wayland,x11
       export GDK_SCALE=1
       export GNOME_KEYRING_CONTROL="$XDG_RUNTIME_DIR/keyring"
       export HYPRCURSOR_SIZE=${toString config.stylix.cursor.size}
@@ -28,7 +28,6 @@ in {
       export NIXOS_OZONE_WL=1
       export QT_AUTO_SCREEN_SCALE_FACTOR=1
       export QT_IM_MODULE=wayland
-      export QT_QPA_PLATFORM=wayland;xcb
       export QT_QPA_PLATFORM=wayland;xcb
       export QT_QPA_PLATFORMTHEME=qt5ct
       export QT_SCALE_FACTOR=1

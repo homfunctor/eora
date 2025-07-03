@@ -1,3 +1,4 @@
+# todo: add more settings to bring 2008 back
 {
   dconf = {
     enable = true;

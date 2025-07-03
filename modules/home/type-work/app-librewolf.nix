@@ -5,9 +5,7 @@
 }: let
   inherit (config.home.opts) userName;
 in {
-  imports = [
-    flake.modules.home.stylix-librewolf
-  ];
+  imports = [flake.modules.home.stylix-librewolf];
 
   programs.librewolf = {
     enable = true;
@@ -41,7 +39,7 @@ in {
       "network.predictor.enabled" = false;
       "network.prefetch-next" = false;
 
-      "permissions.default.geo" = 2; # Deny geolocation
+      "permissions.default.geo" = 2;
       "permissions.delegation.enabled" = false;
 
       "privacy.annotate_channels.strict_list.enabled" = true;

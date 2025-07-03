@@ -5,17 +5,13 @@
     inputs.sapadal.modules.home.app-git
   ];
 
-  programs = {
-    git = {
-      enable = true;
-      extraConfig = {
-        color.ui = "1";
-        gpg.format = "ssh";
-        init.defaultBranch = "main";
-        pull.rebase = "false";
-      };
+  programs.git = {
+    enable = true;
+    extraConfig = {
+      color.ui = "1";
+      gpg.format = "ssh";
+      init.defaultBranch = "main";
+      pull.rebase = "false";
     };
-
-    gitui.enable = true;
   };
 }

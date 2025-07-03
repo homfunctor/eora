@@ -33,7 +33,6 @@
       monitors = ["DP-1" "DP-2" "DP-3"];
     };
 
-    launcherColumns = 10;
     hostName = "revelations";
 
     sync.folder = {

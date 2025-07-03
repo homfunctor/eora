@@ -1,8 +1,6 @@
 # basic home-manager settings
 {inputs, ...}: {
-  imports = [
-    inputs.home-manager.nixosModules.home-manager
-  ];
+  imports = [inputs.home-manager.nixosModules.home-manager];
 
   home-manager = {
     backupFileExtension = "hm.old";

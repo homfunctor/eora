@@ -1,3 +1,5 @@
+# todo: check if there's any need to mess with systemd service files
+# todo: check if auto-runs
 {
   config,
   lib,
@@ -12,23 +14,13 @@
 in {
   home.packages = [polkitPkg];
 
-  systemd.user.services.hyprpolkitagent = {
-    Install.WantedBy = ["graphical-session.target"];
-    Unit.Description = "hyprpolkitagent";
-
-    Service = {
-      ExecStart = "${polkitPkg}/libexec/hyprpolkitagent";
-      Nice = "-20";
-      Restart = "on-failure";
-      StartLimitBurst = 60;
-      StartLimitIntervalSec = 60;
-    };
+  wayland.windowManager.hyprland.settings = {
+    ecosystem.enforce_permissions = true;
+    permission = [
+      "${getExe pkgs.grim}, screencopy, allow"
+      "${getExe pkgs.grimblast}, screencopy, allow"
+      "${getExe pkgs.hyprpicker}, screencopy, allow"
+      "${portalPackage}/libexec/${xdg}, screencopy, allow"
+    ];
   };
-
-  wayland.windowManager.hyprland.settings.permission = [
-    "${getExe pkgs.grim}, screencopy, allow"
-    "${getExe pkgs.grimblast}, screencopy, allow"
-    "${getExe pkgs.hyprpicker}, screencopy, allow"
-    "${portalPackage}/libexec/${xdg}, screencopy, allow"
-  ];
 }

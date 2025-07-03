@@ -1,5 +1,8 @@
-# todo: adjust settings further
-{pkgs, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     # for images in yazi
     ueberzugpp
@@ -12,7 +15,7 @@
 
       env.TERM = "xterm-256color";
 
-      terminal.shell = "${pkgs.fish}/bin/fish";
+      terminal.shell = "${lib.getExe pkgs.fish}";
     };
   };
 }

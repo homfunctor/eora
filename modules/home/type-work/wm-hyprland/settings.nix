@@ -51,7 +51,11 @@ in {
 
       rounding = 0;
 
-      shadow.enabled = true;
+      shadow = {
+        enabled = true;
+        range = 30;
+        render_power = 3;
+      };
     };
 
     dwindle = mkDefault {
@@ -94,6 +98,8 @@ in {
       // (with colors; {
         "col.active_border" = mkForce "rgb(${base08})";
         "col.inactive_border" = mkForce "rgb(${base02})";
+        "col.shadow" = mkForce "rgb(${base08})";
+        "col.shadow_inactive" = mkForce "rgb(${base02})";
       });
 
     windowrule = [

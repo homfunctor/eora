@@ -7,10 +7,10 @@
   inherit
     (config.home.opts)
     hostName
-    hplLeftdir
-    hplRightdir
     hplLeftcuts
+    hplLeftdir
     hplRightcuts
+    hplRightdir
     userName
     ;
 
@@ -28,13 +28,7 @@ in {
   programs.hyprpanel.settings = {
     dummy = true;
 
-    hyprpanel = {
-      restartAgs = true;
-      # todo: what is the uwsm way to do this?
-      restartCommand =
-        ''${pkgs.hyprpanel}/bin/hyprpanel q; ''
-        + ''${pkgs.hyprpanel}/bin/hyprpanel'';
-    };
+    hyprpanel.restartAgs = false;
 
     menus = {
       clock = {

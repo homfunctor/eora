@@ -16,7 +16,6 @@
     # work
     ./hyprland.nix
     ./hyprpanel.nix
-    ./settings.nix
     type-work
 
     # personal
@@ -47,8 +46,6 @@
     };
 
     hostName = "revelations";
-
-    launcherColumns = 10;
 
     sync.folder = {
       Books.enable = true;

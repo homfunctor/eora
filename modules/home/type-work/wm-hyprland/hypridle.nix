@@ -1,11 +1,10 @@
-# todo: revise
 {
   config,
   lib,
   pkgs,
   ...
 }: let
-  lock = "${pkgs.systemd}/bin/loginctl lock-session";
+  lock_cmd = "pidof hyprlock || ${lockPkg}";
   lockPkg = lib.getExe config.programs.hyprlock.package;
   timeout = 1200;
 in {
@@ -14,10 +13,9 @@ in {
 
     settings = {
       general = {
-        before_sleep_cmd = "loginctl lock-session";
+        inherit lock_cmd;
         after_sleep_cmd = "hyprctl dispatch dpms on";
-
-        lock_cmd = "pgrep hyprlock || ${lockPkg}";
+        before_sleep_cmd = "loginctl lock-session";
       };
 
       listener = [
@@ -29,7 +27,7 @@ in {
 
         {
           timeout = timeout + 10;
-          on-timeout = lock;
+          on-timeout = lock_cmd;
         }
       ];
     };

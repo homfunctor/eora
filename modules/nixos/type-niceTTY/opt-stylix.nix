@@ -3,9 +3,7 @@
   inputs,
   ...
 }: {
-  imports = [
-    inputs.stylix.nixosModules.stylix
-  ];
+  imports = [inputs.stylix.nixosModules.stylix];
 
   stylix = {
     enable = true;

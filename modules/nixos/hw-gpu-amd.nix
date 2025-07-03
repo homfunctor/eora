@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  lib,
+  pkgs,
+  ...
+}: {
   # lact
   boot = {
     initrd.kernelModules = [
@@ -10,10 +14,12 @@
     ];
   };
   environment.systemPackages = [pkgs.lact];
+
+  # todo: check if still needed
   systemd = {
     packages = [pkgs.lact];
     services.lact = {
-      serviceConfig.ExecStart = "${pkgs.lact}/bin/lact daemon";
+      serviceConfig.ExecStart = "${lib.getExe pkgs.lact} daemon";
       wantedBy = ["multi-user.target"];
     };
   };

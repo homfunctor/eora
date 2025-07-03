@@ -1,4 +1,3 @@
-# sops settings
 {
   config,
   inputs,
@@ -7,9 +6,7 @@
 }: let
   inherit (config.nixos.opts) adminUser;
 in {
-  imports = [
-    inputs.sops-nix.nixosModules.default
-  ];
+  imports = [inputs.sops-nix.nixosModules.default];
 
   environment.systemPackages = with pkgs; [
     age
@@ -23,6 +20,7 @@ in {
       sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
     };
 
+    # .sops.yaml, secrets/secrets.yaml
     defaultSopsFile = "${inputs.sapadal}/secrets/secrets.yaml";
   };
 }

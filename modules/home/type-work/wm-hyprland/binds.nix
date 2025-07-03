@@ -1,29 +1,37 @@
 {
   config,
   flake,
+  lib,
+  pkgs,
   ...
 }: let
   inherit (flake.lib) uApp uTog;
+  inherit (lib) getExe;
+
+  filesPkg = getExe pkgs.nautilus;
+  launcherPkg = getExe pkgs.nwg-drawer;
+  panelPkg = getExe config.programs.hyprpanel.package;
+  terminalPkg = getExe config.programs.alacritty.package;
 
   mod = "SUPER";
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       # applications
-      "${mod} SHIFT, E, exec, ${uApp "alacritty --working-directory ~/eora -e yazi"}"
-      "${mod} SHIFT, W, exec, ${uApp "alacritty --working-directory ~/eora"}"
-      "${mod}, E, exec, ${uApp "nautilus -w"}"
-      "${mod}, W, exec, ${uApp "alacritty"}"
+      "${mod} SHIFT, E, exec, ${uApp "${terminalPkg} --working-directory ~/eora -e yazi"}"
+      "${mod} SHIFT, W, exec, ${uApp "${terminalPkg} --working-directory ~/eora"}"
+      "${mod}, E, exec, ${uApp "${filesPkg} -w"}"
+      "${mod}, W, exec, ${uApp "${terminalPkg}"}"
 
-      # hyprpanel
-      "${mod}, A, exec, ${uTog "hyprpanel t audiomenu"}"
-      "${mod}, C, exec, ${uTog "hyprpanel t calendarmenu"}"
-      "${mod}, N, exec, ${uTog "hyprpanel t notificationsmenu"}"
-      "${mod}, X, exec, ${uTog "hyprpanel t powerdropdownmenu"}"
-      "${mod}, grave, exec, ${uTog "hyprpanel t dashboardmenu"}"
+      # ${panelPkg}
+      "${mod}, A, exec, ${uTog "${panelPkg} t audiomenu"}"
+      "${mod}, C, exec, ${uTog "${panelPkg} t calendarmenu"}"
+      "${mod}, N, exec, ${uTog "${panelPkg} t notificationsmenu"}"
+      "${mod}, X, exec, ${uTog "${panelPkg} t powerdropdownmenu"}"
+      "${mod}, grave, exec, ${uTog "${panelPkg} t dashboardmenu"}"
 
       # launcher
-      "${mod}, R, exec, ${uTog "nwg-drawer -wm 'uwsm'"}"
+      "${mod}, R, exec, ${uTog "${launcherPkg} -wm 'uwsm'"}"
 
       # window management
       "${mod}, D, togglesplit"
@@ -67,12 +75,12 @@ in {
       "ALT, Tab, cyclenext"
 
       # misc controls
-      "${mod} ALT, L, exec, ${uApp "hyprlock"}"
+      "${mod} ALT, L, exec, ${uApp "${getExe config.programs.hyprlock.package}"}"
       "${mod}, Q, killactive"
       "${mod}, mouse:274, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       "${mod}, mouse:275, exec,  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       "${mod}, mouse:276, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-      ", PRINT, exec, ${uApp "grimblast"} --freeze --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
+      ", PRINT, exec, ${uApp "${getExe pkgs.grimblast}"} --freeze --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
 
       # workspaces
       "${mod}, 1, workspace, 1"
@@ -102,8 +110,8 @@ in {
     bindle = [
       ", XF86AudioLowerVolume, exec, wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%-"
       ", XF86AudioRaiseVolume, exec, wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%+"
-      ", XF86MonBrightnessDown, exec, brillo -q -u 300000 -U 5"
-      ", XF86MonBrightnessUp, exec, brillo -q -u 300000 -A 5"
+      ", XF86MonBrightnessDown, exec, ${getExe pkgs.brillo} -q -u 300000 -U 5"
+      ", XF86MonBrightnessUp, exec, ${getExe pkgs.brillo} -q -u 300000 -A 5"
     ];
 
     bindm = [
