@@ -1,7 +1,6 @@
 {
   config,
   inputs,
-  pkgs,
   ...
 }: let
   inherit
@@ -26,8 +25,6 @@ in {
   ];
 
   programs.hyprpanel.settings = {
-    dummy = true;
-
     hyprpanel.restartAgs = false;
 
     menus = {

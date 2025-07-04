@@ -31,7 +31,7 @@ in {
       "${mod}, grave, exec, ${uTog "${panelPkg} t dashboardmenu"}"
 
       # launcher
-      "${mod}, R, exec, ${uTog "${launcherPkg} -nofs -wm 'uwsm'"}"
+      "${mod}, R, exec, ${uTog "${launcherPkg}"} -nofs -wm 'uwsm'"
 
       # window management
       "${mod}, D, togglesplit"

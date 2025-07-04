@@ -1,262 +1,263 @@
-# todo: adjust colors
+# unused values are commented out
 {config, ...}: let
   colors = config.lib.stylix.colors.withHashtag;
 in {
   programs.hyprpanel.settings.theme = with colors; {
     bar = {
-      background = "${base00}";
-      border.color = "${base07}";
+      background = "${base01}";
+      # border.color = "${base07}";
 
       buttons = {
-        background = "${base02}";
+        # background = "${base02}";
 
-        battery = {
-          background = "${base02}";
-          border = "${base0A}";
-          icon = "${base0A}";
-          icon_background = "${base0A}";
-          text = "${base0A}";
-        };
+        # todo
+        # battery = {
+        #   background = "${base00}";
+        #   border = "${base0A}";
+        #   icon = "${base0A}";
+        #   icon_background = "${base0A}";
+        #   text = "${base0A}";
+        # };
 
-        bluetooth = {
-          background = "${base02}";
-          border = "${base0D}";
-          icon = "${base0D}";
-          icon_background = "${base0E}";
-          text = "${base0D}";
-        };
+        # bluetooth = {
+        #   background = "${base02}";
+        #   border = "${base0D}";
+        #   icon = "${base0D}";
+        #   icon_background = "${base0E}";
+        #   text = "${base0D}";
+        # };
 
-        borderColor = "${base07}";
+        # borderColor = "${base07}";
 
         clock = {
-          background = "${base02}";
-          border = "${base0E}";
-          icon = "${base06}";
-          icon_background = "${base06}";
-          text = "${base08}";
+          background = "${base00}";
+          border = "${base04}";
+          icon = "${base08}";
+          icon_background = "${base00}";
+          text = "${base07}";
         };
 
         dashboard = {
-          background = "${base02}";
-          border = "${base0A}";
-          icon = "${base0A}";
+          background = "${base00}";
+          border = "${base0E}";
+          icon = "${base08}";
         };
 
         hover = "${base03}";
         icon = "${base07}";
         icon_background = "${base02}";
 
-        media = {
-          background = "${base03}";
-          border = "${base0E}";
-          icon = "${base07}";
-          icon_background = "${base07}";
-          text = "${base08}";
-        };
+        # media = {
+        #   background = "${base03}";
+        #   border = "${base0E}";
+        #   icon = "${base07}";
+        #   icon_background = "${base07}";
+        #   text = "${base08}";
+        # };
 
         modules = {
           cava = {
-            background = "${base02}";
-            border = "${base0C}";
+            background = "${base00}";
+            border = "${base06}";
             icon = "${base08}";
-            icon_background = "${base02}";
-            text = "${base07}";
+            icon_background = "${base01}";
+            text = "${base08}";
           };
 
           cpu = {
-            background = "${base02}";
+            background = "${base00}";
             border = "${base0F}";
             icon = "${base08}";
-            icon_background = "${base08}";
-            text = "${base08}";
-          };
-
-          hypridle = {
-            background = "${base02}";
-            border = "${base0F}";
-            icon = "${base08}";
-            icon_background = "${base08}";
-            text = "${base08}";
-          };
-
-          hyprsunset = {
-            background = "${base02}";
-            border = "${base0A}";
-            icon = "${base0A}";
-            icon_background = "${base0A}";
-            text = "${base0A}";
-          };
-
-          kbLayout = {
-            background = "${base02}";
-            border = "${base0D}";
-            icon = "${base0D}";
-            icon_background = "${base0D}";
-            text = "${base0D}";
-          };
-
-          microphone = {
-            background = "${base02}";
-            border = "${base0B}";
-            icon = "${base0B}";
-            icon_background = "${base02}";
-            text = "${base0B}";
-          };
-
-          netstat = {
-            background = "${base02}";
-            border = "${base0B}";
-            icon = "${base0B}";
-            icon_background = "${base0B}";
-            text = "${base0B}";
-          };
-
-          power = {
-            background = "${base02}";
-            border = "${base0F}";
-            icon = "${base08}";
-            icon_background = "${base08}";
-          };
-
-          ram = {
-            background = "${base02}";
-            border = "${base0A}";
-            icon = "${base0A}";
-            icon_background = "${base0A}";
-            text = "${base0A}";
-          };
-
-          storage = {
-            background = "${base02}";
-            border = "${base0F}";
-            icon = "${base08}";
-            icon_background = "${base08}";
-            text = "${base08}";
-          };
-
-          submap = {
-            background = "${base02}";
-            border = "${base0C}";
-            icon = "${base0C}";
-            icon_background = "${base02}";
-            text = "${base0C}";
-          };
-
-          updates = {
-            background = "${base02}";
-            border = "${base0E}";
-            icon = "${base0E}";
-            icon_background = "${base0E}";
-            text = "${base0E}";
-          };
-
-          weather = {
-            background = "${base02}";
-            border = "${base07}";
-            icon = "${base07}";
-            icon_background = "${base07}";
+            icon_background = "${base01}";
             text = "${base07}";
           };
 
-          worldclock = {
-            background = "${base02}";
-            border = "${base07}";
-            icon = "${base06}";
-            icon_background = "${base06}";
-            text = "${base08}";
+          # hypridle = {
+          #   background = "${base02}";
+          #   border = "${base0F}";
+          #   icon = "${base08}";
+          #   icon_background = "${base08}";
+          #   text = "${base08}";
+          # };
+
+          # hyprsunset = {
+          #   background = "${base02}";
+          #   border = "${base0A}";
+          #   icon = "${base0A}";
+          #   icon_background = "${base0A}";
+          #   text = "${base0A}";
+          # };
+
+          # kbLayout = {
+          #   background = "${base02}";
+          #   border = "${base0D}";
+          #   icon = "${base0D}";
+          #   icon_background = "${base0D}";
+          #   text = "${base0D}";
+          # };
+
+          microphone = {
+            background = "${base00}";
+            border = "${base0C}";
+            icon = "${base0E}";
+            icon_background = "${base01}";
+            text = "${base07}";
           };
+
+          # netstat = {
+          #   background = "${base02}";
+          #   border = "${base0B}";
+          #   icon = "${base0B}";
+          #   icon_background = "${base0B}";
+          #   text = "${base0B}";
+          # };
+
+          power = {
+            background = "${base00}";
+            border = "${base0A}";
+            icon = "${base0E}";
+            icon_background = "${base02}";
+          };
+
+          ram = {
+            background = "${base00}";
+            border = "${base0B}";
+            icon = "${base08}";
+            icon_background = "${base01}";
+            text = "${base07}";
+          };
+
+          # storage = {
+          #   background = "${base02}";
+          #   border = "${base0F}";
+          #   icon = "${base08}";
+          #   icon_background = "${base08}";
+          #   text = "${base08}";
+          # };
+
+          # submap = {
+          #   background = "${base02}";
+          #   border = "${base0C}";
+          #   icon = "${base0C}";
+          #   icon_background = "${base02}";
+          #   text = "${base0C}";
+          # };
+
+          # updates = {
+          #   background = "${base02}";
+          #   border = "${base0E}";
+          #   icon = "${base0E}";
+          #   icon_background = "${base0E}";
+          #   text = "${base0E}";
+          # };
+
+          # weather = {
+          #   background = "${base02}";
+          #   border = "${base07}";
+          #   icon = "${base07}";
+          #   icon_background = "${base07}";
+          #   text = "${base07}";
+          # };
+
+          # worldclock = {
+          #   background = "${base02}";
+          #   border = "${base07}";
+          #   icon = "${base06}";
+          #   icon_background = "${base06}";
+          #   text = "${base08}";
+          # };
         };
 
-        network = {
-          background = "${base02}";
-          border = "${base0E}";
-          icon = "${base0E}";
-          icon_background = "${base06}";
-          text = "${base0E}";
-        };
+        # network = {
+        #   background = "${base02}";
+        #   border = "${base0E}";
+        #   icon = "${base0E}";
+        #   icon_background = "${base06}";
+        #   text = "${base0E}";
+        # };
 
         notifications = {
-          background = "${base02}";
-          border = "${base07}";
-          icon = "${base07}";
-          icon_background = "${base07}";
-          total = "${base07}";
+          background = "${base00}";
+          border = "${base06}";
+          icon = "${base08}";
+          icon_background = "${base02}";
+          total = "${base0D}";
         };
 
         style = "default";
 
         systray = {
-          background = "${base02}";
-          border = "${base03}";
-          customIcon = "${base05}";
+          background = "${base00}";
+          border = "${base0D}";
+          # customIcon = "${base0E}";
         };
 
-        text = "${base07}";
+        # text = "${base07}";
 
         volume = {
-          background = "${base02}";
-          border = "${base07}";
-          icon = "${base07}";
-          icon_background = "${base07}";
+          background = "${base00}";
+          border = "${base04}";
+          icon = "${base08}";
+          icon_background = "${base02}";
           text = "${base07}";
         };
 
         windowtitle = {
-          background = "${base02}";
+          background = "${base00}";
           border = "${base06}";
-          icon = "${base06}";
-          icon_background = "${base06}";
-          text = "${base06}";
+          icon = "${base08}";
+          icon_background = "${base02}";
+          text = "${base08}";
         };
 
         workspaces = {
-          active = "${base08}";
+          active = "${base0E}";
           available = "${base04}";
-          background = "${base01}";
-          border = "${base09}";
-          hover = "${base03}";
+          background = "${base00}";
+          border = "${base03}";
+          hover = "${base01}";
           numbered_active_highlighted_text_color = "${base04}";
           numbered_active_underline_color = "${base0F}";
-          occupied = "${base0F}";
+          occupied = "${base07}";
         };
       };
 
       menus = {
-        background = "${base02}";
-        border.color = "${base02}";
+        background = "${base00}";
+        # border.color = "${base02}";
 
         buttons = {
           active = "${base06}";
           default = "${base07}";
-          disabled = "${base04}";
-          text = "${base02}";
+          disabled = "${base02}";
+          text = "${base08}";
         };
 
-        cards = "${base01}";
+        cards = "${base00}";
 
         check_radio_button = {
-          active = "${base08}";
-          background = "${base01}";
+          active = "${base06}";
+          background = "${base00}";
         };
 
         dimtext = "${base04}";
 
         dropdownmenu = {
-          background = "${base02}";
-          divider = "${base01}";
-          text = "${base08}";
+          background = "${base00}";
+          divider = "${base0A}";
+          text = "${base07}";
         };
 
-        feinttext = "${base02}";
+        feinttext = "${base04}";
 
         iconbuttons = {
-          active = "${base07}";
+          active = "${base08}";
           passive = "${base05}";
         };
 
         icons = {
-          active = "${base07}";
-          passive = "${base04}";
+          active = "${base08}";
+          passive = "${base05}";
         };
 
         label = "${base07}";
@@ -267,81 +268,83 @@ in {
         };
 
         menu = {
-          battery = {
-            background.color = "${base02}";
-            border.color = "${base02}";
-            card.color = "${base01}";
+          # todo
+          # battery = {
+          #   background.color = "${base02}";
+          #   border.color = "${base02}";
+          #   card.color = "${base01}";
+          #
+          #   icons = {
+          #     active = "${base0A}";
+          #     passive = "${base04}";
+          #   };
+          #
+          #   label.color = "${base08}";
+          #
+          #   listitems = {
+          #     active = "${base06}";
+          #     passive = "${base04}";
+          #   };
+          #
+          #   slider = {
+          #     background = "${base00}";
+          #     backgroundhover = "${base02}";
+          #     primary = "${base08}";
+          #     puck = "${base07}";
+          #   };
+          #
+          #   text = "${base07}";
+          # };
 
-            icons = {
-              active = "${base0A}";
-              passive = "${base04}";
-            };
-
-            label.color = "${base0A}";
-
-            listitems = {
-              active = "${base0A}";
-              passive = "${base05}";
-            };
-
-            slider = {
-              background = "${base04}";
-              backgroundhover = "${base03}";
-              primary = "${base0A}";
-              puck = "${base03}";
-            };
-
-            text = "${base08}";
-          };
-          bluetooth = {
-            background.color = "${base02}";
-            border.color = "${base02}";
-            card.color = "${base01}";
-
-            iconbutton = {
-              active = "${base0D}";
-              passive = "${base0A}";
-            };
-
-            icons = {
-              active = "${base0D}";
-              passive = "${base04}";
-            };
-
-            label.color = "${base0D}";
-
-            listitems = {
-              active = "${base0D}";
-              passive = "${base05}";
-            };
-
-            scroller.color = "${base0D}";
-            status = "${base03}";
-
-            switch = {
-              disabled = "${base02}";
-              enabled = "${base0D}";
-              puck = "${base03}";
-            };
-
-            switch_divider = "${base03}";
-            text = "${base08}";
-          };
+          # bluetooth = {
+          #   background.color = "${base02}";
+          #   border.color = "${base02}";
+          #   card.color = "${base01}";
+          #
+          #   iconbutton = {
+          #     active = "${base0D}";
+          #     passive = "${base0A}";
+          #   };
+          #
+          #   icons = {
+          #     active = "${base0D}";
+          #     passive = "${base04}";
+          #   };
+          #
+          #   label.color = "${base0D}";
+          #
+          #   listitems = {
+          #     active = "${base0D}";
+          #     passive = "${base05}";
+          #   };
+          #
+          #   scroller.color = "${base0D}";
+          #   status = "${base03}";
+          #
+          #   switch = {
+          #     disabled = "${base02}";
+          #     enabled = "${base0D}";
+          #     puck = "${base03}";
+          #   };
+          #
+          #   switch_divider = "${base03}";
+          #   text = "${base08}";
+          # };
 
           clock = {
-            background.color = "${base01}";
-            border.color = "${base07}";
+            background.color = "${base00}";
+            border.color = "${base0D}";
 
             calendar = {
-              contextdays = "${base04}";
-              currentday = "${base06}";
-              days = "${base05}";
-              paginator = "${base06}";
-              weekdays = "${base04}";
-              yearmonth = "${base0C}";
+              contextdays = "${base07}";
+              currentday = "${base08}";
+              days = "${base06}";
+              paginator = "${base0C}";
+              weekdays = "${base05}";
+              yearmonth = "${base0B}";
             };
 
-            card.color = "${base03}";
+            card.color = "${base01}";
             text = "${base08}";
 
             time = {
@@ -349,60 +352,60 @@ in {
               timeperiod = "${base0C}";
             };
 
-            weather = {
-              hourly = {
-                icon = "${base06}";
-                temperature = "${base06}";
-                time = "${base06}";
-              };
-
-              icon = "${base06}";
-              stats = "${base06}";
-              status = "${base0C}";
-              temperature = "${base05}";
-
-              thermometer = {
-                cold = "${base05}";
-                extremelycold = "${base0D}";
-                extremelyhot = "${base08}";
-                hot = "${base09}";
-                moderate = "${base07}";
-              };
-            };
+            # weather = {
+            #   hourly = {
+            #     icon = "${base06}";
+            #     temperature = "${base06}";
+            #     time = "${base06}";
+            #   };
+            #
+            #   icon = "${base06}";
+            #   stats = "${base06}";
+            #   status = "${base0C}";
+            #   temperature = "${base05}";
+            #
+            #   thermometer = {
+            #     cold = "${base05}";
+            #     extremelycold = "${base0D}";
+            #     extremelyhot = "${base08}";
+            #     hot = "${base09}";
+            #     moderate = "${base07}";
+            #   };
+            # };
           };
 
           dashboard = {
-            background.color = "${base02}";
-            border.color = "${base02}";
+            background.color = "${base00}";
+            border.color = "${base06}";
             card.color = "${base01}";
 
             controls = {
-              bluetooth = {
-                background = "${base0D}";
-                text = "${base02}";
-              };
+              # bluetooth = {
+              #   background = "${base00}";
+              #   text = "${base02}";
+              # };
 
-              disabled = "${base04}";
+              disabled = "${base03}";
 
               input = {
-                background = "${base06}";
-                text = "${base02}";
+                background = "${base00}";
+                text = "${base05}";
               };
 
               notifications = {
-                background = "${base0A}";
-                text = "${base02}";
+                background = "${base00}";
+                text = "${base07}";
               };
 
               volume = {
-                background = "${base07}";
-                text = "${base02}";
+                background = "${base00}";
+                text = "${base08}";
               };
 
-              wifi = {
-                background = "${base0E}";
-                text = "${base02}";
-              };
+              # wifi = {
+              #   background = "${base00}";
+              #   text = "${base02}";
+              # };
             };
 
             directories = {
@@ -419,133 +422,133 @@ in {
               };
             };
 
-            monitors = {
-              bar_background = "${base03}";
-
-              cpu = {
-                bar = "${base07}";
-                icon = "${base07}";
-                label = "${base07}";
-              };
-
-              disk = {
-                bar = "${base06}";
-                icon = "${base06}";
-                label = "${base06}";
-              };
-
-              gpu = {
-                bar = "${base0B}";
-                icon = "${base0B}";
-                label = "${base0B}";
-              };
-
-              ram = {
-                bar = "${base0A}";
-                icon = "${base0A}";
-                label = "${base0A}";
-              };
-            };
+            # monitors = {
+            #   bar_background = "${base00}";
+            #
+            #   cpu = {
+            #     bar = "${base07}";
+            #     icon = "${base07}";
+            #     label = "${base07}";
+            #   };
+            #
+            #   disk = {
+            #     bar = "${base06}";
+            #     icon = "${base06}";
+            #     label = "${base06}";
+            #   };
+            #
+            #   gpu = {
+            #     bar = "${base0B}";
+            #     icon = "${base0B}";
+            #     label = "${base0B}";
+            #   };
+            #
+            #   ram = {
+            #     bar = "${base0A}";
+            #     icon = "${base0A}";
+            #     label = "${base0A}";
+            #   };
+            # };
 
             powermenu = {
-              confirmation = {
-                background = "${base02}";
-                body = "${base05}";
-                border = "${base02}";
-                button_text = "${base02}";
-                card = "${base01}";
-                confirm = "${base0B}";
-                deny = "${base08}";
-                label = "${base07}";
-              };
+              # confirmation = {
+              #   background = "${base00}";
+              #   body = "${base05}";
+              #   border = "${base02}";
+              #   button_text = "${base02}";
+              #   card = "${base01}";
+              #   confirm = "${base0B}";
+              #   deny = "${base08}";
+              #   label = "${base07}";
+              # };
 
-              logout = "${base0B}";
-              restart = "${base09}";
-              shutdown = "${base08}";
-              sleep = "${base0D}";
+              logout = "${base02}";
+              restart = "${base02}";
+              shutdown = "${base02}";
+              sleep = "${base02}";
             };
 
-            profile.name = "${base06}";
+            profile.name = "${base08}";
 
             shortcuts = {
-              background = "${base07}";
-              recording = "${base0B}";
-              text = "${base02}";
+              background = "${base00}";
+              recording = "${base01}";
+              text = "${base05}";
             };
           };
 
-          media = {
-            album = "${base06}";
-            artist = "${base0C}";
-            background.color = "${base02}";
-            border.color = "${base02}";
+          # media = {
+          #   album = "${base06}";
+          #   artist = "${base0C}";
+          #   background.color = "${base02}";
+          #   border.color = "${base02}";
+          #
+          #   buttons = {
+          #     background = "${base00}";
+          #     enabled = "${base0C}";
+          #     inactive = "${base04}";
+          #     text = "${base02}";
+          #   };
+          #
+          #   card.color = "${base01}";
+          #
+          #   slider = {
+          #     background = "${base00}";
+          #     backgroundhover = "${base03}";
+          #     primary = "${base06}";
+          #     puck = "${base03}";
+          #   };
+          #
+          #   song = "${base07}";
+          #   timestamp = "${base05}";
+          # };
 
-            buttons = {
-              background = "${base07}";
-              enabled = "${base0C}";
-              inactive = "${base04}";
-              text = "${base02}";
-            };
-
-            card.color = "${base01}";
-
-            slider = {
-              background = "${base04}";
-              backgroundhover = "${base03}";
-              primary = "${base06}";
-              puck = "${base03}";
-            };
-
-            song = "${base07}";
-            timestamp = "${base05}";
-          };
-
-          network = {
-            background.color = "${base02}";
-            border.color = "${base02}";
-            card.color = "${base01}";
-
-            iconbuttons = {
-              active = "${base0E}";
-              passive = "${base05}";
-            };
-
-            icons = {
-              active = "${base0E}";
-              passive = "${base04}";
-            };
-
-            label.color = "${base0E}";
-
-            listitems = {
-              active = "${base0E}";
-              passive = "${base05}";
-            };
-
-            scroller.color = "${base0E}";
-            status.color = "${base03}";
-
-            switch = {
-              disabled = "${base02}";
-              enabled = "${base0E}";
-              puck = "${base03}";
-            };
-
-            text = "${base08}";
-          };
+          # network = {
+          #   background.color = "${base02}";
+          #   border.color = "${base02}";
+          #   card.color = "${base01}";
+          #
+          #   iconbuttons = {
+          #     active = "${base0E}";
+          #     passive = "${base05}";
+          #   };
+          #
+          #   icons = {
+          #     active = "${base0E}";
+          #     passive = "${base04}";
+          #   };
+          #
+          #   label.color = "${base0E}";
+          #
+          #   listitems = {
+          #     active = "${base0E}";
+          #     passive = "${base05}";
+          #   };
+          #
+          #   scroller.color = "${base0E}";
+          #   status.color = "${base03}";
+          #
+          #   switch = {
+          #     disabled = "${base02}";
+          #     enabled = "${base0E}";
+          #     puck = "${base03}";
+          #   };
+          #
+          #   text = "${base08}";
+          # };
 
           notifications = {
-            background = "${base02}";
-            border = "${base02}";
+            background = "${base00}";
+            border = "${base09}";
             card = "${base01}";
             clear = "${base08}";
             label = "${base07}";
-            no_notifications_label = "${base02}";
+            no_notifications_label = "${base04}";
 
             pager = {
-              background = "${base02}";
+              background = "${base00}";
               button = "${base07}";
-              label = "${base04}";
+              label = "${base05}";
             };
 
             scrollbar.color = "${base07}";
@@ -553,56 +556,56 @@ in {
             switch = {
               disabled = "${base02}";
               enabled = "${base07}";
-              puck = "${base03}";
+              puck = "${base04}";
             };
 
-            switch_divider = "${base03}";
+            switch_divider = "${base05}";
           };
 
           power = {
-            background.color = "${base02}";
-            border.color = "${base02}";
+            background.color = "${base01}";
+            border.color = "${base05}";
 
             buttons = {
               logout = {
-                background = "${base01}";
-                icon = "${base02}";
-                icon_background = "${base0B}";
-                text = "${base0B}";
+                background = "${base00}";
+                icon = "${base04}";
+                icon_background = "${base01}";
+                text = "${base07}";
               };
 
               restart = {
-                background = "${base01}";
-                icon = "${base02}";
-                icon_background = "${base09}";
-                text = "${base09}";
-              };
-
-              shutdown = {
-                background = "${base01}";
-                icon = "${base02}";
-                icon_background = "${base08}";
+                background = "${base00}";
+                icon = "${base04}";
+                icon_background = "${base01}";
                 text = "${base08}";
               };
 
+              shutdown = {
+                background = "${base00}";
+                icon = "${base05}";
+                icon_background = "${base01}";
+                text = "${base07}";
+              };
+
               sleep = {
-                background = "${base01}";
-                icon = "${base02}";
-                icon_background = "${base0D}";
-                text = "${base0D}";
+                background = "${base00}";
+                icon = "${base04}";
+                icon_background = "${base01}";
+                text = "${base08}";
               };
             };
           };
 
           systray.dropdownmenu = {
-            background = "${base02}";
-            divider = "${base01}";
+            background = "${base00}";
+            divider = "${base03}";
             text = "${base08}";
           };
 
           volume = {
             audio_slider = {
-              background = "${base04}";
+              background = "${base00}";
               backgroundhover = "${base03}";
               primary = "${base07}";
               puck = "${base04}";
@@ -623,7 +626,7 @@ in {
             };
 
             input_slider = {
-              background = "${base04}";
+              background = "${base00}";
               backgroundhover = "${base03}";
               primary = "${base07}";
               puck = "${base04}";
@@ -641,21 +644,21 @@ in {
         };
 
         popover = {
-          background = "${base02}";
-          border = "${base02}";
+          background = "${base00}";
+          border = "${base0A}";
           text = "${base07}";
         };
 
         progressbar = {
-          background = "${base03}";
-          foreground = "${base07}";
+          background = "${base00}";
+          foreground = "${base08}";
         };
 
         slider = {
-          background = "${base04}";
+          background = "${base00}";
           backgroundhover = "${base03}";
           primary = "${base07}";
-          puck = "${base03}";
+          puck = "${base09}";
         };
 
         switch = {
@@ -667,7 +670,7 @@ in {
         text = "${base08}";
 
         tooltip = {
-          background = "${base02}";
+          background = "${base00}";
           text = "${base08}";
         };
       };
@@ -675,15 +678,15 @@ in {
 
     notification = {
       actions = {
-        background = "${base07}";
+        background = "${base00}";
         text = "${base02}";
       };
 
-      background = "${base02}";
+      background = "${base00}";
       border = "${base02}";
 
       close_button = {
-        background = "${base08}";
+        background = "${base00}";
         label = "${base02}";
       };
 

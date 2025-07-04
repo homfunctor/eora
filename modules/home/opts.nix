@@ -1,5 +1,5 @@
 # keeping all declared options here. results in an ever expanding file
-# but it's better than declaring them all over the place
+# but i prefer it to declaring them all over the place
 {
   flake,
   lib,
@@ -24,6 +24,16 @@ in {
       rstudio.enable = mkBoolOpt false "enable rstudio";
     };
 
+    # neovim options
+    nvim.plugins = let
+      pluginNames = importAllFileNames ./type-niceTTY/app-neovim/plugins;
+    in
+      genAttrs pluginNames (
+        pluginName: {
+          enable = mkBoolOpt false "enable ${pluginName}";
+        }
+      );
+
     cosmic-greeter = mkAttrOpt {} "cosmic-greeter settings";
 
     customUserDirs = mkAttrOpt {} "custom settings for user directories (XDG)";
@@ -36,19 +46,24 @@ in {
     # hpl: hyprpanel
     hplFontSize = mkStrOpt "1.2rem" "hyprpanel button and bar font size";
     hplLayout = mkAttrOpt {} "user options for hyprpanel layout";
-    hplScale = genAttrs [
-      "bar"
-      "battery"
-      "clock"
-      "dashboard"
-      "media"
-      "notification"
-      "notifications"
-      "osd"
-      "popover"
-      "power"
-      "volume"
-    ] (name: mkIntOpt 100 "scale for ${name}");
+    hplScale = let
+      uiElems = [
+        "bar"
+        "battery"
+        "clock"
+        "dashboard"
+        "media"
+        "notification"
+        "notifications"
+        "osd"
+        "popover"
+        "power"
+        "volume"
+      ];
+    in
+      genAttrs uiElems (
+        name: mkIntOpt 100 "scale for ${name}"
+      );
 
     # shortcuts for hyprpanel dashboard menu
     hplLeftcuts = genAttrs [
@@ -88,9 +103,12 @@ in {
         };
       } "default versioning settings";
 
-      folder =
-        genAttrs (importAllFileNames ./type-work/app-syncthing/sync-folders)
-        (name: {enable = mkBoolOpt false "sync ${name}";});
+      folder = let
+        folderNames = importAllFileNames ./type-work/app-syncthing/sync-folders;
+      in
+        genAttrs folderNames (
+          name: {enable = mkBoolOpt false "sync ${name}";}
+        );
     };
 
     hostName = mkStrOpt "" "host name. name of host. that by which the host is named";

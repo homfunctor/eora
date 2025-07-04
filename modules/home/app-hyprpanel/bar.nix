@@ -1,6 +1,8 @@
 {
   config,
   flake,
+  lib,
+  pkgs,
   ...
 }: {
   programs.hyprpanel.settings.bar = {
@@ -74,6 +76,7 @@
         icon = "";
         leftClick = "";
         middleClick = "";
+        round = true;
         rightClick = "";
         scrollDown = "";
         scrollUp = "";
@@ -83,7 +86,7 @@
 
     launcher = {
       icon = "";
-      rightClick = flake.lib.uTog "nwg-drawer -nofs -wm 'uwsm'";
+      rightClick = (flake.lib.uTog "${lib.getExe pkgs.nwg-drawer}") + " -nofs -wm 'uwsm'";
     };
 
     notifications = {

@@ -9,7 +9,6 @@
     inputs.nixvim.homeManagerModules.nixvim
     ./autocmd.nix
     ./keymaps.nix
-    ./opts.nix
     ./plugins
     ./settings.nix
   ];

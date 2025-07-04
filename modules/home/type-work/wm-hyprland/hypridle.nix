@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }: let
   lock_cmd = "pidof hyprlock || ${lockPkg}";
