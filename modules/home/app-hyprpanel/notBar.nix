@@ -19,11 +19,6 @@
   shutdownCmd = "systemctl poweroff";
   sleepCmd = "systemctl suspend";
 in {
-  imports = [
-    ./themeColors.nix
-    ./themeUI.nix
-  ];
-
   programs.hyprpanel.settings = {
     hyprpanel.restartAgs = false;
 
