@@ -16,6 +16,7 @@
     # work
     ./hyprland.nix
     ./hyprpanel.nix
+    app-zoom
     type-work
   ];
 
