@@ -181,7 +181,7 @@ in {
           border = "${base06}";
           icon = "${base08}";
           icon_background = "${base02}";
-          total = "${base0D}";
+          total = "${base05}";
         };
 
         style = "default";

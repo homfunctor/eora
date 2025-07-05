@@ -75,6 +75,26 @@
       }
 
       {
+        action = "gg=G";
+        key = "<leader>if";
+        mode = "n";
+        options = {
+          desc = "Indent file";
+          silent = true;
+        };
+      }
+
+      {
+        action = "ggVGy";
+        key = "<leader>cb";
+        mode = "n";
+        options = {
+          desc = "Copy buffer";
+          silent = true;
+        };
+      }
+
+      {
         action = "<gv";
         key = "<";
         mode = "v";
