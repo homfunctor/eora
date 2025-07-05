@@ -16,9 +16,8 @@
       chmod +x $out/opt/IronyModManager/IronyModManager
 
       # enable wayland support
-      ${pkgs.lib.getExe pkgs.jq} '."LinuxOptions"."DisplayServer" = "wayland"' $out/opt/IronyModManager/appSettings.json > $out/opt/IronyModManager/tmp.json
+      ${pkgs.lib.getExe pkgs.jq} '."LinuxOptions"."DisplayServer" = "auto"' $out/opt/IronyModManager/appSettings.json > $out/opt/IronyModManager/tmp.json
       mv $out/opt/IronyModManager/tmp.json $out/opt/IronyModManager/appSettings.json
-      rm $out/opt/IronyModManager/tmp.json
 
       # setup executable
       mkdir -p $out/bin
@@ -57,10 +56,12 @@ in
         # libs
         glibc
         libnotify
+        libxkbcommon
         lttng-ust_2_12
         nspr
         nss
         udev
+        wayland
 
         # x11
         xorg.libICE
