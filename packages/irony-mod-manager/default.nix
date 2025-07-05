@@ -1,3 +1,4 @@
+# todo: scaling is strange when tiled
 {pkgs}: let
   immApp = pkgs.stdenv.mkDerivation rec {
     pname = "irony-mod-manager";
