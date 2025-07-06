@@ -23,7 +23,7 @@ in {
       "${mod}, E, exec, ${uApp "${filesPkg} -w"}"
       "${mod}, W, exec, ${uApp "${terminalPkg}"}"
 
-      # ${panelPkg}
+      # hyprpanel
       "${mod}, A, exec, ${uTog "${panelPkg} t audiomenu"}"
       "${mod}, C, exec, ${uTog "${panelPkg} t calendarmenu"}"
       "${mod}, N, exec, ${uTog "${panelPkg} t notificationsmenu"}"
@@ -81,6 +81,9 @@ in {
       "${mod}, mouse:275, exec,  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       "${mod}, mouse:276, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
       ", PRINT, exec, ${uApp "${getExe pkgs.grimblast}"} --freeze --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
+
+      # unswallow/reswallow a window
+      "${mod}, S, toggleswallow"
 
       # workspaces
       "${mod}, 1, workspace, 1"

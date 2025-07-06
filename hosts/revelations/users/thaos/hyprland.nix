@@ -19,7 +19,7 @@ in {
 
   home.opts = {
     hyprlandEnv = {
-      browser = "${getExe pkgs.librewolf}";
+      browser = "${getExe pkgs.chromium}";
       editor = "${getExe config.programs.neovide.package}";
       shell = "${getExe pkgs.fish}";
       terminal = "${getExe pkgs.alacritty}";

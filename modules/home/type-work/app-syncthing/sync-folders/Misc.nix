@@ -22,6 +22,7 @@ in {
         copyOwnershipFromParent = true;
 
         devices = [
+          "aedyr"
           "revelations"
           "vytmadh"
         ];

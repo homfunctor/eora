@@ -2,7 +2,7 @@
   home.opts.defaultApps = {
     archive = ["org.gnome.FileRoller.desktop"];
     audio = ["vlc.desktop"];
-    browser = ["librewolf.desktop"];
+    browser = ["chromium.desktop"];
     directory = ["org.gnome.Nautilus.desktop"];
     image = ["org.gnome.Loupe.desktop"];
     office = ["onlyoffice-desktopeditors.desktop"];

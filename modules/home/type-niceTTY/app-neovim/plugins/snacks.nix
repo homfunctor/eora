@@ -12,8 +12,7 @@ in {
       enable = true;
 
       settings = {
-        # todo: check if this isn't needed when using neovide
-        # animate.enabled = true;
+        bigfile.enabled = true;
 
         indent = {
           enabled = true;

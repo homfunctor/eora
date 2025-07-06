@@ -32,10 +32,10 @@ in {
           };
         };
         statix.enable = true;
-        typos_lsp = {
-          enable = true;
-          extraOptions.init_options.diagnosticSeverity = "Hint";
-        };
+        # typos_lsp = {
+        #   enable = true;
+        #   extraOptions.init_options.diagnosticSeverity = "Hint";
+        # };
       };
     };
   };

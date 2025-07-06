@@ -36,6 +36,6 @@
     gitps = "git push";
     grep = "rg";
     ls = "eza -G -x --color=always --icons=always";
-    n = "nvim";
+    n = "neovide --no-fork";
   };
 }

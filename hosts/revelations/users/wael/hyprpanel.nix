@@ -100,9 +100,9 @@ in {
 
     hplRightcuts = {
       shortcut1 = {
-        command = uApp "librewolf";
-        icon = "󰈹";
-        tooltip = "Librewolf";
+        command = uApp "chromium";
+        icon = "";
+        tooltip = "Chromium";
       };
 
       shortcut3 = {
