@@ -1,4 +1,5 @@
 {
+  config,
   inputs,
   lib,
   pkgs,
@@ -23,6 +24,7 @@ in {
   home.opts = {
     hyprlandEnv = {
       browser = "${getExe pkgs.vivaldi}";
+      editor = "${getExe config.programs.neovide.package}";
       shell = "${getExe pkgs.fish}";
       terminal = "${getExe pkgs.alacritty}";
     };

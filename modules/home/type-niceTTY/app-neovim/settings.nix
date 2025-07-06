@@ -6,6 +6,10 @@
   colors = config.lib.stylix.colors.withHashtag;
 in {
   programs.nixvim = {
+    defaultEditor = true;
+    viAlias = true;
+    vimdiffAlias = true;
+
     clipboard = {
       register = "unnamedplus";
 

@@ -5,6 +5,7 @@
     file-roller
     gnome-calculator
     gnome-disk-utility
+    # sometimes you just want a boring basic gui for a quick edit
     gnome-text-editor
     gsettings-desktop-schemas
     loupe

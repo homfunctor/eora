@@ -85,7 +85,7 @@
       }
 
       {
-        action = "ggVGy";
+        action = "gg0VGy";
         key = "<leader>cb";
         mode = "n";
         options = {

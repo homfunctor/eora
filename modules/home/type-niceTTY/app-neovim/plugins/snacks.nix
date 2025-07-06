@@ -12,7 +12,8 @@ in {
       enable = true;
 
       settings = {
-        animate.enabled = true;
+        # todo: check if this isn't needed when using neovide
+        # animate.enabled = true;
 
         indent = {
           enabled = true;

@@ -8,7 +8,7 @@
     office = ["onlyoffice-desktopeditors.desktop"];
     pdf = ["org.gnome.Papers.desktop"];
     terminal = ["alacritty.desktop"];
-    text = ["org.gnome.TextEditor.desktop"];
+    text = ["neovide.desktop"];
     video = ["vlc.desktop"];
   };
 }

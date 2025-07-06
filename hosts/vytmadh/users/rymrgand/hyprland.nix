@@ -1,4 +1,5 @@
 {
+  config,
   inputs,
   lib,
   pkgs,
@@ -17,6 +18,7 @@ in {
     opts = {
       hyprlandEnv = {
         browser = "${getExe pkgs.librewolf}";
+        editor = "${getExe config.programs.nixvim.package}";
         shell = "${getExe pkgs.fish}";
         terminal = "${getExe pkgs.alacritty}";
       };

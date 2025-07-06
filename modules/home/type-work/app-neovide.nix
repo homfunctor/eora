@@ -1,0 +1,16 @@
+# todo: configure later
+{
+  programs = {
+    neovide.enable = true;
+
+    nixvim.extraConfigLua = ''
+      if vim.g.neovide then
+        vim.opt.mouse = 'a'
+
+        vim.api.nvim_set_keymap("v", "<sc-c>", '"+y', { noremap = true })
+        vim.api.nvim_set_keymap("i", "<sc-v>", '<ESC>"+p', { noremap = true })
+        vim.api.nvim_set_keymap("n", "<sc-v>", '"+p', { noremap = true })
+      end
+    '';
+  };
+}

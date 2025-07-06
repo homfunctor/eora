@@ -1,5 +1,5 @@
 # keeping all declared options here. results in an ever expanding file
-# but it's better than declaring them all over the place
+# but i prefer it to declaring them all over the place
 {
   flake,
   lib,

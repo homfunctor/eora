@@ -81,6 +81,9 @@ in {
     };
 
     misc = {
+      enable_swallow = true;
+      swallow_regex = "^(Alacritty)$";
+
       animate_manual_resizes = true;
       animate_mouse_windowdragging = true;
       anr_missed_pings = 30;

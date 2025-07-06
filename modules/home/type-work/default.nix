@@ -7,6 +7,7 @@
     ./app-inkscape.nix
     ./app-librewolf.nix
     ./app-math
+    ./app-neovide.nix
     ./app-nix-index.nix
     ./app-nwg-drawer.nix
     ./app-onlyoffice.nix
