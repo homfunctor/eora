@@ -17,5 +17,8 @@
       terminal = 0.85;
     };
     polarity = "dark";
+
+    # causes issues for me
+    targets.chromium.enable = false;
   };
 }
