@@ -17,7 +17,6 @@
     ./hyprland.nix
     ./hyprpanel.nix
     app-zoom
-    hw-tablet
     type-work
   ];
 
