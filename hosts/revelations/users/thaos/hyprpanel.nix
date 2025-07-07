@@ -10,10 +10,7 @@ in {
           "windowtitle"
         ];
         "middle" = [
-          "cpu"
-          "ram"
           "clock"
-          "cava"
         ];
         "right" = [
           "volume"
@@ -29,10 +26,7 @@ in {
           "windowtitle"
         ];
         "middle" = [
-          "cpu"
-          "ram"
           "clock"
-          "cava"
         ];
         "right" = [
           "volume"
@@ -49,7 +43,6 @@ in {
         ];
         "middle" = [
           "clock"
-          "cava"
         ];
         "right" = [
           "volume"

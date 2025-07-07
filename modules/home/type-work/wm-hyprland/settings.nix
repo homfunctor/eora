@@ -82,7 +82,8 @@ in {
 
     misc = {
       enable_swallow = true;
-      swallow_regex = "^(Alacritty)$";
+      swallow_exception_regex = "^(Yazi).*";
+      swallow_regex = "^(Alacritty|kitty|foot)$";
 
       animate_manual_resizes = true;
       animate_mouse_windowdragging = true;

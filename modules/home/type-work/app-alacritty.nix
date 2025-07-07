@@ -6,6 +6,9 @@
   home.packages = with pkgs; [
     # for images in yazi
     ueberzugpp
+    # temp to investigate hyprland swallowing issue
+    kitty
+    foot
   ];
 
   programs.alacritty = {

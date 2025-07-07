@@ -12,11 +12,6 @@
   wall2 = "base.png";
   wall3 = "base3.png";
 in {
-  # workwork no time for fancyfancy
-  wayland.windowManager.hyprland.settings = {
-    animations.enabled = false; # :(
-  };
-
   home.opts = {
     hyprlandEnv = {
       browser = "${getExe pkgs.chromium}";
