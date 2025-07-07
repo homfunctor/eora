@@ -15,11 +15,10 @@
     ;
 
   faceImg = "${inputs.sapadal}/assets/${userName}.png";
-  logoutCmd = ''systemctl --user stop "wayland-wm@*.service"'';
-  # logoutCmd = ''loginctl terminate-user ""'';
-  rebootCmd = "systemctl reboot";
-  shutdownCmd = "systemctl poweroff";
-  sleepCmd = "systemctl suspend";
+  logoutCmd = "uwsm stop";
+  rebootCmd = "uwsm stop; systemctl reboot";
+  shutdownCmd = "uwsm stop; systemctl poweroff";
+  sleepCmd = "hyprlock && systemctl suspend";
 in {
   programs.hyprpanel.settings = {
     hyprpanel.restartAgs = false;
