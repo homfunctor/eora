@@ -16,6 +16,7 @@
     fontDir.enable = true;
 
     packages = with pkgs; [
+      font-awesome
       material-design-icons
       material-icons
       material-symbols

@@ -150,9 +150,6 @@ in {
       "float, class:^(org.gnome.Calculator)$"
       "size > >, class:^(org.gnome.Calculator)$"
 
-      # dim some programs
-      "dimaround, class:^(xdg-desktop-portal-hyprland)$"
-
       # steam
       "immediate, class:^(steam_app_*)$"
       "float, class:steam"
@@ -164,6 +161,9 @@ in {
       "stayfocused, class:(gcr-prompter)"
 
       # file picker
+      "float, class:^(xdg-desktop-portal-hyprland), title:(All Files)"
+      "stayfocused, class:^(xdg-desktop-portal-hyprland), title:(All Files)"
+
       "float, class:^(xdg-desktop-portal-gtk), title:(All Files)"
       "stayfocused, class:^(xdg-desktop-portal-gtk), title:(All Files)"
 

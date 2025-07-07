@@ -1,5 +1,3 @@
-# todo: check if there's any need to mess with systemd service files
-# todo: check if auto-runs
 {
   config,
   lib,

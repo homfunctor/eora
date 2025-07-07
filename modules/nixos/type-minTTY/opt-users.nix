@@ -7,12 +7,15 @@
     user: {
       description = user;
       extraGroups = [
+        "adbusers"
         "audio"
         "gamemode"
         "input"
         "networkmanager"
+        "power"
         "scanners"
         "sys"
+        "udev"
         "video"
         "wheel"
       ];

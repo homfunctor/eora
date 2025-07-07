@@ -3,12 +3,17 @@
     enable = true;
 
     config = {
-      common.default = [
-        "gtk"
-        "hyprland"
-      ];
+      common = {
+        default = [
+          "hyprland"
+        ];
+      };
 
-      hyprland."org.freedesktop.impl.portal.FileChooser" = "gtk";
+      hyprland = {
+        "org.freedesktop.impl.portal.FileChooser" = "gtk";
+        "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
+        default = ["gtk" "hyprland"];
+      };
     };
 
     extraPortals = with pkgs; [

@@ -1,3 +1,4 @@
+# todo: what commands work best with uwsm
 {
   config,
   inputs,
@@ -14,7 +15,8 @@
     ;
 
   faceImg = "${inputs.sapadal}/assets/${userName}.png";
-  logoutCmd = ''systemctl --user stop "wayland-wm@*.service"'';
+  # logoutCmd = ''systemctl --user stop "wayland-wm@*.service"'';
+  logoutCmd = ''loginctl terminate-user ""'';
   rebootCmd = "systemctl reboot";
   shutdownCmd = "systemctl poweroff";
   sleepCmd = "systemctl suspend";

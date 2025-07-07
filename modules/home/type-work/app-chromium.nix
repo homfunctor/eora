@@ -1,7 +1,12 @@
-# todo: check if ungoogled-chromium is okay for work
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    chromium
-    # ungoogled-chromium
-  ];
+{
+  programs.chromium = {
+    enable = true;
+    commandLineArgs = [
+      "--ozone-platform-hint=auto"
+      "--flag-switches-begin"
+      "--enable-webrtc-pipewire-capturer"
+      "--ozone-platform-hint=wayland"
+      "--flag-switches-end"
+    ];
+  };
 }
