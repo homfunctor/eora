@@ -20,6 +20,8 @@
       settings.exec-once = [
         "uwsm finalize"
         "hyprctl setcursor"
+        # temporary nasty hack to allow otd to work on both users
+        "sudo rm -f /tmp/CoreFxPipe_OpenTabletDriver* && ${flake.lib.uApp "otd-daemon"}"
         (flake.lib.uApp "nm-applet")
       ];
     };

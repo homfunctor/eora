@@ -18,7 +18,6 @@ in {
       hw-gpu-intel
       hw-graphics
       hw-printing
-      hw-tablet
     ]
     ++ nixosHW;
 }

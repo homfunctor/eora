@@ -1,4 +1,3 @@
-# todo: what commands work best with uwsm
 {
   config,
   inputs,
@@ -15,10 +14,10 @@
     ;
 
   faceImg = "${inputs.sapadal}/assets/${userName}.png";
-  logoutCmd = "uwsm stop";
-  rebootCmd = "uwsm stop; systemctl reboot";
-  shutdownCmd = "uwsm stop; systemctl poweroff";
-  sleepCmd = "hyprlock && systemctl suspend";
+  logoutCmd = ''loginctl terminate-user ""'';
+  rebootCmd = "systemctl reboot";
+  shutdownCmd = "systemctl poweroff";
+  sleepCmd = "systemctl suspend";
 in {
   programs.hyprpanel.settings = {
     hyprpanel.restartAgs = false;
