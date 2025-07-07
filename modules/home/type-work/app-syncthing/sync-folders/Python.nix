@@ -23,6 +23,7 @@ in {
 
         devices = [
           "revelations"
+          "suninshadow"
           "vytmadh"
         ];
       };
