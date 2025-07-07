@@ -1,4 +1,3 @@
-# todo: scaling is strange when tiled
 {pkgs}: let
   immApp = pkgs.stdenv.mkDerivation rec {
     pname = "irony-mod-manager";
@@ -17,7 +16,8 @@
       chmod +x $out/opt/IronyModManager/IronyModManager
 
       # enable wayland support
-      ${pkgs.lib.getExe pkgs.jq} '."LinuxOptions"."DisplayServer" = "auto"' $out/opt/IronyModManager/appSettings.json > $out/opt/IronyModManager/tmp.json
+      ${pkgs.lib.getExe pkgs.jq} '."LinuxOptions"."DisplayServer" = "auto"' \
+      $out/opt/IronyModManager/appSettings.json > $out/opt/IronyModManager/tmp.json
       mv $out/opt/IronyModManager/tmp.json $out/opt/IronyModManager/appSettings.json
 
       # setup executable
@@ -57,11 +57,13 @@ in
         # libs
         glibc
         libnotify
-        libxkbcommon
         lttng-ust_2_12
         nspr
         nss
         udev
+
+        # wayland
+        libxkbcommon
         wayland
 
         # x11

@@ -10,14 +10,13 @@ in {
       buttons = {
         # background = "${base02}";
 
-        # todo
-        # battery = {
-        #   background = "${base00}";
-        #   border = "${base0A}";
-        #   icon = "${base0A}";
-        #   icon_background = "${base0A}";
-        #   text = "${base0A}";
-        # };
+        battery = {
+          background = "${base00}";
+          border = "${base04}";
+          icon = "${base08}";
+          icon_background = "${base00}";
+          text = "${base07}";
+        };
 
         # bluetooth = {
         #   background = "${base02}";
@@ -248,7 +247,7 @@ in {
           text = "${base07}";
         };
 
-        feinttext = "${base04}";
+        feinttext = "${base08}";
 
         iconbuttons = {
           active = "${base08}";
@@ -268,33 +267,32 @@ in {
         };
 
         menu = {
-          # todo
-          # battery = {
-          #   background.color = "${base02}";
-          #   border.color = "${base02}";
-          #   card.color = "${base01}";
-          #
-          #   icons = {
-          #     active = "${base0A}";
-          #     passive = "${base04}";
-          #   };
-          #
-          #   label.color = "${base08}";
-          #
-          #   listitems = {
-          #     active = "${base06}";
-          #     passive = "${base04}";
-          #   };
-          #
-          #   slider = {
-          #     background = "${base00}";
-          #     backgroundhover = "${base02}";
-          #     primary = "${base08}";
-          #     puck = "${base07}";
-          #   };
-          #
-          #   text = "${base07}";
-          # };
+          battery = {
+            background.color = "${base00}";
+            border.color = "${base02}";
+            card.color = "${base01}";
+
+            icons = {
+              active = "${base0A}";
+              passive = "${base04}";
+            };
+
+            label.color = "${base08}";
+
+            listitems = {
+              active = "${base06}";
+              passive = "${base04}";
+            };
+
+            slider = {
+              background = "${base00}";
+              backgroundhover = "${base02}";
+              primary = "${base08}";
+              puck = "${base07}";
+            };
+
+            text = "${base07}";
+          };
 
           # bluetooth = {
           #   background.color = "${base02}";

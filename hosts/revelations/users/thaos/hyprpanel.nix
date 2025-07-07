@@ -67,9 +67,15 @@ in {
 
     hplLeftcuts = {
       shortcut1 = {
+        command = uApp "rnote";
+        icon = "󰠮";
+        tooltip = "Rnote";
       };
 
       shortcut2 = {
+        command = uApp "otd-gui";
+        icon = "";
+        tooltip = "OpenTabletDriver";
       };
 
       shortcut3 = {
@@ -79,6 +85,9 @@ in {
       };
 
       shortcut4 = {
+        command = uApp "onlyoffice-desktopeditors";
+        icon = "󰏫";
+        tooltip = "OnlyOffice";
       };
     };
 
@@ -90,6 +99,9 @@ in {
       };
 
       shortcut3 = {
+        command = uApp "inkscape";
+        icon = "";
+        tooltip = "Inkscape";
       };
     };
 

@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   stylix.fonts = {
     monospace = {
       name = "Iosevka Nerd Font Mono";

@@ -7,8 +7,11 @@
     # for images in yazi
     ueberzugpp
     # temp to investigate hyprland swallowing issue
-    kitty
+    cosmic-term
     foot
+    ghostty
+    kitty
+    wezterm
   ];
 
   programs.alacritty = {

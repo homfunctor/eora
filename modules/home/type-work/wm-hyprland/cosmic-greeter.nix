@@ -1,4 +1,3 @@
-# todo: read about forEach, generators
 {
   config,
   lib,
@@ -56,7 +55,6 @@ in {
       // {
         "cosmic/com.system76.CosmicBackground/v1/same-on-all".text = "false";
       };
-    # todo: check if "same-on-all" is needed here
 
     stateFile."cosmic/com.system76.CosmicBackground/v1/wallpapers".text = ''
       [

@@ -1,4 +1,4 @@
-# todo: revise, look for more settings, customize animations more
+# todo: revise, look for more settings
 {
   config,
   lib,

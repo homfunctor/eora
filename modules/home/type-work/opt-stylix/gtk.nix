@@ -1,7 +1,4 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   gtk = {
     iconTheme = {
       name = "Flat-Remix-Black-Dark";
