@@ -1,4 +1,3 @@
-# todo: revise, look for more settings
 {
   config,
   lib,
@@ -60,6 +59,13 @@ in {
       };
     };
 
+    device = [
+      {
+        name = "huion-huion-tablet_h1060p";
+        output = hyprlandOpts.tabletOutput;
+      }
+    ];
+
     dwindle = mkDefault {
       pseudotile = true;
       preserve_split = true;
@@ -83,7 +89,7 @@ in {
     misc = {
       enable_swallow = true;
       swallow_exception_regex = "^(Yazi).*";
-      swallow_regex = "^(Alacritty|kitty|foot)$";
+      swallow_regex = "^(Alacritty|kitty|foot|org.wezfurlong.wezterm|com.mitchellh.ghostty|com.system76.CosmicTerm)$";
 
       animate_manual_resizes = true;
       animate_mouse_windowdragging = true;
