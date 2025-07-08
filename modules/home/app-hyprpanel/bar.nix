@@ -124,7 +124,6 @@
 
     workspaces = {
       applicationIconMap = {
-        "Alacritty" = "";
         "org.gnome.Nautilus" = "";
         "org.pwmt.zathura" = "";
         "title:Settings" = "";
