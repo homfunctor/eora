@@ -86,13 +86,13 @@ in {
       };
 
       shortcut3 = {
-        command = uApp "alacritty";
+        command = uApp "kitty";
         icon = "";
-        tooltip = "Alacritty";
+        tooltip = "kitty";
       };
 
       shortcut4 = {
-        command = uApp "alacritty --working-directory eora -e yazi";
+        command = uApp "kitty  eora -e yazi";
         icon = "";
         tooltip = "Browse Flake";
       };

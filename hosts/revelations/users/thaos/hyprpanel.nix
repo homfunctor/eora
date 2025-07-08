@@ -73,15 +73,15 @@ in {
       };
 
       shortcut2 = {
-        command = uApp "otd-gui";
-        icon = "";
-        tooltip = "OpenTabletDriver";
+        command = uApp "";
+        icon = "?";
+        tooltip = "todo";
       };
 
       shortcut3 = {
-        command = uApp "alacritty";
+        command = uApp "kitty";
         icon = "";
-        tooltip = "Alacritty";
+        tooltip = "kitty";
       };
 
       shortcut4 = {

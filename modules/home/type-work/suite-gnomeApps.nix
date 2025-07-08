@@ -1,4 +1,4 @@
-# todo: setup nautilus to use alacritty
+# todo: setup nautilus to use kitty
 #   script for nautilus that uses zipunicode
 {pkgs, ...}: {
   home.packages = with pkgs; [

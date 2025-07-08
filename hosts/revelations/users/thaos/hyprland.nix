@@ -17,7 +17,7 @@ in {
       browser = "${getExe pkgs.chromium}";
       editor = "${getExe config.programs.neovide.package}";
       shell = "${getExe pkgs.fish}";
-      terminal = "${getExe pkgs.alacritty}";
+      terminal = "${getExe config.programs.kitty.package}";
     };
 
     hyprpaperOpts.settings = {

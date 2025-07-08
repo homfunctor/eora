@@ -1,6 +1,4 @@
 # todo: configure further
-# todo: hyprland swallow + alacritty sometimes causes inaccessable
-# "ghost" terminals that must be pkill'd. why?
 {
   programs = {
     neovide.enable = true;

@@ -1,11 +1,11 @@
 # work environment layered on top of minimal/nicer tty
 {
   imports = [
-    ./app-alacritty.nix
     ./app-chromium.nix
     ./app-gimp.nix
     ./app-glance.nix
     ./app-inkscape.nix
+    ./app-kitty.nix
     ./app-math
     ./app-neovide.nix
     ./app-nix-index.nix

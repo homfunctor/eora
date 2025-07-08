@@ -11,7 +11,7 @@
   filesPkg = getExe pkgs.nautilus;
   launcherPkg = getExe pkgs.nwg-drawer;
   panelPkg = getExe config.programs.hyprpanel.package;
-  terminalPkg = getExe config.programs.alacritty.package;
+  terminalPkg = getExe config.programs.kitty.package;
 
   mod = "SUPER";
 in {

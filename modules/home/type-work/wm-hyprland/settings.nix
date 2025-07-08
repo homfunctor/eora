@@ -90,7 +90,7 @@ in {
     misc = {
       enable_swallow = true;
       swallow_exception_regex = "^(Yazi).*";
-      swallow_regex = "^(Alacritty|kitty|foot|org.wezfurlong.wezterm|com.mitchellh.ghostty|com.system76.CosmicTerm)$";
+      swallow_regex = "^(kitty)$";
 
       animate_manual_resizes = true;
       animate_mouse_windowdragging = true;

@@ -1,3 +1,5 @@
+# todo: define browser, editor, shell, and terminal once only per user
+# and propagate it to the rest of the config
 {
   config,
   inputs,
@@ -26,7 +28,7 @@ in {
       browser = "${getExe pkgs.vivaldi}";
       editor = "${getExe config.programs.neovide.package}";
       shell = "${getExe pkgs.fish}";
-      terminal = "${getExe pkgs.alacritty}";
+      terminal = "${getExe config.programs.kitty.package}";
     };
 
     hyprpaperOpts.settings = {
