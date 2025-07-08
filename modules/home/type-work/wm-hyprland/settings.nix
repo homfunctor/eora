@@ -61,6 +61,7 @@ in {
 
     device = [
       {
+        enabled = true;
         name = "huion-huion-tablet_h1060p";
         output = hyprlandOpts.tabletOutput;
       }

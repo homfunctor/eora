@@ -37,7 +37,7 @@ in {
 
       # hyprland settings specific to personal computer
       hyprlandOpts = {
-        tabletOutput = "DP-2";
+        tabletOutput = "eDP-1";
 
         general = {
           border_size = 5;

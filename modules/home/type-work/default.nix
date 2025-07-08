@@ -18,7 +18,6 @@
     ./app-udiskie.nix
     ./app-vlc.nix
     ./app-zathura.nix
-    ./hw-tablet.nix
     ./opt-mime.nix
     ./opt-stylix
     ./opt-xdg.nix
