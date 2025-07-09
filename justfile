@@ -24,7 +24,6 @@ upboot:
 # --dry-activate
 upcheck:
     sudo nixos-rebuild dry-activate --flake .  --log-format internal-json  |& nom --json
-    yes | rip result
 
 # update to current flake config
 update:
@@ -37,4 +36,3 @@ upflake:
 # --dry-activate  --show-trace
 uptrace:
     sudo nixos-rebuild dry-activate --flake . --log-format internal-json  --show-trace |& nom --json
-    yes | rip result
