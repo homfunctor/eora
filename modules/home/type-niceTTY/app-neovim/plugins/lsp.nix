@@ -23,7 +23,7 @@ in {
           enable = true;
           settings = {
             diagnostic.settings.suppress = ["sema-escaping-with"];
-            formatting.command = ["${pkgs.alejandra}/bin/alejandra"];
+            formatting.command = ["${lib.getExe pkgs.alejandra}"];
             nixpkgs.expr = "import <nixpkgs> {}";
             options = {
               home_manager.expr = "(builtins.getFlake (\"git+file://\" + toString ./.)).homeConfigurations.options";

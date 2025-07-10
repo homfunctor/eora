@@ -1,6 +1,4 @@
 {lib, ...}: let
-  inherit (lib) genAttrs;
-
   enabledPlugins = [
     "blink"
     "bufferline"
@@ -26,9 +24,5 @@
     "yazi"
   ];
 in {
-  home.opts.nvim.plugins = genAttrs enabledPlugins (
-    _: {
-      enable = true;
-    }
-  );
+  home.opts.nvim.plugins = lib.genAttrs enabledPlugins (_: {enable = true;});
 }

@@ -1,8 +1,9 @@
+# todo: look for redundancies
 # already set:
 #   XDG_RUNTIME_DIR = "/run/user/$UID";
 #   DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$UID/bus";
 {config, ...}: let
-  inherit (config.home.opts.hyprlandEnv) browser editor shell terminal;
+  inherit (config.home.opts) apps;
 in {
   xdg.configFile = {
     "electron-flags.conf".text = ''
@@ -11,12 +12,12 @@ in {
     '';
 
     "uwsm/env".text = ''
-      export BROWSER=${browser}
+      export BROWSER=${toString apps.browser.exe}
       export CLUTTER_BACKEND=wayland
       export DIRENV_LOG_FORMAT=1
       export DISABLE_QT5_COMPAT=0
       export DISABLE_QT_COMPAT=0
-      export EDITOR=${editor}
+      export EDITOR=${toString apps.text.exe}
       export GDK_BACKEND=wayland,x11
       export GDK_SCALE=1
       export GNOME_KEYRING_CONTROL="$XDG_RUNTIME_DIR/keyring"
@@ -33,9 +34,9 @@ in {
       export QT_SCALE_FACTOR=1
       export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
       export SDL_VIDEODRIVER=wayland,x11
-      export SHELL=${shell}
-      export TERMINAL=${terminal}
-      export VISUAL=${editor}
+      export SHELL=${toString apps.shell.exe}
+      export TERMINAL=${toString apps.terminal.exe}
+      export VISUAL=${toString apps.text.exe}
       export WLR_BACKEND=wayland
       export WLR_DRM_NO_ATOMIC=1
       export WLR_NO_HARDWARE_CURSORS=1

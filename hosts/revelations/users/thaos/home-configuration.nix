@@ -1,6 +1,7 @@
 {
   flake,
   inputs,
+  osConfig,
   ...
 }: {
   imports = with flake.modules.home; [
@@ -9,8 +10,8 @@
     type-minTTY
 
     # nicer tty
-    ./mime.nix
-    ./neovim.nix
+    ./apps.nix
+    ../wael/neovim.nix
     type-niceTTY
 
     # work
@@ -21,8 +22,14 @@
   ];
 
   home.opts = {
+    inherit (osConfig.nixos.opts) hostName;
+    userName = "thaos";
+
     app-math = {
+      geogebra.enable = true;
       latex.enable = true;
+      octave.enable = true;
+      rstudio.enable = true;
     };
 
     cosmic-greeter = {
@@ -34,14 +41,10 @@
       monitors = ["DP-1" "DP-2" "DP-3"];
     };
 
-    hostName = "revelations";
-
     sync.folder = {
       Books.enable = true;
       Math.enable = true;
       Work.enable = true;
     };
-
-    userName = "thaos";
   };
 }

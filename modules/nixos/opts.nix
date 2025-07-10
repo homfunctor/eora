@@ -16,9 +16,9 @@ in {
 
     hyprlockOpts = mkAttrOpt {} "hyprlock settings";
 
-    lanzaboote.enable = mkBoolOpt false "enable lanzaboote?";
+    lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
 
-    sops.user.enable = mkBoolOpt false "should sops handle user password?";
+    sops.user.enable = mkBoolOpt false "set password with sops";
 
     adminUser = mkStrOpt "" "admin user";
     userNames = mkListOpt lib.types.str null "user names";

@@ -5,23 +5,20 @@
   pkgs,
   ...
 }: let
+  inherit (config.home.opts) apps;
   inherit (flake.lib) uApp uTog;
   inherit (lib) getExe;
 
-  filesPkg = getExe pkgs.nautilus;
-  launcherPkg = getExe pkgs.nwg-drawer;
-  panelPkg = getExe config.programs.hyprpanel.package;
-  terminalPkg = getExe config.programs.kitty.package;
-
   mod = "SUPER";
+  panelPkg = getExe config.programs.hyprpanel.package;
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       # applications
-      "${mod} SHIFT, E, exec, ${uApp "${terminalPkg} --working-directory ~/eora -e yazi"}"
-      "${mod} SHIFT, W, exec, ${uApp "${terminalPkg} --working-directory ~/eora"}"
-      "${mod}, E, exec, ${uApp "${filesPkg} -w"}"
-      "${mod}, W, exec, ${uApp "${terminalPkg}"}"
+      "${mod} SHIFT, E, exec, ${uApp "${apps.terminal.exe} --working-directory ~/eora -e yazi"}"
+      "${mod} SHIFT, W, exec, ${uApp "${apps.terminal.exe} --working-directory ~/eora"}"
+      "${mod}, E, exec, ${uApp "${apps.directory.exe} -w"}"
+      "${mod}, W, exec, ${uApp "${apps.terminal.exe}"}"
 
       # hyprpanel
       "${mod}, A, exec, ${uTog "${panelPkg} t audiomenu"}"
@@ -31,7 +28,7 @@ in {
       "${mod}, grave, exec, ${uTog "${panelPkg} t dashboardmenu"}"
 
       # launcher
-      "${mod}, R, exec, ${uTog "${launcherPkg}"} -nofs -wm 'uwsm'"
+      "${mod}, R, exec, ${uTog "${apps.launcher.exe}"} ${apps.launcher.args}"
 
       # window management
       "${mod}, D, togglesplit"

@@ -1,31 +1,19 @@
 {
-  config,
   inputs,
-  lib,
   pkgs,
   ...
 }: let
-  inherit (lib) getExe;
-
   wallDir = "${inputs.sapadal}/assets";
   wall = "whitemarch.png";
 in {
   home = {
     packages = with pkgs; [
       hyprland-monitor-attached
+      nwg-displays
     ];
 
-    opts = {
-      hyprlandEnv = {
-        browser = "${getExe pkgs.chromium}";
-        editor = "${getExe config.programs.nixvim.package}";
-        shell = "${getExe pkgs.fish}";
-        terminal = "${getExe config.programs.kitty.package}";
-      };
-
-      hyprpaperOpts.settings = {
-        ipc = "off";
-        splash = false;
+    opts.hpl = {
+      paperOpts.settings = {
         preload = [
           "${wallDir}/${wall}"
         ];
@@ -35,8 +23,8 @@ in {
         ];
       };
 
-      # hyprland settings specific to personal computer
-      hyprlandOpts = {
+      # user settings
+      userOpts = {
         tabletOutput = "eDP-1";
 
         general = {
@@ -47,13 +35,14 @@ in {
           resize_on_border = true;
         };
 
-        monitor = [];
-
         workspace = [
-          # smart gaps
-          "w[t1], gapsout:0, gapsin:0"
-          "w[tg1], gapsout:0, gapsin:0"
-          "f[1], gapsout:0, gapsin:0"
+          "1, monitor:eDP-1"
+          "4, monitor:eDP-1"
+          "2, monitor:eDP-1"
+          "5, monitor:eDP-1"
+          "3, monitor:eDP-1"
+          # change this to external monitor
+          "6, monitor:eDP-1"
         ];
       };
     };

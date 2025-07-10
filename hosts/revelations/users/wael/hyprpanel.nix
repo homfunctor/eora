@@ -1,8 +1,13 @@
-{flake, ...}: let
+{
+  config,
+  flake,
+  lib,
+  ...
+}: let
   inherit (flake.lib) uApp;
 in {
-  home.opts = {
-    hplLayout = {
+  home.opts.hpl.panelOpts = {
+    layout = {
       "0" = {
         "left" = [
           "dashboard"
@@ -60,7 +65,7 @@ in {
       };
     };
 
-    hplScale = {
+    scale = {
       clock = 85;
       dashboard = 80;
       media = 75;
@@ -72,7 +77,8 @@ in {
       volume = 75;
     };
 
-    hplLeftcuts = {
+    # todo: adapt these to new opts.apps schema
+    leftcuts = {
       shortcut1 = {
         command = uApp "vivaldi";
         icon = "";
@@ -98,7 +104,7 @@ in {
       };
     };
 
-    hplRightcuts = {
+    rightcuts = {
       shortcut1 = {
         command = uApp "chromium";
         icon = "";
@@ -112,7 +118,7 @@ in {
       };
     };
 
-    hplLeftdir = {
+    leftdirs = {
       directory1 = {
         command = uApp "nautilus -w";
         label = "󰋜 Home";
@@ -129,7 +135,7 @@ in {
       };
     };
 
-    hplRightdir = {
+    rightdirs = {
       directory1 = {
         command = uApp "nautilus -w Books";
         label = "󱉟 Books";
@@ -148,6 +154,6 @@ in {
   };
 
   wayland.windowManager.hyprland.settings.exec-once = [
-    (uApp "hyprpanel")
+    (uApp "${toString lib.getExe config.programs.hyprpanel.package}")
   ];
 }

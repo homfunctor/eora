@@ -1,6 +1,7 @@
 {
   flake,
   inputs,
+  osConfig,
   ...
 }: {
   imports = with flake.modules.home; [
@@ -9,7 +10,7 @@
     type-minTTY
 
     # nicer tty
-    ./mime.nix
+    ./apps.nix
     ./neovim.nix
     type-niceTTY
 
@@ -23,6 +24,9 @@
   ];
 
   home.opts = {
+    inherit (osConfig.nixos.opts) hostName;
+    userName = osConfig.nixos.opts.adminUser;
+
     app-math = {
       geogebra.enable = true;
       latex.enable = true;
@@ -45,8 +49,6 @@
       videos = "/vault/Videos";
     };
 
-    hostName = "revelations";
-
     sync.folder = {
       Books.enable = true;
       Fish.enable = true;
@@ -57,7 +59,5 @@
       Rust.enable = true;
       Work.enable = true;
     };
-
-    userName = "wael";
   };
 }

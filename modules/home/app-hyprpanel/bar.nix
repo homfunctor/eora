@@ -2,12 +2,13 @@
   config,
   flake,
   lib,
-  pkgs,
   ...
-}: {
+}: let
+  inherit (config.home.opts) apps hpl;
+in {
   programs.hyprpanel.settings.bar = {
     autoHide = "never";
-    layouts = config.home.opts.hplLayout;
+    layouts = hpl.panel.layout;
 
     battery = {
       hideLabelWhenFull = false;
@@ -86,7 +87,7 @@
 
     launcher = {
       icon = "";
-      rightClick = (flake.lib.uTog "${lib.getExe pkgs.nwg-drawer}") + " -nofs -wm 'uwsm'";
+      rightClick = (flake.lib.uTog "${apps.launcher.exe}") + apps.launcher.args;
     };
 
     notifications = {

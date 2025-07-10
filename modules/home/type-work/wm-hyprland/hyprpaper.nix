@@ -1,8 +1,11 @@
-{config, ...}: let
-  inherit (config.home.opts) hyprpaperOpts;
-in {
+{config, ...}: {
   services.hyprpaper = {
     enable = true;
-    inherit (hyprpaperOpts) settings;
+    settings =
+      {
+        ipc = "off";
+        splash = false;
+      }
+      // config.home.opts.hpl.paperOpts.settings;
   };
 }

@@ -3,9 +3,22 @@
   lib,
   ...
 }: let
-  inherit (builtins) listToAttrs;
-  inherit (config.home.opts) defaultApps;
-  inherit (lib) flatten mapAttrsToList nameValuePair;
+  appsToGet = [
+    "archive"
+    "audio"
+    "browser"
+    "directory"
+    "image"
+    "office"
+    "pdf"
+    "terminal"
+    "text"
+    "video"
+  ];
+
+  defaultApps = lib.genAttrs appsToGet (app: {
+    desktop = config.home.opts.apps.${app}.desktop + ".desktop";
+  });
 
   mimeMap = {
     archive = [
@@ -70,12 +83,12 @@
   };
 
   # magick
-  associations = listToAttrs (
-    flatten (
-      mapAttrsToList (
+  associations = builtins.listToAttrs (
+    lib.flatten (
+      lib.mapAttrsToList (
         key:
           map (
-            type: nameValuePair type defaultApps."${key}"
+            type: lib.nameValuePair type defaultApps."${key}"
           )
       )
       mimeMap

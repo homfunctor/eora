@@ -1,6 +1,7 @@
 {
   flake,
   inputs,
+  osConfig,
   ...
 }: {
   imports = with flake.modules.home; [
@@ -9,28 +10,27 @@
     type-minTTY
 
     # nicer tty
-    ./mime.nix
+    ./apps.nix
     ./neovim.nix
     type-niceTTY
 
     # work
     ./hyprland.nix
     ./hyprpanel.nix
-    ./settings.nix
+    app-zoom
     type-work
   ];
 
   home.opts = {
-    app-math = {
-      latex.enable = true;
-    };
+    inherit (osConfig.nixos.opts) hostName;
+    userName = osConfig.nixos.opts.adminUser;
+
+    app-math.latex.enable = true;
 
     cosmic-greeter = {
       bgs = ["${inputs.sapadal}/assets/whitemarch.png"];
       monitors = ["eDP-1"];
     };
-
-    hostName = "vytmadh";
 
     sync.folder = {
       Books.enable = true;
@@ -40,7 +40,5 @@
       Rust.enable = true;
       Work.enable = true;
     };
-
-    userName = "rymrgand";
   };
 }

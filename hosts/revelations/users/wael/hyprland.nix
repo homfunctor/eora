@@ -1,14 +1,8 @@
-# todo: define browser, editor, shell, and terminal once only per user
-# and propagate it to the rest of the config
 {
-  config,
   inputs,
-  lib,
   pkgs,
   ...
 }: let
-  inherit (lib) getExe;
-
   wallDir = "${inputs.sapadal}/assets";
   wall1 = "winter1.png";
   wall2 = "winter2.png";
@@ -23,18 +17,8 @@ in {
     "xrandr --output DP-2 --primary"
   ];
 
-  home.opts = {
-    hyprlandEnv = {
-      browser = "${getExe pkgs.vivaldi}";
-      editor = "${getExe config.programs.neovide.package}";
-      shell = "${getExe pkgs.fish}";
-      terminal = "${getExe config.programs.kitty.package}";
-    };
-
-    hyprpaperOpts.settings = {
-      ipc = "off";
-      splash = false;
-
+  home.opts.hpl = {
+    paperOpts.settings = {
       preload = [
         "${wallDir}/${wall1}"
         "${wallDir}/${wall2}"
@@ -48,14 +32,14 @@ in {
       ];
     };
 
-    # hyprland settings specific to personal computer
-    hyprlandOpts = {
+    # user settings
+    userOpts = {
       tabletOutput = "DP-2";
 
       general = {
         border_size = 5;
-        gaps_in = 5;
-        gaps_out = 15;
+        gaps_in = 10;
+        gaps_out = 5;
         layout = "dwindle";
         resize_on_border = true;
       };
@@ -67,16 +51,12 @@ in {
       ];
 
       workspace = [
-        # smart gaps
-        "f[1], gapsout:0, gapsin:0"
-        "w[t1], gapsout:0, gapsin:0"
-        "w[tg1], gapsout:0, gapsin:0"
         # 3 monitors, DP-2 is main/middle
         "1, monitor:DP-1"
-        "2, monitor:DP-2"
-        "3, monitor:DP-3"
         "4, monitor:DP-1"
+        "2, monitor:DP-2"
         "5, monitor:DP-2"
+        "3, monitor:DP-3"
         "6, monitor:DP-3"
       ];
     };
