@@ -15,8 +15,8 @@ in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       # applications
-      "${mod} SHIFT, E, exec, ${uApp "${apps.terminal.exe} --working-directory ~/eora -e yazi"}"
-      "${mod} SHIFT, W, exec, ${uApp "${apps.terminal.exe} --working-directory ~/eora"}"
+      "${mod} SHIFT, E, exec, ${uApp "${apps.terminal.exe}  yazi ~/eora"}"
+      "${mod} SHIFT, W, exec, ${uApp "${apps.terminal.exe}  ~/eora"}"
       "${mod}, E, exec, ${uApp "${apps.directory.exe} -w"}"
       "${mod}, W, exec, ${uApp "${apps.terminal.exe}"}"
 
