@@ -7,7 +7,7 @@
 }: let
   inherit (lib) getExe;
 in {
-  home.opt.apps = rec {
+  home.opts.apps = rec {
     archive = {
       desktop = "org.gnome.FileRoller";
       exe = getExe archive.pkg;
@@ -26,7 +26,7 @@ in {
       desktop = "chromium";
       exe = getExe browser.pkg;
       name = "Chromium";
-      pkg = pkgs.ungoogled-chromium;
+      pkg = config.programs.chromium.package;
     };
 
     directory = {

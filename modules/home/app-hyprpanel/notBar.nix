@@ -6,10 +6,7 @@
   inherit
     (config.home.opts)
     hostName
-    hplLeftcuts
-    hplLeftdir
-    hplRightcuts
-    hplRightdir
+    hpl
     userName
     ;
 
@@ -36,8 +33,22 @@ in {
 
         directories = {
           enabled = true;
-          left = {inherit (hplLeftdir) directory1 directory2 directory3;};
-          right = {inherit (hplRightdir) directory1 directory2 directory3;};
+          left = {
+            inherit
+              (hpl.panelOpts.leftdirs)
+              directory1
+              directory2
+              directory3
+              ;
+          };
+          right = {
+            inherit
+              (hpl.panelOpts.rightdirs)
+              directory1
+              directory2
+              directory3
+              ;
+          };
         };
 
         powermenu = {
@@ -56,8 +67,22 @@ in {
 
         shortcuts = {
           enabled = true;
-          left = {inherit (hplLeftcuts) shortcut1 shortcut2 shortcut3 shortcut4;};
-          right = {inherit (hplRightcuts) shortcut1 shortcut3;};
+          left = {
+            inherit
+              (hpl.panelOpts.leftcuts)
+              shortcut1
+              shortcut2
+              shortcut3
+              shortcut4
+              ;
+          };
+          right = {
+            inherit
+              (hpl.panelOpts.rightcuts)
+              shortcut1
+              shortcut3
+              ;
+          };
         };
 
         stats.enabled = false;

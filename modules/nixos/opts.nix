@@ -14,7 +14,7 @@ in {
 
     hostName = mkStrOpt "" "host name for configuration";
 
-    hyprlockOpts = mkAttrOpt {} "hyprlock settings";
+    hpl.lockOpts = mkAttrOpt {} "hyprlock settings";
 
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
 

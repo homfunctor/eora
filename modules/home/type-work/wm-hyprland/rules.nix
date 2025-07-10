@@ -1,7 +1,6 @@
 # todo: re-organize
 {
   config,
-  lib,
   ...
 }: let
   inherit (config.home.opts) apps;

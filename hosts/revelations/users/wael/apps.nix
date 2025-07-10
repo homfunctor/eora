@@ -7,7 +7,7 @@
 }: let
   inherit (lib) getExe;
 in {
-  home.opt.apps = rec {
+  home.opts.apps = rec {
     archive = {
       desktop = "org.gnome.FileRoller";
       exe = getExe archive.pkg;

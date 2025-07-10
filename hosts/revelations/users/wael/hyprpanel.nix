@@ -154,6 +154,6 @@ in {
   };
 
   wayland.windowManager.hyprland.settings.exec-once = [
-    (uApp "${toString lib.getExe config.programs.hyprpanel.package}")
+    (uApp (toString (lib.getExe config.programs.hyprpanel.package)))
   ];
 }

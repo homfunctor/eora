@@ -8,7 +8,7 @@
 in {
   programs.hyprpanel.settings.bar = {
     autoHide = "never";
-    layouts = hpl.panel.layout;
+    layouts = hpl.panelOpts.layout;
 
     battery = {
       hideLabelWhenFull = false;

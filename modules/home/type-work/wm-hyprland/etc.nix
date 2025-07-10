@@ -94,7 +94,7 @@ in {
         "w[t1], gapsout:0, gapsin:0"
         "w[tg1], gapsout:0, gapsin:0"
       ]
-      // hpl.userOpts.workspace;
+      ++ hpl.userOpts.workspace;
 
     xwayland = {
       force_zero_scaling = true;

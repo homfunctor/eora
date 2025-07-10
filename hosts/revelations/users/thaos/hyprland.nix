@@ -1,7 +1,4 @@
-{
-  inputs,
-  ...
-}: let
+{inputs, ...}: let
   wallDir = "${inputs.sapadal}/assets";
   wall1 = "base2.png";
   wall2 = "base.png";

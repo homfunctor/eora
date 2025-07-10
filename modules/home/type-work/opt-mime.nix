@@ -16,9 +16,10 @@
     "video"
   ];
 
-  defaultApps = lib.genAttrs appsToGet (app: {
-    desktop = config.home.opts.apps.${app}.desktop + ".desktop";
-  });
+  # get the desktop names from opts.apps
+  defaultApps = lib.genAttrs appsToGet (
+    app: [(config.home.opts.apps.${app}.desktop + ".desktop")]
+  );
 
   mimeMap = {
     archive = [
@@ -68,7 +69,7 @@
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     ];
     pdf = ["application/pdf"];
-    terminal = ["terminal"];
+    terminal = ["x-terminal-emulator"];
     text = ["text/plain"];
     video = [
       "video/mp2t"
@@ -86,21 +87,16 @@
   associations = builtins.listToAttrs (
     lib.flatten (
       lib.mapAttrsToList (
-        key:
-          map (
-            type: lib.nameValuePair type defaultApps."${key}"
-          )
+        key: value:
+          map (type: lib.nameValuePair type defaultApps.${key}) value
       )
       mimeMap
     )
   );
 in {
-  xdg = {
-    configFile."mimeapps.list".force = true;
-    mimeApps = {
-      enable = true;
-      associations.added = associations;
-      defaultApplications = associations;
-    };
+  xdg.mimeApps = {
+    enable = true;
+    associations.added = associations;
+    defaultApplications = associations;
   };
 }

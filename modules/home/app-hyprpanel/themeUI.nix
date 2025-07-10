@@ -1,5 +1,5 @@
 {config, ...}: let
-  inherit (config.home.opts) hplFontSize hplScale;
+  inherit (config.home.opts.hpl) panelOpts;
   fontName = config.stylix.fonts.sansSerif.name;
 in {
   programs.hyprpanel.settings.theme = {
@@ -9,7 +9,7 @@ in {
       label_spacing = "0.50em";
       opacity = 100;
       outer_spacing = "0.0em";
-      scaling = hplScale.bar;
+      scaling = panelOpts.scale.bar;
 
       buttons = {
         enableBorders = true;
@@ -19,7 +19,7 @@ in {
         radius = "0.0em";
 
         workspaces = {
-          fontSize = hplFontSize;
+          inherit (panelOpts) fontSize;
           smartHighlight = true;
           spacing = "0.0em";
         };
@@ -37,8 +37,8 @@ in {
         card_radius = "0em";
 
         menu = {
-          battery.scaling = hplScale.battery;
-          clock.scaling = hplScale.clock;
+          battery.scaling = panelOpts.scale.battery;
+          clock.scaling = panelOpts.scale.clock;
 
           dashboard = {
             profile = {
@@ -46,37 +46,37 @@ in {
               size = "8.5em";
             };
 
-            scaling = hplScale.dashboard;
+            scaling = panelOpts.scale.dashboard;
           };
 
           media = {
             card.tint = 85;
-            scaling = hplScale.media;
+            scaling = panelOpts.scale.media;
           };
 
           notifications = {
             height = "80em";
             pager.show = true;
             radius = "0em";
-            scaling = hplScale.notifications;
+            scaling = panelOpts.scale.notifications;
             scrollradius = "0em";
             scrollwidth = "0.2em";
           };
 
           power = {
             radius = "0em";
-            scaling = hplScale.power;
+            scaling = panelOpts.scale.power;
           };
 
           volume = {
             radius = "0em";
-            scaling = hplScale.volume;
+            scaling = panelOpts.scale.volume;
           };
         };
 
         popover = {
           radius = "0em";
-          scaling = hplScale.popover;
+          scaling = panelOpts.scale.popover;
         };
 
         progress.radius = "0rem";
@@ -102,21 +102,21 @@ in {
 
     font = {
       name = fontName;
-      size = hplFontSize;
+      size = panelOpts.fontSize;
       weight = "400";
     };
 
     notification = {
       border_radius = "0em";
       opacity = 100;
-      scaling = hplScale.notification;
+      scaling = panelOpts.scale.notification;
     };
 
     osd = {
       border.size = "0em";
       margins = "0px 0px 0px 0px";
       radius = "0em";
-      scaling = hplScale.osd;
+      scaling = panelOpts.scale.osd;
     };
   };
 }

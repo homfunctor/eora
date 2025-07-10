@@ -26,7 +26,7 @@ in {
       desktop = "chromium";
       exe = getExe browser.pkg;
       name = "Chromium";
-      pkg = pkgs.ungoogled-chromium;
+      pkg = config.programs.chromium.package;
     };
 
     directory = {
