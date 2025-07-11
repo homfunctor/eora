@@ -1,5 +1,5 @@
 # todo: do some reading https://github.com/Vladimir-csp/uwsm?tab=readme-ov-file
-_: {
+{
   hardware.brillo.enable = true;
 
   programs = {

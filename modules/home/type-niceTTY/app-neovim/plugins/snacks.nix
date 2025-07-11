@@ -30,6 +30,13 @@ in {
 
         input.enabled = true;
 
+        notify.enabled = true;
+        notifier = {
+          enabled = true;
+          style = "fancy";
+          timeout = 3000;
+        };
+
         scroll.enabled = true;
       };
     };

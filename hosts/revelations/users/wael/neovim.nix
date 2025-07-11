@@ -4,7 +4,6 @@
     "bufferline"
     "colorizer"
     "conform"
-    "fidget"
     "illuminate"
     "lint"
     "lsp"

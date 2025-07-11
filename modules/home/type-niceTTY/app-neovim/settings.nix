@@ -118,6 +118,7 @@ in {
       scrolloff = 2;
       showmode = false;
       signcolumn = "yes";
+      winblend = 0;
 
       # which-key timeout
       timeoutlen = 10;

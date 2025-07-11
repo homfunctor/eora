@@ -42,6 +42,6 @@
     grep = "rg";
     jpwine = "LANG=ja_JP.utf8 wine";
     ls = "eza -G -x --color=always --icons=always";
-    n = "neovide --no-fork";
+    n = "neovide";
   };
 }

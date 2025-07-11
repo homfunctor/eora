@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.chromium = {
     enable = true;
     commandLineArgs = [
@@ -8,6 +8,5 @@
       "--ozone-platform-hint=wayland"
       "--flag-switches-end"
     ];
-    package = pkgs.ungoogled-chromium;
   };
 }
