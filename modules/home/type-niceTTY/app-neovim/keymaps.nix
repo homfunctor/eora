@@ -84,15 +84,16 @@
         };
       }
 
-      {
-        action = "gg0VGy";
-        key = "<leader>cb";
-        mode = "n";
-        options = {
-          desc = "Copy buffer";
-          silent = true;
-        };
-      }
+      # todo: replace with something that always works
+      # {
+      #   action = "gg0VGy";
+      #   key = "<leader>cb";
+      #   mode = "n";
+      #   options = {
+      #     desc = "Copy buffer";
+      #     silent = true;
+      #   };
+      # }
 
       {
         action = "<gv";

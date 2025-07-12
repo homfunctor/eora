@@ -1,4 +1,4 @@
-# todo: kitty settings and check if neovide swallowing bug occurs
+# todo: explore kitty settings
 {
   lib,
   pkgs,

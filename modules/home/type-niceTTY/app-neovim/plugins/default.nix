@@ -4,7 +4,6 @@
     ./bufferline.nix
     ./colorizer.nix
     ./conform.nix
-    ./fidget.nix
     ./illuminate.nix
     ./lint.nix
     ./lsp.nix

@@ -1,5 +1,1 @@
-{perSystem, ...}: {
-  home.packages = with perSystem.self; [
-    stellar-maps
-  ];
-}
+{perSystem, ...}: {home.packages = with perSystem.self; [stellar-maps];}

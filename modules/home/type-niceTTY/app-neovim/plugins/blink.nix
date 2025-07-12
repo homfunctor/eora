@@ -7,9 +7,7 @@
   cfg = config.home.opts.nvim.plugins.blink;
 in {
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [
-      wordnet
-    ];
+    home.packages = [pkgs.wordnet];
 
     programs.nixvim.plugins = {
       blink-cmp-dictionary.enable = true;

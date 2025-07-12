@@ -42,8 +42,8 @@ in {
     };
 
     highlight = with colors; {
-      SnacksIndent.fg = base02;
-      SnacksIndentScope.fg = base0C;
+      SnacksIndent.fg = base03;
+      SnacksIndentScope.fg = base08;
     };
   };
 }

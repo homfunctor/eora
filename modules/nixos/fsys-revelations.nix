@@ -1,3 +1,7 @@
+# /root on NVMe SSD
+# media files on HDD mounted at /vault
+# both LUKS-encrypted
+# swap also
 {
   disko.devices = {
     disk = {

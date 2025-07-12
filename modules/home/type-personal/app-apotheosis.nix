@@ -1,5 +1,1 @@
-{perSystem, ...}: {
-  home.packages = with perSystem.self; [
-    apotheosis
-  ];
-}
+{perSystem, ...}: {home.packages = [perSystem.self.apotheosis];}

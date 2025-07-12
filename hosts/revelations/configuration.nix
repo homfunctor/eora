@@ -26,7 +26,8 @@
     opt-rust
   ];
 
-  nixos.opts = {
+  # recursive to avoid defining adminUser twice
+  nixos.opts = rec {
     fontSizes = {
       applications = 12;
       desktop = 12;
@@ -41,6 +42,6 @@
     sops.user.enable = true;
 
     adminUser = "wael";
-    userNames = ["wael" "thaos"];
+    userNames = [adminUser "thaos"];
   };
 }

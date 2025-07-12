@@ -1,4 +1,4 @@
-# personal fun stuff layered on the tippy top
+# non-work personal settings layered on top of type-work
 {
   imports = [
     ./app-apotheosis.nix

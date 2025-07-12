@@ -54,7 +54,7 @@ in {
       desktop = "onlyoffice-desktopeditors";
       exe = getExe office.pkg;
       name = "Only Office";
-      pkg = pkgs.onlyoffice-bin_latest;
+      pkg = config.programs.onlyoffice.package;
     };
 
     pdf = {

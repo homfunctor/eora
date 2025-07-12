@@ -1,5 +1,1 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    inkscape
-  ];
-}
+{pkgs, ...}: {home.packages = [pkgs.inkscape];}

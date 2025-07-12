@@ -24,5 +24,5 @@
     quickCss = "some CSS";
   };
 
-  stylix.targets.nixcord.enable = lib.mkForce false;
+  # stylix.targets.nixcord.enable = lib.mkForce false;
 }

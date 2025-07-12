@@ -1,4 +1,3 @@
-# personal fun stuff layered on the tippy top
 {
   imports = [
     ./app-proton-ge.nix

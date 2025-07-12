@@ -1,5 +1,1 @@
-{perSystem, ...}: {
-  home.packages = with perSystem.self; [
-    irony-mod-manager
-  ];
-}
+{perSystem, ...}: {home.packages = [perSystem.self.irony-mod-manager];}

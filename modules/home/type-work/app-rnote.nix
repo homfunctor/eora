@@ -1,5 +1,1 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    rnote
-  ];
-}
+{pkgs, ...}: {home.packages = [pkgs.rnote];}

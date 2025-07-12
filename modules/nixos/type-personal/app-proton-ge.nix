@@ -1,5 +1,3 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    protonplus
-  ];
+  environment.systemPackages = with pkgs; [protonplus];
 }

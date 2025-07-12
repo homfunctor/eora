@@ -1,14 +1,2 @@
-# todo: configure declaratively
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    vivaldi
-  ];
-
-  # todo: check if still needed
-  # xdg.desktopEntries.vivaldi-stable = {
-  #   name = "Vivaldi";
-  #   genericName = "Web Browser";
-  #   exec = "vivaldi %U --disable-gpu-memory-buffer-video-frames";
-  #   icon = "vivaldi";
-  # };
-}
+# i just backup everything and copy paste it hangs like an albatross around my neck
+{pkgs, ...}: {home.packages = with pkgs; [vivaldi];}

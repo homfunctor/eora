@@ -2,11 +2,11 @@
   programs.chromium = {
     enable = true;
     commandLineArgs = [
-      "--ozone-platform-hint=auto"
-      "--flag-switches-begin"
       "--enable-webrtc-pipewire-capturer"
-      "--ozone-platform-hint=wayland"
+      "--flag-switches-begin"
       "--flag-switches-end"
+      "--ozone-platform-hint=auto"
+      "--ozone-platform-hint=wayland"
     ];
   };
 }

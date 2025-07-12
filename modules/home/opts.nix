@@ -30,11 +30,9 @@ in {
     nvim.plugins = let
       pluginNames = importAllFileNames ./type-niceTTY/app-neovim/plugins;
     in
-      genAttrs pluginNames (
-        pluginName: {
-          enable = mkBoolOpt false "enable ${pluginName}";
-        }
-      );
+      genAttrs pluginNames (pluginName: {
+        enable = mkBoolOpt false "enable ${pluginName}";
+      });
 
     cosmic-greeter = mkAttrOpt {} "cosmic-greeter settings";
 
@@ -67,9 +65,7 @@ in {
             "volume"
           ];
         in
-          genAttrs uiElems (
-            name: mkIntOpt 100 "scale for ${name}"
-          );
+          genAttrs uiElems (name: mkIntOpt 100 "scale for ${name}");
 
         # shortcuts for hyprpanel dashboard menu
         leftcuts = genAttrs [
@@ -113,9 +109,9 @@ in {
       folder = let
         folderNames = importAllFileNames ./type-work/app-syncthing/sync-folders;
       in
-        genAttrs folderNames (
-          name: {enable = mkBoolOpt false "sync ${name}";}
-        );
+        genAttrs folderNames (name: {
+          enable = mkBoolOpt false "sync ${name}";
+        });
     };
 
     hostName = mkStrOpt "" "host name. name of host. that by which the host is named.";

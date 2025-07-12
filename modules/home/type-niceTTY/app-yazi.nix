@@ -3,7 +3,7 @@
     enable = true;
     enableFishIntegration = true;
     settings.manager = {
-      ratio = [1 3 4];
+      ratio = [1 2 4];
       show_hidden = true;
       show_symlink = true;
       sort_by = "alphabetical";

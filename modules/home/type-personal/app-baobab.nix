@@ -1,5 +1,1 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    baobab
-  ];
-}
+{pkgs, ...}: {home.packages = [pkgs.baobab];}

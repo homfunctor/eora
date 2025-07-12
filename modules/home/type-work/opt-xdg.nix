@@ -5,9 +5,7 @@
 }: let
   inherit (config.home.opts) customUserDirs;
 in {
-  home.packages = with pkgs; [
-    xdg-utils
-  ];
+  home.packages = [pkgs.xdg-utils];
 
   xdg = {
     enable = true;

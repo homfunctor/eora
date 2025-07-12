@@ -5,17 +5,12 @@
 }: {
   # lact
   boot = {
-    initrd.kernelModules = [
-      "amdgpu"
-    ];
+    initrd.kernelModules = ["amdgpu"];
 
-    kernelParams = [
-      "amdgpu.ppfeaturemask=0xfffd7fff"
-    ];
+    kernelParams = ["amdgpu.ppfeaturemask=0xfffd7fff"];
   };
   environment.systemPackages = [pkgs.lact];
 
-  # todo: check if still needed
   systemd = {
     packages = [pkgs.lact];
     services.lact = {
@@ -24,11 +19,9 @@
     };
   };
 
-  # todo: get around to this todo
-  # todo: check performance with and without
-  # hardware.amdgpu.amdvlk = {
-  #   enable = true;
-  #   package = pkgs.amdvlk;
-  #   support32Bit.enable = true;
-  # };
+  hardware.amdgpu.amdvlk = {
+    enable = true;
+    package = pkgs.amdvlk;
+    support32Bit.enable = true;
+  };
 }

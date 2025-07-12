@@ -22,7 +22,8 @@
     opt-rust
   ];
 
-  nixos.opts = {
+  # recursive to avoid defining adminUser twice
+  nixos.opts = rec {
     fontSizes = {
       applications = 14;
       desktop = 14;

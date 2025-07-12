@@ -1,5 +1,1 @@
-{perSystem, ...}: {
-  home.packages = with perSystem.self; [
-    zipunicode
-  ];
-}
+{perSystem, ...}: {home.packages = [perSystem.self.zipunicode];}

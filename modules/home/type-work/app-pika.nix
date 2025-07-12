@@ -1,5 +1,1 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    pika-backup
-  ];
-}
+{pkgs, ...}: {home.packages = [pkgs.pika-backup];}

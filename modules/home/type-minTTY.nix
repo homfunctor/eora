@@ -1,4 +1,5 @@
 # bare minimum tty environment
+# simple enough to be one file
 {inputs, ...}: {
   imports = [
     # not really secret but rather a prototype for how sapadal is used

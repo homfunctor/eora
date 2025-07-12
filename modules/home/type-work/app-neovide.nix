@@ -20,8 +20,6 @@
         neovide_cursor_animate_in_insert_mode = true;
         neovide_cursor_animation_length = 0.15;
         neovide_cursor_smooth_blink = true;
-        neovide_cursor_trail_size = 1.0;
-        neovide_cursor_vfx_mode = "pixiedust";
 
         neovide_floating_corner_radius = 0.0;
         neovide_floating_shadow = false;

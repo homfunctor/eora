@@ -1,7 +1,5 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    patchelf
-  ];
+  environment.systemPackages = with pkgs; [patchelf];
 
   programs.nix-ld = {
     enable = true;

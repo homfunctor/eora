@@ -3,8 +3,6 @@
 
   services.printing = {
     enable = true;
-    drivers = with pkgs; [
-      cnijfilter2
-    ];
+    drivers = with pkgs; [cnijfilter2];
   };
 }

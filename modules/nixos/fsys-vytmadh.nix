@@ -1,3 +1,4 @@
+# it's a laptop.
 {
   disko.devices = {
     disk.main = {

@@ -1,9 +1,12 @@
-{config, ...}: let
+{
+  config,
+  lib,
+  ...
+}: let
   cfg = config.home.opts.nvim.plugins.fidget;
 in {
-  programs.nixvim.plugins.fidget = {
-    inherit (cfg) enable;
-
+  programs.nixvim.plugins.fidget = lib.mkIf cfg.enable {
+    enable = true;
     settings = {
       notification.window = {
         border = "none";

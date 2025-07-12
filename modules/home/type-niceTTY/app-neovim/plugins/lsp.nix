@@ -32,6 +32,7 @@ in {
           };
         };
         statix.enable = true;
+        typos_lsp.enable = true;
       };
     };
   };
