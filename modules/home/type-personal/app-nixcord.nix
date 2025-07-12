@@ -1,7 +1,6 @@
 # todo: fix weird config conflict bug
 {
   inputs,
-  lib,
   ...
 }: {
   imports = with inputs; [
