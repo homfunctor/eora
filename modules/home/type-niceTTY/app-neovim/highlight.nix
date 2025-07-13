@@ -1,5 +1,5 @@
 {config, ...}: {
-  highlightOverride = with config.lib.stylix.colors.withHashtag; {
+  programs.nixvim.highlightOverride = with config.lib.stylix.colors.withHashtag; {
     Boolean.fg = "#5A6B9C";
     Comment = {
       fg = "#8B7AA3";
