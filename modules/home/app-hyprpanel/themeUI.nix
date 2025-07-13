@@ -5,7 +5,7 @@ in {
   programs.hyprpanel.settings.theme = {
     bar = {
       border_radius = "0em";
-      dropdownGap = "2.0em";
+      dropdownGap = "2.1em";
       label_spacing = "0.50em";
       opacity = 100;
       outer_spacing = "0.0em";

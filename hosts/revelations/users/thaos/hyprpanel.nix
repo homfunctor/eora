@@ -4,6 +4,7 @@
   lib,
   ...
 }: let
+  inherit (config.home.opts) apps;
   inherit (flake.lib) uApp;
 in {
   home.opts.hpl.panelOpts = {
@@ -15,7 +16,10 @@ in {
           "windowtitle"
         ];
         "middle" = [
+          "cpu"
+          "ram"
           "clock"
+          "cava"
         ];
         "right" = [
           "volume"
@@ -31,7 +35,10 @@ in {
           "windowtitle"
         ];
         "middle" = [
+          "cpu"
+          "ram"
           "clock"
+          "cava"
         ];
         "right" = [
           "volume"
@@ -48,6 +55,7 @@ in {
         ];
         "middle" = [
           "clock"
+          "cava"
         ];
         "right" = [
           "volume"
@@ -70,83 +78,78 @@ in {
       volume = 75;
     };
 
-    # todo
     leftcuts = {
       shortcut1 = {
-        command = uApp "rnote";
-        icon = "󰠮";
-        tooltip = "Rnote";
+        inherit (apps.browser) icon tooltip;
+        command = uApp apps.browser.exe;
       };
 
       shortcut2 = {
-        command = uApp "";
-        icon = "?";
-        tooltip = "todo";
+        command = uApp "steam";
+        icon = "󰓓";
+        tooltip = "Steam";
       };
 
       shortcut3 = {
-        command = uApp "kitty";
-        icon = "";
-        tooltip = "kitty";
+        inherit (apps.terminal) icon tooltip;
+        command = uApp apps.terminal.exe;
       };
 
       shortcut4 = {
-        command = uApp "onlyoffice-desktopeditors";
-        icon = "󰏫";
-        tooltip = "OnlyOffice";
+        command = uApp "${apps.terminal.exe} eora -e yazi";
+        icon = "";
+        tooltip = "Browse Flake";
       };
     };
 
     rightcuts = {
       shortcut1 = {
-        command = uApp "chromium";
-        icon = "";
-        tooltip = "Chromium";
+        inherit (apps.video) icon tooltip;
+        command = uApp apps.video.exe;
       };
 
       shortcut3 = {
-        command = uApp "inkscape";
-        icon = "";
-        tooltip = "Inkscape";
+        inherit (apps.audio) icon tooltip;
+        command = uApp apps.audio.exe;
       };
     };
 
     leftdirs = {
       directory1 = {
-        command = uApp "nautilus -w";
+        command = uApp "${apps.directory.exe} ${apps.directory.args}";
         label = "󰋜 Home";
       };
 
       directory2 = {
-        command = uApp "nautilus -w Nix";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Nix";
         label = " Nix";
       };
 
       directory3 = {
-        command = uApp "nautilus -w Rust";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Rust";
         label = "󱘗 Rust";
       };
     };
 
     rightdirs = {
       directory1 = {
-        command = uApp "nautilus -w Books";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Books";
         label = "󱉟 Books";
       };
 
       directory2 = {
-        command = uApp "nautilus -w Math";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Math";
         label = "󰿈 Math";
       };
 
       directory3 = {
-        command = uApp "nautilus -w Downloads";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Downloads";
         label = "󰇚 Downloads";
       };
     };
   };
 
   wayland.windowManager.hyprland.settings.exec-once = [
-    (uApp (toString (lib.getExe config.programs.hyprpanel.package)))
+    (uApp (lib.getExe config.programs.hyprpanel.package))
   ];
 }

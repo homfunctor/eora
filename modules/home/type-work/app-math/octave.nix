@@ -7,8 +7,6 @@
   cfg = config.home.opts.app-math.octave;
 in {
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [
-      octaveFull
-    ];
+    home.packages = [pkgs.octaveFull];
   };
 }

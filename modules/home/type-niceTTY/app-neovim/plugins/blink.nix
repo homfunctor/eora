@@ -176,8 +176,6 @@ in {
             window.border = "none";
           };
 
-          snippets.preset = "mini_snippets";
-
           sources = {
             default = [
               "buffer"
@@ -186,7 +184,6 @@ in {
               "lsp"
               "path"
               "ripgrep"
-              "snippets"
               "spell"
             ];
 

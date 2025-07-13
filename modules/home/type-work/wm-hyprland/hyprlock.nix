@@ -6,7 +6,7 @@
   ...
 }: let
   inherit (config.lib.stylix) colors;
-  # setup is the same for all users
+  # per-host not per-user
   inherit (osConfig.nixos.opts.hpl.lockOpts) clockLabel dateLabel inputLabel;
 
   bg = "${inputs.sapadal}/assets/base.png";
@@ -18,6 +18,7 @@ in {
     enable = true;
 
     sourceFirst = true;
+
     settings = {
       background = [
         {
@@ -35,10 +36,11 @@ in {
       input-field = with colors; [
         {
           inherit (inputLabel) monitor;
+
           capslock_color = -1;
-          dots_spacing = 0.2;
           dots_center = true;
           dots_rounding = -1;
+          dots_spacing = 0.2;
           fade_on_empty = true;
           fade_timeout = 1000;
           fail_transition = 300;
@@ -61,25 +63,27 @@ in {
       label = with colors; [
         {
           inherit (clockLabel) monitor;
+
+          color = "rgb(${base04})";
+          font_size = 28;
+          halign = "center";
+          position = "90, 450";
           text = ''
             cmd[update:1000] echo -e "$(date +"%A, %B %d")"
           '';
-          color = "rgb(${base04})";
-          font_size = 28;
-          position = "90, 450";
-          halign = "center";
           valign = "center";
         }
 
         {
           inherit (dateLabel) monitor;
+
+          color = "rgb(${base04})";
+          font_size = 160;
+          halign = "center";
+          position = "90, 320";
           text = ''
             cmd[update:1000] echo "<span>$(date +"%I:%M %P")</span>"
           '';
-          color = "rgb(${base04})";
-          font_size = 160;
-          position = "90, 320";
-          halign = "center";
           valign = "center";
         }
       ];

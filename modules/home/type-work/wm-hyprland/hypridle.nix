@@ -20,13 +20,13 @@ in {
       listener = [
         {
           inherit timeout;
-          on-timeout = "hyprctl dispatch dpms off";
           on-resume = "hyprctl dispatch dpms on";
+          on-timeout = "hyprctl dispatch dpms off";
         }
 
         {
-          timeout = timeout + 10;
           on-timeout = lock_cmd;
+          timeout = timeout + 10;
         }
       ];
     };

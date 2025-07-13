@@ -4,6 +4,7 @@
   lib,
   ...
 }: let
+  inherit (config.home.opts) apps;
   inherit (flake.lib) uApp;
 in {
   home.opts.hpl.panelOpts = {
@@ -77,12 +78,10 @@ in {
       volume = 75;
     };
 
-    # todo: adapt these to new opts.apps schema
     leftcuts = {
       shortcut1 = {
-        command = uApp "vivaldi";
-        icon = "";
-        tooltip = "Vivaldi";
+        inherit (apps.browser) icon tooltip;
+        command = uApp apps.browser.exe;
       };
 
       shortcut2 = {
@@ -92,13 +91,12 @@ in {
       };
 
       shortcut3 = {
-        command = uApp "kitty";
-        icon = "";
-        tooltip = "kitty";
+        inherit (apps.terminal) icon tooltip;
+        command = uApp apps.terminal.exe;
       };
 
       shortcut4 = {
-        command = uApp "kitty  eora -e yazi";
+        command = uApp "${apps.terminal.exe} eora -e ${config.programs.yazi.package}";
         icon = "";
         tooltip = "Browse Flake";
       };
@@ -106,54 +104,52 @@ in {
 
     rightcuts = {
       shortcut1 = {
-        command = uApp "chromium";
-        icon = "";
-        tooltip = "Chromium";
+        inherit (apps.video) icon tooltip;
+        command = uApp apps.video.exe;
       };
 
       shortcut3 = {
-        command = uApp "strawberry";
-        icon = "󰝚";
-        tooltip = "Strawberry";
+        inherit (apps.audio) icon tooltip;
+        command = uApp apps.audio.exe;
       };
     };
 
     leftdirs = {
       directory1 = {
-        command = uApp "nautilus -w";
+        command = uApp "${apps.directory.exe} ${apps.directory.args}";
         label = "󰋜 Home";
       };
 
       directory2 = {
-        command = uApp "nautilus -w Nix";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Nix";
         label = " Nix";
       };
 
       directory3 = {
-        command = uApp "nautilus -w Rust";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Rust";
         label = "󱘗 Rust";
       };
     };
 
     rightdirs = {
       directory1 = {
-        command = uApp "nautilus -w Books";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Books";
         label = "󱉟 Books";
       };
 
       directory2 = {
-        command = uApp "nautilus -w Math";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Math";
         label = "󰿈 Math";
       };
 
       directory3 = {
-        command = uApp "nautilus -w Downloads";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Downloads";
         label = "󰇚 Downloads";
       };
     };
   };
 
   wayland.windowManager.hyprland.settings.exec-once = [
-    (uApp (toString (lib.getExe config.programs.hyprpanel.package)))
+    (uApp (lib.getExe config.programs.hyprpanel.package))
   ];
 }

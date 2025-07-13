@@ -11,7 +11,6 @@
 
       "org/gnome/nautilus/icon-view".default-zoom-level = "small-plus";
       "org/gnome/nautilus/preferences" = {
-        always-use-location-entry = true;
         show-create-link = true;
       };
 

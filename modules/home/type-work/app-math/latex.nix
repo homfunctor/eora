@@ -11,9 +11,7 @@
   cfg = config.home.opts.app-math.latex;
 in {
   config = mkIf cfg.enable {
-    home.packages = with pkgs; [
-      texliveFull
-    ];
+    home.packages = [pkgs.texliveFull];
 
     programs = {
       # latex formatter

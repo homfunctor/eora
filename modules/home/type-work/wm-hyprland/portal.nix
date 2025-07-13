@@ -4,9 +4,7 @@
 
     config = {
       common = {
-        default = [
-          "hyprland"
-        ];
+        default = ["hyprland"];
       };
 
       hyprland = {

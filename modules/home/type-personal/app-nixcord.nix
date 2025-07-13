@@ -1,8 +1,4 @@
-# todo: fix weird config conflict bug
-{
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   imports = with inputs; [
     nixcord.homeModules.nixcord
     # plugins.*.enable
@@ -22,6 +18,4 @@
 
     quickCss = "some CSS";
   };
-
-  # stylix.targets.nixcord.enable = lib.mkForce false;
 }

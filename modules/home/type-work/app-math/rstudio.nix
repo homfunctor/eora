@@ -7,8 +7,6 @@
   cfg = config.home.opts.app-math.rstudio;
 in {
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [
-      rstudio
-    ];
+    home.packages = [pkgs.rstudio];
   };
 }

@@ -11,7 +11,7 @@ in {
       notification.window = {
         border = "none";
         relative = "editor";
-        winblend = 100;
+        winblend = 0;
       };
     };
   };

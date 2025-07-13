@@ -3,47 +3,46 @@
   lib,
   ...
 }: let
-  colors = config.lib.stylix.colors.withHashtag;
-
   cfg = config.home.opts.nvim.plugins.snacks;
 in {
-  programs.nixvim = lib.mkIf cfg.enable {
-    plugins.snacks = {
-      enable = true;
+  programs.nixvim.plugins.snacks = lib.mkIf cfg.enable {
+    enable = true;
 
-      settings = {
-        bigfile.enabled = true;
+    settings = {
+      bigfile.enabled = true;
 
-        indent = {
+      indent = {
+        enabled = true;
+        chunk = {
           enabled = true;
-          chunk = {
-            enabled = true;
-            char = {
-              arrow = "─";
-              corner_top = "┌";
-              corner_bottom = "└";
-            };
-            hl = "SnacksIndentScope";
-            only_current = true;
+          char = {
+            arrow = "─";
+            corner_top = "┌";
+            corner_bottom = "└";
           };
+          hl = "SnacksIndentScope";
+          only_current = true;
         };
-
-        input.enabled = true;
-
-        notify.enabled = true;
-        notifier = {
-          enabled = true;
-          style = "fancy";
-          timeout = 3000;
-        };
-
-        scroll.enabled = true;
       };
-    };
 
-    highlight = with colors; {
-      SnacksIndent.fg = base03;
-      SnacksIndentScope.fg = base08;
+      input.enabled = true;
+
+      notify.enabled = true;
+      notifier = {
+        enabled = true;
+        style = "fancy";
+        timeout = 3000;
+      };
+
+      scope.enabled = true;
+
+      # scroll.enabled = true;
+
+      styles.notification.wo.wrap = true;
+
+      win.backdrop.blend = 0;
+
+      words.enabled = true;
     };
   };
 }

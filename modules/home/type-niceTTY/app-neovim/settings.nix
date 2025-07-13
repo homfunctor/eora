@@ -1,10 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: let
-  colors = config.lib.stylix.colors.withHashtag;
-in {
+{pkgs, ...}: {
   programs.nixvim = {
     defaultEditor = true;
     viAlias = true;
@@ -25,26 +19,6 @@ in {
       jump.severity.__raw = "vim.diagnostic.severity.WARN";
       severity_sort = true;
       update_in_insert = true;
-    };
-
-    highlightOverride = with colors; {
-      Boolean.fg = "#5A6B9C";
-      Comment = {
-        fg = "#8B7AA3";
-        italic = true;
-      };
-      Keyword.fg = "#7ABF9E";
-      LineNr.bg = "none";
-      Normal.bg = "none";
-      NormalFloat.bg = "none";
-      NotifyBackground.bg = "none";
-      Number.fg = "#4A6B8A";
-      StatusLine.bg = base00;
-      String.italic = true;
-      TSBoolean.link = "Boolean";
-      TSComment.link = "Comment";
-      TSKeyword.link = "Keyword";
-      TSNumber.link = "Number";
     };
 
     opts = {

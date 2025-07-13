@@ -14,13 +14,9 @@ in {
 
     opts.hpl = {
       paperOpts.settings = {
-        preload = [
-          "${wallDir}/${wall}"
-        ];
+        preload = ["${wallDir}/${wall}"];
 
-        wallpaper = [
-          "eDP-1, ${wallDir}/${wall}"
-        ];
+        wallpaper = ["eDP-1, ${wallDir}/${wall}"];
       };
 
       # user settings
@@ -41,7 +37,7 @@ in {
           "2, monitor:eDP-1"
           "5, monitor:eDP-1"
           "3, monitor:eDP-1"
-          # change this to external monitor
+          # todo: change this to external monitor
           "6, monitor:eDP-1"
         ];
       };

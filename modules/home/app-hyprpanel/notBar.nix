@@ -100,7 +100,7 @@ in {
         sleep = sleepCmd;
       };
 
-      transition = "crossfade";
+      transition = "slide_down";
       transitionTime = 200;
     };
 

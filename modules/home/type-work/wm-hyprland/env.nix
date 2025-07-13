@@ -12,12 +12,12 @@ in {
     '';
 
     "uwsm/env".text = ''
-      export BROWSER=${toString apps.browser.exe}
+      export BROWSER=${apps.browser.exe}
       export CLUTTER_BACKEND=wayland
       export DIRENV_LOG_FORMAT=1
       export DISABLE_QT5_COMPAT=0
       export DISABLE_QT_COMPAT=0
-      export EDITOR=${toString apps.text.exe}
+      export EDITOR=${apps.text.exe}
       export GDK_BACKEND=wayland,x11
       export GDK_SCALE=1
       export GNOME_KEYRING_CONTROL="$XDG_RUNTIME_DIR/keyring"
@@ -34,9 +34,9 @@ in {
       export QT_SCALE_FACTOR=1
       export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
       export SDL_VIDEODRIVER=wayland,x11
-      export SHELL=${toString apps.shell.exe}
-      export TERMINAL=${toString apps.terminal.exe}
-      export VISUAL=${toString apps.text.exe}
+      export SHELL=${apps.shell.exe}
+      export TERMINAL=${apps.terminal.exe}
+      export VISUAL=${apps.text.exe}
       export WLR_BACKEND=wayland
       export WLR_DRM_NO_ATOMIC=1
       export WLR_NO_HARDWARE_CURSORS=1

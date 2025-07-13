@@ -11,9 +11,7 @@
       ];
     };
 
-    kernelModules = [
-      "kvm-amd"
-    ];
+    kernelModules = ["kvm-amd"];
 
     kernelParams = [
       "mitigations=off"

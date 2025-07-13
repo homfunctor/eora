@@ -40,23 +40,23 @@ in {
     ];
 
     dwindle = {
-      pseudotile = true;
-      preserve_split = true;
-      special_scale_factor = 1.0;
-      smart_split = true;
-      smart_resizing = true;
-      use_active_for_splits = true;
       force_split = 0;
+      preserve_split = true;
+      pseudotile = true;
+      smart_resizing = true;
+      smart_split = true;
+      special_scale_factor = 1.0;
       split_width_multiplier = 1.0;
+      use_active_for_splits = true;
     };
 
     input = {
-      kb_layout = "us";
-      numlock_by_default = true;
-      follow_mouse = 2;
-      sensitivity = 0;
       accel_profile = "flat";
       float_switch_override_focus = 2;
+      follow_mouse = 2;
+      kb_layout = "us";
+      numlock_by_default = true;
+      sensitivity = 0;
     };
 
     misc = {

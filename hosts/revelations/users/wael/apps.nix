@@ -1,4 +1,11 @@
 # default application settings
+# setup to match xdg mimeapps and hyprpanel
+# args: arguments commonly used with app (ex: "-w" for Nautilus)
+# desktop: desktop file name (without extension)
+# exe: executable found at pkg path
+# icon: icon used for hyprpanel
+# pkg: package path
+# tooltip: hyprpanel tooltip. also functions as a human-readable name
 {
   config,
   lib,
@@ -11,84 +18,89 @@ in {
     archive = {
       desktop = "org.gnome.FileRoller";
       exe = getExe archive.pkg;
-      name = "File Roller";
       pkg = pkgs.file-roller;
+      tooltip = "File Roller";
     };
 
     audio = {
       desktop = "org.strawberrymusicplayer.strawberry";
       exe = getExe audio.pkg;
-      name = "Strawberry";
+      icon = "󰝚";
       pkg = pkgs.strawberry-qt6;
+      tooltip = "Strawberry";
     };
 
     browser = {
       desktop = "vivaldi-stable";
       exe = getExe browser.pkg;
-      name = "Vivaldi";
+      icon = "";
       pkg = pkgs.vivaldi;
+      tooltip = "Vivaldi";
     };
 
     directory = {
+      args = "-w";
       desktop = "org.gnome.Nautilus";
       exe = getExe directory.pkg;
-      name = "Nautilus";
       pkg = pkgs.nautilus;
+      tooltip = "Nautilus";
     };
 
     image = {
       desktop = "org.gnome.Loupe";
       exe = getExe image.pkg;
-      name = "Loupe";
       pkg = pkgs.loupe;
+      tooltip = "Loupe";
     };
 
     launcher = {
       args = " -nofs -wm 'uwsm'";
       exe = getExe launcher.pkg;
-      name = "Nwg-drawer";
       pkg = pkgs.nwg-drawer;
+      tooltip = "Nwg-drawer";
     };
 
     office = {
       desktop = "onlyoffice-desktopeditors";
       exe = getExe office.pkg;
-      name = "Only Office";
       pkg = config.programs.onlyoffice.package;
+      tooltip = "Only Office";
     };
 
     pdf = {
       desktop = "org.gnome.Papers";
       exe = getExe pdf.pkg;
-      name = "Papers";
       pkg = pkgs.papers;
+      tooltip = "Papers";
     };
 
     shell = {
       exe = getExe shell.pkg;
-      name = "Fish";
       pkg = config.programs.fish.package;
+      tooltip = "Fish";
     };
 
     terminal = {
       desktop = "kitty";
       exe = getExe terminal.pkg;
-      name = "Kitty";
+      icon = "";
       pkg = config.programs.kitty.package;
+      tooltip = "Kitty";
     };
 
     text = {
       desktop = "neovide";
       exe = getExe text.pkg;
-      name = "Neovide";
       pkg = config.programs.neovide.package;
+      tooltip = "Neovide";
     };
 
     video = {
       desktop = "vlc";
       exe = getExe video.pkg;
-      name = "VLC";
+      icon = "󰕼";
       pkg = pkgs.vlc;
+      tooltip = "VLC";
     };
   };
 }

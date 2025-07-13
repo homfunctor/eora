@@ -7,8 +7,6 @@
   cfg = config.home.opts.app-math.geogebra;
 in {
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [
-      geogebra6
-    ];
+    home.packages = [pkgs.geogebra6];
   };
 }

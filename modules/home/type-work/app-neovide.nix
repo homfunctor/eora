@@ -1,4 +1,4 @@
-{
+{config, ...}: {
   programs = {
     neovide = {
       enable = true;
@@ -25,7 +25,12 @@
         neovide_floating_shadow = false;
         neovide_hide_mouse_when_typing = true;
 
-        neovide_opacity = 0.85;
+        neovide_floating_blur_amount_x = 0;
+        neovide_floating_blur_amount_y = 0;
+        neovide_floating_opacity = 0.20;
+        neovide_normal_opacity = config.stylix.opacity.terminal;
+        neovide_opacity = config.stylix.opacity.terminal;
+        neovide_transparency_point = 0;
 
         neovide_position_animation_length = 0.15;
         neovide_scroll_animation_length = 0.3;

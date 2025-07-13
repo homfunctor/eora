@@ -1,3 +1,5 @@
+# todo: customize notification more
+# todo: unify transparency/opacity settings with neovide
 {
   flake,
   inputs,
@@ -8,6 +10,7 @@
     flake.modules.home.stylix-neovim
     inputs.nixvim.homeManagerModules.nixvim
     ./autocmd.nix
+    ./highlight.nix
     ./keymaps.nix
     ./plugins
     ./settings.nix

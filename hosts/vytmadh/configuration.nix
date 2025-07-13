@@ -38,6 +38,6 @@
     sops.user.enable = true;
 
     adminUser = "rymrgand";
-    userNames = ["rymrgand"];
+    userNames = [adminUser];
   };
 }

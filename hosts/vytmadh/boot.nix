@@ -10,11 +10,6 @@
       ];
     };
 
-    kernelModules = [
-    ];
-
-    kernelParams = [
-      "preempt=full"
-    ];
+    kernelParams = ["preempt=full"];
   };
 }
