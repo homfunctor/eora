@@ -7,7 +7,7 @@
     };
     CmpDocumentation.bg = "none";
     CmpDocumentationBorder.bg = "none";
-    CmpItemAbbr = "none";
+    CmpItemAbbr.bg = "none";
     DiagnosticHint.bg = "none";
     DiagnosticInfo.bg = "none";
     FloatBorder.bg = "none";
