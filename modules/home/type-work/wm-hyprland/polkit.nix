@@ -14,6 +14,7 @@ in {
 
   wayland.windowManager.hyprland.settings = {
     ecosystem.enforce_permissions = true;
+    exec-once = ["systemctl --user start hyprpolkitagent"];
     permission = [
       "${getExe pkgs.grim}, screencopy, allow"
       "${getExe pkgs.grimblast}, screencopy, allow"

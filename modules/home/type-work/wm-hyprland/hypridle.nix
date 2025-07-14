@@ -3,8 +3,8 @@
   lib,
   ...
 }: let
-  lock_cmd = "pidof hyprlock || ${lockPkg}";
-  lockPkg = lib.getExe config.programs.hyprlock.package;
+  lock_cmd = "pidof hyprlock || ${lockExe}";
+  lockExe = lib.getExe config.programs.hyprlock.package;
   timeout = 1200;
 in {
   services.hypridle = {

@@ -2,7 +2,11 @@
 # already set:
 #   XDG_RUNTIME_DIR = "/run/user/$UID";
 #   DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$UID/bus";
-{config, ...}: let
+{
+  config,
+  osConfig,
+  ...
+}: let
   inherit (config.home.opts) apps;
 in {
   xdg.configFile = {
@@ -37,10 +41,10 @@ in {
       export SHELL=${apps.shell.exe}
       export TERMINAL=${apps.terminal.exe}
       export VISUAL=${apps.text.exe}
-      export WLR_BACKEND=wayland
+      export WLR_BACKEND=${osConfig.nixos.opts.wlrBR}
       export WLR_DRM_NO_ATOMIC=1
       export WLR_NO_HARDWARE_CURSORS=1
-      export WLR_RENDERER=wayland
+      export WLR_RENDERER=${osConfig.nixos.opts.wlrBR}
       export XDG_CURRENT_DESKTOP=Hyprland
       export XDG_SESSION_DESKTOP=Hyprland
       export XDG_SESSION_TYPE=wayland

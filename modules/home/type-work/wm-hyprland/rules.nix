@@ -28,9 +28,9 @@ in {
       "size $floatingSize, class:^(.blueman-manager-wrapped)$"
 
       # audio control
-      "center, class:^($com.saivert.pwvucontrol)$"
-      "float, class:^($com.saivert.pwvucontrol)$"
-      "size $floatingSize, class:^($com.saivert.pwvucontrol)$"
+      "center, class:^(com.saivert.pwvucontrol)$"
+      "float, class:^(com.saivert.pwvucontrol)$"
+      "size $floatingSize, class:^(com.saivert.pwvucontrol)$"
 
       # udiskie
       "center, class:^(udiskie)$"
@@ -42,7 +42,6 @@ in {
 
       # password focus
       "stayfocused, class:(gcr-prompter)"
-      "stayfocused, class:^(pinentry-)"
       "stayfocused, class:^(polkit-), title:(Authenticate)"
 
       # file picker

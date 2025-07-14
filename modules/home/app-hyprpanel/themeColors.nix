@@ -47,13 +47,13 @@ in {
         icon = "${base07}";
         icon_background = "${base02}";
 
-        # media = {
-        #   background = "${base03}";
-        #   border = "${base0E}";
-        #   icon = "${base07}";
-        #   icon_background = "${base07}";
-        #   text = "${base08}";
-        # };
+        media = {
+          background = "${base00}";
+          border = "${base0E}";
+          icon = "${base08}";
+          icon_background = "${base00}";
+          text = "${base07}";
+        };
 
         modules = {
           cava = {
@@ -476,31 +476,31 @@ in {
             };
           };
 
-          # media = {
-          #   album = "${base06}";
-          #   artist = "${base0C}";
-          #   background.color = "${base02}";
-          #   border.color = "${base02}";
-          #
-          #   buttons = {
-          #     background = "${base00}";
-          #     enabled = "${base0C}";
-          #     inactive = "${base04}";
-          #     text = "${base02}";
-          #   };
-          #
-          #   card.color = "${base01}";
-          #
-          #   slider = {
-          #     background = "${base00}";
-          #     backgroundhover = "${base03}";
-          #     primary = "${base06}";
-          #     puck = "${base03}";
-          #   };
-          #
-          #   song = "${base07}";
-          #   timestamp = "${base05}";
-          # };
+          media = {
+            album = "${base04}";
+            artist = "${base05}";
+            background.color = "${base00}";
+            border.color = "${base0B}";
+
+            buttons = {
+              background = "${base01}";
+              enabled = "${base03}";
+              inactive = "${base00}";
+              text = "${base08}";
+            };
+
+            card.color = "${base00}";
+
+            slider = {
+              background = "${base00}";
+              backgroundhover = "${base03}";
+              primary = "${base05}";
+              puck = "${base04}";
+            };
+
+            song = "${base07}";
+            timestamp = "${base05}";
+          };
 
           # network = {
           #   background.color = "${base02}";

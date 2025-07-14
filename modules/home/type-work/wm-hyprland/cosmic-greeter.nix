@@ -7,11 +7,7 @@
 
   # pair up monitors and bgs
   monitorBgList =
-    lib.zipListsWith (monitor: bg: {
-      inherit monitor bg;
-    })
-    monitors
-    bgs;
+    lib.zipListsWith (monitor: bg: {inherit monitor bg;}) monitors bgs;
 
   # use the list to make individual monitor configs
   monitorCfgs = lib.listToAttrs (

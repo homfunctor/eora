@@ -1,17 +1,21 @@
 # todo: mouse actions over buttons
-# todo: open media window from cava button
 {
   config,
   flake,
   lib,
   ...
 }: let
+  inherit (flake.lib) uApp uTog;
   inherit (config.home.opts) apps hpl;
+  iconMap = {
+    "vivaldi-stable" = "";
+  };
 in {
   programs.hyprpanel.settings.bar = {
     autoHide = "never";
     layouts = hpl.panelOpts.layout;
 
+    # icon is dynamic and managed by hyprpanel
     battery = {
       hideLabelWhenFull = false;
       label = false;
@@ -23,7 +27,7 @@ in {
 
     clock = {
       format = "%a %b %d  %I:%M %p";
-      icon = "󰃭";
+      icon = "";
       middleClick = "";
       rightClick = "";
       scrollDown = "";
@@ -54,6 +58,13 @@ in {
         showIcon = true;
       };
 
+      media = {
+        icon = "";
+        label = "";
+        noMediaText = "";
+        truncation_size = 25;
+      };
+
       microphone = {
         label = true;
         leftClick = "menu:audio";
@@ -69,7 +80,7 @@ in {
         icon = "󰐥";
         leftClick = "menu:powerdropdown";
         middleClick = "";
-        rightClick = "";
+        rightClick = uApp "missioncenter";
         scrollDown = "";
         scrollUp = "";
         showLabel = true;
@@ -80,7 +91,7 @@ in {
         leftClick = "";
         middleClick = "";
         round = true;
-        rightClick = "";
+        rightClick = uApp "missioncenter";
         scrollDown = "";
         scrollUp = "";
         showIcon = true;
@@ -89,7 +100,7 @@ in {
 
     launcher = {
       icon = "";
-      rightClick = "${flake.lib.uTog apps.launcher.exe}  ${apps.launcher.args}";
+      rightClick = "${uTog apps.launcher.exe}  ${apps.launcher.args}";
     };
 
     notifications = {
@@ -106,7 +117,7 @@ in {
     volume = {
       label = true;
       middleClick = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-      rightClick = flake.lib.uApp "pwvucontrol";
+      rightClick = uApp "pwvucontrol";
       scrollDown = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
       scrollUp = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
     };
@@ -114,7 +125,7 @@ in {
     windowtitle = {
       class_name = true;
       custom_title = true;
-      icon = false;
+      icon = true;
       label = true;
       leftClick = "";
       middleClick = "";
@@ -122,22 +133,17 @@ in {
       scrollDown = "";
       scrollUp = "";
       truncation = true;
-      truncation_size = 20;
+      truncation_size = 25;
     };
 
     workspaces = {
-      applicationIconMap = {
-        "org.gnome.Nautilus" = "";
-        "org.pwmt.zathura" = "";
-        "title:Settings" = "";
-        "vivaldi-stable" = "";
-      };
+      applicationIconMap = iconMap;
       applicationIconOncePerWorkspace = false;
       showApplicationIcons = true;
       showWsIcons = true;
       show_icons = true;
       show_numbered = true;
-      workspaceIconMap = {};
+      workspaceIconMap = iconMap;
       workspaces = 6;
     };
   };

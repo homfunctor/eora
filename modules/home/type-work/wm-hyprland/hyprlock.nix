@@ -51,7 +51,7 @@ in {
           invert_numlock = false;
           outer_color = "rgb(${base07})";
           outline_thickness = 5;
-          placeholder_text = "<i>🔐input password</i>";
+          placeholder_text = "<i> input password</i>";
           position = "0, -300";
           rounding = 0;
           size = "300, 60";

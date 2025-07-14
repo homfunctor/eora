@@ -10,7 +10,7 @@ in {
   wayland.windowManager.hyprland.settings = {
     "$floatingSize" = "500 500";
 
-    cursor.no_warps = true;
+    cursor.no_warps = false;
 
     decoration = {
       blur = {
@@ -55,6 +55,7 @@ in {
       float_switch_override_focus = 2;
       follow_mouse = 2;
       kb_layout = "us";
+      kb_options = "caps:escape";
       numlock_by_default = true;
       sensitivity = 0;
     };

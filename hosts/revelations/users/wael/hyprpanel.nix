@@ -16,8 +16,8 @@ in {
           "windowtitle"
         ];
         "middle" = [
-          "cpu"
           "ram"
+          "cpu"
           "clock"
           "cava"
         ];
@@ -35,10 +35,11 @@ in {
           "windowtitle"
         ];
         "middle" = [
-          "cpu"
           "ram"
+          "cpu"
           "clock"
           "cava"
+          "media"
         ];
         "right" = [
           "volume"
