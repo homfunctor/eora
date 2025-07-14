@@ -32,7 +32,21 @@ in {
           };
         };
         statix.enable = true;
-        typos_lsp.enable = true;
+        typos_lsp = {
+          enable = true;
+          extraOptions.init_options.diagnosticSeverity = "Hint";
+        };
+      };
+    };
+
+    lspsaga = {
+      enable = true;
+      lightbulb.enable = false;
+      outline.keys.jump = "<cr>";
+      ui.border = "none";
+      scrollPreview = {
+        scrollDown = "<c-d>";
+        scrollUp = "<c-u>";
       };
     };
   };

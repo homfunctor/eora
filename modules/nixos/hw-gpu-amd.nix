@@ -6,7 +6,6 @@
   # lact
   boot = {
     initrd.kernelModules = ["amdgpu"];
-
     kernelParams = ["amdgpu.ppfeaturemask=0xfffd7fff"];
   };
   environment.systemPackages = [pkgs.lact];

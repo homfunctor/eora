@@ -1,3 +1,4 @@
+# end4
 {
   wayland.windowManager.hyprland.settings.animations = {
     enabled = "yes, please :)";

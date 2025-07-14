@@ -23,7 +23,7 @@
 
   home.opts = {
     inherit (osConfig.nixos.opts) hostName;
-    userName = "thaos";
+    userName = builtins.elemAt osConfig.nixos.opts.userNames 1;
 
     app-math = {
       geogebra.enable = true;

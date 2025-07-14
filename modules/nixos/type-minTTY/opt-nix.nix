@@ -34,8 +34,8 @@ in {
     optimise.automatic = true;
 
     # all the cool kids do it
-    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
     nixPath = lib.mapAttrsToList (n: _: "${n}=flake:${n}") flakeInputs;
+    registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
 
     settings = {
       accept-flake-config = false;

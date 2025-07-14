@@ -28,7 +28,7 @@
 
   home.opts = {
     inherit (osConfig.nixos.opts) hostName;
-    userName = osConfig.nixos.opts.adminUser;
+    userName = builtins.elemAt osConfig.nixos.opts.userNames 0;
 
     app-math = {
       geogebra.enable = true;

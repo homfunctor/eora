@@ -16,9 +16,17 @@
     };
 
     diagnostic.settings.config = {
+      float = {
+        border = "none";
+        focusable = false;
+        source = "always";
+      };
       jump.severity.__raw = "vim.diagnostic.severity.WARN";
       severity_sort = true;
+      signs = true;
+      underline = true;
       update_in_insert = true;
+      virtual_text = false;
     };
 
     opts = {
@@ -81,10 +89,11 @@
       # aesthetics
       cmdheight = 0;
       cursorline = true;
-      foldcolumn = "0";
+      cursorlineopt = "number";
+      foldcolumn = "1";
       foldenable = true;
       foldlevel = 99;
-      foldlevelstart = 99;
+      foldlevelstart = -1;
       foldmethod = "indent";
       pumblend = 0;
       pumheight = 10;
@@ -92,7 +101,7 @@
       scrolloff = 2;
       showmode = false;
       signcolumn = "yes";
-      winblend = 0;
+      winblend = 4;
 
       # which-key timeout
       timeoutlen = 10;

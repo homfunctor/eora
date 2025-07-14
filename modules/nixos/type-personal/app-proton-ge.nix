@@ -1,3 +1,1 @@
-{pkgs, ...}: {
-  environment.systemPackages = [pkgs.protonplus];
-}
+{pkgs, ...}: {environment.systemPackages = [pkgs.protonplus];}

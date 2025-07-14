@@ -4,6 +4,7 @@
     ./bufferline.nix
     ./colorizer.nix
     ./conform.nix
+    ./fidget.nix
     ./illuminate.nix
     ./lint.nix
     ./lsp.nix
@@ -11,7 +12,7 @@
     ./mini-indentscope.nix
     ./mini-notify.nix
     ./mini.nix
-    ./navic.nix
+    ./noice.nix
     ./nvim-surround.nix
     ./precognition.nix
     ./rustaceanvim.nix

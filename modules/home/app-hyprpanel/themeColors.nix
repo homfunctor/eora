@@ -1,4 +1,5 @@
 # unused values are commented out
+# todo: adjust colors further
 {config, ...}: let
   colors = config.lib.stylix.colors.withHashtag;
 in {
@@ -373,9 +374,9 @@ in {
           };
 
           dashboard = {
-            background.color = "${base00}";
+            background.color = "${base02}";
             border.color = "${base06}";
-            card.color = "${base01}";
+            card.color = "${base00}";
 
             controls = {
               # bluetooth = {
@@ -383,7 +384,7 @@ in {
               #   text = "${base02}";
               # };
 
-              disabled = "${base03}";
+              # disabled = "${base03}";
 
               input = {
                 background = "${base00}";

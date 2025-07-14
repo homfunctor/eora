@@ -1,3 +1,1 @@
-{inputs, ...}: {
-  imports = [inputs.disko.nixosModules.disko];
-}
+{inputs, ...}: {imports = [inputs.disko.nixosModules.disko];}

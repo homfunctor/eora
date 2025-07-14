@@ -11,14 +11,20 @@ in {
     settings = {
       bigfile.enabled = true;
 
+      image = {
+        enabled = true;
+        border = "none";
+        doc.inline = false;
+      };
+
       indent = {
         enabled = true;
         chunk = {
           enabled = true;
           char = {
             arrow = "─";
-            corner_top = "┌";
             corner_bottom = "└";
+            corner_top = "┌";
           };
           hl = "SnacksIndentScope";
           only_current = true;
@@ -27,17 +33,15 @@ in {
 
       input.enabled = true;
 
-      notify.enabled = true;
       notifier = {
         enabled = true;
-        style = "fancy";
-        timeout = 3000;
+        style = "minimal";
+        top_down = false;
       };
 
       scope.enabled = true;
 
-      # scroll.enabled = true;
-
+      statuscolumn.enabled = true;
       styles.notification.wo.wrap = true;
 
       win.backdrop.blend = 0;

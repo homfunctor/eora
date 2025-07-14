@@ -13,6 +13,7 @@ in {
         relative = "editor";
         winblend = 0;
       };
+      progress.display.progress_icon = ["moon"];
     };
   };
 }

@@ -189,22 +189,22 @@ in {
 
             providers = {
               dictionary = {
-                name = "Dict";
-                module = "blink-cmp-dictionary";
                 min_keyword_length = 3;
+                module = "blink-cmp-dictionary";
+                name = "Dict";
               };
 
               emoji = {
-                name = "Emoji";
                 module = "blink-emoji";
+                name = "Emoji";
                 score_offset = 15;
               };
 
               lsp.score_offset = 4;
 
               ripgrep = {
-                name = "Ripgrep";
                 module = "blink-ripgrep";
+                name = "Ripgrep";
                 score_offset = 100;
                 opts = {
                   additional_paths = {};
@@ -222,14 +222,14 @@ in {
               };
 
               spell = {
-                name = "Spell";
                 module = "blink-cmp-spell";
+                name = "Spell";
                 score_offset = 1;
               };
 
               vimtex = {
-                name = "vimtex";
                 module = "blink.compat.source";
+                name = "vimtex";
               };
             };
           };

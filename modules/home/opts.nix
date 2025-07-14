@@ -38,7 +38,7 @@ in {
 
     customUserDirs = mkAttrOpt {} "custom settings for user directories (XDG)";
 
-    # highly dependent on opts.apps!
+    # used to generate mimeapps.list from opts.apps
     defaultApps = mkAttrOpt {} "default applications (mime)";
 
     hpl = {

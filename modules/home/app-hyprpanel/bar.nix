@@ -1,3 +1,5 @@
+# todo: mouse actions over buttons
+# todo: open media window from cava button
 {
   config,
   flake,
@@ -87,7 +89,7 @@ in {
 
     launcher = {
       icon = "";
-      rightClick = (flake.lib.uTog "${apps.launcher.exe}") + apps.launcher.args;
+      rightClick = "${flake.lib.uTog apps.launcher.exe}  ${apps.launcher.args}";
     };
 
     notifications = {

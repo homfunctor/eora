@@ -30,12 +30,15 @@
     steam = {
       enable = true;
       platformOptimizations.enable = true;
-      protontricks.enable = true;
     };
   };
 
   services = {
     irqbalance.enable = true;
-    pipewire.lowLatency.enable = true;
+    pipewire.lowLatency = {
+      enable = true;
+      quantum = 256;
+      rate = 480000;
+    };
   };
 }

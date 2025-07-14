@@ -30,8 +30,8 @@ in {
         formatters_by_ft = {
           "_" = [
             "squeeze_blanks"
-            "trim_whitespace"
             "trim_newlines"
+            "trim_whitespace"
           ];
           bash = ["shfmt"];
           fish = ["fish_indent"];
@@ -44,7 +44,6 @@ in {
           xml = ["xmlformat"];
           yaml = ["yamlfmt"];
         };
-
         notify_on_error = true;
       };
     };

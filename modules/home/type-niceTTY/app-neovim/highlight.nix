@@ -8,8 +8,10 @@
     CmpDocumentation.bg = "none";
     CmpDocumentationBorder.bg = "none";
     CmpItemAbbr.bg = "none";
+    CursorLineNr.bg = "none";
     DiagnosticHint.bg = "none";
     DiagnosticInfo.bg = "none";
+    EndOfBuffer.bg = "none";
     FloatBorder.bg = "none";
     Keyword.fg = "#7ABF9E";
     LineNr.bg = "none";

@@ -1,11 +1,12 @@
 # default application settings
-# setup to match xdg mimeapps and hyprpanel
+# designed for use with xdg mimeapps setup (set name, desktop),
+# hyprpanel (icon, tooltip), and general usage (args, exe, pkg)
 # args: arguments commonly used with app (ex: "-w" for Nautilus)
 # desktop: desktop file name (without extension)
 # exe: executable found at pkg path
 # icon: icon used for hyprpanel
 # pkg: package path
-# tooltip: hyprpanel tooltip. also functions as a human-readable name
+# tooltip: hyprpanel tooltip. also functions as a human-readable set name
 {
   config,
   lib,
