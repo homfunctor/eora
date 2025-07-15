@@ -9,7 +9,6 @@
 in {
   config = lib.mkIf cfg.enable {
     sops.secrets."psswdForKeyring" = {
-      enable = true;
       mode = "0400";
       owner = config.nixos.opts.adminUser;
       path = "/run/secrets/psswdForKeyring";
