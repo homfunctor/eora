@@ -18,7 +18,10 @@ in {
 
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
 
-    sops.user.enable = mkBoolOpt false "set password with sops";
+    sops = {
+      keyring.enable = mkBoolOpt false "unlock keyring on autologin with sops";
+      user.enable = mkBoolOpt false "set password with sops";
+    };
 
     adminUser = mkStrOpt "" "admin user";
     userNames = mkListOpt lib.types.str null "user names";

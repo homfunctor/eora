@@ -39,7 +39,10 @@
 
     lanzaboote.enable = true;
 
-    sops.user.enable = true;
+    sops = {
+      keyring.enable = true;
+      user.enable = true;
+    };
 
     adminUser = "wael";
     userNames = [adminUser "thaos"];

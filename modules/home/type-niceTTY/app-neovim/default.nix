@@ -1,5 +1,5 @@
 # todo: customize notification more
-# todo: unify transparency/opacity settings with neovide
+# todo: still need to fix transparency
 {
   flake,
   inputs,

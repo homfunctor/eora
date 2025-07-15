@@ -16,8 +16,8 @@ in {
       blur = {
         enabled = true;
         new_optimizations = true;
-        passes = 2;
-        size = 4;
+        passes = 1;
+        size = 1;
       };
 
       rounding = 0;
