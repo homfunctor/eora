@@ -7,9 +7,6 @@
 }: let
   inherit (flake.lib) uApp uTog;
   inherit (config.home.opts) apps hpl;
-  iconMap = {
-    "vivaldi-stable" = "";
-  };
 in {
   programs.hyprpanel.settings.bar = {
     autoHide = "never";
@@ -137,13 +134,14 @@ in {
     };
 
     workspaces = {
-      applicationIconMap = iconMap;
       applicationIconOncePerWorkspace = false;
       showApplicationIcons = true;
       showWsIcons = true;
       show_icons = true;
       show_numbered = true;
-      workspaceIconMap = iconMap;
+      workspaceIconMap = {
+        "vivaldi-stable" = "";
+      };
       workspaces = 6;
     };
   };

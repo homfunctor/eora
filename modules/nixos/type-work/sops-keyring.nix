@@ -15,14 +15,15 @@ in {
     };
 
     systemd.user.services.unlock-keyring = {
+      after = ["gnome-keyring-daemon.service"];
       description = "Unlock gnome-keyring with sops";
-      wantedBy = ["graphical-session.target"];
       serviceConfig = {
         Type = "oneshot";
         ExecStart = let
           psswdPath = flake.lib.mkSecretPath config ["psswdForKeyring"];
         in "${pkgs.gnome-keyring}/bin/gnome-keyring-daemon --unlock < ${psswdPath}";
       };
+      wantedBy = ["graphical-session.target"];
     };
   };
 }
