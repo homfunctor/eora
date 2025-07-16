@@ -392,7 +392,7 @@ in {
               };
 
               notifications = {
-                background = "${base01}";
+                background = "${base00}";
                 text = "${base07}";
               };
 

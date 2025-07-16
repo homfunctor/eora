@@ -1,11 +1,10 @@
 # notes on launch options
 #
 # stellaris
-#   no crashes without env option, but without it the game only
-#   uses DP-1
-# env --unset=SDL_VIDEODRIVER gamemoderun %command%
+#   env --unset=SDL_VIDEODRIVER gamemoderun %command%
 {inputs, ...}: {
   imports = with inputs.nix-gaming.nixosModules; [
+    ntsync
     pipewireLowLatency
     platformOptimizations
   ];
@@ -13,17 +12,9 @@
   programs = {
     gamemode = {
       enable = true;
-      enableRenice = true;
-      settings = {
-        cpu = {
-          park_cores = "no";
-          pin_cores = "yes";
-        };
-        general.renice = 10;
-        gpu = {
-          amd_performance_level = "high";
-          apply_gpu_optimisations = "accept-responsibility";
-        };
+      settings.general = {
+        renice = 15;
+        softrealtime = "auto";
       };
     };
 
@@ -31,14 +22,9 @@
       enable = true;
       platformOptimizations.enable = true;
     };
+
+    wine.ntsync.enable = true;
   };
 
-  services = {
-    irqbalance.enable = true;
-    pipewire.lowLatency = {
-      enable = true;
-      quantum = 256;
-      rate = 480000;
-    };
-  };
+  services.pipewire.lowLatency.enable = true;
 }

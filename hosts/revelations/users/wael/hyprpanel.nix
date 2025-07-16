@@ -97,7 +97,7 @@ in {
       };
 
       shortcut4 = {
-        command = uApp "${apps.terminal.exe} eora -e ${lib.getExe config.programs.yazi.package}";
+        command = uApp "${apps.terminal.exe} ${lib.getExe config.programs.yazi.package} ~/eora";
         icon = "";
         tooltip = "Browse Flake";
       };
