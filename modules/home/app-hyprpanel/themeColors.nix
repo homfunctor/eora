@@ -5,7 +5,7 @@
 in {
   programs.hyprpanel.settings.theme = with colors; {
     bar = {
-      background = "${base02}";
+      background = "${base01}";
       # border.color = "${base07}";
 
       buttons = {
@@ -38,7 +38,7 @@ in {
         };
 
         dashboard = {
-          background = "${base01}";
+          background = "${base00}";
           border = "${base0E}";
           icon = "${base08}";
         };
@@ -177,7 +177,7 @@ in {
         # };
 
         notifications = {
-          background = "${base00}";
+          background = "${base02}";
           border = "${base06}";
           icon = "${base08}";
           icon_background = "${base02}";
@@ -392,7 +392,7 @@ in {
               };
 
               notifications = {
-                background = "${base00}";
+                background = "${base01}";
                 text = "${base07}";
               };
 
@@ -545,7 +545,7 @@ in {
             no_notifications_label = "${base04}";
 
             pager = {
-              background = "${base00}";
+              background = "${base03}";
               button = "${base07}";
               label = "${base05}";
             };
@@ -678,19 +678,19 @@ in {
     notification = {
       actions = {
         background = "${base00}";
-        text = "${base02}";
+        text = "${base04}";
       };
 
-      background = "${base00}";
-      border = "${base02}";
+      background = "${base02}";
+      border = "${base06}";
 
       close_button = {
         background = "${base00}";
-        label = "${base02}";
+        label = "${base04}";
       };
 
-      label = "${base07}";
-      labelicon = "${base07}";
+      label = "${base05}";
+      labelicon = "${base03}";
       text = "${base08}";
       time = "${base0D}";
     };
@@ -699,8 +699,8 @@ in {
       bar_color = "${base07}";
       bar_container = "${base02}";
       bar_empty_color = "${base02}";
-      bar_overflow_color = "${base08}";
-      icon = "${base02}";
+      bar_overflow_color = "${base07}";
+      icon = "${base08}";
       icon_container = "${base07}";
       label = "${base07}";
     };

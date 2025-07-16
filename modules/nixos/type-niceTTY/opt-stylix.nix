@@ -14,7 +14,7 @@
     opacity = {
       desktop = 1.0;
       popups = 0.95;
-      terminal = 0.90;
+      terminal = 0.75;
     };
     polarity = "dark";
 

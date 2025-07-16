@@ -1,4 +1,3 @@
-# todo: hyprpaper acting weird
 {
   inputs,
   pkgs,
@@ -6,8 +5,8 @@
 }: let
   wallDir = "${inputs.sapadal}/assets";
   wall1 = "winter1.png";
-  wall2 = "winter1.png";
-  wall3 = "winter1.png";
+  wall2 = "winter4.png";
+  wall3 = "winter5.png";
 in {
   # to deal with primary monitor being DP-2, not DP-1
   home.packages = with pkgs; [

@@ -1,0 +1,23 @@
+# unlocks keyring on first (auto)login
+# uses osConfig as i handle sops outside hm
+# todo: only run after autologin
+{
+  config,
+  flake,
+  lib,
+  osConfig,
+  pkgs,
+  ...
+}: let
+  cfg = osConfig.nixos.opts.sops.keyring;
+in {
+  wayland.windowManager.hyprland.settings = lib.mkIf cfg.enable {
+    exec-once = let
+      daemonPath = "${pkgs.gnome-keyring}/bin/gnome-keyring-daemon";
+      daemonArgs = "--daemonize --replace --unlock";
+      passwordPath = flake.lib.mkSecretPath osConfig ["password"];
+    in [
+      "${daemonPath} ${daemonArgs} < ${passwordPath}"
+    ];
+  };
+}

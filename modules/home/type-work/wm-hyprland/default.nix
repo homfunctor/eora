@@ -13,6 +13,7 @@
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
+    ./keyring.nix
     ./polkit.nix
     ./portal.nix
     ./rules.nix
