@@ -2,7 +2,7 @@
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
   services.scx = {
     enable = true;
-    extraARgs = ["--autopower"];
+    extraArgs = ["--autopower"];
     package = pkgs.scx_git.full;
     scheduler = "scx_lavd";
   };
