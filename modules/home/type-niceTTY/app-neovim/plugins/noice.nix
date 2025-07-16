@@ -12,15 +12,22 @@ in {
       presets.bottom_search = true;
       views = {
         cmdline_popup = {
+          border.style = "none";
           position = {
             row = -2;
             col = "20%";
           };
         };
-        cmdline_popupmenu.position = {
-          row = -5;
-          col = "20%";
+
+        cmdline_popupmenu = {
+          border.style = "none";
+          position = {
+            row = -5;
+            col = "20%";
+          };
         };
+
+        mini.win_options.winblend = 0;
       };
     };
   };

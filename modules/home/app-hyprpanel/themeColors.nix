@@ -5,7 +5,7 @@
 in {
   programs.hyprpanel.settings.theme = with colors; {
     bar = {
-      background = "${base01}";
+      background = "${base02}";
       # border.color = "${base07}";
 
       buttons = {
@@ -38,7 +38,7 @@ in {
         };
 
         dashboard = {
-          background = "${base00}";
+          background = "${base01}";
           border = "${base0E}";
           icon = "${base08}";
         };
@@ -52,7 +52,7 @@ in {
           border = "${base0E}";
           icon = "${base08}";
           icon_background = "${base00}";
-          text = "${base07}";
+          text = "${base05}";
         };
 
         modules = {
@@ -116,14 +116,14 @@ in {
             background = "${base00}";
             border = "${base0A}";
             icon = "${base0E}";
-            icon_background = "${base02}";
+            icon_background = "${base00}";
           };
 
           ram = {
             background = "${base00}";
             border = "${base0B}";
             icon = "${base08}";
-            icon_background = "${base01}";
+            icon_background = "${base00}";
             text = "${base07}";
           };
 
@@ -230,7 +230,7 @@ in {
           active = "${base06}";
           default = "${base07}";
           disabled = "${base02}";
-          text = "${base08}";
+          text = "${base05}";
         };
 
         cards = "${base00}";
@@ -248,15 +248,15 @@ in {
           text = "${base07}";
         };
 
-        feinttext = "${base08}";
+        feinttext = "${base06}";
 
         iconbuttons = {
-          active = "${base08}";
+          active = "${base03}";
           passive = "${base05}";
         };
 
         icons = {
-          active = "${base08}";
+          active = "${base03}";
           passive = "${base05}";
         };
 
@@ -278,7 +278,7 @@ in {
               passive = "${base04}";
             };
 
-            label.color = "${base08}";
+            label.color = "${base07}";
 
             listitems = {
               active = "${base06}";
@@ -344,7 +344,7 @@ in {
             };
 
             card.color = "${base01}";
-            text = "${base08}";
+            text = "${base05}";
 
             time = {
               time = "${base05}";
@@ -374,9 +374,9 @@ in {
           };
 
           dashboard = {
-            background.color = "${base02}";
+            background.color = "${base00}";
             border.color = "${base06}";
-            card.color = "${base00}";
+            card.color = "${base01}";
 
             controls = {
               # bluetooth = {
@@ -384,7 +384,7 @@ in {
               #   text = "${base02}";
               # };
 
-              # disabled = "${base03}";
+              disabled = "${base02}";
 
               input = {
                 background = "${base00}";
@@ -415,9 +415,9 @@ in {
               };
 
               right = {
-                bottom.color = "${base07}";
+                bottom.color = "${base05}";
                 middle.color = "${base0E}";
-                top.color = "${base0C}";
+                top.color = "${base06}";
               };
             };
 
@@ -461,10 +461,10 @@ in {
               #   label = "${base07}";
               # };
 
-              logout = "${base02}";
-              restart = "${base02}";
-              shutdown = "${base02}";
-              sleep = "${base02}";
+              logout = "${base03}";
+              restart = "${base03}";
+              shutdown = "${base03}";
+              sleep = "${base03}";
             };
 
             profile.name = "${base08}";
@@ -472,7 +472,7 @@ in {
             shortcuts = {
               background = "${base00}";
               recording = "${base01}";
-              text = "${base05}";
+              text = "${base08}";
             };
           };
 
@@ -486,7 +486,7 @@ in {
               background = "${base01}";
               enabled = "${base03}";
               inactive = "${base00}";
-              text = "${base08}";
+              text = "${base04}";
             };
 
             card.color = "${base00}";
@@ -570,21 +570,21 @@ in {
                 background = "${base00}";
                 icon = "${base04}";
                 icon_background = "${base01}";
-                text = "${base07}";
+                text = "${base08}";
               };
 
               restart = {
                 background = "${base00}";
-                icon = "${base04}";
+                icon = "${base06}";
                 icon_background = "${base01}";
                 text = "${base08}";
               };
 
               shutdown = {
                 background = "${base00}";
-                icon = "${base05}";
+                icon = "${base04}";
                 icon_background = "${base01}";
-                text = "${base07}";
+                text = "${base08}";
               };
 
               sleep = {
@@ -615,12 +615,12 @@ in {
             card.color = "${base01}";
 
             iconbutton = {
-              active = "${base07}";
-              passive = "${base05}";
+              active = "${base08}";
+              passive = "${base04}";
             };
 
             icons = {
-              active = "${base07}";
+              active = "${base08}";
               passive = "${base04}";
             };
 
@@ -635,7 +635,7 @@ in {
 
             listitems = {
               active = "${base07}";
-              passive = "${base05}";
+              passive = "${base04}";
             };
 
             text = "${base08}";

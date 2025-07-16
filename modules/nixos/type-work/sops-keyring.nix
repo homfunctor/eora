@@ -19,6 +19,6 @@ in {
       daemonArgs = "--daemonize --replace --unlock";
       loginCmd = "${lib.getExe pkgs.uwsm} start hyprland-uwsm.desktop";
       passwordPath = flake.lib.mkSecretPath config ["password"];
-    in "${daemonPath} ${daemonArgs} < ${passwordPath} && ${loginCmd}";
+    in "${loginCmd}; ${daemonPath} ${daemonArgs} < ${passwordPath}";
   };
 }

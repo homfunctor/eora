@@ -9,7 +9,7 @@ in {
     plugins.mini.modules.notify = {
       window = {
         config = {};
-        winblend = 20;
+        winblend = 0;
       };
     };
   };

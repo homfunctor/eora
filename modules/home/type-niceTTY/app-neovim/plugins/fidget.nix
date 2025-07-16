@@ -12,6 +12,7 @@ in {
         border = "none";
         relative = "editor";
         winblend = 0;
+        zindex = 45;
       };
       progress.display.progress_icon = ["moon"];
     };

@@ -122,7 +122,7 @@ in {
     windowtitle = {
       class_name = true;
       custom_title = true;
-      icon = true;
+      icon = false;
       label = true;
       leftClick = "";
       middleClick = "";
