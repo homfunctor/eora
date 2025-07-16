@@ -31,7 +31,7 @@
 
     lix-module = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.2-1.tar.gz";
     };
 
     nix-gaming = {
@@ -49,8 +49,7 @@
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # until clisp and libgpod are fixed
-    nixpkgs.url = "github:nixos/nixpkgs?rev=733f85ec4f3f86121f624e7c9bb67544a2890937";
+    nixpkgs.url = "github:nixos/nixpkgs?rev=e4a79ce2c3f63686a2f50b2d453ac56d37434b91";
 
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";

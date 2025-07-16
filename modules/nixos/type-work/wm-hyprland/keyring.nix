@@ -1,6 +1,3 @@
-# todo: keyring unlock after autologin remains elusive
-#   it unlocks properly after logging in through cosmic-greeter
-#   but autologin does not unlock the keyring
 {pkgs, ...}: {
   boot.initrd.systemd.enable = true;
 
