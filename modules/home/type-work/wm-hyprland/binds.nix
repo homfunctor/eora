@@ -10,7 +10,7 @@
   inherit (lib) getExe;
 
   mod = "SUPER";
-  panelExe = getExe config.programs.hyprpanel.package;
+  panelPkg = getExe config.programs.hyprpanel.package;
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
@@ -21,11 +21,11 @@ in {
       "${mod}, W, exec, ${uApp "${apps.terminal.exe}"}"
 
       # hyprpanel
-      "${mod}, A, exec, ${uTog "${panelExe} t audiomenu"}"
-      "${mod}, C, exec, ${uTog "${panelExe} t calendarmenu"}"
-      "${mod}, N, exec, ${uTog "${panelExe} t notificationsmenu"}"
-      "${mod}, X, exec, ${uTog "${panelExe} t powerdropdownmenu"}"
-      "${mod}, grave, exec, ${uTog "${panelExe} t dashboardmenu"}"
+      "${mod}, A, exec, ${uTog "${panelPkg} t audiomenu"}"
+      "${mod}, C, exec, ${uTog "${panelPkg} t calendarmenu"}"
+      "${mod}, N, exec, ${uTog "${panelPkg} t notificationsmenu"}"
+      "${mod}, X, exec, ${uTog "${panelPkg} t powerdropdownmenu"}"
+      "${mod}, grave, exec, ${uTog "${panelPkg} t dashboardmenu"}"
 
       # launcher
       "${mod}, R, exec, ${uTog "${apps.launcher.exe}"} ${apps.launcher.args}"
