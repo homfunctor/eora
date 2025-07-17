@@ -1,4 +1,3 @@
-# todo: filechooser window looks weird fix it
 {pkgs, ...}: {
   xdg.portal = {
     enable = true;

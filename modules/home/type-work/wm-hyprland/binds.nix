@@ -15,17 +15,17 @@ in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       # applications
-      "${mod} SHIFT, E, exec, ${uApp "${apps.terminal.exe} yazi ~/eora"}"
-      "${mod} SHIFT, W, exec, ${uApp "${apps.terminal.exe}  ~/eora"}"
+      "${mod} SHIFT, E, exec, ${uApp "${apps.terminal.exe}"} yazi ~/eora"
+      "${mod} SHIFT, W, exec, ${uApp "${apps.terminal.exe}"}  ~/eora"
       "${mod}, E, exec, ${uApp "${apps.directory.exe} ${apps.directory.args}"}"
       "${mod}, W, exec, ${uApp "${apps.terminal.exe}"}"
 
       # hyprpanel
-      "${mod}, A, exec, ${uTog "${panelPkg} t audiomenu"}"
-      "${mod}, C, exec, ${uTog "${panelPkg} t calendarmenu"}"
-      "${mod}, N, exec, ${uTog "${panelPkg} t notificationsmenu"}"
-      "${mod}, X, exec, ${uTog "${panelPkg} t powerdropdownmenu"}"
-      "${mod}, grave, exec, ${uTog "${panelPkg} t dashboardmenu"}"
+      "${mod}, A, exec, ${panelPkg} t audiomenu"
+      "${mod}, C, exec, ${panelPkg} t calendarmenu"
+      "${mod}, N, exec, ${panelPkg} t notificationsmenu"
+      "${mod}, X, exec, ${panelPkg} t powerdropdownmenu"
+      "${mod}, grave, exec, ${panelPkg} t dashboardmenu"
 
       # launcher
       "${mod}, R, exec, ${uTog "${apps.launcher.exe}"} ${apps.launcher.args}"

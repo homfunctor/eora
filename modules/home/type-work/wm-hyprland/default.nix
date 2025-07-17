@@ -9,7 +9,6 @@
     ./binds.nix
     ./cosmic-greeter.nix
     ./env.nix
-    ./etc.nix
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
@@ -17,6 +16,7 @@
     ./polkit.nix
     ./portal.nix
     ./rules.nix
+    ./settings.nix
     flake.modules.home.app-hyprpanel
   ];
 
