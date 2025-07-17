@@ -1,3 +1,4 @@
+# todo: adjust
 {
   config,
   flake,
@@ -16,8 +17,8 @@ in {
           "windowtitle"
         ];
         "middle" = [
-          "cpu"
           "ram"
+          "cpu"
           "clock"
           "cava"
         ];
@@ -35,10 +36,11 @@ in {
           "windowtitle"
         ];
         "middle" = [
-          "cpu"
           "ram"
+          "cpu"
           "clock"
           "cava"
+          "media"
         ];
         "right" = [
           "volume"
@@ -96,7 +98,7 @@ in {
       };
 
       shortcut4 = {
-        command = uApp "${apps.terminal.exe} eora -e yazi";
+        command = uApp "${apps.terminal.exe} ${lib.getExe config.programs.yazi.package} ~/eora";
         icon = "";
         tooltip = "Browse Flake";
       };

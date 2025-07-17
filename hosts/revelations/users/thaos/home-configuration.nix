@@ -10,8 +10,8 @@
     type-minTTY
 
     # nicer tty
-    ../wael/apps.nix # temp
-    ../wael/neovim.nix
+    ./apps.nix
+    ./neovim.nix
     type-niceTTY
 
     # work
@@ -32,13 +32,13 @@
       rstudio.enable = true;
     };
 
-    cosmic-greeter = {
-      bgs = [
+    bg = {
+      inherit (osConfig.nixos.opts.bg) monitors resolutions xy;
+      files = [
         "${inputs.sapadal}/assets/base2.png"
         "${inputs.sapadal}/assets/base.png"
         "${inputs.sapadal}/assets/base3.png"
       ];
-      monitors = ["DP-1" "DP-2" "DP-3"];
     };
 
     sync.folder = {

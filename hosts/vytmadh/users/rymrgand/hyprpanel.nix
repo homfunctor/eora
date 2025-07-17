@@ -1,3 +1,4 @@
+# todo: adjust
 {
   config,
   flake,
@@ -9,7 +10,7 @@
 in {
   home.opts.hpl.panelOpts = {
     layout = {
-      "0" = {
+      "*" = {
         "left" = [
           "dashboard"
           "workspaces"
@@ -25,43 +26,6 @@ in {
           "volume"
           "microphone"
           "systray"
-        ];
-      };
-
-      "1" = {
-        "left" = [
-          "dashboard"
-          "workspaces"
-          "windowtitle"
-        ];
-        "middle" = [
-          "cpu"
-          "ram"
-          "clock"
-          "cava"
-        ];
-        "right" = [
-          "volume"
-          "microphone"
-          "systray"
-          "notifications"
-        ];
-      };
-
-      "2" = {
-        "left" = [
-          "workspaces"
-          "windowtitle"
-        ];
-        "middle" = [
-          "clock"
-          "cava"
-        ];
-        "right" = [
-          "volume"
-          "microphone"
-          "systray"
-          "power"
         ];
       };
     };

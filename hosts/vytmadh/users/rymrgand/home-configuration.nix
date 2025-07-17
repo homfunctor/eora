@@ -10,7 +10,7 @@
     type-minTTY
 
     # nicer tty
-    ../../../revelations/users/wael/apps.nix # temp
+    ./apps.nix
     ./neovim.nix
     type-niceTTY
 
@@ -27,9 +27,9 @@
 
     app-math.latex.enable = true;
 
-    cosmic-greeter = {
-      bgs = ["${inputs.sapadal}/assets/whitemarch.png"];
-      monitors = ["eDP-1"];
+    bg = {
+      inherit (osConfig.nixos.opts.bg) monitors resolutions xy;
+      files = ["${inputs.sapadal}/assets/whitemarch.png"];
     };
 
     sync.folder = {

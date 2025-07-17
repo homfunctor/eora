@@ -26,6 +26,8 @@ in {
 
     apps = mkAttrOpt {} "monolithic default application settings";
 
+    bg = mkAttrOpt {} "per-user background settings";
+
     # neovim plugin options auto-generated from filenames
     nvim.plugins = let
       pluginNames = importAllFileNames ./type-niceTTY/app-neovim/plugins;
@@ -34,19 +36,13 @@ in {
         enable = mkBoolOpt false "enable ${pluginName}";
       });
 
-    cosmic-greeter = mkAttrOpt {} "cosmic-greeter settings";
-
     customUserDirs = mkAttrOpt {} "custom settings for user directories (XDG)";
 
     # used to generate mimeapps.list from opts.apps
     defaultApps = mkAttrOpt {} "default applications (mime)";
 
     hpl = {
-      envOpts = mkAttrOpt {} "user settings for uwsm env";
       lockOpts = mkAttrOpt {} "user settings for hyprlock";
-      userOpts = mkAttrOpt {} "user settings for hyprland";
-      paperOpts = mkAttrOpt {} "user settings for hyprpaper";
-
       panelOpts = {
         fontSize = mkStrOpt "1.2rem" "hyprpanel button and bar font size";
         layout = mkAttrOpt {} "user settings for hyprpanel layout";

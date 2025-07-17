@@ -2,7 +2,6 @@
 # uses osConfig as i handle sops outside hm
 # todo: only run after autologin
 {
-  config,
   flake,
   lib,
   osConfig,

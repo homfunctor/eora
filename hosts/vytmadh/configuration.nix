@@ -24,6 +24,13 @@
 
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
+    # background/monitor settings i don't want to do per user
+    bg = {
+      monitors = ["eDP-1"];
+      resolutions = ["1920x1080"];
+      xy = ["0x0"];
+    };
+
     fontSizes = {
       applications = 14;
       desktop = 14;

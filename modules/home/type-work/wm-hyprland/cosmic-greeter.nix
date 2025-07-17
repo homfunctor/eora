@@ -3,11 +3,11 @@
   lib,
   ...
 }: let
-  inherit (config.home.opts.cosmic-greeter) monitors bgs;
+  inherit (config.home.opts.bg) monitors files;
 
-  # pair up monitors and bgs
+  # pair up monitors and files
   monitorBgList =
-    lib.zipListsWith (monitor: bg: {inherit monitor bg;}) monitors bgs;
+    lib.zipListsWith (monitor: bg: {inherit monitor bg;}) monitors files;
 
   # use the list to make individual monitor configs
   monitorCfgs = lib.listToAttrs (

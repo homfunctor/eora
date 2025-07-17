@@ -1,6 +1,5 @@
 {
   config,
-  lib,
   ...
 }: let
   cfg = config.home.opts.nvim.plugins.nui;

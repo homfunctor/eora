@@ -49,6 +49,7 @@
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
     # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # libgpod broke
     nixpkgs.url = "github:nixos/nixpkgs?rev=e4a79ce2c3f63686a2f50b2d453ac56d37434b91";
 
     nixvim = {

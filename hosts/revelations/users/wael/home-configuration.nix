@@ -37,13 +37,13 @@
       rstudio.enable = true;
     };
 
-    cosmic-greeter = {
-      bgs = [
+    bg = {
+      inherit (osConfig.nixos.opts.bg) monitors resolutions xy;
+      files = [
         "${inputs.sapadal}/assets/winter1.png"
-        "${inputs.sapadal}/assets/winter2.png"
-        "${inputs.sapadal}/assets/winter3.png"
+        "${inputs.sapadal}/assets/winter4.png"
+        "${inputs.sapadal}/assets/winter5.png"
       ];
-      monitors = ["DP-1" "DP-2" "DP-3"];
     };
 
     customUserDirs = {
