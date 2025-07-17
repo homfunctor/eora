@@ -11,7 +11,7 @@ in {
       notification.window = {
         border = "none";
         relative = "editor";
-        winblend = 0;
+        winblend = 100;
         zindex = 45;
       };
       progress.display.progress_icon = ["moon"];

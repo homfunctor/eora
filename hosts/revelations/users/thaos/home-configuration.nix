@@ -10,8 +10,8 @@
     type-minTTY
 
     # nicer tty
-    ./apps.nix
-    ./neovim.nix
+    ../wael/apps.nix # temp
+    ../wael/neovim.nix
     type-niceTTY
 
     # work

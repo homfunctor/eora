@@ -2,6 +2,7 @@
 #   script for nautilus that uses zipunicode
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    celluloid
     dconf-editor
     file-roller
     gnome-calculator

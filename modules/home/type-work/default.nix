@@ -16,7 +16,6 @@
     ./app-simple-scan.nix
     ./app-syncthing
     ./app-udiskie.nix
-    ./app-vlc.nix
     ./app-zathura.nix
     ./opt-dconf.nix
     ./opt-mime.nix

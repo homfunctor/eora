@@ -87,7 +87,7 @@
       termguicolors = true;
 
       # aesthetics
-      cmdheight = 0;
+      cmdheight = 1;
       cursorline = true;
       cursorlineopt = "number";
       foldcolumn = "1";
@@ -95,13 +95,13 @@
       foldlevel = 99;
       foldlevelstart = -1;
       foldmethod = "indent";
-      pumblend = 0;
+      pumblend = 100;
       pumheight = 10;
       ruler = false;
       scrolloff = 2;
       showmode = false;
       signcolumn = "yes";
-      winblend = 0;
+      winblend = 100;
 
       # which-key timeout
       timeoutlen = 10;

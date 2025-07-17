@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  inherit (config.home.opts) apps bg hpl;
+  inherit (config.home.opts) apps bg;
   inherit (config.lib.stylix) colors;
   inherit (lib) mkForce zipListsWith;
 in {
@@ -82,14 +82,20 @@ in {
         vrr = 1;
       };
 
-      # monitor = zipListsWith (m: r: z: "${m}, ${r}, ${z}, 1") bg.monitors bg.resolutions bg.xy;
+      monitor = with bg;
+        zipListsWith (y: z: "${y}, ${z}, 1") (
+          zipListsWith (m: r: "${m}, ${r}")
+          monitors
+          resolutions
+        )
+        xy;
 
       # assign 2 workspaces per monitor (not consecutive)
       workspace = let
         num = lib.range 1 ((lib.length bg.monitors) * 2);
         mon = bg.monitors ++ bg.monitors;
       in
-        zipListsWith (n: m: "${toString n}, ${m}") num mon
+        zipListsWith (n: m: "${toString n}, monitor:${m}") num mon
         ++ [
           # smart gaps
           "f[1], gapsout:0, gapsin:0"

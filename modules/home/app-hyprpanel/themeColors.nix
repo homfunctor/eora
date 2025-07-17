@@ -177,10 +177,10 @@ in {
         # };
 
         notifications = {
-          background = "${base02}";
+          background = "${base00}";
           border = "${base06}";
           icon = "${base08}";
-          icon_background = "${base02}";
+          icon_background = "${base00}";
           total = "${base05}";
         };
 

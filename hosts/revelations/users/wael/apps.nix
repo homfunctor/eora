@@ -97,11 +97,11 @@ in {
     };
 
     video = {
-      desktop = "vlc";
+      desktop = "io.github.celluloid_player.Celluloid";
       exe = getExe video.pkg;
-      icon = "󰕼";
-      pkg = pkgs.vlc;
-      tooltip = "VLC";
+      icon = "󰨛";
+      pkg = pkgs.celluloid;
+      tooltip = "celluloid";
     };
   };
 }

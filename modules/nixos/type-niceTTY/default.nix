@@ -6,7 +6,8 @@
     ./chaotic-cachix.nix
     ./opt-fonts.nix
     ./opt-lanzaboote.nix
-    ./opt-lix.nix
+    # todo: enable when fixed
+    # ./opt-lix.nix
     ./opt-services.nix
     ./opt-stylix.nix
     ./sops-users.nix

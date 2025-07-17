@@ -27,7 +27,7 @@ in {
           };
         };
 
-        mini.win_options.winblend = 0;
+        mini.win_options.winblend = 100;
       };
     };
   };

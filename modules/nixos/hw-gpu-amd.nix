@@ -17,10 +17,4 @@
       wantedBy = ["multi-user.target"];
     };
   };
-
-  hardware.amdgpu.amdvlk = {
-    enable = true;
-    package = pkgs.amdvlk;
-    support32Bit.enable = true;
-  };
 }

@@ -37,5 +37,6 @@
     grep = "rg";
     ls = "eza -G -x --color=always --icons=always";
     n = "neovide";
+    yz = "yazi .";
   };
 }

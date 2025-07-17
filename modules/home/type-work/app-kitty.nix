@@ -12,7 +12,7 @@
     settings = {
       confirm_os_window_close = "0";
       copy_on_select = "clipboard";
-      cursor_shape = "Underline";
+      cursor_shape = "block";
       cursor_trail = 3;
       cursor_trail_decay = "0.1 0.4";
       cursor_underline_thickness = 3;
