@@ -15,6 +15,7 @@ in {
       blink-compat.enable = true;
       blink-emoji.enable = true;
       blink-ripgrep.enable = true;
+      cmp-vimtex.enable = true;
 
       blink-cmp = {
         enable = true;

@@ -20,11 +20,9 @@ in {
           format_enabled = true;
           imaps_enabled = false;
           indent_enabled = true;
-          mappings_enabled = true;
-          markdown_enabled = true;
-          markdown_math = true;
           quickfix_mode = false;
           syntax_enabled = true;
+          view_method = "zathura";
         };
 
         # installed elsewhere

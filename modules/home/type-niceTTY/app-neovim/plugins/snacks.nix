@@ -11,12 +11,6 @@ in {
     settings = {
       bigfile.enabled = true;
 
-      image = {
-        enabled = true;
-        border = "none";
-        doc.inline = false;
-      };
-
       indent = {
         enabled = true;
         chunk = {
