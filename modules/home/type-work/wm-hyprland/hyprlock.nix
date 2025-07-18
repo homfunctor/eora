@@ -7,7 +7,7 @@
 }: let
   inherit (config.lib.stylix) colors;
   # per-host not per-user
-  inherit (osConfig.nixos.opts.hpl.lockOpts) clockLabel dateLabel inputLabel;
+  inherit (osConfig.nixos.opts.hyprlockOpts) clockLabel dateLabel inputLabel;
 
   bg = "${inputs.sapadal}/assets/base.png";
 in {

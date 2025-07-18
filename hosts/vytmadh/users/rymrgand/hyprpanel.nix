@@ -8,8 +8,8 @@
   inherit (config.home.opts) apps;
   inherit (flake.lib) uApp;
 in {
-  home.opts.hpl.panelOpts = {
-    layout = {
+  home.opts.panelOpts = {
+    layouts = {
       "*" = {
         "left" = [
           "dashboard"

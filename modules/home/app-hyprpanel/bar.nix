@@ -6,11 +6,11 @@
   ...
 }: let
   inherit (flake.lib) uApp uTog;
-  inherit (config.home.opts) apps hpl;
+  inherit (config.home.opts) apps panelOpts;
 in {
   programs.hyprpanel.settings.bar = {
+    inherit (panelOpts) layouts;
     autoHide = "never";
-    layouts = hpl.panelOpts.layout;
 
     # icon is dynamic and managed by hyprpanel
     battery = {

@@ -45,9 +45,9 @@ in {
     defaultApps = mkAttrOpt {} "default applications (mime)";
 
     # hyprpanel settings
-    hpl = {
+    panelOpts = {
       fontSize = mkStrOpt "1.2rem" "hyprpanel button and bar font size";
-      layout = mkAttrOpt {} "user settings for hyprpanel layout";
+      layouts = mkAttrOpt {} "user settings for hyprpanel layout";
       scale = let
         uiElems = [
           "bar"

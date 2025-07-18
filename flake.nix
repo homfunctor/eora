@@ -48,10 +48,10 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # reason: strawberry, clisp, libgpod
-    # nixpkgs.url = "github:nixos/nixpkgs?rev=25d00647a441aa26cb347baff53fa0b2d762eb4a";
+    nixpkgs.url = "github:nixos/nixpkgs?rev=25d00647a441aa26cb347baff53fa0b2d762eb4a";
 
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";

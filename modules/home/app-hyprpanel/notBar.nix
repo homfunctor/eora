@@ -6,7 +6,7 @@
   inherit
     (config.home.opts)
     hostName
-    hpl
+    panelOpts
     userName
     ;
 
@@ -35,7 +35,7 @@ in {
           enabled = true;
           left = {
             inherit
-              (hpl.panelOpts.leftdirs)
+              (panelOpts.leftdirs)
               directory1
               directory2
               directory3
@@ -43,7 +43,7 @@ in {
           };
           right = {
             inherit
-              (hpl.panelOpts.rightdirs)
+              (panelOpts.rightdirs)
               directory1
               directory2
               directory3
@@ -69,7 +69,7 @@ in {
           enabled = true;
           left = {
             inherit
-              (hpl.panelOpts.leftcuts)
+              (panelOpts.leftcuts)
               shortcut1
               shortcut2
               shortcut3
@@ -78,7 +78,7 @@ in {
           };
           right = {
             inherit
-              (hpl.panelOpts.rightcuts)
+              (panelOpts.rightcuts)
               shortcut1
               shortcut3
               ;
