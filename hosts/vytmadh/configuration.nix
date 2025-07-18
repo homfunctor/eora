@@ -9,7 +9,6 @@
 
     # nicer tty
     ./fish.nix
-    ./sops.nix
     ./stylix.nix
     type-niceTTY
 
@@ -42,7 +41,11 @@
 
     lanzaboote.enable = true;
 
-    sops.user.enable = true;
+    sops = {
+      keyring.enable = true;
+      syncthing.enable = true;
+      user.enable = true;
+    };
 
     adminUser = "rymrgand";
     userNames = [adminUser];

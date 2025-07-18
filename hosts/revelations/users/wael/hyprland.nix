@@ -22,7 +22,7 @@ in {
 
     exec-once = [
       # set primary monitor for games using xwayland
-      "xrandr --output DP-2 --primary"
+      "xrandr --output ${mainMonitor} --primary"
     ];
   };
 }

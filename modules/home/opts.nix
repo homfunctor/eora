@@ -30,6 +30,15 @@ in {
     # background paths (files). inherited from osConfig: monitors, resolutions, xy
     bg = mkAttrOpt {} "per-user background settings";
 
+    # mainly just for wael@revelations media files on /vault
+    customUserDirs = mkAttrOpt {} "custom settings for user directories (XDG)";
+
+    # used to generate mimeapps.list from opts.apps
+    defaultApps = mkAttrOpt {} "default applications (mime)";
+
+    hostName = mkStrOpt "" "host name. name of host. that by which the host is named.";
+    userName = mkStrOpt "" "user name. name of user. that by which the user is named.";
+
     # neovim plugin options auto-generated from filenames
     nvim.plugins = let
       pluginNames = importAllFileNames ./type-niceTTY/app-neovim/plugins;
@@ -37,12 +46,6 @@ in {
       genAttrs pluginNames (pluginName: {
         enable = mkBoolOpt false "enable ${pluginName}";
       });
-
-    # mainly just for wael@revelations media files on /vault
-    customUserDirs = mkAttrOpt {} "custom settings for user directories (XDG)";
-
-    # used to generate mimeapps.list from opts.apps
-    defaultApps = mkAttrOpt {} "default applications (mime)";
 
     # hyprpanel settings
     panelOpts = {
@@ -92,7 +95,6 @@ in {
       ] (name: mkAttrOpt {} "${name} settings");
     };
 
-    # todo redo
     # syncthing
     sync = {
       versioning = mkAttrOpt {
@@ -110,8 +112,5 @@ in {
           enable = mkBoolOpt false "sync ${name}";
         });
     };
-
-    hostName = mkStrOpt "" "host name. name of host. that by which the host is named.";
-    userName = mkStrOpt "" "user name. name of user. that by which the user is named.";
   };
 }

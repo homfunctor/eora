@@ -23,12 +23,11 @@ in {
 
     sops = {
       keyring.enable = mkBoolOpt false "unlock keyring on autologin with sops";
+      syncthing.enable = mkBoolOpt false "manage cert/key with sops";
       user.enable = mkBoolOpt false "set password with sops";
     };
 
     adminUser = mkStrOpt "" "admin user";
     userNames = mkListOpt lib.types.str null "user names";
-
-    wlrBR = mkStrOpt "wayland" "backend and renderer for wlroots";
   };
 }

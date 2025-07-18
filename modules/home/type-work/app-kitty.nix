@@ -1,9 +1,5 @@
 # todo: explore kitty settings
-{
-  lib,
-  pkgs,
-  ...
-}: {
+{config, ...}: {
   programs.kitty = {
     enable = true;
 
@@ -21,7 +17,7 @@
       open_url_with = "default";
       remember_window_size = "no";
       scrollback_lines = 10000;
-      shell = lib.getExe pkgs.fish;
+      shell = config.home.opts.apps.shell.exe;
       update_check_interval = 0;
       url_style = "curly";
       window_padding_width = 10;

@@ -14,8 +14,6 @@
         "networkmanager"
         "power"
         "scanners"
-        "sys"
-        "udev"
         "video"
         "wheel"
       ];

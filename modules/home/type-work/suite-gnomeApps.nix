@@ -8,7 +8,6 @@
     gnome-calculator
     gnome-calendar
     gnome-disk-utility
-    gsettings-desktop-schemas
     loupe
     nautilus
     nautilus-open-any-terminal

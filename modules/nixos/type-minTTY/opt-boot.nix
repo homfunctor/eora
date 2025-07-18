@@ -2,7 +2,9 @@
   lib,
   pkgs,
   ...
-}: {
+}: let
+  inherit (lib) mkDefault;
+in {
   boot = {
     consoleLogLevel = 3;
 
@@ -12,7 +14,7 @@
     };
 
     # overridden when cachyos kernel is enabled
-    kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
+    kernelPackages = mkDefault pkgs.linuxPackages_latest;
 
     kernelParams = [
       "plymouth.use-simpledrm"
@@ -24,7 +26,7 @@
     loader = {
       efi.canTouchEfiVariables = true;
       # overridden when lanzaboote is enabled
-      systemd-boot.enable = lib.mkDefault true;
+      systemd-boot.enable = mkDefault true;
     };
 
     plymouth = {

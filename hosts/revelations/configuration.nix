@@ -9,7 +9,6 @@
 
     # nicer tty
     ./fish.nix
-    ./sops.nix
     ./stylix.nix
     type-niceTTY
 
@@ -48,12 +47,11 @@
 
     sops = {
       keyring.enable = true;
+      syncthing.enable = true;
       user.enable = true;
     };
 
     adminUser = "wael";
     userNames = [adminUser "thaos"];
-
-    wlrBR = "vulkan";
   };
 }

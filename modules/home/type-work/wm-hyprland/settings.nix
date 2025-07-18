@@ -9,7 +9,7 @@
 in {
   config = {
     wayland.windowManager.hyprland.settings = {
-      "$floatingSize" = "500 500";
+      "$floatingSize" = "800 500";
 
       cursor.no_warps = false;
 

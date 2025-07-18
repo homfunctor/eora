@@ -14,11 +14,11 @@
         show-create-link = true;
       };
 
+      "org/gtk/gtk4/settings/file-chooser".sort-directories-first = true;
       "org/gtk/settings/file-chooser" = {
         sort-directories-first = true;
         date-format = "with-time";
       };
-      "org/gtk/gtk4/settings/file-chooser".sort-directories-first = true;
     };
   };
 }

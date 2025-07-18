@@ -1,6 +1,5 @@
 # unlocks keyring on first (auto)login
 # uses osConfig as i handle sops outside hm
-# todo: only run after autologin
 {
   flake,
   lib,
