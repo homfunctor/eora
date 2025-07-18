@@ -8,6 +8,7 @@
   cfg = config.home.opts.nvim.plugins.treesitter;
 in {
   config = lib.mkIf cfg.enable {
+    home.packages = [pkgs.tree-sitter];
     programs.nixvim.plugins = {
       treesitter = {
         enable = true;

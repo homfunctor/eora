@@ -44,7 +44,7 @@ in {
       statuscolumn.enabled = true;
       styles.notification.wo.wrap = true;
 
-      win.backdrop.blend = 0;
+      win.backdrop.blend = 100;
 
       words.enabled = true;
     };
