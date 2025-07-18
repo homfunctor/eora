@@ -18,8 +18,8 @@ in {
     enable = true;
     package = pkgs.syncthing;
 
-    cert = mkSecretPath osConfig ["syncthing" "${userName}" "cert"];
-    key = mkSecretPath osConfig ["syncthing" "${userName}" "key"];
+    cert = mkSecretPath osConfig [userName "syncthing" "cert"];
+    key = mkSecretPath osConfig [userName "syncthing" "key"];
 
     # strictly declarative
     overrideDevices = true;

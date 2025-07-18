@@ -1,15 +1,18 @@
 {
   config,
+  flake,
   lib,
   ...
 }: let
-  inherit (config.nixos.opts) adminUser;
   cfg = config.nixos.opts.sops.keyring;
 in {
-  sops.secrets = lib.mkIf cfg.enable {
-    password = {
-      inherit (config.users.users.${adminUser}) group;
-      mode = "0400";
-    };
-  };
+  sops.secrets = lib.mkIf cfg.enable (builtins.listToAttrs (lib.concatMap (
+      user: [
+        {
+          name = flake.lib.mkSecretName [user "keyring" "password"];
+          value.owner = user;
+        }
+      ]
+    )
+    config.nixos.opts.userNames));
 }
