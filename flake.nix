@@ -29,10 +29,10 @@
       url = "github:nix-community/lanzaboote";
     };
 
-    lix-module = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.2-1.tar.gz";
-    };
+    # lix-module = {
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.2-1.tar.gz";
+    # };
 
     nix-gaming = {
       inputs.nixpkgs.follows = "nixpkgs";
@@ -48,9 +48,11 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
     # reason: strawberry, clisp, libgpod
-    nixpkgs.url = "github:nixos/nixpkgs?rev=25d00647a441aa26cb347baff53fa0b2d762eb4a";
+    # nixpkgs.url = "github:nixos/nixpkgs?rev=25d00647a441aa26cb347baff53fa0b2d762eb4a";
+
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nixvim";
