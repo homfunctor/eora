@@ -3,8 +3,6 @@
   inherit (config.home.opts) apps;
 in {
   wayland.windowManager.hyprland.settings = {
-    windowrule = [];
-
     windowrulev2 = [
       # smart gaps
       "bordersize 0, floating:0, onworkspace:f[1]"
