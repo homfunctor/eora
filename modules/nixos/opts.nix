@@ -8,6 +8,7 @@
   inherit (flake.lib) mkAttrOpt mkBoolOpt mkListOpt mkStrOpt;
 in {
   options.nixos.opts = {
+    # monitors, resolutions, xy (positions)
     bg = mkAttrOpt {} "per host background/monitor settings";
 
     fishAliases = mkAttrOpt {} "fish shell aliases";
@@ -16,7 +17,7 @@ in {
 
     hostName = mkStrOpt "" "host name for configuration";
 
-    hpl.lockOpts = mkAttrOpt {} "hyprlock settings";
+    hyprlockOpts = mkAttrOpt {} "hyprlock settings";
 
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
 

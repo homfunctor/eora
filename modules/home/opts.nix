@@ -24,8 +24,10 @@ in {
       rstudio.enable = mkBoolOpt false "enable rstudio";
     };
 
+    # for xdg mimeapps, hyprpanel, hyprland binds, etc.
     apps = mkAttrOpt {} "monolithic default application settings";
 
+    # background paths (files). inherited from osConfig: monitors, resolutions, xy
     bg = mkAttrOpt {} "per-user background settings";
 
     # neovim plugin options auto-generated from filenames
@@ -36,59 +38,58 @@ in {
         enable = mkBoolOpt false "enable ${pluginName}";
       });
 
+    # mainly just for wael@revelations media files on /vault
     customUserDirs = mkAttrOpt {} "custom settings for user directories (XDG)";
 
     # used to generate mimeapps.list from opts.apps
     defaultApps = mkAttrOpt {} "default applications (mime)";
 
+    # hyprpanel settings
     hpl = {
-      lockOpts = mkAttrOpt {} "user settings for hyprlock";
-      panelOpts = {
-        fontSize = mkStrOpt "1.2rem" "hyprpanel button and bar font size";
-        layout = mkAttrOpt {} "user settings for hyprpanel layout";
-        scale = let
-          uiElems = [
-            "bar"
-            "battery"
-            "clock"
-            "dashboard"
-            "media"
-            "notification"
-            "notifications"
-            "osd"
-            "popover"
-            "power"
-            "volume"
-          ];
-        in
-          genAttrs uiElems (name: mkIntOpt 100 "scale for ${name}");
+      fontSize = mkStrOpt "1.2rem" "hyprpanel button and bar font size";
+      layout = mkAttrOpt {} "user settings for hyprpanel layout";
+      scale = let
+        uiElems = [
+          "bar"
+          "battery"
+          "clock"
+          "dashboard"
+          "media"
+          "notification"
+          "notifications"
+          "osd"
+          "popover"
+          "power"
+          "volume"
+        ];
+      in
+        genAttrs uiElems (name: mkIntOpt 100 "scale for ${name}");
 
-        # shortcuts for hyprpanel dashboard menu
-        leftcuts = genAttrs [
-          "shortcut1"
-          "shortcut2"
-          "shortcut3"
-          "shortcut4"
-        ] (name: mkAttrOpt {} "${name} settings");
+      # shortcuts for hyprpanel dashboard menu
+      leftcuts = genAttrs [
+        "shortcut1"
+        "shortcut2"
+        "shortcut3"
+        "shortcut4"
+      ] (name: mkAttrOpt {} "${name} settings");
 
-        rightcuts = genAttrs [
-          "shortcut1"
-          "shortcut3"
-        ] (name: mkAttrOpt {} "${name} settings");
+      rightcuts = genAttrs [
+        "shortcut1"
+        "shortcut3"
+      ] (name: mkAttrOpt {} "${name} settings");
 
-        # directories for hyprpanel dashboard menu
-        leftdirs = genAttrs [
-          "directory1"
-          "directory2"
-          "directory3"
-        ] (name: mkAttrOpt {} "${name} settings");
+      # directories for hyprpanel dashboard menu
+      leftdirs = genAttrs [
+        "directory1"
+        "directory2"
+        "directory3"
+      ] (name: mkAttrOpt {} "${name} settings");
 
-        rightdirs = genAttrs [
-          "directory1"
-          "directory2"
-          "directory3"
-        ] (name: mkAttrOpt {} "${name} settings");
-      };
+      rightdirs = genAttrs [
+        "directory1"
+        "directory2"
+        "directory3"
+      ] (name: mkAttrOpt {} "${name} settings");
     };
 
     # todo redo

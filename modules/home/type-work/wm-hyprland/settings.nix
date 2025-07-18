@@ -82,8 +82,9 @@ in {
         vrr = 1;
       };
 
+      # glue together monitor names, resolutions, positions
       monitor = with bg;
-        zipListsWith (y: z: "${y}, ${z}, 1") (
+        zipListsWith (u: v: "${u}, ${v}, 1") (
           zipListsWith (m: r: "${m}, ${r}")
           monitors
           resolutions
