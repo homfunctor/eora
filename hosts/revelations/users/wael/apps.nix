@@ -1,7 +1,7 @@
 # default application settings
 # designed for use with xdg mimeapps setup (set name, desktop),
 # hyprpanel (icon, tooltip), and general usage (args, exe, pkg)
-# args: arguments commonly used with app (ex: "-w" for Nautilus)
+# args: arguments commonly used with app
 # desktop: desktop file name (without extension)
 # exe: executable found at pkg path
 # icon: icon used for hyprpanel
@@ -10,6 +10,7 @@
 {
   config,
   lib,
+  perSystem,
   pkgs,
   ...
 }: let
@@ -27,7 +28,9 @@ in {
       desktop = "org.strawberrymusicplayer.strawberry";
       exe = getExe audio.pkg;
       icon = "󰝚";
-      pkg = pkgs.strawberry-qt6;
+      # pkg = pkgs.strawberry-qt6;
+      # temp
+      pkg = perSystem.self.strawberry;
       tooltip = "Strawberry";
     };
 
@@ -40,11 +43,11 @@ in {
     };
 
     directory = {
-      args = "-w";
-      desktop = "org.gnome.Nautilus";
+      args = "";
+      desktop = "nemo";
       exe = getExe directory.pkg;
-      pkg = pkgs.nautilus;
-      tooltip = "Nautilus";
+      pkg = pkgs.nemo-with-extensions;
+      tooltip = "Nemo";
     };
 
     image = {

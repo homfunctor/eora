@@ -49,9 +49,6 @@ in {
       "float, class:^(xdg-desktop-portal-gtk), title:(All Files)"
       "stayfocused, class:^(xdg-desktop-portal-gtk), title:(All Files)"
 
-      # protonplus
-      "float,class:^(com.vysp3r.ProtonPlus), title:(ProtonPlus)"
-
       # winetricks
       "float,class:^(zenity)"
 

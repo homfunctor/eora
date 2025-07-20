@@ -1,5 +1,5 @@
-# todo: setup nautilus to use kitty
-#   script for nautilus that uses zipunicode
+# todo: setup nemo to use kitty
+#   script for nemo that uses zipunicode
 {pkgs, ...}: {
   home.packages = with pkgs; [
     celluloid
@@ -9,9 +9,7 @@
     gnome-calendar
     gnome-disk-utility
     loupe
-    nautilus
-    nautilus-open-any-terminal
-    nautilus-python
+    nemo-with-extensions
     papers
     wdisplays
   ];

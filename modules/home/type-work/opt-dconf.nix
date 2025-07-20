@@ -1,4 +1,4 @@
-# todo: add more settings to bring 2008 back
+# todo: redo with nemo
 {
   dconf = {
     enable = true;
@@ -9,10 +9,10 @@
       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
       "org/gnome/desktop/privacy".remember-recent-files = false;
 
-      "org/gnome/nautilus/icon-view".default-zoom-level = "small-plus";
-      "org/gnome/nautilus/preferences" = {
-        show-create-link = true;
-      };
+      # "org/gnome/nautilus/icon-view".default-zoom-level = "small-plus";
+      # "org/gnome/nautilus/preferences" = {
+      #   show-create-link = true;
+      # };
 
       "org/gtk/gtk4/settings/file-chooser".sort-directories-first = true;
       "org/gtk/settings/file-chooser" = {

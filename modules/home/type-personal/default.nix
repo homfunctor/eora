@@ -5,8 +5,6 @@
     ./app-baobab.nix
     ./app-gaming.nix
     ./app-irony-mod-manager.nix
-    ./app-lutris.nix
-    ./app-minigalaxy.nix
     ./app-nix-tools.nix
     ./app-nixcord.nix
     ./app-strawberry.nix
