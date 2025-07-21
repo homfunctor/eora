@@ -1,11 +1,14 @@
 # notes on launch options
-# proton options: PROTON_USE_NTSYNC=1 PROTON_USE_WOW64=1 PROTON_ENABLE_WAYLAND=1
-# these work with lotro but it only runs on DP-1. can be moved to DP-2 but
-# resolution does not change
-# otherwise runs fantastic
+# PROTON_ENABLE_WAYLAND=1
 #
 # stellaris
 #   env --unset=SDL_VIDEODRIVER gamemoderun %command%
+# lotro
+#
+# civ 5 (vox populi)
+# PROTON_ENABLE_WAYLAND=1
+#   ask which directx on launch otherwise it sometimes uses dx9
+#   running with wayland fixes the "feature" of audio muting on focus loss
 {inputs, ...}: {
   imports = with inputs.nix-gaming.nixosModules; [
     ntsync
@@ -14,6 +17,8 @@
   ];
 
   programs = {
+    # todo: everything complains about not finding some .so file. are these
+    # okay to ignore or serious? is gamemode really working?
     gamemode = {
       enable = true;
       settings = {
