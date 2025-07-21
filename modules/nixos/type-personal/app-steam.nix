@@ -6,8 +6,7 @@
 # lotro
 #
 # civ 5 (vox populi)
-# PROTON_ENABLE_WAYLAND=1 %command -dx11
-# "-dx11" or "\dx11"? we will see
+# PROTON_ENABLE_WAYLAND=1 %command \dx11
 #   running with wayland fixes the "feature" of audio muting on focus loss
 {inputs, ...}: {
   imports = with inputs.nix-gaming.nixosModules; [
