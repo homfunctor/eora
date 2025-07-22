@@ -9,7 +9,7 @@ in {
   sops.secrets = lib.mkIf cfg.enable (builtins.listToAttrs (lib.concatMap (
       user: [
         {
-          name = flake.lib.mkSecretName [user "keyring" "password"];
+          name = flake.lib.mkSec [user "keyring" "password"];
           value.owner = user;
         }
       ]

@@ -17,7 +17,7 @@ in {
       # applications
       "${mod} SHIFT, E, exec, ${uApp "${apps.terminal.exe}"} yazi ~/eora"
       "${mod} SHIFT, W, exec, ${uApp "${apps.terminal.exe}"}  ~/eora"
-      "${mod}, E, exec, ${uApp "${apps.directory.exe}"}"
+      "${mod}, E, exec, ${uApp "${apps.directory.exe}"} ${apps.directory.args}"
       "${mod}, W, exec, ${uApp "${apps.terminal.exe}"}"
 
       # hyprpanel

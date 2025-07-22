@@ -38,9 +38,9 @@ in rec {
   mkStrOpt = mkOpt types.str;
 
   # sops utilities
-  mkSecretName = path: concatStringsSep "/" (map (v: removeSuffix "/" v) path);
-  mkSecretPath = config: path: config.sops.secrets."${mkSecretName path}".path;
-  mkSecretPH = config: path: config.sops.placeholder."${mkSecretName path}";
+  mkSec = path: concatStringsSep "/" (map (v: removeSuffix "/" v) path);
+  mkSecPath = config: path: config.sops.secrets."${mkSec path}".path;
+  mkSecPH = config: path: config.sops.placeholder."${mkSec path}";
 
   # uwsm utilities
   uApp = cmd: "uwsm app -- ${cmd}";

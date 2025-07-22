@@ -76,7 +76,7 @@
 
     stylix = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/stylix";
+      url = "github:danth/stylix";
     };
 
     treefmt-nix = {

@@ -7,15 +7,12 @@
   flakeInputs = lib.filterAttrs (_: v: lib.isType "flake" v) inputs;
 in {
   documentation = {
-    enable = true;
-    dev.enable = false;
     doc.enable = false;
     info.enable = false;
     man = {
       enable = true;
       generateCaches = true;
     };
-    nixos.enable = false;
   };
 
   hardware.enableRedistributableFirmware = true;

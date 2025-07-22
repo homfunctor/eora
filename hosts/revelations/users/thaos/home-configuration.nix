@@ -11,12 +11,12 @@
 
     # nicer tty
     ../wael/apps.nix # temp
-    ../wael/neovim.nix
+    ../wael/neovim.nix # temp
     type-niceTTY
 
     # work
     ./hyprland.nix
-    ./hyprpanel.nix
+    ../wael/hyprpanel.nix # temp
     app-zoom
     type-work
   ];

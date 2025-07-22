@@ -5,17 +5,17 @@
   ...
 }: let
   cfg = config.nixos.opts.sops.syncthing;
-  inherit (flake.lib) mkSecretName;
+  inherit (flake.lib) mkSec;
 in {
   sops.secrets = lib.mkIf cfg.enable (builtins.listToAttrs (lib.concatMap (
       user: [
         {
-          name = mkSecretName [user "syncthing" "cert"];
+          name = mkSec [user "syncthing" "cert"];
           value.owner = user;
         }
 
         {
-          name = mkSecretName [user "syncthing" "key"];
+          name = mkSec [user "syncthing" "key"];
           value.owner = user;
         }
       ]

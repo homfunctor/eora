@@ -97,7 +97,7 @@ in {
 
     launcher = {
       icon = "";
-      rightClick = "${uTog apps.launcher.exe}  ${apps.launcher.args}";
+      rightClick = "${uTog "${apps.launcher.exe}"} ${apps.launcher.args}";
     };
 
     notifications = {

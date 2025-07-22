@@ -6,7 +6,7 @@
   ...
 }: let
   inherit (config.home.opts) userName;
-  inherit (flake.lib) mkSecretPath;
+  inherit (flake.lib) mkSecPath;
 in {
   imports = [
     ./devices.nix
@@ -18,8 +18,8 @@ in {
     enable = true;
     package = pkgs.syncthing;
 
-    cert = mkSecretPath osConfig [userName "syncthing" "cert"];
-    key = mkSecretPath osConfig [userName "syncthing" "key"];
+    cert = mkSecPath osConfig [userName "syncthing" "cert"];
+    key = mkSecPath osConfig [userName "syncthing" "key"];
 
     # strictly declarative
     overrideDevices = true;

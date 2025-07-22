@@ -28,9 +28,7 @@ in {
       desktop = "org.strawberrymusicplayer.strawberry";
       exe = getExe audio.pkg;
       icon = "󰝚";
-      # pkg = pkgs.strawberry-qt6;
-      # temp
-      pkg = perSystem.self.strawberry;
+      pkg = pkgs.strawberry-qt6;
       tooltip = "Strawberry";
     };
 
@@ -43,6 +41,7 @@ in {
     };
 
     directory = {
+      args = "";
       desktop = "nemo";
       exe = getExe directory.pkg;
       pkg = pkgs.nemo-with-extensions;

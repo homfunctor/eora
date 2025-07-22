@@ -7,7 +7,8 @@
 in {
   xdg.configFile = {
     "electron-flags.conf".text = ''
-      --enable-features=UseOzonePlatform
+      --enable-features=UseOzonePlatform,WaylandWindowDecorations
+      --ozone-platform-hint=wayland
       --ozone-platform=wayland
     '';
 
@@ -18,6 +19,7 @@ in {
       export DISABLE_QT5_COMPAT=0
       export DISABLE_QT_COMPAT=0
       export EDITOR=${apps.text.exe}
+      export ELECTRON_OZONE_PLATFORM_HINT="wayland";
       export GDK_BACKEND=wayland,x11
       export GDK_SCALE=1
       export GNOME_KEYRING_CONTROL="$XDG_RUNTIME_DIR/keyring"

@@ -10,13 +10,13 @@
 }: let
   cfg = osConfig.nixos.opts.sops.keyring;
   inherit (config.home.opts) userName;
-  inherit (flake.lib) mkSecretPath;
+  inherit (flake.lib) mkSecPath;
 in {
   wayland.windowManager.hyprland.settings = lib.mkIf cfg.enable {
     exec-once = let
       daemonPath = "${pkgs.gnome-keyring}/bin/gnome-keyring-daemon";
       daemonArgs = "--daemonize --replace --unlock";
-      passwordPath = mkSecretPath osConfig [userName "keyring" "password"];
+      passwordPath = mkSecPath osConfig [userName "keyring" "password"];
     in ["${daemonPath} ${daemonArgs} < ${passwordPath}"];
   };
 }

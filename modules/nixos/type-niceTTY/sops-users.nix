@@ -12,7 +12,7 @@ in {
       mutableUsers = false;
       users = lib.genAttrs config.nixos.opts.userNames (
         _: {
-          hashedPasswordFile = flake.lib.mkSecretPath config ["hashedPassword"];
+          hashedPasswordFile = flake.lib.mkSecPath config ["hashedPassword"];
         }
       );
     };
