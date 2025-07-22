@@ -13,9 +13,9 @@
     ./hyprlock.nix
     ./hyprpaper.nix
     ./keyring.nix
-    ./polkit.nix
     ./portal.nix
     ./rules.nix
+    ./security.nix
     ./settings.nix
     flake.modules.home.app-hyprpanel
   ];

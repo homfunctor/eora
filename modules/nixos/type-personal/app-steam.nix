@@ -6,18 +6,23 @@
 # lotro
 #
 # civ 5 (vox populi)
-# PROTON_ENABLE_WAYLAND=1 %command \dx11
+# todo: force it to use dx11
+# PROTON_ENABLE_WAYLAND=1 %command
 #   running with wayland fixes the "feature" of audio muting on focus loss
-{inputs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
   imports = with inputs.nix-gaming.nixosModules; [
     ntsync
     pipewireLowLatency
     platformOptimizations
   ];
 
+  environment.systemPackages = [pkgs.gamemode];
+
   programs = {
-    # todo: everything complains about not finding some .so file. are these
-    # okay to ignore or serious? is gamemode really working?
     gamemode = {
       enable = true;
       settings = {

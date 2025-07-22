@@ -20,6 +20,7 @@ in {
       "${getExe pkgs.grimblast}, screencopy, allow"
       "${getExe pkgs.hyprpicker}, screencopy, allow"
       "${portalPackage}/libexec/${xdg}, screencopy, allow"
+      "${getExe config.programs.hyprlock.package}, screencopy, allow"
     ];
   };
 }

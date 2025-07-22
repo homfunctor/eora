@@ -43,7 +43,6 @@ in {
     };
 
     directory = {
-      args = "";
       desktop = "nemo";
       exe = getExe directory.pkg;
       pkg = pkgs.nemo-with-extensions;

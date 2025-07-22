@@ -43,6 +43,8 @@ in {
         use_active_for_splits = true;
       };
 
+      ecosystem.no_donation_nag = true;
+
       general = with colors; {
         "col.active_border" = mkForce "rgb(${base08})";
         "col.inactive_border" = mkForce "rgb(${base02})";

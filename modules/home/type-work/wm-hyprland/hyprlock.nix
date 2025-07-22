@@ -16,9 +16,6 @@ in {
 
   programs.hyprlock = {
     enable = true;
-
-    sourceFirst = true;
-
     settings = {
       background = [
         {
