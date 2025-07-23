@@ -4,9 +4,11 @@
     ./app-chromium.nix
     ./app-gimp.nix
     ./app-glance.nix
+    ./app-hyprApps.nix
     ./app-inkscape.nix
     ./app-kitty.nix
     ./app-math
+    ./app-minimal.nix
     ./app-neovide.nix
     ./app-nix-index.nix
     ./app-nwg-drawer.nix
@@ -16,15 +18,13 @@
     ./app-simple-scan.nix
     ./app-syncthing
     ./app-udiskie.nix
+    ./app-utils.nix
     ./app-zathura.nix
     ./opt-dconf.nix
     ./opt-mime.nix
+    ./opt-qt.nix
     ./opt-stylix
     ./opt-xdg.nix
-    ./suite-gnomeApps.nix
-    ./suite-hyprEcosystem.nix
-    ./suite-miscUtils.nix
-    ./suite-qt.nix
     ./wm-hyprland
   ];
 }

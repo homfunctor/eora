@@ -18,8 +18,6 @@
         libva
         libvdpau
         libvdpau-va-gl
-        libvdpau-va-gl
-        vaapiVdpau
         vaapiVdpau
       ];
     };
