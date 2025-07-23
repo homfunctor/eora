@@ -15,9 +15,9 @@
   ...
 }: {
   imports = with inputs.nix-gaming.nixosModules; [
-    ntsync
     pipewireLowLatency
     platformOptimizations
+    wine
   ];
 
   environment.systemPackages = [pkgs.gamemode];
