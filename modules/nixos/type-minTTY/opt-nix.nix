@@ -4,6 +4,7 @@
   lib,
   ...
 }: let
+  inherit (lib) mkDefault;
   flakeInputs = lib.filterAttrs (_: v: lib.isType "flake" v) inputs;
 in {
   documentation = {
@@ -75,7 +76,7 @@ in {
 
   nixpkgs = {
     config.allowUnfree = true;
-    hostPlatform = "x86_64-linux";
+    hostPlatform = mkDefault "x86_64-linux";
   };
 
   security.sudo-rs = {
@@ -84,8 +85,8 @@ in {
   };
 
   services.xserver.xkb = {
-    layout = "us";
-    variant = "";
+    layout = mkDefault "us";
+    variant = mkDefault "";
   };
 
   system.stateVersion = "25.05";

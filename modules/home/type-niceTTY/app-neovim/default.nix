@@ -1,5 +1,3 @@
-# todo: customize notification more
-# todo: still need to fix transparency
 {
   flake,
   inputs,

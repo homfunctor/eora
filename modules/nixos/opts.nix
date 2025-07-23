@@ -13,9 +13,9 @@ in {
 
     fishAliases = mkAttrOpt {} "fish shell aliases";
 
-    fontSizes = mkAttrOpt {} "host font size settings";
+    fontSizes = mkAttrOpt {} "font size settings";
 
-    hostName = mkStrOpt "" "host name for configuration";
+    hostName = mkStrOpt "" "host name";
 
     hyprlockOpts = mkAttrOpt {} "hyprlock settings";
 

@@ -3,7 +3,6 @@
     choose
     erdtree
     fclones
-    mission-center
     pastel
     procs
     rm-improved

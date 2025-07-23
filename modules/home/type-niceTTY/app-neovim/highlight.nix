@@ -40,5 +40,7 @@
     TSKeyword.link = "Keyword";
     TSNumber.link = "Number";
     WhichKeyNormal.bg = "none";
+    WinBar.bg = "none";
+    WinBarNC.bg = "none";
   };
 }

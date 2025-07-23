@@ -9,6 +9,7 @@
     gnome-calendar
     gnome-disk-utility
     loupe
+    mission-center
     nemo-with-extensions
     papers
     wdisplays

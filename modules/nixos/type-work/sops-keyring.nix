@@ -6,13 +6,11 @@
 }: let
   cfg = config.nixos.opts.sops.keyring;
 in {
-  sops.secrets = lib.mkIf cfg.enable (builtins.listToAttrs (lib.concatMap (
-      user: [
-        {
-          name = flake.lib.mkSec [user "keyring" "password"];
-          value.owner = user;
-        }
-      ]
+  sops.secrets = lib.mkIf cfg.enable (builtins.listToAttrs (map (
+      user: {
+        name = flake.lib.mkSec [user "keyring" "password"];
+        value.owner = user;
+      }
     )
     config.nixos.opts.userNames));
 }

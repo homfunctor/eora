@@ -7,24 +7,10 @@
     };
 
     keymaps = [
-      # sort
       {
         action = ":sort<ESC>";
         key = "<A-s>";
         mode = "v";
-      }
-      # replace the word under the cursor and enter insert mode
-      {
-        action = "ciw";
-        key = "<leader>D";
-        mode = "n";
-      }
-
-      {
-        action = ":%s/\<C-r><C-w>//g<Left><Left>";
-        key = "<leader>R";
-        mode = "n";
-        options.desc = "Search and replace word under cursor";
       }
 
       {
@@ -75,27 +61,6 @@
       }
 
       {
-        action = "gg=G";
-        key = "<leader>if";
-        mode = "n";
-        options = {
-          desc = "Indent file";
-          silent = true;
-        };
-      }
-
-      # todo: replace with something that always works
-      # {
-      #   action = "gg0VGy";
-      #   key = "<leader>cb";
-      #   mode = "n";
-      #   options = {
-      #     desc = "Copy buffer";
-      #     silent = true;
-      #   };
-      # }
-
-      {
         action = "<gv";
         key = "<";
         mode = "v";
@@ -111,40 +76,6 @@
         mode = "v";
         options = {
           desc = "Indent while remaining in visual mode.";
-          silent = true;
-        };
-      }
-
-      {
-        action = "nzzzv";
-        key = "n";
-        mode = "n";
-        options.desc = "Allow search terms to stay in the middle";
-      }
-
-      {
-        action = "Nzzzv";
-        key = "N";
-        mode = "n";
-        options.desc = "Allow search terms to stay in the middle";
-      }
-
-      {
-        action = "<C-W>s";
-        key = "<leader>wj";
-        mode = "n";
-        options = {
-          desc = "Split window below";
-          silent = true;
-        };
-      }
-
-      {
-        action = "<C-W>v";
-        key = "<leader>wl";
-        mode = "n";
-        options = {
-          desc = "Split window right";
           silent = true;
         };
       }

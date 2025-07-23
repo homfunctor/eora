@@ -49,7 +49,7 @@ in {
 
     # hyprpanel settings
     panelOpts = {
-      fontSize = mkStrOpt "1.2rem" "hyprpanel button and bar font size";
+      fontSize = mkStrOpt "1.0rem" "hyprpanel button and bar font size";
       layouts = mkAttrOpt {} "user settings for hyprpanel layout";
       scale = let
         uiElems = [
@@ -98,11 +98,11 @@ in {
     # syncthing
     sync = {
       versioning = mkAttrOpt {
-        type = "simple";
         params = {
-          keep = "10";
           cleanoutDays = "0";
+          keep = "10";
         };
+        type = "simple";
       } "default versioning settings";
 
       folder = let

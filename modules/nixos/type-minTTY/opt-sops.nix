@@ -20,7 +20,6 @@ in {
       sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
     };
 
-    # .sops.yaml, secrets/secrets.yaml
     defaultSopsFile = "${inputs.sapadal}/secrets/secrets.yaml";
   };
 }

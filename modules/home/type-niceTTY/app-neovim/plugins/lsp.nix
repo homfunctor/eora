@@ -43,11 +43,11 @@ in {
       enable = true;
       lightbulb.enable = false;
       outline.keys.jump = "<cr>";
-      ui.border = "none";
       scrollPreview = {
         scrollDown = "<c-d>";
         scrollUp = "<c-u>";
       };
+      ui.border = "none";
     };
   };
 }

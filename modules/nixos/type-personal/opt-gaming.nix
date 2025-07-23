@@ -6,6 +6,7 @@
 #
 # civ 5 (vox populi)
 #   this was a real struggle to get right
+#   still crashes, but way less often
 #   launch options: bash -c "ulimit -s unlimited && DXVK_ASYNC=1 PROTON_ENABLE_WAYLAND=1 PROTON_NO_ESYNC=1 SDL_AUDIODRIVER=pipewire taskset --cpu-list 0-7 gamemoderun %command%"
 #   running with wayland fixes the "feature" of audio muting on focus loss
 {
