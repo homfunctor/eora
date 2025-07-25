@@ -16,7 +16,7 @@
 
     # nix
     ni = "nix-instantiate";
-    nl = "nix-locate --minimal --top-level";
+    nl = "nix-locate --minimal";
 
     # sometimes you wanna game on the side
     "m1" = "xrandr --output DP-1 --primary";

@@ -3,9 +3,7 @@
     enable = true;
 
     config = {
-      common = {
-        default = ["hyprland"];
-      };
+      common.default = ["hyprland"];
 
       hyprland = {
         "org.freedesktop.impl.portal.FileChooser" = "gtk";
@@ -14,10 +12,7 @@
       };
     };
 
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-hyprland
-    ];
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
     xdgOpenUsePortal = true;
   };

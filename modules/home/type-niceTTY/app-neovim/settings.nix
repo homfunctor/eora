@@ -88,7 +88,7 @@
 
       # aesthetics
       cmdheight = 1;
-      cursorline = true;
+      cursorline = false;
       cursorlineopt = "number";
       foldcolumn = "1";
       foldenable = true;

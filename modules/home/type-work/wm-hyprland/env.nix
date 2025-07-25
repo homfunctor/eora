@@ -2,7 +2,12 @@
 # already set:
 #   XDG_RUNTIME_DIR = "/run/user/$UID";
 #   DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$UID/bus";
-{config, ...}: let
+{
+  config,
+  osConfig,
+  pkgs,
+  ...
+}: let
   inherit (config.home.opts) apps;
 in {
   xdg.configFile = {
@@ -15,6 +20,7 @@ in {
     "uwsm/env".text = ''
       export BROWSER=${apps.browser.exe}
       export CLUTTER_BACKEND=wayland
+      export DISABLE_LAYER_AMD_SWITCHABLE_GRAPHICS_1=1
       export DIRENV_LOG_FORMAT=1
       export DISABLE_QT5_COMPAT=0
       export DISABLE_QT_COMPAT=0
@@ -23,6 +29,7 @@ in {
       export GDK_BACKEND=wayland,x11
       export GDK_SCALE=1
       export GNOME_KEYRING_CONTROL="$XDG_RUNTIME_DIR/keyring"
+      export GSETTINGS_SCHEMA_DIR="${pkgs.gsettings-desktop-schemas}/share/gsettings-schemas/${pkgs.gsettings-desktop-schemas.name}/glib-2.0/schemas"
       export HYPRCURSOR_SIZE=${toString config.stylix.cursor.size}
       export HYPRCURSOR_THEME=${config.stylix.cursor.name}
       export HYPRLAND_NO_RT=1
@@ -39,6 +46,9 @@ in {
       export SHELL=${apps.shell.exe}
       export TERMINAL=${apps.terminal.exe}
       export VISUAL=${apps.text.exe}
+      export VK_ICD_FILENAMES="/run/opengl-driver/share/vulkan/icd.d/radeon_icd.x86_64.json"
+      export WLR_BACKEND=${osConfig.nixos.opts.wlrBR}
+      export WLR_RENDERER=${osConfig.nixos.opts.wlrBR}
       export XDG_CURRENT_DESKTOP=Hyprland
       export XDG_SESSION_DESKTOP=Hyprland
       export XDG_SESSION_TYPE=wayland

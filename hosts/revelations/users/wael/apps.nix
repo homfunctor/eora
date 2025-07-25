@@ -28,7 +28,7 @@ in {
       desktop = "org.strawberrymusicplayer.strawberry";
       exe = getExe audio.pkg;
       icon = "󰝚";
-      pkg = pkgs.strawberry-qt6;
+      pkg = pkgs.strawberry;
       tooltip = "Strawberry";
     };
 

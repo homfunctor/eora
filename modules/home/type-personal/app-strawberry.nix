@@ -1,1 +1,1 @@
-{pkgs, ...}: {home.packages = [pkgs.strawberry-qt6];}
+{pkgs, ...}: {home.packages = [pkgs.strawberry];}

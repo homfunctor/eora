@@ -10,11 +10,9 @@ in {
     sops.secrets.hashedPassword.neededForUsers = true;
     users = {
       mutableUsers = false;
-      users = lib.genAttrs config.nixos.opts.userNames (
-        _: {
-          hashedPasswordFile = flake.lib.mkSecPath config ["hashedPassword"];
-        }
-      );
+      users = lib.genAttrs config.nixos.opts.userNames (_: {
+        hashedPasswordFile = flake.lib.mkSecPath config ["hashedPassword"];
+      });
     };
   };
 }
