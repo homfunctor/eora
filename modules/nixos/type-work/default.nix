@@ -1,7 +1,7 @@
 {...}: {
   imports = [
     ./chaotic-kernel.nix
-    ./hardware.nix
+    ./graphics.nix
     ./sops-keyring.nix
     ./sops-syncthing.nix
     ./wm-hyprland

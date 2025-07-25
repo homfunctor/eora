@@ -30,6 +30,6 @@ in {
     adminUser = mkStrOpt "" "admin user";
     userNames = mkListOpt lib.types.str null "user names";
 
-    wlrBR = mkStrOpt "" "requested renderer for wlr backend and renderer";
+    wlrBR = mkStrOpt "wayland" "requested renderer for wlr backend and renderer";
   };
 }
