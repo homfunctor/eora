@@ -23,6 +23,7 @@
     type-personal
 
     # extra
+    app-looking-glass-client
     app-pithos
   ];
 

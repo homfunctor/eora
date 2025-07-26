@@ -17,6 +17,7 @@
     # work
     ./hyprland.nix
     ../wael/hyprpanel.nix # temp
+    # app-looking-glass-client
     app-zoom
     type-work
   ];
