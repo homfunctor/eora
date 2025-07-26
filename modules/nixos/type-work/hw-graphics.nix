@@ -1,24 +1,26 @@
 {pkgs, ...}: {
+  environment.systemPackages = with pkgs; [
+    libva-utils
+    vdpauinfo
+  ];
+
   hardware = {
     enableAllFirmware = true;
-
     graphics = {
       enable = true;
       enable32Bit = true;
 
       extraPackages = with pkgs; [
-        libva
-        libva-utils
-        libvdpau-va-gl
-        vaapiVdpau
-      ];
-
-      extraPackages32 = with pkgs.pkgsi686Linux; [
         libdrm
         libva
+        libva-vdpau-driver
         libvdpau
         libvdpau-va-gl
-        vaapiVdpau
+      ];
+
+      extraPackages32 = with pkgs.driversi686Linux; [
+        libva-vdpau-driver
+        libvdpau-va-gl
       ];
     };
   };

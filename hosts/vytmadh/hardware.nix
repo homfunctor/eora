@@ -16,7 +16,6 @@ in {
       hw-bluetooth
       hw-cpu-intel
       hw-gpu-intel
-      hw-graphics
       hw-printing
       hw-tablet
     ]

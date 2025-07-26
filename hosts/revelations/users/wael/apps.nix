@@ -10,7 +10,6 @@
 {
   config,
   lib,
-  perSystem,
   pkgs,
   ...
 }: let

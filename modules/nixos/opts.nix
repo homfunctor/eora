@@ -22,14 +22,14 @@ in {
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
 
     sops = {
-      keyring.enable = mkBoolOpt false "unlock keyring on autologin with sops";
+      keyring.enable = mkBoolOpt false "unlock keyring on login with sops";
       syncthing.enable = mkBoolOpt false "manage cert/key with sops";
-      user.enable = mkBoolOpt false "set password with sops";
+      user.enable = mkBoolOpt false "set (hashed) password with sops";
     };
 
     adminUser = mkStrOpt "" "admin user";
     userNames = mkListOpt lib.types.str null "user names";
 
-    wlrBR = mkStrOpt "wayland" "requested renderer for wlr backend and renderer";
+    wlrBR = mkStrOpt "wayland" "requested backend/renderer for wayland";
   };
 }

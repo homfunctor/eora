@@ -13,7 +13,8 @@
       pulse.enable = true;
       wireplumber = {
         enable = true;
-        # battery issues
+        # todo: is this still needed?
+        # fixes battery usage issues
         extraConfig."10-disable-camera" = {
           "wireplumber.profiles".main = {
             "monitor.libcamera" = "disabled";

@@ -16,8 +16,6 @@
     };
   };
 
-  home.packages = [pkgs.gsettings-desktop-schemas];
-
   stylix.targets.gtk = {
     enable = true;
     # disable rounded corners where possible

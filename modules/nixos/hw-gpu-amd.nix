@@ -3,26 +3,27 @@
   pkgs,
   ...
 }: {
-  boot = {
-    initrd.kernelModules = ["amdgpu"];
-    # for lact
-    kernelParams = ["amdgpu.ppfeaturemask=0xfffd7fff"];
-  };
-
   environment = {
     systemPackages = [pkgs.lact];
     variables = {
-      "VDPAU_DRIVER" = "radeonsi";
       "LIBVA_DRIVER_NAME" = "radeonsi";
+      "VDPAU_DRIVER" = "radeonsi";
     };
   };
 
-  hardware.graphics.extraPackages = with pkgs; [
-    vulkan-extension-layer
-    vulkan-loader
-    vulkan-tools
-    vulkan-validation-layers
-  ];
+  hardware = {
+    amdgpu = {
+      amdvlk.enable = false;
+      initrd.enable = true;
+    };
+
+    graphics.extraPackages = with pkgs; [
+      vulkan-extension-layer
+      vulkan-loader
+      vulkan-tools
+      vulkan-validation-layers
+    ];
+  };
 
   systemd = {
     packages = [pkgs.lact];

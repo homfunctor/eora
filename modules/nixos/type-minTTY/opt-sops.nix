@@ -3,9 +3,7 @@
   inputs,
   pkgs,
   ...
-}: let
-  inherit (config.nixos.opts) adminUser;
-in {
+}: {
   imports = [inputs.sops-nix.nixosModules.default];
 
   environment.systemPackages = with pkgs; [
@@ -16,7 +14,7 @@ in {
 
   sops = {
     age = {
-      keyFile = "/home/${adminUser}/.config/sops/age/keys.txt";
+      keyFile = "/home/${config.nixos.opts.adminUser}/.config/sops/age/keys.txt";
       sshKeyPaths = ["/etc/ssh/ssh_host_ed25519_key"];
     };
 

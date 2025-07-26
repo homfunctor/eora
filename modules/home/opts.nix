@@ -49,7 +49,7 @@ in {
 
     # hyprpanel settings
     panelOpts = {
-      fontSize = mkStrOpt "1.1rem" "hyprpanel button and bar font size";
+      fontSize = mkStrOpt "1.0rem" "hyprpanel button and bar font size";
       layouts = mkAttrOpt {} "user settings for hyprpanel layout";
       scale = let
         uiElems = [

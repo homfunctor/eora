@@ -15,7 +15,6 @@ in {
       hw-audio
       hw-cpu-amd
       hw-gpu-amd
-      hw-graphics
       hw-printing
     ]
     ++ nixosHW;

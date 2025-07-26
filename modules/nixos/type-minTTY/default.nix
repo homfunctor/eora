@@ -1,5 +1,5 @@
 # bare minimum tty environment
-# goal to is minimize install time
+# goal is to minimize install time
 {
   imports = [
     ./app-minimal.nix

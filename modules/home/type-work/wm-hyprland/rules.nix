@@ -43,11 +43,11 @@ in {
       "stayfocused, class:^(polkit-), title:(Authenticate)"
 
       # file picker
-      "float, class:^(xdg-desktop-portal-hyprland), title:(All Files)"
-      "stayfocused, class:^(xdg-desktop-portal-hyprland), title:(All Files)"
+      "float, class:^(xdg-desktop-portal-hyprland)"
+      "stayfocused, class:^(xdg-desktop-portal-hyprland)"
 
-      "float, class:^(xdg-desktop-portal-gtk), title:(All Files)"
-      "stayfocused, class:^(xdg-desktop-portal-gtk), title:(All Files)"
+      "float, class:^(xdg-desktop-portal-gtk)"
+      "stayfocused, class:^(xdg-desktop-portal-gtk)"
 
       # winetricks
       "float,class:^(zenity)"
