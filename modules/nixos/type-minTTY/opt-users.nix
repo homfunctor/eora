@@ -11,6 +11,7 @@
         "audio"
         "gamemode"
         "input"
+        "libvirtd"
         "networkmanager"
         "power"
         "scanners"

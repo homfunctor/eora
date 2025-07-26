@@ -1,6 +1,7 @@
-{
-  programs.looking-glass-client = {
-    enable = true;
-    # todo: the rest
-  };
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    spice-gtk
+    looking-glass-client
+    virt-manager
+  ];
 }

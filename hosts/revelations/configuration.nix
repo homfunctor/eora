@@ -22,6 +22,7 @@
 
     # extras
     app-nix-ld
+    opt-looking-glass-client
     opt-rust
   ];
 
