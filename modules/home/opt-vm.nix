@@ -4,6 +4,4 @@
     virt-manager
     win-virtio
   ];
-
-  programs.looking-glass-client.enable = true;
 }

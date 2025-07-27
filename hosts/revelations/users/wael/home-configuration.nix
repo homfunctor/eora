@@ -23,8 +23,8 @@
     type-personal
 
     # extra
-    app-looking-glass-client
     app-pithos
+    opt-vm
   ];
 
   home.opts = {

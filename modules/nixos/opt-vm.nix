@@ -21,9 +21,7 @@
     ];
   };
 
-  networking.firewall.trustedInterfaces = [
-    "virbr0"
-  ];
+  networking.firewall.trustedInterfaces = ["virbr0"];
 
   virtualisation = {
     libvirtd = {

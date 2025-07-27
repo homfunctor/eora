@@ -22,8 +22,8 @@
 
     # extras
     app-nix-ld
-    opt-looking-glass-client
     opt-rust
+    opt-vm
   ];
 
   # recursive to avoid defining adminUser twice
