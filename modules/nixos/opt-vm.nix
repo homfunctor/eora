@@ -20,6 +20,11 @@
       "pcie_acs_override=downstream"
     ];
   };
+  environment.systemPackages = with pkgs; [
+    spice-gtk
+    virt-manager
+    win-virtio
+  ];
 
   networking.firewall.trustedInterfaces = ["virbr0"];
 
@@ -37,6 +42,7 @@
         };
         runAsRoot = true;
         swtpm.enable = true;
+        vhostUserPackages = [pkgs.virtiofsd];
       };
     };
     spiceUSBRedirection.enable = true;

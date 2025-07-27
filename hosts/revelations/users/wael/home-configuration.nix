@@ -24,7 +24,6 @@
 
     # extra
     app-pithos
-    opt-vm
   ];
 
   home.opts = {
