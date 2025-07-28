@@ -39,7 +39,6 @@ in {
           "cpu"
           "clock"
           "cava"
-          "media"
         ];
         "right" = [
           "volume"
