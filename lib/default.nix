@@ -31,6 +31,8 @@ in rec {
 
   mkBoolOpt = mkOpt types.bool;
 
+  mkFloatOpt = mkOpt types.float;
+
   mkIntOpt = mkOpt types.int;
 
   mkListOpt = type: mkOpt (types.listOf type);

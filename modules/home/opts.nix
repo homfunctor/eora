@@ -69,30 +69,22 @@ in {
         genAttrs uiElems (name: mkIntOpt 100 "scale for ${name}");
 
       # shortcuts for hyprpanel dashboard menu
-      leftcuts = genAttrs [
-        "shortcut1"
-        "shortcut2"
-        "shortcut3"
-        "shortcut4"
-      ] (name: mkAttrOpt {} "${name} settings");
+      leftcuts = genAttrs ["shortcut1" "shortcut2" "shortcut3" "shortcut4"] (
+        name: mkAttrOpt {} "${name} settings"
+      );
 
-      rightcuts = genAttrs [
-        "shortcut1"
-        "shortcut3"
-      ] (name: mkAttrOpt {} "${name} settings");
+      rightcuts =
+        genAttrs ["shortcut1" "shortcut3"] (name:
+          mkAttrOpt {} "${name} settings");
 
       # directories for hyprpanel dashboard menu
-      leftdirs = genAttrs [
-        "directory1"
-        "directory2"
-        "directory3"
-      ] (name: mkAttrOpt {} "${name} settings");
+      leftdirs =
+        genAttrs ["directory1" "directory2" "directory3"] (name:
+          mkAttrOpt {} "${name} settings");
 
-      rightdirs = genAttrs [
-        "directory1"
-        "directory2"
-        "directory3"
-      ] (name: mkAttrOpt {} "${name} settings");
+      rightdirs =
+        genAttrs ["directory1" "directory2" "directory3"] (name:
+          mkAttrOpt {} "${name} settings");
     };
 
     # syncthing
@@ -105,10 +97,10 @@ in {
         type = "simple";
       } "default versioning settings";
 
-      folder = let
-        folderNames = importAllFileNames ./type-work/app-syncthing/sync-folders;
-      in
-        genAttrs folderNames (name: {
+      folder =
+        genAttrs (
+          importAllFileNames ./type-work/app-syncthing/sync-folders
+        ) (name: {
           enable = mkBoolOpt false "sync ${name}";
         });
     };

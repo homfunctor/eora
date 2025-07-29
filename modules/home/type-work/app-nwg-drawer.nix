@@ -5,9 +5,7 @@
 }: let
   inherit (config.lib.stylix) colors;
 in {
-  home.packages = with pkgs; [
-    nwg-drawer
-  ];
+  home.packages = [pkgs.nwg-drawer];
 
   xdg.configFile."nwg-drawer/drawer.css".text = with colors; ''
     window {

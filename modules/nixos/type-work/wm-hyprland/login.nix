@@ -1,5 +1,5 @@
 # uses cosmic-greeter to automatically login to uwsm-managed hyprland
-# on logout, enters cosmic-greeter
+# on logout, re-enters cosmic-greeter
 # thanks to the magick of nixos, already picks up the hyprland-uwsm.desktop
 # and makes it default_session
 # default_session should be left alone as cosmic-greeter handles it along with

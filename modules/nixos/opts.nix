@@ -5,7 +5,14 @@
   lib,
   ...
 }: let
-  inherit (flake.lib) mkAttrOpt mkBoolOpt mkListOpt mkStrOpt;
+  inherit
+    (flake.lib)
+    mkAttrOpt
+    mkBoolOpt
+    mkFloatOpt
+    mkListOpt
+    mkStrOpt
+    ;
 in {
   options.nixos.opts = {
     # monitors, resolutions, xy (positions)
@@ -20,6 +27,12 @@ in {
     hyprlockOpts = mkAttrOpt {} "hyprlock settings";
 
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
+
+    opacity = {
+      desktop = mkFloatOpt 1.0 "desktop opacity";
+      popups = mkFloatOpt 0.95 "popups opacity";
+      terminal = mkFloatOpt 0.75 "terminal opacity";
+    };
 
     sops = {
       keyring.enable = mkBoolOpt false "unlock keyring on login with sops";

@@ -13,5 +13,6 @@
 
   services.xserver.enable = false;
 
-  xdg.portal.enable = true;
+  # todo: handled in hm?
+  # xdg.portal.enable = true;
 }

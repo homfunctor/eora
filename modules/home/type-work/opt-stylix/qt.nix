@@ -1,4 +1,5 @@
 # https://github.com/nix-community/stylix/blob/master/modules/qt/hm.nix
+# todo: how to remove round corners?
 {
   config,
   inputs,

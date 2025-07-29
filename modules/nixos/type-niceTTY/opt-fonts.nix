@@ -21,8 +21,7 @@
       material-icons
       material-symbols
       nerd-font-patcher
-      nerd-fonts.iosevka
-      nerd-fonts.jetbrains-mono
+      nerd-fonts.jetbrains-mono # for hyprpanel
       nerd-fonts.symbols-only
       noto-fonts
       noto-fonts-cjk-sans

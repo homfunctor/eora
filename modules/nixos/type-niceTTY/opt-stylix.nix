@@ -8,14 +8,10 @@
   stylix = {
     enable = true;
 
+    inherit (config.nixos.opts) opacity;
     autoEnable = true;
     fonts.sizes = config.nixos.opts.fontSizes;
     image = "${inputs.sapadal}/assets/base.png";
-    opacity = {
-      desktop = 1.0;
-      popups = 0.95;
-      terminal = 0.75;
-    };
     polarity = "dark";
 
     # causes issues for me

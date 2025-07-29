@@ -8,8 +8,6 @@
   inherit (config.lib.stylix) colors;
   # per-host not per-user
   inherit (osConfig.nixos.opts.hyprlockOpts) clockLabel dateLabel inputLabel;
-
-  bg = "${inputs.sapadal}/assets/base.png";
 in {
   # force manual theming
   stylix.targets.hyprlock.enable = lib.mkForce false;
@@ -20,7 +18,7 @@ in {
       background = [
         {
           monitor = "";
-          path = bg;
+          path = "${inputs.sapadal}/assets/base.png";
         }
       ];
 

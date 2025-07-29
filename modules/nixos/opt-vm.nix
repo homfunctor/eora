@@ -47,8 +47,4 @@
     };
     spiceUSBRedirection.enable = true;
   };
-
-  services.udev.extraRules = ''
-    SUBSYSTEM=="misc", KERNEL=="looking-glass", GROUP="kvm", MODE="0660"
-  '';
 }

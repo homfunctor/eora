@@ -41,6 +41,11 @@
 
     lanzaboote.enable = true;
 
+    opacity = {
+      popups = 1.0;
+      terminal = 1.0;
+    };
+
     sops = {
       keyring.enable = true;
       syncthing.enable = true;
