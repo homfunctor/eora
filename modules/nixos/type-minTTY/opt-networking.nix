@@ -1,4 +1,3 @@
-# todo: review
 {
   config,
   lib,

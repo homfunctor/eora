@@ -9,16 +9,13 @@
 
   home.stateVersion = "25.05";
 
-  programs = {
-    home-manager.enable = true;
-    git = {
-      enable = true;
-      extraConfig = {
-        color.ui = "1";
-        gpg.format = "ssh";
-        init.defaultBranch = "main";
-        pull.rebase = "false";
-      };
+  programs.git = {
+    enable = true;
+    extraConfig = {
+      color.ui = "1";
+      gpg.format = "ssh";
+      init.defaultBranch = "main";
+      pull.rebase = "false";
     };
   };
 }

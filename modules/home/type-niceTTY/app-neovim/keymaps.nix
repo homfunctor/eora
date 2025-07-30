@@ -3,7 +3,6 @@
     globals = {
       mapleader = " ";
       maplocalLeader = " ";
-      floating_window_options.border = "none";
     };
 
     keymaps = [

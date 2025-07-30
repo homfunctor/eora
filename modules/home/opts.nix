@@ -33,9 +33,6 @@ in {
     # mainly just for wael@revelations media files on /vault
     customUserDirs = mkAttrOpt {} "custom settings for user directories (XDG)";
 
-    # used to generate mimeapps.list from opts.apps
-    defaultApps = mkAttrOpt {} "default applications (mime)";
-
     hostName = mkStrOpt "" "host name. name of host. that by which the host is named.";
     userName = mkStrOpt "" "user name. name of user. that by which the user is named.";
 
@@ -43,8 +40,8 @@ in {
     nvim.plugins = let
       pluginNames = importAllFileNames ./type-niceTTY/app-neovim/plugins;
     in
-      genAttrs pluginNames (pluginName: {
-        enable = mkBoolOpt false "enable ${pluginName}";
+      genAttrs pluginNames (name: {
+        enable = mkBoolOpt false "enable ${name}";
       });
 
     # hyprpanel settings

@@ -11,11 +11,5 @@
       frameless = true;
       useQuickCss = true;
     };
-
-    extraConfig = {
-      # json
-    };
-
-    quickCss = "some CSS";
   };
 }

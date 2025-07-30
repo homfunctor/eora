@@ -3,13 +3,6 @@
 
   programs.seahorse.enable = true;
 
-  # todo: not needed since we manually unlock?
-  # security.pam.services = {
-  #   greetd-password.enableGnomeKeyring = true;
-  #   greetd.enableGnomeKeyring = true;
-  #   login.enableGnomeKeyring = true;
-  # };
-
   services = {
     dbus = {
       enable = true;

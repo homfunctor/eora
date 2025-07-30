@@ -29,6 +29,8 @@
       virtual_text = false;
     };
 
+    globals.floating_window_options.border = "none";
+
     opts = {
       # relative line numbers
       number = true;

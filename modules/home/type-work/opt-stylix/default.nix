@@ -6,8 +6,6 @@
 
   config.stylix = {
     enable = true;
-    enableReleaseChecks = false;
-
     autoEnable = true;
   };
 }

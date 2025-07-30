@@ -13,9 +13,7 @@
   services = {
     displayManager.cosmic-greeter.enable = true;
     greetd.settings.initial_session = {
-      command =
-        lib.mkDefault
-        "${lib.getExe pkgs.uwsm} start hyprland-uwsm.desktop";
+      command = "${lib.getExe pkgs.uwsm} start hyprland-uwsm.desktop";
       user = config.nixos.opts.adminUser;
     };
   };

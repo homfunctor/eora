@@ -1,6 +1,6 @@
 {config, ...}: let
   inherit (config.home.opts) panelOpts;
-  fontName = config.stylix.fonts.monospace.name;
+  fontName = config.stylix.fonts.sansSerif.name;
 in {
   programs.hyprpanel.settings.theme = {
     bar = {
