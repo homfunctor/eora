@@ -6,6 +6,7 @@
 #
 # civ 5 (vox populi)
 #   launch options: PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 PROTON_ENABLE_WAYLAND=1 WINE_LARGE_ADDRESS_AWARE=1 taskset --cpu-list 0-7 gamemoderun %command%
+#   do these work? only the devil knows.
 #   running with wayland fixes the "feature" of audio muting on focus loss
 {
   inputs,

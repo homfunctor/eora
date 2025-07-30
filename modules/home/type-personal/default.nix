@@ -9,6 +9,7 @@
     ./app-nixcord.nix
     ./app-strawberry.nix
     ./app-vivaldi.nix
+    ./app-yt-dlp.nix
     ./app-zipunicode.nix
   ];
 }
