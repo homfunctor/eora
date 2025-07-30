@@ -5,7 +5,7 @@
 }: {
   imports = [
     # provides open ports
-    inputs.sapadal.modules.home.opt-torrenting
+    inputs.sapadal.modules.nixos.opt-torrenting
   ];
 
   environment.systemPackages = with pkgs; [
