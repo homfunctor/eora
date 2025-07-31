@@ -6,6 +6,5 @@
     ./app-starship.nix
     ./app-yazi.nix
     ./app-zoxide.nix
-    ./opt-fonts.nix
   ];
 }

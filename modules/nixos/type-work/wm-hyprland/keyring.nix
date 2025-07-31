@@ -1,3 +1,4 @@
+# keyring unlocked in hm module
 {pkgs, ...}: {
   boot.initrd.systemd.enable = true;
 

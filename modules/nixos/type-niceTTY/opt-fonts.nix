@@ -3,24 +3,37 @@
   pkgs,
   ...
 }: {
-  environment.variables.LOG_ICONS = "true";
+  environment = {
+    systemPackages = [pkgs.smile];
+    variables.LOG_ICONS = "true";
+  };
 
   fonts = {
-    fontconfig.defaultFonts = with config.stylix.fonts; {
-      emoji = [emoji.name];
-      monospace = [monospace.name];
-      sansSerif = [sansSerif.name];
-      serif = [serif.name];
-    };
-
+    enableDefaultPackages = true;
     fontDir.enable = true;
+
+    fontconfig = {
+      enable = true;
+
+      antialias = true;
+      cache32Bit = true;
+      hinting.enable = true;
+
+      defaultFonts = with config.stylix.fonts; {
+        monospace = [monospace.name "Noto Color Emoji"];
+        sansSerif = [sansSerif.name "Noto Color Emoji"];
+        serif = [serif.name "Noto Color Emoji"];
+      };
+    };
 
     packages = with pkgs; [
       font-awesome
+      liberation_ttf
       material-design-icons
       material-icons
       material-symbols
       nerd-font-patcher
+      nerd-fonts.iosevka
       nerd-fonts.jetbrains-mono # for hyprpanel
       nerd-fonts.symbols-only
       noto-fonts
