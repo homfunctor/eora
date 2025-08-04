@@ -90,9 +90,4 @@ in {
   };
 
   system.stateVersion = "25.05";
-
-  systemd.extraConfig = ''
-    DefaultTimeoutStartSec=5s
-    DefaultTimeoutStopSec=10s
-  '';
 }

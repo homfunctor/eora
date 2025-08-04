@@ -12,6 +12,7 @@
       package = pkgs.qemu_kvm;
       ovmf.enable = true;
       runAsRoot = true;
+      swtpm.enable = true;
       # shared directory at ~/Shared
       vhostUserPackages = [pkgs.virtiofsd];
     };

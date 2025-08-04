@@ -29,10 +29,11 @@
       url = "github:nix-community/lanzaboote";
     };
 
-    lix-module = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.3-1.tar.gz";
-    };
+    # todo: re-add later
+    # lix-module = {
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   url = "https://git.lix.systems/lix-project/nixos-module/archive/replaceme.tar.gz";
+    # };
 
     nix-gaming = {
       inputs.nixpkgs.follows = "nixpkgs";

@@ -22,6 +22,7 @@
 
     # extras
     app-nix-ld
+    # opt-lix
     opt-rust
     opt-vm
   ];
