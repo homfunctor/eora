@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
+    OVMF.fd
     virt-manager
     win-virtio
   ];
@@ -10,7 +11,10 @@
     enable = true;
     qemu = {
       package = pkgs.qemu_kvm;
-      ovmf.enable = true;
+      ovmf = {
+        enable = true;
+        packages = [pkgs.OVMF.fd];
+      };
       runAsRoot = true;
       swtpm.enable = true;
       # shared directory at ~/Shared
