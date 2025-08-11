@@ -18,12 +18,12 @@
 
     # extras
     app-nix-ld
+    opt-lix
     opt-rust
   ];
 
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
-    # background/monitor settings i don't want to do per user
     bg = {
       monitors = ["eDP-1"];
       resolutions = ["1920x1080"];

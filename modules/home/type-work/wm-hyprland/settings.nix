@@ -60,7 +60,6 @@ in {
         float_switch_override_focus = 2;
         follow_mouse = 2;
         kb_layout = "us";
-        kb_options = "caps:escape";
         numlock_by_default = true;
         sensitivity = 0;
       };
