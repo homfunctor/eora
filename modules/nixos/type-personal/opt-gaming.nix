@@ -5,9 +5,9 @@
 #   launch options:  PROTON_ENABLE_WAYLAND=1 gamemoderun %command%"
 #
 # civ 5 (vox populi)
-#   launch options: ulimit -s unlimited && PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 PROTON_ENABLE_WAYLAND=1 taskset --cpu-list 0-7 gamemoderun %command%
+#   launch options: bash -c "ulimit -s unlimited && PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 PROTON_ENABLE_WAYLAND=1 taskset --cpu-list 0-7 gamemoderun %command%"
+#   do these work? only the devil knows.
 #   running with wayland fixes the "feature" of audio muting on focus loss
-#   also seems to fix other audio bugs
 {
   inputs,
   pkgs,
