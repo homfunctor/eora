@@ -3,6 +3,7 @@
 #
 # lotro
 #   launch options:  PROTON_ENABLE_WAYLAND=1 gamemoderun %command%"
+#   fps no longer drops on focus loss. wayland is magick.
 #
 # civ 5 (vox populi)
 #   launch options: bash -c "ulimit -s unlimited && PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 PROTON_ENABLE_WAYLAND=1 taskset --cpu-list 0-7 gamemoderun %command%"
