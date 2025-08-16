@@ -19,7 +19,6 @@
     "vimtex"
     "web-devicons"
     "which-key"
-    "yazi"
   ];
 in {
   home.opts.nvim.plugins = lib.genAttrs enabledPlugins (_: {enable = true;});

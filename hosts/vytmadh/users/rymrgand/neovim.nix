@@ -8,18 +8,17 @@
     "lsp"
     "lualine"
     "mini"
-    "noice"
+    "mini-indentscope"
+    "mini-notify"
     "nvim-surround"
     "precognition"
     "rustaceanvim"
     "smartcolumn"
-    "snacks"
     "treesitter"
     "undotree"
     "vimtex"
     "web-devicons"
     "which-key"
-    "yazi"
   ];
 in {
   home.opts.nvim.plugins = lib.genAttrs enabledPlugins (_: {enable = true;});

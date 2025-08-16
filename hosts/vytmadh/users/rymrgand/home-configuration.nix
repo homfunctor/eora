@@ -10,13 +10,13 @@
     type-minTTY
 
     # nicer tty
-    ../../../revelations/users/wael/apps.nix # temp
-    ../../../revelations/users/wael/neovim.nix # temp
+    apps.nix
+    neovim.nix
     type-niceTTY
 
     # work
     ./hyprland.nix
-    ../../../revelations/users/wael/hyprpanel.nix # temp
+    hyprpanel.nix
     app-zoom
     type-work
   ];
