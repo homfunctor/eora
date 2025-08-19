@@ -1,8 +1,6 @@
-{
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
+    angle
     heroic
     jdk
     ludusavi
