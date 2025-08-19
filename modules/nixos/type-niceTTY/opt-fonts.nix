@@ -4,7 +4,10 @@
   ...
 }: {
   environment = {
-    systemPackages = [pkgs.smile];
+    systemPackages = with pkgs; [
+      freetype
+      smile
+    ];
     variables.LOG_ICONS = "true";
   };
 
@@ -28,6 +31,7 @@
 
     packages = with pkgs; [
       font-awesome
+
       liberation_ttf
       material-design-icons
       material-icons
