@@ -1,10 +1,10 @@
 {
-  inputs,
   pkgs,
   ...
 }: {
   home.packages = with pkgs; [
     heroic
+    jdk
     ludusavi
     lutris
     protonplus
