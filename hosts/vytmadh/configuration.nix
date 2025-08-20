@@ -34,7 +34,7 @@
       applications = 14;
       desktop = 14;
       popups = 14;
-      terminal = 14;
+      terminal = 16;
     };
 
     hostName = "vytmadh";
@@ -43,7 +43,7 @@
 
     opacity = {
       popups = 1.0;
-      terminal = 1.0;
+      terminal = 0.9;
     };
 
     sops = {
