@@ -10,22 +10,22 @@
     type-minTTY
 
     # nicer tty
-    apps.nix
-    neovim.nix
-    type-niceTTY
+    # apps.nix
+    # neovim.nix
+    # type-niceTTY
 
     # work
-    ./hyprland.nix
-    hyprpanel.nix
-    app-zoom
-    type-work
+    # ./hyprland.nix
+    # hyprpanel.nix
+    # app-zoom
+    # type-work
   ];
 
   home.opts = {
     inherit (osConfig.nixos.opts) hostName;
     userName = osConfig.nixos.opts.adminUser;
 
-    app-math.latex.enable = true;
+    # app-math.latex.enable = true;
 
     bg = {
       inherit (osConfig.nixos.opts.bg) monitors resolutions xy;
@@ -33,12 +33,12 @@
     };
 
     sync.folder = {
-      Books.enable = true;
-      Fish.enable = true;
-      Math.enable = true;
-      Nix.enable = true;
-      Rust.enable = true;
-      Work.enable = true;
+      # Books.enable = true;
+      # Fish.enable = true;
+      # Math.enable = true;
+      # Nix.enable = true;
+      # Rust.enable = true;
+      # Work.enable = true;
     };
   };
 }

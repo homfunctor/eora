@@ -1,8 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
     heroic
-    jdk
-    libglvnd
     ludusavi
     lutris
     protonplus
