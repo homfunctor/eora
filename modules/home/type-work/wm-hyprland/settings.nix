@@ -5,7 +5,7 @@
 }: let
   inherit (config.home.opts) apps bg;
   inherit (config.lib.stylix) colors;
-  inherit (lib) mkForce zipListsWith;
+  inherit (lib) mkDefault mkForce zipListsWith;
 in {
   config = {
     wayland.windowManager.hyprland.settings = {
@@ -48,9 +48,9 @@ in {
       general = with colors; {
         "col.active_border" = mkForce "rgb(${base08})";
         "col.inactive_border" = mkForce "rgb(${base02})";
-        border_size = 5;
-        gaps_in = 5;
-        gaps_out = 5;
+        border_size = mkDefault 5;
+        gaps_in = mkDefault 5;
+        gaps_out = mkDefault 5;
         layout = "dwindle";
         resize_on_border = true;
       };
