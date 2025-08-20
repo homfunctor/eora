@@ -18,7 +18,7 @@ in {
         "ram"
         "cpu"
         "clock"
-        "cava"
+        "battery"
       ];
       "right" = [
         "volume"
