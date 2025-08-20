@@ -1,4 +1,10 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  ...
+}: {
+  imports = [inputs.sapadal.modules.home.private-apps];
+
   home.packages = with pkgs; [
     heroic
     ludusavi
