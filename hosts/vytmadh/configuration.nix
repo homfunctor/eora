@@ -8,18 +8,18 @@
     type-minTTY
 
     # nicer tty
-    # ./fish.nix
-    # ./stylix.nix
-    # type-niceTTY
+    ./fish.nix
+    ./stylix.nix
+    type-niceTTY
 
     # work
-    # ./hyprlock.nix
-    # type-work
+    ./hyprlock.nix
+    type-work
 
     # extras
-    #   app-nix-ld
-    #   opt-lix
-    #   opt-rust
+    # app-nix-ld
+    opt-lix
+    opt-rust
   ];
 
   # recursive to avoid defining adminUser twice
@@ -39,7 +39,7 @@
 
     hostName = "vytmadh";
 
-    # lanzaboote.enable = true;
+    lanzaboote.enable = true;
 
     opacity = {
       popups = 1.0;
@@ -47,9 +47,9 @@
     };
 
     sops = {
-      # keyring.enable = true;
-      # syncthing.enable = true;
-      # user.enable = true;
+      keyring.enable = true;
+      syncthing.enable = true;
+      user.enable = true;
     };
 
     adminUser = "rymrgand";

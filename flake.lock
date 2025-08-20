@@ -439,11 +439,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1755569926,
-        "narHash": "sha256-s7D28zPHlFWVZ7dDxm0L1o5+t423rMJUfgCMGUeyYSk=",
+        "lastModified": 1755625756,
+        "narHash": "sha256-t57ayMEdV9g1aCfHzoQjHj1Fh3LDeyblceADm2hsLHM=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c613ac14f5600033bf84ae75c315d5ce24a0229b",
+        "rev": "dd026d86420781e84d0732f2fa28e1c051117b59",
         "type": "github"
       },
       "original": {
@@ -661,11 +661,11 @@
     "lix": {
       "flake": false,
       "locked": {
-        "lastModified": 1755540489,
-        "narHash": "sha256-fo+v+DPLgUv8SJGzFUC3onxVUfBh9SVy+4FkQd0YFCg=",
-        "rev": "d8b1fb77995d819aac4b990fe9d960a68e751fbc",
+        "lastModified": 1755608933,
+        "narHash": "sha256-1iSxO09S7MXC5ovHHEiugBcUHAesVfKivS/fm6KA5AQ=",
+        "rev": "001c70d2bab8a06c648cbc456e59a271792fe99d",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/d8b1fb77995d819aac4b990fe9d960a68e751fbc.tar.gz?rev=d8b1fb77995d819aac4b990fe9d960a68e751fbc"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/001c70d2bab8a06c648cbc456e59a271792fe99d.tar.gz?rev=001c70d2bab8a06c648cbc456e59a271792fe99d"
       },
       "original": {
         "type": "tarball",
@@ -684,11 +684,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1751909859,
-        "narHash": "sha256-gbpuESxl/An4GTh7QEbQRYJozVIxWkwVGbWK0/0GoRc=",
-        "rev": "4d4c2b8f0a801c91ce5b717c77fe3a17efa1402f",
+        "lastModified": 1755621638,
+        "narHash": "sha256-xGdoc9Uv8BvzMcQXPtdKnIltw5kQIPFiLYeKt4yiznc=",
+        "rev": "ba169d91ddf35e47e02ec12f6de02c413144efe4",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/nixos-module/archive/4d4c2b8f0a801c91ce5b717c77fe3a17efa1402f.tar.gz?rev=4d4c2b8f0a801c91ce5b717c77fe3a17efa1402f"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/nixos-module/archive/ba169d91ddf35e47e02ec12f6de02c413144efe4.tar.gz?rev=ba169d91ddf35e47e02ec12f6de02c413144efe4"
       },
       "original": {
         "type": "tarball",
@@ -703,11 +703,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1755568603,
-        "narHash": "sha256-FNOuvwyJcBOqiLxOz4rLdNFRP6Dmb0Glj1B3eEmkqj4=",
+        "lastModified": 1755655044,
+        "narHash": "sha256-43fb+p7xXCIimF7r8XhrDKo3uTkeKhMbzcJ4VdUOG/M=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "2e90e67780909df264d79250ee72c96ac665ba33",
+        "rev": "96cda5144e73514cd52d3e0e8b2bf116a5266b22",
         "type": "github"
       },
       "original": {
@@ -766,11 +766,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1755566681,
-        "narHash": "sha256-Rpd2DPm1/mGlA4g3y2uAGCx7VJOhKLLZ8o+H4i7wCTo=",
+        "lastModified": 1755652979,
+        "narHash": "sha256-AhxWqvREob8JyHc79DaQAeIPyp4gwcKd+2NXEreNjkM=",
         "owner": "kaylorben",
         "repo": "nixcord",
-        "rev": "f6a3622f1754563050a3c0c9eaaca36c3b2c722a",
+        "rev": "5c467591dee2c62f9ebd6de8d9e82ba6f533fcaf",
         "type": "github"
       },
       "original": {
@@ -1041,11 +1041,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1755571033,
-        "narHash": "sha256-V8gmZBfMiFGCyGJQx/yO81LFJ4d/I5Jxs2id96rLxrM=",
+        "lastModified": 1755657401,
+        "narHash": "sha256-rPHuWPAcwW63wH1SUtDCqAnf2+60pi/pGMCIhVobzXc=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "95487740bb7ac11553445e9249041a6fa4b5eccf",
+        "rev": "292ca754b0f679b842fbfc4734f017c351f0e9eb",
         "type": "github"
       },
       "original": {
@@ -1126,11 +1126,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1755546184,
-        "narHash": "sha256-KxRj/8SydDk3gzamS0VEewo5pu8JAYhSZ5GPcImPGNQ=",
+        "lastModified": 1755636375,
+        "narHash": "sha256-HQQ7LdyHWCUcRBeGLTwJm+tJ8hmuglSzP/ZLeNBjFkk=",
         "owner": "danth",
         "repo": "stylix",
-        "rev": "9810b32b9b7520e3b37358ff8e793fb5034c3299",
+        "rev": "2567b924669c566d132ce4cafd4bc0a119846b52",
         "type": "github"
       },
       "original": {
