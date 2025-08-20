@@ -1,3 +1,12 @@
+# default application settings
+# designed for use with xdg mimeapps setup (set name, desktop),
+# hyprpanel (icon, tooltip), and general usage (args, exe, pkg)
+# args: arguments commonly used with app
+# desktop: desktop file name (without extension)
+# exe: executable found at pkg path
+# icon: icon used for hyprpanel
+# pkg: package path
+# tooltip: hyprpanel tooltip. also functions as a human-readable set name
 {
   config,
   lib,
@@ -15,12 +24,11 @@ in {
     };
 
     audio = {
-      # todo
-      desktop = "";
+      desktop = "io.github.celluloid_player.Celluloid";
       exe = getExe audio.pkg;
       icon = "󰝚";
-      pkg = pkgs.vlc;
-      tooltip = "vlc";
+      pkg = pkgs.celluloid;
+      tooltip = "celluloid";
     };
 
     browser = {

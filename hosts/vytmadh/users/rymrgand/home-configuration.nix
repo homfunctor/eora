@@ -10,13 +10,13 @@
     type-minTTY
 
     # nicer tty
-    apps.nix
-    neovim.nix
+    ./apps.nix
+    ./neovim.nix
     type-niceTTY
 
     # work
     ./hyprland.nix
-    hyprpanel.nix
+    ./hyprpanel.nix
     app-zoom
     type-work
   ];
