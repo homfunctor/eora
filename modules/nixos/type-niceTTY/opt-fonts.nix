@@ -29,6 +29,8 @@
       };
     };
 
+    # imperative step: copy liberation_ttf truetype fonts
+    # to ~/.local/share/fonts and apply chmod 644
     packages = with pkgs; [
       font-awesome
 
