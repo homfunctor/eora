@@ -2,10 +2,9 @@
 {
   imports = [
     ./app-chromium.nix
-    ./app-gimp.nix
     ./app-glance.nix
+    ./app-graphics.nix
     ./app-hyprApps.nix
-    ./app-inkscape.nix
     ./app-kitty.nix
     ./app-math
     ./app-minimal.nix
@@ -14,7 +13,6 @@
     ./app-nwg-drawer.nix
     ./app-onlyoffice.nix
     ./app-pika.nix
-    ./app-rnote.nix
     ./app-simple-scan.nix
     ./app-syncthing
     ./app-udiskie.nix
