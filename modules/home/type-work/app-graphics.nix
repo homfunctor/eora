@@ -2,7 +2,7 @@
   home.packages = with pkgs; [
     gimp3
     inkscape
-    kolourpaint
+    kdePackages.kolourpaint
     rnote
   ];
 }
