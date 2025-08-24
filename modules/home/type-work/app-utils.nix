@@ -8,6 +8,7 @@
     libwebp
     networkmanagerapplet
     p7zip
+    poppler-utils
     pulseaudioFull
     pwvucontrol
     unrar
