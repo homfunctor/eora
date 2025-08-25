@@ -20,6 +20,7 @@
     type-work
 
     # personal
+    app-vivaldi
     type-personal
 
     # extra

@@ -16,7 +16,7 @@
 
     # nix
     ni = "nix-instantiate";
-    nl = "nix-locate --minimal --top-level";
+    nl = "nix-locate --minimal";
 
     # ...
     ".." = "z ../";

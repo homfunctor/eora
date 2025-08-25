@@ -16,6 +16,7 @@
     ./app-pika.nix
     ./app-simple-scan.nix
     ./app-syncthing
+    ./app-thunderbird.nix
     ./app-udiskie.nix
     ./app-utils.nix
     ./app-zathura.nix

@@ -1,6 +1,4 @@
 {pkgs, ...}: {
-  home.packages = with pkgs; [hyprland-monitor-attached];
-
   wayland.windowManager.hyprland.settings = {
     general = {
       border_size = 5;
@@ -17,5 +15,9 @@
         output = "eDP-1";
       }
     ];
+
+    # external monitors for work
+    # mirror laptop monitor
+    monitor = ["HDMI-A-2, 1920x1080, auto, 1, mirror, eDP-1"];
   };
 }

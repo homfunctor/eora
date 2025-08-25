@@ -208,17 +208,20 @@ in {
                 name = "Ripgrep";
                 score_offset = 100;
                 opts = {
+                  backend = {
+                    context_size = 5;
+                    max_filesize = "1M";
+                    project_root_fallback = true;
+                    search_casing = "--ignore-case";
+                  };
+
                   additional_paths = {};
                   additional_rg_options = {};
-                  context_size = 5;
                   debug = false;
                   fallback_to_regex_highlighting = true;
                   ignore_paths = {};
-                  max_filesize = "1M";
                   prefix_min_len = 3;
-                  project_root_fallback = true;
                   project_root_marker = ".git";
-                  search_casing = "--ignore-case";
                 };
               };
 

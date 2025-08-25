@@ -10,14 +10,13 @@
     type-minTTY
 
     # nicer tty
-    ../wael/apps.nix # temp
+    apps.nix
     ../wael/neovim.nix # temp
     type-niceTTY
 
     # work
     ./hyprland.nix
     ../wael/hyprpanel.nix # temp
-    # app-looking-glass-client
     app-zoom
     type-work
   ];

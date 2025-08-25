@@ -6,7 +6,7 @@
   ...
 }: let
   inherit (flake.lib) uApp uTog;
-  inherit (config.home.opts) apps panelOpts;
+  inherit (config.home.opts) apps bg panelOpts;
 in {
   programs.hyprpanel.settings.bar = {
     inherit (panelOpts) layouts;
@@ -142,7 +142,7 @@ in {
       workspaceIconMap = {
         "vivaldi-stable" = "";
       };
-      workspaces = 6;
+      workspaces = (lib.length bg.monitors) * 2;
     };
   };
 }
