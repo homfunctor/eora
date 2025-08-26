@@ -30,9 +30,10 @@
         "uwsm finalize"
         "hyprctl setcursor"
         (flake.lib.uApp "${lib.getExe pkgs.networkmanagerapplet}")
-        # opentabletdriver
-        # remove temp files
-        # start daemon
+        # opentabletdriver: remove tmp files for multi-user usage
+        # todo: using sudo here is probably bad. do it another way later
+        "sudo rm -rf /tmp/CoreFXPipe_OpenTabletDriver*"
+        "${pkgs.opentabletdriver}/bin/otd-daemon"
       ];
     };
     systemd.target = "graphical-session.target";
