@@ -1,5 +1,4 @@
 {
-  flake,
   osConfig,
   pkgs,
   ...
