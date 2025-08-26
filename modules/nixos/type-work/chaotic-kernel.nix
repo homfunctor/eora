@@ -1,4 +1,4 @@
 {pkgs, ...}: {
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
-  services.scx.enable = true;
+  # services.scx.enable = true;
 }

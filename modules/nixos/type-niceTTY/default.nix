@@ -3,7 +3,7 @@
 {
   imports = [
     ./app-fish.nix
-    ./chaotic-cachix.nix
+    ./chaotic-cache.nix
     ./opt-fonts.nix
     ./opt-lanzaboote.nix
     ./opt-services.nix

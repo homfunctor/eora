@@ -30,6 +30,9 @@
         "uwsm finalize"
         "hyprctl setcursor"
         (flake.lib.uApp "${lib.getExe pkgs.networkmanagerapplet}")
+        # opentabletdriver
+        # remove temp files
+        # start daemon
       ];
     };
     systemd.target = "graphical-session.target";
