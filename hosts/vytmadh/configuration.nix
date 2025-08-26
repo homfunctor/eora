@@ -13,7 +13,6 @@
     type-niceTTY
 
     # work
-    ./hyprlock.nix
     type-work
 
     # extras
@@ -40,6 +39,8 @@
     hostName = "vytmadh";
 
     lanzaboote.enable = true;
+
+    mainMonitor = builtins.elemAt bg.monitors 0;
 
     opacity = {
       popups = 1.0;

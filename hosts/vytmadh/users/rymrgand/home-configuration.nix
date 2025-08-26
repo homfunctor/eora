@@ -15,7 +15,6 @@
     type-niceTTY
 
     # work
-    ./hyprland.nix
     ./hyprpanel.nix
     app-vivaldi
     app-zoom

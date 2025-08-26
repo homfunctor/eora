@@ -14,7 +14,6 @@
 
     # work
     ./hardware.nix
-    ./hyprlock.nix
     type-work
 
     # personal
@@ -45,6 +44,8 @@
     hostName = "revelations";
 
     lanzaboote.enable = true;
+
+    mainMonitor = builtins.elemAt bg.monitors 1;
 
     sops = {
       keyring.enable = true;

@@ -11,16 +11,8 @@ in {
       resize_on_border = true;
     };
 
-    device = [
-      {
-        enabled = true;
-        name = "huion-huion-tablet_h1060p";
-        output = mainMonitor;
-      }
-    ];
-
     # external monitors for work
     # mirror laptop monitor
-    monitor = ["HDMI-A-2, 1920x1080, auto, 1, mirror, ${mainMonitor}"];
+    monitor = ["HDMI-A-2, preferred, auto, 1, mirror, ${mainMonitor}"];
   };
 }

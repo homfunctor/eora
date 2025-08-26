@@ -7,7 +7,7 @@
 }: let
   inherit (config.lib.stylix) colors;
   # per-host not per-user
-  inherit (osConfig.nixos.opts.hyprlockOpts) clockLabel dateLabel inputLabel;
+  inherit (osConfig.nixos.opts) mainMonitor;
 in {
   # force manual theming
   stylix.targets.hyprlock.enable = lib.mkForce false;
@@ -30,8 +30,6 @@ in {
 
       input-field = with colors; [
         {
-          inherit (inputLabel) monitor;
-
           capslock_color = -1;
           dots_center = true;
           dots_rounding = -1;
@@ -44,6 +42,7 @@ in {
           hide_input = false;
           inner_color = "rgb(${base01})";
           invert_numlock = false;
+          monitor = mainMonitor;
           outer_color = "rgb(${base07})";
           outline_thickness = 5;
           placeholder_text = "<i> input password</i>";
@@ -57,11 +56,10 @@ in {
 
       label = with colors; [
         {
-          inherit (clockLabel) monitor;
-
           color = "rgb(${base04})";
           font_size = 28;
           halign = "center";
+          monitor = mainMonitor;
           position = "90, 450";
           text = ''
             cmd[update:1000] echo -e "$(date +"%A, %B %d")"
@@ -70,11 +68,10 @@ in {
         }
 
         {
-          inherit (dateLabel) monitor;
-
           color = "rgb(${base04})";
           font_size = 160;
           halign = "center";
+          monitor = mainMonitor;
           position = "90, 320";
           text = ''
             cmd[update:1000] echo "<span>$(date +"%I:%M %P")</span>"
