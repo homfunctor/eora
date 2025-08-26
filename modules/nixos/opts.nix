@@ -28,6 +28,8 @@ in {
 
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
 
+    mainMonitor = mkStrOpt null "main monitor";
+
     opacity = {
       desktop = mkFloatOpt 1.0 "desktop opacity";
       popups = mkFloatOpt 0.95 "popups opacity";
