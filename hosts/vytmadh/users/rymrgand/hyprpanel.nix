@@ -8,7 +8,7 @@
   inherit (flake.lib) uApp;
 in {
   home.opts.panelOpts = {
-    fontSize = "1.2rem";
+    fontSize = "1.4rem";
 
     layouts."*" = {
       "left" = [

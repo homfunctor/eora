@@ -1,4 +1,7 @@
-{pkgs, ...}: {
+{config, ...}: let
+  # only one monitor
+  mainMonitor = builtins.elemAt config.home.opts.bg.monitors 0;
+in {
   wayland.windowManager.hyprland.settings = {
     general = {
       border_size = 5;
@@ -12,12 +15,12 @@
       {
         enabled = true;
         name = "huion-huion-tablet_h1060p";
-        output = "eDP-1";
+        output = mainMonitor;
       }
     ];
 
     # external monitors for work
     # mirror laptop monitor
-    monitor = ["HDMI-A-2, 1920x1080, auto, 1, mirror, eDP-1"];
+    monitor = ["HDMI-A-2, 1920x1080, auto, 1, mirror, ${mainMonitor}"];
   };
 }
