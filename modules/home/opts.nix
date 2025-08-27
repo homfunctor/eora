@@ -47,6 +47,8 @@ in {
     # hyprpanel settings
     panelOpts = {
       onLogoutCmd = mkStrOpt "" "commands to run before logging out with hyprpanel";
+      onShutdownCmd = mkStrOpt "" "commands to run before shutting down with hyprpanel";
+
       fontSize = mkStrOpt "1.0rem" "hyprpanel button and bar font size";
       layouts = mkAttrOpt {} "user settings for hyprpanel layout";
       scale = let

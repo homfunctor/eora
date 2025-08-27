@@ -1,7 +1,4 @@
-{config, ...}: let
-  # only one monitor
-  mainMonitor = builtins.elemAt config.home.opts.bg.monitors 0;
-in {
+{config, ...}: {
   wayland.windowManager.hyprland.settings = {
     general = {
       border_size = 5;

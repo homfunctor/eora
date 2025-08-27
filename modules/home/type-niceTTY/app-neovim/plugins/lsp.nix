@@ -41,13 +41,15 @@ in {
 
     lspsaga = {
       enable = true;
-      lightbulb.enable = false;
-      outline.keys.jump = "<cr>";
-      scrollPreview = {
-        scrollDown = "<c-d>";
-        scrollUp = "<c-u>";
+      settings = {
+        lightbulb.enable = false;
+        outline.keys.jump = "<cr>";
+        scrollPreview = {
+          scrollDown = "<c-d>";
+          scrollUp = "<c-u>";
+        };
+        ui.border = "none";
       };
-      ui.border = "none";
     };
   };
 }
