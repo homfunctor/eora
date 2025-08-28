@@ -30,9 +30,9 @@
     };
 
     fontSizes = {
-      applications = 14;
-      desktop = 14;
-      popups = 14;
+      applications = 16;
+      desktop = 16;
+      popups = 16;
       terminal = 16;
     };
 

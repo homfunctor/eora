@@ -3,6 +3,6 @@
     gimp3
     inkscape
     kdePackages.kolourpaint
-    rnote
+    xournalpp
   ];
 }
