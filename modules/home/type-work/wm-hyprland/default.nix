@@ -30,7 +30,8 @@
         "uwsm finalize"
         "hyprctl setcursor"
         (flake.lib.uApp "${lib.getExe pkgs.networkmanagerapplet}")
-        "${pkgs.opentabletdriver}/bin/otd-daemon"
+        # temp hack until this gets fixed
+        "sudo rm -f /tmp/CoreFxPipe_OpenTabletDriver.* && ${pkgs.opentabletdriver}/bin/otd-daemon"
       ];
     };
     systemd.target = "graphical-session.target";

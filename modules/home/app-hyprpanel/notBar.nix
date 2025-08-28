@@ -11,7 +11,7 @@
     ;
 
   faceImg = "${inputs.sapadal}/assets/${userName}.png";
-  logoutCmd = ''${panelOpts.onLogoutCmd} loginctl terminate-user ""'';
+  logoutCmd = ''loginctl terminate-user ""'';
   rebootCmd = "systemctl reboot";
   shutdownCmd = "systemctl poweroff";
   sleepCmd = "systemctl suspend";

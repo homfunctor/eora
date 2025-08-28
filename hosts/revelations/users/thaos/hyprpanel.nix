@@ -8,10 +8,6 @@
   inherit (flake.lib) uApp;
 in {
   home.opts.panelOpts = {
-    # opentabletdriver tmp file work-around
-    onLogoutCmd = "rm -f /tmp/CoreFXPipe_OpenTabletDriver*;";
-    onShutdownCmd = "rm -f /tmp/CoreFXPipe_OpenTabletDriver*;";
-
     layouts = {
       "0" = {
         "left" = [

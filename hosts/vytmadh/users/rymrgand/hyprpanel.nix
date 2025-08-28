@@ -31,15 +31,15 @@ in {
 
     # todo: adjust
     scale = {
-      clock = 80;
-      dashboard = 80;
-      media = 80;
-      notification = 80;
-      notifications = 80;
-      osd = 80;
-      popover = 80;
-      power = 80;
-      volume = 80;
+      clock = 75;
+      dashboard = 75;
+      media = 75;
+      notification = 75;
+      notifications = 75;
+      osd = 75;
+      popover = 75;
+      power = 75;
+      volume = 75;
     };
 
     leftcuts = {

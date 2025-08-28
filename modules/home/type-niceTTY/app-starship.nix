@@ -1,3 +1,4 @@
+# todo: change time format
 {config, ...}: let
   colors = config.lib.stylix.colors.withHashtag;
 in {
