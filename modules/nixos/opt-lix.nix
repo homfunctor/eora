@@ -1,1 +1,1 @@
-{inputs, ...}: {imports = [inputs.lix-module.nixosModules.default];}
+{pkgs, ...}: {nix.package = pkgs.lixPackageSets.stable.lix;}

@@ -29,19 +29,6 @@
       url = "github:nix-community/lanzaboote";
     };
 
-    lix = {
-      flake = false;
-      url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
-    };
-
-    lix-module = {
-      inputs = {
-        lix.follows = "lix";
-        nixpkgs.follows = "nixpkgs";
-      };
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
-    };
-
     nix-gaming = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:fufexan/nix-gaming";
