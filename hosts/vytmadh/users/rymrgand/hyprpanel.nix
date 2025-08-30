@@ -17,8 +17,6 @@ in {
         "windowtitle"
       ];
       "middle" = [
-        "ram"
-        "cpu"
         "clock"
         "battery"
       ];
