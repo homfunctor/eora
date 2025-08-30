@@ -5,10 +5,9 @@
     ./app-baobab.nix
     ./app-gaming.nix
     ./app-ironyModManager.nix
+    ./app-media.nix
     ./app-nix-tools.nix
     ./app-nixcord.nix
-    ./app-strawberry.nix
-    ./app-yt-dlp.nix
     ./app-zipunicode.nix
   ];
 }

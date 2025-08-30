@@ -1,5 +1,9 @@
-# todo: settings, config
-{
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    soundconverter
+    strawberry
+  ];
+
   programs.yt-dlp = {
     enable = true;
     settings = {};
