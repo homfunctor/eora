@@ -31,6 +31,7 @@ in {
       tooltip = "celluloid";
     };
 
+    # i prefer this on laptop
     browser = {
       desktop = "vivaldi-stable";
       exe = getExe browser.pkg;

@@ -24,7 +24,6 @@
     type-personal
 
     # extra
-    app-pithos
   ];
 
   home.opts = {
