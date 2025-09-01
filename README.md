@@ -1,6 +1,6 @@
 <img width="1680" height="1044" alt="screenshot" src="https://github.com/user-attachments/assets/24a2fde4-b5b7-4630-8f4e-a6a01d140e00" />
 
-Uses Blueprint for a simple structure with minimal boilplate. Basic idea of my flake is: modules do the work of setting up the system (/nixos) and home (/home) with data provided by /hosts/"<host>" and /host/"<host>"/users/"<user>". I try to strictly keep all "moving parts" in /modules. I make no claim of originality in this approach.
+Uses Blueprint for a simple structure with minimal boilplate. Basic idea of my flake is: modules do the work of setting up the system (/nixos) and home (/home) with data provided by /hosts/hostName and /host/hostName/users/userName. I try to strictly keep all "moving parts" in /modules. I make no claim of originality in this approach.
 
 Features:
 private flake hosted on github with secrets (with sops-nix) and things I prefer to keep private. Yes, I know you can see my github username. That one was just a proof-of-concept.
