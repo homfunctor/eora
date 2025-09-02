@@ -24,6 +24,7 @@ in {
         "volume"
         "microphone"
         "systray"
+        "notifications"
       ];
     };
 
