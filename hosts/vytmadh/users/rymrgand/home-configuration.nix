@@ -37,6 +37,7 @@
       Books.enable = true;
       Fish.enable = true;
       Math.enable = true;
+      Misc.enable = true;
       Nix.enable = true;
       Rust.enable = true;
       Work.enable = true;
