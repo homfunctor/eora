@@ -25,7 +25,8 @@ in {
       "${mod}, C, exec, ${panelExe} t calendarmenu"
       "${mod}, N, exec, ${panelExe} t notificationsmenu"
       "${mod} SHIFT, N, exec, ${panelExe} clearNotifications"
-      "${mod}, P, exec, ${panelExe} restart"
+      #  does not work properly
+      # "${mod}, P, exec, ${panelExe} restart"
       "${mod}, X, exec, ${panelExe} t powerdropdownmenu"
       "${mod}, grave, exec, ${panelExe} t dashboardmenu"
 
