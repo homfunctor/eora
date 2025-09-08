@@ -23,9 +23,9 @@
       hinting.enable = true;
 
       defaultFonts = with config.stylix.fonts; {
-        monospace = [monospace.name "Noto Color Emoji"];
+        monospace = [monospace.name "Noto Color Emoji" "Liberation Serif"];
         sansSerif = [sansSerif.name "Noto Color Emoji"];
-        serif = [serif.name "Noto Color Emoji"];
+        serif = [serif.name "Noto Color Emoji" "Liberation Serif"];
       };
     };
 
