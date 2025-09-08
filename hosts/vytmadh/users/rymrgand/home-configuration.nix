@@ -17,6 +17,7 @@
     # work
     ./hyprpanel.nix
     ./hyprland.nix
+    app-nix-tools
     app-vivaldi
     app-zoom
     type-work

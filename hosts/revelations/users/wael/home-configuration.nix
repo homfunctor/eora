@@ -20,6 +20,7 @@
     type-work
 
     # personal
+    app-nix-tools
     app-vivaldi
     type-personal
 
