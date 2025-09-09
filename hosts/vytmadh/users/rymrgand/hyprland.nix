@@ -1,4 +1,4 @@
-{config, ...}: {
+_: {
   wayland.windowManager.hyprland.settings = {
     general = {
       border_size = 5;

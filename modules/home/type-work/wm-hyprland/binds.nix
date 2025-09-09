@@ -81,6 +81,7 @@ in {
       "${mod}, mouse:275, exec,  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       "${mod}, mouse:276, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
       ", PRINT, exec, ${uApp "${getExe pkgs.grimblast}"} --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
+      ", KEY_SYSRQ, exec, ${uApp "${getExe pkgs.grimblast}"} --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
 
       # unswallow/reswallow a window
       "${mod}, S, toggleswallow"

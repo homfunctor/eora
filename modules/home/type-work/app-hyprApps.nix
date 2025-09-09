@@ -12,10 +12,10 @@ in {
     hyprland-qtutils
     hyprpicker
     hyprsysteminfoPkg
+    showmethekey
     slurp
     wayland-protocols
     wayland-utils
-    wev
     wl-clipboard
     wlr-randr
   ];

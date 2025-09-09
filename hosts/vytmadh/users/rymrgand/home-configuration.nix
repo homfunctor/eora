@@ -21,6 +21,9 @@
     app-vivaldi
     app-zoom
     type-work
+
+    # temp
+    app-civ5-map-image
   ];
 
   home.opts = {
