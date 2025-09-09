@@ -23,18 +23,16 @@
       hinting.enable = true;
 
       defaultFonts = with config.stylix.fonts; {
-        monospace = [monospace.name "Noto Color Emoji" "Liberation Serif"];
+        monospace = [monospace.name "Noto Color Emoji"];
         sansSerif = [sansSerif.name "Noto Color Emoji"];
-        serif = [serif.name "Noto Color Emoji" "Liberation Serif"];
+        serif = [serif.name "Noto Color Emoji"];
       };
     };
 
-    # imperative step: copy liberation_ttf truetype fonts
+    # imperative step: copy fonts
     # to ~/.local/share/fonts and apply chmod 644
     packages = with pkgs; [
       font-awesome
-
-      liberation_ttf
       material-design-icons
       material-icons
       material-symbols
@@ -42,6 +40,7 @@
       nerd-fonts.iosevka
       nerd-fonts.jetbrains-mono # for hyprpanel
       nerd-fonts.symbols-only
+      nerd-fonts.tinos
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
