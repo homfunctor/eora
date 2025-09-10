@@ -3,6 +3,7 @@
   imports = [
     ./app-apotheosis.nix
     ./app-baobab.nix
+    ./app-civ5-map-image.nix
     ./app-gaming.nix
     ./app-ironyModManager.nix
     ./app-media.nix
