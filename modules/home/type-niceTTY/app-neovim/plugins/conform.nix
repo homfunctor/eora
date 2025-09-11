@@ -41,6 +41,7 @@ in {
           python = ["black"];
           rust = ["rustfmt"];
           sh = ["shfmt"];
+          sql = ["sqlfluff"];
           xml = ["xmlformat"];
           yaml = ["yamlfmt"];
         };
