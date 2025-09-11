@@ -31,7 +31,6 @@ in {
         python = ["basedpyright"];
         rust = ["clippy"];
         sh = ["shellcheck"];
-        sql = ["sqlfluff"];
         yaml = ["yamllint"];
       };
     };

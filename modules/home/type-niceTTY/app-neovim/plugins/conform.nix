@@ -11,7 +11,6 @@ in {
       black
       jq
       shfmt
-      sqlfluff
       stylua
       xmlformat
       yamlfmt
@@ -42,10 +41,10 @@ in {
           python = ["black"];
           rust = ["rustfmt"];
           sh = ["shfmt"];
-          sql = ["sqlfluff"];
           xml = ["xmlformat"];
           yaml = ["yamlfmt"];
         };
+
         notify_on_error = true;
       };
     };
