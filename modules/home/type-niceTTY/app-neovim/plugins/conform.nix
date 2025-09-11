@@ -11,6 +11,7 @@ in {
       black
       jq
       shfmt
+      sqlfluff
       stylua
       xmlformat
       yamlfmt
