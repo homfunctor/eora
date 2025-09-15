@@ -2,7 +2,6 @@
 {
   wayland.windowManager.hyprland.settings.animations = {
     enabled = "yes, please :)";
-    first_launch_animation = true;
 
     animation = [
       "border, 1, 10, emphasizedDecel"
