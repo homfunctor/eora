@@ -4,10 +4,9 @@
   ...
 }: {
   environment = {
-    systemPackages = with pkgs; [
-      freetype
-      smile
-    ];
+    # todo: i forgot why i added this
+    systemPackages = with pkgs; [freetype];
+
     variables.LOG_ICONS = "true";
   };
 
@@ -29,8 +28,9 @@
       };
     };
 
-    # imperative step: copy fonts
-    # to ~/.local/share/fonts and apply chmod 644
+    # imperative step: copy fonts to ~/.local/share/fonts and apply chmod 644
+    # this is needed for onlyoffice and maybe others
+    # todo: declarative way
     packages = with pkgs; [
       font-awesome
       material-design-icons
@@ -40,7 +40,7 @@
       nerd-fonts.iosevka
       nerd-fonts.jetbrains-mono # for hyprpanel
       nerd-fonts.symbols-only
-      nerd-fonts.tinos
+      nerd-fonts.tinos # liberation_ttf gave me issues with latexmk
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
