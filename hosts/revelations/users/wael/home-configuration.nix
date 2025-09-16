@@ -25,6 +25,7 @@
     type-personal
 
     # extra
+    app-civ5-map-image
   ];
 
   home.opts = {
