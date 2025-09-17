@@ -17,7 +17,7 @@
 
     # extras
     # app-nix-ld
-    # opt-lix
+    opt-lix
     opt-rust
   ];
 
