@@ -13,6 +13,15 @@ in {
 
         settings = {
           compiler_method = "latexmk";
+          compiler_latexmk = {
+            options = [
+              "-pdf"
+              "-shell-escape"
+              "-file-line-error"
+              "-synctex=1"
+              "-interaction=nonstopmode"
+            ];
+          };
           complete_close_braces = true;
           complete_enabled = true;
           complete_ignore_case = 1;
@@ -37,6 +46,7 @@ in {
         aux_dir = ".build",
         options = {
           "-lualatex",
+          "-verbose",
           "-file-line-error",
           "-synctex=1",
           "-interaction=nonstopmode",

@@ -439,11 +439,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1758078672,
-        "narHash": "sha256-EvJcfgpIfTxw7NdVeUWCtgaNcGHzBAfjo4JlexzOxpk=",
+        "lastModified": 1758119172,
+        "narHash": "sha256-LnVuGLf0PJHqqIHroxEzwXS57mjAdHSrXi0iODKbbiU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "ec73c06d34859ed01e2ce0e15d5972b4dd539694",
+        "rev": "9f408dc51c8e8216a94379e6356bdadbe8b4fef9",
         "type": "github"
       },
       "original": {
@@ -661,11 +661,11 @@
     "lix": {
       "flake": false,
       "locked": {
-        "lastModified": 1758045967,
-        "narHash": "sha256-8oOUa6vFoI0LzfgBLPNf10Z1W7LzEwZ+EVFBVFl/k1w=",
-        "rev": "a9f28622c8c6ced79afdf164bbdd81c26dacfd4d",
+        "lastModified": 1758126409,
+        "narHash": "sha256-RkqywRKSg1Dq0fgtiMCiMjfbCBiqfXsLSVMLKhCiL80=",
+        "rev": "0018b988597f7e5fa482e3a77e3d6b539c146ed4",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/a9f28622c8c6ced79afdf164bbdd81c26dacfd4d.tar.gz"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/0018b988597f7e5fa482e3a77e3d6b539c146ed4.tar.gz?rev=0018b988597f7e5fa482e3a77e3d6b539c146ed4"
       },
       "original": {
         "type": "tarball",
@@ -688,7 +688,7 @@
         "narHash": "sha256-IgD1JR7scSEwlK/YAbmrcTWpAYT30LPldCUHdzXkaMs=",
         "rev": "3f09a5eb772e02d98bb8878ab687d5b721f00d16",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/nixos-module/archive/3f09a5eb772e02d98bb8878ab687d5b721f00d16.tar.gz"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/nixos-module/archive/3f09a5eb772e02d98bb8878ab687d5b721f00d16.tar.gz?rev=3f09a5eb772e02d98bb8878ab687d5b721f00d16"
       },
       "original": {
         "type": "tarball",
@@ -882,11 +882,11 @@
         "systems": "systems_5"
       },
       "locked": {
-        "lastModified": 1758061611,
-        "narHash": "sha256-WJJDjNu80dWMSlpexhgRybPsvwl8C2tPwT6yM918Tsg=",
+        "lastModified": 1758134550,
+        "narHash": "sha256-Rj0v5VZuljxG4trz3IHJedEKghNDd1HsK6yVwTNPyJ0=",
         "owner": "nix-community",
         "repo": "nixvim",
-        "rev": "7f45eae65baa38d77d09e0fcf5bfeab6c0f733c0",
+        "rev": "0c867f9e635ce70e829a562b20851cfc17a94196",
         "type": "github"
       },
       "original": {
