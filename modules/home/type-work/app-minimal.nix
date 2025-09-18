@@ -11,7 +11,7 @@
     loupe
     mission-center
     nemo-with-extensions
+    nwg-displays
     papers
-    wdisplays
   ];
 }
