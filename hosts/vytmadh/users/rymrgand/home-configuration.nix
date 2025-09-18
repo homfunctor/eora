@@ -2,6 +2,7 @@
   flake,
   inputs,
   osConfig,
+  pkgs,
   ...
 }: {
   imports = with flake.modules.home; [
@@ -45,4 +46,12 @@
       Work.enable = true;
     };
   };
+
+  # temp to deal with external monitor issue will
+  # implement whatever works in modules/home/type-work/
+  home.packages = with pkgs; [
+    nwg-displays
+    way-displays
+    wdisplays
+  ];
 }
