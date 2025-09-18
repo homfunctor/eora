@@ -1,3 +1,5 @@
+# todo: revise
+# todo: deal with strange font bug
 {
   config,
   lib,
