@@ -23,8 +23,8 @@ in {
       ];
 
       general = {
-        disable_loading_bar = true;
-        grace = 2;
+        # disable_loading_bar = true;
+        # grace = 2;
         hide_cursor = true;
       };
 
@@ -36,7 +36,7 @@ in {
           dots_spacing = 0.2;
           fade_on_empty = true;
           fade_timeout = 1000;
-          fail_transition = 300;
+          # fail_transition = 300;
           font_color = "rgb(${base05})";
           halign = "center";
           hide_input = false;

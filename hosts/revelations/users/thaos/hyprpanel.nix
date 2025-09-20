@@ -42,21 +42,21 @@ in {
         ];
       };
 
-      "2" = {
-        "left" = [
-          "workspaces"
-          "windowtitle"
-        ];
-        "middle" = [
-          "clock"
-        ];
-        "right" = [
-          "volume"
-          "microphone"
-          "systray"
-          "power"
-        ];
-      };
+      # "2" = {
+      #   "left" = [
+      #     "workspaces"
+      #     "windowtitle"
+      #   ];
+      #   "middle" = [
+      #     "clock"
+      #   ];
+      #   "right" = [
+      #     "volume"
+      #     "microphone"
+      #     "systray"
+      #     "power"
+      #   ];
+      # };
     };
 
     scale = {

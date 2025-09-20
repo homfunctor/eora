@@ -30,9 +30,19 @@
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
     bg = {
-      monitors = ["DP-1" "DP-2" "DP-3"];
-      resolutions = ["1680x1050" "1920x1080" "1366x768"];
-      xy = ["0x0" "1680x120" "0x1050"];
+      # temp: middle monitor broke
+      monitors = [
+        "DP-1"
+        "DP-2"
+      ];
+      resolutions = [
+        "1366x768"
+        "1680x1050"
+      ];
+      xy = [
+        "0x700"
+        "1366x0"
+      ];
     };
 
     fontSizes = {

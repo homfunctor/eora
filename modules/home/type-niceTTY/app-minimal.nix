@@ -3,6 +3,7 @@
     choose
     erdtree
     fclones
+    killall
     pastel
     procs
     rm-improved

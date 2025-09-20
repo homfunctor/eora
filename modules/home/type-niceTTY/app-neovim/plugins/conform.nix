@@ -10,7 +10,9 @@ in {
     home.packages = with pkgs; [
       black
       jq
+      python313Packages.sqlparse
       shfmt
+      sqls
       stylua
       xmlformat
       yamlfmt
@@ -27,6 +29,26 @@ in {
           timeoutMs = 500;
         };
 
+        formatters = {
+          sqlformat = {
+            args = [
+              "--reindent"
+              "--keywords"
+              "upper"
+              "--identifiers"
+              "upper"
+              "--use_space_around_operators"
+              "--wrap_after"
+              "80"
+              "--indent_width"
+              "2"
+              "-"
+            ];
+            command = "sqlformat";
+            stdin = true;
+          };
+        };
+
         formatters_by_ft = {
           "_" = [
             "squeeze_blanks"
@@ -41,6 +63,7 @@ in {
           python = ["black"];
           rust = ["rustfmt"];
           sh = ["shfmt"];
+          sql = ["sqlformat"];
           xml = ["xmlformat"];
           yaml = ["yamlfmt"];
         };
