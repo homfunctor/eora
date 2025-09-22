@@ -30,6 +30,8 @@
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
     bg = {
+      # number of workspaces per monitor
+      nWS = 2;
       # temp: middle monitor broke
       monitors = [
         "DP-1"

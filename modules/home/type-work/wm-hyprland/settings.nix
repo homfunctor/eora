@@ -92,9 +92,9 @@ in {
         )
         xy;
 
-      # assign 2 workspaces per monitor (not consecutive)
+      # assign bg.nWS workspaces per monitor (not consecutive)
       workspace = let
-        num = lib.range 1 ((lib.length bg.monitors) * 2);
+        num = lib.range 1 ((lib.length bg.monitors) * bg.nWS);
         mon = bg.monitors ++ bg.monitors;
       in
         zipListsWith (n: m: "${toString n}, monitor:${m}") num mon

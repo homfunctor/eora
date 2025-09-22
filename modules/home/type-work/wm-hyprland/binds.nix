@@ -1,3 +1,4 @@
+# todo: automate the workspace binds
 {
   config,
   flake,
@@ -89,18 +90,18 @@ in {
       # workspaces
       "${mod}, 1, workspace, 1"
       "${mod}, 2, workspace, 2"
-      # "${mod}, 3, workspace, 3"
+      "${mod}, 3, workspace, 3"
       "${mod} SHIFT, 1, workspace, 4"
       "${mod} SHIFT, 2, workspace, 5"
-      # "${mod} SHIFT, 3, workspace, 6"
+      "${mod} SHIFT, 3, workspace, 6"
 
       # moving windows to workspaces
       "${mod} CTRL, 1, movetoworkspacesilent, 1"
       "${mod} CTRL, 2, movetoworkspacesilent, 2"
-      # "${mod} CTRL, 3, movetoworkspacesilent, 3"
+      "${mod} CTRL, 3, movetoworkspacesilent, 3"
       "${mod} SHIFT CTRL, 1, movetoworkspacesilent, 4"
       "${mod} SHIFT CTRL, 2, movetoworkspacesilent, 5"
-      # "${mod} SHIFT CTRL, 3, movetoworkspacesilent, 6"
+      "${mod} SHIFT CTRL, 3, movetoworkspacesilent, 6"
     ];
 
     bindl = [

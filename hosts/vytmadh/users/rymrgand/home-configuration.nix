@@ -31,7 +31,7 @@
     app-math.latex.enable = true;
 
     bg = {
-      inherit (osConfig.nixos.opts.bg) monitors resolutions xy;
+      inherit (osConfig.nixos.opts.bg) monitors nWS resolutions xy;
       files = ["${inputs.sapadal}/assets/whitemarch.png"];
     };
 

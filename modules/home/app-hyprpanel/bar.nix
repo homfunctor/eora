@@ -142,7 +142,7 @@ in {
       workspaceIconMap = {
         "vivaldi-stable" = "";
       };
-      workspaces = (lib.length bg.monitors) * 2;
+      workspaces = (lib.length bg.monitors) * bg.nWS;
     };
   };
 }
