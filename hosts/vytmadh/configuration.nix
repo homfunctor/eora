@@ -57,4 +57,11 @@
     adminUser = "rymrgand";
     userNames = [adminUser];
   };
+
+  services.libinput.touchpad = {
+    horizontalScrolling = true;
+    naturalScrolling = true;
+    # thinkpad has nice red button and triple buttons. touchpad is pointless.
+    tapping = false;
+  };
 }

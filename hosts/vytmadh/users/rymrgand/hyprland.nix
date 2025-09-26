@@ -8,6 +8,19 @@ _: {
       resize_on_border = true;
     };
 
+    input = {
+      touchpad = {
+        disable_while_typing = true;
+        natural_scroll = 1;
+        # dedicated buttons exist
+        clickfinger_behavior = 0;
+        tap-to-click = 0;
+        # dedicated middle button exists
+        middle_button_emulation = 0;
+      };
+      # sometimes have access to a touchscreen
+      touchdevice.enabled = true;
+    };
     # external monitors for work
     # mirror laptop monitor
     monitor = ["HDMI-A-2, preferred, auto, 1, mirror, eDP-1"];

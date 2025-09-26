@@ -7,7 +7,6 @@
       "org/freedesktop/appearance".color-scheme = 1;
 
       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
-      "org/gnome/desktop/peripherals/touchpad".send-events = "disabled";
       "org/gnome/desktop/privacy".remember-recent-files = false;
 
       # "org/gnome/nautilus/icon-view".default-zoom-level = "small-plus";
