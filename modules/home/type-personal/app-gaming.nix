@@ -6,6 +6,7 @@
   imports = [inputs.sapadal.modules.home.private-apps];
 
   home.packages = with pkgs; [
+    hashdeep
     heroic
     ludusavi
     lutris
