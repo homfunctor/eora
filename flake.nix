@@ -75,9 +75,7 @@
 
     stylix = {
       inputs.nixpkgs.follows = "nixpkgs";
-      # url = "github:danth/stylix";
-      # temp: fix for base16 nixvim
-      url = "github:danth/stylix?ref=081cacf9bc0b92c4c2a89d3f557f388ad12302b0";
+      url = "github:danth/stylix";
     };
 
     treefmt-nix = {
