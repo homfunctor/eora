@@ -18,8 +18,6 @@ _: {
         # dedicated middle button exists
         middle_button_emulation = 0;
       };
-      # sometimes have access to a touchscreen
-      touchdevice.enabled = true;
     };
     # external monitors for work
     # mirror laptop monitor
