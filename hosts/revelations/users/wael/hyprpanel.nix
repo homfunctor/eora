@@ -9,6 +9,7 @@
 in {
   home.opts.panelOpts = {
     layouts = {
+      # DP-1
       "0" = {
         "left" = [
           "dashboard"
@@ -28,7 +29,8 @@ in {
         ];
       };
 
-      "1" = {
+      # HDMI-A-1
+      "2" = {
         "left" = [
           "dashboard"
           "workspaces"
@@ -48,7 +50,8 @@ in {
         ];
       };
 
-      "2" = {
+      # DP-3
+      "1" = {
         "left" = [
           "workspaces"
           "windowtitle"

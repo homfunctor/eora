@@ -9,6 +9,7 @@
 in {
   home.opts.panelOpts = {
     layouts = {
+      # DP-1
       "0" = {
         "left" = [
           "dashboard"
@@ -25,13 +26,15 @@ in {
         ];
       };
 
-      "1" = {
+      # HDMI-A-1
+      "2" = {
         "left" = [
           "dashboard"
           "workspaces"
           "windowtitle"
         ];
         "middle" = [
+          "cpu"
           "clock"
         ];
         "right" = [
@@ -42,21 +45,22 @@ in {
         ];
       };
 
-      # "2" = {
-      #   "left" = [
-      #     "workspaces"
-      #     "windowtitle"
-      #   ];
-      #   "middle" = [
-      #     "clock"
-      #   ];
-      #   "right" = [
-      #     "volume"
-      #     "microphone"
-      #     "systray"
-      #     "power"
-      #   ];
-      # };
+      # DP-3
+      "1" = {
+        "left" = [
+          "workspaces"
+          "windowtitle"
+        ];
+        "middle" = [
+          "clock"
+        ];
+        "right" = [
+          "volume"
+          "microphone"
+          "systray"
+          "power"
+        ];
+      };
     };
 
     scale = {
