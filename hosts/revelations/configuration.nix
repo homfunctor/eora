@@ -22,7 +22,7 @@
     # extras
     app-nix-ld
     chaotic-kernel
-    opt-lix
+    # opt-lix
     opt-rust
     opt-vm
   ];
@@ -32,18 +32,20 @@
     bg = {
       # number of workspaces per monitor
       nWS = 2;
-      # temp: middle monitor broke
       monitors = [
         "DP-1"
-        "DP-2"
+        "HDMI-A-1"
+        "DP-3"
       ];
       resolutions = [
-        "1366x768"
         "1680x1050"
+        "1920x1080"
+        "1366x768"
       ];
       xy = [
-        "0x700"
-        "1366x0"
+        "287x0"
+        "1967x220"
+        "0x1050"
       ];
     };
 
