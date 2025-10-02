@@ -1,10 +1,14 @@
 # unused values are commented out
 # todo: adjust colors further
-{config, ...}: let
+{
+  config,
+  lib,
+  ...
+}: let
   colors = config.lib.stylix.colors.withHashtag;
 in {
-  programs.hyprpanel.settings.theme = with colors; {
-    bar = {
+  programs.hyprpanel.settings.theme = lib.mkForce {
+    bar = with colors; {
       background = "${base01}";
       # border.color = "${base07}";
 
@@ -675,7 +679,7 @@ in {
       };
     };
 
-    notification = {
+    notification = with colors; {
       actions = {
         background = "${base00}";
         text = "${base04}";
@@ -695,7 +699,7 @@ in {
       time = "${base0D}";
     };
 
-    osd = {
+    osd = with colors; {
       bar_color = "${base07}";
       bar_container = "${base02}";
       bar_empty_color = "${base02}";

@@ -1,8 +1,12 @@
-{config, ...}: let
+{
+  config,
+  lib,
+  ...
+}: let
   inherit (config.home.opts) panelOpts;
   fontName = config.stylix.fonts.sansSerif.name;
 in {
-  programs.hyprpanel.settings.theme = {
+  programs.hyprpanel.settings.theme = lib.mkForce {
     bar = {
       border_radius = "0em";
       dropdownGap = "2.1em";
