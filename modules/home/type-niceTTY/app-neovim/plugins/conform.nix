@@ -10,6 +10,7 @@ in {
     home.packages = with pkgs; [
       black
       jq
+      prettierd
       python313Packages.sqlparse
       shfmt
       sqls
@@ -59,6 +60,7 @@ in {
           fish = ["fish_indent"];
           json = ["jq"];
           lua = ["stylua"];
+          markdown = ["prettierd" "prettier"];
           nix = ["alejandra"];
           python = ["black"];
           rust = ["rustfmt"];
