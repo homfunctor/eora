@@ -11,6 +11,7 @@
     "noice"
     "nvim-surround"
     "precognition"
+    "render-markdown"
     "rustaceanvim"
     "smartcolumn"
     "snacks"

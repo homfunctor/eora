@@ -10,6 +10,7 @@
     ./lint.nix
     ./lsp.nix
     ./lualine.nix
+    ./render-markdown.nix
     ./mini-indentscope.nix
     ./mini-notify.nix
     ./mini.nix
