@@ -7,6 +7,7 @@
 }: let
   colors = config.lib.stylix.colors.withHashtag;
 in {
+  # override stylix
   programs.hyprpanel.settings.theme = lib.mkForce {
     bar = with colors; {
       background = "${base01}";

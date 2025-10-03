@@ -10,6 +10,7 @@ in {
     home.packages = with pkgs; [
       jsonfmt
       lua54Packages.luacheck
+      markdownlint-cli
       shellcheck
       yamllint
     ];
