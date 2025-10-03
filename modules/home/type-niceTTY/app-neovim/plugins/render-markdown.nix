@@ -62,18 +62,23 @@ in {
       keymaps = [
         {
           key = "<leader>mr";
-          action = "<cmd>MarkdownRenderToggle<cr>";
+          action = "<cmd>MarkdownRender<cr>";
           options.desc = "Toggle markdown rendering";
         }
         {
-          key = "<leader>mf";
-          action = "<cmd>MarkdownRenderFocus<cr>";
-          options.desc = "Focus markdown render window";
+          key = "<leader>mR";
+          action = "<cmd>MarkdownRenderStop<cr>";
+          options.desc = "Stop markdown rendering";
         }
         {
           key = "<leader>mu";
           action = "<cmd>MarkdownRenderUpdate<cr>";
           options.desc = "Update markdown render";
+        }
+        {
+          key = "<leader>ms";
+          action = "<cmd>MarkdownRenderSync<cr>";
+          options.desc = "Sync scroll position";
         }
       ];
 
