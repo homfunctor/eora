@@ -9,54 +9,53 @@
   cfg = config.home.opts.nvim.plugins.render-markdown;
 in {
   config = lib.mkIf cfg.enable {
-    home.packages = [pkgs.marksman];
+    home.packages = with pkgs; [
+      marksman
+      python312Packages.pylatexenc
+    ];
     programs.nixvim = {
       plugins.render-markdown = {
         enable = true;
         settings = {
-          render = {
-            filetypes = ["markdown"];
-            highlights = {
-              code_block = {
-                background = "none";
-                blend = 0;
-              };
+          filetypes = ["markdown"];
+          highlights = {
+            code_block = {
+              background = "none";
+              blend = 0;
+            };
 
-              link = {
-                underline = true;
-                italic = true;
-              };
+            link = {
+              underline = true;
+              italic = true;
             };
           };
 
-          ui = {
-            toggle = {
+          toggle = {
+            enabled = true;
+            keymap = {
+              focus = "<leader>mf";
+              toggle = "<leader>mr";
+              update = "<leader>mu";
+            };
+          };
+
+          window = {
+            border = "single";
+            width = 80;
+            height = 20;
+          };
+
+          sync_scroll = {
+            enabled = true;
+            mode = "relative";
+          };
+
+          performance = {
+            debounce = {
               enabled = true;
-              keymap = {
-                focus = "<leader>mf";
-                toggle = "<leader>mr";
-                update = "<leader>mu";
-              };
+              milliseconds = 50;
             };
-
-            window = {
-              border = "single";
-              width = 80;
-              height = 20;
-            };
-
-            sync_scroll = {
-              enabled = true;
-              mode = "relative";
-            };
-
-            performance = {
-              debounce = {
-                enabled = true;
-                milliseconds = 50;
-              };
-              max_file_size = 1024 * 100;
-            };
+            max_file_size = 1024 * 100;
           };
         };
       };
