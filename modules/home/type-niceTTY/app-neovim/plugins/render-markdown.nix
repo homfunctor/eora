@@ -18,8 +18,6 @@ in {
         enable = true;
         settings = {
           heading = {
-            border_virtual = true;
-            position = "overlay";
             border = true;
             icons = [
               "1 "
