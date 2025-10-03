@@ -12,6 +12,7 @@
     "mini-notify"
     "nvim-surround"
     "precognition"
+    "render-markdown"
     "rustaceanvim"
     "smartcolumn"
     "treesitter"
