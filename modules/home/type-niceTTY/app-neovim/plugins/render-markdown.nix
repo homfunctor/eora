@@ -17,7 +17,22 @@ in {
       plugins.render-markdown = {
         enable = true;
         settings = {
+          heading = {
+            border_virtual = true;
+            position = "overlay";
+            border = true;
+            icons = [
+              "1 "
+              "2 "
+              "3 "
+              "4 "
+              "5 "
+              "6 "
+            ];
+          };
+
           filetypes = ["markdown"];
+
           highlights = {
             code_block = {
               background = "none";
