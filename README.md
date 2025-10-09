@@ -29,11 +29,10 @@ uses a layered system. first layer is
 
 type-minimal: bare-minimum installation for booting into after installation
 
-type-nicerTTY: applied over the previous type layer. a nicer tty with stylix theming, neovim, starship, fish. 
+type-nicerTTY: applied over the previous type layer. a nicer tty with stylix theming, neovim, fish.
 
-type-work: hyprland and all the stuff I need for work. aside from optional features, work laptop and work user on main pc stop here. autologins as I already enter a password to decrypt the drive. custom code i cobbled together to manually unlock gnome-keyring on autologin. logging out from hyprland leads to cosmic-greeter, which i chose because it looks nice. over-complicated code manages the backgrounds for cosmic-greeter. 
+type-work: hyprland and all the stuff I need for work. aside from optional features, work laptop and work user on main pc stop here. autologins as I already enter a password to decrypt the drive. custom code i cobbled together to manually unlock gnome-keyring on autologin. logging out from hyprland leads to tuigreet
 
 type-personal: gaming, other goodies. only for main user of personal pc.
 
 warning: i am a mathematician. therefore i cannot program. plagiarize my plagiarism with caution.
-
