@@ -38,5 +38,8 @@
     ls = "eza -G -x --color=always --icons=always";
     n = "neovide";
     yz = "yazi .";
+
+    # useful when making mods
+    modsums = "hashdeep -l -r -c md5 */ | awk -F, 'NR>4 {print $2 \"  \" $3}'";
   };
 }
