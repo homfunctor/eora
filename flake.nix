@@ -47,7 +47,9 @@
     # temp 2025-10-08
     nixpkgs.url = "github:nixos/nixpkgs?ref=7df7ff7d8e00218376575f0acdcc5d66741351ee";
 
-    nixvim.url = "github:nix-community/nixvim";
+    # nixvim.url = "github:nix-community/nixvim";
+    # temp 2025-10-10
+    nixvim.url = "github:nix-community/nixvim?ref=57006a3ace4a3c889ab61b70fd5d8b197de8314e";
 
     rust-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";
