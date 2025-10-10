@@ -7,7 +7,6 @@
   imports = [
     ./animations.nix
     ./binds.nix
-    # ./cosmic-greeter.nix
     ./env.nix
     ./hypridle.nix
     ./hyprlock.nix
