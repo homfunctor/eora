@@ -43,13 +43,9 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # temp 2025-10-08
-    nixpkgs.url = "github:nixos/nixpkgs?ref=7df7ff7d8e00218376575f0acdcc5d66741351ee";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # nixvim.url = "github:nix-community/nixvim";
-    # temp 2025-10-10
-    nixvim.url = "github:nix-community/nixvim?ref=57006a3ace4a3c889ab61b70fd5d8b197de8314e";
+    nixvim.url = "github:nix-community/nixvim";
 
     rust-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";
