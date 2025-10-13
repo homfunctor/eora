@@ -17,6 +17,10 @@ in {
       plugins.render-markdown = {
         enable = true;
         settings = {
+          dash = {
+            enabled = true;
+            width = 100;
+          };
           heading = {
             border = true;
             icons = [

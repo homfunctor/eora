@@ -10,13 +10,13 @@
     ./lint.nix
     ./lsp.nix
     ./lualine.nix
-    ./render-markdown.nix
     ./mini-indentscope.nix
     ./mini-notify.nix
     ./mini.nix
     ./noice.nix
     ./nvim-surround.nix
     ./precognition.nix
+    ./render-markdown.nix
     ./rustaceanvim.nix
     ./smartcolumn.nix
     ./snacks.nix
