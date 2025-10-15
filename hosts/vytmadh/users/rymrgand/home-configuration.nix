@@ -1,6 +1,7 @@
 {
   flake,
   inputs,
+  lib,
   osConfig,
   ...
 }: {
@@ -44,4 +45,7 @@
       Work.enable = true;
     };
   };
+
+  # todo: add option to opts
+  programs.hyprlock.settings.background.path = lib.mkForce "${inputs.sapadal}/assets/durinsgate.jpg";
 }
