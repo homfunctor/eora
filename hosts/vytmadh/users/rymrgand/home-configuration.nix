@@ -31,7 +31,7 @@
 
     bg = {
       inherit (osConfig.nixos.opts.bg) monitors nWS resolutions xy;
-      files = ["${inputs.sapadal}/assets/duringate.png"];
+      files = ["${inputs.sapadal}/assets/durinsgate.jpg"];
     };
 
     sync.folder = {
