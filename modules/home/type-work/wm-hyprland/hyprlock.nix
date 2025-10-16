@@ -18,7 +18,8 @@ in {
       background = [
         {
           monitor = "";
-          path = "${inputs.sapadal}/assets/base.png";
+          # Speak "Friend" and enter.
+          path = "${inputs.sapadal}/assets/durinsgate.jpg";
         }
       ];
 
@@ -60,7 +61,7 @@ in {
           font_size = 28;
           halign = "center";
           monitor = mainMonitor;
-          position = "90, 450";
+          position = "0, 450";
           text = ''
             cmd[update:1000] echo -e "$(date +"%A, %B %d")"
           '';
@@ -72,7 +73,7 @@ in {
           font_size = 160;
           halign = "center";
           monitor = mainMonitor;
-          position = "90, 320";
+          position = "0, 320";
           text = ''
             cmd[update:1000] echo "<span>$(date +"%I:%M %P")</span>"
           '';

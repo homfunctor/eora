@@ -45,12 +45,4 @@
       Work.enable = true;
     };
   };
-
-  # todo: add option to opts
-  programs.hyprlock.settings.background = [
-    {
-      monitor = "";
-      path = lib.mkForce "${inputs.sapadal}/assets/durinsgate.jpg";
-    }
-  ];
 }
