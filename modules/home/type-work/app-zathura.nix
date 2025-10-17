@@ -1,4 +1,3 @@
-# todo: configure and setup for usage with vimtex
 {
   lib,
   config,

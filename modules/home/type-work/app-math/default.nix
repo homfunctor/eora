@@ -1,4 +1,3 @@
-# todo: what else is out there?
 {
   imports = [
     ./geogebra.nix

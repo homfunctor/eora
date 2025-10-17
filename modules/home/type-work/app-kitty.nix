@@ -1,4 +1,3 @@
-# todo: explore kitty settings
 {config, ...}: {
   programs.kitty = {
     enable = true;

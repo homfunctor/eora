@@ -1,5 +1,4 @@
-# todo: revise
-# todo: deal with strange font bug
+# todo: setup auto-close environments
 {
   config,
   lib,

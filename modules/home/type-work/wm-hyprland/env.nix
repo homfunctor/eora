@@ -1,4 +1,3 @@
-# todo: look for redundancies
 # already set:
 #   XDG_RUNTIME_DIR = "/run/user/$UID";
 #   DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$UID/bus";

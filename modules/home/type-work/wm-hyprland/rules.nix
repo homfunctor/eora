@@ -1,4 +1,3 @@
-# todo: re-organize
 {config, ...}: let
   inherit (config.home.opts) apps;
 in {

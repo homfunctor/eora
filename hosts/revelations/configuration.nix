@@ -22,7 +22,6 @@
     # extras
     app-nix-ld
     chaotic-kernel
-    # todo: switch to other version of lix
     opt-lix
     opt-rust
     opt-vm

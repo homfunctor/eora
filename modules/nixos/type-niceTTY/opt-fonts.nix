@@ -3,12 +3,7 @@
   pkgs,
   ...
 }: {
-  environment = {
-    # todo: i forgot why i added this
-    systemPackages = with pkgs; [freetype];
-
-    variables.LOG_ICONS = "true";
-  };
+  environment.variables.LOG_ICONS = "true";
 
   fonts = {
     enableDefaultPackages = true;
@@ -29,8 +24,7 @@
     };
 
     # imperative step: copy fonts to ~/.local/share/fonts and apply chmod 644
-    # this is needed for onlyoffice and maybe others
-    # todo: declarative way
+    # this is needed for onlyoffice and latex compiling
     packages = with pkgs; [
       font-awesome
       material-design-icons
