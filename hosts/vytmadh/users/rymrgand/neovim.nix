@@ -4,6 +4,7 @@
     "bufferline"
     "colorizer"
     "conform"
+    "leap"
     "lint"
     "lsp"
     "lualine"

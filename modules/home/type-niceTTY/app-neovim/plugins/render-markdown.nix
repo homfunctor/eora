@@ -16,52 +16,52 @@ in {
     programs.nixvim = {
       plugins.render-markdown = {
         enable = true;
-        settings = {
-          heading = {
-            border = true;
-            icons = [
-              "1 "
-              "2 "
-              "3 "
-              "4 "
-              "5 "
-              "6 "
-            ];
-          };
-
-          filetypes = ["markdown"];
-
-          highlights = {
-            code_block = {
-              background = "none";
-              blend = 0;
-            };
-
-            link = {
-              underline = true;
-              italic = true;
-            };
-          };
-
-          window = {
-            border = "single";
-            width = 80;
-            height = 20;
-          };
-
-          sync_scroll = {
-            enabled = true;
-            mode = "relative";
-          };
-
-          performance = {
-            debounce = {
-              enabled = true;
-              milliseconds = 50;
-            };
-            max_file_size = 1024 * 100;
-          };
-        };
+        # settings = {
+        #   heading = {
+        #     border = true;
+        #     icons = [
+        #       "1 "
+        #       "2 "
+        #       "3 "
+        #       "4 "
+        #       "5 "
+        #       "6 "
+        #     ];
+        #   };
+        #
+        #   filetypes = ["markdown"];
+        #
+        #   highlights = {
+        #     code_block = {
+        #       background = "none";
+        #       blend = 0;
+        #     };
+        #
+        #     link = {
+        #       underline = true;
+        #       italic = true;
+        #     };
+        #   };
+        #
+        #   window = {
+        #     border = "single";
+        #     width = 80;
+        #     height = 20;
+        #   };
+        #
+        #   sync_scroll = {
+        #     enabled = true;
+        #     mode = "relative";
+        #   };
+        #
+        #   performance = {
+        #     debounce = {
+        #       enabled = true;
+        #       milliseconds = 50;
+        #     };
+        #     max_file_size = 1024 * 100;
+        #   };
+        # };
       };
 
       autoCmd = [

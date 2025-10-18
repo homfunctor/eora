@@ -46,14 +46,19 @@
       shiftwidth = 2;
       smartindent = true;
 
-      # smart indenting
-      breakindent = true;
-
       # incremental searching
       hlsearch = true;
       incsearch = true;
 
-      # text wrap
+      # text stuff
+      breakindent = true;
+      formatoptions = "tcroqnl";
+      linebreak = true;
+      showbreak = "↳ ";
+      spell = true;
+      spelllang = ["en_us"];
+      textwidth = 80;
+      whichwrap = "h,l,<,>,[,]";
       wrap = true;
 
       # split below and right
@@ -100,8 +105,9 @@
       pumblend = 100;
       pumheight = 10;
       ruler = false;
-      scrolloff = 2;
+      scrolloff = 8;
       showmode = false;
+      sidescrolloff = 8;
       signcolumn = "yes";
       winblend = 100;
 

@@ -7,6 +7,7 @@
     ./colorizer.nix
     ./conform.nix
     ./illuminate.nix
+    ./leap.nix
     ./lint.nix
     ./lsp.nix
     ./lualine.nix
