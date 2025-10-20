@@ -23,8 +23,15 @@
       };
     };
 
-    # imperative step: copy fonts to ~/.local/share/fonts and apply chmod 644
-    # this is needed for onlyoffice and latex compiling
+    # for onlyoffice:
+    # z /nix/store/*-nerd-fonts-tinos*/share/fonts/truetype
+    # cp -r * ~/.local/share/fonts
+    #
+    # for lualatex:
+    # black magick rituals. honestly don't know but the following has worked:
+    # luaotfload-tool --update --force
+    # and repeated attempts to compile
+    # also do the above for iosevka as well
     packages = with pkgs; [
       font-awesome
       material-design-icons
