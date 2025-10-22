@@ -52,12 +52,11 @@
 
       # text stuff
       breakindent = true;
-      formatoptions = "tcroqnl";
+      formatoptions = "croql";
       linebreak = true;
       showbreak = "↳ ";
       spell = true;
       spelllang = ["en_us"];
-      textwidth = 80;
       whichwrap = "h,l,<,>,[,]";
       wrap = true;
 
@@ -118,6 +117,20 @@
       encoding = "utf-8";
       fileencoding = "utf-8";
     };
+
+    autoCmd = [
+      {
+        event = "FileType";
+        pattern = ["text" "markdown"];
+        command = "setlocal formatoptions-=t formatoptions-=n textwidth=0";
+      }
+
+      {
+        event = "TextYankPost";
+        pattern = "*";
+        command = "lua vim.highlight.on_yank{timeout=500}";
+      }
+    ];
 
     performance.byteCompileLua = {
       configs = true;

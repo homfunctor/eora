@@ -7,7 +7,6 @@
   imports = [
     flake.modules.home.stylix-neovim
     inputs.nixvim.homeModules.nixvim
-    ./autocmd.nix
     ./highlight.nix
     ./keymaps.nix
     ./plugins
