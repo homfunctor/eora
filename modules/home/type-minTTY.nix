@@ -3,7 +3,7 @@
 {inputs, ...}: {
   imports = [
     # not really secret but rather a prototype for how sapadal is used
-    # provides: userEmail, userName
+    # provides: user.email, user.name
     inputs.sapadal.modules.home.app-git
   ];
 
@@ -11,7 +11,7 @@
 
   programs.git = {
     enable = true;
-    extraConfig = {
+    settings = {
       color.ui = "1";
       gpg.format = "ssh";
       init.defaultBranch = "main";
