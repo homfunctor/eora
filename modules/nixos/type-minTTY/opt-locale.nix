@@ -1,16 +1,16 @@
 {pkgs, ...}: {
   i18n = {
-    inputMethod = {
-      enable = true;
-      fcitx5 = {
-        addons = with pkgs; [
-          fcitx5-gtk
-          fcitx5-mozc
-        ];
-        waylandFrontend = true;
-      };
-      type = "fcitx5";
-    };
+    # inputMethod = {
+    #   enable = true;
+    #   fcitx5 = {
+    #     addons = with pkgs; [
+    #       fcitx5-gtk
+    #       fcitx5-mozc
+    #     ];
+    #     waylandFrontend = true;
+    #   };
+    #   type = "fcitx5";
+    # };
 
     defaultLocale = "en_US.UTF-8";
 
