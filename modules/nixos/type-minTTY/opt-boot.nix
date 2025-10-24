@@ -13,6 +13,8 @@ in {
       systemd.enable = true;
     };
 
+    kernel.sysctl."fs.file-max" = 524288;
+
     # overridden when cachyos kernel is enabled
     kernelPackages = mkDefault pkgs.linuxPackages_latest;
 
