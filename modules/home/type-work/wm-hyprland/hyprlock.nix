@@ -63,7 +63,6 @@ in {
           position = "0, 450";
           text = ''
             cmd[update:1000] echo -e "$(date +"%A, %B %d")"
-            Speak "friend" and enter.
           '';
           valign = "center";
         }
