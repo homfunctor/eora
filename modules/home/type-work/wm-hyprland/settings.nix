@@ -24,7 +24,7 @@ in {
         rounding = 0;
 
         shadow = with colors; {
-          color = mkForce "rgb(${base08})";
+          color = mkForce "rgb(${base07})";
           color_inactive = mkForce "rgb(${base02})";
           enabled = true;
           range = 10;
@@ -46,7 +46,7 @@ in {
       ecosystem.no_donation_nag = true;
 
       general = with colors; {
-        "col.active_border" = mkForce "rgb(${base08})";
+        "col.active_border" = mkForce "rgb(${base07})";
         "col.inactive_border" = mkForce "rgb(${base02})";
         border_size = mkDefault 5;
         gaps_in = mkDefault 5;
