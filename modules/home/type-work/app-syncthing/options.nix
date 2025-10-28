@@ -3,7 +3,6 @@
 in {
   services.syncthing.settings = {
     extraOptions = [
-      "--config=${homeDirectory}/syncthing/"
       "--data=${homeDirectory}"
       "--no-default-folder"
     ];

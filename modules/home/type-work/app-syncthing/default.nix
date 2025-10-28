@@ -1,6 +1,7 @@
 {
   config,
   flake,
+  lib,
   osConfig,
   pkgs,
   ...
@@ -24,5 +25,12 @@ in {
     # strictly declarative
     overrideDevices = true;
     overrideFolders = true;
+
+    # todo: get syncthingtray working properly
+    tray = {
+      enable = false;
+      command = "{lib.getExe pkgs.syncthingtray} --wait --config-dir-path /home/${userName}/.local/state/syncthing";
+      package = pkgs.syncthingtray;
+    };
   };
 }
