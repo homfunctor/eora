@@ -43,8 +43,9 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # nixpkgs.url = "github:nixos/nixpkgs?rev=d098ae97cbcbc379b7a3fb6b01c123f6ee1a5a5d";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    nixpkgs.url = "github:nixos/nixpkgs?rev=78f91aa72e3bb7a4d43cb781d5797d79a5d81575";
 
     nixvim.url = "github:nix-community/nixvim";
 

@@ -138,7 +138,6 @@ in {
         ["nemo" "" "Files"]
         ["neovide" "" "Editor"]
         ["org.gnome.calculator" "󱖦" "Calculator"]
-        ["org.gnome.papers" "󰈙" "Papers"]
         ["org.pwmt.zathura" "󰈙 " "Zathura"]
         ["vivaldi-stable" "" "Browser"]
       ];

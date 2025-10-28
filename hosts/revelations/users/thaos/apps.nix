@@ -69,10 +69,10 @@ in {
     };
 
     pdf = {
-      desktop = "org.gnome.Papers";
+      desktop = "sioyek";
       exe = getExe pdf.pkg;
-      pkg = pkgs.papers;
-      tooltip = "Papers";
+      pkg = config.programs.sioyek.package;
+      tooltip = "Sioyek";
     };
 
     shell = {
