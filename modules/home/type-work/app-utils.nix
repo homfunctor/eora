@@ -2,8 +2,7 @@
   home.packages = with pkgs; [
     brightnessctl
     brillo
-    # oct 25 broke
-    # calibre
+    calibre
     ffmpeg-full
     inotify-tools
     libnotify

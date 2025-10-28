@@ -17,6 +17,7 @@ in {
         bashls.enable = true;
         fish_lsp.enable = true;
         jsonls.enable = true;
+        lemminx.enable = true;
         lua_ls.enable = true;
         marksman.enable = true;
         nixd = {
