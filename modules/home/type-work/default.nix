@@ -21,7 +21,6 @@
     ./app-thunderbird.nix
     ./app-udiskie.nix
     ./app-utils.nix
-    ./app-zathura.nix
     ./opt-dconf.nix
     ./opt-mime.nix
     ./opt-qt.nix

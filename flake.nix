@@ -45,8 +45,6 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # nixpkgs.url = "github:nixos/nixpkgs?rev=78f91aa72e3bb7a4d43cb781d5797d79a5d81575";
-
     nixvim.url = "github:nix-community/nixvim";
 
     rust-overlay = {

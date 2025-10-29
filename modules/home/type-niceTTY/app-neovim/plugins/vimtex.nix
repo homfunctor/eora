@@ -33,7 +33,7 @@ in {
           indent_enabled = true;
           quickfix_mode = false;
           syntax_enabled = true;
-          view_method = "zathura";
+          view_method = "sioyek";
         };
 
         # installed elsewhere
