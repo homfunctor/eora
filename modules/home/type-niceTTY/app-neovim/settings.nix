@@ -52,7 +52,7 @@
 
       # text stuff
       breakindent = true;
-      formatoptions = "croql";
+      formatoptions = "crql";
       linebreak = true;
       showbreak = "↳ ";
       spell = true;
