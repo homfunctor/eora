@@ -16,7 +16,7 @@
     type-work
 
     # extras
-    # app-nix-ld
+    app-nix-ld
     opt-lix
     opt-rust
   ];
@@ -39,7 +39,7 @@
 
     hostName = "vytmadh";
 
-    # lanzaboote.enable = true;
+    lanzaboote.enable = true;
 
     mainMonitor = builtins.elemAt bg.monitors 0;
 

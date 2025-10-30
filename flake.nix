@@ -26,6 +26,7 @@
 
     lanzaboote = {
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.rust-overlay.follows = "rust-overlay";
       url = "github:nix-community/lanzaboote";
     };
 
