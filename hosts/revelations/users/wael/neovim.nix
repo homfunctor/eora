@@ -9,7 +9,6 @@
     "lsp"
     "lualine"
     "mini"
-    "nerdy"
     "noice"
     "nvim-surround"
     "precognition"
