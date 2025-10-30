@@ -16,7 +16,6 @@ in {
       hw-cpu-amd
       hw-gpu-amd
       hw-printing
-      hw-tablet
     ]
     ++ nixosHW;
 }

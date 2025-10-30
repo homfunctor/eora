@@ -20,7 +20,7 @@
 
     # sometimes you wanna game on the side
     "m1" = "xrandr --output DP-1 --primary";
-    "m2" = "xrandr --output DP-2 --primary";
+    "m2" = "xrandr --output HDMI-A-1 --primary";
 
     # ...
     ".." = "z ../";

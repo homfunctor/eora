@@ -14,6 +14,7 @@
     ./mini-indentscope.nix
     ./mini-notify.nix
     ./mini.nix
+    ./nerdy.nix
     ./noice.nix
     ./nvim-surround.nix
     ./precognition.nix

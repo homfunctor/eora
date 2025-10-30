@@ -14,7 +14,7 @@
     fonts = {
       emoji = {
         name = "Noto Color Emoji";
-        package = pkgs.noto-fonts-emoji;
+        package = pkgs.noto-fonts-color-emoji;
       };
       sizes = config.nixos.opts.fontSizes;
     };

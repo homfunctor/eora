@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  # to deal with primary monitor being DP-2, not DP-1
+  # to deal with primary monitor being HDMI-A-1, not DP-1
   home.packages = with pkgs; [xorg.xrandr];
 
   wayland.windowManager.hyprland.settings = {

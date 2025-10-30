@@ -39,7 +39,7 @@
 
     hostName = "vytmadh";
 
-    lanzaboote.enable = true;
+    # lanzaboote.enable = true;
 
     mainMonitor = builtins.elemAt bg.monitors 0;
 

@@ -138,15 +138,17 @@ in {
         ["nemo" "" "Files"]
         ["neovide" "" "Editor"]
         ["org.gnome.calculator" "󱖦" "Calculator"]
+        ["org.strawberrymusicplayer.strawberry" "" "Music"]
         ["vivaldi-stable" "" "Browser"]
       ];
     };
 
     workspaces = {
       applicationIconMap = {
-        "org.gnome.calculator" = "󱖦";
         "com.github.xournalpp.xournalpp" = "󰙏";
         "kitty" = "󰄛";
+        "org.gnome.calculator" = "󱖦";
+        "org.strawberrymusicplayer.strawberry" = "";
         "vivaldi-stable" = "";
       };
       applicationIconOncePerWorkspace = true;

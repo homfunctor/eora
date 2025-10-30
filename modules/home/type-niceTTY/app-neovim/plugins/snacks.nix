@@ -33,6 +33,8 @@ in {
         top_down = false;
       };
 
+      picker.enabled = true;
+
       scope.enabled = true;
 
       statuscolumn.enabled = true;
