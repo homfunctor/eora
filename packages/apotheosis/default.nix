@@ -11,7 +11,7 @@
     gtksourceview4
     lib
     makeDesktopItem
-    wrapGAppsHook
+    wrapGAppsHook3
     ;
 in
   buildDotnetModule rec {
@@ -39,7 +39,7 @@ in
     ];
     nativeBuildInputs = [
       copyDesktopItems
-      wrapGAppsHook
+      wrapGAppsHook3
     ];
     runtimeDeps = buildInputs;
 

@@ -1,7 +1,7 @@
 {pkgs, ...}: {
   environment.systemPackages = with pkgs; [
     virt-manager
-    win-virtio
+    virtio-win
   ];
 
   networking.firewall.trustedInterfaces = ["virbr0"];
