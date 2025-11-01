@@ -1,5 +1,5 @@
 # minimal services
-{
+{pkgs, ...}: {
   services = {
     avahi = {
       enable = true;

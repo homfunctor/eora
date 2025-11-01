@@ -13,6 +13,7 @@
     type-niceTTY
 
     # work
+    hw-tablet
     type-work
 
     # extras
@@ -24,7 +25,7 @@
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
     bg = {
-      nWS = 3;
+      nWS = 6;
       monitors = ["eDP-1"];
       resolutions = ["1920x1080"];
       xy = ["0x0"];

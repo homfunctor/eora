@@ -18,6 +18,7 @@
         "power"
         "qemu-libvirtd"
         "scanners"
+        "uinput"
         "video"
         "wheel"
       ];
