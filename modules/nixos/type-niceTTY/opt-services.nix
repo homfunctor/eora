@@ -1,16 +1,6 @@
 # minimal services
 {pkgs, ...}: {
   services = {
-    avahi = {
-      enable = true;
-      nssmdns4 = true;
-      publish = {
-        enable = true;
-        domain = true;
-        userServices = true;
-      };
-    };
-
     fstrim.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;

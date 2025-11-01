@@ -1,1 +1,11 @@
-{hardware.opentabletdriver.enable = true;}
+{
+  lib,
+  pkgs,
+  ...
+}: {
+  boot.kernelModules = ["uinput"];
+  environment.systemPackages = with pkgs; [
+    evtest
+    libinput
+  ];
+}

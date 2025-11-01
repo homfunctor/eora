@@ -36,6 +36,9 @@ in {
     hostName = mkStrOpt "" "host name. name of host. that by which the host is named.";
     userName = mkStrOpt "" "user name. name of user. that by which the user is named.";
 
+    # inherited from osConfig
+    mainMonitor = mkStrOpt null "main monitor";
+
     # neovim plugin options auto-generated from filenames
     nvim.plugins = let
       pluginNames = importAllFileNames ./type-niceTTY/app-neovim/plugins;

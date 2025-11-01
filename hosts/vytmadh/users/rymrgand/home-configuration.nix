@@ -24,7 +24,7 @@
   ];
 
   home.opts = {
-    inherit (osConfig.nixos.opts) hostName;
+    inherit (osConfig.nixos.opts) hostName mainMonitor;
     userName = osConfig.nixos.opts.adminUser;
 
     app-math.latex.enable = true;

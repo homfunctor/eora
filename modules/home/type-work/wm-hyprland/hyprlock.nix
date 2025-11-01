@@ -2,12 +2,11 @@
   config,
   inputs,
   lib,
-  osConfig,
   ...
 }: let
   inherit (config.lib.stylix) colors;
   # per-host not per-user
-  inherit (osConfig.nixos.opts) mainMonitor;
+  inherit (config.home.opts) mainMonitor;
 in {
   # force manual theming
   stylix.targets.hyprlock.enable = lib.mkForce false;
