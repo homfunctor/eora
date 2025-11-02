@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  # daemon launched manually when hyprland starts
+  # daemon launched when hyprland starts
   # Button 1: Control+Shift+R
   # Button 2: Control+Shift+P
   # Button 3: Control+Shift+O
