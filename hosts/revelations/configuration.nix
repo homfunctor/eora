@@ -14,6 +14,7 @@
 
     # work
     ./hardware.nix
+    hw-tablet
     type-work
 
     # personal

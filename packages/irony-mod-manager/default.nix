@@ -1,7 +1,7 @@
 {pkgs}: let
   immApp = pkgs.stdenv.mkDerivation rec {
     pname = "irony-mod-manager";
-    version = "1.26.254";
+    version = "1.26.259";
 
     src = pkgs.fetchzip {
       url = "https://github.com/bcssov/IronyModManager/releases/download/v${version}/linux-x64.zip";

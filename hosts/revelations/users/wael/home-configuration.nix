@@ -29,7 +29,7 @@
   ];
 
   home.opts = {
-    inherit (osConfig.nixos.opts) hostName;
+    inherit (osConfig.nixos.opts) hostName mainMonitor;
     userName = builtins.elemAt osConfig.nixos.opts.userNames 0;
 
     app-math = {

@@ -1,8 +1,4 @@
-{
-  lib,
-  config,
-  ...
-}: {
+_: {
   programs.sioyek = {
     enable = true;
   };
