@@ -1,4 +1,4 @@
-# work environment layered on top of minimal/nicer tty
+# work environment layered on top of minimal/nice tty
 {
   imports = [
     ./app-firefox.nix
