@@ -22,7 +22,7 @@
 
     # extras
     app-nix-ld
-    # chaotic-kernel
+    chaotic-kernel
     opt-lix
     opt-rust
     opt-vm
