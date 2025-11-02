@@ -3,7 +3,7 @@
   lib,
   ...
 }: let
-  inherit (config.home.opts) apps bg mainMonitor;
+  inherit (config.home.opts) apps bg;
   inherit (config.lib.stylix) colors;
   inherit (lib) mkDefault mkForce zipListsWith;
 in {
@@ -30,12 +30,6 @@ in {
           range = 10;
           render_power = 3;
         };
-      };
-
-      device = {
-        # at 5568ed56ffe0
-        name = "huion-huion-tablet_h1060p";
-        output = mainMonitor;
       };
 
       dwindle = {
