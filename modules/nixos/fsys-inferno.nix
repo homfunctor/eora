@@ -1,67 +1,40 @@
 # basic pc setup
+# legacy
 {
   disko.devices = {
-    disk.main = {
-      device = "/dev/sda";
-      type = "disk";
-
-      content = {
-        type = "gpt";
-
-        partitions = {
-          ESP = {
-            size = "1G";
-            type = "EF00";
-
-            content = {
-              format = "vfat";
-              mountOptions = ["fmask=0007" "umask=0077"];
-              mountpoint = "/boot";
-              type = "filesystem";
-            };
-          };
-
-          luks = {
-            size = "100%";
-
-            content = {
-              name = "ashenMaw";
-              settings.allowDiscards = true;
-              type = "luks";
-
+    disk = {
+      main = {
+        device = "/dev/sda";
+        type = "disk";
+        content = {
+          type = "table";
+          format = "gpt";
+          partitions = [
+            {
+              name = "ESP";
+              start = "1M";
+              end = "500M";
+              bootable = true;
               content = {
-                type = "lvm_pv";
-                vg = "pool";
+                type = "filesystem";
+                format = "vfat";
+                mountpoint = "/boot";
+                mountOptions = ["umask=0077"];
               };
-            };
-          };
-        };
-      };
-    };
-
-    lvm_vg.pool = {
-      type = "lvm_vg";
-
-      lvs = {
-        encryptedSwap = {
-          size = "16G";
-
-          content = {
-            priority = 100;
-            randomEncryption = true;
-            type = "swap";
-          };
-        };
-
-        root = {
-          size = "100%FREE";
-
-          content = {
-            format = "ext4";
-            mountOptions = ["defaults"];
-            mountpoint = "/";
-            type = "filesystem";
-          };
+            }
+            {
+              name = "root";
+              start = "500M";
+              end = "100%";
+              part-type = "primary";
+              bootable = true;
+              content = {
+                type = "filesystem";
+                format = "ext4";
+                mountpoint = "/";
+              };
+            }
+          ];
         };
       };
     };

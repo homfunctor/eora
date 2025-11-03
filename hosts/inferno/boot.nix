@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   boot = {
     initrd = {
       availableKernelModules = [
@@ -12,11 +12,16 @@
 
       kernelModules = ["dm-snapshot"];
 
-      loader.grub.enable = true;
+      loader = {
+        grub.enable = true;
+        systemd-boot.enable = false;
+      };
     };
 
     kernelModules = ["kvm-intel"];
 
     kernelParams = ["preempt=full"];
+
+    plymouth.enable = lib.mkForce false;
   };
 }
