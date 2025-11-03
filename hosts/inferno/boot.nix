@@ -11,16 +11,16 @@
       ];
 
       kernelModules = ["dm-snapshot"];
-
-      loader = {
-        grub.enable = true;
-        systemd-boot.enable = false;
-      };
     };
 
     kernelModules = ["kvm-intel"];
 
     kernelParams = ["preempt=full"];
+
+    loader = {
+      grub.enable = true;
+      systemd-boot.enable = false;
+    };
 
     plymouth.enable = lib.mkForce false;
   };
