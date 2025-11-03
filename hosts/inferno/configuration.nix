@@ -18,7 +18,6 @@
     # extras
     app-nix-ld
     opt-lix
-    opt-rust
   ];
 
   # recursive to avoid defining adminUser twice
