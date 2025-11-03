@@ -39,8 +39,6 @@
 
     hostName = "inferno";
 
-    lanzaboote.enable = true;
-
     mainMonitor = builtins.elemAt bg.monitors 0;
 
     opacity = {
