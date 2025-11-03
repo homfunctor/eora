@@ -16,6 +16,7 @@
 
     # family PC
     # type-familyPC
+    # app-vivaldi
   ];
 
   home.opts = {
