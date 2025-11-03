@@ -8,6 +8,8 @@
     thaos = "z ~/eora/hosts/revelations/users/thaos";
     vytmadh = "z ~/eora/hosts/vytmadh";
     wael = "z ~/eora/hosts/revelations/users/wael";
+    magran = "z ~/eora/hosts/inferno/users/magran";
+    inferno = "z ~/eora/hosts/inferno";
 
     # i'm lazy
     hfhs = "z /etc/profiles/per-user";
@@ -38,8 +40,5 @@
     ls = "eza -G -x --color=always --icons=always";
     n = "neovide";
     yz = "yazi .";
-
-    # useful when making mods
-    modsums = "hashdeep -l -r -c md5 */ | awk -F, 'NR>4 {print $2 \"  \" $3}'";
   };
 }

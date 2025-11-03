@@ -1,9 +1,11 @@
 # it's nice
 {
   config,
+  flake,
   pkgs,
   ...
 }: {
+  imports = [flake.modules.nixos.opt-fish];
   environment.systemPackages = with pkgs.fishPlugins;
     [
       colored-man-pages
