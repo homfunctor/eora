@@ -17,6 +17,7 @@
     # work
     ./hyprland.nix
     ./hyprpanel.nix
+    hw-tablet
     type-work
 
     # personal

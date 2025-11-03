@@ -17,9 +17,9 @@
     # work
     ./hyprpanel.nix
     ./hyprland.nix
-    app-civ5-map-image
     app-nix-tools
     app-vivaldi
+    hw-tablet
     type-work
   ];
 

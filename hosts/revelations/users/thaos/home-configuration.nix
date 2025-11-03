@@ -16,6 +16,7 @@
 
     # work
     ./hyprpanel.nix
+    hw-tablet
     type-work
   ];
 

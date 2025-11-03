@@ -19,7 +19,6 @@
     flake.modules.home.app-hyprpanel
   ];
 
-  # enable and use uwsm
   wayland = {
     windowManager.hyprland = {
       enable = true;
@@ -29,7 +28,6 @@
         "uwsm finalize"
         "hyprctl setcursor"
         (flake.lib.uApp "${lib.getExe pkgs.networkmanagerapplet}")
-        (flake.lib.uApp "${pkgs.opentabletdriver}/bin/otd-daemon")
       ];
     };
     systemd.target = "graphical-session.target";

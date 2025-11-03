@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  flake,
+  pkgs,
+  ...
+}: {
   # daemon launched when hyprland starts
   # Button 1: Control+D7 (toggle lines)
   # Button 2: Control+Shift+P (write)
@@ -13,10 +17,15 @@
   # do NOT confuse these two
   # Button 11: Application+Q (Kill)
   # Button 12: Application+F (Fullscreen)
-  hardware.opentabletdriver.enable = true;
-  environment.systemPackages = with pkgs; [
+
+  home.packages = with pkgs; [
     evtest
     libinput
+    opentabletdriver
     usbutils
+  ];
+
+  wayland.windowManager.hyprland.settings.exec-once = [
+    (flake.lib.uApp "${pkgs.opentabletdriver}/bin/otd-daemon")
   ];
 }
