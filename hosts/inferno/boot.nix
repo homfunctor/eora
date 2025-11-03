@@ -2,12 +2,20 @@
   boot = {
     initrd = {
       availableKernelModules = [
-        "nvme"
         "sd_mod"
         "usb_storage"
         "xhci_pci"
+        "ehci_pci"
+        "ahci"
+        "usbhid"
       ];
+
+      kernelModules = ["dm-snapshot"];
+
+      loader.grub.enable = true;
     };
+
+    kernelModules = ["kvm-intel"];
 
     kernelParams = ["preempt=full"];
   };
