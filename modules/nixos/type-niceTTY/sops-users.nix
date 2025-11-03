@@ -4,14 +4,29 @@
   lib,
   ...
 }: let
+  inherit (config.nixos.opts) userNames;
+
   cfg = config.nixos.opts.sops.user;
 in {
   config = lib.mkIf cfg.enable {
-    sops.secrets.hashedPassword.neededForUsers = true;
+    sops.secrets = builtins.listToAttrs (map (
+        user: {
+          name = flake.lib.mkSec [user "hashedPassword"];
+          value = {
+            owner = user;
+            neededForUsers = true;
+          };
+        }
+      )
+      userNames);
+
     users = {
       mutableUsers = false;
-      users = lib.genAttrs config.nixos.opts.userNames (_: {
-        hashedPasswordFile = flake.lib.mkSecPath config ["hashedPassword"];
+      users = lib.genAttrs userNames (user: {
+        hashedPasswordFile = flake.lib.mkSecPath config [
+          user
+          "hashedPassword"
+        ];
       });
     };
   };

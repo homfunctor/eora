@@ -15,7 +15,7 @@
     type-niceTTY
 
     # family PC
-    type-familyPC
+    # type-familyPC
   ];
 
   home.opts = {

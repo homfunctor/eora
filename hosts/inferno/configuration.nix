@@ -13,7 +13,7 @@
     type-niceTTY
 
     # family PC
-    type-familyPC
+    # type-familyPC
 
     # extras
     app-nix-ld
