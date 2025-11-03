@@ -23,6 +23,7 @@
 
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
+    # unused check if can just be dropped
     bg = {
       nWS = 1;
       monitors = ["eDP-1"];
@@ -31,10 +32,10 @@
     };
 
     fontSizes = {
-      applications = 16;
-      desktop = 16;
-      popups = 16;
-      terminal = 16;
+      applications = 12;
+      desktop = 12;
+      popups = 12;
+      terminal = 14;
     };
 
     hostName = "inferno";
@@ -47,7 +48,8 @@
     };
 
     sops = {
-      keyring.enable = true;
+      # todo: lightdm -> lxqt should be fine
+      # keyring.enable = true;
       user.enable = true;
     };
 
