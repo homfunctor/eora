@@ -1,3 +1,17 @@
+# didn't go so well
+# notes for when i get around to reinstalling:
+#   grub 2
+#   xfce
+#   boot.loader.grub.enable = true;
+#   .device = "/dev/sda";
+#   .useOSProber = true;
+#   x11
+#   lightdm
+#   xfce
+#   aKM: xhci_pci, ehci_pci, ahci, usbhid, usb_storage, sd_mod
+#   kM: kvm-intel
+#   basic ext4
+#
 {flake, ...}: {
   imports = with flake.modules.nixos; [
     # minimal tty
