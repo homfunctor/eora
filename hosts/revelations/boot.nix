@@ -11,7 +11,10 @@
       ];
     };
 
-    kernelModules = ["kvm-amd"];
+    kernelModules = [
+      "kvm-amd"
+      "uinput"
+    ];
 
     kernelParams = [
       "mitigations=off"

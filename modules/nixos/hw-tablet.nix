@@ -11,8 +11,8 @@
   # Button 9: Control+Shift+Application+C (calculator)
   # Button 10: Control+Shift+Application+W (yazi work directory)
   # do NOT confuse these two
-  # Button 11: Kill
-  # Button 12: Fullscreen
+  # Button 11: Application+Q (Kill)
+  # Button 12: Application+F (Fullscreen)
   hardware.opentabletdriver.enable = true;
   environment.systemPackages = with pkgs; [
     evtest

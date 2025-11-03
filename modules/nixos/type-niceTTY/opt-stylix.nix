@@ -20,8 +20,5 @@
     };
     image = "${inputs.sapadal}/assets/base.png";
     polarity = "dark";
-
-    # causes issues for me
-    targets.chromium.enable = false;
   };
 }

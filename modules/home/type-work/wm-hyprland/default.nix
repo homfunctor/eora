@@ -19,9 +19,6 @@
     flake.modules.home.app-hyprpanel
   ];
 
-  # temp
-  home.packages = [pkgs.opentabletdriver];
-
   # enable and use uwsm
   wayland = {
     windowManager.hyprland = {

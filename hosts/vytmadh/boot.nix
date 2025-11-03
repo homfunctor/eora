@@ -11,6 +11,15 @@
       ];
     };
 
-    kernelParams = ["preempt=full"];
+    kernelModules = [
+      "kvm-amd"
+      "uinput"
+    ];
+
+    kernelParams = [
+      "mitigations=off"
+      "nowatchdog"
+      "preempt=full"
+    ];
   };
 }
