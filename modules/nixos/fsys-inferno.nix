@@ -1,18 +1,22 @@
 # basic pc setup
-# gpt
 {
   disko.devices = {
     disk = {
-      main = {
-        device = "/dev/sdb";
+      my-disk = {
+        device = "/dev/sda";
         type = "disk";
         content = {
           type = "gpt";
           partitions = {
-            boot = {
-              size = "1M";
-              type = "EF02"; # for grub MBR
-              attributes = [0]; # partition attribute
+            ESP = {
+              type = "EF00";
+              size = "500M";
+              content = {
+                type = "filesystem";
+                format = "vfat";
+                mountpoint = "/boot";
+                mountOptions = ["umask=0077"];
+              };
             };
             root = {
               size = "100%";
