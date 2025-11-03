@@ -1,40 +1,28 @@
 # basic pc setup
-# legacy
+# gpt
 {
   disko.devices = {
     disk = {
       main = {
-        device = "/dev/sda";
+        device = "/dev/sdb";
         type = "disk";
         content = {
-          type = "table";
-          format = "gpt";
-          partitions = [
-            {
-              name = "ESP";
-              start = "1M";
-              end = "500M";
-              bootable = true;
-              content = {
-                type = "filesystem";
-                format = "vfat";
-                mountpoint = "/boot";
-                mountOptions = ["umask=0077"];
-              };
-            }
-            {
-              name = "root";
-              start = "500M";
-              end = "100%";
-              part-type = "primary";
-              bootable = true;
+          type = "gpt";
+          partitions = {
+            boot = {
+              size = "1M";
+              type = "EF02"; # for grub MBR
+              attributes = [0]; # partition attribute
+            };
+            root = {
+              size = "100%";
               content = {
                 type = "filesystem";
                 format = "ext4";
                 mountpoint = "/";
               };
-            }
-          ];
+            };
+          };
         };
       };
     };
