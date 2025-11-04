@@ -19,7 +19,12 @@ in {
           "windowtitle"
         ];
         "middle" = [
+          "ram"
+          "separator"
+          "cpu"
+          "separator"
           "clock"
+          "separator"
         ];
         "right" = [
           "volume"
@@ -40,7 +45,12 @@ in {
           "windowtitle"
         ];
         "middle" = [
+          "ram"
+          "separator"
+          "cpu"
+          "separator"
           "clock"
+          "separator"
         ];
         "right" = [
           "volume"
@@ -62,6 +72,7 @@ in {
         ];
         "middle" = [
           "clock"
+          "separator"
         ];
         "right" = [
           "volume"

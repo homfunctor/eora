@@ -1,5 +1,5 @@
 # minimal services
-_: {
+{
   services = {
     fstrim.enable = true;
     fwupd.enable = true;
