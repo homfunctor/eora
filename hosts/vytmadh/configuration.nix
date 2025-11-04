@@ -12,6 +12,7 @@
     type-niceTTY
 
     # work
+    hw-tablet
     type-work
 
     # extras

@@ -15,8 +15,8 @@
     type-niceTTY
 
     # work
-    ./hyprpanel.nix
     ./hyprland.nix
+    ./hyprpanel.nix
     app-nix-tools
     app-vivaldi
     hw-tablet

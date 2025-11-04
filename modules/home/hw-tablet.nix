@@ -21,11 +21,11 @@
   home.packages = with pkgs; [
     evtest
     libinput
-    opentabletdriver
     usbutils
   ];
 
   wayland.windowManager.hyprland.settings.exec-once = [
+    # todo: is there still a tmp file bug?
     (flake.lib.uApp "${pkgs.opentabletdriver}/bin/otd-daemon")
   ];
 }
