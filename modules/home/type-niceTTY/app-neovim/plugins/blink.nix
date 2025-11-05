@@ -105,7 +105,7 @@ in {
           completion = {
             documentation = {
               auto_show = true;
-              window.border = "none";
+              window.border = "single";
             };
 
             ghost_text.enabled = true;
@@ -116,7 +116,7 @@ in {
             };
 
             menu = {
-              border = "none";
+              border = "single";
               draw = {
                 columns = [
                   {
@@ -174,7 +174,7 @@ in {
 
           signature = {
             enabled = true;
-            window.border = "none";
+            window.border = "single";
           };
 
           sources = {

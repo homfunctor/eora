@@ -17,7 +17,7 @@
 
     diagnostic.settings.config = {
       float = {
-        border = "none";
+        border = "single";
         focusable = false;
         source = "always";
       };
@@ -29,7 +29,7 @@
       virtual_text = false;
     };
 
-    globals.floating_window_options.border = "none";
+    globals.floating_window_options.border = "single";
 
     opts = {
       # relative line numbers

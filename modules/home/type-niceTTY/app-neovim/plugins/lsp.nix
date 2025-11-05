@@ -50,7 +50,7 @@ in {
           scrollDown = "<c-d>";
           scrollUp = "<c-u>";
         };
-        ui.border = "none";
+        ui.border = "single";
       };
     };
   };

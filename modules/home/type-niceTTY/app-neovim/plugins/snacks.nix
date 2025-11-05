@@ -11,6 +11,11 @@ in {
     settings = {
       bigfile.enabled = true;
 
+      # todo
+      # dashboard.enabled = true;
+      explorer.enabled = true;
+      image.enabled = true;
+
       indent = {
         enabled = true;
         chunk = {
@@ -26,6 +31,8 @@ in {
       };
 
       input.enabled = true;
+      keymap.enabled = true;
+      layout.enabled = true;
 
       notifier = {
         enabled = true;
@@ -33,12 +40,17 @@ in {
         top_down = false;
       };
 
+      notify.enabled = true;
+
       picker.enabled = true;
+      quickfile.enabled = true;
 
       scope.enabled = true;
 
       statuscolumn.enabled = true;
       styles.notification.wo.wrap = true;
+
+      toggle.enabled = true;
 
       win.backdrop.blend = 100;
 

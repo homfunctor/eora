@@ -9,7 +9,7 @@ in {
     enable = true;
 
     settings.win = {
-      border = "none";
+      border = "single";
       wo.winblend = 100;
     };
   };

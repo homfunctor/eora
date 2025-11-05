@@ -37,9 +37,8 @@ in {
           };
         };
 
-        view = "hover";
-
         hover.enabled = true;
+        view = "hover";
 
         message = {
           enabled = true;
@@ -50,22 +49,22 @@ in {
           enabled = true;
           format = "lsp_progress";
           formatDone = "lsp_progress";
-          view = "mini";
+          view = "snacks";
         };
       };
 
       messages = {
         enabled = true;
-        view = "notify";
-        view_error = "mini";
+        view = "snacks";
+        view_error = "snacks";
         view_history = "messages";
         view_search = "virtualtext";
-        view_warn = "mini";
+        view_warn = "snacks";
       };
 
       notify = {
         enabled = true;
-        view = "notify";
+        view = "snacks";
       };
 
       popupmenu = {
@@ -77,14 +76,14 @@ in {
       presets = {
         bottom_search = true;
         command_palette = true;
-        inc_rename = false;
+        inc_rename = true;
         long_message_to_split = true;
-        lsp_doc_border = false;
+        lsp_doc_border = true;
       };
 
       views = {
-        cmdline_popup.border.style = "none";
-        cmdline_popupmenu.border.style = "none";
+        cmdline_popup.border.style = "single";
+        cmdline_popupmenu.border.style = "single";
       };
     };
   };

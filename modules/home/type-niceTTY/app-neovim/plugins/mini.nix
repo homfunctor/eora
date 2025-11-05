@@ -13,27 +13,26 @@ in {
 
       modules = {
         cursorword = {};
-        icons = {};
 
-        diff.view = {
-          style = "sign";
-          signs = {
-            add = "│";
-            change = "│";
-            delete = "-";
-          };
-        };
+        # diff.view = {
+        #   style = "sign";
+        #   signs = {
+        #     add = "│";
+        #     change = "│";
+        #     delete = "-";
+        #   };
+        # };
       };
     };
 
-    highlight = with colors; {
-      MiniDiffSignAdd.fg = base07;
-      MiniDiffSignChange.fg = base03;
-      MiniDiffSignDelete.fg = base06;
-      MiniDiffOverAdd.fg = base04;
-      MiniDiffOverChange.fg = base06;
-      MiniDiffOverContext.fg = base0A;
-      MiniDiffOverDelete.fg = base0F;
-    };
+    #   highlight = with colors; {
+    #     MiniDiffSignAdd.fg = base07;
+    #     MiniDiffSignChange.fg = base03;
+    #     MiniDiffSignDelete.fg = base06;
+    #     MiniDiffOverAdd.fg = base04;
+    #     MiniDiffOverChange.fg = base06;
+    #     MiniDiffOverContext.fg = base0A;
+    #     MiniDiffOverDelete.fg = base0F;
+    #   };
   };
 }
