@@ -11,7 +11,8 @@
 
     # nicer tty
     ./apps.nix
-    ./neovim.nix
+    # temp
+    ../../../revelations/users/wael/neovim.nix
     type-niceTTY
 
     # work
