@@ -19,6 +19,11 @@
       url = "github:nix-community/home-manager";
     };
 
+    hyprshell = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:h3rmt/hyprshell";
+    };
+
     hyprsysteminfo = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:hyprwm/hyprsysteminfo";

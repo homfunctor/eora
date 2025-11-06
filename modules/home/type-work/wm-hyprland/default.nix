@@ -11,6 +11,7 @@
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpaper.nix
+    ./hyprshell.nix
     ./keyring.nix
     ./portal.nix
     ./rules.nix
