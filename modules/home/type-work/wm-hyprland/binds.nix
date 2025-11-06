@@ -73,9 +73,10 @@ in {
       "${mod} SHIFT, up, movewindow, u"
       "${mod} SHIFT, right, movewindow, r"
 
+      # todo: refine
       # simulated alt tab behavior
-      "ALT, Tab, bringactivetotop"
-      "ALT, Tab, cyclenext"
+      # "ALT, Tab, bringactivetotop"
+      # "ALT, Tab, cyclenext"
 
       # misc controls
       "${mod} ALT, L, exec, ${uApp "${getExe config.programs.hyprlock.package}"}"
