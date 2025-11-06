@@ -25,7 +25,10 @@
   ];
 
   wayland.windowManager.hyprland.settings.exec-once = [
-    # todo: is there still a tmp file bug?
+    # ugly hack will replace with something else later
+    "sudo rm /tmp/CoreFxPipe_OpenTabletDriver*"
     (flake.lib.uApp "${pkgs.opentabletdriver}/bin/otd-daemon")
   ];
+
+  # todo: manage settings declaratively
 }
