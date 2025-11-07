@@ -43,10 +43,7 @@
 
     mainMonitor = builtins.elemAt bg.monitors 0;
 
-    opacity = {
-      popups = 1.0;
-      terminal = 0.80;
-    };
+    opacity.popups = 1.0;
 
     sops = {
       keyring.enable = true;
