@@ -19,6 +19,22 @@
       url = "github:nix-community/home-manager";
     };
 
+    # todo: worth it to go bleeding edge? probably not
+    # hy3 = {
+    #   inputs.hyprland.follows = "hyprland";
+    #   url = "github:outfoxxed/hy3";
+    # };
+    #
+    # hyprland = {
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   url = "github:hyprwm/hyprland";
+    # };
+    #
+    # hyprland-plugins = {
+    #   url = "github:hyprwm/hyprland-plugins";
+    #   inputs.hyprland.follows = "hyprland";
+    # };
+    #
     lanzaboote = {
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.rust-overlay.follows = "rust-overlay";
