@@ -3,7 +3,6 @@
   lib,
   ...
 }: let
-  colors = config.lib.stylix.colors.withHashtag;
 
   cfg = config.home.opts.nvim.plugins.mini;
 in {
