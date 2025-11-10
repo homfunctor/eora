@@ -2,11 +2,7 @@
   hardware.brillo.enable = true;
 
   programs = {
-    hyprland = {
-      enable = true;
-      withUWSM = true;
-    };
-    uwsm.enable = true;
+    hyprland.enable = true;
   };
 
   security.pam.services.hyprlock.text = "auth include login";

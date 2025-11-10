@@ -7,14 +7,10 @@
   inherit (config.wayland.windowManager.hyprland) portalPackage;
   inherit (lib) getExe;
 
-  polkitPkg = pkgs.hyprpolkitagent;
   xdg = ".xdg-desktop-portal-hyprland-wrapped";
 in {
-  home.packages = [polkitPkg];
-
   wayland.windowManager.hyprland.settings = {
     ecosystem.enforce_permissions = true;
-    exec-once = ["systemctl --user start hyprpolkitagent"];
     permission = [
       "${getExe config.programs.hyprlock.package}, screencopy, allow"
       "${getExe config.services.hyprshell.package}, plugin, allow"

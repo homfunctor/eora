@@ -19,22 +19,16 @@
       url = "github:nix-community/home-manager";
     };
 
-    # todo: worth it to go bleeding edge? probably not
-    # hy3 = {
-    #   inputs.hyprland.follows = "hyprland";
-    #   url = "github:outfoxxed/hy3";
-    # };
-    #
-    # hyprland = {
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   url = "github:hyprwm/hyprland";
-    # };
-    #
-    # hyprland-plugins = {
-    #   url = "github:hyprwm/hyprland-plugins";
-    #   inputs.hyprland.follows = "hyprland";
-    # };
-    #
+    hy3 = {
+      inputs.hyprland.follows = "hyprland";
+      url = "github:outfoxxed/hy3";
+    };
+
+    hyprland = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "git+https://github.com/hyprwm/hyprland?submodules=1";
+    };
+
     lanzaboote = {
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.rust-overlay.follows = "rust-overlay";
@@ -55,9 +49,14 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
 
     nixvim.url = "github:nix-community/nixvim";
+
+    nur = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nur";
+    };
 
     rust-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";
@@ -79,7 +78,7 @@
       url = "github:numtide/treefmt-nix";
     };
 
-    # secrets and privacy for the paranoid
+    # secrets and privacy for the 21st century schizoid
     sapadal = {
       inputs = {
         blueprint.follows = "blueprint";

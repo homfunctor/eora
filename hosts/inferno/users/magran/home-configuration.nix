@@ -10,7 +10,6 @@
     type-minTTY
 
     # nicer tty
-    ./apps.nix
     ./neovim.nix
     type-niceTTY
 

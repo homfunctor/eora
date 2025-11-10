@@ -12,7 +12,6 @@
 
   faceImg = "${inputs.sapadal}/assets/${userName}.png";
   logoutCmd = ''loginctl terminate-user ""'';
-  # logoutCmd = "uwsm stop";
   rebootCmd = "systemctl reboot";
   shutdownCmd = "systemctl poweroff";
   sleepCmd = "systemctl suspend";

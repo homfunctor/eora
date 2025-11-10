@@ -4,6 +4,8 @@
 
   programs.seahorse.enable = true;
 
+  security.soteria.enable = true;
+
   services = {
     dbus = {
       enable = true;

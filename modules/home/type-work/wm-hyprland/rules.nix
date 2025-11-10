@@ -30,8 +30,7 @@ in {
       "size > >, class:^(org.gnome.Calculator)$"
 
       # password focus
-      "stayfocused, class:(gcr-prompter)"
-      "stayfocused, class:^(polkit-), title:(Authenticate)"
+      # todo
 
       # file picker
       "float, class:^(xdg-desktop-portal-hyprland)"
