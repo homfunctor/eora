@@ -15,7 +15,6 @@
     ./rules.nix
     ./security.nix
     ./settings.nix
-    # inputs.hyprland.homeManagerModules.default
   ];
 
   wayland = {
@@ -25,7 +24,7 @@
 
       settings.exec-once = [
         "hyprctl setcursor"
-        (flake.lib.uApp "${lib.getExe pkgs.networkmanagerapplet}")
+        "${lib.getExe pkgs.networkmanagerapplet}"
       ];
     };
     systemd.target = "graphical-session.target";

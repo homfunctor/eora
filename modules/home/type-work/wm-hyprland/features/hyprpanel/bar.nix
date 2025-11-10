@@ -5,7 +5,6 @@
   lib,
   ...
 }: let
-  inherit (flake.lib) uApp uTog;
   inherit (config.home.opts) apps bg panelOpts;
 in {
   programs.hyprpanel.settings.bar = {
@@ -77,7 +76,7 @@ in {
         icon = "󰐥";
         leftClick = "menu:powerdropdown";
         middleClick = "";
-        rightClick = uApp "missioncenter";
+        rightClick = "missioncenter";
         scrollDown = "";
         scrollUp = "";
         showLabel = true;
@@ -88,7 +87,7 @@ in {
         leftClick = "";
         middleClick = "";
         round = true;
-        rightClick = uApp "missioncenter";
+        rightClick = "missioncenter";
         scrollDown = "";
         scrollUp = "";
         showIcon = true;
@@ -97,7 +96,7 @@ in {
 
     launcher = {
       icon = "";
-      rightClick = "${uTog "${apps.launcher.exe}"} ${apps.launcher.args}";
+      rightClick = "${apps.launcher.exe apps.launcher.args}";
     };
 
     notifications = {
@@ -114,7 +113,7 @@ in {
     volume = {
       label = true;
       middleClick = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-      rightClick = uApp "pwvucontrol";
+      rightClick = "pwvucontrol";
       scrollDown = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
       scrollUp = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
     };
