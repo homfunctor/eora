@@ -15,16 +15,41 @@
     ./security.nix
     ./settings.nix
   ];
+  home.pointerCursor.hyprcursor.enable = true;
 
   wayland = {
     windowManager.hyprland = {
       enable = true;
       xwayland.enable = true;
 
+      importantPrefixes = [
+        "$"
+        "bezier"
+        "name"
+        "source"
+        "exec-once"
+      ];
+
       settings.exec-once = [
         "hyprctl setcursor"
         "${lib.getExe pkgs.networkmanagerapplet}"
       ];
+
+      systemd = {
+        enable = true;
+
+        extraCommands = lib.mkBefore [
+          "systemctl --user stop graphical-session.target"
+          "systemctl --user start hyprland-session.target"
+        ];
+
+        variables = [
+          "DISPLAY"
+          "HYPRLAND_INSTANCE_SIGNATURE"
+          "WAYLAND_DISPLAY"
+          "XDG_CURRENT_DESKTOP"
+        ];
+      };
     };
     systemd.target = "graphical-session.target";
   };

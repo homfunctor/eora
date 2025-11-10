@@ -11,31 +11,20 @@ in {
     layouts."*" = {
       "left" = [
         "dashboard"
-        "separator"
         "workspaces"
-        "separator"
         "windowtitle"
-        "separator"
       ];
       "middle" = [
         "ram"
-        "separator"
         "cpu"
-        "separator"
         "clock"
-        "separator"
         "battery"
-        "separator"
       ];
       "right" = [
         "volume"
-        "separator"
         "microphone"
-        "separator"
         "systray"
-        "separator"
         "notifications"
-        "separator"
         "power"
       ];
     };

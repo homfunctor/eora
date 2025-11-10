@@ -8,7 +8,7 @@
       hyprland = {
         "org.freedesktop.impl.portal.FileChooser" = "gtk";
         "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
-        default = ["gtk" "hyprland"];
+        default = ["hyprland" "gtk"];
       };
     };
 

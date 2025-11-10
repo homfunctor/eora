@@ -17,7 +17,7 @@ in {
       scaling = panelOpts.scale.bar;
 
       buttons = {
-        enableBorders = false;
+        enableBorders = true;
         innerRadiusMultiplier = "0.0";
         padding_x = "0.5rem";
         padding_y = "0.1rem";

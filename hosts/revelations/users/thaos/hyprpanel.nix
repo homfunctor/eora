@@ -11,24 +11,17 @@ in {
       "0" = {
         "left" = [
           "dashboard"
-          "separator"
           "workspaces"
-          "separator"
           "windowtitle"
         ];
         "middle" = [
           "ram"
-          "separator"
           "cpu"
-          "separator"
           "clock"
-          "separator"
         ];
         "right" = [
           "volume"
-          "separator"
           "microphone"
-          "separator"
           "systray"
         ];
       };
@@ -37,26 +30,18 @@ in {
       "2" = {
         "left" = [
           "dashboard"
-          "separator"
           "workspaces"
-          "separator"
           "windowtitle"
         ];
         "middle" = [
           "ram"
-          "separator"
           "cpu"
-          "separator"
           "clock"
-          "separator"
         ];
         "right" = [
           "volume"
-          "separator"
           "microphone"
-          "separator"
           "systray"
-          "separator"
           "notifications"
         ];
       };
@@ -65,20 +50,15 @@ in {
       "1" = {
         "left" = [
           "workspaces"
-          "separator"
           "windowtitle"
         ];
         "middle" = [
           "clock"
-          "separator"
         ];
         "right" = [
           "volume"
-          "separator"
           "microphone"
-          "separator"
           "systray"
-          "separator"
           "power"
         ];
       };
