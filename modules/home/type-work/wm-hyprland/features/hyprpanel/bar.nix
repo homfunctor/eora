@@ -1,7 +1,6 @@
 # todo: mouse actions over buttons
 {
   config,
-  flake,
   lib,
   ...
 }: let
@@ -96,7 +95,7 @@ in {
 
     launcher = {
       icon = "";
-      rightClick = "${apps.launcher.exe apps.launcher.args}";
+      rightClick = "${apps.launcher.exe} ${apps.launcher.args}";
     };
 
     notifications = {

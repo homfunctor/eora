@@ -4,11 +4,8 @@
 #   DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$UID/bus";
 {
   config,
-  osConfig,
   ...
-}: let
-  inherit (config.home.opts) apps;
-in {
+}: {
   xdg.configFile = {
     "electron-flags.conf".text = ''
       --enable-features=UseOzonePlatform,WaylandWindowDecorations

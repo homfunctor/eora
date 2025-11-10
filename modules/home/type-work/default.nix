@@ -5,7 +5,7 @@
     ./app-glance.nix
     ./app-graphics.nix
     ./app-hyprApps.nix
-    ./app-joplin.nix
+    # ./app-joplin.nix
     ./app-kitty.nix
     ./app-math
     ./app-minimal.nix

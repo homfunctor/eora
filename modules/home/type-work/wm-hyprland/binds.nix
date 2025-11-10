@@ -6,7 +6,6 @@
   ...
 }: let
   inherit (config.home.opts) apps;
-  inherit (flake.lib);
   inherit (lib) getExe;
 
   mod = "SUPER";
