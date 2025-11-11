@@ -6,8 +6,7 @@
   imports = [
     ./animations.nix
     ./binds.nix
-    # todo: what is to be done
-    # ./env.nix
+    ./env.nix
     ./features
     ./keyring.nix
     ./portal.nix
@@ -20,6 +19,7 @@
   wayland = {
     windowManager.hyprland = {
       enable = true;
+      package = pkgs.hyprland;
       xwayland.enable = true;
 
       importantPrefixes = [
