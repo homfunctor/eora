@@ -3,6 +3,7 @@
 {
   flake,
   lib,
+  pkgs,
   ...
 }: let
   inherit
@@ -23,6 +24,8 @@ in {
     fontSizes = mkAttrOpt {} "font size settings";
 
     hostName = mkStrOpt "" "host name";
+
+    hyprPkg = mkAttrOpt pkgs.hyprland "hyprland package";
 
     hyprlockOpts = mkAttrOpt {} "hyprlock settings";
 

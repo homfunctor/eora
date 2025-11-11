@@ -1,5 +1,6 @@
 {
   lib,
+  osConfig,
   pkgs,
   ...
 }: {
@@ -18,7 +19,7 @@
   wayland = {
     windowManager.hyprland = {
       enable = true;
-      package = pkgs.hyprland;
+      package = osConfig.nixos.opts.hyprPkg;
       xwayland.enable = true;
 
       importantPrefixes = [
