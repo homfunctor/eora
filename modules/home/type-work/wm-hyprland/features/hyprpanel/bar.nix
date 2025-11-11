@@ -1,9 +1,11 @@
 # todo: mouse actions over buttons
 {
   config,
+  flake,
   lib,
   ...
 }: let
+  inherit (flake.lib) uApp uTog;
   inherit (config.home.opts) apps bg panelOpts;
 in {
   programs.hyprpanel.settings.bar = {
@@ -75,7 +77,7 @@ in {
         icon = "󰐥";
         leftClick = "menu:powerdropdown";
         middleClick = "";
-        rightClick = "missioncenter";
+        rightClick = uApp "missioncenter";
         scrollDown = "";
         scrollUp = "";
         showLabel = true;
@@ -86,7 +88,7 @@ in {
         leftClick = "";
         middleClick = "";
         round = true;
-        rightClick = "missioncenter";
+        rightClick = uApp "missioncenter";
         scrollDown = "";
         scrollUp = "";
         showIcon = true;
@@ -95,7 +97,7 @@ in {
 
     launcher = {
       icon = "";
-      rightClick = "${apps.launcher.exe} ${apps.launcher.args}";
+      rightClick = "${uTog "${apps.launcher.exe}"} ${apps.launcher.args}";
     };
 
     notifications = {
@@ -112,7 +114,7 @@ in {
     volume = {
       label = true;
       middleClick = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-      rightClick = "pwvucontrol";
+      rightClick = uApp "pwvucontrol";
       scrollDown = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
       scrollUp = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
     };

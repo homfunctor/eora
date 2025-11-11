@@ -42,6 +42,9 @@ in rec {
   # sops utilities
   mkSec = path: concatStringsSep "/" (map (v: removeSuffix "/" v) path);
   mkSecPath = config: path: config.sops.secrets."${mkSec path}".path;
-  # unused for now
-  # mkSecPH = config: path: config.sops.placeholder."${mkSec path}";
+  mkSecPH = config: path: config.sops.placeholder."${mkSec path}";
+
+  # uwsm utilities
+  uApp = cmd: "uwsm app -- ${cmd}";
+  uTog = cmd: "pkill ${cmd} || ${uApp cmd}";
 }

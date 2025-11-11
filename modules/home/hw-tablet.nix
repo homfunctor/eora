@@ -1,4 +1,5 @@
 {
+  flake,
   pkgs,
   ...
 }: {
@@ -26,7 +27,7 @@
   wayland.windowManager.hyprland.settings.exec-once = [
     # ugly hack will replace with something else later
     "sudo rm /tmp/CoreFxPipe_OpenTabletDriver*"
-    "${pkgs.opentabletdriver}/bin/otd-daemon"
+    (flake.lib.uApp "${pkgs.opentabletdriver}/bin/otd-daemon")
   ];
 
   # todo: manage settings declaratively

@@ -1,4 +1,5 @@
 {
+  flake,
   lib,
   osConfig,
   pkgs,
@@ -31,8 +32,9 @@
       ];
 
       settings.exec-once = [
+        "uwsm finalize"
         "hyprctl setcursor"
-        "${lib.getExe pkgs.networkmanagerapplet}"
+        (flake.lib.uApp "${lib.getExe pkgs.networkmanagerapplet}")
       ];
 
       systemd.enable = true;

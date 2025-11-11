@@ -82,23 +82,22 @@ in {
     leftcuts = {
       shortcut1 = {
         inherit (apps.browser) icon tooltip;
-        command = apps.browser.exe;
+        command = uApp apps.browser.exe;
       };
 
       shortcut2 = {
-        # todo: use exact path
-        command = "steam";
+        command = uApp "steam";
         icon = "󰓓";
         tooltip = "Steam";
       };
 
       shortcut3 = {
         inherit (apps.terminal) icon tooltip;
-        command = apps.terminal.exe;
+        command = uApp apps.terminal.exe;
       };
 
       shortcut4 = {
-        command = "${apps.terminal.exe} ${lib.getExe config.programs.yazi.package} ~/eora";
+        command = uApp "${apps.terminal.exe} ${lib.getExe config.programs.yazi.package} ~/eora";
         icon = "";
         tooltip = "Browse Flake";
       };
@@ -107,51 +106,51 @@ in {
     rightcuts = {
       shortcut1 = {
         inherit (apps.video) icon tooltip;
-        command = apps.video.exe;
+        command = uApp apps.video.exe;
       };
 
       shortcut3 = {
         inherit (apps.audio) icon tooltip;
-        command = apps.audio.exe;
+        command = uApp apps.audio.exe;
       };
     };
 
     leftdirs = {
       directory1 = {
-        command = "${apps.directory.exe} ${apps.directory.args}";
+        command = uApp "${apps.directory.exe} ${apps.directory.args}";
         label = "󰋜 Home";
       };
 
       directory2 = {
-        command = "${apps.directory.exe} ${apps.directory.args} Nix";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Nix";
         label = " Nix";
       };
 
       directory3 = {
-        command = "${apps.directory.exe} ${apps.directory.args} Rust";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Rust";
         label = "󱘗 Rust";
       };
     };
 
     rightdirs = {
       directory1 = {
-        command = "${apps.directory.exe} ${apps.directory.args} Books";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Books";
         label = "󱉟 Books";
       };
 
       directory2 = {
-        command = "${apps.directory.exe} ${apps.directory.args} Math";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Math";
         label = "󰿈 Math";
       };
 
       directory3 = {
-        command = "${apps.directory.exe} ${apps.directory.args} Downloads";
+        command = uApp "${apps.directory.exe} ${apps.directory.args} Downloads";
         label = "󰇚 Downloads";
       };
     };
   };
 
   wayland.windowManager.hyprland.settings.exec-once = [
-    (lib.getExe config.programs.hyprpanel.package)
+    (uApp (lib.getExe config.programs.hyprpanel.package))
   ];
 }
