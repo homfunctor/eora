@@ -2,10 +2,7 @@
 # already set:
 #   XDG_RUNTIME_DIR = "/run/user/$UID";
 #   DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$UID/bus";
-{
-  config,
-  ...
-}: {
+{config, ...}: {
   xdg.configFile = {
     "electron-flags.conf".text = ''
       --enable-features=UseOzonePlatform,WaylandWindowDecorations
