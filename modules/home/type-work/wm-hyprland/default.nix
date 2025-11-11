@@ -14,7 +14,6 @@
     ./security.nix
     ./settings.nix
   ];
-  home.pointerCursor.hyprcursor.enable = true;
 
   wayland = {
     windowManager.hyprland = {
@@ -35,21 +34,7 @@
         "${lib.getExe pkgs.networkmanagerapplet}"
       ];
 
-      systemd = {
-        enable = true;
-
-        extraCommands = lib.mkBefore [
-          "systemctl --user stop graphical-session.target"
-          "systemctl --user start hyprland-session.target"
-        ];
-
-        variables = [
-          "DISPLAY"
-          "HYPRLAND_INSTANCE_SIGNATURE"
-          "WAYLAND_DISPLAY"
-          "XDG_CURRENT_DESKTOP"
-        ];
-      };
+      systemd.enable = true;
     };
     systemd.target = "graphical-session.target";
   };
