@@ -19,16 +19,6 @@
       url = "github:nix-community/home-manager";
     };
 
-    # hy3 = {
-    #   inputs.hyprland.follows = "hyprland";
-    #   url = "github:outfoxxed/hy3";
-    # };
-    #
-    # hyprland = {
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   url = "git+https://github.com/hyprwm/hyprland?submodules=1";
-    # };
-
     lanzaboote = {
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.rust-overlay.follows = "rust-overlay";
