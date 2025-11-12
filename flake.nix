@@ -19,11 +19,6 @@
       url = "github:nix-community/home-manager";
     };
 
-    hy3 = {
-      inputs.hyprland.follows = "hyprland";
-      url = "github:outfoxxed/hy3";
-    };
-
     hypridle = {
       inputs = {
         hyprlang.follows = "hyprland/hyprlang";

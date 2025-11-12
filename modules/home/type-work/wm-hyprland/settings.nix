@@ -32,15 +32,19 @@ in {
         };
       };
 
-      dwindle = {
-        force_split = 0;
-        preserve_split = true;
-        pseudotile = true;
-        smart_resizing = true;
-        smart_split = true;
-        special_scale_factor = 1.0;
-        split_width_multiplier = 1.0;
-        use_active_for_splits = true;
+      # dwindle = {
+      #   force_split = 0;
+      #   preserve_split = true;
+      #   pseudotile = true;
+      #   smart_resizing = true;
+      #   smart_split = true;
+      #   special_scale_factor = 1.0;
+      #   split_width_multiplier = 1.0;
+      #   use_active_for_splits = true;
+      # };
+
+      master = {
+        # todo
       };
 
       ecosystem.no_donation_nag = true;
@@ -51,7 +55,7 @@ in {
         border_size = mkDefault 5;
         gaps_in = mkDefault 5;
         gaps_out = mkDefault 0;
-        layout = mkDefault "dwindle";
+        layout = mkDefault "master";
         resize_on_border = true;
       };
 

@@ -512,26 +512,6 @@
         "type": "github"
       }
     },
-    "hy3": {
-      "inputs": {
-        "hyprland": [
-          "hyprland"
-        ]
-      },
-      "locked": {
-        "lastModified": 1761971414,
-        "narHash": "sha256-UeMEUlQsil5DEtF/VQ//41vXJF9ff2xjoYVjhR6dqu4=",
-        "owner": "outfoxxed",
-        "repo": "hy3",
-        "rev": "16dae4d8f853b0d3e8434ee9941f9fc0155b8952",
-        "type": "github"
-      },
-      "original": {
-        "owner": "outfoxxed",
-        "repo": "hy3",
-        "type": "github"
-      }
-    },
     "hyprcursor": {
       "inputs": {
         "hyprlang": [
@@ -1389,11 +1369,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762927664,
-        "narHash": "sha256-7Hn7uy8Kd7H3H3fch3mtgELHgPKq+K5tcNiaSSnvzLA=",
+        "lastModified": 1762933278,
+        "narHash": "sha256-Su44V+tKWQtVj9wfBjBDTCjBEoyXa8/3od2iQRX73kA=",
         "owner": "nix-community",
         "repo": "nur",
-        "rev": "850d207e1adb623add7cb312e4a7b133633816df",
+        "rev": "14e9857ef52d2ba71f64f6f09b9a9e3cc1c9a34f",
         "type": "github"
       },
       "original": {
@@ -1505,7 +1485,6 @@
         "chaotic": "chaotic",
         "disko": "disko",
         "home-manager": "home-manager_2",
-        "hy3": "hy3",
         "hypridle": "hypridle",
         "hyprland": "hyprland",
         "hyprland-contrib": "hyprland-contrib",
