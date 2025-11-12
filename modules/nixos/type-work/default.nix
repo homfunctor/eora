@@ -7,5 +7,5 @@
   ];
 
   # doesn't really fit anywhere else
-  kdeconnect.enable = true;
+  programs.kdeconnect.enable = true;
 }

@@ -10,7 +10,7 @@
   inherit (flake.lib) uApp uTog;
   inherit (lib) getExe;
   inherit (osConfig.nixos.opts) hypr;
-  panelExe = getExe hypr.panel.pkg;
+  panelExe = getExe hypr.hyprpanel.pkg;
 
   mod = "SUPER";
 in {

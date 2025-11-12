@@ -10,17 +10,17 @@
     type-minTTY
 
     # nicer tty
-    # ../../../revelations/users/wael/neovim.nix
-    # ./apps.nix
-    # type-niceTTY
+    ../../../revelations/users/wael/neovim.nix
+    ./apps.nix
+    type-niceTTY
 
     # work
-    # ./hyprland.nix
-    # ./hyprpanel.nix
-    # app-nix-tools
-    # app-vivaldi
-    # hw-tablet
-    # type-work
+    ./hyprland.nix
+    ./hyprpanel.nix
+    app-nix-tools
+    app-vivaldi
+    hw-tablet
+    type-work
   ];
 
   home.opts = {

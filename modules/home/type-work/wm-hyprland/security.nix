@@ -19,7 +19,7 @@ in {
       # todo?
       # soteria
       "${getExe hypr.hyprpicker.pkg}, screencopy, allow"
-      "${hypr.portal.pkg}/libexec/${hypr.portal.exe}, screencopy, allow"
+      "${hypr.portal.pkg}/libexec/${hypr.portal.exePath}, screencopy, allow"
     ];
   };
 }

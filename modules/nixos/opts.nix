@@ -27,28 +27,28 @@ in {
 
     # for excessively fine-tuned control over hypr ecosystem
     hypr = {
-      grimblast.pkg = pkgs.grimblast;
+      grimblast.pkg = mkAttrOpt pkgs.grimblast "";
 
-      hy3.pkg = pkgs.hyrplandPlugins.hy3;
-      hyprbars.pkg = pkgs.hyprandPlugins.hyprbars;
-      hyprcursor.pkg = pkgs.hyprcursor;
-      hyprexpo.pkg = pkgs.hyprlandPlugins.hyprexpo;
-      hyprland.pkg = pkgs.hyprland;
+      hy3.pkg = mkAttrOpt pkgs.hyrplandPlugins.hy3 "";
+      hyprbars.pkg = mkAttrOpt pkgs.hyprandPlugins.hyprbars "";
+      hyprcursor.pkg = mkAttrOpt pkgs.hyprcursor "";
+      hyprexpo.pkg = mkAttrOpt pkgs.hyprlandPlugins.hyprexpo "";
+      hyprland.pkg = mkAttrOpt pkgs.hyprland "";
       hyprlock = {
         opts = mkAttrOpt {} "hyprlock settings";
-        pkg = pkgs.hyprlock;
+        pkg = mkAttrOpt pkgs.hyprlock "";
       };
-      hyprpanel.pkg = pkgs.hyprpanel;
-      hyprpaper.pkg = pkgs.hyprpaper;
-      hyprpicker.pkg = pkgs.hyprpicker;
-      hyprshell.pkg = pkgs.hyprshell;
+      hyprpanel.pkg = mkAttrOpt pkgs.hyprpanel "";
+      hyprpaper.pkg = mkAttrOpt pkgs.hyprpaper "";
+      hyprpicker.pkg = mkAttrOpt pkgs.hyprpicker "";
+      hyprshell.pkg = mkAttrOpt pkgs.hyprshell "";
 
       portal = {
-        exe = ".xdg-desktop-portal-hyprland-wrapped";
-        pkg = pkgs.xdg-desktop-portal-hyprland;
+        exePath = mkStrOpt ".xdg-desktop-portal-hyprland-wrapped" "";
+        pkg = mkAttrOpt pkgs.xdg-desktop-portal-hyprland "";
       };
 
-      qtutils.pkg = pkgs.hyprland-qutils;
+      qtutils.pkg = mkAttrOpt pkgs.hyprland-qtutils "";
     };
 
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";

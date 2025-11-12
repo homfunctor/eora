@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  programs.hyprland.portalPackage = osConfig.portal.pkg;
+  wayland.windowManager.hyprland.portalPackage = osConfig.nixos.opts.hypr.portal.pkg;
 
   xdg.portal = {
     enable = true;
