@@ -6,7 +6,7 @@
   inherit (config.home.opts) panelOpts;
   fontName = config.stylix.fonts.sansSerif.name;
 in {
-  # override stylix
+  # override stylix for now
   programs.hyprpanel.settings.theme = lib.mkForce {
     bar = {
       border_radius = "0em";

@@ -27,28 +27,29 @@ in {
 
     # for excessively fine-tuned control over hypr ecosystem
     hypr = {
-      grimblast.pkg = mkAttrOpt pkgs.grimblast "";
+      grimblast.pkg = mkAttrOpt pkgs.grimblast "package used";
 
-      hy3.pkg = mkAttrOpt pkgs.hyrplandPlugins.hy3 "";
-      hyprbars.pkg = mkAttrOpt pkgs.hyprandPlugins.hyprbars "";
-      hyprcursor.pkg = mkAttrOpt pkgs.hyprcursor "";
-      hyprexpo.pkg = mkAttrOpt pkgs.hyprlandPlugins.hyprexpo "";
-      hyprland.pkg = mkAttrOpt pkgs.hyprland "";
+      hy3.pkg = mkAttrOpt pkgs.hyrplandPlugins.hy3 "package used";
+      hyprbars.pkg = mkAttrOpt pkgs.hyprandPlugins.hyprbars "package used";
+      hyprcursor.pkg = mkAttrOpt pkgs.hyprcursor "package used";
+      hyprexpo.pkg = mkAttrOpt pkgs.hyprlandPlugins.hyprexpo "package used";
+      hypridle.pkg = mkAttrOpt pkgs.hypridle "package used";
+      hyprland.pkg = mkAttrOpt pkgs.hyprland "package used";
       hyprlock = {
-        opts = mkAttrOpt {} "hyprlock settings";
-        pkg = mkAttrOpt pkgs.hyprlock "";
+        opts = mkAttrOpt {} "settings";
+        pkg = mkAttrOpt pkgs.hyprlock "package used";
       };
-      hyprpanel.pkg = mkAttrOpt pkgs.hyprpanel "";
-      hyprpaper.pkg = mkAttrOpt pkgs.hyprpaper "";
-      hyprpicker.pkg = mkAttrOpt pkgs.hyprpicker "";
-      hyprshell.pkg = mkAttrOpt pkgs.hyprshell "";
+      hyprpanel.pkg = mkAttrOpt pkgs.hyprpanel "package used";
+      hyprpaper.pkg = mkAttrOpt pkgs.hyprpaper "package used";
+      hyprpicker.pkg = mkAttrOpt pkgs.hyprpicker "package used";
+      hyprshell.pkg = mkAttrOpt pkgs.hyprshell "package used";
 
       portal = {
-        exePath = mkStrOpt ".xdg-desktop-portal-hyprland-wrapped" "";
-        pkg = mkAttrOpt pkgs.xdg-desktop-portal-hyprland "";
+        exePath = mkStrOpt ".xdg-desktop-portal-hyprland-wrapped" "name of portal binary";
+        pkg = mkAttrOpt pkgs.xdg-desktop-portal-hyprland "package used";
       };
 
-      qtutils.pkg = mkAttrOpt pkgs.hyprland-qtutils "";
+      qtutils.pkg = mkAttrOpt pkgs.hyprland-qtutils "package used";
     };
 
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
