@@ -29,8 +29,8 @@ in {
     hypr = {
       grimblast.pkg = mkAttrOpt pkgs.grimblast "package used";
 
-      hy3.pkg = mkAttrOpt pkgs.hyrplandPlugins.hy3 "package used";
-      hyprbars.pkg = mkAttrOpt pkgs.hyprandPlugins.hyprbars "package used";
+      hy3.pkg = mkAttrOpt pkgs.hyprlandPlugins.hy3 "package used";
+      hyprbars.pkg = mkAttrOpt pkgs.hyprlandPlugins.hyprbars "package used";
       hyprcursor.pkg = mkAttrOpt pkgs.hyprcursor "package used";
       hyprexpo.pkg = mkAttrOpt pkgs.hyprlandPlugins.hyprexpo "package used";
       hypridle.pkg = mkAttrOpt pkgs.hypridle "package used";

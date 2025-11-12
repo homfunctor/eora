@@ -3,7 +3,6 @@
     general = {
       border_size = 5;
       gaps_in = 0;
-      layout = "dwindle";
       resize_on_border = true;
     };
 

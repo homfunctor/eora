@@ -51,7 +51,7 @@ in {
         border_size = mkDefault 5;
         gaps_in = mkDefault 5;
         gaps_out = mkDefault 0;
-        layout = "dwindle";
+        layout = mkDefault "dwindle";
         resize_on_border = true;
       };
 
