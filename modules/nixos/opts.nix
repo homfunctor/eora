@@ -39,7 +39,6 @@ in {
       };
       hyprpanel.pkg = mkAttrOpt pkgs.hyprpanel "package used";
       hyprpaper.pkg = mkAttrOpt pkgs.hyprpaper "package used";
-      hyprpicker.pkg = mkAttrOpt pkgs.hyprpicker "package used";
       hyprshell.pkg = mkAttrOpt pkgs.hyprshell "package used";
 
       portal = {

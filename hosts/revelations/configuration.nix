@@ -34,8 +34,19 @@
 
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
-    hyprGit = 1;
-    hyprPkg = perSystem.hyprland.default;
+    hypr = {
+      grimblast.pkg = perSystem.hyprland-contrib.grimblast;
+      hyprcursor.pkg = perSystem.hyprcursor.default;
+      hyprexpo.pkg = perSystem.hyprland-plugins.hyprexpo;
+      hypridle.pkg = perSystem.hypridle.default;
+      hyprland.pkg = perSystem.hyprland.default;
+      hyprlock.pkg = perSystem.hyprlock.default;
+      hyprpanel.pkg = perSystem.hyprpanel.default;
+      hyprpaper.pkg = perSystem.hyprpaper.default;
+      hyprshell.pkg = perSystem.hyprshell.default;
+      portal.pkg = perSystem.hyprland.xdg-desktop-portal-hyprland;
+      qtutils.pkg = perSystem.hyprland-guiutils.default;
+    };
 
     bg = {
       # number of workspaces per monitor

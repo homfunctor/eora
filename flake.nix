@@ -19,6 +19,24 @@
       url = "github:nix-community/home-manager";
     };
 
+    hyprcursor = {
+      inputs = {
+        hyprlang.follows = "hyprland/hyprlang";
+        nixpkgs.follows = "nixpkgs";
+      };
+      url = "github:hyprwm/hyprcursor";
+    };
+
+    hyprland-guiutils = {
+      inputs = {
+        hyprgraphics.follows = "hyprland/hyprgraphics";
+        hyprlang.follows = "hyprland/hyprlang";
+        hyprutils.follows = "hyprland/hyprutils";
+        nixpkgs.follows = "nixpkgs";
+      };
+      url = "github:hyprwm/hyprland-guiutils";
+    };
+
     hypridle = {
       inputs = {
         hyprlang.follows = "hyprland/hyprlang";
@@ -40,6 +58,11 @@
       url = "github:hyprwm/hyprlock";
     };
 
+    hyprpanel = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:jas-singhfsu/hyprpanel";
+    };
+
     hyprpaper = {
       inputs = {
         hyprgraphics.follows = "hyprland/hyprgraphics";
@@ -58,6 +81,14 @@
     hyprland-plugins = {
       inputs.hyprland.follows = "hyprland";
       url = "github:hyprwm/hyprland-plugins";
+    };
+
+    hyprshell = {
+      inputs = {
+        hyprland.follows = "hyprland";
+        nixpkgs.follows = "hyprland/nixpkgs";
+      };
+      url = "github:h3rmt/hyprshell";
     };
 
     lanzaboote = {

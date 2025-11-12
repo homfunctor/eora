@@ -14,7 +14,6 @@ in {
       "${getExe hypr.hyprshell.pkg}, plugin, allow"
       "${getExe hypr.grimblast.pkg}, screencopy, allow"
       "${getExe pkgs.grim}, screencopy, allow"
-      "${getExe hypr.hyprpicker.pkg}, screencopy, allow"
       "${hypr.portal.pkg}/libexec/${hypr.portal.exePath}, screencopy, allow"
     ];
   };

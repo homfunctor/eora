@@ -1,12 +1,8 @@
 # depends on opts.hypr settings
-{
-  osConfig,
-  ...
-}: {
+{osConfig, ...}: {
   home.packages = with osConfig.nixos.opts.hypr; [
     grimblast.pkg
     hyprcursor.pkg
-    hyprpicker.pkg
     qtutils.pkg
   ];
 }

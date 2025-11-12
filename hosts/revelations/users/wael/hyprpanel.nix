@@ -1,9 +1,11 @@
 {
   config,
+  flake,
   lib,
   ...
 }: let
   inherit (config.home.opts) apps;
+  inherit (flake.lib) uApp;
 in {
   home.opts.panelOpts = {
     layouts = {
