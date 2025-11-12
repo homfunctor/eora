@@ -9,6 +9,7 @@
     ./opt-locale.nix
     ./opt-networking.nix
     ./opt-nix.nix
+    ./opt-security.nix
     ./opt-sops.nix
     ./opt-users.nix
   ];

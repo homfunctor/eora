@@ -79,11 +79,6 @@ in {
     hostPlatform = mkDefault "x86_64-linux";
   };
 
-  security.sudo-rs = {
-    enable = true;
-    wheelNeedsPassword = false;
-  };
-
   services.xserver.xkb = {
     layout = mkDefault "us";
     variant = mkDefault "";

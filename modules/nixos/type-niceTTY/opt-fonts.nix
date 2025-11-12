@@ -3,6 +3,12 @@
   pkgs,
   ...
 }: {
+  console = {
+    font = "ter-124b";
+    keyMap = "us";
+    packages = [pkgs.terminus_font];
+  };
+
   environment.variables.LOG_ICONS = "true";
 
   fonts = {
@@ -15,6 +21,8 @@
       antialias = true;
       cache32Bit = true;
       hinting.enable = true;
+      subpixel.rgba = "rgb";
+      useEmbeddedBitmaps = true;
 
       defaultFonts = with config.stylix.fonts; {
         monospace = [monospace.name "Noto Color Emoji"];
@@ -40,7 +48,6 @@
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
-      unifont
     ];
   };
 }

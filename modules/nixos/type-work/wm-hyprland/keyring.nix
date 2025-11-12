@@ -1,4 +1,5 @@
-# keyring unlocked in hm module
+# not using security.pam.services keyring options
+# because keyring is unlocked in hm module
 {pkgs, ...}: {
   boot.initrd.systemd.enable = true;
 

@@ -1,21 +1,18 @@
-{pkgs, ...}: {
+{
+  lib,
+  osConfig,
+  perSystem,
+  pkgs,
+  ...
+}: {
+  programs.hyprland = lib.mkIf osConfig.nixos.opts.hyprGit {
+    portalPackage = perSystem.hyprland.xdg-desktop-portal-hyprland;
+  };
+
   xdg.portal = {
     enable = true;
 
-    config = {
-      common.default = ["hyprland"];
-
-      hyprland = {
-        "org.freedesktop.impl.portal.FileChooser" = "gtk";
-        "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
-        default = ["hyprland" "gtk"];
-      };
-    };
-
-    extraPortals = with pkgs; [
-      xdg-desktop-portal-gtk
-      xdg-desktop-portal-hyprland
-    ];
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
     xdgOpenUsePortal = true;
   };

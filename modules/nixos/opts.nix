@@ -25,6 +25,7 @@ in {
 
     hostName = mkStrOpt "" "host name";
 
+    hyprGit = mkBoolOpt 0 "nixpkgs (0) or git (1)?";
     hyprPkg = mkAttrOpt pkgs.hyprland "hyprland package";
 
     hyprlockOpts = mkAttrOpt {} "hyprlock settings";

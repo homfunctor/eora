@@ -5,6 +5,8 @@
 }: let
   inherit (lib) mkDefault;
 in {
+  console.earlySetup = true;
+
   boot = {
     consoleLogLevel = 3;
 

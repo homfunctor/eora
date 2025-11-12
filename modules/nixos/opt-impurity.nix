@@ -11,4 +11,6 @@
     enable = true;
     package = pkgs.nix-ld;
   };
+
+  services.envfs.enable = true;
 }

@@ -1,5 +1,9 @@
 # nixos configuration
-{flake, ...}: {
+{
+  flake,
+  perSystem,
+  ...
+}: {
   imports = with flake.modules.nixos; [
     # minimal tty
     ./boot.nix
@@ -21,15 +25,18 @@
     type-personal
 
     # extras
-    app-nix-ld
     chaotic-kernel
     opt-lix
     opt-rust
+    opt-sanity
     opt-vm
   ];
 
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
+    hyprGit = 1;
+    hyprPkg = perSystem.hyprland.default;
+
     bg = {
       # number of workspaces per monitor
       nWS = 2;

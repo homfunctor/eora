@@ -19,9 +19,57 @@
       url = "github:nix-community/home-manager";
     };
 
+    hy3 = {
+      inputs.hyprland.follows = "hyprland";
+      url = "github:outfoxxed/hy3";
+    };
+
+    hypridle = {
+      inputs = {
+        hyprlang.follows = "hyprland/hyprlang";
+        hyprutils.follows = "hyprland/hyprutils";
+        nixpkgs.follows = "hyprland/nixpkgs";
+      };
+      url = "github:hyprwm/hypridle";
+    };
+
+    hyprland.url = "github:hyprwm/hyprland";
+
+    hyprlock = {
+      inputs = {
+        hyprgraphics.follows = "hyprland/hyprgraphics";
+        hyprlang.follows = "hyprland/hyprlang";
+        hyprutils.follows = "hyprland/hyprutils";
+        nixpkgs.follows = "hyprland/nixpkgs";
+      };
+      url = "github:hyprwm/hyprlock";
+    };
+
+    hyprpaper = {
+      inputs = {
+        hyprgraphics.follows = "hyprland/hyprgraphics";
+        hyprlang.follows = "hyprland/hyprlang";
+        hyprutils.follows = "hyprland/hyprutils";
+        nixpkgs.follows = "hyprland/nixpkgs";
+      };
+      url = "github:hyprwm/hyprpaper";
+    };
+
+    hyprland-contrib = {
+      inputs.nixpkgs.follows = "hyprland/nixpkgs";
+      url = "github:hyprwm/contrib";
+    };
+
+    hyprland-plugins = {
+      inputs.hyprland.follows = "hyprland";
+      url = "github:hyprwm/hyprland-plugins";
+    };
+
     lanzaboote = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.rust-overlay.follows = "rust-overlay";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        rust-overlay.follows = "rust-overlay";
+      };
       url = "github:nix-community/lanzaboote";
     };
 

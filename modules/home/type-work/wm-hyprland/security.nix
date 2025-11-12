@@ -16,7 +16,10 @@ in {
       "${getExe config.services.hyprshell.package}, plugin, allow"
       "${getExe pkgs.grimblast}, screencopy, allow"
       "${getExe pkgs.grim}, screencopy, allow"
-      "${pkgs.hyprlandPlugins.hy3}/lib/libhy3.so, plugin, allow"
+      # todo
+      # "${}/lib/libhy3.so, plugin, allow"
+      # todo?
+      # soteria
       "${getExe pkgs.hyprpicker}, screencopy, allow"
       "${portalPackage}/libexec/${xdg}, screencopy, allow"
     ];

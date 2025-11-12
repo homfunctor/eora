@@ -16,7 +16,6 @@
     type-work
 
     # extras
-    app-nix-ld
     opt-lix
     opt-rust
   ];

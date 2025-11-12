@@ -30,8 +30,8 @@
     type-familyPC
 
     # extras
-    app-nix-ld
     opt-lix
+    opt-sanity
   ];
 
   # recursive to avoid defining adminUser twice
