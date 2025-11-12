@@ -18,7 +18,7 @@ in {
 
         battery = {
           background = "${base00}";
-          border = "${base04}";
+          border = "${base08}";
           icon = "${base08}";
           icon_background = "${base00}";
           text = "${base07}";
@@ -36,7 +36,7 @@ in {
 
         clock = {
           background = "${base00}";
-          border = "${base04}";
+          border = "${base08}";
           icon = "${base08}";
           icon_background = "${base00}";
           text = "${base07}";
@@ -44,7 +44,7 @@ in {
 
         dashboard = {
           background = "${base00}";
-          border = "${base0E}";
+          border = "${base07}";
           icon = "${base08}";
         };
 
@@ -71,7 +71,7 @@ in {
 
           cpu = {
             background = "${base00}";
-            border = "${base0F}";
+            border = "${base08}";
             icon = "${base08}";
             icon_background = "${base00}";
             text = "${base07}";
@@ -103,7 +103,7 @@ in {
 
           microphone = {
             background = "${base00}";
-            border = "${base0C}";
+            border = "${base0E}";
             icon = "${base0E}";
             icon_background = "${base00}";
             text = "${base07}";
@@ -126,7 +126,7 @@ in {
 
           ram = {
             background = "${base00}";
-            border = "${base0B}";
+            border = "${base08}";
             icon = "${base08}";
             icon_background = "${base00}";
             text = "${base07}";
@@ -183,7 +183,7 @@ in {
 
         notifications = {
           background = "${base00}";
-          border = "${base06}";
+          border = "${base0E}";
           icon = "${base08}";
           icon_background = "${base00}";
           total = "${base05}";
@@ -193,7 +193,7 @@ in {
 
         systray = {
           background = "${base00}";
-          border = "${base0D}";
+          border = "${base0E}";
           # customIcon = "${base0E}";
         };
 
@@ -201,7 +201,7 @@ in {
 
         volume = {
           background = "${base00}";
-          border = "${base04}";
+          border = "${base0E}";
           icon = "${base08}";
           icon_background = "${base02}";
           text = "${base07}";
@@ -209,7 +209,7 @@ in {
 
         windowtitle = {
           background = "${base00}";
-          border = "${base06}";
+          border = "${base07}";
           icon = "${base08}";
           icon_background = "${base02}";
           text = "${base08}";
@@ -219,7 +219,7 @@ in {
           active = "${base0E}";
           available = "${base04}";
           background = "${base00}";
-          border = "${base03}";
+          border = "${base07}";
           hover = "${base01}";
           numbered_active_highlighted_text_color = "${base04}";
           numbered_active_underline_color = "${base0F}";
@@ -275,7 +275,7 @@ in {
         menu = {
           battery = {
             background.color = "${base00}";
-            border.color = "${base02}";
+            border.color = "${base08}";
             card.color = "${base01}";
 
             icons = {
@@ -337,7 +337,7 @@ in {
 
           clock = {
             background.color = "${base00}";
-            border.color = "${base0D}";
+            border.color = "${base08}";
 
             calendar = {
               contextdays = "${base07}";
@@ -380,7 +380,7 @@ in {
 
           dashboard = {
             background.color = "${base00}";
-            border.color = "${base06}";
+            border.color = "${base07}";
             card.color = "${base01}";
 
             controls = {
@@ -568,7 +568,7 @@ in {
 
           power = {
             background.color = "${base01}";
-            border.color = "${base05}";
+            border.color = "${base0E}";
 
             buttons = {
               logout = {

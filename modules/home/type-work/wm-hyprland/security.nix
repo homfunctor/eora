@@ -10,11 +10,13 @@ in {
   wayland.windowManager.hyprland.settings = {
     ecosystem.enforce_permissions = true;
     permission = [
+      "${getExe hypr.grimblast.pkg}, screencopy, allow"
       "${getExe hypr.hyprlock.pkg}, screencopy, allow"
       "${getExe hypr.hyprshell.pkg}, plugin, allow"
-      "${getExe hypr.grimblast.pkg}, screencopy, allow"
       "${getExe pkgs.grim}, screencopy, allow"
+      "${hypr.hyprexpo.pkg}/lib/libhyprexpo.so, plugin, allow"
       "${hypr.portal.pkg}/libexec/${hypr.portal.exePath}, screencopy, allow"
+      "/tmp/hyprshell.so, plugin, allow"
     ];
   };
 }
