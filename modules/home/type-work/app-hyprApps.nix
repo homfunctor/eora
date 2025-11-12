@@ -1,16 +1,13 @@
-{pkgs, ...}: {
-  home.packages = with pkgs; [
-    grim
-    grimblast
-    hyprcursor
-    hyprland-qtutils
-    hyprpicker
-    hyprsysteminfo
-    showmethekey
-    slurp
-    wayland-protocols
-    wayland-utils
-    wl-clipboard
-    wlr-randr
+# depends on opts.hypr settings
+{
+  osConfig,
+  pkgs,
+  ...
+}: {
+  home.packages = with osConfig.nixos.opts.hypr; [
+    grimblast.pkg
+    hyprcursor.pkg
+    hyprpicker.pkg
+    qtutils.pkg
   ];
 }

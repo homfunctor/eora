@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  osConfig,
   ...
 }: let
   inherit
@@ -11,6 +12,8 @@
 in {
   services.hyprpaper = {
     enable = true;
+    package = osConfig.nixos.opts.hypr.hyprpaper.pkg;
+
     settings = {
       ipc = "off";
       preload = files;

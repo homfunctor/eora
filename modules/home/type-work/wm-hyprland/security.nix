@@ -1,27 +1,26 @@
 {
   config,
   lib,
+  osConfig,
   pkgs,
   ...
 }: let
-  inherit (config.wayland.windowManager.hyprland) portalPackage;
   inherit (lib) getExe;
-
-  xdg = ".xdg-desktop-portal-hyprland-wrapped";
+  inherit (osConfig.nixos.opts) hypr;
 in {
   wayland.windowManager.hyprland.settings = {
     ecosystem.enforce_permissions = true;
     permission = [
-      "${getExe config.programs.hyprlock.package}, screencopy, allow"
-      "${getExe config.services.hyprshell.package}, plugin, allow"
-      "${getExe pkgs.grimblast}, screencopy, allow"
+      "${getExe hypr.hyprlock.pkg}, screencopy, allow"
+      "${getExe hypr.hyprshell.pkg}, plugin, allow"
+      "${getExe hypr.grimblast.pkg}, screencopy, allow"
       "${getExe pkgs.grim}, screencopy, allow"
       # todo
       # "${}/lib/libhy3.so, plugin, allow"
       # todo?
       # soteria
-      "${getExe pkgs.hyprpicker}, screencopy, allow"
-      "${portalPackage}/libexec/${xdg}, screencopy, allow"
+      "${getExe hypr.hyprpicker.pkg}, screencopy, allow"
+      "${hypr.portal.pkg}/libexec/${hypr.portal.exe}, screencopy, allow"
     ];
   };
 }

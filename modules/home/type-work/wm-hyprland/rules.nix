@@ -1,3 +1,4 @@
+# todo: revise
 {config, ...}: let
   inherit (config.home.opts) apps;
 in {

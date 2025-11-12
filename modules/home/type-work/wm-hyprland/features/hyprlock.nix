@@ -2,6 +2,7 @@
   config,
   inputs,
   lib,
+  osConfig,
   ...
 }: let
   inherit (config.lib.stylix) colors;
@@ -13,6 +14,8 @@ in {
 
   programs.hyprlock = {
     enable = true;
+    package = osConfig.nixos.opts.hypr.hyprlock.pkg;
+
     settings = {
       background = [
         {

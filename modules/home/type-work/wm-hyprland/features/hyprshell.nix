@@ -1,3 +1,4 @@
+# todo
 {
   services.hyprshell = {
     enable = true;

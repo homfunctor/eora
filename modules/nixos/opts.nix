@@ -25,10 +25,31 @@ in {
 
     hostName = mkStrOpt "" "host name";
 
-    hyprGit = mkBoolOpt 0 "nixpkgs (0) or git (1)?";
-    hyprPkg = mkAttrOpt pkgs.hyprland "hyprland package";
+    # for excessively fine-tuned control over hypr ecosystem
+    hypr = {
+      grimblast.pkg = pkgs.grimblast;
 
-    hyprlockOpts = mkAttrOpt {} "hyprlock settings";
+      hy3.pkg = pkgs.hyrplandPlugins.hy3;
+      hyprbars.pkg = pkgs.hyprandPlugins.hyprbars;
+      hyprcursor.pkg = pkgs.hyprcursor;
+      hyprexpo.pkg = pkgs.hyprlandPlugins.hyprexpo;
+      hyprland.pkg = pkgs.hyprland;
+      hyprlock = {
+        opts = mkAttrOpt {} "hyprlock settings";
+        pkg = pkgs.hyprlock;
+      };
+      hyprpanel.pkg = pkgs.hyprpanel;
+      hyprpaper.pkg = pkgs.hyprpaper;
+      hyprpicker.pkg = pkgs.hyprpicker;
+      hyprshell.pkg = pkgs.hyprshell;
+
+      portal = {
+        exe = ".xdg-desktop-portal-hyprland-wrapped";
+        pkg = pkgs.xdg-desktop-portal-hyprland;
+      };
+
+      qtutils.pkg = pkgs.hyprland-qutils;
+    };
 
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
 

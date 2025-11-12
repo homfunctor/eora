@@ -12,7 +12,6 @@
   environment.variables.LOG_ICONS = "true";
 
   fonts = {
-    enableDefaultPackages = true;
     fontDir.enable = true;
 
     fontconfig = {

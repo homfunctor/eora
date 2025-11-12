@@ -1,14 +1,16 @@
 {
   config,
   lib,
+  osConfig,
   ...
 }: let
   lock_cmd = "pidof hyprlock || ${lockExe}";
-  lockExe = lib.getExe config.programs.hyprlock.package;
+  lockExe = lib.getExe osConfig.nixos.opts.hypr.hyprlock.pkg;
   timeout = 1200;
 in {
   services.hypridle = {
     enable = true;
+    package = osConfig.nixos.opts.hypr.hypridle.pkg;
 
     settings = {
       general = {

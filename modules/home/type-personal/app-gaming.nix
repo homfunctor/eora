@@ -9,7 +9,7 @@
     hashdeep
     heroic
     ludusavi
-    # lutris
+    lutris
     protonplus
     umu-launcher
     wineWowPackages.fonts

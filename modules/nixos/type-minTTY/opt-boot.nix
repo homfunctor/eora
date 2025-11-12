@@ -5,6 +5,7 @@
 }: let
   inherit (lib) mkDefault;
 in {
+  bootspec.enable = true;
   console.earlySetup = true;
 
   boot = {

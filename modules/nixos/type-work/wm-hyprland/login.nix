@@ -9,9 +9,7 @@
     restart = false;
 
     settings = let
-      # where is hyprland-uwsm.desktop located?
-      # hyprExe = lib.getExe config.nixos.opts.hyprPkg;
-      hyprExe = "uwsm start hyprland-uwsm.desktop";
+      hyprExe = "${lib.getExe config.programs.uwsm.package} start hyprland-uwsm.desktop";
       tuigreetExe = lib.getExe pkgs.tuigreet;
     in {
       initial_session = {

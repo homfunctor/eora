@@ -2,34 +2,34 @@
   config,
   flake,
   lib,
+  osConfig,
   pkgs,
   ...
 }: let
   inherit (config.home.opts) apps;
   inherit (flake.lib) uApp uTog;
   inherit (lib) getExe;
+  inherit (osConfig.nixos.opts) hypr;
+  panelExe = getExe hypr.panel.pkg;
 
   mod = "SUPER";
-  panelExe = getExe config.programs.hyprpanel.package;
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
       # applications
-      "${mod} SHIFT, E, exec, ${uApp "${apps.terminal.exe}"} yazi ~/eora"
+      "${mod} SHIFT, E, exec, ${uApp "${apps.terminal.exe}"} ${getExe pkgs.yazi} ~/eora"
       "${mod} SHIFT, W, exec, ${uApp "${apps.terminal.exe}"}  ~/eora"
       "${mod}, E, exec, ${uApp "${apps.directory.exe}"} ${apps.directory.args}"
       "${mod}, W, exec, ${uApp "${apps.terminal.exe}"}"
       "${mod} CTRL SHIFT, C, exec, ${uApp "${getExe pkgs.gnome-calculator}"}"
       "${mod} CTRL SHIFT, J, exec, ${uApp "${getExe pkgs.xournalpp}"}"
-      "${mod} CTRL SHIFT, W, exec, ${uApp "${apps.terminal.exe}"}  yazi ~/Work/Fall2025"
+      "${mod} CTRL SHIFT, W, exec, ${uApp "${apps.terminal.exe}"}  ${getExe pkgs.yazi} ~/Work/Fall2025"
 
       # hyprpanel
       "${mod}, A, exec, ${panelExe} t audiomenu"
       "${mod} SHIFT, C, exec, ${panelExe} t calendarmenu"
       "${mod}, N, exec, ${panelExe} t notificationsmenu"
       "${mod} SHIFT, N, exec, ${panelExe} clearNotifications"
-      #  does not work properly
-      # "${mod}, P, exec, ${panelExe} restart"
       "${mod}, X, exec, ${panelExe} t powerdropdownmenu"
       "${mod}, grave, exec, ${panelExe} t dashboardmenu"
 
@@ -74,13 +74,13 @@ in {
       "${mod} SHIFT, right, movewindow, r"
 
       # misc controls
-      "${mod} ALT, L, exec, ${uApp "${getExe config.programs.hyprlock.package}"}"
+      "${mod} ALT, L, exec, ${uApp "${getExe hypr.hyprlock.pkg}"}"
       "${mod}, Q, killactive"
       "${mod}, mouse:274, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       "${mod}, mouse:275, exec,  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       "${mod}, mouse:276, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-      ", PRINT, exec, ${uApp "${getExe pkgs.grimblast}"} --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
-      ", KEY_SYSRQ, exec, ${uApp "${getExe pkgs.grimblast}"} --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
+      ", PRINT, exec, ${uApp "${getExe hypr.grimblast.pkg}"} --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
+      ", KEY_SYSRQ, exec, ${uApp "${getExe hypr.grimblast.pkg}"} --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
 
       # unswallow/reswallow a window
       "${mod}, S, toggleswallow"

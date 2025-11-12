@@ -20,7 +20,7 @@
   wayland = {
     windowManager.hyprland = {
       enable = true;
-      package = osConfig.nixos.opts.hyprPkg;
+      package = osConfig.nixos.opts.hypr.hyprland.pkg;
       xwayland.enable = true;
 
       importantPrefixes = [

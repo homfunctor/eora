@@ -1,4 +1,8 @@
 {
+  config,
+  pkgs,
+  ...
+}: {
   hardware.brillo.enable = true;
 
   programs = {
@@ -11,5 +15,8 @@
 
   security.pam.services.hyprlock.text = "auth include login";
 
-  services.xserver.enable = false;
+  services.xserver = {
+    enable = false;
+    desktopManager.runXdgAutostartIfNone = true;
+  };
 }

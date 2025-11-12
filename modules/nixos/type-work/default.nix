@@ -5,4 +5,7 @@
     ./sops-syncthing.nix
     ./wm-hyprland
   ];
+
+  # doesn't really fit anywhere else
+  kdeconnect.enable = true;
 }
