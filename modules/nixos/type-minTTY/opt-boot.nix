@@ -5,10 +5,11 @@
 }: let
   inherit (lib) mkDefault;
 in {
-  bootspec.enable = true;
   console.earlySetup = true;
 
   boot = {
+    bootspec.enable = true;
+
     consoleLogLevel = 3;
 
     initrd = {

@@ -1,5 +1,5 @@
-{
-  services.debus.apparmor = "enabled";
+{pkgs, ...}: {
+  services.dbus.apparmor = "enabled";
 
   security = {
     apparmor = {

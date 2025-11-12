@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+_: {
   hardware.brillo.enable = true;
 
   programs = {

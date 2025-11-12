@@ -8,12 +8,12 @@
     type-minTTY
 
     # nicer tty
-    ./stylix.nix
-    type-niceTTY
+    # ./stylix.nix
+    # type-niceTTY
 
     # work
-    hw-tablet
-    type-work
+    # hw-tablet
+    # type-work
 
     # extras
     opt-lix
