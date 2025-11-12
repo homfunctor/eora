@@ -1,5 +1,4 @@
 # unused values are commented out
-# todo: adjust colors further
 {
   config,
   lib,
@@ -18,7 +17,7 @@ in {
 
         battery = {
           background = "${base00}";
-          border = "${base08}";
+          border = "${base0A}";
           icon = "${base08}";
           icon_background = "${base00}";
           text = "${base07}";
@@ -36,7 +35,7 @@ in {
 
         clock = {
           background = "${base00}";
-          border = "${base08}";
+          border = "${base0A}";
           icon = "${base08}";
           icon_background = "${base00}";
           text = "${base07}";
@@ -71,7 +70,7 @@ in {
 
           cpu = {
             background = "${base00}";
-            border = "${base08}";
+            border = "${base0A}";
             icon = "${base08}";
             icon_background = "${base00}";
             text = "${base07}";
@@ -126,7 +125,7 @@ in {
 
           ram = {
             background = "${base00}";
-            border = "${base08}";
+            border = "${base0A}";
             icon = "${base08}";
             icon_background = "${base00}";
             text = "${base07}";

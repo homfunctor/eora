@@ -1,5 +1,6 @@
 {
   flake,
+  inputs,
   lib,
   osConfig,
   pkgs,
@@ -15,6 +16,7 @@
     ./rules.nix
     ./security.nix
     ./settings.nix
+    inputs.hyprland.homeManagerModules.default
   ];
 
   wayland = {

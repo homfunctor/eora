@@ -18,7 +18,9 @@
       };
 
       default_session = {
-        command = "${tuigreetExe} --time --cmd ${hyprExe} --time-format '%F %R'";
+        command = ''
+          ${tuigreetExe} --time --cmd "${hyprExe}" --time-format '%F %R'
+        '';
         user = "greeter";
       };
     };

@@ -112,8 +112,4 @@ in {
       };
     };
   };
-
-  wayland.windowManager.hyprland.settings.exec-once = [
-    (lib.getExe config.programs.hyprpanel.package)
-  ];
 }
