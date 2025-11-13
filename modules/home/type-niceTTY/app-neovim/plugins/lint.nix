@@ -8,6 +8,7 @@
 in {
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
+      ghostscript
       jsonfmt
       lua54Packages.luacheck
       markdownlint-cli
