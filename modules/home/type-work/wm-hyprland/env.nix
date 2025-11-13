@@ -26,11 +26,9 @@ in {
       export GDK_BACKEND=wayland,x11
       export GDK_SCALE=1
       export GNOME_KEYRING_CONTROL="$XDG_RUNTIME_DIR/keyring"
-      export GTK_USE_PORTAL=1
       export HYPRCURSOR_SIZE=${toString config.stylix.cursor.size}
       export HYPRCURSOR_THEME=${config.stylix.cursor.name}
       export HYPRLAND_NO_RT=1
-      export MOZ_DISABLE_RDD_SANDBOW=1
       export MOZ_ENABLE_WAYLAND=1
       export NIXOS_OZONE_WL=1
       export QT_AUTO_SCREEN_SCALE_FACTOR=1

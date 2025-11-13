@@ -5,6 +5,5 @@
     ./hyprlock.nix
     ./hyprpanel
     ./hyprpaper.nix
-    ./hyprshell.nix
   ];
 }

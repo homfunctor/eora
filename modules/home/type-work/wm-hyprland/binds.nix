@@ -73,6 +73,10 @@ in {
       "${mod} SHIFT, up, movewindow, u"
       "${mod} SHIFT, right, movewindow, r"
 
+      # cycle windows
+      "ALT, tab, cyclenext"
+      "ALT, tab, bringactivetotop"
+
       # misc controls
       "${mod} ALT, L, exec, ${uApp "${getExe hypr.hyprlock.pkg}"}"
       "${mod}, Q, killactive"
