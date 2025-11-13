@@ -7,6 +7,7 @@
 
   programs = {
     bat.enable = true;
+    bottom.enable = true;
     eza = {
       enable = true;
       enableFishIntegration = true;

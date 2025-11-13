@@ -29,6 +29,4 @@
     "sudo rm /tmp/CoreFxPipe_OpenTabletDriver*"
     (flake.lib.uApp "${pkgs.opentabletdriver}/bin/otd-daemon")
   ];
-
-  # todo: manage settings declaratively
 }
