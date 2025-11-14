@@ -30,9 +30,6 @@
       };
     };
 
-    # for onlyoffice:
-    # z /nix/store/*-nerd-fonts-tinos*/share/fonts/truetype
-    # cp -r * ~/.local/share/fonts
     packages = with pkgs; [
       font-awesome
       material-design-icons

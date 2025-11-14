@@ -12,7 +12,7 @@
     ./app-neovide.nix
     ./app-nix-index.nix
     ./app-nwg-drawer.nix
-    ./app-onlyoffice.nix
+    ./app-office.nix
     ./app-pika.nix
     ./app-simple-scan.nix
     ./app-sioyek.nix
