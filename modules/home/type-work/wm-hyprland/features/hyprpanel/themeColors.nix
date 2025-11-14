@@ -62,7 +62,7 @@ in {
         modules = {
           cava = {
             background = "${base00}";
-            border = "${base06}";
+            border = "${base0A}";
             icon = "${base08}";
             icon_background = "${base00}";
             text = "${base08}";
