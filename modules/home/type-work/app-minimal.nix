@@ -1,5 +1,3 @@
-# todo: setup nemo to use kitty
-#   script for nemo that uses zipunicode
 {pkgs, ...}: {
   home.packages = with pkgs; [
     celluloid

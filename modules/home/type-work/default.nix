@@ -11,9 +11,9 @@
     ./app-minimal.nix
     ./app-neovide.nix
     ./app-nix-index.nix
-    ./app-nwg-drawer.nix
     ./app-office.nix
     ./app-pika.nix
+    ./app-rofi.nix
     ./app-simple-scan.nix
     ./app-sioyek.nix
     ./app-starship.nix

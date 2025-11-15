@@ -18,7 +18,6 @@ in {
       "${getExe pkgs.grim}, screencopy, allow"
       "${hypr.hyprexpo.pkg}/lib/libhyprexpo.so, plugin, allow"
       "${hypr.portal.pkg}/libexec/${hypr.portal.exePath}, screencopy, allow"
-      "/tmp/hyprshell.so, plugin, allow"
     ];
   };
 }

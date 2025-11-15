@@ -10,11 +10,11 @@
     type-minTTY
 
     # nicer tty
-    ./apps.nix
     ./neovim.nix
     type-niceTTY
 
     # work
+    ./apps.nix
     ./hyprland.nix
     ./hyprpanel.nix
     hw-tablet

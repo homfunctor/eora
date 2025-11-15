@@ -54,6 +54,7 @@ in {
       tooltip = "Loupe";
     };
 
+    # todo switch to rofi
     launcher = {
       args = "-nofs -wm 'uwsm'";
       exe = getExe launcher.pkg;
@@ -61,6 +62,7 @@ in {
       tooltip = "Nwg-drawer";
     };
 
+    # todo switch to libreoffice
     office = {
       desktop = "onlyoffice-desktopeditors";
       exe = getExe office.pkg;

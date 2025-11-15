@@ -1,5 +1,4 @@
-# todo: redo with nemo
-{
+{config, ...}: {
   dconf = {
     enable = true;
 
@@ -7,17 +6,19 @@
       "org/freedesktop/appearance".color-scheme = 1;
 
       "org/gnome/desktop/interface".color-scheme = "prefer-dark";
-      "org/gnome/desktop/privacy".remember-recent-files = false;
-
-      # "org/gnome/nautilus/icon-view".default-zoom-level = "small-plus";
-      # "org/gnome/nautilus/preferences" = {
-      #   show-create-link = true;
-      # };
+      "org/gnome/desktop/privacy" = {
+        remember-app-usage = false;
+        remember-recent-files = false;
+      };
 
       "org/gtk/gtk4/settings/file-chooser".sort-directories-first = true;
       "org/gtk/settings/file-chooser" = {
         sort-directories-first = true;
         date-format = "with-time";
+      };
+
+      "org/cinnamon/desktop/applications/terminal" = {
+        exec = config.home.opts.apps.terminal.exe;
       };
     };
   };
