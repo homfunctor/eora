@@ -11,10 +11,10 @@
 
     # nicer tty
     ../../../revelations/users/wael/neovim.nix
-    ../../../revelations/users/wael/apps.nix
     type-niceTTY
 
     # work
+    ../../../revelations/users/wael/apps.nix
     ./hyprland.nix
     ./hyprpanel.nix
     app-nix-tools
