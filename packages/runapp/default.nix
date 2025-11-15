@@ -1,3 +1,4 @@
+# stolen from: https://github.com/NixOS/nixpkgs/pull/447721
 {pkgs}: let
   inherit
     (pkgs)
