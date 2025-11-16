@@ -9,7 +9,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    # protonvpn-gui
+    protonvpn-gui
     qbittorrent
     wireguard-tools
   ];

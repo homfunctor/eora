@@ -1,9 +1,9 @@
-{pkgs, ...}: {
+{
+  osConfig,
+  ...
+}: {
   gtk = {
-    iconTheme = {
-      name = "Flat-Remix-Black-Dark";
-      package = pkgs.flat-remix-icon-theme;
-    };
+    inherit (osConfig.nixos.opts) iconTheme;
 
     gtk3.extraConfig = {
       gtk-application-prefer-dark-theme = true;

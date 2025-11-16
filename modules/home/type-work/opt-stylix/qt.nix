@@ -27,18 +27,17 @@
   config,
   inputs,
   lib,
+  osConfig,
   pkgs,
   ...
 }: let
   inherit (builtins) unsafeDiscardStringContext;
   inherit (config.lib.stylix) colors;
 
-  iconThemeName = "Flat-Remix-Black-Dark";
-
   qtctConfig = ''
     [Appearance]
     style=kvantum
-    icon_theme=${iconThemeName}
+    icon_theme=${osConfig.nixos.opts.iconTheme.name}
   '';
 
   # i just don't want github to say my flake is mostly Mustache

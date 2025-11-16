@@ -49,6 +49,11 @@ in {
       qtutils.pkg = mkAttrOpt pkgs.hyprland-qtutils "package used";
     };
 
+    iconTheme = {
+      name = mkStrOpt null "icon theme name";
+      package = mkAttrOpt null "icon theme package";
+    };
+
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
 
     mainMonitor = mkStrOpt null "main monitor";
