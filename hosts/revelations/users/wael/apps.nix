@@ -7,9 +7,12 @@
 # icon: icon used for hyprpanel
 # pkg: package path
 # tooltip: hyprpanel tooltip. also functions as a human-readable set name
+# per-user changes enforced via mkForce
+# based on modules when possible
 {
   config,
   lib,
+  osConfig,
   pkgs,
   ...
 }: let
@@ -19,7 +22,7 @@ in {
     archive = {
       desktop = "org.gnome.FileRoller";
       exe = getExe archive.pkg;
-      pkg = pkgs.file-roller;
+      pkg = osConfig.file-roller.package;
       tooltip = "File Roller";
     };
 
@@ -54,27 +57,39 @@ in {
       tooltip = "Loupe";
     };
 
-    # todo switch to rofi
     launcher = {
-      args = "-nofs -wm 'uwsm'";
+      args = "-show drun";
       exe = getExe launcher.pkg;
-      pkg = pkgs.nwg-drawer;
-      tooltip = "Nwg-drawer";
+      pkg = config.programs.rofi.finalPackage;
+      tooltip = "Rofi";
     };
 
-    # todo switch to libreoffice
-    office = {
-      desktop = "onlyoffice-desktopeditors";
-      exe = getExe office.pkg;
-      pkg = config.programs.onlyoffice.package;
-      tooltip = "Only Office";
+    officeCalc = {
+      desktop = "calc";
+      exe = "${officeCalc.pkg}/bin/scalc";
+      pkg = pkgs.libreoffice-fresh;
+      tooltip = "Libre Office Calc";
+    };
+
+    officeImpress = {
+      inherit (officeCalc) pkg;
+      desktop = "impress";
+      exe = "${officeImpress.pkg}/bin/simpress";
+      tooltip = "Libre Office Impress";
+    };
+
+    officeWriter = {
+      inherit (officeCalc) pkg;
+      desktop = "writer";
+      exe = "${officeCalc.pkg}/bin/swriter";
+      tooltip = "Libre Office Writer";
     };
 
     pdf = {
-      desktop = "sioyek";
+      desktop = "org.gnome.Papers";
       exe = getExe pdf.pkg;
-      pkg = config.programs.sioyek.package;
-      tooltip = "Sioyek";
+      pkg = pkgs.papers;
+      tooltip = "Papers";
     };
 
     shell = {

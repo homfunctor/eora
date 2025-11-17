@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  environment.systemPackages = [pkgs.nerd-fonts.iosevka];
   stylix.fonts = {
     monospace = {
       name = "Iosevka Nerd Font Mono";

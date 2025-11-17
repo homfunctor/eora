@@ -2,7 +2,6 @@
   home.packages = with pkgs; [
     celluloid
     dconf-editor
-    file-roller
     gnome-calculator
     gnome-calendar
     gnome-disk-utility

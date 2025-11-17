@@ -31,6 +31,7 @@
     };
 
     packages = with pkgs; [
+      aporetic
       font-awesome
       material-design-icons
       material-icons

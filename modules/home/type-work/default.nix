@@ -12,10 +12,10 @@
     ./app-neovide.nix
     ./app-nix-index.nix
     ./app-office.nix
+    ./app-papers.nix
     ./app-pika.nix
     ./app-rofi.nix
     ./app-simple-scan.nix
-    ./app-sioyek.nix
     ./app-starship.nix
     ./app-syncthing
     ./app-thunderbird.nix

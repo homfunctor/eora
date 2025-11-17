@@ -9,7 +9,9 @@
     "browser"
     "directory"
     "image"
-    "office"
+    "officeCalc"
+    "officeImpress"
+    "officeWriter"
     "pdf"
     "terminal"
     "text"
@@ -56,16 +58,20 @@
       "image/vnd.microsoft.icon"
       "image/webp"
     ];
-    office = [
-      "application/msword"
-      "application/rtf"
+    officeCalc = [
       "application/vnd.ms-excel"
+      "application/vnd.oasis.opendocument.spreadsheet"
+      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ];
+    officeImpress = [
       "application/vnd.ms-powerpoint"
       "application/vnd.oasis.opendocument.presentation"
-      "application/vnd.oasis.opendocument.spreadsheet"
-      "application/vnd.oasis.opendocument.text"
       "application/vnd.openxmlformats-officedocument.presentationml.presentation"
-      "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    ];
+    officeWriter = [
+      "application/msword"
+      "application/rtf"
+      "application/vnd.oasis.opendocument.text"
       "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
     ];
     pdf = ["application/pdf"];

@@ -80,9 +80,9 @@ in {
       # misc controls
       "${mod} ALT, L, exec, ${uApp "${getExe hypr.hyprlock.pkg}"}"
       "${mod}, Q, killactive"
-      "${mod}, mouse:274, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      "${mod}, mouse:275, exec,  wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-      "${mod}, mouse:276, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+      "${mod}, mouse:274, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      "${mod}, mouse:275, exec,  ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      "${mod}, mouse:276, exec, ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
       ", PRINT, exec, ${uApp "${getExe hypr.grimblast.pkg}"} --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
       ", KEY_SYSRQ, exec, ${uApp "${getExe hypr.grimblast.pkg}"} --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
 
@@ -107,16 +107,16 @@ in {
     ];
 
     bindl = [
-      ", XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      ", XF86AudioNext, exec, wpctl next"
-      ", XF86AudioPlay, exec, wpctl play-pause"
-      ", XF86AudioPrev, exec, wpctl previous"
+      ", XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
+      ", XF86AudioMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      ", XF86AudioNext, exec, ${pkgs.wireplumber}/bin/wpctl next"
+      ", XF86AudioPlay, exec, ${pkgs.wireplumber}/bin/wpctl play-pause"
+      ", XF86AudioPrev, exec, ${pkgs.wireplumber}/bin/wpctl previous"
     ];
 
     bindle = [
-      ", XF86AudioLowerVolume, exec, wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%-"
-      ", XF86AudioRaiseVolume, exec, wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%+"
+      ", XF86AudioLowerVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%-"
+      ", XF86AudioRaiseVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%+"
       ", XF86MonBrightnessDown, exec, ${getExe pkgs.brillo} -q -u 300000 -U 5"
       ", XF86MonBrightnessUp, exec, ${getExe pkgs.brillo} -q -u 300000 -A 5"
     ];
