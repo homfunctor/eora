@@ -58,7 +58,7 @@ in {
     };
 
     launcher = {
-      args = "-nofs -wm 'uwsm'";
+      args = "-nofs -c 8  -term ${terminal.exe} -closebtn 'right' -wm 'uwsm'";
       exe = getExe launcher.pkg;
       pkg = pkgs.nwg-drawer;
       tooltip = "Nwg-drawer";

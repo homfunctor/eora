@@ -10,7 +10,6 @@
     loupe
     mission-center
     nemo-with-extensions
-    nwg-displays
     showmethekey
     slurp
     wayland-protocols

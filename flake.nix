@@ -92,10 +92,7 @@
     };
 
     lanzaboote = {
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        rust-overlay.follows = "rust-overlay";
-      };
+      inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/lanzaboote";
     };
 
