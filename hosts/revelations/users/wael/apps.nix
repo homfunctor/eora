@@ -58,10 +58,10 @@ in {
     };
 
     launcher = {
-      args = "-show drun";
+      args = "-nofs -wm 'uwsm'";
       exe = getExe launcher.pkg;
-      pkg = config.programs.rofi.finalPackage;
-      tooltip = "Rofi";
+      pkg = pkgs.nwg-drawer;
+      tooltip = "Nwg-drawer";
     };
 
     officeCalc = {
