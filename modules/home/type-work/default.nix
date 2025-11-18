@@ -11,10 +11,10 @@
     ./app-minimal.nix
     ./app-neovide.nix
     ./app-nix-index.nix
+    ./app-nwg-drawer.nix
     ./app-office.nix
     ./app-papers.nix
     ./app-pika.nix
-    ./app-rofi.nix
     ./app-simple-scan.nix
     ./app-starship.nix
     ./app-syncthing

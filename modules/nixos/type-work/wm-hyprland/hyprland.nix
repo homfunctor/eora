@@ -1,5 +1,4 @@
-{perSystem, ...}: {
-  environment.systemPackages = [perSystem.self.runapp];
+{
   hardware.brillo.enable = true;
 
   programs = {

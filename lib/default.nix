@@ -44,7 +44,7 @@ in rec {
   mkSecPath = config: path: config.sops.secrets."${mkSec path}".path;
   mkSecPH = config: path: config.sops.placeholder."${mkSec path}";
 
-  # uwsm utilities, now with runapp
-  uApp = cmd: "runapp ${cmd}";
+  # uwsm utilities
+  uApp = cmd: "uwsm app -- ${cmd}";
   uTog = cmd: "pkill ${cmd} || ${uApp cmd}";
 }
