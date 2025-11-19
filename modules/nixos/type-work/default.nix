@@ -6,8 +6,5 @@
     ./wm-hyprland
   ];
 
-  programs = {
-    file-roller.enable = true;
-    kdeconnect.enable = true;
-  };
+  programs.kdeconnect.enable = true;
 }
