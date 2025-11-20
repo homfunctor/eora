@@ -1,6 +1,6 @@
 {
   imports = [
-    ./hyprexpo.nix
+    # ./hyprexpo.nix
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpanel

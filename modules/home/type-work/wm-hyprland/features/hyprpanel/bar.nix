@@ -7,6 +7,17 @@
 }: let
   inherit (flake.lib) uApp uTog;
   inherit (config.home.opts) apps bg panelOpts;
+  titles = [
+    ["com.github.xournalpp.xournalpp" "󰙏" "Xournal"]
+    ["firefox" "󰈹" "Browser"]
+    ["io.github.celluloid_player.celluloid" "" "Video"]
+    ["kitty" "󰄛" "Terminal"]
+    ["nemo" "" "Files"]
+    ["neovide" "" "Editor"]
+    ["org.gnome.calculator" "󱖦" "Calculator"]
+    ["org.strawberrymusicplayer.strawberry" "" "Music"]
+    ["vivaldi-stable" "󰖟" "Browser"]
+  ];
 in {
   programs.hyprpanel.settings.bar = {
     inherit (panelOpts) layouts;
@@ -131,26 +142,13 @@ in {
       scrollUp = "";
       truncation = true;
       truncation_size = 25;
-      title_map = [
-        ["com.github.xournalpp.xournalpp" "󰙏" "Xournal"]
-        ["firefox" "󰈹" "Browser"]
-        ["kitty" "󰄛" "Terminal"]
-        ["nemo" "" "Files"]
-        ["neovide" "" "Editor"]
-        ["org.gnome.calculator" "󱖦" "Calculator"]
-        ["org.strawberrymusicplayer.strawberry" "" "Music"]
-        ["vivaldi-stable" "" "Browser"]
-      ];
+      title_map = titles;
     };
 
     workspaces = {
-      applicationIconMap = {
-        "com.github.xournalpp.xournalpp" = "󰙏";
-        "kitty" = "󰄛";
-        "org.gnome.calculator" = "󱖦";
-        "org.strawberrymusicplayer.strawberry" = "";
-        "vivaldi-stable" = "";
-      };
+      applicationIconMap = lib.listToAttrs (map
+        (entry: lib.nameValuePair (lib.elemAt entry 0) (lib.elemAt entry 1))
+        titles);
       applicationIconOncePerWorkspace = true;
       hideUnoccupied = false;
       showApplicationIcons = true;

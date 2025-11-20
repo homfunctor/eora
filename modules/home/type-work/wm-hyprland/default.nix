@@ -39,7 +39,8 @@
         (flake.lib.uApp "${lib.getExe pkgs.networkmanagerapplet}")
       ];
 
-      systemd.enable = true;
+      # conflicts with uwsm
+      systemd.enable = false;
     };
     systemd.target = "graphical-session.target";
   };
