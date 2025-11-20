@@ -33,13 +33,11 @@ in {
       };
 
       dwindle = {
-        force_split = 0;
-        preserve_split = true;
+        default_split_ratio = 0.95;
+        force_split = 2;
+        preserve_split = 1;
         pseudotile = true;
-        smart_resizing = true;
-        smart_split = true;
         special_scale_factor = 1.0;
-        split_width_multiplier = 1.0;
         use_active_for_splits = true;
       };
 
