@@ -1,3 +1,5 @@
+# todo: mobi/epub reader (calbire probably)
+# todo: cbz/r/whatever reader
 # work environment layered on top of minimal/nice tty
 {
   imports = [
