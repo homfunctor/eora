@@ -1,107 +1,91 @@
 {pkgs}: let
-  immApp = pkgs.stdenv.mkDerivation rec {
+  inherit
+    (pkgs)
+    autoPatchelfHook
+    copyDesktopItems
+    fetchzip
+    fontconfig
+    icu
+    jq
+    lib
+    libgcc
+    libxkbcommon
+    lttng-ust_2_12
+    makeDesktopItem
+    makeWrapper
+    openssl
+    stdenv
+    wayland
+    xorg
+    zlib
+    ;
+
+  runtimeLibs = with xorg; [
+    icu
+    libICE
+    libSM
+    libX11
+    libxkbcommon
+    openssl
+    wayland
+  ];
+in
+  stdenv.mkDerivation rec {
     pname = "irony-mod-manager";
     version = "1.26.267";
 
-    src = pkgs.fetchzip {
+    src = fetchzip {
       url = "https://github.com/bcssov/IronyModManager/releases/download/v${version}/linux-x64.zip";
-      hash = "sha256-cpdudJ7LYk+T9CVTWeZDg30hm8BvGBmdDKBbHJa4XIo=";
+      sha256 = "sha256-Tz/y3Pd7kzD11qEbiIHBQBMYPAmSkR24VFEDFatPBZs=";
       stripRoot = false;
     };
 
+    nativeBuildInputs = [
+      autoPatchelfHook
+      copyDesktopItems
+      makeWrapper
+    ];
+
+    buildInputs = [
+      fontconfig.lib
+      libgcc.lib
+      lttng-ust_2_12
+      zlib
+    ];
+
     installPhase = ''
-      # it's flat
-      mkdir -p $out/opt/IronyModManager
-      cp -r $src/* $out/opt/IronyModManager
-      chmod +x $out/opt/IronyModManager/IronyModManager
+      runHook preInstall
+      mkdir -p $out $out/bin
+      cp -r $src/* $out/
+      mv $out/IronyModManager $out/.IronyModManager-wrapped
+      chmod +x $out/.IronyModManager-wrapped
 
       # enable wayland support
-      ${pkgs.lib.getExe pkgs.jq} '."LinuxOptions"."DisplayServer" = "auto"' \
-      $out/opt/IronyModManager/appSettings.json > $out/opt/IronyModManager/tmp.json
-      mv $out/opt/IronyModManager/tmp.json $out/opt/IronyModManager/appSettings.json
+      ${lib.getExe jq} '."LinuxOptions"."DisplayServer" = "auto"' \
+      $out/appSettings.json > $out/tmp.json
+      mv $out/tmp.json $out/appSettings.json
 
-      # setup executable
-      mkdir -p $out/bin
-      ln -s $out/opt/IronyModManager/IronyModManager $out/bin/IronyModManager
+      makeWrapper $out/.IronyModManager-wrapped $out/bin/IronyModManager \
+        --prefix LD_LIBRARY_PATH : "${lib.makeLibraryPath runtimeLibs}"
+      runHook postInstall
     '';
-  };
-in
-  # it's delicate
-  pkgs.buildFHSEnv {
-    name = "IronyModManager";
 
-    targetPkgs = pkgs:
-      with pkgs; [
-        # audio
-        alsa-lib
-
-        # dotnet
-        dotnetCorePackages.runtime_8_0
-        icu
-        libunwind
-        openssl
-        zlib
-
-        # fonts
-        fontconfig
-        freetype
-
-        # gui
-        atk
-        cairo
-        gdk-pixbuf
-        glib
-        gtk3
-        pango
-
-        # libs
-        glibc
-        libnotify
-        lttng-ust_2_12
-        nspr
-        nss
-        udev
-
-        # wayland
-        libxkbcommon
-        wayland
-
-        # x11
-        xorg.libICE
-        xorg.libSM
-        xorg.libX11
-        xorg.libXScrnSaver
-        xorg.libXcomposite
-        xorg.libXcursor
-        xorg.libXdamage
-        xorg.libXext
-        xorg.libXfixes
-        xorg.libXi
-        xorg.libXrandr
-        xorg.libXrender
-        xorg.libXtst
-        xorg.libxcb
-      ];
-
-    # it lives in its own fantasy world
-    runScript = "${immApp}/bin/IronyModManager";
-
-    extraInstallCommands = ''
-      mkdir -p $out/share/applications
-      cp ${pkgs.makeDesktopItem {
-        categories = ["Game" "Utility"];
-        comment = "A mod manager for Paradox games";
-        desktopName = "Irony Mod Manager";
+    desktopItems = [
+      (makeDesktopItem {
+        name = "Irony Mod Manager";
         exec = "IronyModManager";
         icon = "applications-games";
-        name = "irony-mod-manager";
-      }}/share/applications/* $out/share/applications
-    '';
+        desktopName = "Irony Mod Manager";
+        comment = "Mod Manager for Paradox Games";
+        categories = ["Game"];
+      })
+    ];
 
-    meta = with pkgs.lib; {
+    meta = with lib; {
+      changelog = "https://github.com/bcssov/IronyModManager/releases/tag/v${version}";
       description = "Mod Manager for Paradox Games";
       homepage = "https://github.com/bcssov/IronyModManager";
+      maintainers = [];
       license = licenses.mit;
-      platforms = platforms.all;
     };
   }
