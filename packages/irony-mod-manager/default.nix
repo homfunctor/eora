@@ -72,12 +72,12 @@ in
 
     desktopItems = [
       (makeDesktopItem {
-        name = "Irony Mod Manager";
+        categories = ["Game"];
+        comment = "Mod Manager for Paradox Games";
+        desktopName = "Irony Mod Manager";
         exec = "IronyModManager";
         icon = "applications-games";
-        desktopName = "Irony Mod Manager";
-        comment = "Mod Manager for Paradox Games";
-        categories = ["Game"];
+        name = "Irony Mod Manager";
       })
     ];
 

@@ -7,7 +7,6 @@
     gnome-calendar
     gnome-disk-utility
     grim
-    hyprsysteminfo
     loupe
     mission-center
     nemo-with-extensions

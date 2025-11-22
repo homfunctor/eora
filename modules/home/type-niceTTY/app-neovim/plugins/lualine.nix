@@ -10,17 +10,15 @@
 in {
   config.programs.nixvim = mkIf cfg.enable {
     extraPlugins = [
-      (
-        pkgs.vimUtils.buildVimPlugin {
-          name = "lualine-so-fancy";
-          src = pkgs.fetchFromGitHub {
-            owner = "meuter";
-            repo = "lualine-so-fancy.nvim";
-            rev = "6ba7b138f2ca435673eb04c2cf85f0757df69b07";
-            hash = "sha256-Ctdt8kCG+4ynpfEHpvUhFQpbhcaLg0hoPX+yPkUQGS0=";
-          };
-        }
-      )
+      (pkgs.vimUtils.buildVimPlugin {
+        name = "lualine-so-fancy";
+        src = pkgs.fetchFromGitHub {
+          owner = "meuter";
+          repo = "lualine-so-fancy.nvim";
+          rev = "6ba7b138f2ca435673eb04c2cf85f0757df69b07";
+          hash = "sha256-Ctdt8kCG+4ynpfEHpvUhFQpbhcaLg0hoPX+yPkUQGS0=";
+        };
+      })
     ];
 
     plugins.lualine = mkIf cfg.enable {

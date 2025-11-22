@@ -56,7 +56,7 @@ in
           comment = "GUI Mod Editor for Pillars of Eternity II: Deadfire";
           desktopName = "Apotheosis";
           exec = "Apotheosis";
-          icon = "pillars-of-eternity";
+          icon = "applications-games";
           name = "apotheosis";
           type = "Application";
         }

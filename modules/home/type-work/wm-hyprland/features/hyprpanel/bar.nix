@@ -5,18 +5,19 @@
   lib,
   ...
 }: let
-  inherit (flake.lib) uApp uTog;
   inherit (config.home.opts) apps bg panelOpts;
-  titles = [
+  inherit (flake.lib) uApp uTog;
+  inherit (lib) toLower;
+
+  titles = with apps; [
     ["com.github.xournalpp.xournalpp" "󰙏" "Xournal"]
-    ["firefox" "󰈹" "Browser"]
-    ["io.github.celluloid_player.celluloid" "" "Video"]
-    ["kitty" "󰄛" "Terminal"]
-    ["nemo" "" "Files"]
     ["neovide" "" "Editor"]
     ["org.gnome.calculator" "󱖦" "Calculator"]
-    ["org.strawberrymusicplayer.strawberry" "" "Music"]
-    ["vivaldi-stable" "󰖟" "Browser"]
+    [(toLower audio.desktop) "" "Music"]
+    [(toLower browser.desktop) "󰖟" "Browser"]
+    [(toLower directory.desktop) "" "Files"]
+    [(toLower terminal.desktop) "󰄛" "Terminal"]
+    [(toLower video.desktop) "" "Video"]
   ];
 in {
   programs.hyprpanel.settings.bar = {

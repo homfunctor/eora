@@ -1,7 +1,4 @@
-{
-  osConfig,
-  ...
-}: {
+{osConfig, ...}: {
   gtk = {
     inherit (osConfig.nixos.opts) iconTheme;
 
