@@ -33,8 +33,6 @@ in {
           indent_enabled = true;
           quickfix_mode = false;
           syntax_enabled = true;
-          # todo: getExe?
-          view_method = "papers";
         };
 
         # installed elsewhere
