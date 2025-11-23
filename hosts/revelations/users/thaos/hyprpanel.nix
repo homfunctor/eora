@@ -15,8 +15,6 @@ in {
           "windowtitle"
         ];
         "middle" = [
-          "ram"
-          "cpu"
           "clock"
         ];
         "right" = [
@@ -34,8 +32,6 @@ in {
           "windowtitle"
         ];
         "middle" = [
-          "ram"
-          "cpu"
           "clock"
         ];
         "right" = [
