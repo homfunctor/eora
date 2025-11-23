@@ -32,6 +32,8 @@
 
     packages = with pkgs; [
       font-awesome
+      freefont_ttf
+      gyre-fonts
       material-design-icons
       material-icons
       material-symbols
@@ -44,6 +46,7 @@
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif
       noto-fonts-color-emoji
+      unifont
     ];
   };
 }
