@@ -1,8 +1,9 @@
 {config, ...}: {
   programs.kitty = {
     enable = true;
-
-    keybindings = {};
+    # assumes standard format of
+    # shellIntegration.enable<ShellName>Integration = true;
+    inherit (config.home.opts.apps.shell) shellIntegration;
 
     settings = {
       confirm_os_window_close = "0";
@@ -21,10 +22,5 @@
       url_style = "curly";
       window_padding_width = 10;
     };
-
-    shellIntegration.enableFishIntegration = true;
-
-    extraConfig = ''
-    '';
   };
 }

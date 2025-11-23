@@ -1,6 +1,7 @@
-{
-  programs.zoxide = {
-    enable = true;
-    enableFishIntegration = true;
-  };
+{config, ...}: {
+  programs.zoxide =
+    {
+      enable = true;
+    }
+    // config.home.opts.apps.shell.shellIntegration;
 }

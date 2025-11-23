@@ -19,7 +19,7 @@ in {
     # monitors, resolutions, xy (positions)
     bg = mkAttrOpt {} "per host background/monitor settings";
 
-    fishAliases = mkAttrOpt {} "fish shell aliases";
+    shellAliases = mkAttrOpt {} "shell aliases";
 
     fontSizes = mkAttrOpt {} "font size settings";
 
@@ -63,6 +63,8 @@ in {
       popups = mkFloatOpt 0.95 "popups opacity";
       terminal = mkFloatOpt 0.80 "terminal opacity";
     };
+
+    shell = mkStrOpt "fish" "shell to use";
 
     sops = {
       keyring.enable = mkBoolOpt false "unlock keyring on login with sops";

@@ -1,5 +1,6 @@
+# extra aliases for Revelations
 {
-  nixos.opts.fishAliases = {
+  nixos.opts.shellAliases = {
     # sometimes you wanna game on the side
     "m1" = "xrandr --output DP-1 --primary";
     "m2" = "xrandr --output HDMI-A-1 --primary";

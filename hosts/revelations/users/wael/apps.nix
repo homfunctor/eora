@@ -92,10 +92,14 @@ in {
       tooltip = "Papers";
     };
 
-    shell = {
+    shell = let
+      capitalize = str: lib.toUpper (lib.substring 0 1 str) + lib.substring 1 (-1) str;
+      shellName = osConfig.nixos.opts.shell;
+    in {
       exe = getExe shell.pkg;
-      pkg = config.programs.fish.package;
-      tooltip = "Fish";
+      pkg = config.programs."${shellName}".package;
+      shellIntegration."enable${shell.tooltip}Integration" = true;
+      tooltip = capitalize shellName;
     };
 
     terminal = {

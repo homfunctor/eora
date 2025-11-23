@@ -2,7 +2,6 @@
 # and chaotic cache available
 {
   imports = [
-    ./app-fish.nix
     ./chaotic-cache.nix
     ./opt-fonts.nix
     ./opt-lanzaboote.nix

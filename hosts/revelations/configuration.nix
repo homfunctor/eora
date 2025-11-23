@@ -18,6 +18,7 @@
 
     # work
     ./hardware.nix
+    app-fish
     hw-tablet
     type-work
 

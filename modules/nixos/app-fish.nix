@@ -19,6 +19,7 @@
 
   programs.fish = {
     enable = true;
+    inherit (config.nixos.opts) shellAliases;
 
     interactiveShellInit = ''
       starship init fish | source
@@ -26,7 +27,5 @@
     '';
 
     promptInit = "set fish_greeting";
-
-    shellAliases = config.nixos.opts.fishAliases;
   };
 }

@@ -1,5 +1,5 @@
 {
-  nixos.opts.fishAliases = {
+  nixos.opts.shellAliases = {
     # don't want to rely on zoxide for these
     eora = "z ~/eora";
     revelations = "z ~/eora/hosts/revelations";

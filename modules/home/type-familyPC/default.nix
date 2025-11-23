@@ -8,7 +8,7 @@
     ../type-work/opt-gtk.nix
     ../type-work/opt-qt.nix
     ../type-work/opt-starship.nix
-    ../type-work/opt-stylix
-    ../type-work/opt-xdg.
+    ../type-work/opt-stylix.nix
+    ../type-work/opt-xdg.nix
   ];
 }
