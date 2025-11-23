@@ -15,7 +15,7 @@
     ./app-nix-index.nix
     ./app-nwg-drawer.nix
     ./app-office.nix
-    ./app-papers.nix
+    ./app-pdfViewer.nix
     ./app-pika.nix
     ./app-simple-scan.nix
     ./app-starship.nix
