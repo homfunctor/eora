@@ -2,7 +2,6 @@
   imports = with flake.modules.nixos; [
     # minimal tty
     ./boot.nix
-    ./hardware.nix
     fsys-vytmadh
     opts
     type-minTTY
@@ -12,6 +11,8 @@
     type-niceTTY
 
     # work
+    ./hardware.nix
+    app-fish
     hw-tablet
     type-work
 
