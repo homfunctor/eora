@@ -14,7 +14,7 @@
     type-niceTTY
 
     # work
-    ../../../revelations/users/wael/apps.nix
+    ./apps.nix
     ./hyprland.nix
     ./hyprpanel.nix
     app-nix-tools

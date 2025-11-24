@@ -23,7 +23,7 @@
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
     bg = {
-      nWS = 6;
+      nWS = 3;
       monitors = ["eDP-1"];
       resolutions = ["1920x1080"];
       xy = ["0x0"];
