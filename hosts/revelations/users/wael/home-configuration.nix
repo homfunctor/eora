@@ -21,12 +21,10 @@
     type-work
 
     # personal
+    app-civ5-map-image
     app-nix-tools
     app-vivaldi
     type-personal
-
-    # extra
-    app-civ5-map-image
   ];
 
   home.opts = {

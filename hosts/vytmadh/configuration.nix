@@ -2,7 +2,6 @@
   imports = with flake.modules.nixos; [
     # minimal tty
     ./boot.nix
-    ./hardware.nix
     fsys-vytmadh
     opts
     type-minTTY
@@ -12,6 +11,8 @@
     type-niceTTY
 
     # work
+    ./hardware.nix
+    app-fish
     hw-tablet
     type-work
 
@@ -23,7 +24,7 @@
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
     bg = {
-      nWS = 6;
+      nWS = 3;
       monitors = ["eDP-1"];
       resolutions = ["1920x1080"];
       xy = ["0x0"];

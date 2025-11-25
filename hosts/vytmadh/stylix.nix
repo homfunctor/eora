@@ -2,7 +2,7 @@
   imports = with flake.modules.nixos; [
     stylix-cursor-nordzy
     stylix-fonts-iosevka
-    stylix-icons-flatRemixBlackDark
+    stylix-icons-obsidian
     stylix-theme-sdg
   ];
 }
