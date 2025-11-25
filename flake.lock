@@ -1655,11 +1655,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764081253,
-        "narHash": "sha256-VuhIHfDpy32beuu/mTzATiYv3Y+rpT9LEYMXrvq4I3k=",
+        "lastModified": 1764099247,
+        "narHash": "sha256-KzFCy6NZxn3mH2nGdETiWfV0IZAt1MGRLhE76RdNM+A=",
         "owner": "nix-community",
         "repo": "nur",
-        "rev": "9901cacb4605ed7c74996eb10ae810cdc4283356",
+        "rev": "bc3469168688de7e9d92ec27cc560aecd4063af3",
         "type": "github"
       },
       "original": {
@@ -1762,6 +1762,26 @@
         "type": "github"
       }
     },
+    "quickshell": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1764045583,
+        "narHash": "sha256-W24ReyRrhOKTKIsuAMkY5hnVlCufGoONM79sjUoyQkk=",
+        "ref": "refs/heads/master",
+        "rev": "e9bad67619ee9937a1bbecfc6ad3b4231d2ecdc3",
+        "revCount": 709,
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
+      }
+    },
     "root": {
       "inputs": {
         "blueprint": "blueprint",
@@ -1786,6 +1806,7 @@
         "nixpkgs": "nixpkgs_4",
         "nixvim": "nixvim",
         "nur": "nur",
+        "quickshell": "quickshell",
         "rust-overlay": "rust-overlay_3",
         "sapadal": "sapadal",
         "sops-nix": "sops-nix",

@@ -1,6 +1,6 @@
 {
   imports = [
-    # ./hyprexpo.nix
+    ./app-quickshell
     ./hypridle.nix
     ./hyprlock.nix
     ./hyprpanel

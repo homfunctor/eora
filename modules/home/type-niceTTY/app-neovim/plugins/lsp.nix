@@ -32,6 +32,7 @@ in {
             };
           };
         };
+        qmlls.enable = true;
         sqls.enable = true;
         statix.enable = true;
         typos_lsp = {

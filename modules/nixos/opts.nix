@@ -30,7 +30,6 @@ in {
       grimblast.pkg = mkAttrOpt pkgs.grimblast "package used";
 
       hyprcursor.pkg = mkAttrOpt pkgs.hyprcursor "package used";
-      hyprexpo.pkg = mkAttrOpt pkgs.hyprlandPlugins.hyprexpo "package used";
       hypridle.pkg = mkAttrOpt pkgs.hypridle "package used";
       hyprland.pkg = mkAttrOpt pkgs.hyprland "package used";
       hyprlock = {
@@ -39,7 +38,6 @@ in {
       };
       hyprpanel.pkg = mkAttrOpt pkgs.hyprpanel "package used";
       hyprpaper.pkg = mkAttrOpt pkgs.hyprpaper "package used";
-      hyprshell.pkg = mkAttrOpt pkgs.hyprshell "package used";
 
       portal = {
         exePath = mkStrOpt ".xdg-desktop-portal-hyprland-wrapped" "name of portal binary";
@@ -47,6 +45,8 @@ in {
       };
 
       qtutils.pkg = mkAttrOpt pkgs.hyprland-qtutils "package used";
+
+      quickshell.pkg = mkAttrOpt pkgs.quickshell "package used";
     };
 
     iconTheme = {
