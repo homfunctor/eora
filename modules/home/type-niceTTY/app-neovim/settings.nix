@@ -52,7 +52,6 @@
 
       # text stuff
       breakindent = true;
-      formatoptions = "crql";
       linebreak = true;
       showbreak = "↳ ";
       spell = true;
