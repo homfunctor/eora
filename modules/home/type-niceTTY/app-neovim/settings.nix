@@ -52,6 +52,7 @@
 
       # text stuff
       breakindent = true;
+      formatoptions = "cql";
       linebreak = true;
       showbreak = "↳ ";
       spell = true;
