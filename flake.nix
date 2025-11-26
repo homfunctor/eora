@@ -114,11 +114,6 @@
 
     nixvim.url = "github:nix-community/nixvim";
 
-    nur = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/nur";
-    };
-
     quickshell = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";

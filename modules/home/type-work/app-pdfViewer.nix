@@ -2,8 +2,9 @@
   programs.sioyek = {
     enable = true;
 
-    # todo
-    config = {};
+    config = {
+      should_launch_new_window = "1";
+    };
     bindings = {};
   };
 }
