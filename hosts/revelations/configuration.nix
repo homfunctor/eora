@@ -44,7 +44,7 @@
       hyprpanel.pkg = perSystem.hyprpanel.default;
       hyprpaper.pkg = perSystem.hyprpaper.default;
       portal.pkg = perSystem.hyprland.xdg-desktop-portal-hyprland;
-      qtutils.pkg = perSystem.hyprland-guiutils.default;
+      # qtutils.pkg = perSystem.hyprland-guiutils.default;
       quickshell.pkg = perSystem.quickshell.default;
     };
 

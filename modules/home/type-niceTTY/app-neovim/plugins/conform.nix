@@ -36,8 +36,6 @@ in {
               "--reindent"
               "--keywords"
               "upper"
-              "--identifiers"
-              "upper"
               "--use_space_around_operators"
               "--wrap_after"
               "80"
