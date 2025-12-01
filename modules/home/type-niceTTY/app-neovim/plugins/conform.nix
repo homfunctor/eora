@@ -34,8 +34,6 @@ in {
           sqlformat = {
             args = [
               "--reindent"
-              "--keywords"
-              "upper"
               "--use_space_around_operators"
               "--wrap_after"
               "80"
