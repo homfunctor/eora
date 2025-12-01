@@ -96,6 +96,11 @@
       url = "github:nix-community/lanzaboote";
     };
 
+    niri-flake = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-gaming = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:fufexan/nix-gaming";

@@ -58,6 +58,10 @@ in {
 
     mainMonitor = mkStrOpt null "main monitor";
 
+    niri = {
+      pkg = mkAttrOpt pkgs.niri "package used";
+    };
+
     opacity = {
       desktop = mkFloatOpt 1.0 "desktop opacity";
       popups = mkFloatOpt 0.95 "popups opacity";
@@ -76,5 +80,7 @@ in {
     userNames = mkListOpt lib.types.str null "user names";
 
     wlrBR = mkStrOpt "wayland" "requested backend/renderer for wayland";
+
+    wmName = mkStrOpt "hyprland" "default window manager";
   };
 }

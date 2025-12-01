@@ -8,6 +8,7 @@
 }: {
   imports = [
     ./animations.nix
+    ./app-hyprApps.nix
     ./binds.nix
     ./env.nix
     ./features

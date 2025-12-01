@@ -6,7 +6,6 @@
     ./app-firefox.nix
     ./app-glance.nix
     ./app-graphics.nix
-    ./app-hyprApps.nix
     # ./app-joplin.nix
     ./app-kitty.nix
     ./app-math
@@ -24,10 +23,10 @@
     ./app-udiskie.nix
     ./app-utils.nix
     ./opt-dconf.nix
+    ./opt-env.nix
     ./opt-mime.nix
     ./opt-qt.nix
     ./opt-stylix
     ./opt-xdg.nix
-    ./wm-hyprland
   ];
 }
