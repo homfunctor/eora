@@ -87,8 +87,6 @@ in {
           mkAttrOpt {} "${name} settings");
     };
 
-    startCmd = mkAttrOpt null "start up commands in a format both niri and hyprland can use";
-
     # syncthing
     sync = {
       versioning = mkAttrOpt {

@@ -1,5 +1,4 @@
 {
-  config,
   flake,
   pkgs,
   ...
@@ -25,9 +24,10 @@
     usbutils
   ];
 
-  # ugly hack will replace with something else later
-  startCmd.hw-tablet = [
-    {command = ["sudo" "rm" "/tmp/CoreFxPipe_OpenTabletDriver*"];}
-    {command = ["${pkgs.opentabletdriver}/bin/otd-daemon"];}
+  # todo: rewrite as mkIf on wmName. working idea going forward: modules are responsible for adding their stuff to each wm/de's startup command list
+  wayland.windowManager.hyprland.settings.exec-once = [
+    # ugly hack will replace with something else later
+    "sudo rm /tmp/CoreFxPipe_OpenTabletDriver*"
+    (flake.lib.uApp "${pkgs.opentabletdriver}/bin/otd-daemon")
   ];
 }

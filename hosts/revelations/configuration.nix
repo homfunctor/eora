@@ -21,6 +21,7 @@
     app-fish
     hw-tablet
     type-work
+    wm-hyprland
 
     # personal
     type-personal
