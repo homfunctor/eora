@@ -17,8 +17,11 @@
     ./apps.nix
     ./hyprland.nix
     ./hyprpanel.nix
+    app-hypridle
+    app-hyprlock
     hw-tablet
     type-work
+    wm-hyprland
 
     # personal
     app-civ5-map-image
