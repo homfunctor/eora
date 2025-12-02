@@ -10,8 +10,6 @@ in {
   wayland.windowManager.hyprland.settings = {
     ecosystem.enforce_permissions = true;
 
-    exec-once = ["${getExe pkgs.soteria}"];
-
     permission = [
       "${getExe hypr.grimblast.pkg}, screencopy, allow"
       "${getExe hypr.hyprlock.pkg}, screencopy, allow"

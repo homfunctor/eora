@@ -83,6 +83,6 @@ in {
 
     wlrBR = mkStrOpt "wayland" "requested backend/renderer for wayland";
 
-    wmName = mkStrOpt "hyprland" "default window manager";
+    wmName = mkStrOpt "uwsm" "use uwsm+hyprland or niri?";
   };
 }

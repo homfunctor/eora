@@ -6,4 +6,6 @@
     ./app-yazi.nix
     ./app-zoxide.nix
   ];
+
+  stylix.enableReleaseChecks = false;
 }

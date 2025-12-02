@@ -15,13 +15,15 @@
 
     # work
     ./apps.nix
-    ./wm-settings.nix
-    ./wm-panel.nix
+    # ./hyprland-panel.nix
+    # ./hyprland-settings.nix
+    # ./niri-panel.nix
+    # ./niri-settings.nix
     app-nix-tools
     app-vivaldi
     type-work
-    wm-hyprland
-    # wm-niri
+    # wm-hyprland
+    wm-niri
   ];
 
   home.opts = {

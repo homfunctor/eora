@@ -5,18 +5,16 @@
 
   programs.seahorse.enable = true;
 
-  security = {
-    pam.services.hyprlock.text = "auth include login";
-    soteria.enable = true;
-  };
+  security.pam.services.hyprlock.text = "auth include login";
 
   services = {
     dbus = {
       enable = true;
       implementation = "broker";
       packages = with pkgs; [
-        gcr_4
-        gnome-keyring
+        gcr
+        gnome-settings-daemon
+        libsecret
       ];
     };
 

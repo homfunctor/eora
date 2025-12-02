@@ -11,6 +11,7 @@
     ./app-hyprApps.nix
     ./binds.nix
     ./env.nix
+    ./hypridle.nix
     ./hyprpaper.nix
     ./keyring.nix
     ./portal.nix
@@ -18,6 +19,7 @@
     ./security.nix
     ./settings.nix
     ./tablet.nix
+    flake.modules.home.app-hyprlock
     flake.modules.home.app-hyprpanel
     inputs.hyprland.homeManagerModules.default
   ];
