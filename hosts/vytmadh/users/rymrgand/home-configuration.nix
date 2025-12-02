@@ -19,7 +19,6 @@
     ./wm-panel.nix
     app-nix-tools
     app-vivaldi
-    hw-tablet
     type-work
     wm-hyprland
     # wm-niri

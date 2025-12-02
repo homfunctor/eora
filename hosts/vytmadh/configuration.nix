@@ -15,7 +15,8 @@
     app-fish
     hw-tablet
     type-work
-    wm-niri
+    wm-hyprland
+    # wm-niri
 
     # extras
     opt-lix
@@ -55,7 +56,7 @@
     adminUser = "rymrgand";
     userNames = [adminUser];
 
-    wmName = "niri";
+    # wmName = "niri";
   };
 
   services.libinput.touchpad = {

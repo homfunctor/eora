@@ -11,6 +11,10 @@
 
     inherit (config.nixos.opts) opacity;
     autoEnable = true;
+
+    # useless and annoying
+    enableReleaseChecks = false;
+
     fonts = {
       emoji = {
         name = "Noto Color Emoji";
