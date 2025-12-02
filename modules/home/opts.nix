@@ -3,6 +3,7 @@
 {
   flake,
   lib,
+  osConfig,
   ...
 }: let
   inherit

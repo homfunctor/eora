@@ -17,6 +17,7 @@
     ./rules.nix
     ./security.nix
     ./settings.nix
+    ./tablet.nix
     flake.modules.home.app-hyprpanel
     inputs.hyprland.homeManagerModules.default
   ];
