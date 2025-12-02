@@ -21,6 +21,7 @@
     enable = true;
     inherit (config.nixos.opts) shellAliases;
 
+    # assuming starship and zoxide are installed
     interactiveShellInit = ''
       starship init fish | source
       zoxide init fish | source

@@ -15,6 +15,7 @@
         "kvm"
         "libvirtd"
         "networkmanager"
+        "plugdev"
         "power"
         "qemu-libvirtd"
         "scanners"

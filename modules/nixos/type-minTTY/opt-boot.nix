@@ -8,8 +8,6 @@ in {
   console.earlySetup = true;
 
   boot = {
-    bootspec.enable = true;
-
     consoleLogLevel = 3;
 
     initrd = {
@@ -19,7 +17,6 @@ in {
 
     kernel.sysctl."fs.file-max" = 524288;
 
-    # overridden when cachyos kernel is enabled
     kernelPackages = mkDefault pkgs.linuxPackages_latest;
 
     kernelParams = [
@@ -31,7 +28,6 @@ in {
 
     loader = {
       efi.canTouchEfiVariables = true;
-      # overridden when lanzaboote is enabled
       systemd-boot.enable = mkDefault true;
     };
 

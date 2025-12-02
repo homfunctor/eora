@@ -11,12 +11,13 @@
     ./app-hyprApps.nix
     ./binds.nix
     ./env.nix
-    ./features
+    ./hyprpaper.nix
     ./keyring.nix
     ./portal.nix
     ./rules.nix
     ./security.nix
     ./settings.nix
+    flake.modules.home.app-hyprpanel
     inputs.hyprland.homeManagerModules.default
   ];
 

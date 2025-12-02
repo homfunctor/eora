@@ -56,6 +56,8 @@ in {
 
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
 
+    loginCmd = mkStrOpt null "command for greetd";
+
     mainMonitor = mkStrOpt null "main monitor";
 
     niri = {

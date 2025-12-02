@@ -5,7 +5,10 @@
 
   programs.seahorse.enable = true;
 
-  security.soteria.enable = true;
+  security = {
+    pam.services.hyprlock.text = "auth include login";
+    soteria.enable = true;
+  };
 
   services = {
     dbus = {

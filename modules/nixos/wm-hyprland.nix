@@ -1,13 +1,17 @@
 {
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
+  config,
+  lib,
+  ...
+}: {
+  programs = {
+    hyprland = {
+      enable = true;
+      withUWSM = true;
+    };
+    uwsm.enable = true;
   };
 
-  security.pam.services.hyprlock.text = "auth include login";
-
-  services.xserver = {
-    enable = false;
-    desktopManager.runXdgAutostartIfNone = true;
-  };
+  nixos.opts = let
+    uwsmExe = "${lib.getExe config.programs.uwsm.package}";
+  in {loginCmd = "${uwsmExe} start hyprland-uwsm.desktop";};
 }

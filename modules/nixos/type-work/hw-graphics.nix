@@ -11,11 +11,11 @@
       enable32Bit = true;
 
       extraPackages = with pkgs; [
-        libdrm
         libva
         libva-vdpau-driver
-        libvdpau
         libvdpau-va-gl
+        libGL
+        mesa
       ];
 
       extraPackages32 = with pkgs.driversi686Linux; [

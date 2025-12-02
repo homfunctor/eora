@@ -23,7 +23,6 @@
     ./app-udiskie.nix
     ./app-utils.nix
     ./opt-dconf.nix
-    ./opt-env.nix
     ./opt-mime.nix
     ./opt-qt.nix
     ./opt-stylix
