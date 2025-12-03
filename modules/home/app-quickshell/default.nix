@@ -1,7 +1,6 @@
 {
   lib,
   osConfig,
-  perSystem,
   pkgs,
   ...
 }: {

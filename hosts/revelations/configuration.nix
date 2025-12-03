@@ -1,7 +1,9 @@
 # nixos configuration
 {
   flake,
+  lib,
   perSystem,
+  pkgs,
   ...
 }: {
   imports = with flake.modules.nixos; [
@@ -22,6 +24,7 @@
     hw-tablet
     type-work
     wm-hyprland
+    # wm-niri
 
     # personal
     type-personal
@@ -45,9 +48,13 @@
       hyprpanel.pkg = perSystem.hyprpanel.default;
       hyprpaper.pkg = perSystem.hyprpaper.default;
       portal.pkg = perSystem.hyprland.xdg-desktop-portal-hyprland;
-      # qtutils.pkg = perSystem.hyprland-guiutils.default;
+      qtutils.pkg = perSystem.hyprland-guiutils.default;
       quickshell.pkg = perSystem.quickshell.default;
     };
+
+    # niri = {
+    #   pkg = pkgs.niri-unstable;
+    # };
 
     bg = {
       # number of workspaces per monitor
@@ -92,5 +99,7 @@
     userNames = [adminUser "thaos"];
 
     wlrBR = "vulkan";
+
+    # wmName = "niri";
   };
 }

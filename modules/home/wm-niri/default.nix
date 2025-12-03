@@ -4,9 +4,7 @@
   inputs,
   osConfig,
   ...
-}: let
-  inherit (config.home.opts) apps;
-in {
+}: {
   imports = [
     ./binds.nix
     ./portal.nix

@@ -1,8 +1,4 @@
-{
-  flake,
-  pkgs,
-  ...
-}: {
+_: {
   # ugly hack will replace with something else later
 
   # todo: spawn-at-startup

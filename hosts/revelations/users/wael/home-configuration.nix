@@ -15,12 +15,15 @@
 
     # work
     ./apps.nix
-    ./hyprland.nix
-    ./hyprpanel.nix
+    ./hypr-panel.nix
+    ./hypr-settings.nix
+    # ./niri-panel.nix
+    # ./niri-settings.nix
     app-hypridle
     app-hyprlock
     type-work
     wm-hyprland
+    # wm-niri
 
     # personal
     app-civ5-map-image

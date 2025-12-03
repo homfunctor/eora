@@ -15,8 +15,8 @@
 
     # work
     ./apps.nix
-    # ./hyprland-panel.nix
-    # ./hyprland-settings.nix
+    # ./hypr-panel.nix
+    # ./hypr-settings.nix
     # ./niri-panel.nix
     # ./niri-settings.nix
     app-nix-tools
