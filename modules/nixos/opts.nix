@@ -61,7 +61,7 @@ in {
     mainMonitor = mkStrOpt null "main monitor";
 
     niri = {
-      pkg = mkAttrOpt pkgs.niri-stable "package used";
+      pkg = mkAttrOpt pkgs.niri "package used";
     };
 
     opacity = {
