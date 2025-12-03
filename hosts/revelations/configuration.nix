@@ -1,9 +1,7 @@
 # nixos configuration
 {
   flake,
-  lib,
   perSystem,
-  pkgs,
   ...
 }: {
   imports = with flake.modules.nixos; [

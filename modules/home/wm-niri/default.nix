@@ -1,6 +1,5 @@
 # very wip
 {
-  config,
   inputs,
   osConfig,
   ...
