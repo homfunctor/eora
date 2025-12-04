@@ -13,12 +13,12 @@ in {
   programs.niri.settings = lib.mkIf cfg.enable {
     spawn-at-startup = let
       daemonPath = "${pkgs.gnome-keyring}/bin/gnome-keyring-daemon";
-      daemonArgs = "--daemonize --replace --unlock";
+      daemonArgs = ["--daemonize --replace --unlock"];
       passwordPath = flake.lib.mkSecPath osConfig [
         config.home.opts.userName
         "keyring"
         "password"
       ];
-    in [{argv = [daemonPath] ++ (flake.lib.splitArg daemonArgs) ++ "<" ++ [passwordPath];}];
+    in [{argv = [daemonPath] ++ daemonArgs ++ ["" passwordPath];}];
   };
 }
