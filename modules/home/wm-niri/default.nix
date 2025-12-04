@@ -8,6 +8,7 @@
     ./app-niriApps.nix
     ./binds.nix
     ./env.nix
+    ./keyring.nix
     ./portal.nix
     ./security.nix
     ./settings.nix
