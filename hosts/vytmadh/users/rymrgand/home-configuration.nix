@@ -16,7 +16,7 @@
     # work
     ../../../revelations/users/wael/apps.nix
     # ./niri-panel.nix
-    # ./niri-settings.nix
+    ./niri-settings.nix
     app-nix-tools
     app-vivaldi
     type-work

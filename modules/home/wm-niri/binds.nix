@@ -19,7 +19,8 @@ in {
       binds = with config.lib.niri.actions; {
         # applications
         "Mod+E".action.spawn = [apps.directory.exe] ++ (splitArg apps.directory.args);
-        "Mod+Shift+E".action.spawn = [apps.terminal.exe]
+        "Mod+Shift+E".action.spawn =
+          [apps.terminal.exe]
           ++ (splitArg (getExe pkgs.yazi))
           ++ ["${homeDir}/eora"];
 
@@ -34,7 +35,8 @@ in {
         "Mod+Ctrl+Shift+C".action.spawn = getExe pkgs.gnome-calculator;
         "Mod+Ctrl+Shift+J".action.spawn = getExe pkgs.xournalpp;
 
-        "Mod+R".action.spawn = [apps.launcher.exe]
+        "Mod+R".action.spawn =
+          [apps.launcher.exe]
           ++ (splitArg apps.launcher.args);
 
         "Mod+Alt+L".action.spawn = getExe opts.locker.pkg;
@@ -84,7 +86,8 @@ in {
 
         # screenshots
         "Print".action.screenshot-screen.show-pointer = false;
-        "KEY_SYSRQ".action.screenshot-screen.show-pointer = false;
+        # todo
+        # "KEY_SYSRQ".action.screenshot-screen.show-pointer = false;
 
         # todo
         #   # cycle windows

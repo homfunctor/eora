@@ -5,9 +5,13 @@
   ...
 }: {
   imports = [
+    ./app-niriApps.nix
     ./binds.nix
+    ./env.nix
     ./portal.nix
+    ./security.nix
     ./settings.nix
+    ./tablet.nix
     inputs.niri-flake.homeModules.niri
   ];
 

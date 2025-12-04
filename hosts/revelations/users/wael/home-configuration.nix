@@ -15,7 +15,7 @@
     type-niceTTY
 
     # work
-    ./niri-panel.nix
+    # ./niri-panel.nix
     ./niri-settings.nix
     type-work
     wm-niri
