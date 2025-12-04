@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    cosmic-ext-calculator
     cosmic-ext-tweaks
     cosmic-files
     cosmic-settings
