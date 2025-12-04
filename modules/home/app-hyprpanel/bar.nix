@@ -11,7 +11,7 @@
 
   titles = with apps; [
     ["com.github.xournalpp.xournalpp" "󰙏" "Xournal"]
-    ["neovide" "" "Editor"]
+    ["neovim" "" "Editor"]
     ["org.gnome.calculator" "󱖦" "Calculator"]
     [(toLower audio.desktop) "" "Music"]
     [(toLower browser.desktop) "󰖟" "Browser"]

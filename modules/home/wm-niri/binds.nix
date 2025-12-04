@@ -5,11 +5,12 @@
   lib,
   ...
 }: let
-  inherit (config.home.opts) apps;
+  inherit (config.home.opts) apps userName;
   inherit (lib) getExe;
   inherit (lib.strings) splitString;
 
   splitArg = arg: splitString " " arg;
+  homeDir = "/home/${userName}";
   workTime = "Fall2025";
 in {
   programs.niri = {
@@ -22,15 +23,15 @@ in {
         "Mod+Shift+E".action = spawn (
           [apps.terminal.exe]
           ++ (splitArg (getExe pkgs.yazi))
-          ++ ["~/eora"]
+          ++ ["${homeDir}/eora"]
         );
 
         "Mod+W".action.spawn = apps.terminal.exe;
-        "Mod+Shift+W".action = spawn [apps.terminal.exe "~/eora"];
+        "Mod+Shift+W".action = spawn [apps.terminal.exe "${homeDir}/eora"];
         "Mod+Ctrl+Shift+W".action = spawn [
           apps.terminal.exe
           (getExe pkgs.yazi)
-          "~/Work/${workTime}"
+          "${homeDir}/Work/${workTime}"
         ];
 
         "Mod+Ctrl+Shift+C".action.spawn = getExe pkgs.gnome-calculator;

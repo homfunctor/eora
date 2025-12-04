@@ -14,7 +14,7 @@
     type-niceTTY
 
     # work
-    ./apps.nix
+    ../../../revelations/users/wael/apps.nix
     ./hypr-panel.nix
     ./hypr-settings.nix
     # ./niri-panel.nix

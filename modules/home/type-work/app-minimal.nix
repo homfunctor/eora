@@ -1,6 +1,9 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    celluloid
+    cosmic-ext-calculator
+    cosmic-ext-tweaks
+    cosmic-files
+    cosmic-settings
     dconf-editor
     file-roller
     gnome-calculator
@@ -9,9 +12,9 @@
     grim
     loupe
     mission-center
-    nemo-with-extensions
     showmethekey
     slurp
+    vlc
     wayland-protocols
     wayland-utils
     wl-clipboard

@@ -10,7 +10,6 @@
     ./app-kitty.nix
     ./app-math
     ./app-minimal.nix
-    ./app-neovide.nix
     ./app-nix-index.nix
     ./app-nwg-drawer.nix
     ./app-office.nix

@@ -16,8 +16,6 @@
     settings = {
       prefer-no-csd = true;
       spawn-at-startup = [
-        # wip
-        {command = ["kitty"];}
       ];
     };
   };

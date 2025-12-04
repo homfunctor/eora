@@ -38,7 +38,7 @@
     gitps = "git push";
     grep = "rg";
     ls = "eza -G -x --color=always --icons=always";
-    n = "neovide";
+    n = "nvim";
     yz = "yazi .";
   };
 }

@@ -10,20 +10,21 @@
     type-minTTY
 
     # nicer tty
+    ./apps.nix
     ./neovim.nix
     type-niceTTY
 
     # work
-    ./apps.nix
-    ./hypr-panel.nix
-    ./hypr-settings.nix
+
+    # ./hypr-panel.nix
+    # ./hypr-settings.nix
     # ./niri-panel.nix
     # ./niri-settings.nix
     app-hypridle
     app-hyprlock
     type-work
-    wm-hyprland
-    # wm-niri
+    # wm-hyprland
+    wm-niri
 
     # personal
     app-civ5-map-image

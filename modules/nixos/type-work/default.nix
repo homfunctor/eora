@@ -9,8 +9,5 @@
 
   hardware.brillo.enable = true;
   programs.kdeconnect.enable = true;
-  services.xserver = {
-    enable = false;
-    desktopManager.runXdgAutostartIfNone = true;
-  };
+  services.xserver.enable = false;
 }

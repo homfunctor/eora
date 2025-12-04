@@ -12,10 +12,9 @@
     # nicer tty
     ../wael/neovim.nix
     type-niceTTY
-
-    # work
-
     ../wael/apps.nix
+
+    #work
     # ./hypr-panel.nix
     app-hypridle
     app-hyprlock

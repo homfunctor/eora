@@ -42,12 +42,13 @@ in {
       tooltip = "Vivaldi";
     };
 
+    # todo: fix
     directory = {
       args = "";
-      desktop = "nemo";
+      desktop = "cosmic-files";
       exe = getExe directory.pkg;
-      pkg = pkgs.nemo-with-extensions;
-      tooltip = "Nemo";
+      pkg = pkgs.cosmic-files;
+      tooltip = "Files";
     };
 
     image = {
@@ -110,19 +111,21 @@ in {
       tooltip = "Kitty";
     };
 
+    # todo: fix this
     text = {
-      desktop = "neovide";
+      desktop = "nvim";
       exe = getExe text.pkg;
-      pkg = config.programs.neovide.package;
-      tooltip = "Neovide";
+      pkg = config.programs.nixvim.package;
+      tooltip = "Neovim";
     };
 
+    # todo: fix
     video = {
-      desktop = "io.github.celluloid_player.Celluloid";
+      desktop = "vlc";
       exe = getExe video.pkg;
       icon = "󰨛";
-      pkg = pkgs.celluloid;
-      tooltip = "celluloid";
+      pkg = pkgs.vlc;
+      tooltip = "VLC";
     };
   };
 }

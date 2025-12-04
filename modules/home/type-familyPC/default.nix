@@ -4,7 +4,6 @@
   imports = [
     ../type-work/app-firefox.nix
     ../type-work/app-kitty.nix
-    ../type-work/app-neovide.nix
     ../type-work/opt-gtk.nix
     ../type-work/opt-qt.nix
     ../type-work/opt-starship.nix

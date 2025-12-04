@@ -2,6 +2,7 @@
 {
   flake,
   perSystem,
+  pkgs,
   ...
 }: {
   imports = with flake.modules.nixos; [
@@ -21,8 +22,8 @@
     app-fish
     hw-tablet
     type-work
-    wm-hyprland
-    # wm-niri
+    # wm-hyprland
+    wm-niri
 
     # personal
     type-personal
@@ -50,9 +51,9 @@
       quickshell.pkg = perSystem.quickshell.default;
     };
 
-    # niri = {
-    #   pkg = pkgs.niri-unstable;
-    # };
+    niri = {
+      pkg = pkgs.niri-unstable;
+    };
 
     bg = {
       # number of workspaces per monitor
@@ -98,6 +99,6 @@
 
     wlrBR = "vulkan";
 
-    # wmName = "niri";
+    wmName = "niri";
   };
 }
