@@ -42,13 +42,12 @@ in {
       tooltip = "Vivaldi";
     };
 
-    # todo: fix
     directory = {
       args = "";
-      desktop = "cosmic-files";
+      desktop = "nemo";
       exe = getExe directory.pkg;
-      pkg = pkgs.cosmic-files;
-      tooltip = "Files";
+      pkg = pkgs.nemo-with-extensions;
+      tooltip = "Nemo";
     };
 
     image = {

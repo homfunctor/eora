@@ -1,8 +1,5 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    cosmic-ext-tweaks
-    cosmic-files
-    cosmic-settings
     dconf-editor
     file-roller
     gnome-calculator
@@ -11,6 +8,7 @@
     grim
     loupe
     mission-center
+    nemo-with-extensions
     showmethekey
     slurp
     vlc
