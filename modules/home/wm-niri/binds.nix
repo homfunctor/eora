@@ -1,15 +1,16 @@
-# very wip
 {
   config,
+  flake,
+  osConfig,
   pkgs,
   lib,
   ...
 }: let
   inherit (config.home.opts) apps userName;
+  inherit (flake.lib) splitArg;
   inherit (lib) getExe;
-  inherit (lib.strings) splitString;
+  opts = osConfig.nixos.opts.niri;
 
-  splitArg = arg: splitString " " arg;
   homeDir = "/home/${userName}";
   workTime = "Fall2025";
 in {
@@ -17,18 +18,14 @@ in {
     settings = {
       binds = with config.lib.niri.actions; {
         # applications
-        "Mod+E".action = spawn (
-          [apps.directory.exe] ++ (splitArg apps.directory.args)
-        );
-        "Mod+Shift+E".action = spawn (
-          [apps.terminal.exe]
+        "Mod+E".action.spawn = [apps.directory.exe] ++ (splitArg apps.directory.args);
+        "Mod+Shift+E".action.spawn = [apps.terminal.exe]
           ++ (splitArg (getExe pkgs.yazi))
-          ++ ["${homeDir}/eora"]
-        );
+          ++ ["${homeDir}/eora"];
 
         "Mod+W".action.spawn = apps.terminal.exe;
-        "Mod+Shift+W".action = spawn [apps.terminal.exe "${homeDir}/eora"];
-        "Mod+Ctrl+Shift+W".action = spawn [
+        "Mod+Shift+W".action.spawn = [apps.terminal.exe "${homeDir}/eora"];
+        "Mod+Ctrl+Shift+W".action.spawn = [
           apps.terminal.exe
           (getExe pkgs.yazi)
           "${homeDir}/Work/${workTime}"
@@ -37,10 +34,10 @@ in {
         "Mod+Ctrl+Shift+C".action.spawn = getExe pkgs.gnome-calculator;
         "Mod+Ctrl+Shift+J".action.spawn = getExe pkgs.xournalpp;
 
-        "Mod+R".action = spawn (
-          [apps.launcher.exe]
-          ++ (splitArg apps.launcher.args)
-        );
+        "Mod+R".action.spawn = [apps.launcher.exe]
+          ++ (splitArg apps.launcher.args);
+
+        "Mod+Alt+L".action.spawn = getExe opts.locker.pkg;
 
         # window management
         # todo
@@ -49,8 +46,8 @@ in {
         # "${mod}, T, togglefloating"
 
         "Mod+Q".action = close-window;
-        "Mod+F".action = maximize-column; # fullscreen?
-        "Mod+Shift+F".action = expand-column-to-available-width; # full-fullscreen?
+        "Mod+F".action = maximize-column;
+        "Mod+Shift+F".action = expand-column-to-available-width;
         "Mod+T".action = toggle-window-floating;
 
         # todo
@@ -85,40 +82,40 @@ in {
         "Mod+Shift+Down".action = move-column-to-workspace-up;
         "Mod+Shift+Up".action = move-column-to-workspace-down;
 
+        # screenshots
+        "Print".action.screenshot-screen.show-pointer = false;
+        "KEY_SYSRQ".action.screenshot-screen.show-pointer = false;
+
         # todo
         #   # cycle windows
         #   "ALT, tab, cyclenext"
         #   "ALT, tab, bringactivetotop"
         #
         #   # misc controls
-        #   "${mod} ALT, L, exec, ${uApp "${getExe hypr.hyprlock.pkg}"}"
         #   "${mod}, Q, killactive"
         #   "${mod}, mouse:274, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         #   "${mod}, mouse:275, exec,  ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
         #   "${mod}, mouse:276, exec, ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-        #   ", PRINT, exec, ${uApp "${getExe hypr.grimblast.pkg}"} --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
-        #   ", KEY_SYSRQ, exec, ${uApp "${getExe hypr.grimblast.pkg}"} --notify copysave area ${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png"
         #
         #   # unswallow/reswallow a window
         #   "${mod}, S, toggleswallow"
-        #
-        #   # workspaces
-        #   "${mod}, 1, workspace, 1"
-        #   "${mod}, 2, workspace, 2"
-        #   "${mod}, 3, workspace, 3"
-        #   "${mod} SHIFT, 1, workspace, 4"
-        #   "${mod} SHIFT, 2, workspace, 5"
-        #   "${mod} SHIFT, 3, workspace, 6"
-        #
-        #   # moving windows to workspaces
-        #   "${mod} CTRL, 1, movetoworkspacesilent, 1"
-        #   "${mod} CTRL, 2, movetoworkspacesilent, 2"
-        #   "${mod} CTRL, 3, movetoworkspacesilent, 3"
-        #   "${mod} SHIFT CTRL, 1, movetoworkspacesilent, 4"
-        #   "${mod} SHIFT CTRL, 2, movetoworkspacesilent, 5"
-        #   "${mod} SHIFT CTRL, 3, movetoworkspacesilent, 6"
-        # ];
-        #
+
+        # workspaces
+        "Mod+1".action.focus-workspace = 1;
+        "Mod+2".action.focus-workspace = 2;
+        "Mod+3".action.focus-workspace = 3;
+        "Mod+Shift+1".action.focus-workspace = 4;
+        "Mod+Shift+2".action.focus-workspace = 5;
+        "Mod+Shift+3".action.focus-workspace = 6;
+
+        # moving windows
+        "Mod+Ctrl+1".action.move-window-to-workspace = [{focus = false;} "1"];
+        "Mod+Ctrl+2".action.move-window-to-workspace = [{focus = false;} "2"];
+        "Mod+Ctrl+3".action.move-window-to-workspace = [{focus = false;} "3"];
+        "Mod+Ctrl+Shift+1".action.move-window-to-workspace = [{focus = false;} "1"];
+        "Mod+Ctrl+Shift+2".action.move-window-to-workspace = [{focus = false;} "2"];
+        "Mod+Ctrl+Shift+3".action.move-window-to-workspace = [{focus = false;} "3"];
+
         # bindl = [
         #   ", XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
         #   ", XF86AudioMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
@@ -138,6 +135,12 @@ in {
         #   "${mod}, mouse:272, movewindow"
         #   "${mod}, mouse:273, resizewindow"
         # ];
+      };
+
+      switch-events = {
+        # todo
+        # lid-close
+        # lid-open
       };
     };
   };

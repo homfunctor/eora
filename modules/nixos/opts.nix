@@ -27,26 +27,23 @@ in {
 
     # for excessively fine-tuned control over hypr ecosystem
     hypr = {
-      grimblast.pkg = mkAttrOpt pkgs.grimblast "package used";
+      grimblast.pkg = mkAttrOpt pkgs.grimblast "pkg";
 
-      hyprcursor.pkg = mkAttrOpt pkgs.hyprcursor "package used";
-      hypridle.pkg = mkAttrOpt pkgs.hypridle "package used";
-      hyprland.pkg = mkAttrOpt pkgs.hyprland "package used";
-      hyprlock = {
-        opts = mkAttrOpt {} "settings";
-        pkg = mkAttrOpt pkgs.hyprlock "package used";
-      };
-      hyprpanel.pkg = mkAttrOpt pkgs.hyprpanel "package used";
-      hyprpaper.pkg = mkAttrOpt pkgs.hyprpaper "package used";
+      hyprcursor.pkg = mkAttrOpt pkgs.hyprcursor "pkg";
+      hypridle.pkg = mkAttrOpt pkgs.hypridle "pkg";
+      hyprland.pkg = mkAttrOpt pkgs.hyprland "pkg";
+      hyprlock.pkg = mkAttrOpt pkgs.hyprlock "pkg";
+      hyprpanel.pkg = mkAttrOpt pkgs.hyprpanel "pkg";
+      hyprpaper.pkg = mkAttrOpt pkgs.hyprpaper "pkg";
 
       portal = {
         exePath = mkStrOpt ".xdg-desktop-portal-hyprland-wrapped" "name of portal binary";
-        pkg = mkAttrOpt pkgs.xdg-desktop-portal-hyprland "package used";
+        pkg = mkAttrOpt pkgs.xdg-desktop-portal-hyprland "pkg";
       };
 
-      qtutils.pkg = mkAttrOpt pkgs.hyprland-qtutils "package used";
+      qtutils.pkg = mkAttrOpt pkgs.hyprland-qtutils "pkg";
 
-      quickshell.pkg = mkAttrOpt pkgs.quickshell "package used";
+      quickshell.pkg = mkAttrOpt pkgs.quickshell "pkg";
     };
 
     iconTheme = {
@@ -61,8 +58,16 @@ in {
     mainMonitor = mkStrOpt null "main monitor";
 
     niri = {
-      pkg = mkAttrOpt pkgs.niri "package used";
-      portal.pkg = mkAttrOpt pkgs.xdg-desktop-portal-gtk "package used";
+      pkg = mkAttrOpt pkgs.niri-stable "pkg";
+
+      bar.pkg = mkAttrOpt pkgs.waybar "pkg";
+      bg = {
+        args = mkStrOpt "" "args";
+        pkg = mkAttrOpt pkgs.swaybg "pkg";
+      };
+      idle.pkg = mkAttrOpt pkgs.swayidle "pkg";
+      locker.pkg = mkAttrOpt pkgs.swaylock "pkg";
+      portal.pkg = mkAttrOpt pkgs.xdg-desktop-portal-gtk "pkg";
     };
 
     opacity = {

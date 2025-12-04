@@ -15,11 +15,9 @@
     ../wael/apps.nix
 
     #work
-    # ./hypr-panel.nix
     app-hypridle
     app-hyprlock
     type-work
-    # wm-hyprland
     wm-niri
   ];
 

@@ -8,6 +8,7 @@
     mkOption
     pipe
     removeSuffix
+    splitString
     types
     ;
 in rec {
@@ -47,4 +48,7 @@ in rec {
   # uwsm utilities
   uApp = cmd: "uwsm app -- ${cmd}";
   uTog = cmd: "pkill ${cmd} || ${uApp cmd}";
+
+  # niri utilities
+  splitArg = arg: splitString " " arg;
 }

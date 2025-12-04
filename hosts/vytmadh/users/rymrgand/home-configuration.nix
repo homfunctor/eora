@@ -15,15 +15,12 @@
 
     # work
     ../../../revelations/users/wael/apps.nix
-    ./hypr-panel.nix
-    ./hypr-settings.nix
     # ./niri-panel.nix
     # ./niri-settings.nix
     app-nix-tools
     app-vivaldi
     type-work
-    wm-hyprland
-    # wm-niri
+    wm-niri
   ];
 
   home.opts = {

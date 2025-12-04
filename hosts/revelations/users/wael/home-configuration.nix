@@ -15,15 +15,9 @@
     type-niceTTY
 
     # work
-
-    # ./hypr-panel.nix
-    # ./hypr-settings.nix
-    # ./niri-panel.nix
-    # ./niri-settings.nix
-    app-hypridle
-    app-hyprlock
+    ./niri-panel.nix
+    ./niri-settings.nix
     type-work
-    # wm-hyprland
     wm-niri
 
     # personal

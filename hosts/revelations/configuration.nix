@@ -1,7 +1,6 @@
 # nixos configuration
 {
   flake,
-  perSystem,
   pkgs,
   ...
 }: {
@@ -22,7 +21,6 @@
     app-fish
     hw-tablet
     type-work
-    # wm-hyprland
     wm-niri
 
     # personal
@@ -38,19 +36,6 @@
 
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
-    hypr = {
-      grimblast.pkg = perSystem.hyprland-contrib.grimblast;
-      hyprcursor.pkg = perSystem.hyprcursor.default;
-      hypridle.pkg = perSystem.hypridle.default;
-      hyprland.pkg = perSystem.hyprland.default;
-      hyprlock.pkg = perSystem.hyprlock.default;
-      hyprpanel.pkg = perSystem.hyprpanel.default;
-      hyprpaper.pkg = perSystem.hyprpaper.default;
-      portal.pkg = perSystem.hyprland.xdg-desktop-portal-hyprland;
-      qtutils.pkg = perSystem.hyprland-guiutils.default;
-      quickshell.pkg = perSystem.quickshell.default;
-    };
-
     niri = {
       pkg = pkgs.niri-unstable;
     };
