@@ -62,7 +62,7 @@ in {
 
     niri = {
       pkg = mkAttrOpt pkgs.niri "package used";
-      portal.pkg = mkAttrOpt pkgs.xdg-desktop-portal-cosmic "package used";
+      portal.pkg = mkAttrOpt pkgs.xdg-desktop-portal-gtk "package used";
     };
 
     opacity = {
