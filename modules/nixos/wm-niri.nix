@@ -7,7 +7,8 @@
 
   nixpkgs.overlays = [inputs.niri-flake.overlays.niri];
 
-  security.pam.services.swaylock.text = "auth include login";
-
-  # security.pam.services.niri.enableGnomeKeyring = true;
+  security.pam.services = {
+    niri.enableGnomeKeyring = true;
+    swaylock.text = "auth include login";
+  };
 }

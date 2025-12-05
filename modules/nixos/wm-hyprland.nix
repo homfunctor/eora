@@ -15,5 +15,8 @@
     uwsmExe = "${lib.getExe config.programs.uwsm.package}";
   in {loginCmd = "${uwsmExe} start hyprland-uwsm.desktop";};
 
-  security.pam.services.hyprlock.text = "auth include login";
+  security.pam.services = {
+    hyprland.enableGnomeKeyring = true;
+    hyprlock.text = "auth include login";
+  };
 }
