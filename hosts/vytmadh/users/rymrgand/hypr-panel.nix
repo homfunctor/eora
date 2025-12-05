@@ -6,7 +6,6 @@
 }: let
   inherit (config.home.opts) apps;
 in {
-  imports = [flake.modules.home.app-hyprpanel];
   home.opts.panelOpts = {
     fontSize = "1.0rem";
 

@@ -579,11 +579,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764891212,
-        "narHash": "sha256-74ZPvCEmT5JatN227aSBOnORAtW3RWcMjjAkeiHp8UE=",
+        "lastModified": 1764912896,
+        "narHash": "sha256-ftxQocr098v5ngqB3SXa9tW6aqovBSBOEdIRcLEj44c=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "df7bac2b2bdbaae8f9100be4e4cd21c7155611e9",
+        "rev": "6bcb2395ab9ed05616052262da526cd7c5b4b123",
         "type": "github"
       },
       "original": {
@@ -1602,11 +1602,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764641206,
-        "narHash": "sha256-M9GlOr9JKPUJkDb8nsCPr/BF8RAu4pvdXpXdO8wB3uk=",
+        "lastModified": 1764900011,
+        "narHash": "sha256-iG5HqIzZ12qzTi3xCwBinw/PR0xNlJNXLLQyV2En1OY=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "de4835b61bcd48b1ddb93df0c25b2dd4c8b4aefd",
+        "rev": "e1829ce2d33b1e289b3ecca7530dee84da8d9e85",
         "type": "github"
       },
       "original": {
@@ -1665,11 +1665,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1764851111,
-        "narHash": "sha256-7/kQdBg7uC2bRt5576HOnUBxQ8DTQUxY7cznh4J7uNU=",
+        "lastModified": 1764922216,
+        "narHash": "sha256-an3TpEoHF2G0of7W+sLFsOjYEpziUjbNPm46FEzCwwE=",
         "owner": "kaylorben",
         "repo": "nixcord",
-        "rev": "42eed2faa9614223c2a63fdb8300a3dd422cd0e8",
+        "rev": "9bdf49d1bb0ffb3418e9de4a78012af98f5312ee",
         "type": "github"
       },
       "original": {
@@ -1934,26 +1934,6 @@
         "type": "github"
       }
     },
-    "quickshell": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1764663772,
-        "narHash": "sha256-sHqLmm0wAt3PC4vczJeBozI1/f4rv9yp3IjkClHDXDs=",
-        "ref": "refs/heads/master",
-        "rev": "26531fc46ef17e9365b03770edd3fb9206fcb460",
-        "revCount": 713,
-        "type": "git",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
-      }
-    },
     "root": {
       "inputs": {
         "blueprint": "blueprint",
@@ -1978,7 +1958,6 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_4",
         "nixvim": "nixvim",
-        "quickshell": "quickshell",
         "rust-overlay": "rust-overlay_3",
         "sapadal": "sapadal",
         "sops-nix": "sops-nix",
@@ -2035,11 +2014,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764816035,
-        "narHash": "sha256-F0IQSmSj4t2ThkbWZooAhkCTO+YpZSd2Pqiv2uoYEHo=",
+        "lastModified": 1764902447,
+        "narHash": "sha256-wNqkDBj+tjK619sTHPEA7uhjr7DHHEY8OsFou31dxy0=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "74d9abb7c5c030469f90d97a67d127cc5d76c238",
+        "rev": "d914a744a83098eeb28125d2848ad383b209223f",
         "type": "github"
       },
       "original": {

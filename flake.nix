@@ -119,11 +119,6 @@
 
     nixvim.url = "github:nix-community/nixvim";
 
-    quickshell = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-    };
-
     rust-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:oxalica/rust-overlay";

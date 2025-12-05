@@ -22,8 +22,6 @@ in {
     swayidle = {
       enable = true;
       package = opts.niri.idle.pkg;
-
-      settings = {};
     };
   };
 }
