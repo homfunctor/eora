@@ -24,7 +24,7 @@ in {
       rstudio.enable = mkBoolOpt false "enable rstudio";
     };
 
-    # for xdg mimeapps, hyprpanel, hyprland binds, etc.
+    # for xdg mimeapps, binds, etc.
     apps = mkAttrOpt {} "monolithic default application settings";
 
     # background paths (files). inherited from osConfig: monitors, resolutions, xy
@@ -46,46 +46,6 @@ in {
       genAttrs pluginNames (name: {
         enable = mkBoolOpt false "enable ${name}";
       });
-
-    # hyprpanel settings
-    panelOpts = {
-      fontSize = mkStrOpt "1.0rem" "hyprpanel button and bar font size";
-      layouts = mkAttrOpt {} "user settings for hyprpanel layout";
-      scale = let
-        uiElems = [
-          "bar"
-          "battery"
-          "clock"
-          "dashboard"
-          "media"
-          "notification"
-          "notifications"
-          "osd"
-          "popover"
-          "power"
-          "volume"
-        ];
-      in
-        genAttrs uiElems (name: mkIntOpt 100 "scale for ${name}");
-
-      # shortcuts for hyprpanel dashboard menu
-      leftcuts = genAttrs ["shortcut1" "shortcut2" "shortcut3" "shortcut4"] (
-        name: mkAttrOpt {} "${name} settings"
-      );
-
-      rightcuts =
-        genAttrs ["shortcut1" "shortcut3"] (name:
-          mkAttrOpt {} "${name} settings");
-
-      # directories for hyprpanel dashboard menu
-      leftdirs =
-        genAttrs ["directory1" "directory2" "directory3"] (name:
-          mkAttrOpt {} "${name} settings");
-
-      rightdirs =
-        genAttrs ["directory1" "directory2" "directory3"] (name:
-          mkAttrOpt {} "${name} settings");
-    };
 
     # syncthing
     sync = {

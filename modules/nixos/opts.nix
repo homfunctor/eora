@@ -25,27 +25,6 @@ in {
 
     hostName = mkStrOpt "" "host name";
 
-    # for excessively fine-tuned control over hypr ecosystem
-    hypr = {
-      grimblast.pkg = mkAttrOpt pkgs.grimblast "pkg";
-
-      hyprcursor.pkg = mkAttrOpt pkgs.hyprcursor "pkg";
-      hypridle.pkg = mkAttrOpt pkgs.hypridle "pkg";
-      hyprland.pkg = mkAttrOpt pkgs.hyprland "pkg";
-      hyprlock.pkg = mkAttrOpt pkgs.hyprlock "pkg";
-      hyprpanel.pkg = mkAttrOpt pkgs.hyprpanel "pkg";
-      hyprpaper.pkg = mkAttrOpt pkgs.hyprpaper "pkg";
-
-      portal = {
-        exePath = mkStrOpt ".xdg-desktop-portal-hyprland-wrapped" "name of portal binary";
-        pkg = mkAttrOpt pkgs.xdg-desktop-portal-hyprland "pkg";
-      };
-
-      qtutils.pkg = mkAttrOpt pkgs.hyprland-qtutils "pkg";
-
-      quickshell.pkg = mkAttrOpt pkgs.quickshell "pkg";
-    };
-
     iconTheme = {
       name = mkStrOpt null "icon theme name";
       package = mkAttrOpt null "icon theme package";
@@ -88,7 +67,5 @@ in {
     userNames = mkListOpt lib.types.str null "user names";
 
     wlrBR = mkStrOpt "wayland" "requested backend/renderer for wayland";
-
-    wmName = mkStrOpt "uwsm" "use uwsm+hyprland or niri?";
   };
 }

@@ -11,15 +11,15 @@
     type-niceTTY
 
     # work
-    ./hardware.nix
-    app-fish
-    hw-tablet
-    type-work
-    wm-niri
+    # ./hardware.nix
+    # app-fish
+    # hw-tablet
+    # type-work
+    # wm-niri
 
     # extras
-    opt-lix
-    opt-rust
+    # opt-lix
+    # opt-rust
   ];
 
   # recursive to avoid defining adminUser twice
@@ -54,8 +54,6 @@
 
     adminUser = "rymrgand";
     userNames = [adminUser];
-
-    wmName = "niri";
   };
 
   services.libinput.touchpad = {
