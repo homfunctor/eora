@@ -1,3 +1,5 @@
+# todo: not working for niri. try systemd approach or see if
+# luks -> autologin works now
 # unlocks keyring on first (auto)login
 # uses osConfig as i handle sops outside hm
 {
