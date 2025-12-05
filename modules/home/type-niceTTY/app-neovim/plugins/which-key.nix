@@ -10,7 +10,7 @@ in {
 
     settings.win = {
       border = "single";
-      wo.winblend = 100;
+      # wo.winblend = 100;
     };
   };
 }

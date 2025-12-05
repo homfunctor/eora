@@ -39,7 +39,6 @@
       material-symbols
       nerd-font-patcher
       nerd-fonts.iosevka
-      nerd-fonts.jetbrains-mono # for hyprpanel
       nerd-fonts.symbols-only
       nerd-fonts.tinos # work documents
       noto-fonts

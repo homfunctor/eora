@@ -1,7 +1,6 @@
 # todo: check XDG_DESKTOP_PORTAL_DIR
 {
   osConfig,
-  pkgs,
   ...
 }: let
   niriPortalPkg = osConfig.nixos.opts.niri.portal.pkg;

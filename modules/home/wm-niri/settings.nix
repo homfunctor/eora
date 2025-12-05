@@ -5,11 +5,9 @@
   osConfig,
   ...
 }: let
-  inherit (config.home.opts) apps bg;
+  inherit (config.home.opts) bg;
   inherit (config.lib.stylix) colors;
-  inherit (flake.lib) splitArg;
-  inherit (lib) getExe zipListsWith;
-  opts = osConfig.nixos.opts.niri;
+  inherit (lib) zipListsWith;
 in {
   programs.niri.settings = {
     hotkey-overlay.skip-at-startup = true;

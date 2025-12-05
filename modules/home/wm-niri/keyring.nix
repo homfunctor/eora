@@ -5,7 +5,6 @@
   flake,
   lib,
   osConfig,
-  pkgs,
   ...
 }: let
   cfg = osConfig.nixos.opts.sops.keyring;

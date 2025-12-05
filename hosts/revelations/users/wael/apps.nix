@@ -98,6 +98,8 @@ in {
     in {
       exe = getExe shell.pkg;
       pkg = config.programs."${shellName}".package;
+      # assumes standard format of
+      # shellIntegration.enable<ShellName>Integration = true;
       shellIntegration."enable${shell.tooltip}Integration" = true;
       tooltip = capitalize shellName;
     };

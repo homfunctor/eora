@@ -9,11 +9,12 @@ in {
     enable = true;
 
     settings = {
+      animate.enabled = true;
       bigfile.enabled = true;
 
       # todo
       # dashboard.enabled = true;
-      explorer.enabled = true;
+      # explorer.enabled = true;
       # image.enabled = true;
 
       indent = {
@@ -52,7 +53,7 @@ in {
 
       toggle.enabled = true;
 
-      win.backdrop.blend = 100;
+      # win.backdrop.blend = 100;
 
       words.enabled = true;
     };

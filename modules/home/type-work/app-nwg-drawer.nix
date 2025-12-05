@@ -1,3 +1,4 @@
+# todo: customize further
 {
   config,
   pkgs,

@@ -1,3 +1,4 @@
+# todo: settings
 {
   programs.sioyek = {
     enable = true;

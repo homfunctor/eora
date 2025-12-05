@@ -9,18 +9,18 @@
     gnome-calculator
     gnome-calendar
     gnome-disk-utility
-    grim
     loupe
     mission-center
-    nemo-with-extensions
+    nemo-with-extensions # just feels so good
     showmethekey
-    slurp
-    vlc
+    vlc # good stuff, nostalgic
     wayland-protocols
     wayland-utils
     wl-clipboard
     wlr-randr
   ];
+
+  # want shell integration, so must be enabled after niceTTY
   programs = {
     eza =
       {

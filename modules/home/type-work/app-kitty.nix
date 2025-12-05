@@ -1,8 +1,6 @@
 {config, ...}: {
   programs.kitty = {
     enable = true;
-    # assumes standard format of
-    # shellIntegration.enable<ShellName>Integration = true;
     inherit (config.home.opts.apps.shell) shellIntegration;
 
     settings = {
