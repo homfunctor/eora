@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   home.packages = with pkgs; [
     dconf-editor
     file-roller
@@ -17,4 +21,31 @@
     wl-clipboard
     wlr-randr
   ];
+  programs = {
+    eza =
+      {
+        enable = true;
+      }
+      // config.home.opts.apps.shell.shellIntegration;
+
+    yazi =
+      {
+        enable = true;
+        settings.manager = {
+          ratio = [1 2 4];
+          show_hidden = true;
+          show_symlink = true;
+          sort_by = "alphabetical";
+          sort_dir_first = true;
+          sort_sensitive = false;
+        };
+      }
+      // config.home.opts.apps.shell.shellIntegration;
+
+    zoxide =
+      {
+        enable = true;
+      }
+      // config.home.opts.apps.shell.shellIntegration;
+  };
 }

@@ -11,11 +11,11 @@
     type-niceTTY
 
     # work
-    # ./hardware.nix
-    # app-fish
-    # hw-tablet
-    # type-work
-    # wm-niri
+    ./hardware.nix
+    app-fish
+    hw-tablet
+    type-work
+    wm-niri
 
     # extras
     opt-lix

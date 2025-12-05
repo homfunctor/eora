@@ -12,11 +12,6 @@
   programs = {
     bat.enable = true;
     bottom.enable = true;
-    eza = {
-      enable = true;
-    };
-    # // config.home.opts.apps.shell.shellIntegration;
-    # todo: append this in type-work!
     fd.enable = true;
     gpg.enable = true;
     ripgrep.enable = true;

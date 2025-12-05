@@ -5,6 +5,15 @@ in {
     swaylock = {
       enable = true;
       package = opts.niri.locker.pkg;
+
+      settings = {};
+    };
+
+    waybar = {
+      enable = true;
+      package = opts.niri.bar.pkg;
+      systemd.enable = true;
+
       settings = {};
     };
   };
@@ -13,6 +22,8 @@ in {
     swayidle = {
       enable = true;
       package = opts.niri.idle.pkg;
+
+      settings = {};
     };
   };
 }

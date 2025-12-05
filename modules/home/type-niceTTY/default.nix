@@ -3,8 +3,6 @@
   imports = [
     ./app-minimal.nix
     ./app-neovim
-    ./app-yazi.nix
-    ./app-zoxide.nix
   ];
 
   stylix.enableReleaseChecks = false;
