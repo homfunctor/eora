@@ -15,11 +15,10 @@
     ../wael/apps.nix
 
     #work
-    # type-work
-    # wm-hyprland
-    # ../wael/hypr-settings.nix
-    # ./hypr-panel.nix
-    # # wm-niri
+    ../wael/niri-panel.nix
+    ../wael/niri-settings.nix
+    type-work
+    wm-niri
   ];
 
   home.opts = {

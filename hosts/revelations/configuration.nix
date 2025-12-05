@@ -17,12 +17,11 @@
     type-niceTTY
 
     # work
-    # ./hardware.nix
-    # app-fish
-    # hw-tablet
-    # type-work
-    # wm-hyprland
-    # wm-niri
+    ./hardware.nix
+    app-fish
+    hw-tablet
+    type-work
+    wm-niri
 
     # personal
     type-personal
@@ -85,6 +84,6 @@
 
     wlrBR = "vulkan";
 
-    # wmName = "niri";
+    wmName = "niri";
   };
 }

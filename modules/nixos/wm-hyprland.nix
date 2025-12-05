@@ -14,4 +14,6 @@
   nixos.opts = let
     uwsmExe = "${lib.getExe config.programs.uwsm.package}";
   in {loginCmd = "${uwsmExe} start hyprland-uwsm.desktop";};
+
+  security.pam.services.hyprlock.text = "auth include login";
 }

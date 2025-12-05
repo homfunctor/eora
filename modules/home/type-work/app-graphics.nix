@@ -3,7 +3,7 @@
     gimp3
     inkscape
     kdePackages.kolourpaint
-    # xournalpp
+    xournalpp
   ];
   xdg.mimeApps = {
     associations.added."image/x-dds" = "gimp.desktop";

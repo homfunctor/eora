@@ -12,6 +12,8 @@
   opts = osConfig.nixos.opts.niri;
 in {
   programs.niri.settings = {
+    hotkey-overlay.skip-at-startup = true;
+
     cursor = with config.stylix.cursor; {
       inherit size;
       theme = name;
@@ -30,13 +32,18 @@ in {
         inactive.color = base02;
         urgent.color = base08;
       };
+      focus-ring.enable = false;
+    };
+
+    overview = {
+      workspace-shadow.enable = false;
+      backdrop-color = "transparent";
     };
 
     prefer-no-csd = true;
 
     screenshot-path = "${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png";
     spawn-at-startup = [
-      # {command = [(getExe opts.bar.pkg)];}
       # {command = [(getExe opts.bg.pkg)] ++ splitArg opts.bg.args;}
     ];
 
