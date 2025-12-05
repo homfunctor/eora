@@ -17,11 +17,11 @@
     type-niceTTY
 
     # work
-    ./hardware.nix
-    app-fish
-    hw-tablet
-    type-work
-    wm-hyprland
+    # ./hardware.nix
+    # app-fish
+    # hw-tablet
+    # type-work
+    # wm-hyprland
     # wm-niri
 
     # personal
