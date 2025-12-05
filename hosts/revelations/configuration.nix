@@ -21,7 +21,8 @@
     app-fish
     hw-tablet
     type-work
-    wm-niri
+    wm-hyprland
+    # wm-niri
 
     # personal
     type-personal
@@ -84,6 +85,6 @@
 
     wlrBR = "vulkan";
 
-    wmName = "niri";
+    # wmName = "niri";
   };
 }

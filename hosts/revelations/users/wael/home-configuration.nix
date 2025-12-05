@@ -15,10 +15,14 @@
     type-niceTTY
 
     # work
+    app-hyprpanel
+    ./hypr-panel.nix
+    ./hypr-settings.nix
     # ./niri-panel.nix
-    ./niri-settings.nix
+    # ./niri-settings.nix
     type-work
-    wm-niri
+    wm-hyprland
+    # wm-niri
 
     # personal
     app-civ5-map-image
