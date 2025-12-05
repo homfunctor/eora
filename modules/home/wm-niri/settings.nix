@@ -36,8 +36,8 @@ in {
 
     screenshot-path = "${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png";
     spawn-at-startup = [
-      # {argv = [(getExe opts.bar.pkg)];}
-      # {argv = [(getExe opts.bg.pkg)] ++ splitArg opts.bg.args;}
+      # {command = [(getExe opts.bar.pkg)];}
+      # {command = [(getExe opts.bg.pkg)] ++ splitArg opts.bg.args;}
     ];
 
     workspaces = let

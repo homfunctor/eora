@@ -19,6 +19,6 @@ in {
         "keyring"
         "password"
       ];
-    in [{argv = [daemonPath] ++ daemonArgs ++ ["<" passwordPath];}];
+    in [{command = [daemonPath] ++ daemonArgs ++ ["<" passwordPath];}];
   };
 }
