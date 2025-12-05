@@ -3,7 +3,7 @@
     ./app-minimal.nix
     ./hw-graphics.nix
     ./opt-login.nix
-    ./sops-keyring.nix
+    ./opt-services.nix
     ./sops-syncthing.nix
   ];
 }

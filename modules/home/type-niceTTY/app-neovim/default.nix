@@ -5,12 +5,12 @@
   ...
 }: {
   imports = [
-    flake.modules.home.stylix-neovim
-    inputs.nixvim.homeModules.nixvim
     ./highlight.nix
     ./keymaps.nix
     ./plugins
     ./settings.nix
+    flake.modules.home.stylix-neovim
+    inputs.nixvim.homeModules.nixvim
   ];
 
   home.packages = with pkgs; [

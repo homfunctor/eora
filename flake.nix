@@ -2,6 +2,7 @@
   description = "Eora NixOS Flake";
 
   inputs = {
+    # core
     blueprint = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:numtide/blueprint";
@@ -19,88 +20,43 @@
       url = "github:nix-community/home-manager";
     };
 
-    hyprcursor = {
-      inputs = {
-        hyprlang.follows = "hyprland/hyprlang";
-        nixpkgs.follows = "nixpkgs";
-      };
-      url = "github:hyprwm/hyprcursor";
-    };
-
-    hyprland-guiutils = {
-      inputs = {
-        hyprgraphics.follows = "hyprland/hyprgraphics";
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "nixpkgs";
-      };
-      url = "github:hyprwm/hyprland-guiutils";
-    };
-
-    hypridle = {
-      inputs = {
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-      };
-      url = "github:hyprwm/hypridle";
-    };
-
-    hyprland.url = "github:hyprwm/hyprland";
-
-    hyprlock = {
-      inputs = {
-        hyprgraphics.follows = "hyprland/hyprgraphics";
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-      };
-      url = "github:hyprwm/hyprlock";
-    };
-
-    hyprpanel = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:jas-singhfsu/hyprpanel";
-    };
-
-    hyprpaper = {
-      inputs = {
-        hyprgraphics.follows = "hyprland/hyprgraphics";
-        hyprlang.follows = "hyprland/hyprlang";
-        hyprutils.follows = "hyprland/hyprutils";
-        nixpkgs.follows = "hyprland/nixpkgs";
-      };
-      url = "github:hyprwm/hyprpaper";
-    };
-
-    hyprland-contrib = {
-      inputs.nixpkgs.follows = "hyprland/nixpkgs";
-      url = "github:hyprwm/contrib";
-    };
-
-    hyprland-plugins = {
-      inputs.hyprland.follows = "hyprland";
-      url = "github:hyprwm/hyprland-plugins";
-    };
-
-    hyprshell = {
-      inputs = {
-        hyprland.follows = "hyprland";
-        nixpkgs.follows = "hyprland/nixpkgs";
-      };
-      url = "github:h3rmt/hyprshell";
-    };
-
     lanzaboote = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/lanzaboote";
     };
 
-    niri-flake = {
-      url = "github:sodiboo/niri-flake";
+    rust-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:oxalica/rust-overlay";
     };
 
+    # niri
+    niri-flake = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:sodiboo/niri-flake";
+    };
+
+    niri-scratchpad-flake = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:gvolpe/niri-scratchpad";
+    };
+
+    nfsm-flake = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:gvolpe/nfsm";
+    };
+
+    nsticky-flake = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:lonerorz/nsticky";
+    };
+
+    quickshell = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+    };
+
+    # nix
     nix-gaming = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:fufexan/nix-gaming";
@@ -111,18 +67,18 @@
       url = "github:mic92/nix-index-database";
     };
 
+    nix-search = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:diamondburned/nix-search";
+    };
+
     nixcord.url = "github:kaylorben/nixcord";
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "git+https://github.com/nixos/nixpkgs?shallow=1&ref=nixos-unstable";
 
     nixvim.url = "github:nix-community/nixvim";
-
-    rust-overlay = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:oxalica/rust-overlay";
-    };
 
     sops-nix = {
       inputs.nixpkgs.follows = "nixpkgs";

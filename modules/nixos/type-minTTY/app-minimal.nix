@@ -5,10 +5,10 @@
   ...
 }: {
   environment.systemPackages = with pkgs; [
+    (lib.hiPrio uutils-coreutils-noprefix)
     just
     nix-output-monitor
     sbctl # for lanzaboote
-    (lib.hiPrio uutils-coreutils-noprefix)
     wget
   ];
 }

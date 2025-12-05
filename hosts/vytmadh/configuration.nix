@@ -11,11 +11,11 @@
     type-niceTTY
 
     # work
-    # ./hardware.nix
-    # app-fish
-    # hw-tablet
-    # type-work
-    # wm-niri
+    ./hardware.nix
+    hw-tablet
+    shell-fish
+    type-work
+    wm-niri
 
     # extras
     # opt-lix
@@ -56,10 +56,10 @@
     userNames = [adminUser];
   };
 
-  services.libinput.touchpad = {
-    horizontalScrolling = true;
-    naturalScrolling = true;
-    # thinkpad has nice red button and triple buttons. touchpad is pointless.
-    tapping = false;
-  };
+  # services.libinput.touchpad = {
+  #   horizontalScrolling = true;
+  #   naturalScrolling = true;
+  #   # thinkpad has nice red button and triple buttons. touchpad is pointless except for scrolling.
+  #   tapping = false;
+  # };
 }

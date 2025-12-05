@@ -58,7 +58,7 @@ in {
     };
 
     launcher = {
-      args = "-nofs -c 6  -term ${terminal.exe} -closebtn 'right' -wm '${osConfig.nixos.opts.wmName}'";
+      args = "-nofs -c 6  -term ${terminal.exe} -closebtn 'right' -wm 'niri'";
       exe = getExe launcher.pkg;
       pkg = pkgs.nwg-drawer;
       tooltip = "Nwg-drawer";

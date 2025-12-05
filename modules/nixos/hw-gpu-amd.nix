@@ -1,3 +1,4 @@
+# todo: really review
 # todo: review
 {
   lib,
@@ -6,21 +7,21 @@
 }: {
   environment = {
     systemPackages = [pkgs.lact];
-    variables = {
-      "LIBVA_DRIVER_NAME" = "radeonsi";
-      "VDPAU_DRIVER" = "radeonsi";
-    };
+    # variables = {
+    #   "LIBVA_DRIVER_NAME" = "radeonsi";
+    #   "VDPAU_DRIVER" = "radeonsi";
+    # };
   };
 
   hardware = {
-    amdgpu.initrd.enable = true;
+    # amdgpu.initrd.enable = true;
 
-    graphics.extraPackages = with pkgs; [
-      vulkan-extension-layer
-      vulkan-loader
-      vulkan-tools
-      vulkan-validation-layers
-    ];
+    # graphics.extraPackages = with pkgs; [
+    #   vulkan-extension-layer
+    #   vulkan-loader
+    #   vulkan-tools
+    #   vulkan-validation-layers
+    # ];
   };
 
   systemd = {

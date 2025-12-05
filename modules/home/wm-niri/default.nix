@@ -5,13 +5,14 @@
   ...
 }: {
   imports = [
-    ./app-niriApps.nix
     ./binds.nix
     ./env.nix
-    # ./keyring.nix
     ./portal.nix
+    ./quickshell.nix
     ./security.nix
     ./settings.nix
+    ./swayidle.nix
+    ./swaylock.nix
     ./tablet.nix
     inputs.niri-flake.homeModules.niri
   ];

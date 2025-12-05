@@ -7,10 +7,7 @@
 
   environment.systemPackages = [pkgs.patchelf];
 
-  programs.nix-ld = {
-    enable = true;
-    package = pkgs.nix-ld;
-  };
+  programs.nix-ld.enable = true;
 
   services.envfs.enable = true;
 }

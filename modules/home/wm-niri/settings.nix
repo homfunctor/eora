@@ -1,8 +1,6 @@
 {
   config,
-  flake,
   lib,
-  osConfig,
   ...
 }: let
   inherit (config.home.opts) bg;

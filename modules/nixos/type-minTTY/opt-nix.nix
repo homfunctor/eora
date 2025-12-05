@@ -1,5 +1,6 @@
 # nix settings for nix to nix with
 {
+  config,
   inputs,
   lib,
   ...
@@ -51,7 +52,7 @@ in {
       keep-outputs = true;
       log-lines = 50;
       sandbox = true;
-      trusted-users = ["@wheel"];
+      trusted-users = ["root" config.nixos.opts.adminUser];
       warn-dirty = false;
 
       substituters = [

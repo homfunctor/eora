@@ -10,7 +10,6 @@
     importAllFileNames
     mkAttrOpt
     mkBoolOpt
-    mkIntOpt
     mkStrOpt
     ;
   inherit (lib) genAttrs;

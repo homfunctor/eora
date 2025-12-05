@@ -14,10 +14,6 @@
     nemo-with-extensions # just feels so good
     showmethekey
     vlc # good stuff, nostalgic
-    wayland-protocols
-    wayland-utils
-    wl-clipboard
-    wlr-randr
   ];
 
   # want shell integration, so must be enabled after niceTTY

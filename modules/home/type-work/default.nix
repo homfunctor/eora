@@ -15,7 +15,6 @@
     ./app-office.nix
     ./app-pdfViewer.nix
     ./app-pika.nix
-    ./app-simple-scan.nix
     ./app-starship.nix
     ./app-syncthing
     ./app-thunderbird.nix

@@ -83,7 +83,5 @@
     userNames = [adminUser "thaos"];
 
     wlrBR = "vulkan";
-
-    wmName = "niri";
   };
 }
