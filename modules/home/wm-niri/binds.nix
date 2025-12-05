@@ -103,6 +103,7 @@ in {
         #   # unswallow/reswallow a window
         #   "${mod}, S, toggleswallow"
 
+        # todo: not working, check how to enforce workspace per monitor
         # workspaces
         "Mod+1".action.focus-workspace = 1;
         "Mod+2".action.focus-workspace = 2;
