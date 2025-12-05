@@ -1,4 +1,3 @@
-# minimal services
 {
   services = {
     fstrim.enable = true;

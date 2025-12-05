@@ -14,4 +14,9 @@ in {
       }
     )
     config.nixos.opts.userNames));
+
+  security.pam.services = {
+    login.enableGnomeKeyring = true;
+    greetd.enableGnomeKeyring = true;
+  };
 }

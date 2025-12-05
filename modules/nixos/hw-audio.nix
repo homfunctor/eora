@@ -1,4 +1,4 @@
-_: {
+{lib, ...}: {
   services = {
     pipewire = {
       enable = true;
@@ -12,6 +12,6 @@ _: {
       wireplumber.enable = true;
     };
 
-    # pulseaudio.enable = lib.mkForce false;
+    pulseaudio.enable = lib.mkForce false;
   };
 }

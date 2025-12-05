@@ -5,7 +5,6 @@
     ./chaotic-cache.nix
     ./opt-fonts.nix
     ./opt-lanzaboote.nix
-    ./opt-services.nix
     ./opt-stylix.nix
     ./sops-users.nix
   ];
