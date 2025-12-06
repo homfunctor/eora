@@ -5,7 +5,18 @@
 }: let
   inherit (config.home.opts) bg;
   inherit (config.lib.stylix) colors;
-  inherit (lib) zipListsWith;
+  inherit
+    (lib)
+    concatLists
+    elemAt
+    genList
+    length
+    listToAttrs
+    range
+    zipListsWith
+    ;
+
+  screenshotDir = "${config.xdg.userDirs.pictures}/Screenshots";
 in {
   programs.niri.settings = {
     hotkey-overlay.skip-at-startup = true;
@@ -31,6 +42,18 @@ in {
       focus-ring.enable = false;
     };
 
+    outputs = listToAttrs (
+      zipListsWith (m: p: {
+        name = m;
+        value.position = {
+          x = elemAt p 0;
+          y = elemAt p 1;
+        };
+      })
+      bg.monitors
+      bg.xy
+    );
+
     overview = {
       workspace-shadow.enable = false;
       backdrop-color = "transparent";
@@ -38,20 +61,19 @@ in {
 
     prefer-no-csd = true;
 
-    screenshot-path = "${config.xdg.userDirs.pictures}/Screenshots/$(date '+%Y%m%d-%H:%M:%S').png";
+    screenshot-path = "${screenshotDir}/$(date '+%Y%m%d-%H:%M:%S').png";
     spawn-at-startup = [
-      # {command = [(getExe opts.bg.pkg)] ++ splitArg opts.bg.args;}
     ];
 
     workspaces = let
-      num = lib.range 1 ((lib.length bg.monitors) * bg.nWS);
+      num = range 1 ((length bg.monitors) * bg.nWS);
       mon =
         bg.monitors
         ++ (
-          lib.concatLists (lib.genList (_: bg.monitors) (bg.nWS - 1))
+          concatLists (genList (_: bg.monitors) (bg.nWS - 1))
         );
     in
-      builtins.listToAttrs (zipListsWith (n: m: {
+      listToAttrs (zipListsWith (n: m: {
           name = toString n;
           value.open-on-output = m;
         })

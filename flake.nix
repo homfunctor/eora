@@ -36,20 +36,20 @@
       url = "github:sodiboo/niri-flake";
     };
 
-    niri-scratchpad-flake = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:gvolpe/niri-scratchpad";
-    };
+    # niri-scratchpad-flake = {
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   url = "github:gvolpe/niri-scratchpad";
+    # };
 
-    nfsm-flake = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:gvolpe/nfsm";
-    };
+    # nfsm-flake = {
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   url = "github:gvolpe/nfsm";
+    # };
 
-    nsticky-flake = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:lonerorz/nsticky";
-    };
+    # nsticky-flake = {
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   url = "github:lonerorz/nsticky";
+    # };
 
     # nix
     nix-gaming = {
@@ -71,7 +71,7 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    nixpkgs.url = "git+https://github.com/nixos/nixpkgs?shallow=1&ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixvim.url = "github:nix-community/nixvim";
 

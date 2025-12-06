@@ -18,8 +18,8 @@
 
     # work
     ./hardware.nix
-    app-fish
     hw-tablet
+    shell-fish
     type-work
     wm-niri
 
@@ -49,14 +49,14 @@
         "DP-3"
       ];
       resolutions = [
-        "1680x1050"
-        "1920x1080"
-        "1366x768"
+        "1680 1050"
+        "1920 1080"
+        "1366 768"
       ];
       xy = [
-        "287x0"
-        "1967x220"
-        "0x1050"
+        [287 0]
+        [1967 220]
+        [0 1050]
       ];
     };
 
