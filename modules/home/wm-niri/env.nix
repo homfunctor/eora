@@ -15,7 +15,7 @@ in {
     ELECTRON_OZONE_PLATFORM_HINT = "wayland";
     GDK_BACKEND = "wayland,x11";
     # GDK_SCALE = "1";
-    # GNOME_KEYRING_CONTROL = "$XDG_RUNTIME_DIR/keyring";
+    GNOME_KEYRING_CONTROL = "$XDG_RUNTIME_DIR/keyring";
     MOZ_ENABLE_WAYLAND = "1";
     NIXOS_OZONE_WL = "1";
     # QT_AUTO_SCREEN_SCALE_FACTOR = "1";

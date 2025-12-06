@@ -21,7 +21,6 @@
     ./app-udiskie.nix
     ./app-utils.nix
     ./opt-dconf.nix
-    ./opt-keyring.nix
     ./opt-mime.nix
     ./opt-qt.nix
     ./opt-stylix

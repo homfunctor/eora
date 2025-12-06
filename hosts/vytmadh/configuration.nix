@@ -18,8 +18,8 @@
     wm-niri
 
     # extras
-    # opt-lix
-    # opt-rust
+    opt-lix
+    opt-rust
   ];
 
   # recursive to avoid defining adminUser twice
@@ -47,7 +47,6 @@
     opacity.popups = 1.0;
 
     sops = {
-      keyring.enable = true;
       syncthing.enable = true;
       user.enable = true;
     };
@@ -55,11 +54,4 @@
     adminUser = "rymrgand";
     userNames = [adminUser];
   };
-
-  # services.libinput.touchpad = {
-  #   horizontalScrolling = true;
-  #   naturalScrolling = true;
-  #   # thinkpad has nice red button and triple buttons. touchpad is pointless except for scrolling.
-  #   tapping = false;
-  # };
 }

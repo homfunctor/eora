@@ -1,3 +1,4 @@
+# todo: can touchpad be setup to only scroll/switch workspaces?
 {
   programs.niri.settings = {
     input = {

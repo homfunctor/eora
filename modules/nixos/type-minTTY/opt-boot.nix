@@ -20,9 +20,12 @@ in {
     kernelPackages = mkDefault pkgs.linuxPackages_latest;
 
     kernelParams = [
+      "boot.shell_on_fail"
+      "intremap=on"
       "plymouth.use-simpledrm"
       "quiet"
       "rd.udev.log_level=3"
+      "splash"
       "systemd.show_status=auto"
     ];
 

@@ -51,11 +51,6 @@
       url = "github:lonerorz/nsticky";
     };
 
-    quickshell = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-    };
-
     # nix
     nix-gaming = {
       inputs.nixpkgs.follows = "nixpkgs";

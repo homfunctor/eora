@@ -1,27 +1,16 @@
-# todo: check XDG_DESKTOP_PORTAL_DIR
-{
-  osConfig,
-  pkgs,
-  ...
-}: let
-  niriPortalPkg = osConfig.nixos.opts.niri.portal.pkg;
-in {
+{pkgs, ...}: {
   xdg.portal = {
     enable = true;
     xdgOpenUsePortal = true;
 
-    config.niri = {
-      "org.freedesktop.impl.portal.Access" = ["gtk" "gnome"];
-      "org.freedesktop.impl.portal.Notification" = ["gtk" "gnome"];
-      # "org.freedesktop.impl.portal.Secret" = ["gnome-keyring"];
-      default = ["gtk" "gnome"];
+    config = {
+      common.default = ["gtk" "gnome"];
+      niri.default = ["gtk" "gnome"];
     };
 
-    configPackages = [niriPortalPkg];
-
-    extraPortals = [
-      niriPortalPkg
-      pkgs.xdg-desktop-portal-gnome
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gnome
+      xdg-desktop-portal-gtk
     ];
   };
 }

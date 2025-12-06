@@ -101,14 +101,14 @@
       foldlevel = 99;
       foldlevelstart = -1;
       foldmethod = "indent";
-      pumblend = 100;
+      # pumblend = 100;
       pumheight = 10;
       ruler = false;
       scrolloff = 8;
       showmode = false;
       sidescrolloff = 8;
       signcolumn = "yes";
-      winblend = 100;
+      # winblend = 100;
 
       # which-key timeout
       timeoutlen = 10;

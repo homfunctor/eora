@@ -74,7 +74,6 @@
     mainMonitor = builtins.elemAt bg.monitors 1;
 
     sops = {
-      keyring.enable = true;
       syncthing.enable = true;
       user.enable = true;
     };

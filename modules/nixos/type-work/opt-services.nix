@@ -2,11 +2,16 @@
   services = {
     dbus = {
       enable = true;
-      packages = [pkgs.dconf];
+      packages = with pkgs; [
+        dconf
+        gcr
+        gnome-keyring
+        gnome-settings-daemon
+        libsecret
+      ];
     };
     fstrim.enable = true;
     fwupd.enable = true;
-    gnome.gnome-keyring.enable = true;
     gvfs.enable = true;
     libinput.enable = true;
     timesyncd.enable = true;

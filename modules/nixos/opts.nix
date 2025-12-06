@@ -46,7 +46,6 @@ in {
       };
       idle.pkg = mkAttrOpt pkgs.swayidle "pkg";
       locker.pkg = mkAttrOpt pkgs.swaylock "pkg";
-      portal.pkg = mkAttrOpt pkgs.xdg-desktop-portal-gtk "pkg";
     };
 
     opacity = {
@@ -58,7 +57,6 @@ in {
     shell = mkStrOpt "fish" "shell to use";
 
     sops = {
-      keyring.enable = mkBoolOpt false "unlock keyring on login with sops";
       syncthing.enable = mkBoolOpt false "manage cert/key with sops";
       user.enable = mkBoolOpt false "set (hashed) password with sops";
     };
