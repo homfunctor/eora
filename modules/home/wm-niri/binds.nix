@@ -42,34 +42,19 @@ in {
         "Mod+Alt+L".action.spawn = getExe opts.locker.pkg;
 
         # window management
-        # todo
-        # "${mod}, D, togglesplit"
-        # "${mod}, F, fullscreen"
-        # "${mod}, T, togglefloating"
-
         "Mod+Q".action = close-window;
         "Mod+F".action = maximize-column;
         "Mod+Shift+F".action = expand-column-to-available-width;
+        "Mod+S".action = switch-preset-column-width;
         "Mod+T".action = toggle-window-floating;
 
-        # todo
-        # # resize window (vim-like)
-        # "${mod} CTRL, H, resizeactive, -20 0"
-        # "${mod} CTRL, J, resizeactive, 0 20"
-        # "${mod} CTRL, K, resizeactive, 0 -20"
-        # "${mod} CTRL, L, resizeactive, 20 0"
-        #
-        # # resize window (directional)
-        # "${mod} CTRL, left, resizeactive, -20 0"
-        # "${mod} CTRL, down, resizeactive, 0 20"
-        # "${mod} CTRL, up, resizeactive, 0 -20"
-        # "${mod} CTRL, right, resizeactive, 20 0"
+        # window height adjustment within column (vim-like)
 
         # focus window movement
         "Mod+H".action = focus-column-left;
         "Mod+L".action = focus-column-right;
-        "Mod+J".action = focus-window-or-workspace-down;
-        "Mod+K".action = focus-window-or-workspace-up;
+        "Mod+J".action = focus-monitor-down;
+        "Mod+K".action = focus-monitor-up;
         "Mod+Shift+H".action = move-column-left;
         "Mod+Shift+L".action = move-column-right;
         "Mod+Shift+K".action = move-column-to-workspace-up;
@@ -77,8 +62,8 @@ in {
 
         "Mod+Left".action = focus-column-left;
         "Mod+Right".action = focus-column-right;
-        "Mod+Down".action = focus-workspace-down;
-        "Mod+Up".action = focus-workspace-up;
+        "Mod+Down".action = focus-monitor-down;
+        "Mod+Up".action = focus-monitor-up;
         "Mod+Shift+Left".action = move-column-left;
         "Mod+Shift+Right".action = move-column-right;
         "Mod+Shift+Down".action = move-column-to-workspace-up;
@@ -86,31 +71,18 @@ in {
 
         # screenshots
         "Print".action.screenshot-screen.show-pointer = false;
-        # todo
-        # "KEY_SYSRQ".action.screenshot-screen.show-pointer = false;
 
-        # todo
-        #   # cycle windows
-        #   "ALT, tab, cyclenext"
-        #   "ALT, tab, bringactivetotop"
-        #
-        #   # misc controls
-        #   "${mod}, Q, killactive"
-        #   "${mod}, mouse:274, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        #   "${mod}, mouse:275, exec,  ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        #   "${mod}, mouse:276, exec, ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-        #
-        #   # unswallow/reswallow a window
-        #   "${mod}, S, toggleswallow"
+        "Mod+MouseMiddle".action.spawn = "${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+        "Mod+MouseBack".action.spawn = "${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
+        "Mod+MouseForward".action.spawn = "${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
 
-        # todo: not working, check how to enforce workspace per monitor
         # workspaces
-        "Mod+1".action.focus-workspace = 1;
-        "Mod+2".action.focus-workspace = 2;
-        "Mod+3".action.focus-workspace = 3;
-        "Mod+Shift+1".action.focus-workspace = 4;
-        "Mod+Shift+2".action.focus-workspace = 5;
-        "Mod+Shift+3".action.focus-workspace = 6;
+        "Mod+1".action.focus-workspace = "1";
+        "Mod+2".action.focus-workspace = "2";
+        "Mod+3".action.focus-workspace = "3";
+        "Mod+Shift+1".action.focus-workspace = "4";
+        "Mod+Shift+2".action.focus-workspace = "5";
+        "Mod+Shift+3".action.focus-workspace = "6";
 
         # moving windows
         "Mod+Ctrl+1".action.move-window-to-workspace = [{focus = false;} "1"];
@@ -119,26 +91,6 @@ in {
         "Mod+Ctrl+Shift+1".action.move-window-to-workspace = [{focus = false;} "1"];
         "Mod+Ctrl+Shift+2".action.move-window-to-workspace = [{focus = false;} "2"];
         "Mod+Ctrl+Shift+3".action.move-window-to-workspace = [{focus = false;} "3"];
-
-        # bindl = [
-        #   ", XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-        #   ", XF86AudioMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        #   ", XF86AudioNext, exec, ${pkgs.wireplumber}/bin/wpctl next"
-        #   ", XF86AudioPlay, exec, ${pkgs.wireplumber}/bin/wpctl play-pause"
-        #   ", XF86AudioPrev, exec, ${pkgs.wireplumber}/bin/wpctl previous"
-        # ];
-        #
-        # bindle = [
-        #   ", XF86AudioLowerVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%-"
-        #   ", XF86AudioRaiseVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l '1.0' @DEFAULT_AUDIO_SINK@ 6%+"
-        #   ", XF86MonBrightnessDown, exec, ${getExe pkgs.brillo} -q -u 300000 -U 5"
-        #   ", XF86MonBrightnessUp, exec, ${getExe pkgs.brillo} -q -u 300000 -A 5"
-        # ];
-        #
-        # bindm = [
-        #   "${mod}, mouse:272, movewindow"
-        #   "${mod}, mouse:273, resizewindow"
-        # ];
       };
 
       switch-events = {
