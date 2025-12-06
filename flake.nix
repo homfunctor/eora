@@ -46,6 +46,11 @@
     #   url = "github:gvolpe/nfsm";
     # };
 
+    noctalia = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:noctalia-dev/noctalia-shell";
+    };
+
     # nsticky-flake = {
     #   inputs.nixpkgs.follows = "nixpkgs";
     #   url = "github:lonerorz/nsticky";

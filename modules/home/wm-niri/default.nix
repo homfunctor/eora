@@ -4,24 +4,34 @@
   osConfig,
   ...
 }: {
-  imports = [
+  imports = with inputs; [
+    ./bar.nix
+    ./bg.nix
     ./binds.nix
     ./env.nix
+    ./idle.nix
+    ./lock.nix
+    ./logout.nix
+    ./nc.nix
     ./portal.nix
     ./security.nix
     ./settings.nix
-    ./swaybg.nix
-    ./swayidle.nix
-    ./swaylock.nix
-    ./swaync.nix
     ./tablet.nix
-    ./waybar.nix
-    ./wlogout.nix
-    inputs.niri-flake.homeModules.niri
+    niri-flake.homeModules.niri
+    noctalia.homeModules.default
   ];
 
-  programs.niri = {
-    enable = true;
-    package = osConfig.nixos.opts.niri.wm.pkg;
+  programs = {
+    niri = {
+      enable = true;
+      package = osConfig.nixos.opts.niri.wm.pkg;
+    };
+
+    noctalia-shell = {
+      enable = true;
+      settings = {
+        # todo
+      };
+    };
   };
 }

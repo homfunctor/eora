@@ -32,15 +32,7 @@ in {
 
     mainMonitor = mkStrOpt null "main monitor";
 
-    niri = {
-      bar.pkg = mkAttrOpt pkgs.waybar "pkg";
-      bg.pkg = mkAttrOpt pkgs.swaybg "pkg";
-      idle.pkg = mkAttrOpt pkgs.swayidle "pkg";
-      locker.pkg = mkAttrOpt pkgs.swaylock "pkg";
-      logout.pkg = mkAttrOpt pkgs.wlogout "pkg";
-      nc.pkg = mkAttrOpt pkgs.swaynotificationcenter "pkg";
-      wm.pkg = mkAttrOpt pkgs.niri-stable "pkg";
-    };
+    niri.wm.pkg = mkAttrOpt pkgs.niri-stable "pkg";
 
     opacity = {
       desktop = mkFloatOpt 1.0 "desktop opacity";

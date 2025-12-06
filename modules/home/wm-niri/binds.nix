@@ -32,14 +32,14 @@ in {
           "${homeDir}/Work/${workTime}"
         ];
 
-        # "Mod+Ctrl+Shift+C".action.spawn = getExe pkgs.gnome-calculator;
-        # "Mod+Ctrl+Shift+J".action.spawn = getExe pkgs.xournalpp;
+        "Mod+Ctrl+Shift+C".action.spawn = getExe pkgs.gnome-calculator;
+        "Mod+Ctrl+Shift+J".action.spawn = getExe pkgs.xournalpp;
 
         "Mod+R".action.spawn =
           [apps.launcher.exe]
           ++ (splitArg apps.launcher.args);
 
-        "Mod+Alt+L".action.spawn = getExe opts.locker.pkg;
+        # "Mod+Alt+L".action.spawn = getExe opts.locker.pkg;
 
         # window management
         "Mod+Q".action = close-window;
