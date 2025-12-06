@@ -28,7 +28,7 @@
       nWS = 3;
       monitors = ["eDP-1"];
       resolutions = ["1920x1080"];
-      xy = ["0x0"];
+      xy = [[0 0]];
     };
 
     fontSizes = {

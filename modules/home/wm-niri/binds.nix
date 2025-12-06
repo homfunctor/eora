@@ -32,8 +32,8 @@ in {
           "${homeDir}/Work/${workTime}"
         ];
 
-        "Mod+Ctrl+Shift+C".action.spawn = getExe pkgs.gnome-calculator;
-        "Mod+Ctrl+Shift+J".action.spawn = getExe pkgs.xournalpp;
+        # "Mod+Ctrl+Shift+C".action.spawn = getExe pkgs.gnome-calculator;
+        # "Mod+Ctrl+Shift+J".action.spawn = getExe pkgs.xournalpp;
 
         "Mod+R".action.spawn =
           [apps.launcher.exe]
