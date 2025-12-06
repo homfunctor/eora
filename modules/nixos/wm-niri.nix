@@ -1,16 +1,12 @@
 {
   config,
   inputs,
-  lib,
-  pkgs,
   ...
 }: {
   programs.niri = {
     enable = true;
-    package = config.nixos.opts.niri.pkg;
+    package = config.nixos.opts.niri.wm.pkg;
   };
-
-  nixos.opts.loginCmd = "${config.nixos.opts.niri.pkg}/bin/niri-session";
 
   nixpkgs.overlays = [inputs.niri-flake.overlays.niri];
 

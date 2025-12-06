@@ -44,4 +44,6 @@
       }
       // config.home.opts.apps.shell.shellIntegration;
   };
+
+  services.network-manager-applet.enable = true;
 }

@@ -37,7 +37,7 @@
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
     niri = {
-      pkg = pkgs.niri-unstable;
+      wm.pkg = pkgs.niri-unstable;
     };
 
     bg = {

@@ -14,10 +14,15 @@
 
       "org/gtk/gtk4/settings/file-chooser".sort-directories-first = true;
       "org/gtk/settings/file-chooser" = {
-        sort-directories-first = true;
         date-format = "with-time";
+        show-hidden = false;
+        sort-column = "name";
+        sort-directories-first = true;
+        sort-order = "ascending";
+        type-format = "category";
       };
 
+      # terminal for nemo
       "org/cinnamon/desktop/applications/terminal" = {
         exec = config.home.opts.apps.terminal.exe;
       };

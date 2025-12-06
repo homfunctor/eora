@@ -19,8 +19,6 @@ in {
     # monitors, resolutions, xy (positions)
     bg = mkAttrOpt {} "per host background/monitor settings";
 
-    shellAliases = mkAttrOpt {} "shell aliases";
-
     fontSizes = mkAttrOpt {} "font size settings";
 
     hostName = mkStrOpt "" "host name";
@@ -32,20 +30,16 @@ in {
 
     lanzaboote.enable = mkBoolOpt false "enable lanzaboote";
 
-    loginCmd = mkStrOpt null "command for greetd";
-
     mainMonitor = mkStrOpt null "main monitor";
 
     niri = {
-      pkg = mkAttrOpt pkgs.niri-stable "pkg";
-
       bar.pkg = mkAttrOpt pkgs.waybar "pkg";
-      bg = {
-        args = mkStrOpt "" "args";
-        pkg = mkAttrOpt pkgs.swaybg "pkg";
-      };
+      bg.pkg = mkAttrOpt pkgs.swaybg "pkg";
       idle.pkg = mkAttrOpt pkgs.swayidle "pkg";
       locker.pkg = mkAttrOpt pkgs.swaylock "pkg";
+      logout.pkg = mkAttrOpt pkgs.wlogout "pkg";
+      nc.pkg = mkAttrOpt pkgs.swaynotificationcenter "pkg";
+      wm.pkg = mkAttrOpt pkgs.niri-stable "pkg";
     };
 
     opacity = {
@@ -55,6 +49,7 @@ in {
     };
 
     shell = mkStrOpt "fish" "shell to use";
+    shellAliases = mkAttrOpt {} "shell aliases";
 
     sops = {
       syncthing.enable = mkBoolOpt false "manage cert/key with sops";
