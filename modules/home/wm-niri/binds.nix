@@ -2,7 +2,6 @@
 {
   config,
   flake,
-  osConfig,
   pkgs,
   lib,
   ...
@@ -76,10 +75,27 @@ in {
         # screenshots
         "Print".action.screenshot-screen.show-pointer = false;
 
-        # todo noctalia
-        "Mod+MouseMiddle".action.spawn = "${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-        "Mod+MouseBack".action.spawn = "${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
-        "Mod+MouseForward".action.spawn = "${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";
+        "Mod+MouseMiddle".action.spawn = [
+          nExe
+          "ipc"
+          "call"
+          "volume"
+          "muteOutput"
+        ];
+        "Mod+MouseBack".action.spawn = [
+          nExe
+          "ipc"
+          "call"
+          "volume"
+          "decrease"
+        ];
+        "Mod+MouseForward".action.spawn = [
+          nExe
+          "ipc"
+          "call"
+          "volume"
+          "increase"
+        ];
 
         # workspaces
         "Mod+1".action.focus-workspace = "1";
@@ -93,9 +109,18 @@ in {
         "Mod+Ctrl+1".action.move-window-to-workspace = [{focus = false;} "1"];
         "Mod+Ctrl+2".action.move-window-to-workspace = [{focus = false;} "2"];
         "Mod+Ctrl+3".action.move-window-to-workspace = [{focus = false;} "3"];
-        "Mod+Ctrl+Shift+1".action.move-window-to-workspace = [{focus = false;} "1"];
-        "Mod+Ctrl+Shift+2".action.move-window-to-workspace = [{focus = false;} "2"];
-        "Mod+Ctrl+Shift+3".action.move-window-to-workspace = [{focus = false;} "3"];
+        "Mod+Ctrl+Shift+1".action.move-window-to-workspace = [
+          {focus = false;}
+          "1"
+        ];
+        "Mod+Ctrl+Shift+2".action.move-window-to-workspace = [
+          {focus = false;}
+          "2"
+        ];
+        "Mod+Ctrl+Shift+3".action.move-window-to-workspace = [
+          {focus = false;}
+          "3"
+        ];
       };
 
       switch-events = {

@@ -1,11 +1,10 @@
 {
   config,
   inputs,
-  lib,
   osConfig,
   ...
 }: let
-  inherit (config.home.opts) hostName userName;
+  inherit (config.home.opts) userName;
 in {
   imports = [
     inputs.noctalia.homeModules.default
