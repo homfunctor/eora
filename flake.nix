@@ -76,9 +76,7 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # trying to diagnose vivaldi crash
-    nixpkgs.url = "github:nixos/nixpkgs?ref=9dc359d77c51cc3f100cfcc96ec9a406cf4aa143";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     nixvim.url = "github:nix-community/nixvim";
 
