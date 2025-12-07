@@ -41,7 +41,7 @@ in {
         "Mod+X".action.spawn = nExe "sessionMenu toggle";
         "Mod+O".action = toggle-overview;
 
-        "Mod+Alt+L".action.spawn = nExe "lockScreen toggle";
+        "Mod+Alt+L".action.spawn = nExe "lockScreen lock";
 
         # window management
         "Mod+Q".action = close-window;
