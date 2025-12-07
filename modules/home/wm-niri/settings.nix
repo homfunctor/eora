@@ -26,6 +26,8 @@ in {
       theme = name;
     };
 
+    gestures.hot-corners.enable = false;
+
     input = {
       keyboard.numlock = true;
       mouse.accel-profile = "flat";
@@ -63,6 +65,7 @@ in {
 
     screenshot-path = "${screenshotDir}/$(date '+%Y%m%d-%H:%M:%S').png";
     spawn-at-startup = [
+      {command = ["${lib.getExe config.programs.noctalia-shell.package}"];}
     ];
 
     workspaces = let

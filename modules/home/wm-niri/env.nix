@@ -9,11 +9,10 @@ in {
   programs.niri.settings.environment = {
     BROWSER = apps.browser.exe;
     CLUTTER_BACKEND = "wayland";
-    # DIRENV_LOG_FORMAT = "1";
     # DISABLE_QT5_COMPAT = "0";
     # DISABLE_QT_COMPAT = "0";
     EDITOR = apps.text.exe;
-    ELECTRON_OZONE_PLATFORM_HINT = "wayland";
+    ELECTRON_OZONE_PLATFORM_HINT = "auto";
     GDK_BACKEND = "wayland,x11";
     # GDK_SCALE = "1";
     GNOME_KEYRING_CONTROL = "$XDG_RUNTIME_DIR/keyring";
@@ -35,9 +34,10 @@ in {
     # _JAVA_AWT_WM_NONREPARENTING = "1";
   };
 
+  fonts.fontconfig.enable = true;
+
   xdg.configFile = {
     "electron-flags.conf".text = ''
-      --enable-features=UseOzonePlatform,WaylandWindowDecorations
       --ozone-platform-hint=wayland
       --ozone-platform=wayland
     '';

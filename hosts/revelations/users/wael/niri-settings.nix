@@ -1,5 +1,0 @@
-# todo
-{
-  programs.niri.settings = {
-  };
-}

@@ -14,9 +14,7 @@
     type-niceTTY
     ../wael/apps.nix
 
-    #work
-    ../wael/niri-panel.nix
-    ../wael/niri-settings.nix
+    # work
     type-work
     wm-niri
   ];

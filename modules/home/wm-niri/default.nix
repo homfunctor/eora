@@ -1,10 +1,12 @@
 # very wip
 {
+  config,
   inputs,
   osConfig,
   ...
 }: {
   imports = with inputs; [
+    ./apps.nix
     ./bar.nix
     ./bg.nix
     ./binds.nix
@@ -16,22 +18,14 @@
     ./portal.nix
     ./security.nix
     ./settings.nix
+    ./shell.nix
+    ./stylix.nix
     ./tablet.nix
     niri-flake.homeModules.niri
-    noctalia.homeModules.default
   ];
 
-  programs = {
-    niri = {
-      enable = true;
-      package = osConfig.nixos.opts.niri.wm.pkg;
-    };
-
-    noctalia-shell = {
-      enable = true;
-      settings = {
-        # todo
-      };
-    };
+  programs.niri = {
+    enable = true;
+    package = osConfig.nixos.opts.niri.wm.pkg;
   };
 }

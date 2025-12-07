@@ -18,4 +18,6 @@
       pull.rebase = "false";
     };
   };
+
+  systemd.user.startServices = "sd-switch";
 }

@@ -1,3 +1,4 @@
+# todo: reorganize this mess
 {
   config,
   flake,
@@ -9,8 +10,8 @@
   inherit (config.home.opts) apps userName;
   inherit (flake.lib) splitArg;
   inherit (lib) getExe;
-  opts = osConfig.nixos.opts.niri;
 
+  nExe = getExe config.programs.noctalia-shell.package;
   homeDir = "/home/${userName}";
   workTime = "Fall2025";
 in {
@@ -38,6 +39,9 @@ in {
         "Mod+R".action.spawn =
           [apps.launcher.exe]
           ++ (splitArg apps.launcher.args);
+
+        "Mod+X".action.spawn = [nExe "ipc" "call" "sessionMenu" "toggle"];
+        "Mod+O".action = toggle-overview;
 
         # "Mod+Alt+L".action.spawn = getExe opts.locker.pkg;
 
@@ -72,6 +76,7 @@ in {
         # screenshots
         "Print".action.screenshot-screen.show-pointer = false;
 
+        # todo noctalia
         "Mod+MouseMiddle".action.spawn = "${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         "Mod+MouseBack".action.spawn = "${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-";
         "Mod+MouseForward".action.spawn = "${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+";

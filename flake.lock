@@ -447,11 +447,11 @@
         "rust-overlay": "rust-overlay_2"
       },
       "locked": {
-        "lastModified": 1764622702,
-        "narHash": "sha256-HggOVvg2U3EwT44wPHEwFKromf9qR9rTqfV1i3q7rYs=",
+        "lastModified": 1765062926,
+        "narHash": "sha256-p0DkyfrMae/6SVPCb/XY5f9fOFc+fwtOCteRqD297QE=",
         "owner": "nix-community",
         "repo": "lanzaboote",
-        "rev": "6242b3b2b5e5afcf329027ed4eb5fa6e2eab10f1",
+        "rev": "4f5fc14c175cd0574ca0f4c5a05fae63758f0c47",
         "type": "github"
       },
       "original": {
@@ -526,11 +526,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764986018,
-        "narHash": "sha256-g0T9Jo24QTSdwSqxSCQcy0rpU6TujJsZdWrIeOOevYA=",
+        "lastModified": 1765073338,
+        "narHash": "sha256-UGkNtTs0E1SzskcUkkkWoh3vfZwPiHrk0SMRoQL86oE=",
         "owner": "fufexan",
         "repo": "nix-gaming",
-        "rev": "00e02d9896160f4ab9d9a2fe0ec7c009952d67ba",
+        "rev": "7480cfb8bba3e352edf2c9334ff4b7c3ac84eb87",
         "type": "github"
       },
       "original": {
@@ -611,11 +611,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1765037054,
-        "narHash": "sha256-l4R5m/BtLB3pc/Bcqytdp7VNJDVzW+Fniv/YvRXP4qU=",
+        "lastModified": 1765065900,
+        "narHash": "sha256-ghZINxVZITaHLCKXajPKUBuyU5F0wfRAGZIr2TA1Gpc=",
         "owner": "kaylorben",
         "repo": "nixcord",
-        "rev": "8ebddd43d3972178b13c080e7d7e7264dfbaf4c1",
+        "rev": "4497cb1a0251362d3e65d24588dc7ea8b23fc3bc",
         "type": "github"
       },
       "original": {
@@ -776,11 +776,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1765053872,
-        "narHash": "sha256-HXnApDWc4vlx6Mh9OJu0fYn5oqUQHva82qS54M3gnJw=",
+        "lastModified": 1765077391,
+        "narHash": "sha256-nEI9zFwg9MHbHFcE7H43E0olRKxwrP1W/gQJc9GtlJU=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "969bddd382b8014ca2e76d1a8f1159276775f813",
+        "rev": "ff6bc083fd034044b22c6b94863f5f23ee881f98",
         "type": "github"
       },
       "original": {
@@ -909,11 +909,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1764988672,
-        "narHash": "sha256-FIJtt3Zil89/hLy9i7f0R2xXcJDPc3CeqiiCLfsFV0Y=",
+        "lastModified": 1765075567,
+        "narHash": "sha256-KFDCdQcHJ0hE3Nt5Gm5enRIhmtEifAjpxgUQ3mzSJpA=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "086fd19a68e80fcc8a298e9df4674982e4c498a6",
+        "rev": "769156779b41e8787a46ca3d7d76443aaf68be6f",
         "type": "github"
       },
       "original": {
@@ -938,11 +938,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1762126601,
-        "narHash": "sha256-18TzrBP0dfjKHSz9DTff1MprbZnRu88DvqiJ3MKeHHw=",
+        "lastModified": 1765077342,
+        "narHash": "sha256-yGzZCV8myLd6QFmeGZbTyvEQvb7ZzoC+NYyT11G00+8=",
         "ref": "refs/heads/main",
-        "rev": "36d521db7342fd05ff5d6718435b56aba53acae6",
-        "revCount": 143,
+        "rev": "71fe9e858ced16424b607b1f0936574e57a7e14e",
+        "revCount": 144,
         "shallow": false,
         "type": "git",
         "url": "ssh://git@github.com/homfunctor/sapadal"

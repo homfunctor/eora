@@ -1,33 +1,57 @@
-# todo
-_: {
-  programs.noctalia-shell.settings.bar = {
-    density = "compact";
-    position = "top";
-    showCapsule = false;
-    widgets = {
-      left = [
-        {
-          id = "ControlCenter";
-          useDistroLogo = true;
-        }
-      ];
+{
+  inputs,
+  osConfig,
+  ...
+}: {
+  imports = [
+    inputs.sapadal.homeModules.niri-doxtalia
+  ];
 
-      center = [
-        {
-          hideUnoccupied = false;
-          id = "Workspace";
-          labelMode = "none";
-        }
-      ];
+  programs.noctalia-shell.settings = {
+    bar = {
+      inherit (osConfig.nixos.opts.niri.bar) widgets;
 
-      right = [
-        {
-          formatHorizontal = "HH:mm";
-          id = "Clock";
-          useMonospacedFont = true;
-          usePrimaryColor = true;
-        }
-      ];
+      density = "default";
+      backgroundOpacity = 1;
+      floating = false;
+
+      outerCorners = false;
+
+      position = "top";
+      showCapsule = false;
+    };
+
+    calendar.cards = [
+      {
+        id = "calendar-header-card";
+        enabled = false;
+      }
+      {
+        id = "calendar-month-card";
+        enabled = true;
+      }
+      {
+        id = "timer-card";
+        enabled = false;
+      }
+      {
+        id = "weather-card";
+        enabled = true;
+      }
+    ];
+
+    controlCenter = {
+      inherit (osConfig.nixos.opts.niri.controlCenter) cards shortcuts;
+
+      position = "close_to_bar_button";
+    };
+
+    location = {
+      showCalendarEvents = true;
+      showCalendarWeather = true;
+      showWeekNumberInCalendar = true;
+      weatherEnabled = true;
+      weatherShowEffects = true;
     };
   };
 }
