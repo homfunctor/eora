@@ -101,21 +101,22 @@
       ];
       # inherited
       shortcuts = {
-        left = [];
-        center = [
+        left = [
           {
             id = "Bluetooth";
+            enabled = true;
           }
-
-          {id = "Notifications";}
         ];
-        right = [];
+        right = [
+          {
+            id = "Notifications";
+            enabled = true;
+          }
+        ];
       };
     };
 
     # misc to adjoin to noctalia-shell.settings
-    misc = {
-      network.wifiEnabled = false;
-    };
+    misc.network.wifiEnabled = false;
   };
 }

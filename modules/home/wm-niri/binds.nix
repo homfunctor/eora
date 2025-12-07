@@ -10,7 +10,9 @@
   inherit (flake.lib) splitArg;
   inherit (lib) getExe;
 
-  nExe = getExe config.programs.noctalia-shell.package;
+  nExe = cmd:
+    [(getExe config.programs.noctalia-shell.package) "ipc" "call"]
+    ++ (splitArg cmd);
   homeDir = "/home/${userName}";
   workTime = "Fall2025";
 in {
@@ -39,10 +41,10 @@ in {
           [apps.launcher.exe]
           ++ (splitArg apps.launcher.args);
 
-        "Mod+X".action.spawn = [nExe "ipc" "call" "sessionMenu" "toggle"];
+        "Mod+X".action.spawn = nExe "sessionMenu toggle";
         "Mod+O".action = toggle-overview;
 
-        # "Mod+Alt+L".action.spawn = getExe opts.locker.pkg;
+        "Mod+Alt+L".action.spawn = nExe "lockScreen toggle";
 
         # window management
         "Mod+Q".action = close-window;
@@ -75,27 +77,9 @@ in {
         # screenshots
         "Print".action.screenshot-screen.show-pointer = false;
 
-        "Mod+MouseMiddle".action.spawn = [
-          nExe
-          "ipc"
-          "call"
-          "volume"
-          "muteOutput"
-        ];
-        "Mod+MouseBack".action.spawn = [
-          nExe
-          "ipc"
-          "call"
-          "volume"
-          "decrease"
-        ];
-        "Mod+MouseForward".action.spawn = [
-          nExe
-          "ipc"
-          "call"
-          "volume"
-          "increase"
-        ];
+        "Mod+MouseMiddle".action.spawn = nExe "volume muteOutput";
+        "Mod+MouseBack".action.spawn = nExe "volume decrease";
+        "Mod+MouseForward".action.spawn = nExe "volume increase";
 
         # workspaces
         "Mod+1".action.focus-workspace = "1";

@@ -12,6 +12,8 @@ in {
 
   programs.noctalia-shell = {
     enable = true;
+    systemd.enable = true;
+
     settings =
       {
         general = {
@@ -38,6 +40,8 @@ in {
           lockOnSuspend = true;
           showHibernateOnLockScreen = true;
         };
+
+        sessionMenu.showHeader = false;
 
         ui = {
           fontDefault = config.stylix.fonts.sansSerif.name;

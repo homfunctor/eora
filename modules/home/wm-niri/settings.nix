@@ -64,9 +64,6 @@ in {
     prefer-no-csd = true;
 
     screenshot-path = "${screenshotDir}/$(date '+%Y%m%d-%H:%M:%S').png";
-    spawn-at-startup = [
-      {command = ["${lib.getExe config.programs.noctalia-shell.package}"];}
-    ];
 
     workspaces = let
       num = range 1 ((length bg.monitors) * bg.nWS);
