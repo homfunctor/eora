@@ -11,7 +11,6 @@
     ./app-math
     ./app-minimal.nix
     ./app-nix-index.nix
-    ./app-nwg-drawer.nix
     ./app-office.nix
     ./app-pdfViewer.nix
     ./app-pika.nix

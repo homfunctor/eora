@@ -37,10 +37,7 @@ in {
         "Mod+Ctrl+Shift+C".action.spawn = getExe pkgs.gnome-calculator;
         "Mod+Ctrl+Shift+J".action.spawn = getExe pkgs.xournalpp;
 
-        "Mod+R".action.spawn =
-          [apps.launcher.exe]
-          ++ (splitArg apps.launcher.args);
-
+        "Mod+R".action.spawn = nExe "launcher toggle";
         "Mod+X".action.spawn = nExe "sessionMenu toggle";
         "Mod+O".action = toggle-overview;
 
@@ -54,6 +51,7 @@ in {
         "Mod+T".action = toggle-window-floating;
 
         # window height adjustment within column (vim-like)
+        # todo
 
         # focus window movement
         "Mod+H".action = focus-column-left;

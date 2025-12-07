@@ -57,13 +57,6 @@ in {
       tooltip = "Loupe";
     };
 
-    launcher = {
-      args = "-nofs -c 6  -term ${terminal.exe} -closebtn 'right' -wm 'niri'";
-      exe = getExe launcher.pkg;
-      pkg = pkgs.nwg-drawer;
-      tooltip = "Nwg-drawer";
-    };
-
     officeCalc = {
       desktop = "calc";
       exe = "${officeCalc.pkg}/bin/scalc";
