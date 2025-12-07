@@ -11,7 +11,7 @@
     bar = {
       inherit (osConfig.nixos.opts.niri.bar) widgets;
 
-      density = "comfortable";
+      density = "default";
       backgroundOpacity = 1;
       floating = false;
 

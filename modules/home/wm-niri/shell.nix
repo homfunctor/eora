@@ -24,7 +24,7 @@ in {
           showScreenCorners = false;
 
           boxRadiusRatio = 0;
-          iRadiusRatio = 1;
+          iRadiusRatio = 0;
           radiusRatio = 0;
           scaleRatio = 1;
           screenRadiusRatio = 0;
@@ -45,9 +45,9 @@ in {
 
         ui = {
           fontDefault = config.stylix.fonts.sansSerif.name;
-          fontDefaultScale = 1;
+          fontDefaultScale = 1.25;
           fontFixed = config.stylix.fonts.monospace.name;
-          fontFixedScale = 1;
+          fontFixedScale = 1.25;
           tooltipsEnabled = true;
           panelBackgroundOpacity = 1;
           panelsAttachedToBar = true;
