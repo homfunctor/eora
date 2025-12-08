@@ -50,12 +50,12 @@
           usePrimaryColor = true;
           drawerEnabled = false;
         }
-        # {
-        #   id = "Battery";
-        # }
-        # {
-        #   id = "Brightness";
-        # }
+        {
+          id = "Battery";
+        }
+        {
+          id = "Brightness";
+        }
         {
           id = "Volume";
           displayMode = "alwaysShow";
@@ -108,6 +108,6 @@
     };
 
     # misc to adjoin to noctalia-shell.settings
-    misc.network.wifiEnabled = false;
+    misc.network.wifiEnabled = true;
   };
 }
