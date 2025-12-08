@@ -11,7 +11,7 @@
     bar = {
       inherit (osConfig.nixos.opts.niri.bar) widgets;
 
-      density = "default";
+      density = "comfortable";
       backgroundOpacity = 1;
       floating = false;
 
@@ -42,7 +42,6 @@
 
     controlCenter = {
       inherit (osConfig.nixos.opts.niri.controlCenter) cards shortcuts;
-
       position = "close_to_bar_button";
     };
 

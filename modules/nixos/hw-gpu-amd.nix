@@ -5,23 +5,17 @@
   pkgs,
   ...
 }: {
-  environment = {
-    systemPackages = [pkgs.lact];
-    # variables = {
-    #   "LIBVA_DRIVER_NAME" = "radeonsi";
-    #   "VDPAU_DRIVER" = "radeonsi";
-    # };
-  };
+  environment.systemPackages = [pkgs.lact];
 
   hardware = {
-    # amdgpu.initrd.enable = true;
+    amdgpu.initrd.enable = true;
 
-    # graphics.extraPackages = with pkgs; [
-    #   vulkan-extension-layer
-    #   vulkan-loader
-    #   vulkan-tools
-    #   vulkan-validation-layers
-    # ];
+    graphics.extraPackages = with pkgs; [
+      vulkan-extension-layer
+      vulkan-loader
+      vulkan-tools
+      vulkan-validation-layers
+    ];
   };
 
   systemd = {

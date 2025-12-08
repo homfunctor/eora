@@ -24,4 +24,10 @@
       ];
     };
   };
+
+  powerManagement = {
+    enable = true;
+    cpuFreqGovernor = "performance";
+    scsiLinkPolicy = "med_power_with_dipm";
+  };
 }

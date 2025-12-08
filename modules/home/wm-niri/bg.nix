@@ -8,6 +8,7 @@ in {
   programs = {
     noctalia-shell.settings.wallpaper = {
       enabled = true;
+      transitionType = "none";
     };
   };
 

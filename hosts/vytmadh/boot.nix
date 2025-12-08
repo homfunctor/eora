@@ -15,7 +15,6 @@
     kernelModules = ["uinput"];
 
     kernelParams = [
-      "mitigations=off"
       "nowatchdog"
       "preempt=full"
     ];

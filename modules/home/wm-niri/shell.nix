@@ -1,7 +1,9 @@
 {
   config,
   inputs,
+  lib,
   osConfig,
+  pkgs,
   ...
 }: let
   inherit (config.home.opts) userName;
@@ -39,6 +41,11 @@ in {
           compactLockScreen = true;
           lockOnSuspend = true;
           showHibernateOnLockScreen = true;
+        };
+
+        audio = {
+          externalMixer = "${lib.getExe pkgs.pwvucontrol}";
+          preferredPlayer = config.home.opts.apps.audio.exe;
         };
 
         sessionMenu.showHeader = false;

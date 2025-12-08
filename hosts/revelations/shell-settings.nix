@@ -39,7 +39,8 @@
         }
         {
           id = "AudioVisualizer";
-          usePrimaryColor = true;
+          width = 300;
+          useErrorColor = true;
         }
       ];
 
