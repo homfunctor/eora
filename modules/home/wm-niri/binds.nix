@@ -75,7 +75,7 @@ in {
         "Mod+Shift+Up".action = move-column-to-workspace-down;
 
         # screenshots
-        "Print".action.screenshot-screen.show-pointer = false;
+        "Print".action.screenshot.show-pointer = false;
 
         "Mod+MouseMiddle".action.spawn = nExe "volume muteOutput";
         "Mod+MouseBack".action.spawn = nExe "volume decrease";
