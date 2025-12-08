@@ -5,11 +5,9 @@
 }: let
   inherit (config.home.opts.bg) files monitors;
 in {
-  programs = {
-    noctalia-shell.settings.wallpaper = {
-      enabled = true;
-      transitionType = "none";
-    };
+  programs.noctalia-shell.settings.wallpaper = {
+    enabled = true;
+    transitionType = "none";
   };
 
   home.file.".cache/noctalia/wallpapers.json" = {

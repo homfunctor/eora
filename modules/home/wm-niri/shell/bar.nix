@@ -14,9 +14,7 @@
       density = "comfortable";
       backgroundOpacity = 1;
       floating = false;
-
       outerCorners = false;
-
       position = "top";
       showCapsule = false;
     };

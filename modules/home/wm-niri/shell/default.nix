@@ -10,6 +10,11 @@
   inherit (config.home.opts) userName;
 in {
   imports = [
+    ./bar.nix
+    ./bg.nix
+    ./launcher.nix
+    ./nc.nix
+    ./stylix.nix
     inputs.noctalia.homeModules.default
   ];
 
@@ -38,10 +43,6 @@ in {
           shadowDirection = "bottom_left";
           shadowOffsetX = 2;
           shadowOffsetY = 3;
-
-          compactLockScreen = true;
-          lockOnSuspend = true;
-          showHibernateOnLockScreen = true;
         };
 
         audio = {
