@@ -43,7 +43,7 @@ in {
         # temp because dock stubbornly re-enables itself
         "Mod+Shift+O".action.spawn = nExe "dock toggle";
 
-        "Mod+Alt+L".action.spawn = nExe "${getExe pkgs.swaylock}";
+        "Mod+Alt+L".action.spawn = getExe pkgs.swaylock;
 
         # window management
         "Mod+Q".action = close-window;
