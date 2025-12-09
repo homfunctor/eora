@@ -47,7 +47,7 @@ in {
         # window management
         "Mod+Q".action = close-window;
         "Mod+F".action = maximize-column;
-        "Mod+Shift+F".action = expand-column-to-available-width;
+        "Mod+Shift+F".action = fullscreen-window;
         "Mod+S".action = switch-preset-column-width;
         "Mod+T".action = toggle-window-floating;
 
@@ -76,7 +76,10 @@ in {
         # screenshots
         "Print".action.screenshot.show-pointer = false;
 
-        "Mod+MouseMiddle".action.spawn = nExe "volume muteOutput";
+        "Mod+MouseMiddle" = {
+          allow-when-locked = true;
+          action.spawn = nExe "volume muteOutput";
+        };
         "Mod+MouseBack".action.spawn = nExe "volume decrease";
         "Mod+MouseForward".action.spawn = nExe "volume increase";
 
