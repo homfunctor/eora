@@ -1,4 +1,3 @@
-# todo: reorganize this mess
 {
   config,
   flake,

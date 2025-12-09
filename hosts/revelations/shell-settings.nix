@@ -16,7 +16,7 @@
         }
         {
           id = "Taskbar";
-          colorizeIcons = true;
+          colorizeIcons = false;
           hideMode = "visible";
           onlyActiveWorkspaces = true;
           onlySameOutput = true;
@@ -39,7 +39,7 @@
         }
         {
           id = "AudioVisualizer";
-          width = 300;
+          width = 200;
           useErrorColor = true;
         }
       ];

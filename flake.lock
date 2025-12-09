@@ -611,11 +611,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1765181093,
-        "narHash": "sha256-LhSh+iTNLYVVkm3eLbh+Xg6P9T5px/uQKg9rfWbocZ4=",
+        "lastModified": 1765240146,
+        "narHash": "sha256-/Zat2gwMK/0GvXB0YVz7k7O7YY8UaD6jaqaTvBR/3FI=",
         "owner": "kaylorben",
         "repo": "nixcord",
-        "rev": "dbb7d275bd4ea228fa110179a42023d31bbd8c36",
+        "rev": "7a567818b65748761d0b6260aac7b3079a568341",
         "type": "github"
       },
       "original": {
@@ -776,11 +776,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1765223989,
-        "narHash": "sha256-AUEgApG9sNvHlh86UBcso0rbPkfTNsiawAzlSVFNgnA=",
+        "lastModified": 1765245424,
+        "narHash": "sha256-hHsgGJK3lJ0ONka4dC0ya/N7t8+jEW2tPUx8mhXOTZg=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "91651a36f1d23b83805414c4b31ffb496df13865",
+        "rev": "c26f1459ca9c31fba8106bca1409cb9a0504b7e2",
         "type": "github"
       },
       "original": {
@@ -909,11 +909,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1765161692,
-        "narHash": "sha256-XdY9AFzmgRPYIhP4N+WiCHMNxPoifP5/Ld+orMYBD8c=",
+        "lastModified": 1765248027,
+        "narHash": "sha256-ngar+yP06x3+2k2Iey29uU0DWx5ur06h3iPBQXlU+yI=",
         "owner": "oxalica",
         "repo": "rust-overlay",
-        "rev": "7ed7e8c74be95906275805db68201e74e9904f07",
+        "rev": "7b50ad68415ae5be7ee4cc68fa570c420741b644",
         "type": "github"
       },
       "original": {
@@ -938,11 +938,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1765077342,
+        "lastModified": 1765249758,
         "narHash": "sha256-yGzZCV8myLd6QFmeGZbTyvEQvb7ZzoC+NYyT11G00+8=",
         "ref": "refs/heads/main",
-        "rev": "71fe9e858ced16424b607b1f0936574e57a7e14e",
-        "revCount": 144,
+        "rev": "a14d67e27cd170e983469caa458499e866375d78",
+        "revCount": 146,
         "shallow": false,
         "type": "git",
         "url": "ssh://git@github.com/homfunctor/sapadal"
@@ -960,11 +960,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1765079830,
-        "narHash": "sha256-i9GMbBLkeZ7MVvy7+aAuErXkBkdRylHofrAjtpUPKt8=",
+        "lastModified": 1765231718,
+        "narHash": "sha256-qdBzo6puTgG4G2RHG0PkADg22ZnQo1JmSVFRxrD4QM4=",
         "owner": "mic92",
         "repo": "sops-nix",
-        "rev": "aeb517262102f13683d7a191c7e496b34df8d24c",
+        "rev": "7fd1416aba1865eddcdec5bb11339b7222c2363e",
         "type": "github"
       },
       "original": {
