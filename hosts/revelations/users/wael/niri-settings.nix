@@ -1,8 +1,3 @@
-# todo
 {
-  programs.niri.settings = {
-    # todo: gaps
-    layout = {
-    };
-  };
+  programs.niri.settings.layout.gaps = 5;
 }

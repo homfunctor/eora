@@ -1,4 +1,3 @@
-# todo: can touchpad be setup to only scroll/switch workspaces?
 {
   programs.niri.settings = {
     input = {
@@ -9,14 +8,12 @@
         tap = false;
       };
 
-      trackpoint = {
-        accel-profile = "flat";
-      };
+      trackpoint.accel-profile = "flat";
     };
 
-    # todo: gaps
     layout = {
-      border.width = 5;
+      gaps = 0;
+      border.width = 4;
     };
   };
 }

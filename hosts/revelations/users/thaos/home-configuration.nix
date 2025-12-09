@@ -12,7 +12,7 @@
     # nicer tty
     ../wael/apps.nix
     ../wael/neovim.nix
-    ../wael/niri-settings.nix
+    ./niri-settings.nix
     type-niceTTY
 
     # work
