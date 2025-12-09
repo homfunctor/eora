@@ -38,9 +38,16 @@
           usePrimaryColor = true;
         }
         {
-          id = "AudioVisualizer";
-          width = 200;
+          id = "MediaMini";
+          hideWhenIdle = false;
+          scrollingMode = "hover";
+          showAlbumArt = false;
+          showArtistFirst = true;
+          showProgressRing = false;
+          showVisualizer = false;
           useErrorColor = true;
+          useFixedWidth = true;
+          width = 350;
         }
       ];
 
