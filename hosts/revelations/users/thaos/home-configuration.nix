@@ -10,9 +10,10 @@
     type-minTTY
 
     # nicer tty
-    ../wael/neovim.nix
-    type-niceTTY
     ../wael/apps.nix
+    ../wael/neovim.nix
+    ../wael/niri-settings.nix
+    type-niceTTY
 
     # work
     type-work

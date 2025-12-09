@@ -7,7 +7,6 @@
         {
           id = "ControlCenter";
           useDistroLogo = true;
-          usePrimaryColor = true;
         }
         {
           id = "Workspace";
@@ -25,22 +24,16 @@
 
       center = [
         {
-          id = "SystemMonitor";
-          showCpuTemp = true;
-          showCpuUsage = true;
-          showMemoryAsPercent = true;
-          showMemoryUsage = true;
-          usePrimaryColor = true;
-        }
-        {
           formatHorizontal = "ddd MMM d h:mm AP";
           id = "Clock";
           usePrimaryColor = true;
         }
         {
-          id = "AudioVisualizer";
-          width = 300;
-          useErrorColor = true;
+          id = "Battery";
+          displayMode = "alwaysShow";
+          showNoctaliaPerformance = true;
+          showPowerProfiles = true;
+          warningThreshold = 30;
         }
       ];
 
@@ -50,12 +43,9 @@
           usePrimaryColor = true;
           drawerEnabled = false;
         }
-        # {
-        #   id = "Battery";
-        # }
-        # {
-        #   id = "Brightness";
-        # }
+        {
+          id = "Brightness";
+        }
         {
           id = "Volume";
           displayMode = "alwaysShow";
@@ -108,6 +98,6 @@
     };
 
     # misc to adjoin to noctalia-shell.settings
-    misc.network.wifiEnabled = false;
+    misc.network.wifiEnabled = true;
   };
 }

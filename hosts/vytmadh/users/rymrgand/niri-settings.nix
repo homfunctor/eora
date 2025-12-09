@@ -14,6 +14,7 @@
       };
     };
 
+    # todo: gaps
     layout = {
       border.width = 5;
     };

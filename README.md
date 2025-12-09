@@ -1,11 +1,4 @@
-old screenshot
-<img width="1680" height="1044" alt="screenshot" src="https://github.com/user-attachments/assets/24a2fde4-b5b7-4630-8f4e-a6a01d140e00" />
-
-stylix theme
-<img width="800" height="100" alt="stylix-theme-sdg" src="https://github.com/user-attachments/assets/b022f6e1-912b-4f74-845b-326d57373451" />
-
-current minimal hyprpanel settings
-<img width="1909" height="47" alt="minimalPanel" src="https://github.com/user-attachments/assets/34c68640-79be-4890-986d-d2c505156ddb" />
+ 
 
 Uses Blueprint for a simple structure with minimal boilplate. Basic idea of my flake is: modules do the work of setting up the system (/nixos) and home (/home) with data provided by /hosts/hostName and /host/hostName/users/userName. I try to strictly keep all "moving parts" in /modules. I make no claim of originality in this approach.
 

@@ -15,6 +15,7 @@
     type-niceTTY
 
     # work
+    ./niri-settings.nix
     type-work
     wm-niri
 

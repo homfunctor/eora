@@ -43,7 +43,7 @@ in {
         # temp because dock stubbornly re-enables itself
         "Mod+Shift+O".action.spawn = nExe "dock toggle";
 
-        "Mod+Alt+L".action.spawn = nExe "lockScreen lock";
+        "Mod+Alt+L".action.spawn = getExe pkgs.swaylock;
 
         # window management
         "Mod+Q".action = close-window;
@@ -75,7 +75,7 @@ in {
         "Mod+Shift+Up".action = move-column-to-workspace-down;
 
         # screenshots
-        "Print".action.screenshot-screen.show-pointer = false;
+        "Print".action.screenshot.show-pointer = false;
 
         "Mod+MouseMiddle".action.spawn = nExe "volume muteOutput";
         "Mod+MouseBack".action.spawn = nExe "volume decrease";
@@ -95,15 +95,15 @@ in {
         "Mod+Ctrl+3".action.move-window-to-workspace = [{focus = false;} "3"];
         "Mod+Ctrl+Shift+1".action.move-window-to-workspace = [
           {focus = false;}
-          "1"
+          "4"
         ];
         "Mod+Ctrl+Shift+2".action.move-window-to-workspace = [
           {focus = false;}
-          "2"
+          "5"
         ];
         "Mod+Ctrl+Shift+3".action.move-window-to-workspace = [
           {focus = false;}
-          "3"
+          "6"
         ];
       };
 

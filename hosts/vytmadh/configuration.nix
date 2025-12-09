@@ -12,6 +12,7 @@
 
     # work
     ./hardware.nix
+    ./shell-settings.nix
     hw-tablet
     shell-fish
     type-work

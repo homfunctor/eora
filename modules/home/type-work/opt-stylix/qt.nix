@@ -33,11 +33,19 @@
 }: let
   inherit (builtins) unsafeDiscardStringContext;
   inherit (config.lib.stylix) colors;
+  inherit (config.stylix) fonts;
+
+  fixedFonts = "${fonts.monospace.name}," + toString fonts.sizes.terminal;
+  generalFonts = "${fonts.sansSerif.name}," + toString fonts.sizes.applications;
 
   qtctConfig = ''
     [Appearance]
-    style=kvantum
+    style=kvantum-dark
     icon_theme=${osConfig.nixos.opts.iconTheme.name}
+    custom_palette=true
+    [Fonts]
+    fixed="${fixedFonts}"
+    general="${generalFonts}"
   '';
 
   # i just don't want github to say my flake is mostly Mustache
