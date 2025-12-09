@@ -32,6 +32,7 @@ in {
       keyboard.numlock = true;
       mouse.accel-profile = "flat";
       warp-mouse-to-focus.enable = true;
+      workspace-auto-back-and-forth = true;
     };
 
     layout = {

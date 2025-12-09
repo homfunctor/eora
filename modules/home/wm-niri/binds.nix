@@ -51,10 +51,10 @@ in {
         "Mod+S".action = switch-preset-column-width;
         "Mod+T".action = toggle-window-floating;
 
-        # window height adjustment within column (vim-like)
+        # window adjustment within column (vim-like)
         # todo
 
-        # focus window movement
+        # window focus and movement
         "Mod+H".action = focus-column-left;
         "Mod+L".action = focus-column-right;
         "Mod+J".action = focus-monitor-down;
@@ -91,7 +91,7 @@ in {
         "Mod+Shift+2".action.focus-workspace = "5";
         "Mod+Shift+3".action.focus-workspace = "6";
 
-        # moving windows
+        # moving windows to specific workspaces
         "Mod+Ctrl+1".action.move-window-to-workspace = [{focus = false;} "1"];
         "Mod+Ctrl+2".action.move-window-to-workspace = [{focus = false;} "2"];
         "Mod+Ctrl+3".action.move-window-to-workspace = [{focus = false;} "3"];

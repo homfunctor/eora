@@ -1,3 +1,8 @@
+# useful defaults to keep in mind
+#   touchpad:
+#   two fingers scroll up/down
+#   three fingers move left/right between columns
+#     or up/down between workspaces
 {
   programs.niri.settings = {
     input = {
