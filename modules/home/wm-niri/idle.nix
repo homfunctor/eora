@@ -15,6 +15,6 @@
       }
     ];
 
-    events."before-sleep".command = lockExe;
+    events.before-sleep = lockExe;
   };
 }
