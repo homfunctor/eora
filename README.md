@@ -36,4 +36,6 @@ type-personal: gaming, other goodies. only for main user of personal pc.
 
 a few settings are handled in individual modules in modules/nixos or modules/home
 
+Also, I really like the ability to directly reference exact paths through lib.getExe and ${} references. So I do that whenever I can. It's what led me to use the centralized opts.apps stuff. This isn't really necessary since NixOS and Home Manager automagically handle things, as far as I know. But I just like the certainty implied by a config file showing /nix/store/etc-kitty-etc/bin/kitty to just relying on "kitty". It's comfy.
+
 warning: i am a mathematician. therefore i cannot program. plagiarize my plagiarism with caution.
