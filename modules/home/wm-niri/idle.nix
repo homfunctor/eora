@@ -15,11 +15,6 @@
       }
     ];
 
-    events = [
-      {
-        event = "before-sleep";
-        command = lockExe;
-      }
-    ];
+    events."before-sleep".command = lockExe;
   };
 }
