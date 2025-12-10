@@ -12,7 +12,6 @@ in {
     DISABLE_QT_COMPAT = "0";
     EDITOR = apps.text.exe;
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
-    GDK_BACKEND = "wayland,x11";
     GDK_SCALE = "1";
     GNOME_KEYRING_CONTROL = "$XDG_RUNTIME_DIR/keyring";
     MOZ_ENABLE_WAYLAND = "1";

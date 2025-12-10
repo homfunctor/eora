@@ -16,4 +16,11 @@
     wineWowPackages.waylandFull
     winetricks
   ];
+
+  programs.niri.settings.environment = {
+    DXVK_ENABLE_NVAPI = "0";
+    WINEDLLOVERRIDES = "winemenubuilder.exe=d";
+    WINEWAYLAND_DISABLE_XWAYLAND = "1";
+    WINE_VK_VULKAN_ONLY = "1";
+  };
 }

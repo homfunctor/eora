@@ -10,6 +10,7 @@
     ./idle.nix
     ./lock.nix
     ./portal.nix
+    ./rules.nix
     ./settings.nix
     ./shell
     niri-flake.homeModules.niri
