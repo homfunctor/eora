@@ -1,6 +1,7 @@
 # todo: button that launches launcher, button that opens overview
 {
   config,
+  flake,
   inputs,
   lib,
   osConfig,
@@ -10,7 +11,7 @@
   inherit (config.home.opts) userName;
   nExe = cmd:
     [(lib.getExe config.programs.noctalia-shell.package) "ipc" "call"]
-    ++ (lib.splitString "" cmd);
+    ++ (flake.lib.splitArg cmd);
 in {
   imports = [
     ./bar.nix
