@@ -13,7 +13,6 @@ in {
     EDITOR = apps.term-text.exe;
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
     GDK_SCALE = "1";
-    GNOME_KEYRING_CONTROL = "$XDG_RUNTIME_DIR/keyring";
     MOZ_ENABLE_WAYLAND = "1";
     NIXOS_OZONE_WL = "1";
     QT_AUTO_SCREEN_SCALE_FACTOR = "1";
