@@ -1,4 +1,8 @@
-{flake, ...}: {
+{
+  flake,
+  pkgs,
+  ...
+}: {
   imports = with flake.modules.nixos; [
     # minimal tty
     ./boot.nix
@@ -44,6 +48,8 @@
     lanzaboote.enable = true;
 
     mainMonitor = builtins.elemAt bg.monitors 0;
+
+    niri.wm.pkg = pkgs.niri-unstable;
 
     opacity.popups = 1.0;
 
