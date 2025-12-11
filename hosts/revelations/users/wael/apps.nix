@@ -1,6 +1,6 @@
 # default application settings
 # designed for use with xdg mimeapps setup (set name, desktop),
-# hyprpanel (icon, tooltip), and general usage (args, exe, pkg)
+# and general usage (args, exe, pkg)
 # args: arguments commonly used with app
 # desktop: desktop file name (without extension)
 # exe: executable found at pkg path
@@ -105,15 +105,19 @@ in {
       tooltip = "Kitty";
     };
 
-    # todo: fix this
-    text = {
-      desktop = "nvim";
-      exe = getExe text.pkg;
+    term-text = {
+      exe = getExe term-text.pkg;
       pkg = config.programs.nixvim.package;
       tooltip = "Neovim";
     };
 
-    # todo: fix
+    text = {
+      desktop = "neovide";
+      exe = getExe text.pkg;
+      pkg = config.programs.neovide.package;
+      tooltip = "Neovide";
+    };
+
     video = {
       desktop = "vlc";
       exe = getExe video.pkg;

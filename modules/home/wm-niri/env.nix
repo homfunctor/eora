@@ -10,7 +10,7 @@ in {
     CLUTTER_BACKEND = "wayland";
     DISABLE_QT5_COMPAT = "0";
     DISABLE_QT_COMPAT = "0";
-    EDITOR = apps.text.exe;
+    EDITOR = apps.term-text.exe;
     ELECTRON_OZONE_PLATFORM_HINT = "auto";
     GDK_SCALE = "1";
     GNOME_KEYRING_CONTROL = "$XDG_RUNTIME_DIR/keyring";

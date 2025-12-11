@@ -18,5 +18,8 @@
     deadnix
   ];
 
-  programs.nixvim.enable = true;
+  programs = {
+    neovide.enable = true;
+    nixvim.enable = true;
+  };
 }
