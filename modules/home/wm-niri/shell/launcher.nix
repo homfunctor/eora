@@ -9,8 +9,12 @@
   ];
 
   programs.noctalia-shell.settings.appLauncher = {
-    useApp2Unit = true;
+    enableClipPreview = false;
+    enableClipboardHistory = false;
+    showCategories = false;
+    sortByMostUsed = false;
     terminalCommand = config.home.opts.apps.terminal.exe + " -e";
+    useApp2Unit = true;
     viewMode = "grid";
   };
 }
