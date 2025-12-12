@@ -18,7 +18,12 @@ in {
         fish_lsp.enable = true;
         jsonls.enable = true;
         lemminx.enable = true;
-        lua_ls.enable = true;
+
+        lua_ls = {
+          enable = true;
+          settings.telemetry.enable = false;
+        };
+
         marksman.enable = true;
         nixd = {
           enable = true;
