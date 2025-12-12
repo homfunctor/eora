@@ -11,7 +11,7 @@
   programs.noctalia-shell.settings.appLauncher = {
     enableClipPreview = false;
     enableClipboardHistory = false;
-    showCategories = false;
+    showCategories = true;
     sortByMostUsed = false;
     terminalCommand = config.home.opts.apps.terminal.exe + " -e";
     useApp2Unit = true;
