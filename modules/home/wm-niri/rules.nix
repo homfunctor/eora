@@ -31,8 +31,6 @@
       }
       {
         matches = [{title = "^Picture-in-Picture$";}];
-        default-column-width.fixed = 500;
-        default-window-height.fixed = 250;
         open-floating = true;
       }
       {
