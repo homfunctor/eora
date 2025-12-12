@@ -16,9 +16,9 @@ in {
   imports = [
     ./bar.nix
     ./bg.nix
+    ./colors.nix
     ./launcher.nix
     ./nc.nix
-    ./stylix.nix
     inputs.noctalia.homeModules.default
   ];
   programs = {

@@ -10,7 +10,7 @@ in {
     transitionType = "none";
   };
 
-  home.file.".cache/noctalia/wallpapers.json" = {
+  home.file.".cache/noctalia/wallpapers.json" = lib.mkForce {
     text = builtins.toJSON {
       wallpapers = lib.listToAttrs (
         lib.zipListsWith (
