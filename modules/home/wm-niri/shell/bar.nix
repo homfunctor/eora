@@ -1,3 +1,4 @@
+# todo: use stylix module
 {
   inputs,
   osConfig,
