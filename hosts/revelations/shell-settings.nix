@@ -45,12 +45,6 @@
           usePrimaryColor = true;
           drawerEnabled = false;
         }
-        # {
-        #   id = "Battery";
-        # }
-        # {
-        #   id = "Brightness";
-        # }
         {
           id = "Volume";
           displayMode = "alwaysShow";

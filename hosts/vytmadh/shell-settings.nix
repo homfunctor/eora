@@ -7,6 +7,7 @@
         {
           id = "ControlCenter";
           useDistroLogo = true;
+          usePrimaryColor = true;
         }
         {
           id = "Workspace";
