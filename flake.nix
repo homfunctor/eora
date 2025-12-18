@@ -57,7 +57,6 @@
     # };
 
     # nix
-    nix-flatpak.url = "github:gmodena/nix-flatpak/";
 
     nix-gaming = {
       inputs.nixpkgs.follows = "nixpkgs";

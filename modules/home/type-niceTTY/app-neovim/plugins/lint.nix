@@ -30,7 +30,7 @@ in {
           "nix"
           "statix"
         ];
-        python = ["basedpyright"];
+        python = ["ruff"];
         rust = ["clippy"];
         sh = ["shellcheck"];
         yaml = ["yamllint"];

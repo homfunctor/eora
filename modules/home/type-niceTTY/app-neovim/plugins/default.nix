@@ -26,7 +26,4 @@
     ./which-key.nix
     ./yazi.nix
   ];
-
-  # todo: sops and a few other things need this?
-  programs.nixvim.coloschemes.base16.enable = true;
 }

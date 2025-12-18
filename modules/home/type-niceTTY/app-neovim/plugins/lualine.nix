@@ -9,6 +9,7 @@
   cfg = config.home.opts.nvim.plugins.lualine;
 in {
   config.programs.nixvim = mkIf cfg.enable {
+    plugins.colorscheme.base16.enable = true;
     extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
         name = "lualine-so-fancy";
@@ -23,6 +24,7 @@ in {
 
     plugins.lualine = mkIf cfg.enable {
       enable = true;
+      theme = "base16";
 
       settings = {
         options = {
