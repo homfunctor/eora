@@ -51,10 +51,8 @@ in {
         "Mod+S".action = switch-preset-column-width;
         "Mod+T".action = toggle-window-floating;
 
-        "Mod+D".action = consume-window-right;
-        "Mod+Shift+D".action = expel-window-left;
-        "Mod+C".action = consume-window-left;
-        "Mod+Shift+C".action = consume-window-right;
+        "Mod+C".action = consume-or-expel-window-right;
+        "Mod+D".action = consume-or-expel-window-left;
 
         # window focus and movement
         "Mod+H".action = focus-column-left;
