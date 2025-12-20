@@ -51,8 +51,10 @@ in {
         "Mod+S".action = switch-preset-column-width;
         "Mod+T".action = toggle-window-floating;
 
-        # window adjustment within column (vim-like)
-        # todo
+        "Mod+D".action = consume-window-right;
+        "Mod+Shift+D".action = expel-window-left;
+        "Mod+C".action = consume-window-left;
+        "Mod+Shift+C".action = consume-window-right;
 
         # window focus and movement
         "Mod+H".action = focus-column-left;
