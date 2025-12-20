@@ -472,11 +472,11 @@
         "xwayland-satellite-unstable": "xwayland-satellite-unstable"
       },
       "locked": {
-        "lastModified": 1766191534,
-        "narHash": "sha256-qCW0niZEYnkJunetteb/OW2DQj50cX0jWGxe/9RUhQY=",
+        "lastModified": 1766213159,
+        "narHash": "sha256-2zlWG6gRLcehMpeqICbXCpOAUfoVOaUiqv0ErQ/1M3Q=",
         "owner": "sodiboo",
         "repo": "niri-flake",
-        "rev": "3630951ee49443f0301ddc432ddee1bfe62b9740",
+        "rev": "798be9f8add0e6813f6298a2654b533ee2fae603",
         "type": "github"
       },
       "original": {
@@ -505,11 +505,11 @@
     "niri-unstable": {
       "flake": false,
       "locked": {
-        "lastModified": 1766085543,
-        "narHash": "sha256-96X+37m2HH8IG3BzXEN3d4eHeUbiu9g1Q+KJQRX/Jpw=",
+        "lastModified": 1766208782,
+        "narHash": "sha256-maOxzH3r+ZqZfNLi8JV+w82XxkdQMUrmp5nn7EZlmWE=",
         "owner": "YaLTeR",
         "repo": "niri",
-        "rev": "c4462d0c7fddfc11c9e98d43e3ef68a5b3c844ca",
+        "rev": "7d60231e35800bc9582f3147c547f8a227bdb9cb",
         "type": "github"
       },
       "original": {
@@ -611,11 +611,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1766190493,
-        "narHash": "sha256-UJEA2RLhXzcKFiTPDRJttLL522HfS0V27v16q4Bk2FI=",
+        "lastModified": 1766217781,
+        "narHash": "sha256-yPEVKsUm7DiSqkPmJXexxqz8g5BxedFwUPivqJtiG0I=",
         "owner": "kaylorben",
         "repo": "nixcord",
-        "rev": "d72b2c0fc75af068da3f3ac2d14011c4f7f0bd43",
+        "rev": "fa03662beccc31df18d58d41743721bd09132100",
         "type": "github"
       },
       "original": {
@@ -925,11 +925,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1766204829,
-        "narHash": "sha256-L1obrA56V9uSHbh86fyvZPQSqryyXPfek3ZUZ22uVXA=",
+        "lastModified": 1766217371,
+        "narHash": "sha256-ikzpp2ZGQYEZg+dOnrhQJNypNC0oRtohcAsnaI4W1A8=",
         "ref": "refs/heads/main",
-        "rev": "69c7e7ffeaf731afbbca41e0b127f7d247626749",
-        "revCount": 271,
+        "rev": "32cf64de07654cc54b3743ecbbce691b55c31309",
+        "revCount": 272,
         "shallow": false,
         "type": "git",
         "url": "ssh://git@github.com/homfunctor/sapadal"
