@@ -51,10 +51,10 @@ in {
     };
 
     image = {
-      desktop = "org.gnome.Loupe";
+      desktop = "org.gnome.eog";
       exe = getExe image.pkg;
-      pkg = pkgs.loupe;
-      tooltip = "Loupe";
+      pkg = pkgs.eog;
+      tooltip = "Images";
     };
 
     officeCalc = {

@@ -16,19 +16,16 @@ in {
       treesitter = {
         enable = true;
 
-        grammarPackages = pkgs.vimPlugins.nvim-treesitter.allGrammars;
         nixvimInjections = true;
 
         settings = {
+          autopairs.enable = true;
           highlight = {
             enable = true;
             additional_vim_regex_highlighting = true;
             disable = ["latex"];
           };
-
-          autoLoad = true;
           auto_install = true;
-          folding = true;
           incremental_selection.enable = true;
           indent.enable = true;
         };

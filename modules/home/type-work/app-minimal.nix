@@ -5,11 +5,11 @@
 }: {
   home.packages = with pkgs; [
     dconf-editor
+    eog
     file-roller
     gnome-calculator
     gnome-calendar
     gnome-disk-utility
-    loupe
     mission-center
     nemo-with-extensions # just feels so good
     showmethekey
