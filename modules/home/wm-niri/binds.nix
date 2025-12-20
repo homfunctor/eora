@@ -57,8 +57,8 @@ in {
         # window focus and movement
         "Mod+H".action = focus-column-left;
         "Mod+L".action = focus-column-right;
-        "Mod+J".action = focus-monitor-down;
-        "Mod+K".action = focus-monitor-up;
+        "Mod+J".action = focus-window-down;
+        "Mod+K".action = focus-window-up;
         "Mod+Shift+H".action = move-column-left;
         "Mod+Shift+L".action = move-column-right;
         "Mod+Shift+K".action = move-column-to-workspace-up;
@@ -66,8 +66,8 @@ in {
 
         "Mod+Left".action = focus-column-left;
         "Mod+Right".action = focus-column-right;
-        "Mod+Down".action = focus-monitor-down;
-        "Mod+Up".action = focus-monitor-up;
+        "Mod+Down".action = focus-window-down;
+        "Mod+Up".action = focus-window-up;
         "Mod+Shift+Left".action = move-column-left;
         "Mod+Shift+Right".action = move-column-right;
         "Mod+Shift+Down".action = move-column-to-workspace-up;
