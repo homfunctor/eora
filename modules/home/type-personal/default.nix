@@ -6,7 +6,7 @@
     ./app-gaming.nix
     ./app-ironyModManager.nix
     ./app-media.nix
-    ./app-nixcord.nix
+    # ./app-nixcord.nix
     ./app-zipunicode.nix
   ];
 }
