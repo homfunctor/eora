@@ -81,7 +81,7 @@
 
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/nixvim?ref=9cb77f6ce4fc8d7c56afcf0fa8b39fb929ea5b01";
+      url = "github:nix-community/nixvim?ref=081bcc930f9cfe61dfefb3399af0602fc3fea586";
     };
 
     sops-nix = {
