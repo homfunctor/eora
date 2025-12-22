@@ -1,8 +1,9 @@
-# todo: picard
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    picard
     soundconverter
     strawberry
+    uget
   ];
 
   programs.yt-dlp = {
