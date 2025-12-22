@@ -63,7 +63,7 @@ in {
 
     prefer-no-csd = true;
 
-    screenshot-path = "${screenshotDir}/screenshot-%Y-%m-%d-%H:%M.png";
+    screenshot-path = "${screenshotDir}/screenshot-%Y-%m-%d-%H:%M:%S.png";
 
     workspaces = let
       num = range 1 ((length bg.monitors) * bg.nWS);
