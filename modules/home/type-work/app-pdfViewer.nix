@@ -8,4 +8,9 @@
     };
     bindings = {};
   };
+
+  xdg.mimeApps = {
+    associations.added."application/epub+zip" = "sioyek.desktop";
+    defaultApplications."application/x-mobi8-ebook" = "sioyek.desktop";
+  };
 }
