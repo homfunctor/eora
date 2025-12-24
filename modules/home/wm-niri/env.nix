@@ -23,6 +23,7 @@ in {
     QT_WAYLAND_DISABLE_WINDOWDECORATION = "1";
     SDL_VIDEODRIVER = "wayland";
     SHELL = apps.shell.exe;
+    SOPS_EDITOR = apps.term-text.exe;
     TERMINAL = apps.terminal.exe;
     VISUAL = apps.text.exe;
     WLR_BACKEND = osConfig.nixos.opts.wlrBR;
