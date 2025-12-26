@@ -1,4 +1,3 @@
-# todo: use stylix module
 {
   inputs,
   osConfig,
@@ -12,12 +11,19 @@
     bar = {
       inherit (osConfig.nixos.opts.niri.bar) widgets;
 
-      density = "comfortable";
       backgroundOpacity = 1;
+      capsuleOpacity = 1;
+      compactMode = false;
+      density = "comfortable";
+      exclusive = true;
       floating = false;
+      marginHorizontal = 0.50;
+      marginVertical = 0.5;
       outerCorners = false;
       position = "top";
       showCapsule = false;
+      showOutline = true;
+      transparent = false;
     };
 
     calendar.cards = [

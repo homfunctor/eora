@@ -11,8 +11,11 @@
         }
         {
           id = "Workspace";
+          colorizeIcons = true;
+          enableScrollWheel = true;
           hideUnoccupied = false;
           labelMode = "none";
+          showApplications = true;
         }
         {
           id = "Taskbar";

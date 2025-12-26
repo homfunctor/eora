@@ -35,9 +35,9 @@ in {
       settings =
         {
           general = {
-            dock.enabled = false;
             allowPanelsOnScreenWithoutBar = true;
             avatarImage = "${inputs.sapadal}/assets/${userName}.png";
+            dock.enabled = lib.mkForce false;
             forceBlackScreenCorners = false;
             showScreenCorners = false;
 
@@ -67,10 +67,10 @@ in {
             fontDefaultScale = 1.25;
             fontFixed = config.stylix.fonts.monospace.name;
             fontFixedScale = 1.25;
-            tooltipsEnabled = true;
             panelBackgroundOpacity = 1;
             panelsAttachedToBar = true;
             settingsPanelAttachToBar = true;
+            tooltipsEnabled = true;
           };
         }
         // osConfig.nixos.opts.niri.misc;

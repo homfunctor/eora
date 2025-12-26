@@ -11,21 +11,18 @@
         }
         {
           id = "Workspace";
+          colorizeIcons = true;
+          enableScrollWheel = true;
           hideUnoccupied = false;
           labelMode = "none";
-        }
-        {
-          id = "Taskbar";
-          colorizeIcons = false;
-          hideMode = "visible";
-          onlyActiveWorkspaces = true;
-          onlySameOutput = true;
+          showApplications = true;
         }
       ];
 
       center = [
         {
           id = "SystemMonitor";
+          compactMode = false;
           showCpuTemp = true;
           showCpuUsage = true;
           showMemoryAsPercent = true;

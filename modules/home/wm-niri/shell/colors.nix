@@ -1,4 +1,3 @@
-# todo: use stylix module
 {
   config,
   lib,
