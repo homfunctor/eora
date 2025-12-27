@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
+    gdown
     picard
     soundconverter
     strawberry
