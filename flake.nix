@@ -26,14 +26,16 @@
     };
 
     lix = {
-      url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
       flake = false;
+      url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
     };
 
     lix-module = {
+      inputs = {
+        lix.follows = "lix";
+        nixpkgs.follows = "nixpkgs";
+      };
       url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.lix.follows = "lix";
     };
 
     rust-overlay = {
@@ -47,25 +49,10 @@
       url = "github:sodiboo/niri-flake";
     };
 
-    # niri-scratchpad-flake = {
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   url = "github:gvolpe/niri-scratchpad";
-    # };
-
-    # nfsm-flake = {
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   url = "github:gvolpe/nfsm";
-    # };
-
     noctalia = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:noctalia-dev/noctalia-shell";
     };
-
-    # nsticky-flake = {
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    #   url = "github:lonerorz/nsticky";
-    # };
 
     # nix
 
