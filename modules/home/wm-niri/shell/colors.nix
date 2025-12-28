@@ -7,8 +7,8 @@
   programs.noctalia-shell.colors = with config.lib.stylix.colors.withHashtag; {
     mError = base08;
     mHover = base0D;
-    mOnHover = base00;
     mOnError = base00;
+    mOnHover = base00;
     mOnPrimary = base00;
     mOnSecondary = base00;
     mOnSurface = base06;

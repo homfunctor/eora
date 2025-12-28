@@ -30,8 +30,8 @@
           usePrimaryColor = true;
         }
         {
-          formatHorizontal = "ddd MMM d h:mm AP";
           id = "Clock";
+          formatHorizontal = "ddd MMM d h:mm AP";
           usePrimaryColor = true;
         }
       ];
@@ -52,8 +52,8 @@
         }
         {
           id = "NotificationHistory";
+          hideWhenZero = false;
           showUnreadBadge = true;
-          hideWhenZero = true;
         }
         {
           id = "SessionMenu";
