@@ -1,3 +1,7 @@
+Current Noctalia Shell bar setup:
+<img width="1675" height="42" alt="screenshot-2025-12-27-22:02:19" src="https://github.com/user-attachments/assets/081f470e-bb69-497b-8587-32b534794184" />
+
+
  Screenshot: December 8, 2025
  
  <img width="1914" height="1070" alt="screenshot" src="https://github.com/user-attachments/assets/d27549fa-b70f-4db3-b6bd-957b9eaa1a21" />
