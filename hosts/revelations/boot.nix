@@ -21,6 +21,7 @@
       "amd_iommu=on"
       "amd_pstate=active"
       "amdgpu.cik_support=1"
+      "amdgpu.dcdebugmask=0x10"
       "amdgpu.dcfeaturemask=0x8"
       "amdgpu.ppfeaturemask=0xffffffff"
       "iommu=force"

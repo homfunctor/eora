@@ -12,11 +12,11 @@
     type-minTTY
 
     # nicer tty
-    ./fish.nix
     ./stylix.nix
     type-niceTTY
 
     # work
+    ./fish.nix
     ./hardware.nix
     ./shell-settings.nix
     hw-tablet
