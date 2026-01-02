@@ -11,6 +11,7 @@
     ludusavi
     lutris
     protonplus
+    steamcmd
     umu-launcher
     wineWowPackages.fonts
     wineWowPackages.waylandFull

@@ -34,7 +34,7 @@
       geogebra.enable = true;
       latex.enable = true;
       octave.enable = true;
-      rstudio.enable = true;
+      rstudio.enable = false;
     };
 
     bg = {
