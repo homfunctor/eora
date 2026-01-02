@@ -1,10 +1,10 @@
 {pkgs, ...}: {
   home.packages = with pkgs; [
-    gdown
+    # gdown
     picard
     soundconverter
     strawberry
-    uget
+    # uget
   ];
 
   programs.yt-dlp = {
