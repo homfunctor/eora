@@ -3,6 +3,11 @@
     enable = true;
     inherit (config.home.opts.apps.shell) shellIntegration;
 
+    keybindings = {
+      "ctrl+d" = "scroll_page_down";
+      "ctrl+u" = "scroll_page_up";
+    };
+
     settings = {
       confirm_os_window_close = "0";
       copy_on_select = "clipboard";
