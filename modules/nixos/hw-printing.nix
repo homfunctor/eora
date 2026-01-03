@@ -5,6 +5,7 @@
 
   services.printing = {
     enable = true;
-    drivers = [pkgs.cnijfilter2];
+    # temp issues
+    # drivers = [pkgs.cnijfilter2];
   };
 }
