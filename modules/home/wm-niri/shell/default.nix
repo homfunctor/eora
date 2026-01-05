@@ -21,6 +21,10 @@ in {
     ./nc.nix
     inputs.noctalia.homeModules.default
   ];
+
+  home.packages = with pkgs; [
+    bluez
+  ];
   programs = {
     niri.settings.spawn-at-startup = [
       {
