@@ -42,7 +42,7 @@ in {
       };
 
       treesitter-textobjects = {
-        enable = false;
+        enable = true;
         settings.select = {
           enable = true;
           lookahead = true;
