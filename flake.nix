@@ -75,13 +75,9 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs.url = "github:nixos/nixpkgs?ref=3c5c62e0c78253af2bf82a07e412d4455705541b";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nixvim = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/nixvim";
-    };
+    nixvim.url = "github:nix-community/nixvim";
 
     sops-nix = {
       inputs.nixpkgs.follows = "nixpkgs";
