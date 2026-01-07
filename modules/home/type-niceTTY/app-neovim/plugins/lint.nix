@@ -33,6 +33,7 @@ in {
         python = ["ruff"];
         rust = ["clippy"];
         sh = ["shellcheck"];
+        sql = ["sqruff"];
         yaml = ["yamllint"];
       };
     };

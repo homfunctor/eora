@@ -11,9 +11,11 @@ in {
       black
       jq
       prettierd
-      python313Packages.sqlparse
       shfmt
       sqls
+      sql-formatter
+      sqruff
+
       stylua
       xmlformat
       yamlfmt
@@ -28,22 +30,6 @@ in {
         format_on_save = {
           lspFallback = true;
           timeoutMs = 500;
-        };
-
-        formatters = {
-          sqlformat = {
-            args = [
-              "--reindent"
-              "--use_space_around_operators"
-              "--wrap_after"
-              "80"
-              "--indent_width"
-              "2"
-              "-"
-            ];
-            command = "sqlformat";
-            stdin = true;
-          };
         };
 
         formatters_by_ft = {
@@ -61,7 +47,7 @@ in {
           python = ["black"];
           rust = ["rustfmt"];
           sh = ["shfmt"];
-          sql = ["sqlformat"];
+          sql = ["sql_formatter"];
           xml = ["xmlformat"];
           yaml = ["yamlfmt"];
         };
