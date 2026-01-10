@@ -9,6 +9,7 @@ in {
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       black
+      clang-tools
       jq
       prettierd
       shfmt
@@ -39,6 +40,8 @@ in {
             "trim_whitespace"
           ];
           bash = ["shfmt"];
+          c = ["clang_format"];
+          cpp = ["clang_format"];
           fish = ["fish_indent"];
           json = ["jq"];
           lua = ["stylua"];

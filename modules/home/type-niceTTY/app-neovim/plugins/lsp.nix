@@ -15,6 +15,7 @@ in {
       servers = {
         basedpyright.enable = true;
         bashls.enable = true;
+        clangd.enable = true;
         fish_lsp.enable = true;
         jsonls.enable = true;
         lemminx.enable = true;

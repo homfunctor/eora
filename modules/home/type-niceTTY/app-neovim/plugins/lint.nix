@@ -21,6 +21,8 @@ in {
 
       lintersByFt = {
         bash = ["shellcheck"];
+        c = ["clangtidy"];
+        cpp = ["clangtidy"];
         fish = ["fish"];
         json = ["jsonfmt"];
         lua = ["luacheck"];
