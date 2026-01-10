@@ -77,10 +77,7 @@
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    nixvim = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/nixvim?ref=2a3eece6afe262d690b608dc43547ec3a33abee9";
-    };
+    nixvim.url = "github:nix-community/nixvim";
 
     sops-nix = {
       inputs.nixpkgs.follows = "nixpkgs";
