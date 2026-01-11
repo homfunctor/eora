@@ -20,7 +20,7 @@
       url = "github:nix-community/home-manager";
     };
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs";
 
     # niri
     niri-flake = {
@@ -71,10 +71,7 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    nixvim = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:nix-community/nixvim?ref=081bcc930f9cfe61dfefb3399af0602fc3fea586";
-    };
+    nixvim.url = "github:nix-community/nixvim";
 
     rust-overlay = {
       inputs.nixpkgs.follows = "nixpkgs";
