@@ -20,6 +20,20 @@
       url = "github:nix-community/home-manager";
     };
 
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    # niri
+    niri-flake = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:sodiboo/niri-flake";
+    };
+
+    noctalia = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:noctalia-dev/noctalia-shell";
+    };
+
+    # nix things
     lanzaboote = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/lanzaboote";
@@ -37,24 +51,6 @@
       };
       url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
     };
-
-    rust-overlay = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:oxalica/rust-overlay";
-    };
-
-    # niri
-    niri-flake = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:sodiboo/niri-flake";
-    };
-
-    noctalia = {
-      inputs.nixpkgs.follows = "nixpkgs";
-      url = "github:noctalia-dev/noctalia-shell";
-    };
-
-    # nix
 
     nix-gaming = {
       inputs.nixpkgs.follows = "nixpkgs";
@@ -75,9 +71,15 @@
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixvim = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:nix-community/nixvim?ref=081bcc930f9cfe61dfefb3399af0602fc3fea586";
+    };
 
-    nixvim.url = "github:nix-community/nixvim";
+    rust-overlay = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:oxalica/rust-overlay";
+    };
 
     sops-nix = {
       inputs.nixpkgs.follows = "nixpkgs";
