@@ -3,7 +3,7 @@
 # work environment layered on top of minimal/nice tty
 {
   imports = [
-    ./app-firefox.nix
+    #    ./app-firefox.nix
     ./app-glance.nix
     ./app-graphics.nix
     # ./app-joplin.nix

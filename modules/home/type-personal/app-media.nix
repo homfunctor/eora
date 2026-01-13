@@ -8,7 +8,7 @@
   ];
 
   programs.yt-dlp = {
-    enable = true;
+    #    enable = true;
     settings = {};
     extraConfig = '''';
   };
