@@ -37,7 +37,6 @@ in {
     registry = lib.mapAttrs (_: flake: {inherit flake;}) flakeInputs;
 
     settings = {
-      accept-flake-config = false;
       allowed-users = ["@wheel"];
       auto-optimise-store = true;
       builders-use-substitutes = true;

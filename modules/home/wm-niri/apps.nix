@@ -3,6 +3,7 @@
     networkmanagerapplet
     systemctl-tui
     wayland-utils
+    wl-clipboard-rs
     xwayland-satellite
   ];
 }

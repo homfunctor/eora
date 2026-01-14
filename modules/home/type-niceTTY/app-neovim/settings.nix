@@ -10,7 +10,7 @@
       providers = {
         wl-copy = {
           enable = true;
-          package = pkgs.wl-clipboard;
+          package = pkgs.wl-clipboard-rs;
         };
       };
     };
