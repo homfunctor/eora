@@ -6,14 +6,11 @@
     ./bufferline.nix
     ./colorizer.nix
     ./conform.nix
-    ./illuminate.nix
-    ./leap.nix
     ./lint.nix
     ./lsp.nix
     ./lualine.nix
     ./mini.nix
     ./noice.nix
-    ./nvim-surround.nix
     ./precognition.nix
     ./render-markdown.nix
     ./rustaceanvim.nix
@@ -24,6 +21,5 @@
     ./vimtex.nix
     ./web-devicons.nix
     ./which-key.nix
-    ./yazi.nix
   ];
 }

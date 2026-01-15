@@ -13,4 +13,6 @@
     ripgrep.enable = true;
     tealdeer.enable = true;
   };
+
+  stylix.enableReleaseChecks = false;
 }

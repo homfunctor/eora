@@ -15,7 +15,27 @@ in {
       servers = {
         basedpyright.enable = true;
         bashls.enable = true;
-        clangd.enable = true;
+
+        clangd = {
+          enable = true;
+          config = {
+            settings.init_options = {
+              usePlaceholders = true;
+              completeUnimported = true;
+              clangdFileStatus = true;
+            };
+            cmd = [
+              "${lib.getExe' pkgs.clang-tools "clangd"}"
+              "--background-index"
+              "--clang-tidy"
+              "--header-insertion=iwyu"
+              "--completion-style=detailed"
+              "--function-arg-placeholders"
+              "--fallback-style=llvm"
+            ];
+          };
+        };
+
         fish_lsp.enable = true;
         jsonls.enable = true;
         lemminx.enable = true;

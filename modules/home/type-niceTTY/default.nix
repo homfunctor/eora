@@ -4,6 +4,4 @@
     ./app-minimal.nix
     ./app-neovim
   ];
-
-  stylix.enableReleaseChecks = false;
 }

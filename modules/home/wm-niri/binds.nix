@@ -13,7 +13,7 @@
     [(getExe config.programs.noctalia-shell.package) "ipc" "call"]
     ++ (splitArg cmd);
   homeDir = "/home/${userName}";
-  workTime = "Fall2025";
+  workTime = "Spring2026";
 in {
   programs.niri = {
     settings = {

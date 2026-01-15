@@ -9,7 +9,6 @@
     "lualine"
     "mini"
     "noice"
-    "nvim-surround"
     "precognition"
     "render-markdown"
     "rustaceanvim"
