@@ -16,6 +16,7 @@
     type-niceTTY
 
     # work
+    app-workStuff
     type-work
     wm-niri
   ];
