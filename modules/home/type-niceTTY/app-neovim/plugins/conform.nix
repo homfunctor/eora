@@ -41,7 +41,7 @@ in {
           ];
           bash = ["shfmt"];
           c = ["clang_format"];
-          cpp = ["clang_format"];
+          # cpp = ["clang_format"];
           fish = ["fish_indent"];
           json = ["jq"];
           lua = ["stylua"];
