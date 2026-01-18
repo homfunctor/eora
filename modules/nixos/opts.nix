@@ -40,7 +40,7 @@ in {
         shortcuts = mkAttrOpt null "noctalia shell controlCenter shortcuts";
       };
       misc = mkAttrOpt null "misc noctalia-shell.settings";
-      wm.pkg = mkAttrOpt pkgs.niri-stable "pkg";
+      wm.pkg = mkAttrOpt pkgs.niri "pkg";
     };
 
     opacity = {
