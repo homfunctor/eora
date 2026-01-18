@@ -12,17 +12,10 @@
         {
           id = "Workspace";
           colorizeIcons = true;
-          enableScrollWheel = true;
+          enableScrollWheel = false;
           hideUnoccupied = false;
           labelMode = "none";
           showApplications = true;
-        }
-        {
-          id = "Taskbar";
-          colorizeIcons = true;
-          hideMode = "visible";
-          onlyActiveWorkspaces = true;
-          onlySameOutput = true;
         }
       ];
 
@@ -37,7 +30,7 @@
           displayMode = "alwaysShow";
           showNoctaliaPerformance = true;
           showPowerProfiles = true;
-          warningThreshold = 30;
+          warningThreshold = 20;
         }
       ];
 
