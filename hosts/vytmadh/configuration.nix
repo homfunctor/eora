@@ -23,7 +23,7 @@
     wm-niri
 
     # extras
-    opt-lix
+    opt-lixStable
     opt-rust
   ];
 
@@ -49,7 +49,7 @@
 
     mainMonitor = builtins.elemAt bg.monitors 0;
 
-    niri.wm.pkg = pkgs.niri-unstable;
+    niri.wm.pkg = pkgs.niri;
 
     opacity.popups = 1.0;
 

@@ -34,7 +34,7 @@ in {
         ];
 
         "Mod+Ctrl+Shift+C".action.spawn = getExe pkgs.gnome-calculator;
-        "Mod+Ctrl+Shift+J".action.spawn = getExe pkgs.xournalpp;
+        # "Mod+Ctrl+Shift+J".action.spawn = getExe pkgs.xournalpp;
 
         "Mod+R".action.spawn = nExe "launcher toggle";
         "Mod+X".action.spawn = nExe "sessionMenu toggle";
