@@ -49,7 +49,7 @@
 
     mainMonitor = builtins.elemAt bg.monitors 0;
 
-    niri.wm.pkg = pkgs.niri;
+    niri.wm.pkg = pkgs.niri-stable;
 
     opacity.popups = 1.0;
 
