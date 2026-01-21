@@ -15,12 +15,12 @@
     type-niceTTY
 
     # work
-    # ./hardware.nix
-    # ./shell-settings.nix
-    # hw-tablet
-    # shell-fish
-    # type-work
-    # wm-niri
+    ./hardware.nix
+    ./shell-settings.nix
+    hw-tablet
+    shell-fish
+    type-work
+    wm-niri
 
     # extras
     opt-lixStable
