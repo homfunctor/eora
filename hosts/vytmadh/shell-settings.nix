@@ -1,6 +1,6 @@
 # to be inherited or adjoined to shell settings
 {
-  nixos.opts.niri = {
+  nixos.opts.noct = {
     # inherited within bar as widgets
     bar.widgets = {
       left = [

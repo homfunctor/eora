@@ -4,7 +4,20 @@
 #   three fingers move left/right between columns
 #     or up/down between workspaces
 {
+  config,
+  pkgs,
+  ...
+}: let
+  inherit (config.home.opts) mainMonitor;
+
+  mirrorExe = "${pkgs.wl-mirror}/bin/wl-present";
+  mirrorCmd = "${mirrorExe} mirror ${mainMonitor}";
+in {
   programs.niri.settings = {
+    binds = with config.lib.niri.actions; {
+      "Mod+P".action.spawn-sh = "pkill wl-mirror ||  ${mirrorCmd}";
+    };
+
     input = {
       touchpad = {
         accel-profile = "flat";

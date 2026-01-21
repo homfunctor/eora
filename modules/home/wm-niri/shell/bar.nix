@@ -9,7 +9,7 @@
 
   programs.noctalia-shell.settings = {
     bar = {
-      inherit (osConfig.nixos.opts.niri.bar) widgets;
+      inherit (osConfig.nixos.opts.noct.bar) widgets;
 
       backgroundOpacity = 1;
       capsuleOpacity = 1;
@@ -46,7 +46,7 @@
     ];
 
     controlCenter = {
-      inherit (osConfig.nixos.opts.niri.controlCenter) cards shortcuts;
+      inherit (osConfig.nixos.opts.noct.controlCenter) cards shortcuts;
       position = "close_to_bar_button";
     };
 

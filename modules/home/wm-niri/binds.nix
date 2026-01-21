@@ -1,8 +1,8 @@
 {
   config,
   flake,
-  pkgs,
   lib,
+  pkgs,
   ...
 }: let
   inherit (config.home.opts) apps userName;
@@ -33,16 +33,11 @@ in {
           "${homeDir}/Work/${workTime}"
         ];
 
-        "Mod+Ctrl+Shift+C".action.spawn = getExe pkgs.gnome-calculator;
-        # "Mod+Ctrl+Shift+J".action.spawn = getExe pkgs.xournalpp;
-
         "Mod+R".action.spawn = nExe "launcher toggle";
         "Mod+X".action.spawn = nExe "sessionMenu toggle";
         "Mod+O".action = toggle-overview;
         # temp because dock stubbornly re-enables itself
         "Mod+Shift+O".action.spawn = nExe "dock toggle";
-
-        "Mod+Alt+L".action.spawn = getExe pkgs.swaylock;
 
         # window management
         "Mod+Q".action = close-window;

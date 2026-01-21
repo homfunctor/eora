@@ -77,7 +77,7 @@ in {
             tooltipsEnabled = true;
           };
         }
-        // osConfig.nixos.opts.niri.misc;
+        // osConfig.nixos.opts.noct.misc;
     };
   };
 }

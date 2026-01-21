@@ -22,9 +22,6 @@
       settings.UseDns = true;
     };
 
-    resolved = {
-      enable = true;
-      dnsovertls = "opportunistic";
-    };
+    resolved.enable = true;
   };
 }

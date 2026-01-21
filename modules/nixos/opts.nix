@@ -32,7 +32,7 @@ in {
 
     mainMonitor = mkStrOpt null "main monitor";
 
-    niri = {
+    noct = {
       bar.widgets = mkAttrOpt null "noctalia shell bar widgets";
       controlCenter = {
         cards = mkListOpt lib.types.attrs null "noctalia shell controlCenter shortcuts";
@@ -40,8 +40,9 @@ in {
         shortcuts = mkAttrOpt null "noctalia shell controlCenter shortcuts";
       };
       misc = mkAttrOpt null "misc noctalia-shell.settings";
-      wm.pkg = mkAttrOpt pkgs.niri "pkg";
     };
+
+    niri.wm.pkg = mkAttrOpt pkgs.niri "pkg";
 
     opacity = {
       desktop = mkFloatOpt 1.0 "desktop opacity";

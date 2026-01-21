@@ -1,5 +1,6 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }: {
@@ -18,6 +19,10 @@
 
   # want shell integration, so must be enabled after niceTTY
   programs = {
+    niri.settings.binds = with config.lib.niri.actions; {
+      "Mod+Ctrl+Shift+C".action.spawn = lib.getExe pkgs.gnome-calculator;
+    };
+
     eza =
       {
         enable = true;

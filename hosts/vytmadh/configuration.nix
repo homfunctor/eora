@@ -15,12 +15,12 @@
     type-niceTTY
 
     # work
-    ./hardware.nix
-    ./shell-settings.nix
-    hw-tablet
-    shell-fish
-    type-work
-    wm-niri
+    # ./hardware.nix
+    # ./shell-settings.nix
+    # hw-tablet
+    # shell-fish
+    # type-work
+    # wm-niri
 
     # extras
     opt-lixStable
@@ -48,6 +48,8 @@
     lanzaboote.enable = true;
 
     mainMonitor = builtins.elemAt bg.monitors 0;
+
+    niri.wm.pkg = pkgs.niri-stable;
 
     opacity.popups = 1.0;
 

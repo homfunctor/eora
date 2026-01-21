@@ -1,8 +1,4 @@
-{
-  inputs,
-  osConfig,
-  ...
-}: {
+{inputs, ...}: {
   imports = with inputs; [
     ./apps.nix
     ./binds.nix
@@ -15,9 +11,4 @@
     ./shell
     niri-flake.homeModules.niri
   ];
-
-  programs.niri = {
-    enable = true;
-    package = osConfig.nixos.opts.niri.wm.pkg;
-  };
 }
