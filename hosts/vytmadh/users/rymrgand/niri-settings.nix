@@ -13,6 +13,7 @@
   mirrorExe = "${pkgs.wl-mirror}/bin/wl-present";
   mirrorCmd = "${mirrorExe} mirror ${mainMonitor}";
 in {
+  home.packages = [pkgs.wl-mirror];
   programs.niri.settings = {
     binds = with config.lib.niri.actions; {
       "Mod+P".action.spawn-sh = "pkill wl-mirror ||  ${mirrorCmd}";
