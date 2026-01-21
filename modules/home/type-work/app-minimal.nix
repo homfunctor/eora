@@ -29,6 +29,7 @@
       }
       // config.home.opts.apps.shell.shellIntegration;
 
+    # todo: theming broken rn
     yazi =
       {
         enable = true;

@@ -9,5 +9,6 @@
     ./sops-users.nix
   ];
 
+  # todo: put this elsewhere
   programs.dconf.enable = true;
 }

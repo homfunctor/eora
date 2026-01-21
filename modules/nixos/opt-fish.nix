@@ -2,14 +2,17 @@
   nixos.opts.shellAliases = {
     # don't want to rely on zoxide for these
     eora = "z ~/eora";
-    revelations = "z ~/eora/hosts/revelations";
-    rymrgand = "z ~/eora/hosts/vytmadh/users/rymrgand";
     sapadal = "z ~/sapadal";
+
+    revelations = "z ~/eora/hosts/revelations";
     thaos = "z ~/eora/hosts/revelations/users/thaos";
-    vytmadh = "z ~/eora/hosts/vytmadh";
     wael = "z ~/eora/hosts/revelations/users/wael";
-    magran = "z ~/eora/hosts/inferno/users/magran";
+
+    rymrgand = "z ~/eora/hosts/vytmadh/users/rymrgand";
+    vytmadh = "z ~/eora/hosts/vytmadh";
+
     inferno = "z ~/eora/hosts/inferno";
+    magran = "z ~/eora/hosts/inferno/users/magran";
 
     # i'm lazy
     hfhs = "z /etc/profiles/per-user";

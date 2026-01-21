@@ -1,3 +1,4 @@
+# todo: revise
 # nix settings for nix to nix with
 {
   config,

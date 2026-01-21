@@ -1,4 +1,6 @@
 {pkgs, ...}: {
+  nix.package = pkgs.lixPackageSets.stable.lix;
+
   nixpkgs.overlays = [
     (_: prev: {
       inherit
@@ -10,6 +12,4 @@
         ;
     })
   ];
-
-  nix.package = pkgs.lixPackageSets.stable.lix;
 }
