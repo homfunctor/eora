@@ -18,6 +18,7 @@
     ./niri-settings.nix
     app-nix-tools
     app-vivaldi
+    app-workStuff
     type-work
     wm-niri
   ];
