@@ -28,7 +28,8 @@
     type-personal
 
     # extras
-    chaotic-kernel
+    # chaotic-kernel
+    # chaotic-mesa
     opt-lix
     opt-rust
     opt-sanity
@@ -52,7 +53,6 @@
         "1920 1080"
         "1366 768"
       ];
-      # wip
       xy = [
         [0 0]
         [1680 0]

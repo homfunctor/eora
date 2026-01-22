@@ -31,9 +31,9 @@
     userName = builtins.elemAt osConfig.nixos.opts.userNames 0;
 
     app-math = {
-      geogebra.enable = true;
+      geogebra.enable = false;
       latex.enable = true;
-      octave.enable = true;
+      octave.enable = false;
       rstudio.enable = false;
     };
 

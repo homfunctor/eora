@@ -8,8 +8,6 @@
       url = "github:numtide/blueprint";
     };
 
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-
     disko = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/disko";
@@ -20,7 +18,7 @@
       url = "github:nix-community/home-manager";
     };
 
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     # niri
     niri-flake = {

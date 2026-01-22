@@ -1,4 +1,3 @@
-# todo: revise
 {
   flake,
   inputs,

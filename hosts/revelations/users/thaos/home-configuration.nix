@@ -12,10 +12,10 @@
     # nicer tty
     ../wael/apps.nix
     ../wael/neovim.nix
-    ./niri-settings.nix
     type-niceTTY
 
     # work
+    ./niri-settings.nix
     app-workStuff
     type-work
     wm-niri
@@ -26,9 +26,9 @@
     userName = builtins.elemAt osConfig.nixos.opts.userNames 1;
 
     app-math = {
-      geogebra.enable = true;
+      geogebra.enable = false;
       latex.enable = true;
-      octave.enable = true;
+      octave.enable = false;
       rstudio.enable = false;
     };
 

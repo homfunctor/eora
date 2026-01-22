@@ -3,7 +3,6 @@
     dbus = {
       enable = true;
       packages = with pkgs; [
-        # todo: revise
         dconf
         gcr
         gnome-keyring

@@ -1,4 +1,3 @@
-# todo: setup auto-close environments
 {
   config,
   lib,

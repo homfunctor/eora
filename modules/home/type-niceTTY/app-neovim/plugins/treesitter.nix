@@ -1,4 +1,3 @@
-# todo: configure further
 {
   config,
   lib,
