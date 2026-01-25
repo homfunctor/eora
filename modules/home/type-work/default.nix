@@ -13,7 +13,7 @@
     ./app-nix-index.nix
     ./app-office.nix
     ./app-pdfViewer.nix
-    ./app-pika.nix
+    # ./app-pika.nix
     ./app-starship.nix
     ./app-syncthing
     ./app-thunderbird.nix
