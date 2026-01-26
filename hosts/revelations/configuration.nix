@@ -39,7 +39,8 @@
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
     # getting annoying bugs with unstable
-    niri.wm.pkg = pkgs.niri;
+    # and nixpkgs
+    niri.wm.pkg = pkgs.niri-stable;
 
     bg = {
       # number of workspaces per monitor
