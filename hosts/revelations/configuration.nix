@@ -36,11 +36,14 @@
     opt-vm
   ];
 
+  # temp to test niri crashes
+  environment.systemPackages = [pkgs.celluloid];
+
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
     # getting annoying bugs with unstable
     # and nixpkgs
-    niri.wm.pkg = pkgs.niri-stable;
+    niri.wm.pkg = pkgs.niri-unstable;
 
     bg = {
       # number of workspaces per monitor
