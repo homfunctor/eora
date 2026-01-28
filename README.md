@@ -1,11 +1,8 @@
-Current Noctalia Shell bar setup: 
+Current Noctalia Shell bar setup:
 <img width="1675" height="42" alt="screenshot-2025-12-27-22:06:58" src="https://github.com/user-attachments/assets/df60a854-da95-48f9-8e13-29a07cbc16c3" />
 
+Screenshot: December 8, 2025
 
-
-
- Screenshot: December 8, 2025
- 
  <img width="1914" height="1070" alt="screenshot" src="https://github.com/user-attachments/assets/d27549fa-b70f-4db3-b6bd-957b9eaa1a21" />
 
 stylix theme
@@ -23,8 +20,6 @@ niri and minimal noctalia-shell, de-rounded
 stylix with frostbitten base16 style inspired by the black-metal schemes (started with Immortal, I think)
 
 gaming (steam, lutris for some non-steam things)
-
-some goodies from chaotic nyx
 
 lix. not that I know nix enough to know if it's worth it
 
