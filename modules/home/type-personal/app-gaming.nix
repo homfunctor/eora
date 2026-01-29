@@ -19,10 +19,9 @@
   ];
 
   programs.niri.settings.environment = {
-    # DXVK_ENABLE_NVAPI = "0";
+    # wine and wayland what a time to be alive
     PROTON_ENABLE_WAYLAND = "1";
+    # no messing with associations
     WINEDLLOVERRIDES = "winemenubuilder.exe=d";
-    # WINEWAYLAND_DISABLE_XWAYLAND = "1";
-    # WINE_VK_VULKAN_ONLY = "1";
   };
 }
