@@ -20,10 +20,10 @@
     wm-niri
 
     # personal
-    # app-civ5-map-image
-    # app-nix-tools
-    # app-vivaldi
-    # type-personal
+    app-civ5-map-image
+    app-nix-tools
+    app-vivaldi
+    type-personal
   ];
 
   home.opts = {

@@ -25,13 +25,13 @@
     wm-niri
 
     # personal
-    # type-personal
+    type-personal
 
     # extras
     opt-lix
     opt-rust
     opt-sanity
-    # opt-vm
+    opt-vm
   ];
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
