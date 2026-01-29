@@ -14,11 +14,11 @@
     type-niceTTY
 
     # work
-    # ../wael/apps.nix
-    # ./niri-settings.nix
-    # app-workStuff
-    # type-work
-    # wm-niri
+    ../wael/apps.nix
+    ./niri-settings.nix
+    app-workStuff
+    type-work
+    wm-niri
   ];
 
   home.opts = {

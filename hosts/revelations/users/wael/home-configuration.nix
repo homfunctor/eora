@@ -14,10 +14,10 @@
     type-niceTTY
 
     # work
-    # ./apps.nix
-    # ./niri-settings.nix
-    # type-work
-    # wm-niri
+    ./apps.nix
+    ./niri-settings.nix
+    type-work
+    wm-niri
 
     # personal
     # app-civ5-map-image

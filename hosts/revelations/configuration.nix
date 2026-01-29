@@ -16,20 +16,18 @@
     type-niceTTY
 
     # work
-    # ./fish.nix
-    # ./hardware.nix
-    # ./shell-settings.nix
-    # hw-tablet
-    # shell-fish
-    # type-work
-    # wm-niri
+    ./fish.nix
+    ./hardware.nix
+    ./shell-settings.nix
+    hw-tablet
+    shell-fish
+    type-work
+    wm-niri
 
     # personal
     # type-personal
 
     # extras
-    # chaotic-kernel
-    # chaotic-mesa
     opt-lix
     opt-rust
     opt-sanity
