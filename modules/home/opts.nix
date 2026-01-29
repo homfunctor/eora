@@ -41,15 +41,15 @@ in {
     # neovim plugin options auto-generated from filenames
     nvim = {
       # base16? no, base20
-      extraColors = {
-        Boolean.fg = mkStrOpt "#5A6B9C" "";
+      extraColors = mkAttrOpt {
+        Boolean.fg = "#5A6B9C";
         Comment = {
-          fg = mkStrOpt "#8B7AA3" "";
-          italic = mkBoolOpt true "";
+          fg = "#8B7AA3";
+          italic = true;
         };
-        Keyword.fg = mkStrOpt "#7ABF9E" "";
-        Number.fg = mkStrOpt "#4A6B8A" "";
-      };
+        Keyword.fg = "#7ABF9E";
+        Number.fg = "#4A6B8A";
+      } "";
 
       # automatically prepare options for all neovim plugin modules
       plugins = let

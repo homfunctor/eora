@@ -1,6 +1,6 @@
 {config, ...}: {
   programs.nixvim.highlightOverride = with config.lib.stylix.colors.withHashtag; {
-    inherit (config.home.opts.nvim) extraColors;
+    inherit (config.home.opts.nvim.extraColors) Boolean Comment Keyword Number;
 
     CmpDocumentation.bg = "none";
     CmpDocumentationBorder.bg = "none";
