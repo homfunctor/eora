@@ -22,6 +22,7 @@
       };
       sizes = config.nixos.opts.fontSizes;
     };
+
     image = "${inputs.sapadal}/assets/base.png";
     polarity = "dark";
   };

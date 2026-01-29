@@ -1,4 +1,3 @@
-# todo: revise
 {
   config,
   pkgs,
@@ -41,7 +40,7 @@
       nerd-font-patcher
       nerd-fonts.iosevka
       nerd-fonts.symbols-only
-      nerd-fonts.tinos # work documents
+      nerd-fonts.tinos
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-cjk-serif

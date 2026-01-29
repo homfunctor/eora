@@ -1,4 +1,3 @@
-# todo: revise
 # nix settings for nix to nix with
 {
   config,
@@ -9,21 +8,10 @@
   inherit (lib) mkDefault;
   flakeInputs = lib.filterAttrs (_: v: lib.isType "flake" v) inputs;
 in {
-  documentation = {
-    doc.enable = false;
-    info.enable = false;
-    man = {
-      enable = true;
-      generateCaches = true;
-    };
-  };
-
   hardware.enableRedistributableFirmware = true;
 
   nix = {
     channel.enable = false;
-    daemonCPUSchedPolicy = "idle";
-    daemonIOSchedClass = "idle";
 
     gc = {
       automatic = true;
@@ -31,6 +19,7 @@ in {
       options = "--delete-older-than 7d";
       persistent = true;
     };
+
     optimise.automatic = true;
 
     # all the cool kids do it

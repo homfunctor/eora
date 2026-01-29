@@ -14,5 +14,6 @@
     tealdeer.enable = true;
   };
 
+  # annoying
   stylix.enableReleaseChecks = false;
 }

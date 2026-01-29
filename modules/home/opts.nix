@@ -39,12 +39,26 @@ in {
     mainMonitor = mkStrOpt null "main monitor";
 
     # neovim plugin options auto-generated from filenames
-    nvim.plugins = let
-      pluginNames = importAllFileNames ./type-niceTTY/app-neovim/plugins;
-    in
-      genAttrs pluginNames (name: {
-        enable = mkBoolOpt false "enable ${name}";
-      });
+    nvim = {
+      # base16? no, base20
+      extraColors = {
+        Boolean.fg = mkStrOpt "#5A6B9C" "";
+        Comment = {
+          fg = mkStrOpt "#8B7AA3" "";
+          italic = mkBoolOpt true "";
+        };
+        Keyword.fg = mkStrOpt "#7ABF9E" "";
+        Number.fg = mkStrOpt "#4A6B8A" "";
+      };
+
+      # automatically prepare options for all neovim plugin modules
+      plugins = let
+        pluginNames = importAllFileNames ./type-niceTTY/app-neovim/plugins;
+      in
+        genAttrs pluginNames (name: {
+          enable = mkBoolOpt false "enable ${name}";
+        });
+    };
 
     # syncthing
     sync = {

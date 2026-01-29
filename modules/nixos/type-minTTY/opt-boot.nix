@@ -15,12 +15,9 @@ in {
       systemd.enable = true;
     };
 
-    kernel.sysctl."fs.file-max" = 524288;
-
     kernelPackages = mkDefault pkgs.linuxPackages_latest;
 
     kernelParams = [
-      "boot.shell_on_fail"
       "plymouth.use-simpledrm"
       "quiet"
       "rd.udev.log_level=3"
@@ -34,7 +31,8 @@ in {
 
     plymouth = {
       enable = true;
-      themePackages = [pkgs.nixos-bgrt-plymouth];
+      # todo revisit
+      # themePackages = [pkgs.nixos-bgrt-plymouth];
     };
   };
 }
