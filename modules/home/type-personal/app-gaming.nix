@@ -19,9 +19,10 @@
   ];
 
   programs.niri.settings.environment = {
-    DXVK_ENABLE_NVAPI = "0";
+    # DXVK_ENABLE_NVAPI = "0";
+    PROTON_ENABLE_WAYLAND = "1";
     WINEDLLOVERRIDES = "winemenubuilder.exe=d";
-    WINEWAYLAND_DISABLE_XWAYLAND = "1";
-    WINE_VK_VULKAN_ONLY = "1";
+    # WINEWAYLAND_DISABLE_XWAYLAND = "1";
+    # WINE_VK_VULKAN_ONLY = "1";
   };
 }
