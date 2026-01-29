@@ -10,15 +10,15 @@
     type-minTTY
 
     # nicer tty
-    ../wael/apps.nix
     ../wael/neovim.nix
     type-niceTTY
 
     # work
-    ./niri-settings.nix
-    app-workStuff
-    type-work
-    wm-niri
+    # ../wael/apps.nix
+    # ./niri-settings.nix
+    # app-workStuff
+    # type-work
+    # wm-niri
   ];
 
   home.opts = {

@@ -16,16 +16,16 @@
     type-niceTTY
 
     # work
-    ./fish.nix
-    ./hardware.nix
-    ./shell-settings.nix
-    hw-tablet
-    shell-fish
-    type-work
-    wm-niri
+    # ./fish.nix
+    # ./hardware.nix
+    # ./shell-settings.nix
+    # hw-tablet
+    # shell-fish
+    # type-work
+    # wm-niri
 
     # personal
-    type-personal
+    # type-personal
 
     # extras
     # chaotic-kernel
@@ -33,12 +33,8 @@
     opt-lix
     opt-rust
     opt-sanity
-    opt-vm
+    # opt-vm
   ];
-
-  # temp to test niri crashes
-  environment.systemPackages = [pkgs.celluloid];
-
   # recursive to avoid defining adminUser twice
   nixos.opts = rec {
     # getting annoying bugs with unstable

@@ -10,20 +10,20 @@
     type-minTTY
 
     # nicer tty
-    ./apps.nix
     ./neovim.nix
     type-niceTTY
 
     # work
-    ./niri-settings.nix
-    type-work
-    wm-niri
+    # ./apps.nix
+    # ./niri-settings.nix
+    # type-work
+    # wm-niri
 
     # personal
-    app-civ5-map-image
-    app-nix-tools
-    app-vivaldi
-    type-personal
+    # app-civ5-map-image
+    # app-nix-tools
+    # app-vivaldi
+    # type-personal
   ];
 
   home.opts = {
