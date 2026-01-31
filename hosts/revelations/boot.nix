@@ -17,6 +17,7 @@
     ];
 
     kernelParams = [
+      "mitigations=off"
       "nowatchdog"
       "preempt=full"
     ];

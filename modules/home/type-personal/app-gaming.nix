@@ -16,6 +16,7 @@
     wineWowPackages.fonts
     wineWowPackages.waylandFull
     winetricks
+    xorg.xrandr
   ];
 
   programs.niri.settings.environment = {
