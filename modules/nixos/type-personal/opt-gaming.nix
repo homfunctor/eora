@@ -2,13 +2,16 @@
 #   env --unset=SDL_VIDEODRIVER gamemoderun %command%
 #
 # lotro
-#   launch options:  env --unset=TZ PROTON_ENABLE_WAYLAND=1 gamemoderun %command%"
+#   launch options:
+#     env --unset=TZ PROTON_ENABLE_WAYLAND=1 gamemoderun %command%
+#   timezone unset otherwise it uses UTF-0
 #   fps no longer drops on focus loss. wayland is magick.
 #
 # civ 5 (vox populi)
 #   launch options: env --unset=TZ PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 PROTON_ENABLE_WAYLAND=1 taskset --cpu-list 0-7 gamemoderun %command%
 #   do these work? only the devil knows.
 #   running with wayland fixes the "feature" of audio muting on focus loss
+# todo: deadly crash issues. related to gfxoff? need to test further.
 {
   inputs,
   pkgs,
