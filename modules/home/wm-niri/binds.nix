@@ -36,6 +36,7 @@ in {
         "Mod+R".action.spawn = nExe "launcher toggle";
         "Mod+X".action.spawn = nExe "sessionMenu toggle";
         "Mod+O".action = toggle-overview;
+
         # temp because dock stubbornly re-enables itself
         "Mod+Shift+O".action.spawn = nExe "dock toggle";
 

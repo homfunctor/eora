@@ -30,6 +30,10 @@ in {
       {
         command = nExe "volume muteInput";
       }
+      {
+        # noctalia-shell dock refuses to disable itself
+        command = nExe "dock toggle";
+      }
     ];
 
     noctalia-shell = {

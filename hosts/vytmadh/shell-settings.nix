@@ -42,6 +42,7 @@
         }
         {
           id = "Brightness";
+          displayMode = "alwaysShow";
         }
         {
           id = "Volume";
