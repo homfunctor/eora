@@ -20,7 +20,7 @@ in {
           + ''
             $git_branch$git_status[](bg:${colors.base07} ''
           + ''
-            fg:${colors.base08})$nix_shell[](bg:${colors.base08} ''
+            fg:${colors.base04})$nix_shell[](bg:${colors.base08} ''
           + ''
             fg:${colors.base00})$character
           '';
@@ -38,7 +38,7 @@ in {
 
         git_branch = {
           format = "[ $symbol$branch ]($style)";
-          style = "fg:${colors.base0E} bg:${colors.base03}";
+          style = "fg:${colors.base00} bg:${colors.base03}";
           symbol = " ";
         };
 

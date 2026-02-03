@@ -16,7 +16,8 @@ in {
   imports = [
     ./bar.nix
     ./bg.nix
-    ./colors.nix
+    # temp: checking what stylix does on its own
+    # ./colors.nix
     ./launcher.nix
     ./nc.nix
     inputs.noctalia.homeModules.default
@@ -71,11 +72,13 @@ in {
           sessionMenu.showHeader = false;
 
           ui = {
+            # todo: use stylix settings
             fontDefault = config.stylix.fonts.sansSerif.name;
             fontDefaultScale = 1.25;
             fontFixed = config.stylix.fonts.monospace.name;
             fontFixedScale = 1.25;
-            panelBackgroundOpacity = 1;
+            # panelBackgroundOpacity = 1;
+
             panelsAttachedToBar = true;
             settingsPanelAttachToBar = true;
             tooltipsEnabled = true;

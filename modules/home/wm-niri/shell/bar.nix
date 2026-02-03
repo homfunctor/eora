@@ -11,8 +11,10 @@
     bar = {
       inherit (osConfig.nixos.opts.noct.bar) widgets;
 
-      backgroundOpacity = 1;
-      capsuleOpacity = 1;
+      # todo: use stylix settings
+      # backgroundOpacity = 1;
+      # capsuleOpacity = 1;
+
       compactMode = false;
       density = "comfortable";
       exclusive = true;
