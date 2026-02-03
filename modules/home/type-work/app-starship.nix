@@ -38,7 +38,7 @@ in {
 
         git_branch = {
           format = "[ $symbol$branch ]($style)";
-          style = "fg:${colors.base00} bg:${colors.base03}";
+          style = "fg:${colors.base08} bg:${colors.base03}";
           symbol = " ";
         };
 

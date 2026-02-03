@@ -1,3 +1,4 @@
+# todo: check for other settings: https://docs.noctalia.dev/getting-started/nixos/
 # todo: button that launches launcher, button that opens overview
 {
   config,
@@ -16,8 +17,6 @@ in {
   imports = [
     ./bar.nix
     ./bg.nix
-    # temp: checking what stylix does on its own
-    # ./colors.nix
     ./launcher.nix
     ./nc.nix
     inputs.noctalia.homeModules.default
@@ -30,10 +29,6 @@ in {
     niri.settings.spawn-at-startup = [
       {
         command = nExe "volume muteInput";
-      }
-      {
-        # noctalia-shell dock refuses to disable itself
-        command = nExe "dock toggle";
       }
     ];
 
