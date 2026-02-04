@@ -33,7 +33,7 @@
       inherit (osConfig.nixos.opts.bg) monitors nWS resolutions xy;
       files = [
         "${inputs.sapadal}/assets/winter2.png"
-        "${inputs.sapdal}/assets/work.png"
+        "${inputs.sapdal}/assets/base.png"
       ];
     };
 
