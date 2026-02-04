@@ -66,14 +66,12 @@ in {
 
           sessionMenu.showHeader = false;
 
-          ui = {
-            # todo: use stylix settings
-            fontDefault = config.stylix.fonts.sansSerif.name;
+          ui = with config.stylix; {
+            fontDefault = fonts.sansSerif.name;
             fontDefaultScale = 1.25;
-            fontFixed = config.stylix.fonts.monospace.name;
+            fontFixed = fonts.monospace.name;
             fontFixedScale = 1.25;
-            # panelBackgroundOpacity = 1;
-
+            panelBackgroundOpacity = opacity.desktop;
             panelsAttachedToBar = true;
             settingsPanelAttachToBar = true;
             tooltipsEnabled = true;

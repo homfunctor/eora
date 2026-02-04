@@ -7,14 +7,12 @@
     inputs.sapadal.homeModules.niri-doxtalia
   ];
 
-  programs.noctalia-shell.settings = {
+  programs.noctalia-shell.settings = with config.stylix; {
     bar = {
       inherit (osConfig.nixos.opts.noct.bar) widgets;
 
-      # todo: use stylix settings
-      # backgroundOpacity = 1;
-      # capsuleOpacity = 1;
-
+      backgroundOpacity = opacity.desktop;
+      capsuleOpacity = opacity.desktop;
       compactMode = false;
       density = "comfortable";
       exclusive = true;
