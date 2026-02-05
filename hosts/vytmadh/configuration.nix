@@ -31,18 +31,9 @@
   nixos.opts = rec {
     bg = {
       nWS = 3;
-      monitors = [
-        "eDP-1"
-        "HDMI-A-1" # external monitors at work usually have this name
-      ];
-      resolutions = [
-        "1920x1080"
-        "1920x1080"
-      ];
-      xy = [
-        [0 0]
-        [1920 0]
-      ];
+      monitors = ["eDP-1"];
+      resolutions = ["1920x1080"];
+      xy = [[0 0]];
     };
 
     fontSizes = {
