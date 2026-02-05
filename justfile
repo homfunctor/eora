@@ -33,6 +33,10 @@ update:
 upflake:
     nix flake update
 
+# update sapadal only
+upsap:
+    nix flake update sapadal
+
 # --dry-activate  --show-trace
 uptrace:
     sudo nixos-rebuild dry-activate --flake . --log-format internal-json  --show-trace |& nom --json
