@@ -14,8 +14,9 @@ in {
 
   home.file.".cache/noctalia/wallpapers.json" = lib.mkForce {
     text = builtins.toJSON {
-      wallpapers =
-        lib.listToAttrs (
+      # separated to handle EXTernal/EXTra monitors
+      wallpapers = let
+        mainMonitors = lib.listToAttrs (
           lib.zipListsWith (
             m: b: {
               name = m;
@@ -24,18 +25,19 @@ in {
           )
           monitors
           files
-        )
-        //
-        # handle external monitors if they exist
-        (lib.listToAttrs (
-          lib.zipListsWith (
+        );
+
+        extraMonitors = lib.listToAttrs (
+          map (
             m: {
               name = m;
               value = genericBG;
             }
           )
           extMonitors
-        ));
+        );
+      in
+        mainMonitors // extraMonitors;
     };
   };
 }
