@@ -30,7 +30,7 @@
     app-math.latex.enable = true;
 
     bg = {
-      inherit (osConfig.nixos.opts.bg) monitors nWS resolutions xy;
+      inherit (osConfig.nixos.opts.bg) extMonitors monitors nWS resolutions xy;
       files = ["${inputs.sapadal}/assets/winter2.png"];
     };
 

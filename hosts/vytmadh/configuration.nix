@@ -32,6 +32,7 @@
     bg = {
       nWS = 3;
       monitors = ["eDP-1"];
+      extMonitors = ["HDMI-A-1" "HDMI-A-2"];
       resolutions = ["1920x1080"];
       xy = [[0 0]];
     };

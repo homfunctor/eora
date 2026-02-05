@@ -38,7 +38,7 @@
     };
 
     bg = {
-      inherit (osConfig.nixos.opts.bg) monitors nWS resolutions xy;
+      inherit (osConfig.nixos.opts.bg) extMonitors monitors nWS resolutions xy;
       files = [
         "${inputs.sapadal}/assets/winter1.png"
         "${inputs.sapadal}/assets/winter4.png"

@@ -45,6 +45,7 @@
         "HDMI-A-1"
         "DP-3"
       ];
+      extMonitors = [];
       resolutions = [
         "1680 1050"
         "1920 1080"
