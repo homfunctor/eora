@@ -13,6 +13,6 @@
       wireplumber.enable = true;
     };
 
-    pulseaudio.enable = lib.mkForce false;
+    # pulseaudio.enable = lib.mkForce false;
   };
 }

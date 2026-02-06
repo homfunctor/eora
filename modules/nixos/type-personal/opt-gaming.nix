@@ -17,11 +17,11 @@
   pkgs,
   ...
 }: {
-  imports = with inputs.nix-gaming.nixosModules; [
-    pipewireLowLatency
-    platformOptimizations
-    wine
-  ];
+  # imports = with inputs.nix-gaming.nixosModules; [
+  #   pipewireLowLatency
+  #   platformOptimizations
+  #   wine
+  # ];
 
   # environment.systemPackages = [pkgs.gamemode];
 
@@ -50,9 +50,9 @@
     wine.ntsync.enable = true;
   };
 
-  services.pipewire.lowLatency = {
-    enable = true;
-    quantum = 512;
-    rate = 48000; # default value
-  };
+  # services.pipewire.lowLatency = {
+  #   enable = true;
+  #   quantum = 512;
+  #   rate = 48000; # default value
+  # };
 }
