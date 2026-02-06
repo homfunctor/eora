@@ -26,28 +26,28 @@
   # environment.systemPackages = [pkgs.gamemode];
 
   programs = {
-    gamemode = {
-      enable = false;
-      settings = {
-        general = {
-          renice = 15;
-          softrealtime = "auto";
-        };
-
-        gpu = {
-          amd_performance_level = "high";
-          apply_gpu_optimisations = "accept-responsibility";
-        };
-      };
-    };
+    # gamemode = {
+    #   enable = true;
+    #   settings = {
+    #     general = {
+    #       renice = 15;
+    #       softrealtime = "auto";
+    #     };
+    #
+    #     gpu = {
+    #       amd_performance_level = "high";
+    #       apply_gpu_optimisations = "accept-responsibility";
+    #     };
+    #   };
+    # };
 
     steam = {
       enable = true;
-      platformOptimizations.enable = true;
-      protontricks.enable = true;
+      # platformOptimizations.enable = true;
+      # protontricks.enable = true;
     };
 
-    wine.ntsync.enable = true;
+    # wine.ntsync.enable = true;
   };
 
   # services.pipewire.lowLatency = {
