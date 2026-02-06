@@ -1,10 +1,12 @@
 {
   config,
+  inputs,
   osConfig,
   ...
 }: let
   inherit (config.home.opts) apps;
 in {
+  imports = [inputs.sapadal.modules.home.extraSessionVars];
   programs.niri.settings.environment = {
     BROWSER = apps.browser.exe;
     CLUTTER_BACKEND = "wayland";
