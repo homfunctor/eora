@@ -28,8 +28,6 @@ in {
     SOPS_EDITOR = apps.term-text.exe;
     TERMINAL = apps.terminal.exe;
     VISUAL = apps.text.exe;
-    WLR_BACKEND = osConfig.nixos.opts.wlrBR;
-    WLR_RENDERER = osConfig.nixos.opts.wlrBR;
     _JAVA_AWT_WM_NONREPARENTING = "1";
   };
 

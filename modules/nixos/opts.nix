@@ -60,7 +60,5 @@ in {
 
     adminUser = mkStrOpt "" "admin user";
     userNames = mkListOpt lib.types.str null "user names";
-
-    wlrBR = mkStrOpt "wayland" "requested backend/renderer for wayland";
   };
 }

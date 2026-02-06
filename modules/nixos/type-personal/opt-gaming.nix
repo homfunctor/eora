@@ -23,11 +23,11 @@
     wine
   ];
 
-  environment.systemPackages = [pkgs.gamemode];
+  # environment.systemPackages = [pkgs.gamemode];
 
   programs = {
     gamemode = {
-      enable = true;
+      enable = false;
       settings = {
         general = {
           renice = 15;

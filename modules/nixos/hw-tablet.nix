@@ -1,9 +1,5 @@
 {pkgs, ...}: {
-  environment.systemPackages = with pkgs; [
-    evtest
-    libinput
-    usbutils
-  ];
+  environment.systemPackages = with pkgs; [libinput];
 
   hardware.opentabletdriver.enable = true;
 }

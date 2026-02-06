@@ -17,9 +17,10 @@
     ];
 
     kernelParams = [
-      "mitigations=off"
-      "nowatchdog"
-      "preempt=full"
+      # "amdgpu.gpu_recovery=1"
+      # "amdgpu.runpm=0"
+      # "nowatchdog"
+      # "preempt=full"
     ];
   };
 }

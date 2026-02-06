@@ -8,6 +8,7 @@
 - niri settings
 - niri binds for moving between monitors
 - niri mirroring: automate moving window to new external monitor
+- remove nix-hardware. check what current modules do.
 
 # fixes
 

@@ -32,7 +32,7 @@
 in
   stdenv.mkDerivation rec {
     pname = "irony-mod-manager";
-    version = "1.27.141-alpha";
+    version = "1.27.149";
 
     src = fetchzip {
       url = "https://github.com/bcssov/IronyModManager/releases/download/v${version}/linux-x64.zip";

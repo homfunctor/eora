@@ -78,7 +78,5 @@
 
     adminUser = "wael";
     userNames = [adminUser "thaos"];
-
-    # wlrBR = "vulkan";
   };
 }

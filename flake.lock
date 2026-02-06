@@ -855,11 +855,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1770336729,
-        "narHash": "sha256-IGVrHEQLVpNab+/01e4q/RsIyomaVB9qlzyfBwhw+O0=",
+        "lastModified": 1770371298,
+        "narHash": "sha256-iM2mw4Es/J9dICFehpr4Hq7nGUhNQ9ixGd2kd5052c0=",
         "ref": "refs/heads/main",
-        "rev": "071e44496d9c94e8ddf10bcf0912e9aca2e2c867",
-        "revCount": 285,
+        "rev": "0fe19a5ac79ff9e6ede855fbb880880b1ae8cb93",
+        "revCount": 323,
         "shallow": false,
         "type": "git",
         "url": "ssh://git@github.com/homfunctor/sapadal"

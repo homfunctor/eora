@@ -3,7 +3,7 @@
 
   programs = {
     dconf.enable = true;
-    kdeconnect.enable = true;
+    # kdeconnect.enable = true;
     seahorse.enable = true;
   };
 }
