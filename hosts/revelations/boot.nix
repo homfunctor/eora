@@ -20,9 +20,9 @@
       "amdgpu.dcdebugmask=0x10"
       "amdgpu.gpu_recovery=1"
       "amdgpu.ppfeaturemask=0xffff7fff"
-      "cwsr_enable=0"
-      # "nowatchdog"
-      # "preempt=full"
+      # "cwsr_enable=0"
+      "nowatchdog"
+      "preempt=full"
     ];
   };
 }
