@@ -4,8 +4,20 @@
   ...
 }: {
   environment.systemPackages = [pkgs.lact];
-
   hardware = {
+    # temp: trying to fix gaming crash
+    firmware = [
+      (pkgs.linux-firmware.overrideAttrs (old: {
+        version = "20251111";
+        src = pkgs.fetchurl {
+          # https://www.kernel.org/pub/linux/kernel/firmware/
+          url = "https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-20251111.tar.gz";
+          # > nix-prefetch-url https://www.kernel.org/pub/linux/kernel/firmware/linux-firmware-20251111.tar.gz
+          sha256 = "0rp2ah8drcnl7fh9vbawa8p8c9lhvn1d8zkl48ckj20vba0maz2g";
+        };
+      }))
+    ];
+
     amdgpu.initrd.enable = true;
 
     graphics.extraPackages = with pkgs; [
