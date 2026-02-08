@@ -36,7 +36,7 @@ in
 
     src = fetchzip {
       url = "https://github.com/bcssov/IronyModManager/releases/download/v${version}/linux-x64.zip";
-      sha256 = "sha256-Tz/y3Pd7kzD11qEbiIHBQBMYPAmSkR24VFEDFatPBZs=";
+      sha256 = "sha256-seH+TRzkuIO8dHtT9djyMeK6dyZtmIRyErLai04Ks1w=";
       stripRoot = false;
     };
 

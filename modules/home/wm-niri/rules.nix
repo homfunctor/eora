@@ -26,10 +26,6 @@
         open-floating = true;
       }
       {
-        matches = [{app-id = "org.gnome.FileRoller";}];
-        open-floating = true;
-      }
-      {
         matches = [{title = "^Picture-in-Picture$";}];
         open-floating = true;
       }

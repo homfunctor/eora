@@ -20,10 +20,10 @@
 in {
   home.opts.apps = rec {
     archive = {
-      desktop = "org.gnome.FileRoller";
+      desktop = "peazip";
       exe = getExe archive.pkg;
-      pkg = osConfig.file-roller.package;
-      tooltip = "File Roller";
+      pkg = pkgs.peazip;
+      tooltip = "Peazip";
     };
 
     audio = {

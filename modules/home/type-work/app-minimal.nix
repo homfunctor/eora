@@ -7,12 +7,12 @@
   home.packages = with pkgs; [
     dconf-editor
     eog
-    file-roller
     gnome-calculator
     gnome-calendar
     gnome-disk-utility
     mission-center
     nemo-with-extensions # just feels so good
+    peazip
     showmethekey
     vlc # good stuff, nostalgic
   ];

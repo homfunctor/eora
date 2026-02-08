@@ -8,8 +8,7 @@
 #   fps no longer drops on focus loss. wayland is magick.
 #
 # civ 5 (vox populi)
-#   launch options: env --unset=TZ PROTON_NO_ESYNC=1 PROTON_NO_FSYNC=1 PROTON_ENABLE_WAYLAND=1 taskset --cpu-list 0-7 gamemoderun %command%
-#   do these work? only the devil knows.
+#   launch options: env --unset=TZ  PROTON_ENABLE_WAYLAND=1 taskset --cpu-list 0-7 gamemoderun %command%
 #   running with wayland fixes the "feature" of audio muting on focus loss
 {
   inputs,
