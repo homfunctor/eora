@@ -31,7 +31,7 @@
 
     bg = {
       inherit (osConfig.nixos.opts.bg) extMonitors monitors nWS resolutions xy;
-      files = ["${inputs.sapadal}/assets/winter2.png"];
+      files = ["${inputs.sapadal}/assets/wallpaper01.png"];
     };
 
     sync.folder = {
