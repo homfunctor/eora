@@ -41,7 +41,6 @@ in {
           general = {
             allowPanelsOnScreenWithoutBar = true;
             avatarImage = "${inputs.sapadal}/assets/${userName}.png";
-            dock.enabled = lib.mkForce false;
             forceBlackScreenCorners = false;
             showScreenCorners = false;
 
@@ -63,6 +62,8 @@ in {
             externalMixer = "${lib.getExe pkgs.pwvucontrol}";
             preferredPlayer = config.home.opts.apps.audio.exe;
           };
+
+          dock.enabled = false;
 
           sessionMenu.showHeader = false;
 
