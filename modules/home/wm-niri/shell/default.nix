@@ -68,6 +68,7 @@ in {
           sessionMenu.showHeader = false;
 
           ui = with config.stylix; {
+            boxBorderEnabled = true;
             fontDefault = fonts.sansSerif.name;
             fontDefaultScale = 1.25;
             fontFixed = fonts.monospace.name;
