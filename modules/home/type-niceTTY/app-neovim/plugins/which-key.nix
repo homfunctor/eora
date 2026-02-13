@@ -8,9 +8,6 @@ in {
   programs.nixvim.plugins.which-key = lib.mkIf cfg.enable {
     enable = true;
 
-    settings.win = {
-      border = "single";
-      # wo.winblend = 100;
-    };
+    settings.win.border = "single";
   };
 }

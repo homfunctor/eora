@@ -8,6 +8,9 @@
     icu
     jq
     lib
+    libICE
+    libSM
+    libX11
     libgcc
     libxkbcommon
     lttng-ust_2_12
@@ -16,11 +19,10 @@
     openssl
     stdenv
     wayland
-    xorg
     zlib
     ;
 
-  runtimeLibs = with xorg; [
+  runtimeLibs = [
     icu
     libICE
     libSM
