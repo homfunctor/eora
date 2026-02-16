@@ -5,7 +5,7 @@
 }: {
   home.packages = with pkgs; [
     app2unit
-    xdg-terminal-exec-mkhl
+    xdg-terminal-exec
   ];
 
   programs.noctalia-shell.settings.appLauncher = {

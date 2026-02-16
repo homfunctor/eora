@@ -8,15 +8,18 @@
   pkgs,
   ...
 }: let
-  inherit (config.home.opts) mainMonitor;
+  inherit (config.home.opts) bg mainMonitor;
 
   mirrorExe = "${pkgs.wl-mirror}/bin/wl-present";
   mirrorCmd = "${mirrorExe} mirror ${mainMonitor}";
+  mirrorArgs = "--fullscreen-output";
+  presentCmd = "pkill wl-mirror ||  ${mirrorCmd} ${mirrorArgs}";
 in {
   home.packages = [pkgs.wl-mirror];
   programs.niri.settings = {
     binds = with config.lib.niri.actions; {
-      "Mod+P".action.spawn-sh = "pkill wl-mirror ||  ${mirrorCmd}";
+      "Mod+P".action.spawn-sh = "${presentCmd} ${builtins.elemAt bg.extMonitors 0}";
+      "Mod+Shift+P".action.spawn-sh = "${presentCmd} ${builtins.elemAt bg.extMonitors 1}";
     };
 
     input = {
