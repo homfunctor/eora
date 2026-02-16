@@ -20,6 +20,6 @@
     ./undotree.nix
     ./vimtex.nix
     ./web-devicons.nix
-    ./which-key.nix
+    # ./which-key.nix
   ];
 }
