@@ -33,6 +33,10 @@ in {
           timeoutMs = 500;
         };
 
+        formatters.clang_format.args = [
+          "--style={SortIncludes: false}"
+        ];
+
         formatters_by_ft = {
           "_" = [
             "squeeze_blanks"
@@ -41,7 +45,7 @@ in {
           ];
           bash = ["shfmt"];
           c = ["clang_format"];
-          # cpp = ["clang_format"];
+          cpp = ["clang_format"];
           fish = ["fish_indent"];
           json = ["jq"];
           lua = ["stylua"];
