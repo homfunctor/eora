@@ -49,6 +49,7 @@
     controlCenter = {
       inherit (osConfig.nixos.opts.noct.controlCenter) cards shortcuts;
       position = "close_to_bar_button";
+      useErrorColor = true;
     };
 
     location = {

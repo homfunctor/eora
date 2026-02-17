@@ -6,8 +6,9 @@
       left = [
         {
           id = "ControlCenter";
+          colorsizeSystemIcon = "error";
+          enableColorization = true;
           useDistroLogo = true;
-          usePrimaryColor = true;
         }
         {
           id = "Workspace";
