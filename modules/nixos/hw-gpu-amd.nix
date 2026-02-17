@@ -28,7 +28,8 @@
     ];
   };
 
-  services.xserver.videoDrivers = ["modesetting"];
+  # temp: crashes started again
+  # services.xserver.videoDrivers = ["modesetting"];
 
   systemd = {
     packages = [pkgs.lact];

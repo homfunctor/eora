@@ -32,10 +32,10 @@
           softrealtime = "auto";
         };
 
-        gpu = {
-          amd_performance_level = "high";
-          apply_gpu_optimisations = "accept-responsibility";
-        };
+        # gpu = {
+        #   amd_performance_level = "high";
+        #   apply_gpu_optimisations = "accept-responsibility";
+        # };
       };
     };
 

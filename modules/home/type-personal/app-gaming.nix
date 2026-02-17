@@ -13,8 +13,8 @@
     protonplus
     steamcmd
     umu-launcher
-    wineWowPackages.fonts
-    wineWowPackages.waylandFull
+    wineWow64Packages.fonts
+    wineWow64Packages.waylandFull
     winetricks
     xrandr
   ];
