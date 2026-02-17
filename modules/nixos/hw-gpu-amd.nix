@@ -3,7 +3,7 @@
   pkgs,
   ...
 }: {
-  environment.systemPackages = [pkgs.lact];
+  # environment.systemPackages = [pkgs.lact];
   hardware = {
     # temp: trying to fix gaming crash
     firmware = [
@@ -31,11 +31,11 @@
   # temp: crashes started again
   # services.xserver.videoDrivers = ["modesetting"];
 
-  systemd = {
-    packages = [pkgs.lact];
-    services.lact = {
-      serviceConfig.ExecStart = "${lib.getExe pkgs.lact} daemon";
-      wantedBy = ["multi-user.target"];
-    };
-  };
+  # systemd = {
+  #   packages = [pkgs.lact];
+  #   services.lact = {
+  #     serviceConfig.ExecStart = "${lib.getExe pkgs.lact} daemon";
+  #     wantedBy = ["multi-user.target"];
+  #   };
+  # };
 }
