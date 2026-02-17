@@ -16,7 +16,7 @@
     enableWindowsSearch = false;
     iconMode = "native";
     ignoreMouseInput = false;
-    position = "top left";
+    position = "center";
     showCategories = true;
     showIconBackground = false;
     sortByMostUsed = false;
