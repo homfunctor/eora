@@ -67,6 +67,8 @@
 
     nixcord.url = "github:kaylorben/nixcord";
 
+    nixos-hardware.url = "github:nixos/nixos-hardware";
+
     nixvim = {
       inputs.nixpkgs.follows = "nixpkgs";
       url = "github:nix-community/nixvim";

@@ -10,7 +10,6 @@
         libsecret
       ];
     };
-    fstrim.enable = true;
     fwupd.enable = true;
     gvfs.enable = true;
     libinput.enable = true;

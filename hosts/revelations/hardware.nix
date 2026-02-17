@@ -2,26 +2,19 @@
   flake,
   inputs,
   ...
-}: let
-  nixosHW = with inputs.nixos-hardware.nixosModules; [
-    common-cpu-amd
-    common-cpu-amd-pstate
-    common-gpu-amd
-    common-pc-ssd
+}: {
+  imports = with flake.modules.nixos; [
+    hw-audio
+    hw-cpu-amd
+    hw-gpu-amd
+    hw-printing
   ];
-in {
-  imports = with flake.modules.nixos;
-    [
-      hw-audio
-      hw-cpu-amd
-      hw-gpu-amd
-      hw-printing
-    ]
-    ++ nixosHW;
 
   powerManagement = {
     enable = true;
     cpuFreqGovernor = "performance";
     scsiLinkPolicy = "med_power_with_dipm";
   };
+
+  services.fstrim.enable = true;
 }

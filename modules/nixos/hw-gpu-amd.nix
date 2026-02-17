@@ -28,6 +28,8 @@
     ];
   };
 
+  services.xserver.videoDrivers = ["modesetting"];
+
   systemd = {
     packages = [pkgs.lact];
     services.lact = {
