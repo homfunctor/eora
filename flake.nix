@@ -67,7 +67,10 @@
       url = "github:diamondburned/nix-search";
     };
 
-    nixcord.url = "github:kaylorben/nixcord";
+    nixcord = {
+      inputs.nixpkgs.follows = "nixpkgs";
+      url = "github:kaylorben/nixcord";
+    };
 
     nixos-hardware.url = "github:nixos/nixos-hardware";
 

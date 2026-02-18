@@ -20,12 +20,12 @@
 
     amdgpu.initrd.enable = true;
 
-    graphics.extraPackages = with pkgs; [
-      vulkan-extension-layer
-      vulkan-loader
-      vulkan-tools
-      vulkan-validation-layers
-    ];
+    # graphics.extraPackages = with pkgs; [
+    #   vulkan-extension-layer
+    #   vulkan-loader
+    #   vulkan-tools
+    #   vulkan-validation-layers
+    # ];
   };
 
   # temp: crashes started again
