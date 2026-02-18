@@ -10,12 +10,14 @@
 
   programs.noctalia-shell.settings.appLauncher = {
     autoPasteClipboard = false;
+    density = "comfortable";
     enableClipPreview = false;
     enableClipboardHistory = false;
     enableSettingsSearch = false;
     enableWindowsSearch = false;
     iconMode = "native";
     ignoreMouseInput = false;
+    overviewLayer = true; # showAboveFullscreen
     position = "center";
     showCategories = true;
     showIconBackground = false;
