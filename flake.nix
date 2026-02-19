@@ -19,8 +19,6 @@
     };
 
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    # temp: identifying source of crashes
-    # nixpkgs.url = "github:nixos/nixpkgs?ref=5690d9ee31495f5dcebb7de43e3ea2ff4110f04e";
 
     # niri
     niri-flake = {
