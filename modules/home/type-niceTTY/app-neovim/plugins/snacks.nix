@@ -12,11 +12,6 @@ in {
       animate.enabled = true;
       bigfile.enabled = true;
 
-      # todo
-      # dashboard.enabled = true;
-      # explorer.enabled = true;
-      # image.enabled = true;
-
       indent = {
         enabled = true;
         chunk = {
@@ -53,7 +48,7 @@ in {
 
       toggle.enabled = true;
 
-      # win.backdrop.blend = 100;
+      win.backdrop.blend = 50;
 
       words.enabled = true;
     };

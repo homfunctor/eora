@@ -1,7 +1,6 @@
 {
   config,
   inputs,
-  osConfig,
   ...
 }: let
   inherit (config.home.opts) apps;

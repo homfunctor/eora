@@ -1,6 +1,5 @@
 {
   flake,
-  inputs,
   ...
 }: {
   imports = with flake.modules.nixos; [

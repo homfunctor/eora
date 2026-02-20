@@ -12,7 +12,6 @@
 #   running with wayland fixes the "feature" of audio muting on focus loss
 {
   inputs,
-  pkgs,
   ...
 }: {
   imports = with inputs.nix-gaming.nixosModules; [
