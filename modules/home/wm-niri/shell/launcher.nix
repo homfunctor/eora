@@ -10,7 +10,7 @@
 
   programs.noctalia-shell.settings.appLauncher = {
     autoPasteClipboard = false;
-    density = "comfortable";
+    density = "compact";
     enableClipPreview = false;
     enableClipboardHistory = false;
     enableSettingsSearch = false;

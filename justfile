@@ -9,6 +9,10 @@ chflake:
 clean:
     nix-collect-garbage -d  --log-format internal-json  |& nom --json
 
+# format
+nfmt:
+    nix fmt
+
 # update to current flake config without going online
 offlate:
     sudo nixos-rebuild switch --flake . --offline  --log-format internal-json  |& nom --json
@@ -24,6 +28,7 @@ upboot:
 # --dry-activate
 upcheck:
     sudo nixos-rebuild dry-activate --flake .  --log-format internal-json  |& nom --json
+    yes | rip result
 
 # update to current flake config
 update:
@@ -32,10 +37,6 @@ update:
 # update flake inputs
 upflake:
     nix flake update
-
-# update sapadal only
-upsap:
-    nix flake update sapadal
 
 # --dry-activate  --show-trace
 uptrace:

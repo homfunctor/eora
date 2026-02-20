@@ -6,7 +6,7 @@
       left = [
         {
           id = "ControlCenter";
-          colorsizeSystemIcon = "error";
+          colorizeSystemIcon = "error";
           enableColorization = true;
           useDistroLogo = true;
         }

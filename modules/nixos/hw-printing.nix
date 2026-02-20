@@ -6,8 +6,7 @@
   services.printing = {
     enable = true;
     drivers = with pkgs; [
-      gutenprint
-      gutenprint-bin
+      cnijfilter2
     ];
   };
 }
