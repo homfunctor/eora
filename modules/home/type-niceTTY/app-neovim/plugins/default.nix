@@ -1,6 +1,3 @@
-# the only place neovim plugins are imported manually
-# this is for easy disabling of stuff
-# elsewhere any mention of them is automatic or in a list
 {
   imports = [
     ./blink.nix
