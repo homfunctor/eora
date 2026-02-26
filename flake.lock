@@ -400,11 +400,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1772039686,
-        "narHash": "sha256-pXZ2hQ/m256aC/+ufwXclGSN6CGMm7Lgf0aCNStulno=",
+        "lastModified": 1772131609,
+        "narHash": "sha256-bfwwREFAyB3cTHVcPI5nEkLyG4CSlvGVNEXtXMFx3WI=",
         "owner": "nix-community",
         "repo": "lanzaboote",
-        "rev": "5999351aa57d6b0a2d38078dd4ec075e73c48115",
+        "rev": "7a805d88289accfc8c7973e9638ec0bc624c4d7d",
         "type": "github"
       },
       "original": {
@@ -416,11 +416,11 @@
     "lix": {
       "flake": false,
       "locked": {
-        "lastModified": 1772023628,
-        "narHash": "sha256-nL0ZAym/dnlgE/XCYEtze9fCclmEeS/I05/2aSFrUDM=",
-        "rev": "c090a9d1ece1a9255b21776b80f9b23402886148",
+        "lastModified": 1772120002,
+        "narHash": "sha256-2Iao8ctRN7Xzd8eWohFXBtm8J41WDlGtdaTrLmlOu6Y=",
+        "rev": "bcab3d5da39685f0e50398978ced13b387766551",
         "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/c090a9d1ece1a9255b21776b80f9b23402886148.tar.gz?rev=c090a9d1ece1a9255b21776b80f9b23402886148"
+        "url": "https://git.lix.systems/api/v1/repos/lix-project/lix/archive/bcab3d5da39685f0e50398978ced13b387766551.tar.gz?rev=bcab3d5da39685f0e50398978ced13b387766551"
       },
       "original": {
         "type": "tarball",
@@ -700,11 +700,11 @@
         "noctalia-qs": "noctalia-qs"
       },
       "locked": {
-        "lastModified": 1772075638,
-        "narHash": "sha256-M3U3DdQo/5G88ULedS8BkafiXYL1NyIEer9YL4P9fxQ=",
+        "lastModified": 1772131976,
+        "narHash": "sha256-sfki5hpMegyjjK4ccDiLvy4DWQe1Nz2doI3ByqOHkyg=",
         "owner": "noctalia-dev",
         "repo": "noctalia-shell",
-        "rev": "5137c5efcac31d9aee6952b99f1dcaec9966fe21",
+        "rev": "28dc8229b77a8c3e5b23f20306d821de3e13a84c",
         "type": "github"
       },
       "original": {
