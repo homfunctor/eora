@@ -24,6 +24,8 @@ in {
 
   home.packages = with pkgs; [
     bluez
+# don't know if package option exists
+# osConfig.nixos.opts.noct.pkg
   ];
   programs = {
     niri.settings.spawn-at-startup = [
