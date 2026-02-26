@@ -34,6 +34,7 @@ in {
 
     noctalia-shell = {
       enable = true;
+package= osConfig.nixos.opts.noct.pkg;
       systemd.enable = true;
 
       settings =
