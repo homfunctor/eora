@@ -10,10 +10,7 @@
 # civ 5 (vox populi)
 #   launch options: env --unset=TZ  PROTON_ENABLE_WAYLAND=1 taskset --cpu-list 0-7 gamemoderun %command%
 #   running with wayland fixes the "feature" of audio muting on focus loss
-{
-  inputs,
-  ...
-}: {
+{inputs, ...}: {
   imports = with inputs.nix-gaming.nixosModules; [
     pipewireLowLatency
     platformOptimizations

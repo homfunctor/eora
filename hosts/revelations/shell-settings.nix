@@ -1,7 +1,7 @@
 # to be inherited or adjoined to shell settings
 {perSystem, ...}: {
   nixos.opts.noct = {
-pkg = perSystem.noctalia.noctalia-shell:
+    pkg = perSystem.noctalia.noctalia-shell;
     # inherited within bar as widgets
     bar.widgets = {
       left = [

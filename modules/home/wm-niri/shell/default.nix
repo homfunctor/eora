@@ -24,8 +24,8 @@ in {
 
   home.packages = with pkgs; [
     bluez
-# don't know if package option exists
-# osConfig.nixos.opts.noct.pkg
+    # don't know if package option exists
+    # osConfig.nixos.opts.noct.pkg
   ];
   programs = {
     niri.settings.spawn-at-startup = [
@@ -36,7 +36,7 @@ in {
 
     noctalia-shell = {
       enable = true;
-package= osConfig.nixos.opts.noct.pkg;
+      package = osConfig.nixos.opts.noct.pkg;
       systemd.enable = true;
 
       settings =

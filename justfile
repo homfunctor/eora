@@ -10,7 +10,7 @@ clean:
     nix-collect-garbage -d  --log-format internal-json  |& nom --json
 
 # format
-nfmt:
+nf:
     nix fmt
 
 # update to current flake config without going online
