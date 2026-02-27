@@ -28,7 +28,7 @@ upboot:
 # --dry-activate
 upcheck:
     sudo nixos-rebuild dry-activate --flake .  --log-format internal-json  |& nom --json
-    yes | rip result
+    # yes | rip result
 
 # update to current flake config
 update:
