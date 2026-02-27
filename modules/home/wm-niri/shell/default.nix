@@ -1,5 +1,3 @@
-# todo: check for other settings: https://docs.noctalia.dev/getting-started/nixos/
-# todo: button that launches launcher, button that opens overview
 {
   config,
   flake,
@@ -10,32 +8,37 @@
   ...
 }: let
   inherit (config.home.opts) userName;
-  nExe = cmd:
-    [(lib.getExe config.programs.noctalia-shell.package) "ipc" "call"]
-    ++ (flake.lib.splitArg cmd);
+
+  noctExe = lib.getExe osConfig.nixos.opts.noct.pkg;
+  noctCmd = cmd: [noctExe "ipc" "call"] ++ (flake.lib.splitArg cmd);
 in {
   imports = [
     ./bar.nix
     ./bg.nix
+    ./binds.nix
     ./launcher.nix
     ./nc.nix
     inputs.noctalia.homeModules.default
   ];
 
-  home.packages = with pkgs; [
-    bluez
-  ];
+  home.packages = with pkgs; [bluez];
+
   programs = {
     niri.settings.spawn-at-startup = [
       {
-        command = nExe "volume muteInput";
+        command = [
+          noctExe
+          "--no-duplicate"
+        ];
+      }
+      {
+        command = noctCmd "volume muteInput";
       }
     ];
 
     noctalia-shell = {
       enable = true;
       package = osConfig.nixos.opts.noct.pkg;
-      systemd.enable = true;
 
       settings =
         {

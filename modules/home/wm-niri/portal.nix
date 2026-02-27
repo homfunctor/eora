@@ -6,9 +6,9 @@
     config = {
       common = {
         default = ["gtk" "gnome"];
+        "org.freedesktop.impl.portal.RemoteDesktop" = "gnome";
         "org.freedesktop.impl.portal.ScreenCast" = "gnome";
         "org.freedesktop.impl.portal.Screenshot" = "gnome";
-        "org.freedesktop.impl.portal.RemoteDesktop" = "gnome";
         "org.freedesktop.impl.portal.Secret" = ["gnome-keyring"];
       };
     };

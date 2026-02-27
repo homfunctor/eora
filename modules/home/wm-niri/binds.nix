@@ -9,9 +9,6 @@
   inherit (flake.lib) splitArg;
   inherit (lib) getExe;
 
-  nExe = cmd:
-    [(getExe config.programs.noctalia-shell.package) "ipc" "call"]
-    ++ (splitArg cmd);
   homeDir = "/home/${userName}";
   workTime = "Spring2026";
 in {
@@ -33,8 +30,6 @@ in {
           "${homeDir}/Work/${workTime}"
         ];
 
-        "Mod+R".action.spawn = nExe "launcher toggle";
-        "Mod+X".action.spawn = nExe "sessionMenu toggle";
         "Mod+O".action = toggle-overview;
 
         # window management
@@ -68,13 +63,6 @@ in {
 
         # screenshots
         "Print".action.screenshot.show-pointer = false;
-
-        "Mod+MouseMiddle" = {
-          allow-when-locked = true;
-          action.spawn = nExe "volume muteOutput";
-        };
-        "Mod+MouseBack".action.spawn = nExe "volume decrease";
-        "Mod+MouseForward".action.spawn = nExe "volume increase";
 
         # workspaces
         "Mod+1".action.focus-workspace = "1";
