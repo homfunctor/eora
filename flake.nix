@@ -70,6 +70,7 @@
       url = "github:kaylorben/nixcord";
     };
 
+    # retained only for laptop
     nixos-hardware.url = "github:nixos/nixos-hardware";
 
     nixvim = {
