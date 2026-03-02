@@ -16,6 +16,7 @@ in {
     ./bar.nix
     ./bg.nix
     ./binds.nix
+    ./colors.nix
     ./launcher.nix
     ./nc.nix
     inputs.noctalia.homeModules.default

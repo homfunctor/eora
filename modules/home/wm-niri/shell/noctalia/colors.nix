@@ -1,4 +1,3 @@
-# unused
 {
   config,
   lib,
@@ -7,20 +6,20 @@
   stylix.targets.noctalia-shell.enable = lib.mkForce false;
   programs.noctalia-shell.colors = with config.lib.stylix.colors.withHashtag; {
     mError = base08;
-    mHover = base0D;
+    mHover = base0C;
     mOnError = base00;
     mOnHover = base00;
     mOnPrimary = base00;
     mOnSecondary = base00;
-    mOnSurface = base06;
-    mOnSurfaceVariant = base05;
+    mOnSurface = base08;
+    mOnSurfaceVariant = base07;
     mOnTertiary = base00;
-    mOutline = base03;
-    mPrimary = base0B;
-    mSecondary = base0A;
+    mOutline = base00;
+    mPrimary = base0E;
+    mSecondary = base0E;
     mShadow = base00;
-    mSurface = base00;
-    mSurfaceVariant = base01;
-    mTertiary = base0D;
+    mSurface = base01;
+    mSurfaceVariant = base00;
+    mTertiary = base0C;
   };
 }

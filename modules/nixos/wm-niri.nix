@@ -5,7 +5,7 @@
 }: {
   programs.niri = {
     enable = true;
-    package = config.nixos.opts.niri.wm.pkg;
+    package = config.nixos.opts.niri.pkg;
   };
 
   nixpkgs.overlays = [inputs.niri-flake.overlays.niri];
