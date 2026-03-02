@@ -29,7 +29,7 @@
         {
           id = "Battery";
           alwaysShowPercentage = true;
-          displayMode = "alwaysShow";
+          # displayMode = "alwaysShow";
           showNoctaliaPerformance = true;
           showPowerProfiles = false;
           warningThreshold = 20;

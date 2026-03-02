@@ -8,6 +8,9 @@ in {
   programs.nixvim.plugins.which-key = lib.mkIf cfg.enable {
     enable = true;
 
-    settings.win.border = "single";
+    settings = {
+      delay = 1000;
+      win.border = "single";
+    };
   };
 }

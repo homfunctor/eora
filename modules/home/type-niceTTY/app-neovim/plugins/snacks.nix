@@ -27,7 +27,6 @@ in {
       };
 
       input.enabled = true;
-      keymap.enabled = true;
       layout.enabled = true;
 
       notifier = {
@@ -42,6 +41,7 @@ in {
       quickfile.enabled = true;
 
       scope.enabled = true;
+      scroll.enabled = true;
 
       statuscolumn.enabled = true;
       styles.notification.wo.wrap = true;
