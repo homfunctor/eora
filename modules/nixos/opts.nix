@@ -43,7 +43,10 @@ in {
       pkg = mkAttrOpt pkgs.noctalia-shell "noctalia shell package to use";
     };
 
-    niri.wm.pkg = mkAttrOpt pkgs.niri "pkg";
+    niri = {
+      enable = mkBoolOpt false "enable per-package niri keybinds";
+      pkg = mkAttrOpt pkgs.niri "pkg";
+    };
 
     opacity = {
       desktop = mkFloatOpt 1.0 "desktop opacity";

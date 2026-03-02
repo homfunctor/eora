@@ -1,12 +1,13 @@
 {
   config,
   lib,
+  osConfig,
   pkgs,
   ...
 }: {
   home.packages = with pkgs; [
     gimp3
-    inkscape
+    # inkscape
     kdePackages.kolourpaint
     xournalpp
   ];
@@ -16,7 +17,9 @@
     defaultApplications."image/x-dds" = "gimp.desktop";
   };
 
-  programs.niri.settings.binds = with config.lib.niri.actions; {
-    "Mod+Ctrl+Shift+J".action.spawn = lib.getExe pkgs.xournalpp;
+  programs.niri.settings = lib.mkIf osConfig.nixos.opts.niri.enable {
+    binds = with config.lib.niri.actions; {
+      "Mod+Ctrl+Shift+J".action.spawn = lib.getExe pkgs.xournalpp;
+    };
   };
 }

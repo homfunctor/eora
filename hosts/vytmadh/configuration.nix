@@ -51,7 +51,10 @@
     mainMonitor = builtins.elemAt bg.monitors 0;
 
     # stable work needs stable niri
-    niri.wm.pkg = pkgs.niri-stable;
+    niri = {
+      enable = true;
+      pkg = pkgs.niri-stable;
+    };
 
     opacity.popups = 1.0;
 
