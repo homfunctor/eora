@@ -4,9 +4,9 @@
 # args: arguments commonly used with app
 # desktop: desktop file name (without extension)
 # exe: executable found at pkg path
-# icon: icon used for hyprpanel
+# icon: unused
 # pkg: package path
-# tooltip: hyprpanel tooltip. also functions as a human-readable set name
+# tooltip: human-readable set name, otherwise unused
 # per-user changes enforced via mkForce
 # based on modules when possible
 {
