@@ -31,7 +31,6 @@
 
     cat = "bat";
     cd = "z";
-    cl = "clear";
     erd = "erd -I --suppress-size";
     eza = "eza -G -x --color=always --icons=always";
     gita = "git add .";
