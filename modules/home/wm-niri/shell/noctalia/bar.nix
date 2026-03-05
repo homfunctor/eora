@@ -12,17 +12,18 @@
     bar = {
       inherit (osConfig.nixos.opts.noct.bar) widgets;
 
+      barType = "simple";
       backgroundOpacity = opacity.desktop;
       capsuleOpacity = opacity.desktop;
       compactMode = false;
       density = "comfortable";
       exclusive = true;
       floating = false;
-      marginHorizontal = 0.50;
-      marginVertical = 0.5;
+      # marginHorizontal = 0.50;
+      # marginVertical = 0.5;
       outerCorners = false;
       position = "top";
-      showCapsule = false;
+      showCapsule = true;
       showOutline = true;
       transparent = false;
     };
