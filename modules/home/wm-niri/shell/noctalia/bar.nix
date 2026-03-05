@@ -19,8 +19,6 @@
       density = "comfortable";
       exclusive = true;
       floating = false;
-      # marginHorizontal = 0.50;
-      # marginVertical = 0.5;
       outerCorners = false;
       position = "top";
       showCapsule = true;
