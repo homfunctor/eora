@@ -8,20 +8,28 @@ in {
   programs.nixvim = lib.mkIf cfg.enable {
     plugins = {
       lsp.servers.texlab.enable = true;
+
+      # used by blink
+      cmp-vimtex.enable = true;
+
+      blink.settings.sources.default = [
+        "buffer"
+        "dictionary"
+        "emoji"
+        "lsp"
+        "path"
+        "ripgrep"
+        "spell"
+        "vimtex"
+      ];
+
       vimtex = {
         enable = true;
 
         settings = {
+          # compiler configuration handled in lua
           compiler_method = "latexmk";
-          compiler_latexmk = {
-            options = [
-              "-pdf"
-              "-shell-escape"
-              "-file-line-error"
-              "-synctex=1"
-              "-interaction=nonstopmode"
-            ];
-          };
+
           complete_close_braces = true;
           complete_enabled = true;
           complete_ignore_case = 1;
@@ -36,6 +44,12 @@ in {
 
         # installed elsewhere
         texlivePackage = null;
+      };
+
+      # blink compatibility with vimtex
+      blink-cmp.settings.sources.providers.vimtex = {
+        module = "blink.compat.source";
+        name = "vimtex";
       };
     };
 

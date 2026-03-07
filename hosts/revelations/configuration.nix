@@ -28,7 +28,8 @@
     type-personal
 
     # extras
-    opt-lix
+    # opt-lix
+    opt-lixStable
     opt-rust
     opt-sanity
     opt-vm

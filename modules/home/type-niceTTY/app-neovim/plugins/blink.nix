@@ -18,7 +18,6 @@ in {
         blink-compat.enable = true;
         blink-emoji.enable = true;
         blink-ripgrep.enable = true;
-        cmp-vimtex.enable = true;
         luasnip.enable = true;
 
         blink-cmp = {
@@ -182,7 +181,7 @@ in {
             };
 
             sources = {
-              default = [
+              default = lib.mkDefault [
                 "buffer"
                 "dictionary"
                 "emoji"
@@ -233,11 +232,6 @@ in {
                   module = "blink-cmp-spell";
                   name = "Spell";
                   score_offset = 1;
-                };
-
-                vimtex = {
-                  module = "blink.compat.source";
-                  name = "vimtex";
                 };
               };
             };

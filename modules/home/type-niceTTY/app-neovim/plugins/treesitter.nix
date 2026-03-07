@@ -21,10 +21,33 @@ in {
           autopairs.enable = true;
           highlight = {
             enable = true;
-            additional_vim_regex_highlighting = true;
+            additional_vim_regex_highlighting = false;
+            # vimtex compatibility
             disable = ["latex"];
           };
-          auto_install = true;
+
+          auto_install = false;
+          ensure_installed = [
+            "bash"
+            "c"
+            "cpp"
+            "fish"
+            "haskell"
+            "javascript"
+            "json"
+            "just"
+            "lean"
+            "lua"
+            "markdown"
+            "markdown_inline"
+            "nix"
+            "python"
+            "qmljs"
+            "rust"
+            "typescript"
+            "yaml"
+          ];
+
           incremental_selection.enable = true;
           indent.enable = true;
         };
