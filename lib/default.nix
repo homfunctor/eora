@@ -13,9 +13,8 @@
     ;
   inherit (inputs.nixpkgs.lib.filesystem) listFilesRecursive;
 in rec {
-  # get names of all nix files in directory
+  # list of names of all non-default.nix nix files in directory
   # for automating option generation
-  # takes any directory
   nameListFromDir = dir:
     pipe (builtins.readDir dir) [
       (
@@ -35,7 +34,9 @@ in rec {
   genImportsFromDir = dir:
     builtins.filter (hasSuffix ".nix") (
       map toString (
-        builtins.filter (p: p != (dir + "/default.nix")) (listFilesRecursive dir)
+        builtins.filter (p: p != (dir + "/default.nix")) (
+          listFilesRecursive dir
+        )
       )
     );
 
@@ -60,8 +61,9 @@ in rec {
   # sops utilities
   mkSec = path: concatStringsSep "/" (map (v: removeSuffix "/" v) path);
   mkSecPath = config: path: config.sops.secrets."${mkSec path}".path;
-  mkSecPH = config: path: config.sops.placeholder."${mkSec path}";
+  # currently unused
+  # mkSecPH = config: path: config.sops.placeholder."${mkSec path}";
 
-  # niri utilities
+  # niri utility
   splitArg = arg: splitString " " arg;
 }
