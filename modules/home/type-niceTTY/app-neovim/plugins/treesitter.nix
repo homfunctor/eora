@@ -11,6 +11,7 @@ in {
       nodejs
       tree-sitter
     ];
+
     programs.nixvim.plugins = {
       treesitter = {
         enable = true;
@@ -21,7 +22,6 @@ in {
           autopairs.enable = true;
           highlight = {
             enable = true;
-            additional_vim_regex_highlighting = false;
             # vimtex compatibility
             disable = ["latex"];
           };
@@ -36,6 +36,7 @@ in {
             "javascript"
             "json"
             "just"
+            "latex"
             "lean"
             "lua"
             "markdown"
@@ -45,6 +46,7 @@ in {
             "qmljs"
             "rust"
             "typescript"
+            "xml"
             "yaml"
           ];
 
@@ -53,23 +55,7 @@ in {
         };
       };
 
-      treesitter-context = {
-        enable = true;
-        settings = {
-          max_lines = 8;
-          min_window_height = 40;
-          multiwindow = true;
-          separator = "";
-        };
-      };
-
-      treesitter-textobjects = {
-        enable = true;
-        settings.select = {
-          enable = true;
-          lookahead = true;
-        };
-      };
+      treesitter-context.enable = true;
     };
   };
 }

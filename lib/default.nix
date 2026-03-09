@@ -11,16 +11,33 @@
     splitString
     types
     ;
+  inherit (inputs.nixpkgs.lib.filesystem) listFilesRecursive;
 in rec {
   # get names of all nix files in directory
   # for automating option generation
-  importAllFileNames = dir:
+  # takes any directory
+  nameListFromDir = dir:
     pipe (builtins.readDir dir) [
-      (filterAttrs (name: type:
-          type == "regular" && hasSuffix ".nix" name))
+      (
+        filterAttrs (name: type:
+          type == "regular" && hasSuffix ".nix" name)
+      )
       attrNames
-      (map (name: removeSuffix ".nix" name))
+      (
+        map (
+          name: removeSuffix ".nix" name
+        )
+      )
     ];
+
+  # strictly only for auto-defining imports
+  # use carefully!
+  genImportsFromDir = dir:
+    builtins.filter (hasSuffix ".nix") (
+      map toString (
+        builtins.filter (p: p != (dir + "/default.nix")) (listFilesRecursive dir)
+      )
+    );
 
   # mkOption utilities
   mkOpt = type: default: description:

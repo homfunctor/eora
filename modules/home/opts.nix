@@ -7,10 +7,10 @@
 }: let
   inherit
     (flake.lib)
-    importAllFileNames
     mkAttrOpt
     mkBoolOpt
     mkStrOpt
+    nameListFromDir
     ;
   inherit (lib) genAttrs;
 in {
@@ -53,7 +53,7 @@ in {
 
       # automatically prepare options for all neovim plugin modules
       plugins = let
-        pluginNames = importAllFileNames ./type-niceTTY/app-neovim/plugins;
+        pluginNames = nameListFromDir ./type-niceTTY/app-neovim/plugins;
       in
         genAttrs pluginNames (name: {
           enable = mkBoolOpt false "enable ${name}";
@@ -72,7 +72,7 @@ in {
 
       folder =
         genAttrs (
-          importAllFileNames ./type-work/app-syncthing/sync-folders
+          nameListFromDir ./type-work/app-syncthing/sync-folders
         ) (name: {
           enable = mkBoolOpt false "sync ${name}";
         });

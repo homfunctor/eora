@@ -1,11 +1,5 @@
-# non-work personal settings layered on top of type-work
-{
-  imports = [
-    ./app-apotheosis.nix
-    ./app-baobab.nix
-    ./app-gaming.nix
-    ./app-ironyModManager.nix
-    ./app-media.nix
-    ./app-nixcord.nix
-  ];
+# type-personal:
+#   it's personal
+{flake, ...}: {
+  imports = flake.lib.genImportsFromDir ./.;
 }

@@ -1,9 +1,5 @@
-{
-  imports = [
-    ./app-minimal.nix
-    ./hw-graphics.nix
-    ./opt-login.nix
-    ./opt-services.nix
-    ./sops-syncthing.nix
-  ];
+# type-work:
+#   work stuff
+{flake, ...}: {
+  imports = flake.lib.genImportsFromDir ./.;
 }
