@@ -44,7 +44,7 @@ in {
     };
 
     niri = {
-      enable = mkBoolOpt false "enable per-package niri keybinds";
+      enable = mkBoolOpt false "enable external niri keybinds";
       pkg = mkAttrOpt pkgs.niri "pkg";
     };
 
