@@ -3,7 +3,7 @@
   programs = {
     chromium.enable = true;
 
-    programs.firefox = {
+    firefox = {
       enable = true;
       profiles.default = {
         id = 0;
