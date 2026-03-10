@@ -21,7 +21,7 @@
 
     # personal
     app-civ5-map-image
-    app-nix-tools
+    app-nixTools
     app-vivaldi
     type-personal
   ];

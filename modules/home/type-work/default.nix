@@ -1,28 +1,5 @@
-# todo: mobi/epub reader (calbire probably)
-# todo: cbz/r/whatever reader
-# work environment layered on top of minimal/nice tty
-{
-  imports = [
-    ./app-browser.nix
-    ./app-glance.nix
-    ./app-graphics.nix
-    # ./app-joplin.nix
-    ./app-kitty.nix
-    ./app-math
-    ./app-minimal.nix
-    ./app-nix-index.nix
-    ./app-office.nix
-    ./app-pdfViewer.nix
-    ./app-pika.nix
-    ./app-starship.nix
-    ./app-syncthing
-    ./app-thunderbird.nix
-    ./app-udiskie.nix
-    ./app-utils.nix
-    ./opt-dconf.nix
-    ./opt-mime.nix
-    ./opt-qt.nix
-    ./opt-stylix
-    ./opt-xdg.nix
-  ];
+# type-work:
+#   work environment layered on top of minimal/nice tty
+{flake, ...}: {
+  imports = flake.lib.genImportsFromDir ./.;
 }

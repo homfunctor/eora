@@ -82,9 +82,4 @@
     adminUser = "wael";
     userNames = [adminUser "thaos"];
   };
-
-  # temp trying it out
-  environment.systemPackages = [pkgs.winboat];
-  virtualisation.docker.enable = true;
-  users.users.wael.extraGroups = ["docker"];
 }
