@@ -15,6 +15,11 @@ in {
       systemd.enable = true;
     };
 
+    kernel.sysctl = {
+      "fs.file-max" = 524288;
+      "fs.inotify.max_user_watches" = 524288;
+    };
+
     kernelPackages = mkDefault pkgs.linuxPackages_latest;
 
     kernelParams = [

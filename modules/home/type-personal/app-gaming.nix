@@ -7,7 +7,7 @@
 
   home.packages = with pkgs; [
     hashdeep
-    heroic
+    # heroic
     ludusavi
     lutris
     protonplus
